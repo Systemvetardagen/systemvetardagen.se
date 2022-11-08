@@ -321,8 +321,7 @@ section {
 
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(27, 40, 51, 0.2666666667), rgba(27, 40, 51, 0.2666666667), var(--clr-darkblue));
-  background-url: "@/assets/img/hero_image.jpg";
+  background: linear-gradient(rgba(27, 40, 51, 0.2666666667), rgba(27, 40, 51, 0.2666666667), var(--clr-darkblue)), url("@/assets/img/hero_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -402,8 +401,7 @@ footer {
   }
 }
 .faq {
-  background-image: linear-gradient(-90deg, rgba(6, 29, 53, 0.8666666667), rgba(6, 29, 53, 0.8666666667));
-  background-image-url: "@/assets/img/faq_image.jpg";
+  background-image: linear-gradient(-90deg, rgba(6, 29, 53, 0.8666666667), rgba(6, 29, 53, 0.8666666667)), url("@/assets/img/faq_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
