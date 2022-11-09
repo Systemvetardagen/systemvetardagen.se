@@ -1,0 +1,61 @@
+.contact   
+  padding-top: 0  
+  display: flex  
+  flex-direction: column  
+ 
+
+#contact-form   
+  display: flex  
+  flex-direction: column  
+  max-width: 100%  
+ 
+
+.inputs   
+  display: flex  
+  flex-direction: column  
+ 
+
+.inputs-left-col   
+  display: flex  
+  flex-direction: column  
+ 
+
+@media (min-width: 1024px)   
+  .inputs   
+    flex-direction: row  
+   
+
+  .inputs-left-col   
+    margin-right: 1rem  
+   
+ 
+
+input,
+textarea   
+  margin: 0  
+  margin-bottom: 1rem  
+  padding: 0.8rem 1rem  
+  width: 24rem  
+  max-width: 100%  
+  background-color: #fff2  
+  border: 0.25rem solid #fff6  
+  border-radius: 0  
+  color: var(--clr-white)  
+  transition: border-color 0.2s  
+ 
+
+input:focus,
+textarea:focus   
+  border-color: var(--clr-yellow)  
+  outline: none  
+ 
+
+input::placeholder,
+textarea::placeholder   
+  color: var(--clr-white)  
+ 
+
+.button-form   
+  margin-top: 0  
+  width: 12rem  
+  align-self: flex-end  
