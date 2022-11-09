@@ -1,0 +1,33 @@
+// SASS EXPLANATION
+  /* Welcome to SASS. Sass is a pre-compiler that converts the .sass files 
+    into one .css file which will ultimately be linked to the vue app. Please refer to the 
+    partial files in the folders to add/modify styling. This main file merely imports partial
+    files. New partial files can be created and linked to this main file. Please keep in mind
+    that partial files must begin with an underscore character (e.g., _xyz.sass). When importing
+    this is not required (see examples below). 
+    
+    To use Sass you must install the sass live complier (add-on in VS Code). If that
+    doesn't work, please let me know. In the future, we might try to have vue compile
+    the sass (but that hasn't been figured out yet). 
+    */
+  
+// -------- Import Partials -------------
+
+// General
+@import "general/buttons"
+@import "general/page-setup"
+@import "general/text"
+@import "general/variables"
+
+
+// Helpers
+@import "helpers/footer"
+@import "helpers/navbar"
+
+
+// Main Page
+@import "main-page/contact-form"
+@import "main-page/hero"
+@import "main-page/sections"
+
+
