@@ -3,11 +3,14 @@
     
 		<div id="home" class="hero">
 			<h1 class="text-yellow text-shadow">Systemvetardagen 2022</h1>
-			<h3 class="hero-date text-shadow">{{ $t('hero-date') }}</h3>
-			<p class="subtitle text-shadow">{{ $t('hero-subtitle') }}</p>
+			<h3 class="hero-date text-shadow">9 februari</h3>
+			<p class="subtitle text-shadow">Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom
+				IT-branschen!</p>
+			<p>{{ $t('test') }}</p>
 			<div class="hero-buttons">
-				<a href="https://massan.systemvetardagen.se/sv/event/5695" class="button button-yellow">{{ $t('hero-button-fair') }}</a>
-				<a href="#contact" class="button button-contact">{{ $t('hero-button-contact') }}</a>
+				<a href="https://massan.systemvetardagen.se/sv/event/5695" class="button button-yellow">Till
+					mässan</a>
+				<a href="#contact" class="button button-contact">Kontakta oss</a>
 			</div>
 			<a href="#main" class="hero-chevron-down">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -194,12 +197,6 @@
 
 <script>
 export default {
-  name: 'IndexPage',
-
-  head() {
-    return {
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
-    };
-  },
-};
+  name: 'IndexPage'
+}
 </script>

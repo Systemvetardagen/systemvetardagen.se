@@ -1,0 +1,134 @@
+/* NAVBAR */
+
+.main-header   
+  background: linear-gradient(var(--clr-darkblue), transparent)  
+  position: fixed  
+  width: 100%  
+  height: 5rem  
+  display: flex  
+  align-items: center  
+  justify-content: space-between  
+  padding: 0 1.5rem  
+  transition: background 0.2s  
+  top: 0  
+  right: 0  
+  bottom: 0  
+  left: 0  
+ 
+
+.logo-link   
+  height: 4rem  
+  padding: 0.8rem  
+ 
+
+.logo   
+  height: 100%  
+ 
+
+nav   
+  display: flex  
+ 
+
+.header-link   
+  font-size: 1.2rem  
+  font-weight: 700  
+  margin: 0 max(1rem, 2vw)  
+ 
+
+nav > a   
+  color: var(--clr-yellow)  
+ 
+
+.link-fair   
+  display: flex  
+  align-items: center  
+  color: var(--clr-white)  
+  font-weight: 700  
+ 
+
+.link-fair p   
+  margin: 0  
+  margin-right: 0.5rem  
+ 
+
+.link-fair svg   
+  width: 1.5rem  
+ 
+
+.mobile-header   
+  display: none  
+ 
+
+.nav-toggle   
+  z-index: 999  
+  background-color: transparent  
+  border: none  
+  color: var(--clr-white)  
+  height: 3rem  
+  padding: 0.5rem  
+  margin-right: 0.5rem  
+ 
+
+.nav-toggle-icon   
+  height: 100%  
+ 
+
+/* NAVBAR MOBILE */
+
+@media (max-width: 768px)   
+  .main-logo-link   
+    display: none  
+   
+
+  .mobile-header   
+    background: linear-gradient(var(--clr-darkblue), transparent)  
+    width: 100%  
+    position: fixed  
+    display: flex  
+    justify-content: space-between  
+    align-items: center  
+   
+
+  .main-header   
+    background-image: none  
+    background-color: #061d35dd  
+    top: 0  
+    right: 0  
+    bottom: 0  
+    left: 20%  
+    height: 100%  
+    width: auto  
+    padding-left: 3rem  
+    flex-direction: column  
+    align-items: baseline  
+    justify-content: center  
+    transform: translateX(100%)  
+    transition: transform 0.5s cubic-bezier(0.16, 0.74, 0.53, 1)  
+   
+
+  .main-header[data-visible="true"]   
+    transform: translateX(0%)  
+   
+
+  .main-header   
+    backdrop-filter: blur(20px)  
+    -webkit-backdrop-filter: blur(20px)  
+   
+
+  nav   
+    flex-direction: column  
+   
+
+  .header-link   
+    font-size: 1.8rem  
+    margin: 0.75rem 0  
+   
+
+  .link-fair   
+    margin-top: 2rem  
+   
+ 
+
+.header-scrolled   
+  background: var(--clr-darkblue)  
+  box-shadow: 0 2px 20px #0004 
