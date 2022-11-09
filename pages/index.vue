@@ -148,7 +148,7 @@
 
 			<section class="join">
 				<div class="join-wrapper">
-					<img src="@/assets/img/ipad.png" alt="iPad 10.2">
+					<img src="@/assets/img/iPad.png" alt="iPad 10.2">
 					<div class="text-content">
 						<h2 class="text-yellow">Anmäl dig och tävla om en iPad!</h2>
 						<p>Var med i utlottningen av en iPad 10.2"! Delta genom att följa dessa enkla steg:</p>
