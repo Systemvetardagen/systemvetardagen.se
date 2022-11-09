@@ -6,7 +6,7 @@
 			<h3 class="hero-date text-shadow">9 februari</h3>
 			<p class="subtitle text-shadow">Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom
 				IT-branschen!</p>
-			<!-- <p>{{ $t('test') }}</p>-->
+			<p>{{ $t('test') }}</p>
 			<div class="hero-buttons">
 				<a href="https://massan.systemvetardagen.se/sv/event/5695" class="button button-yellow">Till
 					mässan</a>
