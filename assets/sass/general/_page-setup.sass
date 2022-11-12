@@ -1,8 +1,11 @@
 @media (min-width: 768px) 
   :root 
     font-size: 18px  
-  
-
+    
+@font-face {
+  font-family: "SecularOne-Regular";
+  src: url(assets\SecularOne-Regular.ttf);
+} 
 
 html 
   scroll-behavior: smooth  
@@ -15,17 +18,17 @@ html
 
 
 body 
-  background-color: var(--clr-darkblue)  
-  color: var(--clr-white)  
+  background-color: var(--clr-white)  
+  color: var(--clr-darkblue)  
   margin: 0  
   padding: 0  
-  font-family: proxima-nova, sans-serif  
+  font-family: SecularOne-Regular, sans-serif  
   letter-spacing: 0.03rem  
 
 
 ::selection 
   color: var(--clr-white)  
-  background: var(--clr-yellow)  
+  background: var(--clr-lightbeige)  
 
 
 input,
