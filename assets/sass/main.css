@@ -1,10 +1,7 @@
 a {
   text-decoration: none;
 }
-@font-face {
-  font-family: "SecularOne-Regular";
-  src: url(assets\SecularOne-Regular.ttf);
-}
+
 .button {
   background-color: transparent;
   font-weight: 700;
@@ -55,6 +52,10 @@ a {
   :root {
     font-size: 18px;
   }
+}
+@font-face {
+  font-family: "SecularOne-Regular";
+  src: url(assets/SecularOne-Regular.ttf);
 }
 html {
   scroll-behavior: smooth;
