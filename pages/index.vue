@@ -6,7 +6,7 @@
 			<h3 class="hero-date text-shadow">9 februari</h3>
 			<p class="subtitle text-shadow">Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom
 				IT-branschen!</p>
-			<p>{{ $t('test') }}</p>
+			<p class="text-class">{{ $t('test') }}</p>
 			<div class="hero-buttons">
 				<a href="https://massan.systemvetardagen.se/sv/event/5695" class="button button-blue">Till
 					mässan</a>
@@ -194,6 +194,12 @@
 		</main>
 	</div>
 </template>
+<style>
+	.text-class {
+		color: var(--clr-yellow);
+	}
+
+</style>
 
 <script>
 export default {
