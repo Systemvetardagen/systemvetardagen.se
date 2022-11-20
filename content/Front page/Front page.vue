@@ -8,8 +8,22 @@
     <div class="info">
         <p>Explaination how to use the catalog</p>
     </div>
-    <div class="sponsors">
-        <div class="sponsor1"><img src="sponsorLogo.jpg" alt="logo"></div>
-        <div class="sponsor1"><a href="www.sponsor.se">Sponsor</a></div>
+    <div v-for="post in posts">
+        <div class="sponsor1"><img src={{post.Sponsor Logo}} alt="logo"></div>
+        <div class="sponsor1"><a href="www.sponsor.se">{{ post.title }}</a></div>
     </div>
 </template>
+
+<script>
+export default {
+  async asyncData({ $content, error }) {
+    let posts;
+    try {
+      posts = await $content("Front page").fetch();
+    } catch (e) {
+      error({ message: "Blog post not found" });
+    }
+    return { posts };
+  },
+}
+</script>
