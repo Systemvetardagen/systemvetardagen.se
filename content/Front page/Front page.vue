@@ -10,7 +10,7 @@
     </div>
     <div v-for="post in posts">
         <div class="sponsor1"><img src={{post.Sponsor Logo}} alt="logo"></div>
-        <div class="sponsor1"><a href="www.sponsor.se">{{ post.title }}</a></div>
+        <div class="sponsor1"><a href={{post.Sponsor Link}}>{{ post.Sponsor Title }}</a></div>
     </div>
 </template>
 
