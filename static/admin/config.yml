@@ -1,7 +1,7 @@
 publish_mode: editorial_workflow
 backend:
   name: git-gateway
-  branch: Fermin
+  branch: CMS
 
 media_folder: "assests/img/uploads"
 public_folder: "/img/uploads"
@@ -19,6 +19,7 @@ collections:
       - { label: 'Sponsor Title', name: 'Sponsor Title', widget: 'string', required: true}
       - { label: 'Sponsor Logo', name: 'Sponsor Logo', widget: 'image', required: true, allow_multiple: false }
       - { label: 'Sponsor Link', name: 'Sponsor Link', widget: 'file', required: true }
+      - { label: 'Title', name: 'title', widget: 'string'}
   - name: 'Catalog'
     label: 'Catalog'
     folder: 'content/Catalog'
