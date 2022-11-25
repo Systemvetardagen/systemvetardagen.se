@@ -28,10 +28,11 @@ collections:
         label: 'Content list'
         widget: 'list'
         allow_add: true
+        slug: '{{slug}}'
         fields:
           - { label: 'Logo', name: 'Logo', widget: 'image', required: true }
           - { label: 'Name', name: 'Name', widget: 'string', required: true }
-          - { label: 'Title', name: 'Title', widget: 'string', required: true}
+          - { label: 'Title', name: 'title', widget: 'string', required: true}
   - name: 'Company page'
     label: 'Company page'
     folder: 'content/Company pages'
