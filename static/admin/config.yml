@@ -23,12 +23,12 @@ collections:
     label: 'Catalog'
     folder: 'content/Catalog'
     create: true
+    slug: '{{slug}}'
     fields:
       - name: 'Content list'
         label: 'Content list'
         widget: 'list'
         allow_add: true
-        slug: '{{slug}}'
         fields:
           - { label: 'Logo', name: 'Logo', widget: 'image', required: true }
           - { label: 'Name', name: 'Name', widget: 'string', required: true }
