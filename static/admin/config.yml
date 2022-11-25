@@ -12,7 +12,7 @@ collections:
     folder: 'content/Front page'
     create: true
     format: 'frontmatter'
-    slug: "{{slugg}}"
+    slug: "{{slug}}"
     # editor:
     #   preview: true
     fields:
