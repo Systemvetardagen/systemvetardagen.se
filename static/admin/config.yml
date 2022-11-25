@@ -12,7 +12,6 @@ collections:
     folder: 'content/Front page'
     create: true
     format: 'frontmatter'
-    slug: '{{fields.createdAt}}-{{slug}}'
     # editor:
     #   preview: true
     fields:
@@ -23,7 +22,6 @@ collections:
     label: 'Catalog'
     folder: 'content/Catalog'
     create: true
-    slug: '{{slug}}'
     fields:
       - name: 'Content list'
         label: 'Content list'
