@@ -12,14 +12,13 @@ collections:
     folder: 'content/Front page'
     create: true
     format: 'frontmatter'
-    slug: "{{slug}}"
+    slug: '{{title}}'
     # editor:
     #   preview: true
     fields:
       - { label: 'Sponsor Logo', name: 'Sponsor Logo', widget: 'image', required: true, allow_multiple: false }
       - { label: 'Sponsor Link', name: 'Sponsor Link', widget: 'file', required: true }
       - { label: 'Title', name: 'title', widget: 'string'}
-      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
   - name: 'Catalog'
     label: 'Catalog'
     folder: 'content/Catalog'
