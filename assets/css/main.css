@@ -192,6 +192,52 @@ li {
   --clr-purple: rgb(158, 41, 241);
   --clr-lightpurple: rgba(158, 41, 241, 0.53);
   --clr-lightblue: rgba(82, 99, 250, 0.53);
+  
+  /* new color variables to use */
+  /* shades of blue */
+  --clr-blue-100: #F2F3FF;
+  --clr-blue-200: #e5e8ff;
+  --clr-blue-300: #c8ceff;
+  --clr-blue-400: #a5b1ff;
+  --clr-blue-500: #7a8eff;
+  --clr-blue-600: #325fff;
+  --clr-blue-700: #2c54e4;
+  --clr-blue-800: #2649c5;
+  --clr-blue-900: #1f3ca1;
+  --clr-blue-1000: #162a72;
+  /* shades of pink */
+  --clr-pink-100: #fff3f9;
+  --clr-pink-200: #ffe6f4;
+  --clr-pink-300: #ffcbe8;
+  --clr-pink-400: #ffabdc;
+  --clr-pink-500: #ff84cf;
+  --clr-pink-600: #ff4cc2;
+  --clr-pink-700: #e443ad;
+  --clr-pink-800: #c53a96;
+  --clr-pink-900: #a1307a;
+  --clr-pink-1000: #722156;
+  /* shades of yellow */
+  --clr-yellow-100: #fffaf2;
+  --clr-yellow-200: #fff5e5;
+  --clr-yellow-300: #ffeac9;
+  --clr-yellow-400: #ffe0a8;
+  --clr-yellow-500: #ffd47f;
+  --clr-yellow-600: #ffc93f;
+  --clr-yellow-700: #e4b338;
+  --clr-yellow-800: #c59b30;
+  --clr-yellow-900: #a17f27;
+  --clr-yellow-1000: #72591c;
+  /* shades of grey */
+  --clr-grey-100: #F0F0F0;
+  --clr-grey-200: #E2E2E2;
+  --clr-grey-300: #C6C6C6;
+  --clr-grey-400: #ABABAB;
+  --clr-grey-500: #909090;
+  --clr-grey-600: #767676;
+  --clr-grey-700: #5E5E5E;
+  --clr-grey-800: #464646;
+  --clr-grey-900: #303030;
+  --clr-grey-1000: #1B1B1B;
 }
 
 
