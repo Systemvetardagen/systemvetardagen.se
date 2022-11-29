@@ -9,7 +9,7 @@ public_folder: "/img/uploads"
 collections:
   - name: 'Front Page'
     label: 'Front Page'
-    folder: 'content/Front page'
+    folder: 'content/Front_page'
     create: true
     format: 'frontmatter'
     slug: '{{title}}'
