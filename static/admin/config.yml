@@ -39,7 +39,7 @@ collections:
     create: true
     fields:
       - { label: 'Logo', name: 'Logo', widget: 'image', required: true}
-      - { label: 'Title', name: 'Title', wiget: 'string', required: true}
+      - { label: 'Title', name: 'title', wiget: 'string', required: true}
       - name: 'The programs you hire from'
         label: 'The programs you hire from'
         widget: 'list'
