@@ -46,11 +46,12 @@ collections:
         allow_add: true
         fields:
           - { label: 'Program', name: 'Program', widget: 'select', options: ['Data', 'Data och system', 'Design'] }
+          - { label: 'Title', name: 'title', wiget: 'string'}
       - name: 'Open positions'
         label: 'Open positions'
         widget: 'list'
         allow_add: true
         fields:
           - { label: 'Link', name: 'Link', widget: 'file', requierd: true}
-          
+          - { label: 'Title', name: 'title', wiget: 'string'}
 
