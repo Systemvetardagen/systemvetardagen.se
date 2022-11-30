@@ -110,7 +110,6 @@
          id="tspan234">/Main Entrance</tspan></text>
   </g>
 </svg>
-
     </div>
   </section>
 </template>
