@@ -1,0 +1,57 @@
+publish_mode: editorial_workflow
+backend:
+  name: git-gateway
+  branch: Fermin
+
+media_folder: "assets/img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: 'Front_Page'
+    label: 'Front_Page'
+    folder: 'content/Front_page'
+    create: true
+    format: 'frontmatter'
+    slug: '{{title}}'
+    # editor:
+    #   preview: true
+    fields:
+      - { label: 'Sponsor Logo', name: 'Sponsor Logo', widget: 'image', required: true, allow_multiple: false }
+      - { label: 'Sponsor Link', name: 'Sponsor Link', widget: 'file', required: true }
+      - { label: 'Title', name: 'title', widget: 'string'}
+  - name: 'Catalog'
+    label: 'Catalog'
+    folder: 'content/Catalog'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - name: 'Content list'
+        label: 'Content list'
+        widget: 'list'
+        allow_add: true
+        fields:
+          - { label: 'Logo', name: 'Logo', widget: 'image', required: true }
+          - { label: 'Name', name: 'Name', widget: 'string', required: true }
+          - { label: 'Title', name: 'title', widget: 'string', required: true}
+  - name: 'Company_page'
+    label: 'Company_page'
+    folder: 'content/Company_pages'
+    create: true
+    fields:
+      - { label: 'Logo', name: 'Logo', widget: 'image', required: true}
+      - { label: 'Title', name: 'title', wiget: 'string', required: true}
+      - name: 'The programs you hire from'
+        label: 'The programs you hire from'
+        widget: 'list'
+        allow_add: true
+        fields:
+          - { label: 'Program', name: 'Program', widget: 'select', options: ['Data', 'Data och system', 'Design'] }
+          - { label: 'Title', name: 'title', wiget: 'string'}
+      - name: 'Open positions'
+        label: 'Open positions'
+        widget: 'list'
+        allow_add: true
+        fields:
+          - { label: 'Link', name: 'Link', widget: 'file', requierd: true}
+          - { label: 'Title', name: 'title', wiget: 'string'}
+

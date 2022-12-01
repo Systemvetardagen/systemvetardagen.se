@@ -4,7 +4,7 @@
 			<div class="footer-wrapper">
 				<div class="footer-content">
 					<div class="social-links">
-						<h2 class="text-blue">Följ oss</h2>
+						<h2 class="text-blue">{{$t('follow_us')}}</h2>
 						<a class="link-text" href="https://www.facebook.com/Systemvetardagen/">
 							<svg class="link-icon text-blue" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
 								fill="currentColor">
@@ -38,7 +38,7 @@
 						<address>Studentkåren DISK<br>Borgarfjordsgatan 12<br>164 40 Kista</address>
 					</div>
 					<div>
-						<h2 class="text-blue">Kontakt</h2>
+						<h2 class="text-blue">{{$t('contact')}}</h2>
 						<a class="link-text" href="mailto:systemvetardagen@disk.su.se">
 							<svg class="link-icon text-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
 								fill="currentColor">
