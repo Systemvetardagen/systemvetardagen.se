@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    
+		<hero/>
 	</div>
 </template>
 <style>
@@ -9,9 +9,10 @@
 </style>
 
 <script>
-import hero from "./index-subviews/svd-hero.vue"
+import hero from "@/pages/index-subviews/svd-hero.vue"
 export default {
-  name: 'IndexPage'
+	components: [hero],
+  	name: 'IndexPage'
 }
 
 components: {
