@@ -9,13 +9,15 @@
 </style>
 
 <script>
-import hero from "@/pages/index-subviews/svd-hero.vue"
+import hero from '@/pages/index-subviews/hero.vue'
+import Button from '@/components/Button.vue'
 export default {
-	components: [hero],
+	components: {hero},
   	name: 'IndexPage'
 }
 
-components: {
-	hero
+	components: {
+		hero
+		Button
 }
 </script>

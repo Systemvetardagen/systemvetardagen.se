@@ -3,7 +3,7 @@
 
         <!-- Hero Text -->
         <div>
-            <h1 class="hero-heading" >Find your next job</h1>
+            <h1 class="hero-heading" style="color: var(--clr-blue-600)" >Find your next job</h1>
             <h3>Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!</h3>
         </div>
 
@@ -22,7 +22,7 @@
     import Button from '@/components/Button.vue'
 
     export default {
-        name: 'hero'
+        name: 'heroSection'
     }
     components: {
         Button
