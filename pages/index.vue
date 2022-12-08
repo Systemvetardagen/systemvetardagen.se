@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
 		<hero/>
+		<Button title="See Map" link="map"/>
 	</div>
 </template>
 <style>
