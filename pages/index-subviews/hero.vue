@@ -33,7 +33,7 @@
 <style>
     .hero {
         height: 100vh;
-        
+        background: linear-gradient(rgba(27, 40, 51, 0.2666666667), rgba(27, 40, 51, 0.2666666667), var(--clr-darkblue)), url("@/assets/img/hero-img-provisional.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -41,6 +41,8 @@
         justify-content: flex-end;
         
     }
+
+    
 
     .hero-buttons {
         display: flex;
