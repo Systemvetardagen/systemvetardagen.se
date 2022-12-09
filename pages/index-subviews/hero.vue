@@ -35,7 +35,7 @@
 
 <style>
     .hero {
-        height: 100vh;
+        height: 115vh;
         background-position: center;
         background-repeat: no-repeat;
         justify-content: flex-end;
