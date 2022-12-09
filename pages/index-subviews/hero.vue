@@ -11,7 +11,7 @@
         <!-- Hero Buttons -->
             <div class="hero-buttons">
                 <Button title="Katalog" link="" bColor="gradient"/>
-                <Button title="Kontakt oss" link="" bColor="--clr-white" tColor="--clr-blue"/>
+                <Button title="Kontakt oss" link="" bColor="--clr-blue-200" tColor="--clr-black-900"/>
             </div>
 
         </div>
@@ -51,7 +51,7 @@
       right: 0px;
       bottom: 0px;
       left: 0px;
-      opacity: 0.75;
+      opacity: 0.5;
 }
     .hero-content {
         position: relative;
