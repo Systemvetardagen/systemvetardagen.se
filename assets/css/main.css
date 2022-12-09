@@ -507,15 +507,7 @@ section {
   align-items: flex-start;
 }
 
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(27, 40, 51, 0.2666666667), rgba(27, 40, 51, 0.2666666667), var(--clr-darkblue)), url("@/assets/img/hero_image.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: flex-end;
-}
+
 
 .hero-date {
   text-transform: uppercase;
