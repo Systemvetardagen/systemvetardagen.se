@@ -4,7 +4,7 @@
         <!-- Hero Text -->
         <div>
             <h1 class="hero-heading" style="color: var(--clr-blue-600)" >Find your next job</h1>
-            <h3>Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!</h3>
+            <h3 style="color: var(--clr-blue-900)">Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!</h3>
         </div>
 
         <!-- Hero Buttons -->
