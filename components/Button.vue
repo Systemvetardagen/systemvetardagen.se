@@ -59,8 +59,8 @@ import { computed } from '@vue/reactivity';
         text-decoration: none;
         display: inline-block;
         font-size: 0.6667rem;
-        margin-top: 2rem;
-        padding:0.6em 1em;
+        /* margin-top: 2rem; */
+        padding:0.6em 2em;
         border-radius: 0.5rem;
 
         background: linear-gradient(90deg, var(--clr-blue-600), var(--clr-pink-600), var(--clr-yellow-600));
