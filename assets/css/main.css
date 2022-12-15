@@ -63,6 +63,10 @@ a {
   font-family: "SecularOne-Regular";
   src: url(assets/fonts/SecularOne-Regular.ttf);
 }
+@font-face {
+  font-family: "Overpass";
+  src: url(assets\fonts\Overpass-Black.ttf);
+}
 html {
   scroll-behavior: smooth;
 }
