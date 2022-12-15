@@ -3,7 +3,7 @@
 
         <div class="hero-content">
              <!-- Hero Text -->
-            <div>
+            <div class="hero-text">
                 <h2 class="hero-heading" style="color: var(--clr-blue-600)" >Find your <br> next job</h2>
                 <h3 style="color: var(--clr-blue-900)">Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!</h3>
             </div>
@@ -23,6 +23,7 @@
 
 <script>
     import Button from '@/components/Button.vue'
+    //import { text } from 'body-parser';
 
     export default {
         name: 'heroSection'
@@ -56,10 +57,12 @@
     .hero-content {
         position: relative;
         max-width: 50%;
-        line-height: 200%;
+        /* line-height: 200%; */
     }
 
-    
+    .hero-text {
+        line-height: 200%;
+    } 
 
     .hero-buttons {
         display: flex;
