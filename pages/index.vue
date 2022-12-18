@@ -146,8 +146,25 @@
 					d="m245.96 12.27-34.51 34.51-34.51-34.51-34.52 34.51-34.51-34.51L73.4 46.78 38.89 12.27 4.38 46.78"
 					data-name="Layer 2" />
 			</svg>
+			<section v-if="showEnglishMessage" id="contact" class="contact">
+				<form id="contact-form">
+					<h2 class="text-blue">{{$t('contact_us')}}</h2>
+					<div class="inputs">
+						<div class="inputs-left-col">
+							<input id="form-company" type="text" placeholder="företag" name="company" required>
+							<input id="form-name" type="text" placeholder="namn" name="name" required>
+							<input id="form-email" type="email" placeholder="e-post" name="email" required>
+							<input autocomplete="off" type="text" id="form-title" name="title" placeholder="Title"
+								style="display: none">
+						</div>
+						<textarea id="form-message" name="message" placeholder="meddelande" rows="3"
+							style="resize: none;"></textarea>
+					</div>
+					<button type="submit" class="button button-blue button-form" form="contact-form">{{$t('send')}}</button>
+				</form>
+			</section>
 
-			<section id="contact" class="contact">
+			<section v-else="showEnglishMessage" id="contact" class="contact">
 				<form id="contact-form">
 					<h2 class="text-blue">{{$t('contact_us')}}</h2>
 					<div class="inputs">
@@ -177,6 +194,11 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  computed: {
+    showEnglishMessage() {
+      return this.$i18n.locale === 'sv';
+    }
+  }
 }
 </script>
