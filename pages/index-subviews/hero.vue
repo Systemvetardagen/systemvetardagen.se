@@ -4,7 +4,7 @@
         <div class="hero-content">
              <!-- Hero Text -->
             <div class="hero-text">
-                <h2 class="hero-heading" style="color: var(--clr-blue-600)" >Find your <br> next job</h2>
+                <h1 class="hero-heading" style="color: var(--clr-blue-600)" >Find your <br> next job</h1>
                 <h3 style="color: var(--clr-blue-900)">Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!</h3>
             </div>
 
@@ -37,13 +37,15 @@
 <style>
     .hero {
         height: 115vh;
-        background-position: center;
-        background-repeat: no-repeat;
+        /* background-position: center; */
+        /* background-repeat: no-repeat; */
         justify-content: flex-end;
+        background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('@/assets/img/hero-img-provisional.png');
+        background-size: cover;
         
     }
 
-    .hero::before {    
+    /* .hero::before {    
       content: "";
       background-image: url('@/assets/img/hero-img-provisional.png');
       background-size: cover;
@@ -53,7 +55,7 @@
       bottom: 0px;
       left: 0px;
       opacity: 0.5;
-}
+} */
     .hero-content {
         position: relative;
         max-width: 50%;
