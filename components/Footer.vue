@@ -45,7 +45,7 @@
 								  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
 								  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
 							  </svg>
-							  systemvetardagen@disk.su.se
+							  systemvetardagen<br>@disk.su.se
 						  </a>
 					  </div>
 				  </div>
@@ -62,12 +62,10 @@
   
 	  .footer-content {
 		  display: flex;
-		  flex-direction: row;
-		  max-width: 100%;
-		  flex-shrink: 7;
+		  flex-direction: column;
 		  padding-bottom: 2rem;
 		  justify-content: space-evenly;
-		  gap: 0.5rem
+
 	  }
   
 	  .footer-content div {
@@ -94,11 +92,11 @@
 	  .link-icon {
 		  width: 1rem;
 		  margin-right: 0.5rem;
-		  color: var(--clr-white);
+		  color: var(--clr-gray-100);
 	  }
   
 	  .link-text {
-		  color: var(--clr-white);
+		  color: var(--clr-gray-100);
 		  font-weight: 500;
 		  display: flex;
 		  align-items: center;
@@ -108,7 +106,7 @@
 	  }
   
 	  .link-text:hover {
-		  color: var(--clr-yellow);
+		  color: var(--clr-pink-300);
 	  }
   
 	  address {
