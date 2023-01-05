@@ -11,12 +11,7 @@
 			</nav>
 			<nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')" class="link-fair"><img src="@/assets/img/UK.png"/></nuxt-link>
 			<nuxt-link v-else="showEnglishMessage" :to="switchLocalePath('sv')" class="link-fair"><img src="@/assets/img/Sweden.png"/></nuxt-link>
-			<a class="link-fair" href="https://massan.systemvetardagen.se">
-				<p class="header-link">{{$t('the_fair')}}</p>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-				</svg>
-			</a>
+			
 		</header>
 
 		<!-- MOBILE NAV -->

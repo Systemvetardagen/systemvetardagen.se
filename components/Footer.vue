@@ -4,7 +4,7 @@
 			  <div class="footer-wrapper">
 				  <div class="footer-content" style="color: var(--clr-grey-100);">
 					  <div class="social-links">
-						  <h2>{{$t('footer_follow_title')}}</h2>
+						  <h2> {{$t('footer_follow_title')}} </h2>
 						  <a class="link-text" href="https://www.facebook.com/Systemvetardagen/">
 							  <svg class="link-icon text-yellow" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
 								  fill="currentColor">
