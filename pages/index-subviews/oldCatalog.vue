@@ -36,6 +36,7 @@
         justify-content: center;
         padding: 10% 5%;
         align-items: center;
+        gap: 20px;
         
       
     }
