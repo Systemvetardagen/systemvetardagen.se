@@ -63,10 +63,16 @@ a {
   font-family: "SecularOne-Regular";
   src: url(assets/fonts/SecularOne-Regular.ttf);
 }
+
+@font-face {
+  font-family: "work-sans";
+  src: url(assets\fonts\WorkSans-Regular.ttf);
+}
 @font-face {
   font-family: "Overpass";
   src: url(assets\fonts\Overpass-Black.ttf);
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -82,7 +88,7 @@ body {
   color: var(--clr-darkblue);
   margin: 0;
   padding: 0;
-  font-family: SecularOne-Regular, sans-serif;
+  font-family: Overpass, work-sans;
   letter-spacing: 0.03rem;
 }
 

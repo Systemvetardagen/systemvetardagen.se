@@ -1,7 +1,7 @@
 <template>
     <section class="soon">
         <div class="soon-text">
-            <h2 style="color:var(--clr-pink-600); text-align: center; ">{{ $t('it_is_almost_time!') }}</h2>
+            <h2 style="color:var(--clr-pink-600); text-align: left; ">{{ $t('it_is_almost_time!') }}</h2>
             <p class="p" style="color: black;">{{ $t('disk_introduction1') }}<a
             class="inline-link" style="color: black;" href=https://disk.su.se>{{ $t('disk') }}</a>
             {{ $t('disk_introduction2') }}
