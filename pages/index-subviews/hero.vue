@@ -4,8 +4,8 @@
         <div class="hero-content">
              <!-- Hero Text -->
             <div class="hero-text">
-                <h1 class="hero-heading" style="color: var(--clr-blue-600)" >Find your <br> next job</h1>
-                <h3 style="color: var(--clr-blue-900)">Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!</h3>
+                <h1 class="hero-heading" style="color: var(--clr-blue-600)" >{{ $t('hero_title') }}</h1>
+                <h3 style="color: var(--clr-blue-900)">{{ $t('event_description') }}</h3>
             </div>
 
         <!-- Hero Buttons -->
