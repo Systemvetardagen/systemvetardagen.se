@@ -12,7 +12,7 @@
                              <input autocomplete="off" type="text" id="form-title" name="title" placeholder="Title"
                                  style="display: none">
                          </div>
-                         <textarea class="form-message" name="message" placeholder="messange" rows="3"
+                         <textarea class="form-message" name="message" placeholder="message" rows="3"
                              style="resize: none;"></textarea>
                      </div>
                      <button type="submit" class="button button-blue button-form" form="contact-form">{{('send')}}</button>
