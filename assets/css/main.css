@@ -88,12 +88,12 @@ body {
 
 ::-moz-selection {
   color: var(--clr-white);
-  background: var(--clr-lightbeige);
+  background: var(--clr-blue-400);
 }
 
 ::selection {
   color: var(--clr-white);
-  background: var(--clr-lightbeige);
+  background: var(--clr-blue-400);
 }
 
 input,
