@@ -2,7 +2,8 @@
   <div class="wrapper">
 		<hero/>
 		<soon/>
-		<Button title="See Map" link="map"/>
+		<oldCatalog/>
+		<!-- <Button title="See Map" link="map"/> -->
 	</div>
 </template>
 <style>
@@ -14,8 +15,9 @@
 import hero from '@/pages/index-subviews/hero.vue'
 import soon from '@/pages/index-subviews/soon.vue'
 import Button from '@/components/Button.vue'
+import oldCatalog from './index-subviews/oldCatalog.vue'
 export default {
-	components: {hero, soon},
+	components: {hero, soon, oldCatalog},
   	name: 'IndexPage'
 }
 
@@ -23,5 +25,6 @@ export default {
 		hero
 		soon
 		Button
+		oldCatalog
 }
 </script>
