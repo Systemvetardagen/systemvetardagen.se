@@ -31,9 +31,9 @@
   "answer2": "Nej, det är helt kostnadsfritt för studenter att delta på mässan.",
   "question3": "Kan jag delta på mässan om jag inte talar svenska?",
   "answer3": "Absolut! Mäss-hemsidan erbjuds på både svenska och engelska, och företagen som deltar pratar gärna engelska.",
-  "catalog_of_this_year": "Årets katalog!",
-  "catalog_description": "Snart kommer årets Systemvetardags-katalog! I den kommer du att hitta allt man behöver veta om eventet, med information om våra sponsorer, utställande företag och mycket mer!",
-  "catalog_2021": "Katalog 2021",
+  "old_cat_title": "Kolla in förra årets katalog!",
+  "old_cat_description": "Här kan du bläddra i katalogen från vår senaste mässa! I den kan du hitta information om sponsorerna, utställande företag och mycket mer!",
+  "catalog_2022": "Katalog 2021",
   "iPad1": "Anmäl dig och tävla om en iPad!",
   "iPad2": "Var med i utlottningen av en iPad! Delta genom att följa dessa enkla steg:",
   "follow_on_instagram": "Följ oss på Instagram ",
@@ -48,5 +48,6 @@
   "company": "Företag",
   "name": "Namn",
   "email": "E-post",
-  "message": "Meddelande"
+  "message": "Meddelande",
+  "old_cat_btn": "Katalog"
 }

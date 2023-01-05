@@ -33,7 +33,7 @@
   "answer3": "Absolutely! The website is offered in both Swedish and English, and the participating companies are happy to speak English.",
   "catalog_of_this_year": "Catalog of this year",
   "catalog_description": "This year's catalog is coming soon! In it you will find everything you need to know about the event, with information about our sponsors, exhibiting companies and much more!",
-  "catalog_2021": "Catalog 2021",
+  "catalog_2022": "Catalog 2021",
   "iPad1": "Sign up and compete for an iPad!",
   "iPad2": "Enter the draw for an iPad! Enter by following these simple steps:",
   "follow_on_instagram": "Follow us on Instagram ",
@@ -48,5 +48,6 @@
   "company": "company",
   "name": "name",
   "email": "email",
-  "message": "message"
+  "message": "message",
+  "oldCatalogBtn": "Catalog"
 }
