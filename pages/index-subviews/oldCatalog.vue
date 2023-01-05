@@ -6,9 +6,9 @@
        <!-- </div> -->
       
        <div class="oldcatcontent">
-            <h2 style="color: var(--clr-blue-700)">Kolla in förra årets katalog!</h2>
+            <h2 style="color: var(--clr-blue-700)">{{ $t('the_fair_2022')}}</h2>
             <p>oojium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore </p>
-            <Button title="Catalog" link="" bColor="--clr-pink-700" tColor="--clr-grey-100"></Button>
+            <Button :title="this.$t('the_fair')" link="" bColor="--clr-pink-700" tColor="--clr-grey-100"></Button>
        </div>
 
         
@@ -21,11 +21,18 @@
     //import { text } from 'body-parser';
 
     export default {
-        name: 'oldCatalog'
-    }
+        name: 'oldCatalog',
+    
     components: {
         Button
+    },
+    data() {
+        return {
+      // the i18n translation variable
+      translation: this.$t('the_fair'),
+        }
     }
+}
 
 </script>
     
