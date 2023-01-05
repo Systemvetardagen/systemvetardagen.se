@@ -6,9 +6,9 @@
        <!-- </div> -->
       
        <div class="oldcatcontent">
-            <h2 style="color: var(--clr-blue-700)">{{ $t('the_fair_2022')}}</h2>
-            <p>oojium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore </p>
-            <Button :title="this.$t('the_fair')" link="" bColor="--clr-pink-700" tColor="--clr-grey-100"></Button>
+            <h2 style="color: var(--clr-blue-700)">{{ $t('old_cat_title')}}</h2>
+            <p> {{$t('old_cat_description')}} </p>
+            <Button :title="this.$t('old_cat_btn')" link="" bColor="--clr-pink-700" tColor="--clr-grey-100"></Button>
        </div>
 
         
