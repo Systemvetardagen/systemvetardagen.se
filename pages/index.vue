@@ -3,6 +3,7 @@
 <template>
   <div class="wrapper">
 		<hero/>
+		<sponsors/>
 		<soon/>
         <info/>
 		<oldCatalog/>
@@ -22,8 +23,9 @@ import Button from '@/components/Button.vue'
 import info from '@/pages/index-subviews/info.vue'
 import oldCatalog from './index-subviews/oldCatalog.vue'
 import contact from '@/pages/index-subviews/contact.vue'
+import sponsors from './index-subviews/sponsors.vue'
 export default {
-	components: {hero, soon, info, oldCatalog, contact},
+	components: {hero, soon, info, oldCatalog, contact, sponsors},
   	name: 'IndexPage'
 }
 
@@ -34,5 +36,6 @@ export default {
 		Button
 		oldCatalog
 		contact
+		sponsors
 }
 </script>

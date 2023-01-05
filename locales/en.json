@@ -4,6 +4,9 @@
   "event_description": "One of the biggest job fairs in Sweden for students and employers in the IT-business!",
   "to_the_event": "To the fair",
   "contact_us": "Contact us",
+
+
+  
   "sponsors": "Sponsors",
   "exhibitor": "Exhibitor",
   "coming_soon": "Coming soon...",
@@ -31,8 +34,8 @@
   "answer2": "No, it’s completely free for all students to attend the fair and its events.",
   "question3": "Can I participate in the fair if I don't speak Swedish?",
   "answer3": "Absolutely! The website is offered in both Swedish and English, and the participating companies are happy to speak English.",
-  "catalog_of_this_year": "Catalog of this year",
-  "catalog_description": "This year's catalog is coming soon! In it you will find everything you need to know about the event, with information about our sponsors, exhibiting companies and much more!",
+  "old_cat_title": "Have a look at last year's catalog!",
+  "old_cat_description": "This year's catalog is coming soon! In it you will find everything you need to know about the event, with information about our sponsors, exhibiting companies and much more!",
   "catalog_2022": "Catalog 2021",
   "iPad1": "Sign up and compete for an iPad!",
   "iPad2": "Enter the draw for an iPad! Enter by following these simple steps:",
@@ -49,5 +52,5 @@
   "name": "name",
   "email": "email",
   "message": "message",
-  "oldCatalogBtn": "Catalog"
+  "old_cat_btn": "Catalog"
 }
