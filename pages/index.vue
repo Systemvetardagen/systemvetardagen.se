@@ -1,3 +1,5 @@
+<!-- use option (alt) + Z to wrap text in vs code -->
+
 <template>
   <div class="wrapper">
 		<hero/>
