@@ -58,7 +58,13 @@
   "sign_for_event": "Skapa en profil på mässhemsidan och anmäl dig till Systemvetardagen 2022!",
   "create_profile": "Skapa en profil",
   "send": "Skicka",
-  "follow_us": "Följ oss",
+
+
+  "footer_follow_title": "Fölg oss",
+  "footer_address_title": "Adress",
+  "footer_contact_title": "Kontakt",
+
+
   "home": "Hem",
   "catalog": "Katalog",
   "contact": "Kontakt",
