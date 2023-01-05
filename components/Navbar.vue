@@ -6,9 +6,8 @@
 			</a>
 			<nav>
 				<a href="#home" class="header-link">{{$t('home')}}</a>
-				<a href="#sponsors" class="header-link">{{$t('exhibitor')}}</a>
 				<a href="#catalog" class="header-link">{{$t('catalog')}}</a>
-				<a href="#contact" class="header-link">{{$t('contact')}}</a>
+				
 			</nav>
 			<nuxt-link :to="switchLocalePath('en')" class="link-fair">English</nuxt-link>
 			<a class="link-fair" href="https://massan.systemvetardagen.se">
