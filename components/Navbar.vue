@@ -2,7 +2,7 @@
   <div>
 		<header class="main-header" data-visible="false">
 			<a href="https://systemvetardagen.se" class="logo-link main-logo-link">
-				<img src="@/assets/img/SvD_logo_128.png" class="logo" alt="Systemvetardagen logo">
+				<img src="@/assets/img/Symbol_&_Text_Logo_Black_&_Color.svg" class="logo" alt="Systemvetardagen logo">
 			</a>
 			<nav>
 				<a href="#home" class="header-link">{{$t('home')}}</a>
