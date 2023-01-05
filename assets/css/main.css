@@ -118,7 +118,7 @@ h3 {
 }
 
 h1 {
-  font-size: 3.56rem;
+  font-size: 2.2rem;
   margin-bottom: 0;
 }
 
@@ -129,17 +129,18 @@ h1 {
 }
 h2 {
   font-size: 2rem;
-  /* margin-bottom: 0.8rem; */
+  margin-bottom: 0.8rem;
 }
 
 h3 {
   font-size: 1.5rem;
-  /* margin-bottom: 0.4rem; */
+  margin-bottom: 0.4rem;
 }
 
 p {
   font-size: 1rem;
   margin: 0;
+  font-family: work-sans;
 }
 
 ul {
@@ -242,6 +243,11 @@ li {
   --clr-grey-800: #464646;
   --clr-grey-900: #303030;
   --clr-grey-1000: #1B1B1B;
+  
+  /*
+  --width-p: 47%;
+  --height-p:14.25rem;
+  */
 }
 
 
