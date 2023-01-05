@@ -1,9 +1,9 @@
 <template>
     <div id="oldCatalog" class="oldCatalog">
 
-       <div class="catpic">
-        <img src="@/assets/img/chessboard.png" alt="Old Calalog Placeholder">
-       </div>
+       <!-- <div class="catpic"> -->
+        <img class="catpicmedia" src="@/assets/img/chessboard.png" alt="Old Calalog Placeholder">
+       <!-- </div> -->
       
        <div class="oldcatcontent">
             <h2 style="color: var(--clr-blue-700)">Kolla in förra årets katalog!</h2>
@@ -32,15 +32,29 @@
 <style>
     .oldCatalog {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 20%;
-        padding-left: 7%;
-        padding-right: 13%
+        flex-direction: column;
+        justify-content: center;
+        padding: 10% 5%;
+        align-items: center;
+        
+      
     }
-    .oldcatcontent {
-        padding-left: 5%;
+    .catpicmedia {
+        width:90%; 
+        height: auto;
     }
+
+    @media (min-width: 1024px) {
+		 .oldCatalog {
+            flex-direction: row;
+            padding: 20%;
+            padding-left: 7%;
+            padding-right: 13%;
+         }
+         .oldcatcontent {
+            padding-left: 5%;
+        }
+	  }
 
 
 </style>
