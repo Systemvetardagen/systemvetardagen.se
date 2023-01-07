@@ -7,7 +7,7 @@
 			<nav>
 				
 				<div v-bind:class="{ active: isActive('#home') }">
-					<a href="#home" class="header-link" >{{$t('home')}}</a>
+					<router-link to="#home" class="header-link" >{{$t('home')}}</router-link>
 				</div>
 				
 				<div v-bind:class="{ active: isActive('#catalog') }">
@@ -39,8 +39,10 @@
 <script>
 export default {
   methods: {
-	isActive(path) {
-      return this.$route.path === path;
+	isActive(cpath) {
+      if (this.$route.path == cpath) {
+		return true
+	  };
     },
   },
   computed: {
