@@ -59,6 +59,11 @@
   "sign_for_event": "Create a profile on the fair website and sign up for Systemvetardagen 2022",
   "create_profile": "Create a profile",
   "send": "Send",
+
+  "footer_follow_title": "Follow us",
+  "footer_address_title": "Address",
+  "footer_contact_title": "Contact",
+
   "follow_us": "Follow us",
   "home": "Home",
   "catalog": "Catalog",
@@ -67,6 +72,6 @@
   "company": "company",
   "name": "name",
   "email": "email",
-  "message": "message",
-  "old_cat_btn": "Catalog"
+  "message": "message"
+
 }
