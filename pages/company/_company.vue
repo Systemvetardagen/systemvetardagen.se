@@ -11,7 +11,7 @@ export default {
   async asyncData({ $content, params, error }) {
     let post;
     try {
-      post = await $content("Company_pages", params.Company_pages).fetch();
+      post = await $content("company", params.company).fetch();
     } catch (e) {
       error({ message: "Entry not found" });
     }
