@@ -21,7 +21,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string'}
   - name: 'Catalog'
     label: 'Catalog'
-    folder: 'content/Catalog'
+    folder: 'content/company'
     create: true
     slug: '{{slug}}'
     fields:
