@@ -33,9 +33,9 @@ collections:
           - { label: 'Logo', name: 'Logo', widget: 'image', required: true }
           - { label: 'Name', name: 'Name', widget: 'string', required: true }
           - { label: 'Title', name: 'title', widget: 'string', required: true}
-  - name: 'Company_page'
-    label: 'Company_page'
-    folder: 'content/Company_pages'
+  - name: 'company'
+    label: 'company'
+    folder: 'content/company'
     create: true
     fields:
       - { label: 'Logo', name: 'Logo', widget: 'image', required: true}
