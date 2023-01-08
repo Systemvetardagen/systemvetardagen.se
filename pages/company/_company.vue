@@ -1,7 +1,9 @@
 <template>
   <main>
     <section v-if="post">
-      <h1 class="">{{ post.title }}</h1>
+      <article>
+        <h1 class="">{{ post.title }}</h1>
+      </article>
     </section>
   </main>
 </template>
