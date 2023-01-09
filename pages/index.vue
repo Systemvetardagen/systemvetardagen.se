@@ -2,6 +2,9 @@
   <div class="wrapper">
     
 		<div id="home" class="hero">
+
+			<nuxt-link class="btn block" to="/company">Company</nuxt-link>
+
 			<h1 class="text-yellow text-shadow">Systemvetardagen 2022</h1>
 			<h3 class="hero-date text-shadow">9 februari</h3>
 			<p class="subtitle text-shadow">Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom
