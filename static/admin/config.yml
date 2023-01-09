@@ -1,7 +1,11 @@
+site_url: = https://taupe-manatee-491982.netlify.app
+
 publish_mode: editorial_workflow
 backend:
   name: git-gateway
   branch: CMS
+
+local_backend: true
 
 media_folder: "assets/img/uploads"
 public_folder: "/img/uploads"
