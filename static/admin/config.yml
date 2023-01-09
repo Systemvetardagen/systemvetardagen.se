@@ -41,6 +41,7 @@ collections:
     label: 'company'
     folder: 'content/company'
     create: true
+    slug: "{{title}}"
     fields:
       - { label: 'Logo', name: 'Logo', widget: 'image', required: true}
       - { label: 'Title', name: 'title', wiget: 'string', required: true}
