@@ -1,4 +1,5 @@
 <template>
+  <div></div>
   <main>
     <section v-if="post">
       <nav class="mb-8" aria-label="go back">
@@ -7,7 +8,6 @@
       
       <article>
         <h1 class="">{{ post.title }}</h1>
-        <nuxt-content :document="post" />
       </article>
     </section>
   </main>
@@ -25,7 +25,6 @@ export default {
     return { post };
   }
 }
-
 </script> 
 
 
