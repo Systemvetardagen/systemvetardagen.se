@@ -49,6 +49,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  content: {
+    dir: 'content'
+  },
 
   // Collection of anonymous telemetry data about general usage: https://github.com/nuxt/telemetry
   telemetry: false,
