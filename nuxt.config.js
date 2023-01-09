@@ -37,7 +37,7 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/i18n"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/content"],
   i18n: {
     locales: ["en", "sv"],
     defaultLocale: "sv",
@@ -49,9 +49,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-  content: {
-    dir: 'content'
-  },
 
   // Collection of anonymous telemetry data about general usage: https://github.com/nuxt/telemetry
   telemetry: false,
