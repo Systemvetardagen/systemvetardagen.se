@@ -37,7 +37,7 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/i18n", "@nuxtjs/content"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/content", "@nuxt/types"],
   i18n: {
     locales: ["en", "sv"],
     defaultLocale: "sv",
