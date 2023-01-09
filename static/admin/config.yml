@@ -27,7 +27,7 @@ collections:
     label: 'Catalog'
     folder: 'content/company'
     create: true
-    slug: '{{slug}}'
+    slug: '{{title}}'
     fields:
       - name: 'Content list'
         label: 'Content list'
