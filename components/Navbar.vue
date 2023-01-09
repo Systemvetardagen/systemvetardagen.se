@@ -1,4 +1,4 @@
-<template>
+<!--<template>
   <div>
 		<header class="main-header" data-visible="false">
 			<a href="https://systemvetardagen.se" class="logo-link main-logo-link">
@@ -19,7 +19,7 @@
 			</a>
 		</header>
 
-		<!-- MOBILE NAV -->
+		<!-- MOBILE NAV 
 		<header class="mobile-header">
 			<a href="#" class="logo-link">
 				<img src="@/assets/img/SvD_logo_128.png" class="logo" alt="Systemvetardagen logo">
