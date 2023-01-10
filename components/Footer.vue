@@ -4,9 +4,9 @@
 			<div class="footer-wrapper">
 				<div class="footer-content">
 					<div class="social-links">
-						<h2 class="text-yellow">Följ oss</h2>
+						<h2 class="text-blue">{{$t('follow_us')}}</h2>
 						<a class="link-text" href="https://www.facebook.com/Systemvetardagen/">
-							<svg class="link-icon text-yellow" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+							<svg class="link-icon text-blue" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
 								fill="currentColor">
 								<title>Facebook</title>
 								<path
@@ -15,7 +15,7 @@
 							<span>Facebook</span>
 						</a>
 						<a class="link-text" href="https://www.instagram.com/systemvetardagen/">
-							<svg class="link-icon text-yellow" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+							<svg class="link-icon text-blue" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
 								fill="currentColor">
 								<title>Instagram</title>
 								<path
@@ -24,7 +24,7 @@
 							<span>Instagram</span>
 						</a>
 						<a class="link-text" href="https://www.linkedin.com/company/systemvetardagen/">
-							<svg class="link-icon text-yellow" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+							<svg class="link-icon text-blue" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
 								fill="currentColor">
 								<title>LinkedIn</title>
 								<path
@@ -34,13 +34,13 @@
 						</a>
 					</div>
 					<div>
-						<h2 class="text-yellow">Adress</h2>
+						<h2 class="text-blue">Adress</h2>
 						<address>Studentkåren DISK<br>Borgarfjordsgatan 12<br>164 40 Kista</address>
 					</div>
 					<div>
-						<h2 class="text-yellow">Kontakt</h2>
+						<h2 class="text-blue">{{$t('contact')}}</h2>
 						<a class="link-text" href="mailto:systemvetardagen@disk.su.se">
-							<svg class="link-icon text-yellow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+							<svg class="link-icon text-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
 								fill="currentColor">
 								<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
 								<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
