@@ -40,5 +40,6 @@ collections:
         name: "sponsor images"
         widget: "list"
         allow_add: true
+        required: false
         field: {label: 'Sponsor image', name: 'sponsor image', widget: image}
 
