@@ -1,3 +1,5 @@
+site_url: = https://taupe-manatee-491982.netlify.app
+
 publish_mode: editorial_workflow
 backend:
   name: git-gateway
@@ -7,51 +9,34 @@ media_folder: "assets/img/uploads"
 public_folder: "/img/uploads"
 
 collections:
-  - name: 'Front_Page'
-    label: 'Front_Page'
-    folder: 'content/Front_page'
+  - name: 'company'
+    label: 'company'
+    folder: 'content/company'
     create: true
-    format: 'frontmatter'
-    slug: '{{title}}'
-    # editor:
-    #   preview: true
+    slug: "{{title}}"
     fields:
-      - { label: 'Sponsor Logo', name: 'Sponsor Logo', widget: 'image', required: true, allow_multiple: false }
-      - { label: 'Sponsor Link', name: 'Sponsor Link', widget: 'file', required: true }
-      - { label: 'Title', name: 'title', widget: 'string'}
-  - name: 'Catalog'
-    label: 'Catalog'
-    folder: 'content/Catalog'
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - name: 'Content list'
-        label: 'Content list'
-        widget: 'list'
-        allow_add: true
-        fields:
-          - { label: 'Logo', name: 'Logo', widget: 'image', required: true }
-          - { label: 'Name', name: 'Name', widget: 'string', required: true }
-          - { label: 'Title', name: 'title', widget: 'string', required: true}
-  - name: 'Company_page'
-    label: 'Company_page'
-    folder: 'content/Company_pages'
-    create: true
-    fields:
-      - { label: 'Logo', name: 'Logo', widget: 'image', required: true}
+      - { label: 'Logo', name: 'logo', widget: 'image', required: true}
       - { label: 'Title', name: 'title', wiget: 'string', required: true}
-      - name: 'The programs you hire from'
-        label: 'The programs you hire from'
-        widget: 'list'
-        allow_add: true
-        fields:
-          - { label: 'Program', name: 'Program', widget: 'select', options: ['Data', 'Data och system', 'Design'] }
-          - { label: 'Title', name: 'title', wiget: 'string'}
-      - name: 'Open positions'
-        label: 'Open positions'
-        widget: 'list'
-        allow_add: true
-        fields:
-          - { label: 'Link', name: 'Link', widget: 'file', requierd: true}
-          - { label: 'Title', name: 'title', wiget: 'string'}
+      - { label: 'Slogan', name: 'slogan', widget: 'string', required: false}
+      - { label: 'Founded (year)', name: 'founded', widget: 'datetime', date_format: 'YYYY', time_format: false, required: true} #returns a time date string of the year
+      - { label: 'Number of employess in Sweden', name: 'number of employees in Sweden', widget: 'number', value_type: 'int', required: true}
+      - { label: 'Number of employess internationally', name: 'number of employees in internationally', widget: 'number', value_type: 'int', required: true}
+      - { label: 'Area of business (max 40 words)', name: 'area of business', widget: 'text', required: true}
+      - { label: 'About us (max 150 words)', name: 'about us', widget: 'text', required: true}
+      - { label: 'Qualifications (max 35 words)', name: 'qualifications', widget: 'text', required: true}
+      - { label: 'Name', name: 'name', widget: 'string', required: true}
+      - { label: 'Email', name: 'email', widget: 'string', required: true}
+      - { label: 'Phone number', name: 'phone_number', widget: 'string', required: false}
+      - { label: 'Link to postitions', name: 'link_to_positions', widget: 'string', required: true}
+      - { label: 'Program', name: 'Program', widget: 'select', multiple: true,  options: ['Affärssystem och tjänstedesign', 'Data- och systemvetenskap', 'Datorspelsutveckling', 'Datavetenskap', 'Ekonomi och IT', 'Marknadskommunikation och IT', 'Digitala medier', 'Interaktionsdesign', 'Magister/Master'], required: true}
+      - { label: 'Positions', name: 'positions', widget: 'select', mulitple: true, options: ['Praktikplatser', 'Utlandstjänster', 'Traineeprogram', 'Heltidstjänster', 'Examensarbete', 'Deltidstjänster'], requierd: true}
+      - { label: 'Positions other', name: 'positions_other', widget: 'string', required: false}
+
+      - { label: 'Sponsor banner', name: 'banner', widget: 'image', required: false}
+      - { label: 'Youtube video (sponsor)', name: 'youtube video', widget: 'string', required: false}
+      - { label: "Sponsor images", name: "sponsor images", widget: "list", allow_add: true, required: false,
+        field: {
+          label: 'Sponsor image', name: 'sponsor image', widget: image
+          }
+        }
 
