@@ -2,7 +2,11 @@
   <main>
     <section v-if="posts">
       <h1 class="title">Company</h1>
-      <posts post-type="company" :amount="10" />
+      <div>
+    <li v-for="post of posts" :key="post.slug">
+      <NuxtLink :to="'company/' + post.slug">{{ post.title }}</NuxtLink>
+    </li>
+  </div>
     </section>
   </main>
 </template>
