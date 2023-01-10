@@ -3,7 +3,7 @@ site_url: = https://taupe-manatee-491982.netlify.app
 publish_mode: editorial_workflow
 backend:
   name: git-gateway
-  branch: CMS
+  branch: master
 
 local_backend: true
 
@@ -30,7 +30,15 @@ collections:
       - { label: 'Email', name: 'email', widget: 'string', required: true}
       - { label: 'Phone number', name: 'phone_number', widget: 'string', required: false}
       - { label: 'Link to postitions', name: 'link_to_positions', widget: 'string', required: true}
-      - { label: 'Program', name: 'Program', widget: 'select', multiple: true,  options: ['Affärssystem och tjänstedesign', 'Data- och systemvetenskap', 'Datorspelsutveckling', 'Datavetenskap', 'Ekonomi och IT', 'Marknadskommunikation och IT', 'Digitala medier', 'Interaktionsdesign', 'Magister/Master'] }
+      - { label: 'Program', name: 'Program', widget: 'select', multiple: true,  options: ['Affärssystem och tjänstedesign', 'Data- och systemvetenskap', 'Datorspelsutveckling', 'Datavetenskap', 'Ekonomi och IT', 'Marknadskommunikation och IT', 'Digitala medier', 'Interaktionsdesign', 'Magister/Master'], required: true}
       - { label: 'Positions', name: 'positions', widget: 'select', mulitple: true, options: ['Praktikplatser', 'Utlandstjänster', 'Traineeprogram', 'Heltidstjänster', 'Examensarbete', 'Deltidstjänster'], requierd: true}
-      - { label: '', name: 'title', wiget: 'string'}
+      - { label: 'Positions other', name: 'positions_other', widget: 'string', required: false}
+
+      - { label: 'Sponsor banner', name: 'banner', widget: 'image', required: false}
+      - { label: 'Youtube video (sponsor)', name: 'youtube video', widget: 'string', required: false}
+      - label: "Sponsor images"
+        name: "sponsor images"
+        widget: "list"
+        allow_add: true
+        field: {label: 'Sponsor image', name: 'sponsor image', widget: image}
 
