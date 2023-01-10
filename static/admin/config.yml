@@ -11,46 +11,32 @@ media_folder: "assets/img/uploads"
 public_folder: "/img/uploads"
 
 collections:
-  - name: 'Front_Page'
-    label: 'Front_Page'
-    folder: 'content/Front_page'
-    create: true
-    format: 'frontmatter'
-    slug: '{{title}}'
-    # editor:
-    #   preview: true
-    fields:
-      - { label: 'Sponsor Logo', name: 'Sponsor Logo', widget: 'image', required: true, allow_multiple: false }
-      - { label: 'Sponsor Link', name: 'Sponsor Link', widget: 'file', required: true }
-      - { label: 'Title', name: 'title', widget: 'string'}
-  - name: 'Catalog'
-    label: 'Catalog'
-    folder: 'content/company'
-    create: true
-    slug: '{{title}}'
-    fields:
-      - name: 'Content list'
-        label: 'Content list'
-        widget: 'list'
-        allow_add: true
-        fields:
-          - { label: 'Logo', name: 'Logo', widget: 'image', required: true }
-          - { label: 'Name', name: 'Name', widget: 'string', required: true }
-          - { label: 'Title', name: 'title', widget: 'string', required: true}
   - name: 'company'
     label: 'company'
     folder: 'content/company'
     create: true
     slug: "{{title}}"
     fields:
-      - { label: 'Logo', name: 'Logo', widget: 'image', required: true}
+      - { label: 'Logo', name: 'logo', widget: 'image', required: true}
       - { label: 'Title', name: 'title', wiget: 'string', required: true}
+      - { label: 'Slogan', name: 'slogan', widget: 'string', required: false}
+      - { label: 'Founded (year)', name: 'founded', widget: 'datetime', date:_foramt: 'YYYY', time_foramt: false, required: true} #returns a time date string of the year
+      - { label: 'Number of employess in Sweden', name: 'number of employees in Sweden', widget: 'number', value_type: 'int', rquired: true}
+      - { label: 'Number of employess internationally', name: 'number of employees in internationally', widget: 'number', value_type: 'int', rquired: true}
+      - { label: 'Area of business (max 40 words)', name: 'area of business', widget: 'text', required: true}
+      - { label: 'About us (max 150 words)', name: 'about us', widget: 'text', required: true}
+      - { label: 'Qualifications (max 35 words)', name: 'qualifications', widget: 'text', required: true}
+      - { label: 'Name', name: 'name', widget: 'string', required: true}
+      - { label: 'Email', name: 'email', widget: 'string', required: true}
+      - { label: 'Phone number', name: 'phone_number', widget: 'string', required: false}
+      - { label: 'Link to postitions', name: 'link_to_positions', widget: 'string', required: true}
+
       - name: 'The programs you hire from'
         label: 'The programs you hire from'
         widget: 'list'
         allow_add: true
         fields:
-          - { label: 'Program', name: 'Program', widget: 'select', options: ['Data', 'Data och system', 'Design'] }
+          - { label: 'Program', name: 'Program', widget: 'select', options: ['Affärssystem och tjänstedesign', 'Data- och systemvetenskap', 'Datorspelsutveckling', 'Datavetenskap', 'Ekonomi och IT', 'Marknadskommunikation och IT', 'Digitala medier', 'Interaktionsdesign', 'Magister/Master'] }
           - { label: 'Title', name: 'title', wiget: 'string'}
       - name: 'Open positions'
         label: 'Open positions'
