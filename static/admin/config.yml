@@ -36,7 +36,7 @@ collections:
         widget: 'list'
         allow_add: true
         fields:
-          - { label: 'Program', name: 'Program', widget: 'select', options: ['Affärssystem och tjänstedesign', 'Data- och systemvetenskap', 'Datorspelsutveckling', 'Datavetenskap', 'Ekonomi och IT', 'Marknadskommunikation och IT', 'Digitala medier', 'Interaktionsdesign', 'Magister/Master'] }
+          - { label: 'Program', name: 'Program', widget: 'select', multiple: true,  options: ['Affärssystem och tjänstedesign', 'Data- och systemvetenskap', 'Datorspelsutveckling', 'Datavetenskap', 'Ekonomi och IT', 'Marknadskommunikation och IT', 'Digitala medier', 'Interaktionsdesign', 'Magister/Master'] }
           - { label: 'Title', name: 'title', wiget: 'string'}
       - name: 'Open positions'
         label: 'Open positions'
