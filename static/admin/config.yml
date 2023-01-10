@@ -21,8 +21,8 @@ collections:
       - { label: 'Title', name: 'title', wiget: 'string', required: true}
       - { label: 'Slogan', name: 'slogan', widget: 'string', required: false}
       - { label: 'Founded (year)', name: 'founded', widget: 'datetime', date_format: 'YYYY', time_format: false, required: true} #returns a time date string of the year
-      - { label: 'Number of employess in Sweden', name: 'number of employees in Sweden', widget: 'number', value_type: 'int', rquired: true}
-      - { label: 'Number of employess internationally', name: 'number of employees in internationally', widget: 'number', value_type: 'int', rquired: true}
+      - { label: 'Number of employess in Sweden', name: 'number of employees in Sweden', widget: 'number', value_type: 'int', required: true}
+      - { label: 'Number of employess internationally', name: 'number of employees in internationally', widget: 'number', value_type: 'int', required: true}
       - { label: 'Area of business (max 40 words)', name: 'area of business', widget: 'text', required: true}
       - { label: 'About us (max 150 words)', name: 'about us', widget: 'text', required: true}
       - { label: 'Qualifications (max 35 words)', name: 'qualifications', widget: 'text', required: true}
@@ -36,10 +36,9 @@ collections:
 
       - { label: 'Sponsor banner', name: 'banner', widget: 'image', required: false}
       - { label: 'Youtube video (sponsor)', name: 'youtube video', widget: 'string', required: false}
-      - label: "Sponsor images"
-        name: "sponsor images"
-        widget: "list"
-        allow_add: true
-        required: false
-        field: {label: 'Sponsor image', name: 'sponsor image', widget: image}
+      - { label: "Sponsor images", name: "sponsor images", widget: "list", allow_add: true, required: false,
+        field: {
+          label: 'Sponsor image', name: 'sponsor image', widget: image
+          }
+        }
 
