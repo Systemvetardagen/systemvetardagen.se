@@ -20,7 +20,7 @@ collections:
       - { label: 'Logo', name: 'logo', widget: 'image', required: true}
       - { label: 'Title', name: 'title', wiget: 'string', required: true}
       - { label: 'Slogan', name: 'slogan', widget: 'string', required: false}
-      - { label: 'Founded (year)', name: 'founded', widget: 'datetime', date:_foramt: 'YYYY', time_format: false, required: true} #returns a time date string of the year
+      - { label: 'Founded (year)', name: 'founded', widget: 'datetime', date:_format: 'YYYY', time_format: false, required: true} #returns a time date string of the year
       - { label: 'Number of employess in Sweden', name: 'number of employees in Sweden', widget: 'number', value_type: 'int', rquired: true}
       - { label: 'Number of employess internationally', name: 'number of employees in internationally', widget: 'number', value_type: 'int', rquired: true}
       - { label: 'Area of business (max 40 words)', name: 'area of business', widget: 'text', required: true}
