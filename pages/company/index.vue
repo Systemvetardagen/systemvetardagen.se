@@ -4,7 +4,7 @@
       <h1 class="title">Company</h1>
       <div>
     <li v-for="post of posts" :key="post.slug">
-      <NuxtLink :to=" + post.slug">{{ post.title }}</NuxtLink>
+      <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink>
     </li>
   </div>
     </section>
