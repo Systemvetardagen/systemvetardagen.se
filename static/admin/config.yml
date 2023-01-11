@@ -1,5 +1,3 @@
-site_url: = https://taupe-manatee-491982.netlify.app
-
 publish_mode: editorial_workflow
 backend:
   name: git-gateway
@@ -15,28 +13,33 @@ collections:
     create: true
     slug: "{{title}}"
     fields:
-      - { label: 'Logo', name: 'logo', widget: 'image', required: true}
+      - { label: 'Logo', name: 'logo', widget: 'image', required: false}
       - { label: 'Title', name: 'title', wiget: 'string', required: true}
       - { label: 'Slogan', name: 'slogan', widget: 'string', required: false}
       - { label: 'Founded (year)', name: 'founded', widget: 'datetime', date_format: 'YYYY', time_format: false, required: true} #returns a time date string of the year
-      - { label: 'Number of employess in Sweden', name: 'number of employees in Sweden', widget: 'number', value_type: 'int', required: true}
-      - { label: 'Number of employess internationally', name: 'number of employees in internationally', widget: 'number', value_type: 'int', required: true}
-      - { label: 'Area of business (max 40 words)', name: 'area of business', widget: 'text', required: true}
-      - { label: 'About us (max 150 words)', name: 'about us', widget: 'text', required: true}
+      - { label: 'Number of employess in Sweden', name: 'number_of_employees_in_Sweden', widget: 'number', value_type: 'int', required: true}
+      - { label: 'Number of employess internationally', name: 'number_of_employees_in_internationally', widget: 'number', value_type: 'int', required: true}
+      - { label: 'Area of business (max 40 words)', name: 'area_of_business', widget: 'text', required: true}
+      - { label: 'About us (max 150 words)', name: 'about_us', widget: 'text', required: true}
       - { label: 'Qualifications (max 35 words)', name: 'qualifications', widget: 'text', required: true}
-      - { label: 'Name', name: 'name', widget: 'string', required: true}
-      - { label: 'Email', name: 'email', widget: 'string', required: true}
-      - { label: 'Phone number', name: 'phone_number', widget: 'string', required: false}
+      
+      - { label: "Contact persons", name: "contact_persons", widget: "list", allow_add: true, required: true,
+        field: 
+          - { label: 'Name', name: 'name', widget: 'string', rquired: true }
+          - { label: 'Email', name: 'email', widget: 'string', required: true}
+          - { label: 'Phone number', name: 'phone_number', widget: 'string', required: false}
+        }
+
       - { label: 'Link to postitions', name: 'link_to_positions', widget: 'string', required: true}
       - { label: 'Program', name: 'Program', widget: 'select', multiple: true,  options: ['Affärssystem och tjänstedesign', 'Data- och systemvetenskap', 'Datorspelsutveckling', 'Datavetenskap', 'Ekonomi och IT', 'Marknadskommunikation och IT', 'Digitala medier', 'Interaktionsdesign', 'Magister/Master'], required: true}
       - { label: 'Positions', name: 'positions', widget: 'select', mulitple: true, options: ['Praktikplatser', 'Utlandstjänster', 'Traineeprogram', 'Heltidstjänster', 'Examensarbete', 'Deltidstjänster'], requierd: true}
       - { label: 'Positions other', name: 'positions_other', widget: 'string', required: false}
 
       - { label: 'Sponsor banner', name: 'banner', widget: 'image', required: false}
-      - { label: 'Youtube video (sponsor)', name: 'youtube video', widget: 'string', required: false}
-      - { label: "Sponsor images", name: "sponsor images", widget: "list", allow_add: true, required: false,
+      - { label: 'Youtube video (sponsor)', name: 'youtube_video', widget: 'string', required: false}
+      - { label: "Sponsor images", name: "sponsor_images", widget: "list", allow_add: true, required: false,
         field: {
-          label: 'Sponsor image', name: 'sponsor image', widget: image
+          label: 'Sponsor image', name: 'sponsor_image', widget: image
           }
         }
 
