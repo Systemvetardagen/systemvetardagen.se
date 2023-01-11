@@ -1,3 +1,5 @@
+site_url: svd-nuxt.netlify.app
+
 publish_mode: editorial_workflow
 backend:
   name: git-gateway
