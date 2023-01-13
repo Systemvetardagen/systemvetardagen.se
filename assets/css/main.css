@@ -492,7 +492,6 @@ footer {
   }
 }
 .faq {
-  background-image: linear-gradient(-90deg, rgba(46, 40, 68, 0.4941176471), #060b38), url("@/assets/img/faq_image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -503,10 +502,12 @@ footer {
 
 .faq-question {
   margin: 2rem 0;
+  margin-left: 4rem;
 }
 
 .faq p {
   max-width: 50ch;
+  font-family: work-sans;
 }
 
 .join {
