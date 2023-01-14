@@ -49,7 +49,7 @@ collections:
       - { label: 'Positions other', name: 'positions_other', widget: 'string', required: false, i18n: true}
 
       - { label: 'Sponsor banner', name: 'banner', widget: 'image', required: false, i18n: duplicate}
-      - { label: 'Youtube video (sponsor)', name: 'youtube_video', widget: 'string', required: false, i18n: duplicate}     
+      - { label: 'Youtube video (sponsor)', name: 'youtube_video', widget: 'string', required: false, i18n: duplicate}
       - { label: "Sponsor images", name: "sponsor_images", widget: "list", allow_add: true, required: false, i18n: true,
         field: {
           label: 'Sponsor image', name: 'sponsor_image', widget: image, i18n: duplicate
