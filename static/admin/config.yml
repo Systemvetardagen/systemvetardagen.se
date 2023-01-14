@@ -1,4 +1,4 @@
-site_url: = https://taupe-manatee-491982.netlify.app
+site_url: svd-nuxt.netlify.app
 
 publish_mode: editorial_workflow
 backend:
@@ -8,35 +8,46 @@ backend:
 media_folder: "assets/img/uploads"
 public_folder: "/img/uploads"
 
+i18n:
+  structure: multiple_files
+  locales: [en, sv]
+  default_locale: sv
+
 collections:
   - name: 'company'
     label: 'company'
     folder: 'content/company'
     create: true
     slug: "{{title}}"
+    i18n: true
     fields:
-      - { label: 'Logo', name: 'logo', widget: 'image', required: true}
-      - { label: 'Title', name: 'title', wiget: 'string', required: true}
-      - { label: 'Slogan', name: 'slogan', widget: 'string', required: false}
-      - { label: 'Founded (year)', name: 'founded', widget: 'datetime', date_format: 'YYYY', time_format: false, required: true} #returns a time date string of the year
-      - { label: 'Number of employess in Sweden', name: 'number of employees in Sweden', widget: 'number', value_type: 'int', required: true}
-      - { label: 'Number of employess internationally', name: 'number of employees in internationally', widget: 'number', value_type: 'int', required: true}
-      - { label: 'Area of business (max 40 words)', name: 'area of business', widget: 'text', required: true}
-      - { label: 'About us (max 150 words)', name: 'about us', widget: 'text', required: true}
-      - { label: 'Qualifications (max 35 words)', name: 'qualifications', widget: 'text', required: true}
-      - { label: 'Name', name: 'name', widget: 'string', required: true}
-      - { label: 'Email', name: 'email', widget: 'string', required: true}
-      - { label: 'Phone number', name: 'phone_number', widget: 'string', required: false}
-      - { label: 'Link to postitions', name: 'link_to_positions', widget: 'string', required: true}
-      - { label: 'Program', name: 'Program', widget: 'select', multiple: true,  options: ['Affärssystem och tjänstedesign', 'Data- och systemvetenskap', 'Datorspelsutveckling', 'Datavetenskap', 'Ekonomi och IT', 'Marknadskommunikation och IT', 'Digitala medier', 'Interaktionsdesign', 'Magister/Master'], required: true}
-      - { label: 'Positions', name: 'positions', widget: 'select', mulitple: true, options: ['Praktikplatser', 'Utlandstjänster', 'Traineeprogram', 'Heltidstjänster', 'Examensarbete', 'Deltidstjänster'], requierd: true}
-      - { label: 'Positions other', name: 'positions_other', widget: 'string', required: false}
+      - { label: 'Logo', name: 'logo', widget: 'image', required: false, i18n: duplicate}
+      - { label: 'Title', name: 'title', wiget: 'string', required: true, i18n: duplicate}
+      - { label: 'Slogan', name: 'slogan', widget: 'string', required: false, i18n: true}
+      - { label: 'Founded (year)', name: 'founded', widget: 'datetime', date_format: 'YYYY', time_format: false, required: true, i18n: duplicate} #returns a time date string of the year
+      - { label: 'Number of employess in Sweden', name: 'number_of_employees_in_Sweden', widget: 'number', value_type: 'int', required: true, i18n: duplicate}
+      - { label: 'Number of employess internationally', name: 'number_of_employees_in_internationally', widget: 'number', value_type: 'int', required: true, i18n: duplicate}
+      - { label: 'Area of business (max 40 words)', name: 'area_of_business', widget: 'text', required: true, i18n: true}
+      - { label: 'About us (max 150 words)', name: 'about_us', widget: 'text', required: true, i18n: true}
+      - { label: 'Qualifications (max 35 words)', name: 'qualifications', widget: 'text', required: true, i18n: true}
+      
+      - { label: "Contact persons", name: "contact_persons", widget: "list", allow_add: true, required: true, i18n: true,
+        field: 
+          - { label: 'Name', name: 'name', widget: 'string', required: true, i18n: duplicate}
+          - { label: 'Email', name: 'email', widget: 'string', required: true, i18n: duplicate}
+          - { label: 'Phone number', name: 'phone_number', widget: 'string', required: false, i18n: duplicate}
+        }
 
-      - { label: 'Sponsor banner', name: 'banner', widget: 'image', required: false}
-      - { label: 'Youtube video (sponsor)', name: 'youtube video', widget: 'string', required: false}
-      - { label: "Sponsor images", name: "sponsor images", widget: "list", allow_add: true, required: false,
+      - { label: 'Link to postitions', name: 'link_to_positions', widget: 'string', required: true, i18n: duplicate}
+      - { label: 'Program', name: 'Program', widget: 'select', multiple: true,  options: ['Affärssystem och tjänstedesign', 'Data- och systemvetenskap', 'Datorspelsutveckling', 'Datavetenskap', 'Ekonomi och IT', 'Marknadskommunikation och IT', 'Digitala medier', 'Interaktionsdesign', 'Magister/Master'], required: true, i18n: true}
+      - { label: 'Positions', name: 'positions', widget: 'select', mulitple: true, options: ['Praktikplatser', 'Utlandstjänster', 'Traineeprogram', 'Heltidstjänster', 'Examensarbete', 'Deltidstjänster'], required: true, i18n: true}
+      - { label: 'Positions other', name: 'positions_other', widget: 'string', required: false, i18n: true}
+
+      - { label: 'Sponsor banner', name: 'banner', widget: 'image', required: false, i18n: duplicate}
+      - { label: 'Youtube video (sponsor)', name: 'youtube_video', widget: 'string', required: false, i18n: duplicate}
+      - { label: "Sponsor images", name: "sponsor_images", widget: "list", allow_add: true, required: false, i18n: true,
         field: {
-          label: 'Sponsor image', name: 'sponsor image', widget: image
+          label: 'Sponsor image', name: 'sponsor_image', widget: image, i18n: duplicate
           }
         }
 
