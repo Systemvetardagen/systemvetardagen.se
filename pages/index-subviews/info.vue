@@ -1,14 +1,6 @@
 <template>
     <section>
         <div id="info">
-            <div class="info-second">
-                <h3 style="color:var(--clr-blue-600); text-align: center;">{{ $t('during_the_fair') }}</h3>
-                <p><ul>
-                    <li>{{ $t('during_the_fair_description1') }}</li>
-                    <li>{{ $t('during_the_fair_description2') }}</li>
-                    <li>{{ $t('during_the_fair_description3') }}</li>
-                </ul></p>
-            </div>
             <div class="info-first">
                 <h3 style=" color:var(--clr-pink-600); text-align: center;">{{ $t('before_the_fair') }}</h3>
                 <p><ul>
@@ -18,6 +10,14 @@
                     <li>{{ $t('before_the_fair_description4') }}</li>
                 </ul></p>
                 <p>{{ $t('before_the_fair_description5') }}</p>
+            </div>
+            <div class="info-second">
+                <h3 style="color:var(--clr-blue-600); text-align: center;">{{ $t('during_the_fair') }}</h3>
+                <p><ul>
+                    <li>{{ $t('during_the_fair_description1') }}</li>
+                    <li>{{ $t('during_the_fair_description2') }}</li>
+                    <li>{{ $t('during_the_fair_description3') }}</li>
+                </ul></p>
             </div>
         </div>
 
