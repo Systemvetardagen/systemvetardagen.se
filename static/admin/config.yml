@@ -37,10 +37,9 @@ collections:
         allow_add: true,
         required: true,
         i18n: true,
-        field: { label: 'test', name: 'test', widget: 'string'},
-        { label: 'Name', name: 'name', widget: 'string', required: true, i18n: duplicate },      
-        { label: 'Email', name: 'email', widget: 'string', required: true, i18n: duplicate },       
-        { label: 'Phone number', name: 'phone_number', widget: 'string', required: false, i18n: duplicate }
+        field: { label: 'Name', name: 'name', widget: 'string', required: true, i18n: duplicate },      
+          { label: 'Email', name: 'email', widget: 'string', required: true, i18n: duplicate },       
+          { label: 'Phone number', name: 'phone_number', widget: 'string', required: false, i18n: duplicate }
       }
         
       - { label: 'Link to postitions', name: 'link_to_positions', widget: 'string', required: true, i18n: duplicate}
