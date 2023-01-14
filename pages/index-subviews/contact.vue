@@ -2,7 +2,7 @@
    
     <section  class="contact">
                  <form class="contact-form">
-                     <h2 class="text-blue">{{ ('Contact_us')}}</h2>
+                     <h2 class="text-blue">{{ $t('contact_us') }}</h2>
                      <div class="inputs">
                          <div class="inputs-left-col">
                              
@@ -20,3 +20,8 @@
              </section>
  
  </template>
+ <script>
+export default {
+    name: 'contact'
+}
+</script>
