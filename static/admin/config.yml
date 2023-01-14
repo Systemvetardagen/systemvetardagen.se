@@ -36,7 +36,7 @@ collections:
         widget: 'list',
         allow_add: true,
         required: true,
-        i18n: duplicate,
+        i18n: true,
         field: { label: 'Name', name: 'name', widget: 'string', required: true, i18n: duplicate },      
         { label: 'Email', name: 'email', widget: 'string', required: true, i18n: duplicate },       
         { label: 'Phone number', name: 'phone_number', widget: 'string', required: false, i18n: duplicate }
