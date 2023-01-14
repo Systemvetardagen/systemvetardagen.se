@@ -7,11 +7,11 @@
 			<nav>
 				
 				<div v-bind:class="{ active: isActive('#home') }">
-					<router-link to="#home" class="header-link" >{{$t('home')}}</router-link>
+					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
 				
 				<div v-bind:class="{ active: isActive('#catalog') }">
-					<a href="#catalog" class="header-link">{{$t('catalog')}}</a>
+					<NuxtLink to="company" class="header-link">{{$t('catalog')}}</NuxtLink>
 				</div>
 				
 				
