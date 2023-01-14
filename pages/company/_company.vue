@@ -6,7 +6,25 @@
       </nav>
       
       <article>
-        <h1 class="">{{ post.title }}</h1>
+        <div>
+
+          <h1 class="">{{ post.title }}</h1>
+          <h3>{{ post.slogan }}</h3>
+          <p>Grundades: {{ post.founded }}</p>
+          <p>{{ post.area_of_business }}</p>
+        </div>
+        <p>{{ post.about_us }}</p>
+        <ul>
+          <h3>Anställer studenter från:</h3>
+          <li v-for="program in post.Program">{{ program }}</li>
+        </ul>
+        <p>Typer av anställningar: {{ post.positions }}</p>
+        <p>{{ post.qualifications }}</p>
+        <div>
+          <h3>Kontaktperson</h3>
+          <p>Monia Letmark</p>
+          <a href="linkto:monia.letmark@avanade.com">monia.letmark@avanade.com</a>
+        </div>
       </article>
     </section>
   </main>
