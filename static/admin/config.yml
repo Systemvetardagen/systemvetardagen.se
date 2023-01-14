@@ -10,7 +10,7 @@ public_folder: "/img/uploads"
 
 i18n:
   structure: multiple_files
-  locales: [en, sv]
+  locales: [sv, en]
   default_locale: sv
 
 collections:
@@ -30,14 +30,19 @@ collections:
       - { label: 'Area of business (max 40 words)', name: 'area_of_business', widget: 'text', required: true, i18n: true}
       - { label: 'About us (max 150 words)', name: 'about_us', widget: 'text', required: true, i18n: true}
       - { label: 'Qualifications (max 35 words)', name: 'qualifications', widget: 'text', required: true, i18n: true}
-      
-      - { label: "Contact persons", name: "contact_persons", widget: "list", allow_add: true, required: true, i18n: true,
-        field: 
-          - { label: 'Name', name: 'name', widget: 'string', required: true, i18n: duplicate}
-          - { label: 'Email', name: 'email', widget: 'string', required: true, i18n: duplicate}
-          - { label: 'Phone number', name: 'phone_number', widget: 'string', required: false, i18n: duplicate}
-        }
 
+      - {label: 'Contact persons',
+        name: 'contact_persons',
+        widget: 'list',
+        allow_add: true,
+        required: true,
+        i18n: true,
+        field: { label: 'test', name: 'test', widget: 'string'},
+        { label: 'Name', name: 'name', widget: 'string', required: true, i18n: duplicate },      
+        { label: 'Email', name: 'email', widget: 'string', required: true, i18n: duplicate },       
+        { label: 'Phone number', name: 'phone_number', widget: 'string', required: false, i18n: duplicate }
+      }
+        
       - { label: 'Link to postitions', name: 'link_to_positions', widget: 'string', required: true, i18n: duplicate}
       - { label: 'Program', name: 'Program', widget: 'select', multiple: true,  options: ['Affärssystem och tjänstedesign', 'Data- och systemvetenskap', 'Datorspelsutveckling', 'Datavetenskap', 'Ekonomi och IT', 'Marknadskommunikation och IT', 'Digitala medier', 'Interaktionsdesign', 'Magister/Master'], required: true, i18n: true}
       - { label: 'Positions', name: 'positions', widget: 'select', mulitple: true, options: ['Praktikplatser', 'Utlandstjänster', 'Traineeprogram', 'Heltidstjänster', 'Examensarbete', 'Deltidstjänster'], required: true, i18n: true}
