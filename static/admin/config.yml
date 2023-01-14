@@ -38,9 +38,9 @@ collections:
         required: true
         i18n: true
         fields: 
-        - { label: 'Name', name: 'name', widget: 'string', required: true, i18n: duplicate } 
-        - { label: 'Email', name: 'email', widget: 'string', required: true, i18n: duplicate } 
-        - { label: 'Phone number', name: 'phone_number', widget: 'string', required: false, i18n: duplicate }
+        - { label: 'Name', name: 'name', widget: 'string', required: true, i18n: true } 
+        - { label: 'Email', name: 'email', widget: 'string', required: true, i18n: true } 
+        - { label: 'Phone number', name: 'phone_number', widget: 'string', required: false, i18n: true }
         
       - { label: 'Link to postitions', name: 'link_to_positions', widget: 'string', required: true, i18n: duplicate}
       - { label: 'Program', name: 'Program', widget: 'select', multiple: true,  options: ['Affärssystem och tjänstedesign', 'Data- och systemvetenskap', 'Datorspelsutveckling', 'Datavetenskap', 'Ekonomi och IT', 'Marknadskommunikation och IT', 'Digitala medier', 'Interaktionsdesign', 'Magister/Master'], required: true, i18n: true}
