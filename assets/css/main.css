@@ -132,6 +132,7 @@ h1 {
 @media (min-width: 640px) {
   h1 {
     font-size: 3.5rem;
+    line-height: 100%;
   }
 }
 h2 {

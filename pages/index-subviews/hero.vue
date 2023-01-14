@@ -3,7 +3,7 @@
 
         <div class="hero-content">
              <!-- Hero Text -->
-            <div class="hero-text">
+            <div>
                 <h1 class="hero-heading" style="color: var(--clr-blue-600)" >{{ $t('hero_title') }}</h1>
                 <h3 style="color: var(--clr-blue-900)">{{ $t('event_description') }}</h3>
             </div>
@@ -36,7 +36,7 @@
 
 <style>
     .hero {
-        height: 115vh;
+        height: 100vh;
         /* background-position: center; */
         /* background-repeat: no-repeat; */
         justify-content: flex-end;
@@ -61,10 +61,6 @@
         max-width: 50%;
         /* line-height: 200%; */
     }
-
-    .hero-text {
-        line-height: 200%;
-    } 
 
     .hero-buttons {
         display: flex;
