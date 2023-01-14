@@ -11,6 +11,7 @@ public_folder: "/img/uploads"
 i18n:
   structure: multiple_files
   locales: [en, sv]
+  default_locale: sv
 
 collections:
   - name: 'company'
