@@ -20,7 +20,7 @@
 			<nuxt-link v-else="showEnglishMessage" :to="switchLocalePath('sv')" class="link-fair"><img src="@/assets/img/Sweden.png"/></nuxt-link>
 			
 		</header>
-
+		
 		<!-- MOBILE NAV -->
 		<header class="mobile-header">
 			<a href="#" class="logo-link">

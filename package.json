@@ -9,6 +9,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxt/content": "^1.15.1",
+    "@nuxtjs/content": "^0.3.0",
     "@nuxtjs/i18n": "^7.2.0",
     "@vue/reactivity": "^3.2.45",
     "core-js": "^3.19.3",
