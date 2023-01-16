@@ -6,13 +6,13 @@
                      <div class="inputs">
                          
                              
-                        <input type="text" :placeholder="('contact-form-name')" name="name" required>
-                        <input type="email" :placeholder="('contact-form-email')" name="email" required>
-                        <input type="text" :placeholder="('contact-form-company')" name="company" required>
+                        <input type="text" :placeholder="this.$t('contact-form-name')" name="name" required>
+                        <input type="email" :placeholder="this.$t('contact-form-email')" name="email" required>
+                        <input type="text" :placeholder="this.$t('contact-form-company')" name="company" required>
                         <input autocomplete="off" type="text" id="form-title" name="title" placeholder="Title"
                             style="display: none">
 
-                         <textarea class="form-message" name="message" :placeholder="('contact-form-message')" rows="3"
+                         <textarea class="form-message" name="message" :placeholder="this.$t('contact-form-message')" rows="3"
                              style="resize: none;"></textarea>
                      </div>
                      <Button :title="this.$t('contact-form-button')" bColor="--clr-pink-700"></Button>
