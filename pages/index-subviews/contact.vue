@@ -15,14 +15,18 @@
                          <textarea class="form-message" name="message" placeholder="message" rows="3"
                              style="resize: none;"></textarea>
                      </div>
-                     <button type="submit" class="button button-blue button-form" form="contact-form">{{('send')}}</button>
+                     <Button :title="this.$t('send')" bColor="--clr-pink-700"></Button>
                  </form>
              </section>
  
  </template>
  <script>
+ import Button from '@/components/Button.vue'
 export default {
     name: 'contact'
+}
+components: {
+    Button
 }
 </script>
 <style>
@@ -39,6 +43,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-self: flex-start;
 
    border-radius: nullpx;
    text-align: left;
@@ -112,7 +117,7 @@ textarea::placeholder {
 .button-form {
   margin-top: 0;
   width: 12rem;
-  align-self: flex-end;
+  align-self: flex-start;
 }
 
 </style>
