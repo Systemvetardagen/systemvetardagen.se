@@ -6,16 +6,43 @@
                      <div class="inputs">
                          
                              
-                        <input type="text" :placeholder="this.$t('contact-form-name')" name="name" required>
-                        <input type="email" :placeholder="this.$t('contact-form-email')" name="email" required>
-                        <input type="text" :placeholder="this.$t('contact-form-company')" name="company" required>
+                        <input 
+                            type="text" 
+                            :placeholder="this.$t('contact-form-name')" 
+                            name="name" 
+                            v-model="name"
+                            required>
+                        <input 
+                            type="email" 
+                            :placeholder="this.$t('contact-form-email')" 
+                            name="email" 
+                            v-model="email"
+                            required>
+                        <input 
+                            type="text" 
+                            :placeholder="this.$t('contact-form-company')" 
+                            name="company" 
+                            v-model="company"
+                            required>
+
                         <input autocomplete="off" type="text" id="form-title" name="title" placeholder="Title"
                             style="display: none">
 
-                         <textarea class="form-message" name="message" :placeholder="this.$t('contact-form-message')" rows="3"
-                             style="resize: none;"></textarea>
+                         <textarea 
+                            class="form-message" 
+                            name="message" 
+                            :placeholder="this.$t('contact-form-message')" 
+                            v-model="message"
+                            rows="3"
+                            style="resize: none;"></textarea>
                      </div>
-                     <Button :title="this.$t('contact-form-button')" bColor="--clr-pink-700"></Button>
+                     <button @click="submit">Test</button>
+                     <Button 
+                        :title="this.$t('contact-form-button')" 
+                        bColor="--clr-pink-700" 
+                        @click="submit"
+                        
+                        ></Button>
                  </form>
 
                  <img class="contact-blob-nod" src="assets/img/contact-blob-nod.png" alt="Blob Contact Nod"/>
@@ -26,6 +53,48 @@
  <script>
  import Button from '@/components/Button.vue'
 export default {
+  methods: {
+     submit(event) {
+        console.log('Step 0')
+        event.preventDefault();
+        console.log('Step 1 complete')
+        try {
+            let body = {
+                name: this.name,
+                email: this.email,
+                company: this.company,
+                message: this.message,
+                //"bot-field": formHoneypot.value,
+        };
+        console.log(body);
+        fetch(this.url, {
+            method: "POST",
+            body: JSON.stringify(body),
+        });
+        this.clearForm();
+        alert("Meddelandet har skickats!");
+        } catch (err) {
+            console.log(err);
+            alert("Något gick fel!");
+        }
+    },
+
+    clearForm() {
+    this.name = '';
+    this.email = '';
+    this.company = "";
+    this.message = "";
+    }
+  },
+  data () {
+    return {
+        name: '',
+        email: '',
+        company: '',
+        message: '',
+        url: 'https://contact-form.systemvetardagen.workers.dev/'
+    }
+  },
     name: 'contact'
 }
 components: {
