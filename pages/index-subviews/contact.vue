@@ -30,13 +30,15 @@ export default {
   padding-top: 0;
   display: flex;
   flex-direction: column;
-
+  background-color: var(--clr-blue-200);
+  justify-content: space-between;
 
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 
    border-radius: nullpx;
    text-align: left;
@@ -49,6 +51,8 @@ export default {
    flex: none;
    order: 0;
    flex-grow: 0;
+
+   padding-top: 10rem;
 
 }
 
@@ -76,9 +80,14 @@ textarea {
   width: 24rem;
   max-width: 100%;
   background-color: white;
-  border-radius: 0;
-  color: var(--clr-grey-1000);
+  border-radius: 0.4rem;
+  color: var(--clr-grey-500);
   /* transition: border-color 0.2s; */
+  border: none;
+}
+
+input {
+    height: 2rem;
 }
 
 input:focus,
@@ -88,16 +97,16 @@ textarea:focus {
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-  color: var(--clr-grey-1000);
+  color: var(--clr-grey-500);
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: var(--clr-grey-1000);
+  color: var(--clr-grey-500);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--clr-grey-1000);
+  color: var(--clr-grey-500);
 }
 
 .button-form {
