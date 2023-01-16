@@ -17,6 +17,9 @@
                      </div>
                      <Button :title="this.$t('contact-form-button')" bColor="--clr-pink-700"></Button>
                  </form>
+
+                 <img class="contact-blob-nod" src="assets/img/contact-blob-nod.png" alt="Blob Contact Nod"/>
+                 
              </section>
  
  </template>
@@ -34,7 +37,7 @@ components: {
   padding-top: 0;
   display: flex;
   flex-direction: column;
-  background-color: var(--clr-blue-200);
+  background: var(--clr-blue-200);
   justify-content: space-between;
 
 }
@@ -118,6 +121,13 @@ textarea::placeholder {
   margin-top: 0;
   width: 12rem;
   align-self: flex-start;
+}
+
+
+
+.contact-blob-nod {
+    width: 50%;
+    height: auto;
 }
 
 </style>
