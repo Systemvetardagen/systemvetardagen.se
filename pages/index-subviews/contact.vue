@@ -2,20 +2,20 @@
    
     <section  class="contact">
                  <form class="contact-form">
-                     <h2 style="color: var(--clr-grey-1000)" >{{ $t('contact_us') }}</h2>
+                     <h2 style="color: var(--clr-grey-1000)" >{{ $t('contact-form-title') }}</h2>
                      <div class="inputs">
                          
                              
-                        <input type="text" placeholder="name" name="name" required>
-                        <input type="email" placeholder="email" name="email" required>
-                        <input type="text" placeholder="company" name="company" required>
+                        <input type="text" :placeholder="('contact-form-name')" name="name" required>
+                        <input type="email" :placeholder="('contact-form-email')" name="email" required>
+                        <input type="text" :placeholder="('contact-form-company')" name="company" required>
                         <input autocomplete="off" type="text" id="form-title" name="title" placeholder="Title"
                             style="display: none">
 
-                         <textarea class="form-message" name="message" placeholder="message" rows="3"
+                         <textarea class="form-message" name="message" :placeholder="('contact-form-message')" rows="3"
                              style="resize: none;"></textarea>
                      </div>
-                     <Button :title="this.$t('send')" bColor="--clr-pink-700"></Button>
+                     <Button :title="this.$t('contact-form-button')" bColor="--clr-pink-700"></Button>
                  </form>
              </section>
  

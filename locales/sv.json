@@ -73,6 +73,14 @@
   "company": "Företag",
   "name": "Namn",
   "email": "E-post",
-  "message": "Meddelande"
+  "message": "Meddelande",
+
+
+  "contact-form-title": "<translation missing>",
+  "contact-form-name": "<translation missing>",
+  "contact-form-company": "<translation missing>",
+  "contact-form-email": "<translation missing>",
+  "contact-form-message": "<translation missing>",
+  "contact-form-button": "<translation missing>"
 
 }
