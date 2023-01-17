@@ -69,14 +69,14 @@ export default {
 		border-bottom: solid var(--clr-grey-1000);
 	}
 	.main-header {
-	/* background: linear-gradient(var(--clr-white), transparent); */
+	background: white;
 	position: fixed;
 	/* width: 95%; */
 	height: 5rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1rem 1rem 0rem 1rem;
+	padding: 1rem 2rem 0rem 2rem;
 	transition: background 0.2s;
 	top: 0;
 	right: 0;
@@ -84,8 +84,9 @@ export default {
 	left: 0;
 	z-index: 1000;
 	border-bottom: solid var(--clr-grey-300) 0.13rem;
-	margin: 0rem 1rem;
-	align-self: center; 
+	margin: 0rem 0rem;
+	align-self: center;
+
 	}
 
 	.logo-link {
@@ -103,7 +104,7 @@ export default {
 
 	.header-link {
 	font-size: 1.2rem;
-	font-weight: 700;
+	font-weight: 600;
 	margin: 0 max(1rem, 2vw);
 	}
 
