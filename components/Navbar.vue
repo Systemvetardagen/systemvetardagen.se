@@ -6,14 +6,22 @@
 			</a>
 			<nav>
 				
-				<div v-bind:class="{ active: isActive('#home') }">
+				<div v-if="showEnglishMessage" v-bind:class="{ active: isActive('/') }">
 					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
+				<div v-else="showEnglishMessage" v-bind:class="{ active: isActive('/en') }">
+					<NuxtLink to="/en" class="header-link" >{{$t('home')}}</NuxtLink>
+				</div>
+
 				
-				<div v-bind:class="{ active: isActive('#catalog') }">
-					<NuxtLink to="company" class="header-link">{{$t('catalog')}}</NuxtLink>
+				<div v-if="showEnglishMessage" v-bind:class="{ active: isActive('/company') }">
+					<NuxtLink to="/company" class="header-link">{{$t('catalog')}}</NuxtLink>
 				</div>
 				
+				<div v-else="showEnglishMessage" v-bind:class="{ active: isActive('/company') }">
+					<NuxtLink to="/company" class="header-link">{{$t('catalog')}}</NuxtLink>
+				</div>
+
 				
 			</nav>
 			<nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')" class="link-fair"><img src="@/assets/img/UK.png"/></nuxt-link>
