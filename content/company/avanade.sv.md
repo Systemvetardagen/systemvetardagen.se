@@ -1,5 +1,5 @@
 ---
-title: Avanade
+title: avanade
 slogan: Do What Matters
 founded: 2019-01-14T20:54:50.240Z
 number_of_employees_in_Sweden: 190
