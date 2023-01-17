@@ -6,19 +6,19 @@
 			</a>
 			<nav>
 				
-				<div v-if="showEnglishMessage" v-bind:class="{ active: isActive('/') }">
+				<div v-if="showEnglishMessage" class="normal" v-bind:class="{ active: isActive('/') }">
 					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
-				<div v-else="showEnglishMessage" v-bind:class="{ active: isActive('/en') }">
+				<div v-else="showEnglishMessage" class="normal" v-bind:class="{ active: isActive('/en') }">
 					<NuxtLink to="/en" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
 
 				
-				<div v-if="showEnglishMessage" v-bind:class="{ active: isActive('/company') }">
+				<div v-if="showEnglishMessage" class="normal" v-bind:class="{ active: isActive('/company') }">
 					<NuxtLink to="/company" class="header-link">{{$t('catalog')}}</NuxtLink>
 				</div>
 				
-				<div v-else="showEnglishMessage" v-bind:class="{ active: isActive('/company') }">
+				<div v-else="showEnglishMessage" class="normal" v-bind:class="{ active: isActive('/company') }">
 					<NuxtLink to="/company" class="header-link">{{$t('catalog')}}</NuxtLink>
 				</div>
 
@@ -64,9 +64,18 @@ export default {
 
 <style>
 
+	.normal {
+		height: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		justify-items: center;
+	}
+
 	.active {
-		padding-bottom: 1rem;
+
 		border-bottom: solid var(--clr-grey-1000);
+		
 	}
 	.main-header {
 	background: white;
@@ -106,6 +115,7 @@ export default {
 	font-size: 1.2rem;
 	font-weight: 600;
 	margin: 0 max(1rem, 2vw);
+
 	}
 
 	nav > div > a {
