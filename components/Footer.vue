@@ -1,12 +1,12 @@
 <template>
-  <div>
+	<div>
 		<footer>
 			<div class="footer-wrapper">
-				<div class="footer-content">
+				<div class="footer-content" style="color: var(--clr-grey-100);">
 					<div class="social-links">
-						<h2 class="text-blue">{{$t('follow_us')}}</h2>
+						<h2> {{$t('footer_follow_title')}} </h2>
 						<a class="link-text" href="https://www.facebook.com/Systemvetardagen/">
-							<svg class="link-icon text-blue" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+							<svg class="link-icon text-yellow" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
 								fill="currentColor">
 								<title>Facebook</title>
 								<path
@@ -15,7 +15,7 @@
 							<span>Facebook</span>
 						</a>
 						<a class="link-text" href="https://www.instagram.com/systemvetardagen/">
-							<svg class="link-icon text-blue" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+							<svg class="link-icon text-yellow" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
 								fill="currentColor">
 								<title>Instagram</title>
 								<path
@@ -24,7 +24,7 @@
 							<span>Instagram</span>
 						</a>
 						<a class="link-text" href="https://www.linkedin.com/company/systemvetardagen/">
-							<svg class="link-icon text-blue" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+							<svg class="link-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
 								fill="currentColor">
 								<title>LinkedIn</title>
 								<path
@@ -34,23 +34,83 @@
 						</a>
 					</div>
 					<div>
-						<h2 class="text-blue">Adress</h2>
+						<h2>{{$t('footer_address_title')}}</h2>
 						<address>Studentkåren DISK<br>Borgarfjordsgatan 12<br>164 40 Kista</address>
 					</div>
 					<div>
-						<h2 class="text-blue">{{$t('contact')}}</h2>
+						<h2>{{$t('footer_contact_title')}}</h2>
 						<a class="link-text" href="mailto:systemvetardagen@disk.su.se">
-							<svg class="link-icon text-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+							<svg class="link-icon text-yellow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
 								fill="currentColor">
 								<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
 								<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
 							</svg>
-							systemvetardagen@disk.su.se
+							systemvetardagen<br>@disk.su.se
 						</a>
 					</div>
 				</div>
-				<p class="text-white-dim">© Systemvetardagen 2022</p>
+				<p style="color: var(--clr-pink-300);">© Systemvetardagen 2023</p>
 			</div>
 		</footer>
-  </div>
+	</div>
 </template>
+  
+  <style>
+	  footer {
+		  background-color: var(--clr-blue-600);
+	  }
+  
+	  .footer-content {
+		  display: flex;
+		  flex-direction: column;
+		  padding-bottom: 2rem;
+		  justify-content: space-evenly;
+
+	  }
+  
+	  .footer-content div {
+		  margin-bottom: 2rem;
+	  }
+  
+	  @media (min-width: 1024px) {
+		  .footer-content {
+			  flex-direction: row;
+		  }
+  
+		  .footer-content div {
+			  margin-right: 2rem;
+			  min-width: 12rem;
+		  }
+	  }
+  
+	  .social-links {
+		  display: flex;
+		  flex-direction: column;
+		  
+	  }
+  
+	  .link-icon {
+		  width: 1rem;
+		  margin-right: 0.5rem;
+		  color: var(--clr-gray-100);
+	  }
+  
+	  .link-text {
+		  color: var(--clr-gray-100);
+		  font-weight: 500;
+		  display: flex;
+		  align-items: center;
+		  margin-bottom: 0.5rem;
+		  transition: color 0.2s;
+		  line-height: 1rem;
+	  }
+  
+	  .link-text:hover {
+		  color: var(--clr-pink-300);
+	  }
+  
+	  address {
+		  font-style: normal;
+	  }
+  
+  </style>
