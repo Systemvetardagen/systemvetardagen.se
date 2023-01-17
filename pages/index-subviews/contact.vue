@@ -1,7 +1,7 @@
 <template>
    
     <section  class="contact">
-                 <form class="contact-form">
+                 <form class="contact-form" id="contact-form" @submit.prevent="submit">
                      <h2 style="color: var(--clr-grey-1000)" >{{ $t('contact-form-title') }}</h2>
                      <div class="inputs">
                          
@@ -25,7 +25,7 @@
                             v-model="company"
                             required>
 
-                        <input autocomplete="off" type="text" id="form-title" name="title" placeholder="Title"
+                        <input v-model="botmsg" autocomplete="off" type="text" id="form-title" name="title" placeholder="Title"
                             style="display: none">
 
                          <textarea 
@@ -36,12 +36,13 @@
                             rows="3"
                             style="resize: none;"></textarea>
                      </div>
-                     <Button 
+                     <button type="submit" class="btn-form"> {{ $t('contact-form-button') }} </button>
+                     <!-- <Button 
                         :title="this.$t('contact-form-button')" 
                         bColor="--clr-pink-700" 
-                        @click.native="submit"
-                        
-                        ></Button>
+                        v-type="submit"
+                        form="contact-form"
+                        ></Button> -->
                  </form>
 
                  <img class="contact-blob-nod" src="assets/img/contact-blob-nod.png" alt="Blob Contact Nod"/>
@@ -51,6 +52,7 @@
  </template>
  <script>
  import Button from '@/components/Button.vue'
+import { file } from '@babel/types';
 export default {
   methods: {
      submit(event) {
@@ -63,7 +65,7 @@ export default {
                 email: this.email,
                 company: this.company,
                 message: this.message,
-                //"bot-field": formHoneypot.value,
+                botField: this.botmsg,
         };
         console.log(body);
         fetch(this.url, {
@@ -71,10 +73,10 @@ export default {
             body: JSON.stringify(body),
         });
         this.clearForm();
-        alert("Meddelandet har skickats!");
+        alert("Your message has been sent!");
         } catch (err) {
             console.log(err);
-            alert("Något gick fel!");
+            alert("Oops, something went wrong!");
         }
     },
 
@@ -91,6 +93,7 @@ export default {
         email: '',
         company: '',
         message: '',
+        botmsg: '',
         url: 'https://contact-form.systemvetardagen.workers.dev/'
     }
   },
@@ -191,11 +194,33 @@ textarea::placeholder {
   align-self: flex-start;
 }
 
+    .btn-form {
+        /* background-color: var(--clr-blue); */
+        font-weight: 500;
+
+        /* color: var(--clr-white); */
+        border: none;
+
+        text-align: center center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.22rem;
+        /* margin-top: 2rem; */
+        padding:0.4em 2.5em;
+        border-radius: 0.5rem;
+
+        background: var(--clr-pink-700);
+        color: var(--clr-white);
+
+    }
+
 
 
 .contact-blob-nod {
     width: 50%;
     height: auto;
 }
+
+
 
 </style>
