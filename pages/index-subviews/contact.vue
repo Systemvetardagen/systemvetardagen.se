@@ -36,11 +36,10 @@
                             rows="3"
                             style="resize: none;"></textarea>
                      </div>
-                     <button @click="submit">Test</button>
                      <Button 
                         :title="this.$t('contact-form-button')" 
                         bColor="--clr-pink-700" 
-                        @click="submit"
+                        @click.native="submit"
                         
                         ></Button>
                  </form>
