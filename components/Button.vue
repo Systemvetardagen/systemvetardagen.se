@@ -17,13 +17,16 @@ import { computed } from '@vue/reactivity';
             hbColor: String,
             htColor: String,
             width: String,
+            borderCol: String,
 
            
         },
         computed: {
             btnCustStyle () {
-                if (this.bColor != "gradient") {
+                if (this.bColor != "gradient" && this.bColor != "transparent") {
                     return 'background: var(' + this.bColor + '); color: var(' + this.tColor + '); width:' + this.width 
+                } else if (this.bColor == "transparent") {
+                    return 'background: none; border: solid 0.2rem; border-color: var('+this.borderCol + '); color: var(' + this.tColor + '); width:' + this.width
                 } else {
                     return 'width:' + this.width
                 }
