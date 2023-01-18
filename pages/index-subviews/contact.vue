@@ -66,14 +66,16 @@ export default {
                 company: this.company,
                 message: this.message,
                 botField: this.botmsg,
-        };
-        console.log(body);
-        fetch(this.url, {
-            method: "POST",
-            body: JSON.stringify(body),
-        });ç
-        this.clearForm();
-        alert("Your message has been sent!");
+            };
+            console.log(body);
+            fetch(this.url, {
+                method: "POST",
+                body: JSON.stringify(body),
+            }).then((response) => {
+            console.log(response.status); });
+            //console.log(request.status.stringify());
+            this.clearForm();
+            alert("Your message has been sent!");
         } catch (err) {
             console.log(err);
             alert("Oops, something went wrong!");
