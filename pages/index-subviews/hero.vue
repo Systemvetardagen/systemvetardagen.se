@@ -10,8 +10,8 @@
 
         <!-- Hero Buttons -->
             <div class="hero-buttons">
-                <Button  title="Katalog" link="" bColor="gradient"/>
-                <Button  title="Kontakta oss" link="" bColor="--clr-pink-600" tColor="--clr-white"/>
+                <Button  :title="this.$t('catalog_btn')" link="" bColor="gradient"/>
+                <Button  :title="this.$t('contact_us_btn')" link="" bColor="--clr-pink-600" tColor="--clr-white"/>
             </div>
 
         </div>
@@ -38,9 +38,9 @@
 
     @media (min-width: 1024px) {
         .hero-content {
-            position: relative;
+            /* position: relative; */
             max-width: 62%;
-            flex-direction: column;
+            
         /* line-height: 200%; */
         /* align-self: flex-end; */
         }
@@ -62,8 +62,8 @@
         background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('@/assets/img/hero-bg-2023.png');
         background-size: cover;
         background-position: center;
-        flex-direction: column;
-        align-content: flex-end;
+        /* flex-direction: column; */
+        /* align-content: flex-end; */
         padding-bottom: 0;
         padding-top: 45vh;
 
@@ -92,7 +92,7 @@
 
     .hero-buttons {
         display: flex;
-        /* margin-bottom: 80px; */
+        margin-bottom: 80px;
         flex-direction: column;
     }
 
