@@ -118,7 +118,9 @@
                         break
                     }
                 }
-                this.concatLines.splice(hiddenIndex)
+                if (hiddenIndex) {
+                    this.concatLines.splice(hiddenIndex)
+                }
             }
         }
 
