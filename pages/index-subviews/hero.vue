@@ -10,8 +10,8 @@
 
         <!-- Hero Buttons -->
             <div class="hero-buttons">
-                <Button title="Katalog" link="" bColor="gradient"/>
-                <Button title="Kontakta oss" link="" bColor="--clr-blue-200" tColor="--clr-black-900"/>
+                <Button  title="Katalog" link="" bColor="gradient"/>
+                <Button  title="Kontakta oss" link="" bColor="--clr-pink-600" tColor="--clr-white"/>
             </div>
 
         </div>
@@ -35,15 +35,41 @@
 </script>
 
 <style>
+
+    @media (min-width: 1024px) {
+        .hero-content {
+            position: relative;
+            max-width: 62%;
+            flex-direction: column;
+        /* line-height: 200%; */
+        /* align-self: flex-end; */
+        }
+        .hero {
+            padding-top: 70vh;
+        }
+        .hero-buttons {
+            display: flex;
+            flex-direction: row;
+            
+        }
+  
+    }
     .hero {
         height: 100vh;
         /* background-position: center; */
         /* background-repeat: no-repeat; */
-        justify-content: flex-end;
-        background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('@/assets/img/hero-img-provisional.png');
+        display: flex;
+        background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('@/assets/img/hero-bg-2023.png');
         background-size: cover;
+        background-position: center;
+        flex-direction: column;
+        align-content: flex-end;
+        padding-bottom: 0;
+        padding-top: 45vh;
+
         
     }
+    
 
     /* .hero::before {    
       content: "";
@@ -58,13 +84,16 @@
 } */
     .hero-content {
         position: relative;
-        max-width: 50%;
+       
+        
         /* line-height: 200%; */
+        /* align-self: flex-end; */
     }
 
     .hero-buttons {
         display: flex;
-        margin-bottom: 80px;
+        /* margin-bottom: 80px; */
+        flex-direction: column;
     }
 
     .hero-heading {
