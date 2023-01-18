@@ -45,7 +45,7 @@
                         ></Button> -->
                  </form>
 
-                 <img class="contact-blob-nod" src="assets/img/contact-blob-nod.png" alt="Blob Contact Nod"/>
+                 <img class="contact-blob-nod" src="@/assets/img/blob-6d-nodImage-white.png" alt="Blob Contact Nod"/>
                  
              </section>
  
@@ -71,7 +71,7 @@ export default {
         fetch(this.url, {
             method: "POST",
             body: JSON.stringify(body),
-        });
+        });ç
         this.clearForm();
         alert("Your message has been sent!");
         } catch (err) {
@@ -107,10 +107,11 @@ components: {
 .contact {
   padding-top: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background: var(--clr-blue-200);
   justify-content: space-between;
-
+    padding-right: 0;
+    padding-bottom: 15rem;
 }
 
 .contact-form {
@@ -119,7 +120,7 @@ components: {
   justify-content: flex-start;
   align-self: flex-start;
 
-   border-radius: nullpx;
+  border-radius: nullpx;
    text-align: left;
 
 /* Black/900 */
@@ -194,31 +195,33 @@ textarea::placeholder {
   align-self: flex-start;
 }
 
-    .btn-form {
-        /* background-color: var(--clr-blue); */
-        font-weight: 500;
+.btn-form {
+    /* background-color: var(--clr-blue); */
+    font-weight: 500;
 
-        /* color: var(--clr-white); */
-        border: none;
+    /* color: var(--clr-white); */
+    border: none;
 
-        text-align: center center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 1.22rem;
-        /* margin-top: 2rem; */
-        padding:0.4em 2.5em;
-        border-radius: 0.5rem;
+    text-align: center center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.22rem;
+    /* margin-top: 2rem; */
+    padding:0.4em 2.5em;
+    border-radius: 0.5rem;
 
-        background: var(--clr-pink-700);
-        color: var(--clr-white);
+    background: var(--clr-pink-700);
+    color: var(--clr-white);
 
-    }
+}
 
 
 
 .contact-blob-nod {
-    width: 50%;
-    height: auto;
+
+    position: relative;
+    right: 0rem;
+    top: 10rem;
 }
 
 
