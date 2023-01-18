@@ -37,7 +37,7 @@
             return {
                 lines: [],
                 concatLines: [],
-                divWidth: 0,
+                divRect: null,
                 charactersNeededPrev: 0,
                 generated: false,
                 highlightedIndex: null,
@@ -64,27 +64,26 @@
             this.textBlock = this.$refs.heroTextBlock
             const span = this.$el.querySelector('#span-for-calculation')
             const computedStyle = window.getComputedStyle(span)
-            if (!this.textBlock.offsetWidth) return
-            this.divWidth = this.textBlock.offsetWidth
-            this.divHeight = this.textBlock.offsetHeight
+            this.divRect = this.textBlock.getBoundingClientRect()
+            if (!this.divRect.width) return
             this.characterWidth = parseFloat(computedStyle.fontSize)
-            this.characterHeight = span.offsetHeight
+            this.characterHeight = span.getBoundingClientRect().height
             this.generateText()
-            
+
             this.$nextTick(() => this.spliceText())
         },
 
         computed: {
             // calculate how many characters are needed to cover the image
-            // coefficient (0.7) to be adjusted according to font
+            // coefficient to be adjusted according to font
             charactersNeeded() {
-                return Math.floor(this.divWidth / (this.characterWidth * 0.7)) * Math.floor(this.divHeight / this.characterHeight)
-            },
+                return Math.floor(this.divRect.width / (this.characterWidth * 0.625)) * Math.floor(this.divRect.height / (this.characterHeight * 1.25))
+            }
         },
 
         methods: {
             handleResize() {
-                if (!this.textBlock.offsetWidth) return
+                if (!this.divRect.width) return
                 this.divWidth = this.textBlock.offsetWidth
                 this.generateText()
                 this.spliceText()
@@ -113,7 +112,7 @@
                 this.spans = this.$el.querySelectorAll('.displaying-spans')
                 let hiddenIndex
                 for (let i = 0; i < this.spans.length; i++) {
-                    if (this.spans[i].offsetTop > this.textBlock.offsetHeight) {
+                    if (this.spans[i].getBoundingClientRect().bottom > this.divRect.bottom) {
                         hiddenIndex = i
                         break
                     }
