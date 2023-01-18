@@ -27,7 +27,7 @@
     .soon{
         display: flex;
         justify-content: center;
-        background:  linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets\img\Skärmavbild 2022-11-16 kl. 14.51.40.png');
+        background:  linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets/img/soon-bg-2023.png');
         background-position: center;
         background-size: cover;
         /* height: 100vh; */
