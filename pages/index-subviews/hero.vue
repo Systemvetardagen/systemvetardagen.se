@@ -10,8 +10,8 @@
 
         <!-- Hero Buttons -->
             <div class="hero-buttons">
-                <Button  :title="this.$t('catalog_btn')" link="" bColor="gradient"/>
-                <Button  :title="this.$t('contact_us_btn')" link="" bColor="--clr-pink-600" tColor="--clr-white"/>
+                <Button  :title="this.$t('catalog_btn')" link="/company" bColor="gradient"/>
+                <Button  :title="this.$t('contact_us_btn')" link="#contact" bColor="--clr-pink-600" tColor="--clr-white"/>
             </div>
 
         </div>
