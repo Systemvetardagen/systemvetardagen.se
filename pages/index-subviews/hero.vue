@@ -1,6 +1,11 @@
 <template>
     <div id="home" class="hero">
 
+        <div id="hero-text-block" ref="heroTextBlock">
+            <span class="hero-bg-span" v-if="!generated" id="span-for-calculation">dummy text</span>
+            <span class="hero-bg-span displaying-spans" v-if="generated" v-for="(line, index) in concatLines" :key="index" :class="{ highlighted: index === highlightedIndex }">{{ line }} </span>
+        </div>
+
         <div class="hero-content">
              <!-- Hero Text -->
             <div class="hero-content-text">
@@ -26,7 +31,97 @@
     //import { text } from 'body-parser';
 
     export default {
-        name: 'heroSection'
+        name: 'heroSection',
+        
+        data() {
+            return {
+                lines: [],
+                concatLines: [],
+                divWidth: 0,
+                charactersNeededPrev: 0,
+                generated: false,
+                highlightedIndex: null,
+                textBlock: null,
+                spans: null
+            }
+        },
+        
+        created() {
+            this.lines = require('@/content/bg_text.json').lines
+            this.concatLines = this.lines.concat([])
+
+            setInterval(() => {
+                this.highlightedIndex = Math.floor(Math.random() * this.concatLines.length)
+                setTimeout(() => {
+                    this.highlightedIndex = null
+                }, 1200)
+            }, 2000)
+        },
+
+        mounted() {
+            window.addEventListener('resize', this.handleResize)
+            // getting the chracter size from a test span and the div size of the image
+            this.textBlock = this.$refs.heroTextBlock
+            const span = this.$el.querySelector('#span-for-calculation')
+            const computedStyle = window.getComputedStyle(span)
+            if (!this.textBlock.offsetWidth) return
+            this.divWidth = this.textBlock.offsetWidth
+            this.divHeight = this.textBlock.offsetHeight
+            this.characterWidth = parseFloat(computedStyle.fontSize)
+            this.characterHeight = span.offsetHeight
+            this.generateText()
+            
+            this.$nextTick(() => this.spliceText())
+        },
+
+        computed: {
+            // calculate how many characters are needed to cover the image
+            // coefficient (0.7) to be adjusted according to font
+            charactersNeeded() {
+                return Math.floor(this.divWidth / (this.characterWidth * 0.7)) * Math.floor(this.divHeight / this.characterHeight)
+            },
+        },
+
+        methods: {
+            handleResize() {
+                if (!this.textBlock.offsetWidth) return
+                this.divWidth = this.textBlock.offsetWidth
+                this.generateText()
+                this.spliceText()
+            },
+
+            generateText() {
+                // don't generate again when the viewport is resized but charactersNeeded stays the same
+                if (this.charactersNeededPrev === this.charactersNeeded) return
+                this.charactersNeededPrev = this.charactersNeeded
+
+                let neededLen = this.charactersNeeded
+                let linesLen = this.concatLines.reduce((acc, line) => acc + line.length, 0)
+                // if provided array is not enough to cover the image
+                while (neededLen > linesLen) {
+                    this.concatLines = this.concatLines.concat(this.lines)
+                    linesLen = this.concatLines.reduce((acc, line) => acc + line.length, 0)
+                }
+                // hide the test span and show the needed spans
+                this.generated = true
+            },
+
+            // delete the elements of the array that go beyond visible area
+            // otherwise when a generated highlightedIndex belongs to a hidden span
+            // the highlighting would not be visible
+            spliceText() {
+                this.spans = this.$el.querySelectorAll('.displaying-spans')
+                let hiddenIndex
+                for (let i = 0; i < this.spans.length; i++) {
+                    if (this.spans[i].offsetTop > this.textBlock.offsetHeight) {
+                        hiddenIndex = i
+                        break
+                    }
+                }
+                this.concatLines.splice(hiddenIndex)
+            }
+        }
+
     }
     components: {
         Button
@@ -42,7 +137,35 @@
         justify-content: flex-end;
         background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('@/assets/img/hero-img-provisional.png');
         background-size: cover;
-        
+        position: relative;
+        overflow: hidden;
+    }
+
+    #span-for-calculation {
+        color: transparent;
+    }
+
+    #hero-text-block {
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    /* temporary style, to be finalised by design/css team, font size needs to be in px */
+    .hero-bg-span {
+        color: rgba(238,238,238,0.25);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        font-weight: bold;
+        word-break: break-all;
+    }
+
+    .highlighted {
+        color: #aaa;
     }
 
     /* .hero::before {    
@@ -62,6 +185,7 @@
         flex-direction: column;
         gap: 1rem;
         /* line-height: 200%; */
+        z-index: 2;
     }
 
     .hero-content-text {
