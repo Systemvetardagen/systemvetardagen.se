@@ -111,7 +111,7 @@ components: {
   background: var(--clr-blue-200);
   justify-content: space-between;
     padding-right: 0;
-    padding-bottom: 15rem;
+    padding-bottom: 5rem;
 }
 
 .contact-form {
@@ -151,13 +151,20 @@ components: {
   .inputs-left-col {
     margin-right: 1rem;
   }
+
+  .contact-blob-nod {
+    padding-top: 10rem;
+    visibility: visible;
+    
+    
+    }
 }
 input,
 textarea {
   margin: 0;
   margin-bottom: 1rem;
   padding: 0.8rem 1rem;
-  width: 24rem;
+  width: 22rem;
   max-width: 100%;
   background-color: white;
   border-radius: 0.4rem;
@@ -215,14 +222,19 @@ textarea::placeholder {
 
 }
 
-
-
+@media (max-width: 1024px) {
 .contact-blob-nod {
-
-    position: relative;
-    right: 0rem;
-    top: 10rem;
+    /* padding-top: 20rem;
+    padding-right: 20rem; */
+    /* overflow: auto;
+    padding-top: 20rem; */
+    visibility: hidden;
+   
 }
+
+}
+
+
 
 
 
