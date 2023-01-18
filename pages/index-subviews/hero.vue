@@ -87,7 +87,7 @@
                 if (!this.textBlock.offsetWidth) return
                 this.divWidth = this.textBlock.offsetWidth
                 this.generateText()
-                this.spliceText()
+                this.$nextTick(() => this.spliceText())
             },
 
             generateText() {
