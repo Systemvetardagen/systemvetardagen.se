@@ -3,7 +3,7 @@
 
         <div class="hero-content">
              <!-- Hero Text -->
-            <div>
+            <div class="hero-text">
                 <h1 class="hero-heading" style="color: var(--clr-blue-600)" >{{ $t('hero_title') }}</h1>
                 <h3 style="color: var(--clr-blue-900)">{{ $t('event_description') }}</h3>
             </div>
@@ -36,24 +36,7 @@
 
 <style>
 
-    @media (min-width: 1024px) {
-        .hero-content {
-            /* position: relative; */
-            max-width: 62%;
-            
-        /* line-height: 200%; */
-        /* align-self: flex-end; */
-        }
-        .hero {
-            padding-top: 70vh;
-        }
-        .hero-buttons {
-            display: flex;
-            flex-direction: row;
-            
-        }
-  
-    }
+    
     .hero {
         height: 100vh;
         /* background-position: center; */
@@ -65,7 +48,8 @@
         /* flex-direction: column; */
         /* align-content: flex-end; */
         padding-bottom: 0;
-        padding-top: 45vh;
+        /* padding-top: 50vh; */
+        flex-wrap: wrap;
 
         
     }
@@ -83,7 +67,10 @@
       opacity: 0.5;
 } */
     .hero-content {
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 2rem 2rem;
        
         
         /* line-height: 200%; */
@@ -92,11 +79,32 @@
 
     .hero-buttons {
         display: flex;
-        margin-bottom: 80px;
+        /* margin-bottom: 80px; */
         flex-direction: column;
     }
 
     .hero-heading {
         max-width: 85%;
+    }
+
+    @media (min-width: 720px) {
+        .hero-text {
+            /* position: relative; */
+            max-width: 65%;
+            
+        /* line-height: 200%; */
+        /* align-self: flex-end; */
+        }
+
+        .hero-heading {
+            max-width: 100%;
+        }
+       
+        .hero-buttons {
+            display: flex;
+            flex-direction: row;
+            
+        }
+  
     }
 </style>
