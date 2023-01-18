@@ -6,7 +6,7 @@
       </nav>
       
       <article>
-        <h1 class="">{{ post.title }}</h1>
+        <h1 class="">{{ post.slogan }}</h1>
       </article>
     </section>
   </main>

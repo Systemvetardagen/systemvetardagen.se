@@ -5,7 +5,7 @@
       <div>
     <div v-for="post of posts" :key="post.slug">
       <li v-if="post.slug === post.title + '.sv'">
-      <NuxtLink :to="post.title + '.sv'">{{ post.slogan }}</NuxtLink>
+      <NuxtLink :to="post.title + '.sv'">{{ post.title }}</NuxtLink>
       </li>
     </div>
   </div>
