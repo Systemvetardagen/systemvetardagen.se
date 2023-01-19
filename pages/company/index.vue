@@ -5,13 +5,13 @@
       <div>
     <div v-for="post of posts" :key="post.slug">
       <div v-if="showEnligshMessage">
-        <li v-if="condition">
+        <li v-if="post.slug === post.title + '.sv'">
         <NuxtLink :to="post.title + '.sv'">{{ post.title }}</NuxtLink>
       </li>
       </div>
 
       <div v-else="showEnglishMessage">
-        <li v-if="!condition">
+        <li v-if="post.slug === post.title + '.en'">
         <NuxtLink :to="post.title + '.en'">{{ post.title }}</NuxtLink>
         </li>
         </div>
@@ -38,10 +38,10 @@ export default {
       return this.$i18n.locale === 'sv';
     }
   },
-  computed: {
+  /*computed: {
     condition() {
       return post.slug === post.title + '.sv';
     }
-  }
+  }*/
 }
 </script> 
