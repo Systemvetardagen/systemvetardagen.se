@@ -6,13 +6,13 @@
     <div v-for="post of posts" :key="post.slug">
       <div v-if="showEnglishMessage">
         <li v-if="post.slug === post.title + '.sv'">
-        <NuxtLink :to="'company/' + post.title + '.sv'">{{ post.title }}</NuxtLink>
+        <NuxtLink :to="'/' + post.title + '.sv'">{{ post.title }}</NuxtLink>
       </li>
       </div>
 
       <div v-else="showEnglishMessage">
         <li v-if="post.slug === post.title + '.en'">
-        <NuxtLink :to="'company/' + post.title + '.en'">{{ post.title }}</NuxtLink>
+        <NuxtLink :to="'/' + post.title + '.en'">{{ post.title }}</NuxtLink>
         </li>
         </div>
     </div>
