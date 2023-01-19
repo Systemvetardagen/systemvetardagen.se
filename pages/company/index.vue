@@ -36,11 +36,6 @@ export default {
     showEnglishMessage() {
       return this.$i18n.locale === 'sv';
     }
-  },
-  /*computed: {
-    condition() {
-      return post.slug === post.title + '.sv';
-    }
-  }*/
+  }
 }
 </script> 
