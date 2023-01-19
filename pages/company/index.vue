@@ -4,7 +4,7 @@
       <h1 class="title">Company</h1>
       <div>
     <div v-for="post of posts" :key="post.slug">
-      <div v-if="showEnligshMessage">
+      <div v-if="showEnglishMessage">
         <li v-if="post.slug === post.title + '.sv'">
         <NuxtLink :to="post.title + '.sv'">{{ post.title }}</NuxtLink>
       </li>
@@ -15,7 +15,6 @@
         <NuxtLink :to="post.title + '.en'">{{ post.title }}</NuxtLink>
         </li>
         </div>
-      <!--<NuxtLink v-if="showEnglishMessage" :to="post.title + '.sv'">{{ post.title }}</NuxtLink>-->
     </div>
   </div>
     </section>
