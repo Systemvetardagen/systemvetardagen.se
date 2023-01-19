@@ -1,4 +1,3 @@
-Fermin — Idag 19:09
 <template>
     <main>
       <section v-if="posts">
