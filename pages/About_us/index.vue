@@ -24,13 +24,18 @@ Fermin — Idag 19:09
 <script>
 export default {
   async asyncData({ $content, error }) {
-    let groups;
+    let posts;
     try {
-      groups = await $content("company").fetch();
+      posts = await $content("company").fetch();
     } catch (e) {
       error({ message: "Posts not found" });
     }
-    return { groups };
+    return { posts };
+  },
+  data() {
+    return {
+      groups: [{ group: 'Business Relations and Sales' }, { group: 'Events' }, { group: 'Logistics' }, { group: 'Marketing' }, { group: 'Web Development and Design' }, { group: 'Groupleader' }]
+    }
   }
 }
 </script> 
