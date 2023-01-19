@@ -3,11 +3,10 @@
     <section v-if="posts">
       <h1 class="title">Company</h1>
       <div>
-    <div v-for="post of posts" :key="post.slug">
-      <li v-if="post.slug === post.title + '.sv'">
-      <NuxtLink :to="post.title + '.sv'">{{ post.title }}</NuxtLink>
-      </li>
-    </div>
+    <li v-for="post of posts" :key="post.slug">
+      <NuxtLink v-if="showEnglishMessage" :to="post.title + '.sv'">{{ post.title }}</NuxtLink>
+      <NuxtLink v-else="showEnglishMessage" :to="post.title + '.en'">{{ post.title }}</NuxtLink>
+    </li>
   </div>
     </section>
   </main>
@@ -24,5 +23,10 @@ export default {
     }
     return { posts };
   },
+  computed: {
+  showEnglishMessage() {
+    return this.$i18n.locale === 'sv';
+    }
+  }
 }
 </script> 
