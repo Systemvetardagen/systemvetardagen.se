@@ -4,12 +4,17 @@
       <h1 class="title">Company</h1>
       <div>
     <div v-for="post of posts" :key="post.slug">
-      <li v-if="showEnglishMessage">
+      <div v-if="showEnligshMessage">
+        <li v-if="condition">
         <NuxtLink :to="post.title + '.sv'">{{ post.title }}</NuxtLink>
       </li>
-      <li v-else="showEnglishMessage">
+      </div>
+
+      <div v-else="showEnglishMessage">
+        <li v-if="!condition">
         <NuxtLink :to="post.title + '.en'">{{ post.title }}</NuxtLink>
-      </li>
+        </li>
+        </div>
       <!--<NuxtLink v-if="showEnglishMessage" :to="post.title + '.sv'">{{ post.title }}</NuxtLink>-->
     </div>
   </div>
@@ -31,6 +36,11 @@ export default {
   computed: {
     showEnglishMessage() {
       return this.$i18n.locale === 'sv';
+    }
+  },
+  computed: {
+    condition() {
+      return post.slug === post.title + '.sv';
     }
   }
 }
