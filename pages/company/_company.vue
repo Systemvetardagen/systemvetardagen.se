@@ -1,8 +1,8 @@
 <template>
-  <main>
+  <main >
     <section v-if="post">
-      
       <article>
+        <div v-if="showEnlgishMessage"><div change_language(post.title, this.$i18n.locale)></div></div>
         <h1 class="">{{ post.slogan }}</h1>
       </article>
     </section>
@@ -19,6 +19,15 @@ export default {
       error({ message: "Entry not found" });
     }
     return { post };
+  },
+  change_language(title, language) {
+    window.location.href = "http://localhost:3000/en/company/" + "title" + "language";
+  },
+  computed: {
+    showEnglishMessage() {
+      const lang = this.$i18n.locale;
+      return this.$i18n.locale === 'en';
+    }
   }
-}
+};
 </script> 
