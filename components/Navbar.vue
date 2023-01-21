@@ -26,18 +26,34 @@
 			<a href="#" class="logo-link">
 				<img src="@/assets/img/SvD_logo_128.png" class="logo" alt="Systemvetardagen logo">
 			</a>
-			<button class="nav-toggle">
+			<button @click="seen=!seen" v-if="seen" class="nav-toggle">
 				<svg class="nav-toggle-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 				</svg>
 			</button>
+			<nav v-if="!seen">
+				
+				<div v-bind:class="{ active: isActive('#home') }" v-on:click="seen=!seen">
+					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
+				</div>
+				
+				<div v-bind:class="{ active: isActive('#catalog') }" v-on:click="seen=!seen">
+					<NuxtLink to="company" class="header-link">{{$t('catalog')}}</NuxtLink>
+				</div>
+			</nav>
 		</header>
   </div>
 </template>
 
 <script>
 export default {
+	data() {
+  return {
+    seen:true
+  }
+},
+
   methods: {
 	isActive(cpath) {
       if (this.$route.path == cpath) {
