@@ -18,6 +18,7 @@
 			</nav>
 			<nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')" class="link-fair"><img src="@/assets/img/UK.png"/></nuxt-link>
 			<nuxt-link v-else="showEnglishMessage" :to="switchLocalePath('sv')" class="link-fair"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<button @click="$langRouting"></button>
 			
 		</header>
 		
