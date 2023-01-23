@@ -6,14 +6,22 @@
 			</a>
 			<nav>
 				
-				<div v-bind:class="{ active: isActive('#home') }">
+				<div v-if="showEnglishMessage" class="normal" v-bind:class="{ active: isActive('/') }">
 					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
+				<div v-else="showEnglishMessage" class="normal" v-bind:class="{ active: isActive('/en') }">
+					<NuxtLink to="/en" class="header-link" >{{$t('home')}}</NuxtLink>
+				</div>
+
 				
 				<div v-bind:class="{ active: isActive('#catalog') }">
 					<NuxtLink to="/company/" class="header-link">{{$t('catalog')}}</NuxtLink>
 				</div>
 				
+				<div v-else="showEnglishMessage" class="normal" v-bind:class="{ active: isActive('/company') }">
+					<NuxtLink to="/company" class="header-link">{{$t('catalog')}}</NuxtLink>
+				</div>
+
 				
 			</nav>
 			<nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')" class="link-fair"><img src="@/assets/img/UK.png"/></nuxt-link>
@@ -56,19 +64,28 @@ export default {
 
 <style>
 
+	.normal {
+		height: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		justify-items: center;
+	}
+
 	.active {
-		padding-bottom: 1rem;
+
 		border-bottom: solid var(--clr-grey-1000);
+		
 	}
 	.main-header {
-	/* background: linear-gradient(var(--clr-white), transparent); */
+	background: white;
 	position: fixed;
 	/* width: 95%; */
 	height: 5rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1rem 1rem 0rem 1rem;
+	padding: 1rem 2rem 0rem 2rem;
 	transition: background 0.2s;
 	top: 0;
 	right: 0;
@@ -76,8 +93,9 @@ export default {
 	left: 0;
 	z-index: 1000;
 	border-bottom: solid var(--clr-grey-300) 0.13rem;
-	margin: 0rem 1rem;
-	align-self: center; 
+	margin: 0rem 0rem;
+	align-self: center;
+
 	}
 
 	.logo-link {
@@ -95,8 +113,9 @@ export default {
 
 	.header-link {
 	font-size: 1.2rem;
-	font-weight: 700;
+	font-weight: 600;
 	margin: 0 max(1rem, 2vw);
+
 	}
 
 	nav > div > a {
