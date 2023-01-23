@@ -11,7 +11,7 @@
 				</div>
 				
 				<div v-bind:class="{ active: isActive('#catalog') }">
-					<NuxtLink to="company" class="header-link">{{$t('catalog')}}</NuxtLink>
+					<NuxtLink to="/company/" class="header-link">{{$t('catalog')}}</NuxtLink>
 				</div>
 				
 				
