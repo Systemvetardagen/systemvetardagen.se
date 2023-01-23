@@ -62,6 +62,4 @@ export default {
 
   // Collection of anonymous telemetry data about general usage: https://github.com/nuxt/telemetry
   telemetry: false,
-
-  plugins: ['~/plugins/langRouting.js']
 };
