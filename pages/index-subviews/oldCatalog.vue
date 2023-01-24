@@ -5,12 +5,11 @@
         <img class="catpicmedia" src="@/assets/img/chessboard.png" alt="Old Calalog Placeholder">
        <!-- </div> -->
       
-       <div class="oldcatcontent">
+        <div class="oldcatcontent">
             <h2 style="color: var(--clr-blue-700)">{{ $t('old_cat_title')}}</h2>
             <p> {{$t('old_cat_description')}} </p>
-            <Button link="" bColor="--clr-pink-700" tColor="--clr-white">{{ $t('old_cat_btn') }}</Button>
-       </div>
-
+        </div>
+        <Button link="" bColor="--clr-pink-600" tColor="--clr-white">{{ $t('old_cat_btn') }}</Button>
         
     </div>
 
@@ -42,7 +41,7 @@
         flex-direction: column;
         justify-content: center;
         padding: 10% 5%;
-        align-items: center;
+        align-items: baseline;
         gap: 20px;
         
       

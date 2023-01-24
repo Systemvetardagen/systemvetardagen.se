@@ -69,15 +69,10 @@
         text-decoration: none;
         font-size: 1.22rem;
         /* margin-top: 2rem; */
-        padding:0.4em 2.5em;
+        padding:0.6em 2.5em;
         border-radius: 0.5rem;
 
         background: linear-gradient(90deg, var(--clr-blue-600), var(--clr-pink-600), var(--clr-yellow-600));
         color: var(--clr-white);
-        margin: 5px;
-
-    }
-    .btn-out {
-        margin: 5px;
     }
 </style>

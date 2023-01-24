@@ -58,6 +58,9 @@
 } */
     .hero-content {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         /* line-height: 200%; */
     }
 
@@ -68,7 +71,8 @@
     .hero-buttons {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 80px;
+        gap: 1rem;
+        margin-bottom: 4rem;
     }
 
     .hero-heading {
