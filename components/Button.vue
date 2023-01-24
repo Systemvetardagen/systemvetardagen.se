@@ -5,9 +5,6 @@
 </template>
 
 <script>
-import { variableDeclaration } from '@babel/types';
-import { computed } from '@vue/reactivity';
-
     export default {
         props: {
             title: String,
