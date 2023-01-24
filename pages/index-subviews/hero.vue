@@ -3,7 +3,7 @@
 
         <div class="hero-content">
              <!-- Hero Text -->
-            <div>
+            <div class="hero-content-text">
                 <h1 class="hero-heading" style="color: var(--clr-blue-600)" >{{ $t('hero_title') }}</h1>
                 <h3 style="color: var(--clr-blue-900)">{{ $t('event_description') }}</h3>
             </div>
@@ -58,12 +58,16 @@
 } */
     .hero-content {
         position: relative;
-        max-width: 50%;
         /* line-height: 200%; */
+    }
+
+    .hero-content-text {
+        max-width: 45ch;
     }
 
     .hero-buttons {
         display: flex;
+        flex-wrap: wrap;
         margin-bottom: 80px;
     }
 

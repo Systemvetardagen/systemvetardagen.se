@@ -67,7 +67,6 @@
         align-items: center;
         text-align: center;
         text-decoration: none;
-        display: inline-block;
         font-size: 1.22rem;
         /* margin-top: 2rem; */
         padding:0.4em 2.5em;
