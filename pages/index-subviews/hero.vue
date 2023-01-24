@@ -10,8 +10,16 @@
 
         <!-- Hero Buttons -->
             <div class="hero-buttons">
-                <Button title="Katalog" link="" bColor="gradient"/>
-                <Button title="Kontakta oss" link="" bColor="--clr-blue-200" tColor="--clr-black-900"/>
+                <Button 
+                    title="Katalog" 
+                    link="" 
+                    bColor="gradient"
+                    />
+                <Button 
+                    title="Kontakta oss" 
+                    link="" 
+                    bColor="--clr-blue-200" 
+                    tColor="--clr-black-900"/>
             </div>
 
         </div>
