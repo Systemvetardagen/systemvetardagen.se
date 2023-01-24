@@ -6,19 +6,11 @@
 			</a>
 			<nav>
 				
-				<div v-if="showEnglishMessage" class="normal" v-bind:class="{ active: isActive('/') }">
+				<div class="normal" v-bind:class="{ active: isActive('/') }">
 					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
-				<div v-else="showEnglishMessage" class="normal" v-bind:class="{ active: isActive('/en') }">
-					<NuxtLink to="/en" class="header-link" >{{$t('home')}}</NuxtLink>
-				</div>
-
 				
-				<div v-bind:class="{ active: isActive('#catalog') }">
-					<NuxtLink to="/company/" class="header-link">{{$t('catalog')}}</NuxtLink>
-				</div>
-				
-				<div v-else="showEnglishMessage" class="normal" v-bind:class="{ active: isActive('/company') }">
+				<div class="normal" v-bind:class="{ active: isActive('/company') }">
 					<NuxtLink to="/company" class="header-link">{{$t('catalog')}}</NuxtLink>
 				</div>
 
