@@ -1,13 +1,14 @@
 <template>
     <!-- <div class="btn-out" :style="hoverCol" @mouseover="mouseOver()"> -->
-        <a :href="link" :style="btnCustStyle" class="btn"> {{ title }} </a>
+        <a :href="link" :style="btnCustStyle" class="btn">
+            <slot></slot>
+        </a>
     <!-- </div> -->
 </template>
 
 <script>
     export default {
         props: {
-            title: String,
             link: String,
             tColor: String,
             bColor: String,
