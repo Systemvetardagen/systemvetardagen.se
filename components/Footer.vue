@@ -2,7 +2,7 @@
 	<div>
 		<footer>
 			<div class="footer-wrapper">
-				<div class="footer-content" style="color: var(--clr-grey-100);">
+				<div class="footer-content" style="color: var(--clr-white);">
 					<div class="social-links">
 						<h2> {{$t('footer_follow_title')}} </h2>
 						<a class="link-text" href="https://www.facebook.com/Systemvetardagen/">
