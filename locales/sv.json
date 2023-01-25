@@ -73,6 +73,14 @@
   "company": "Företag",
   "name": "Namn",
   "email": "E-post",
-  "message": "Meddelande"
+  "message": "Meddelande",
+
+
+  "contact-form-title": "Kontakta oss",
+  "contact-form-name": "Namn",
+  "contact-form-company": "Företag",
+  "contact-form-email": "E-mail",
+  "contact-form-message": "Meddelande",
+  "contact-form-button": "Skicka"
 
 }

@@ -72,6 +72,14 @@
   "company": "company",
   "name": "name",
   "email": "email",
-  "message": "message"
+  "message": "message",
+
+
+  "contact-form-title": "Contact us",
+  "contact-form-name": "Name",
+  "contact-form-company": "Company",
+  "contact-form-email": "E-Mail",
+  "contact-form-message": "Message",
+  "contact-form-button": "Send"
 
 }

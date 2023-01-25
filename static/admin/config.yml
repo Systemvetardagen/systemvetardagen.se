@@ -57,7 +57,7 @@ collections:
 
   - name: 'About us'
     label: 'About us'
-    folder: 'content/About_us'
+    folder: 'content/aboutUs'
     create: true
     slug: "{{title}}"
     i18n: true
