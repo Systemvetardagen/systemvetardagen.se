@@ -1,12 +1,9 @@
 <template>
-  <main>
+  <main >
     <section v-if="post">
-      <nav class="mb-8" aria-label="go back">
-        <router-back class="block" />
-      </nav>
-      
       <article>
-        <h1 class="">{{ post.title }}</h1>
+        <div v-if="showEnglishMessage"><div change_language(post.title, this.$i18n.locale)></div></div>
+        <h1 class="">{{ post.slogan }}</h1>
       </article>
     </section>
   </main>
@@ -22,8 +19,17 @@ export default {
       error({ message: "Entry not found" });
     }
     return { post };
+  },
+  //not currently working
+  change_language(title, language) {
+    window.location.href = "http://localhost:3000/en/company/" + "title" + "language";
+  },
+  computed: {
+    //not currently working
+    showEnglishMessage() {
+      const lang = this.$i18n.locale;
+      return this.$i18n.locale === 'en';
+    }
   }
-}
+};
 </script> 
-
-

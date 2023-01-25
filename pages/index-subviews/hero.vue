@@ -3,15 +3,15 @@
 
         <div class="hero-content">
              <!-- Hero Text -->
-            <div>
+            <div class="hero-content-text">
                 <h1 class="hero-heading" style="color: var(--clr-blue-600)" >{{ $t('hero_title') }}</h1>
                 <h3 style="color: var(--clr-blue-900)">{{ $t('event_description') }}</h3>
             </div>
 
         <!-- Hero Buttons -->
             <div class="hero-buttons">
-                <Button title="Katalog" link="" bColor="gradient"/>
-                <Button title="Kontakta oss" link="" bColor="--clr-blue-200" tColor="--clr-black-900"/>
+                <Button title="Katalog" bColor="gradient">Katalog</Button>
+                <Button title="Kontakta oss" link="" bColor="--clr-blue-200" tColor="--clr-black-900">Kontakta oss</Button>
             </div>
 
         </div>
@@ -58,13 +58,21 @@
 } */
     .hero-content {
         position: relative;
-        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         /* line-height: 200%; */
+    }
+
+    .hero-content-text {
+        max-width: 45ch;
     }
 
     .hero-buttons {
         display: flex;
-        margin-bottom: 80px;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 4rem;
     }
 
     .hero-heading {
