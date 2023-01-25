@@ -76,11 +76,11 @@
   "message": "Meddelande",
 
 
-  "contact-form-title": "<translation missing>",
-  "contact-form-name": "<translation missing>",
-  "contact-form-company": "<translation missing>",
-  "contact-form-email": "<translation missing>",
-  "contact-form-message": "<translation missing>",
-  "contact-form-button": "<translation missing>"
+  "contact-form-title": "Kontakta oss",
+  "contact-form-name": "Namn",
+  "contact-form-company": "Företag",
+  "contact-form-email": "E-mail",
+  "contact-form-message": "Meddelande",
+  "contact-form-button": "Skicka"
 
 }
