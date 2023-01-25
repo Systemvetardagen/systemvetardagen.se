@@ -3,6 +3,7 @@
 <template>
   <div class="wrapper">
 		<hero/>
+		<countdown/>
 		<sponsors/>
 		<soon/>
         <info/>
@@ -19,6 +20,7 @@
 
 <script>
 import hero from '@/pages/index-subviews/hero.vue'
+import countdown from './index-subviews/countdown.vue'
 import soon from '@/pages/index-subviews/soon.vue'
 import Button from '@/components/Button.vue'
 import info from '@/pages/index-subviews/info.vue'
@@ -27,12 +29,13 @@ import oldCatalog from './index-subviews/oldCatalog.vue'
 import contact from '@/pages/index-subviews/contact.vue'
 import sponsors from './index-subviews/sponsors.vue'
 export default {
-	components: {hero, soon, info, faq, oldCatalog, contact, sponsors},
+	components: {hero, countdown, soon, info, faq, oldCatalog, contact, sponsors},
   	name: 'IndexPage'
 }
 
 	components: {
 		hero
+		countdown
 		soon
         info
 		faq
