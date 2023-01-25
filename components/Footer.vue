@@ -2,7 +2,7 @@
 	<div>
 		<footer>
 			<div class="footer-wrapper">
-				<div class="footer-content" style="color: var(--clr-white);">
+				<div class="footer-content" style="color: var(--clr-blue-900);">
 					<div class="social-links">
 						<h2> {{$t('footer_follow_title')}} </h2>
 						<a class="link-text" href="https://www.facebook.com/Systemvetardagen/">
@@ -49,7 +49,7 @@
 						</a>
 					</div>
 				</div>
-				<p style="color: var(--clr-pink-300);">© Systemvetardagen 2023</p>
+				<p style="color: var(--clr-pink-500);">© Systemvetardagen 2023</p>
 			</div>
 		</footer>
 	</div>
@@ -57,7 +57,7 @@
   
   <style>
 	  footer {
-		  background-color: var(--clr-blue-600);
+		  background-color: var(--clr-blue-100);
 	  }
   
 	  .footer-content {
@@ -92,11 +92,11 @@
 	  .link-icon {
 		  width: 1rem;
 		  margin-right: 0.5rem;
-		  color: var(--clr-gray-100);
+		  color: var(--clr-blue-900);
 	  }
   
 	  .link-text {
-		  color: var(--clr-gray-100);
+		  color: var(--clr-blue-900);
 		  font-weight: 500;
 		  display: flex;
 		  align-items: center;
@@ -106,7 +106,7 @@
 	  }
   
 	  .link-text:hover {
-		  color: var(--clr-pink-300);
+		  color: var(--clr-pink-500);
 	  }
   
 	  address {
