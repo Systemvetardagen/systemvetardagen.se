@@ -2,7 +2,7 @@
     <div id="home" class="hero">
 
         <div id="hero-text-block" ref="heroTextBlock">
-            <span class="hero-bg-span" v-if="!generated" id="span-for-calculation">dummy text</span>
+            <span class="hero-bg-span" v-if="!generated" id="span-for-calculation" style="color: transparent">dummy text</span>
             <span class="hero-bg-span displaying-spans" v-if="generated" v-for="(line, index) in concatLines" :key="index" :class="{ highlighted: index === highlightedIndex }">{{ line }} </span>
         </div>
 
@@ -38,7 +38,6 @@
                 lines: [],
                 concatLines: [],
                 divWidth: 0,
-                charactersNeededPrev: 0,
                 generated: false,
                 highlightedIndex: null,
                 textBlock: null,
@@ -68,7 +67,7 @@
             this.divWidth = this.textBlock.offsetWidth
             this.divHeight = this.textBlock.offsetHeight
             this.characterWidth = parseFloat(computedStyle.fontSize)
-            this.characterHeight = span.offsetHeight
+            this.characterHeight = parseFloat(computedStyle.lineHeight)
             this.generateText()
             
             this.$nextTick(() => this.spliceText())
@@ -76,9 +75,9 @@
 
         computed: {
             // calculate how many characters are needed to cover the image
-            // coefficient (0.7) to be adjusted according to font
+            // coefficient to be adjusted according to font
             charactersNeeded() {
-                return Math.floor(this.divWidth / (this.characterWidth * 0.7)) * Math.floor(this.divHeight / this.characterHeight)
+                return Math.floor(this.divWidth / (this.characterWidth * 0.6)) * Math.floor(this.divHeight / this.characterHeight)
             },
         },
 
@@ -91,10 +90,6 @@
             },
 
             generateText() {
-                // don't generate again when the viewport is resized but charactersNeeded stays the same
-                if (this.charactersNeededPrev === this.charactersNeeded) return
-                this.charactersNeededPrev = this.charactersNeeded
-
                 let neededLen = this.charactersNeeded
                 let linesLen = this.concatLines.reduce((acc, line) => acc + line.length, 0)
                 // if provided array is not enough to cover the image
@@ -112,8 +107,10 @@
             spliceText() {
                 this.spans = this.$el.querySelectorAll('.displaying-spans')
                 let hiddenIndex
-                for (let i = 0; i < this.spans.length; i++) {
-                    if (this.spans[i].offsetTop > this.textBlock.offsetHeight) {
+                for (let i = 0, linesLen = 0; i < this.spans.length; i++) {
+                    let span = this.spans[i]
+                    linesLen += span.innerText.length
+                    if (span.offsetTop > this.textBlock.offsetHeight && linesLen > this.charactersNeeded) {
                         hiddenIndex = i
                         break
                     }
@@ -143,10 +140,6 @@
         overflow: hidden;
     }
 
-    #span-for-calculation {
-        color: transparent;
-    }
-
     #hero-text-block {
         position: absolute;
         text-align: center;
@@ -157,17 +150,18 @@
         z-index: 1;
     }
 
-    /* temporary style, to be finalised by design/css team, font size needs to be in px */
+    /* temporary style, to be finalised by design/css team */
     .hero-bg-span {
-        color: rgba(238,238,238,0.25);
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 16px;
+        color: var(--clr-pink-100);
+        font-family: 'OverpassMono';
+        font-size: 1.5rem;
         font-weight: bold;
+        line-height: 150%;
         word-break: break-all;
     }
 
     .highlighted {
-        color: #aaa;
+        color: var(--clr-pink-600);
     }
 
     /* .hero::before {    
