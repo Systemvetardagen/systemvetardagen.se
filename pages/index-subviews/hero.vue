@@ -158,6 +158,7 @@
         font-weight: bold;
         line-height: 150%;
         word-break: break-all;
+        transition: 0.4s;
     }
 
     .highlighted {
