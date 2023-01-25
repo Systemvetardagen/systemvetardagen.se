@@ -6,13 +6,13 @@
 			</a>
 			<nav>
 				
-				<div class="normal" v-bind:class="{ active: isActive('/') }">
+				<!-- <div class="normal" v-bind:class="{ active: isActive('/') }">
 					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
 				
 				<div class="normal" v-bind:class="{ active: isActive('/company') }">
 					<NuxtLink to="/company" class="header-link">{{$t('catalog')}}</NuxtLink>
-				</div>
+				</div> -->
 
 				
 			</nav>
@@ -23,15 +23,18 @@
 		
 		<!-- MOBILE NAV -->
 		<header class="mobile-header">
-			<a href="#" class="logo-link">
-				<img src="@/assets/img/SvD_logo_128.png" class="logo" alt="Systemvetardagen logo">
+			<a href="https://systemvetardagen.se" class="logo-link">
+				<img src="@/assets/img/Symbol_&_Text_Logo_Black_&_Color.svg" class="logo" alt="Systemvetardagen logo">
 			</a>
-			<button class="nav-toggle">
+			<!-- <button class="nav-toggle">
 				<svg class="nav-toggle-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 				</svg>
-			</button>
+			</button> -->
+			<nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
+			<nuxt-link v-else="showEnglishMessage" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			
 		</header>
   </div>
 </template>
@@ -56,7 +59,7 @@ export default {
 
 <style>
 
-	.normal {
+	/* .normal {
 		height: 4rem;
 		display: flex;
 		align-items: center;
@@ -64,7 +67,7 @@ export default {
 		justify-items: center;
 		border-bottom-style: solid;
 		border-bottom-color: transparent;
-	}
+	} */
 
 	/* changes transparent bottom border to grey */
 	.active {
@@ -146,12 +149,16 @@ export default {
 		display: none;
 	}
 	.mobile-header {
-		background: linear-gradient(var(--clr-white), transparent);
+		background-color: var(--clr-white);
 		width: 100%;
 		position: fixed;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding: 0.5rem 2rem 0.5rem 1rem;
+		flex-direction: row;
+		border-bottom: solid var(--clr-grey-300);
+		z-index: 1;
 	}
 	.main-header {
 		background-image: none;
@@ -184,12 +191,12 @@ export default {
 		margin: 0.75rem 0;
 	}
 	.btn-lang {
-		margin-top: 2rem;
+		/* margin-top: 2rem; */
 	}
 
 	}
-	.header-scrolled {
+	/* .header-scrolled {
 	background: var(--clr-white);
 	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2666666667);
-	}
+	} */
 </style>
