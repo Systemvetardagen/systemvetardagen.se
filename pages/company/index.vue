@@ -12,7 +12,8 @@
 
       <div v-else="showEnglishMessage">
         <li v-if="post.slug === post.title + '.en'">
-        <NuxtLink :to="post.title + '.en'">{{ post.title }}</NuxtLink>
+        <a href="javascript:create(post.title)">link</a>
+        <!--<NuxtLink custom="true" :to="'http://localhost:3000/en/compnay/' + post.title + '.en'">{{ post.title }}</NuxtLink>-->
         </li>
         </div>
     </div>
@@ -35,7 +36,15 @@ export default {
   computed: {
     showEnglishMessage() {
       return this.$i18n.locale === 'sv';
-    }
+    },
+    create(post){
+    return "http://localhost:3000/en/compnay/" + post + ".en";
   }
+  },
+  methods:{
+  create(post){
+    return "http://localhost:3000/en/compnay/" + post + ".en";
+  }
+}
 }
 </script> 

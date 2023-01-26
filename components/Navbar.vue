@@ -11,8 +11,8 @@
 				</div>
 				
 				<div class="normal" v-bind:class="{ active: isActive('#catalog') }">
-					<NuxtLink to="/company/" class="header-link">{{$t('catalog')}}</NuxtLink>
-					<!--<NuxtLink v-else="showEnglishMessage" to="company/" class="header-link">{{$t('catalog')}}</NuxtLink>-->
+					<NuxtLink v-if="showEnglishMessage" to="/company/" class="header-link">{{$t('catalog')}}</NuxtLink>
+					<NuxtLink v-else="showEnglishMessage" to="/en/company/" class="header-link">{{$t('catalog')}}</NuxtLink>
 				</div>
 
 				
