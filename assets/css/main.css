@@ -59,18 +59,16 @@ a {
     font-size: 18px;
   }
 }
-@font-face {
-  font-family: "SecularOne-Regular";
-  src: url(assets/fonts/SecularOne-Regular.ttf);
-}
 
 @font-face {
   font-family: "work-sans";
   src: url(assets\fonts\WorkSans-Regular.ttf);
+  font-display: block;
 }
 @font-face {
   font-family: "Overpass";
   src: url(assets\fonts\Overpass-Black.ttf);
+  font-display: block;
 }
 
 html {
