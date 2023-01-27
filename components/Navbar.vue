@@ -17,8 +17,12 @@
 
 				
 			</nav>
-			<nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
-			<nuxt-link v-else="showEnglishMessage" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<div class="normal" v-bind:class="{ active: isActive('/') }">
+					<NuxtLink v-if="showEnglishMessage" to="/en" class="header-link" ><img src="@/assets/img/UK.png"/></NuxtLink>
+					<NuxtLink v-else="showEnglishMessage" to="/" class="header-link" ><img src="@/assets/img/Sweden.png"/></NuxtLink>
+			</div>
+			<!--<nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
+			<nuxt-link v-else="showEnglishMessage" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>-->
 			
 		</header>
 		
