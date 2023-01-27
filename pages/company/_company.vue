@@ -2,7 +2,7 @@
   <main >
     <section v-if="post">
       <article>
-        <div v-if="this.$i18n.locale === 'en'"><div change_language(post.title, this.$i18n.locale)></div></div>
+        <div v-if="this.$i18n.locale === 'en'" :click="<nuxt-link>"></div>
 
         <h1 class="">{{ post.slogan }}</h1>
       </article>
