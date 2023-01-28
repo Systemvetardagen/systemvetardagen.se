@@ -204,7 +204,7 @@ collections:
     label: "About"
     folder: "content/about"
     create: true
-    slug: "{{title}}"
+    slug: "{{group}}"
     i18n: true
     fields:
       - { label: "Role", name: "role", widget: "string", required: true }
@@ -220,7 +220,7 @@ collections:
               "Logistics",
               "Marketing",
               "Web Development and Design",
-              "Groupleader",
+              "Group Leader",
             ],
           required: true,
         }
@@ -232,7 +232,6 @@ collections:
           date_format: "YYYY",
           time_format: false,
           required: true,
-          i18n: duplicate,
         } #returns a time date string of the year
       - {
           label: "About you",
