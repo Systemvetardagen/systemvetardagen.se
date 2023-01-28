@@ -204,7 +204,7 @@ collections:
     label: "About"
     folder: "content/about"
     create: true
-    slug: "{{group}}"
+    slug: "{{name}}"
     i18n: true
     fields:
       - { label: "Name", name: "name", widget: "string", required: true }
