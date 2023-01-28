@@ -200,9 +200,9 @@ collections:
             },
         }
 
-  - name: "About us"
-    label: "About us"
-    folder: "content/aboutUs"
+  - name: "about"
+    label: "About"
+    folder: "content/about"
     create: true
     slug: "{{title}}"
     i18n: true
