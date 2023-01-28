@@ -1,5 +1,6 @@
 ---
 name: Josefin Lundgren
+picture: /img/uploads/josefin.webp
 role: Project Coordinator & Head of Marketing
 group: General
 svd_year: 2023-01-28T17:36:01.733Z
