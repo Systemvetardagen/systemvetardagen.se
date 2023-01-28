@@ -202,11 +202,13 @@ collections:
 
   - name: "about"
     label: "About"
-    folder: "content/aboutUs"
+    folder: "content/about"
     create: true
     slug: "{{group}}"
     i18n: true
     fields:
+      - { label: "Name", name: "name", widget: "string", required: true }
+      - { label: "Picture", name: "picture", widget: "image", required: false }
       - { label: "Role", name: "role", widget: "string", required: true }
       - {
           label: "Group",
@@ -224,7 +226,6 @@ collections:
             ],
           required: true,
         }
-      - { label: "Name", name: "name", widget: "string", required: true }
       - {
           label: "Systemvetardagen Year",
           name: "svd_year",
@@ -259,8 +260,8 @@ collections:
           required: false,
         }
       - {
-          label: "Portfolio",
-          name: "portfolio",
+          label: "Portfolio link",
+          name: "portfolio_link",
           widget: "text",
           required: false,
         }
