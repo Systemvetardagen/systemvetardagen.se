@@ -200,11 +200,11 @@ collections:
             },
         }
 
-  - name: "About us"
-    label: "About us"
+  - name: "about"
+    label: "About"
     folder: "content/aboutUs"
     create: true
-    slug: "{{title}}"
+    slug: "{{group}}"
     i18n: true
     fields:
       - { label: "Role", name: "role", widget: "string", required: true }
