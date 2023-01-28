@@ -5,6 +5,7 @@
       <div class="leader-cards">
         <div class="leader-card" v-for="post of posts" :key="post.slug">
           <div>
+            <img :src="post.picture" alt="portrait" />
             <h3 class="name">{{ post.name }}</h3>
             <p>{{ post.role }}</p>
           </div>
