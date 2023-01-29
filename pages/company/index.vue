@@ -12,7 +12,7 @@
 
       <div v-else="showEnglishMessage">
         <li v-if="post.slug === post.title + '.en'">
-        <NuxtLink :to="post.title + '.en/'">{{ post.title }}</NuxtLink>
+        <NuxtLink :to="post.title + '.en'">{{ post.title }}</NuxtLink>
         </li>
         </div>
     </div>
