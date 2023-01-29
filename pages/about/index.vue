@@ -42,6 +42,9 @@ export default {
   methods:{
     lang(postName){
       let p = String(postName)
+      if(this.$i18n.locale == 'sv'){
+        return p.includes('sv');
+      }
       return p.includes('en');
     }
   },
