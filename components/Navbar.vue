@@ -22,27 +22,29 @@
 		</header>
 		
 		<!-- MOBILE NAV -->
+		
 		<header class="mobile-header">
 			<a href="#" class="logo-link">
 				<img src="@/assets/img/SvD_logo_128.png" class="logo" alt="Systemvetardagen logo">
 			</a>
-			<button @click="seen=!seen" v-if="seen" class="nav-toggle">
+			<button @click="seen=!seen" class="nav-toggle">
 				<svg class="nav-toggle-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 				</svg>
 			</button>
-			<nav v-if="!seen">
-				
-				<div v-bind:class="{ active: isActive('#home') }" v-on:click="seen=!seen">
+			
+		</header>
+		<div class="sidebar" v-if="!seen">
+	
+			<div v-bind:class="{ active: isActive('#home') }" v-on:click="seen=!seen">
 					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
-				
 				<div v-bind:class="{ active: isActive('#catalog') }" v-on:click="seen=!seen">
 					<NuxtLink to="company" class="header-link">{{$t('catalog')}}</NuxtLink>
 				</div>
-			</nav>
-		</header>
+		</div>
+
   </div>
 </template>
 
@@ -71,6 +73,20 @@ export default {
 
 
 <style>
+
+	.sidebar {
+		position: fixed;
+		height: 100%;
+		width: 60%;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background: var(--clr-white);
+		z-index: 100;
+
+
+	}
 
 	.active {
 		padding-bottom: 1rem;
@@ -129,7 +145,7 @@ export default {
 	z-index: 999;
 	background-color: transparent;
 	border: none;
-	color: var(--clr-white);
+	color: var(--clr-grey-1000);
 	height: 3rem;
 	padding: 0.5rem;
 	margin-right: 0.5rem;
@@ -137,6 +153,7 @@ export default {
 
 	.nav-toggle-icon {
 	height: 100%;
+	color: black;
 	}
 
 	/* NAVBAR MOBILE */
@@ -145,12 +162,14 @@ export default {
 		display: none;
 	}
 	.mobile-header {
+		display: flex;
 		background: linear-gradient(var(--clr-white), transparent);
 		width: 100%;
 		position: fixed;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		z-index: 1000;
 	}
 	.main-header {
 		background-image: none;
@@ -177,6 +196,8 @@ export default {
 	}
 	nav {
 		flex-direction: column;
+		height: 100%;
+		align-items: center;
 	}
 	.header-link {
 		font-size: 1.8rem;
