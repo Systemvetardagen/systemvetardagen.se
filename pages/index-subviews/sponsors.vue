@@ -4,18 +4,19 @@
       <h2 style="color: var(--clr-blue-700)">{{ $t("sponsors") }}</h2>
       <h3>Coming soon...</h3>
     </div>
-    <img src="@/assets/img/blobs/Blob-5-b.svg" alt="blob" class="blob" />
+    <Blob type="5-b" height="30rem" class="blobby-thing" />
   </div>
 </template>
 
 <script>
 import Button from "@/components/Button.vue";
+import Blob from "@/components/Blob.vue";
 
 export default {
   name: "heroSection",
 };
 components: {
-  Button;
+  Button, Blob;
 }
 </script>
 <style>
@@ -30,10 +31,7 @@ components: {
   z-index: 100;
 }
 
-.blob {
-  height: 30rem;
-  position: absolute;
-  z-index: 1;
+.blobby-thing {
   left: 0;
   transform: translateX(-50%);
 }
