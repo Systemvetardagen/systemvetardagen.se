@@ -1,9 +1,9 @@
 <template>
     <section class="soon">
         <div class="soon-text">
-            <h2 style="color:var(--clr-pink-600); text-align: left; ">{{ $t('it_is_almost_time!') }}</h2>
+            <h2 style="color:var(--clr-pink-600); text-align: center; ">{{ $t('it_is_almost_time!') }}</h2>
             <p class="p" style="color: black;">{{ $t('disk_introduction1') }}<a
-            class="inline-link" style="color: black;" href=https://disk.su.se>{{ $t('disk') }}</a>
+            class="inline-link" style="color: black; text-align: left;" href=https://disk.su.se>{{ $t('disk') }}</a>
             {{ $t('disk_introduction2') }}
             </p>
         </div>
@@ -27,7 +27,7 @@
     .soon{
         display: flex;
         justify-content: center;
-        background:  linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets\img\Skärmavbild 2022-11-16 kl. 14.51.40.png');
+        background:  linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets\img\MicrosoftTeams-image.png');
         background-position: center;
         background-size: cover;
         /* height: 100vh; */
@@ -35,9 +35,9 @@
         
     }
     .soon-text{
-        /* padding:1rem; */
-        /* margin-left: 3rem; */
-      
+        background-color: var(--clr-white);
+        padding: 1.5%;
+        border-radius: 5%;
     }
     @media (max-width: 600px) {
     .soon-text {
