@@ -113,7 +113,7 @@ collections:
           - {
               label: "Phone number",
               name: "phone_number",
-              widget: "string",
+              widget: "number",
               required: false,
               i18n: true,
             }
@@ -132,15 +132,15 @@ collections:
           multiple: true,
           options:
             [
-              "Affärssystem och tjänstedesign",
-              "Data- och systemvetenskap",
-              "Datorspelsutveckling",
-              "Datavetenskap",
-              "Ekonomi och IT",
-              "Marknadskommunikation och IT",
-              "Digitala medier",
-              "Interaktionsdesign",
-              "Magister/Master",
+              "Affärssystem och tjänstedesign", "Enterprise Systems and Service Design"
+              "Data- och systemvetenskap", "Computer and System Sciences",
+              "Datorspelsutveckling", "Computer Game Development",
+              "Datavetenskap", Computer Science and Software Engineering,
+              "Ekonomi och IT", "Administration and Information Technology"
+              "Marknadskommunikation och IT", "Market Comunication and Information Technology",
+              "Digitala medier", "Digital media",
+              "Interaktionsdesign", "Interaction Design",
+              "Magister/Master", "Master"
             ],
           required: true,
           i18n: true,
@@ -152,12 +152,12 @@ collections:
           mulitple: true,
           options:
             [
-              "Praktikplatser",
-              "Utlandstjänster",
+              "Praktikplatser", "Internships",
+              "Utlandstjänster", "Foreign Services",
               "Traineeprogram",
-              "Heltidstjänster",
-              "Examensarbete",
-              "Deltidstjänster",
+              "Heltidstjänster", "Full time positions",
+              "Examensarbete", "Master thesis",
+              "Deltidstjänster", "Part-time positions"
             ],
           required: true,
           i18n: true,
@@ -207,9 +207,9 @@ collections:
     slug: "{{name}}"
     i18n: true
     fields:
-      - { label: "Name", name: "name", widget: "string", required: true }
-      - { label: "Picture", name: "picture", widget: "image", required: false }
-      - { label: "Role", name: "role", widget: "string", required: true }
+      - { label: "Name", name: "name", widget: "string", required: true, i18n: duplicate }
+      - { label: "Picture", name: "picture", widget: "image", required: false, i18n: duplicate}
+      - { label: "Role", name: "role", widget: "string", required: true i18n: duplicate}
       - {
           label: "Group",
           name: "group",
@@ -225,6 +225,7 @@ collections:
               "Group Leader",
             ],
           required: true,
+          i18n: duplicate
         }
       - {
           label: "Systemvetardagen Year",
@@ -233,6 +234,7 @@ collections:
           date_format: "YYYY",
           time_format: false,
           required: true,
+          i18n: duplicate
         } #returns a time date string of the year
       - {
           label: "About you",
@@ -246,22 +248,26 @@ collections:
           name: "disk_mail",
           widget: "string",
           required: true,
+          i18n: duplicate
         }
       - {
           label: "Personal mail",
           name: "personal_mail",
           widget: "string",
           required: false,
+          i18n: duplicate
         }
       - {
           label: "LinkedIn link",
           name: "linkedin_link",
           widget: "string",
           required: false,
+          i18n: duplicate
         }
       - {
           label: "Portfolio link",
           name: "portfolio_link",
           widget: "text",
           required: false,
+          i18n: duplicate
         }

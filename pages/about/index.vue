@@ -3,7 +3,7 @@
     <section v-if="posts">
       <h1 class="title">About</h1>
       <div class="leader-cards">
-        <div class="leader-card" v-for="post of posts" :key="post.slug">
+        <div class="leader-card" v-if="lang(post.slug)" v-for="post of posts" :key="post.slug">
           <div>
             <img :src="post.picture" alt="portrait" />
             <h3 class="name">{{ post.name }}</h3>
@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import { labeledStatement, stringLiteral } from '@babel/types';
+
 export default {
   async asyncData({ $content, error }) {
     let posts;
@@ -37,9 +39,15 @@ export default {
     }
     return { posts };
   },
+  methods:{
+    lang(postName){
+      let p = String(postName)
+      return p.includes('en');
+    }
+  },
   computed: {
     showEnglishMessage() {
-      return this.$i18n.locale === "sv";
+      return this.$i18n.locale == 'sv';
     },
   },
 };
