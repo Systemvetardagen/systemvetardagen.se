@@ -17,13 +17,15 @@
 
 				
 			</nav>
-			<div class="normal" v-bind:class="{ active: isActive('/') }">
+			<!--<div class="normal" v-bind:class="{ active: isActive('/') }">
 					<NuxtLink v-if="showEnglishMessage" to="/en" class="header-link" ><img src="@/assets/img/UK.png"/></NuxtLink>
 					<NuxtLink v-else="showEnglishMessage" to="/" class="header-link" ><img src="@/assets/img/Sweden.png"/></NuxtLink>
-			</div>
-			<!--<nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
-			<nuxt-link v-else="showEnglishMessage" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>-->
+			</div>-->
 			
+			<nuxt-link v-if="showEnglishMessage && routePath()" :to="switchLocalePath('en')" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
+			<nuxt-link v-else-if="showEnglishMessage === false && routePath()" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else-if="routePath() === false" :to="changePathName()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else :to="changePathName()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
 		</header>
 		
 		<!-- MOBILE NAV -->
@@ -49,12 +51,31 @@ export default {
 		return true
 	  };
     },
+	routePath(){
+		let st = String(this.$route.path);
+		if(st.includes('.sv')){
+			return false;
+		}else if(st.includes('.en')){
+			return false;
+		}
+		return true;
+	},
+	changePathName(){
+		let st = String(this.$route.path);
+		if(st.includes('.en')){
+			let st2 = st.replace('.en', '.sv');
+			return st2
+		}else{
+			let st2 = st.replace('.sv', '.en');
+			return st2
+		}
+	}
   },
   computed: {
     showEnglishMessage() {
       return this.$i18n.locale === 'sv';
-    }
-  }
+    },
+  },
 };
 </script>
 
