@@ -16,9 +16,16 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
+      {name:"msapplication-TileColor", content:"#da532c"},
+      {name:"theme-color", content:"#ffffff"},
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "@/static/favicon.ico" },
+      { rel:"apple-touch-icon", sizes:"180x180", href:"@assets/img/favicon/apple-touch-icon.png"},
+      {rel:"icon", type:"image/png", sizes:"32x32", href:"@assets/img/favicon/favicon-32x32.png"},
+      {rel:"icon", type:"image/png", sizes:"16x16", href:"@assets/img/favicon/favicon-16x16.png"},
+      {rel:"manifest", href:"@assets/img/favicon/site.webmanifest"},
+      {rel:"mask-icon", href:"@assets/img/favicon/safari-pinned-tab.svg", color:"#c91ed6"},
       // Font import for 'Proxima Nova' from Adobe Fonts
       { rel: "stylesheet", href: "https://use.typekit.net/qny1lac.css" },
     ],
