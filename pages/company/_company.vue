@@ -19,16 +19,5 @@ export default {
     }
     return { post };
   },
-  //not currently working, maybe replace homepage with @
-  change_language(title, language) {
-    window.location.assign("http://localhost:3000/en/company/" + title + language);
-  },
-  computed: {
-    //not currently working
-    showEnglishMessage() {
-      const lang = this.$i18n.locale;
-      return this.$i18n.locale === 'en';
-    }
-  }
 };
 </script> 

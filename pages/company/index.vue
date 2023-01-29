@@ -39,7 +39,7 @@ export default {
   },
   methods:{
   create(post){
-    return "http://localhost:3000/en/compnay/" + post + ".en";
+    return "https://systemvetardagen.se/en/compnay/" + post + ".en";
   }
 }
 }
