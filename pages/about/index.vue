@@ -1,7 +1,8 @@
 <template>
   <div>
     <section v-if="posts">
-      <h1 class="title">About</h1>
+      <h1 class="title">{{ $t("about-heading") }}</h1>
+      <h2>{{ $t("project-group-heading") }}</h2>
       <div class="leader-cards">
         <about-card
           v-for="post in postsGeneral"
@@ -67,7 +68,11 @@ section {
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title {
 }
 
 .leader-cards {

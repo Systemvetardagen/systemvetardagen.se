@@ -80,6 +80,8 @@
   "contact-form-company": "Company",
   "contact-form-email": "E-Mail",
   "contact-form-message": "Message",
-  "contact-form-button": "Send"
+  "contact-form-button": "Send",
 
+  "about-heading": "About",
+  "project-group-heading": "Project Group"
 }
