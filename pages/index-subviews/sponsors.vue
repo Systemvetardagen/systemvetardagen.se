@@ -85,9 +85,6 @@ export default {
 <style>
 .companies {
   height: auto;
-}
-
-.sponsors {
   display: flex;
   justify-content: center;
   padding: 5%;
