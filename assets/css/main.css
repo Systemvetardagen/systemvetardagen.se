@@ -145,7 +145,7 @@ h3 {
   margin-bottom: 0.4rem;
 }
 
-nav, p {
+input, textarea, p {
   font-size: 1rem;
   margin: 0;
   font-family: work-sans;
@@ -313,92 +313,7 @@ address {
 
 
 /* Contact Form */
-.contact {
-  padding-top: 0;
-  display: flex;
-  flex-direction: column;
 
-
-}
-
-#contact-form {
-  /*display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  height: 52px;*/
-   width: 230px;
-   left: 0px;
-   top: 0px;
-   border-radius: nullpx;
-   text-align: center;
-
-/* Black/900 */
-   color: #303030;
-
-
-/* Inside auto layout */
-   flex: none;
-   order: 0;
-   flex-grow: 0;
-
-}
-
-.inputs {
-  display: flex;
-  flex-direction: column;
-}
-
-.inputs-left-col {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: 1024px) {
-  .inputs {
-    flex-direction: row;
-  }
-  .inputs-left-col {
-    margin-right: 1rem;
-  }
-}
-input,
-textarea {
-  margin: 0;
-  margin-bottom: 1rem;
-  padding: 0.8rem 1rem;
-  width: 24rem;
-  max-width: 100%;
-  background-color: rgba(145, 181, 248, 0.1333333333);
-  border: 0.25rem solid rgba(70, 131, 254, 0.4);
-  border-radius: 0;
-  color: var(--clr-darkblue);
-  transition: border-color 0.2s;
-}
-
-input:focus,
-textarea:focus {
-  border-color: var(--clr-blue);
-  outline: none;
-}
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  color: var(--clr-lightblue);
-}
-
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: var(--clr-lightblue);
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: var(--clr-lightblue);
-}
-
-.button-form {
-  margin-top: 0;
-  width: 12rem;
-  align-self: flex-end;
-}
 
 
 /* Hero */
@@ -422,10 +337,6 @@ section {
 .hero-date {
   text-transform: uppercase;
   margin-bottom: 0;
-}
-
-.subtitle {
-  max-width: 50ch;
 }
 
 @media (min-width: 640px) {
@@ -492,24 +403,7 @@ footer {
     margin-left: 3rem;
   }
 }
-.faq {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.faq-question {
-  margin: 2rem 0;
-  margin-left: 4rem;
-}
-
-.faq p {
-  max-width: 50ch;
-  font-family: work-sans;
-}
 
 .join {
   padding-top: 0;

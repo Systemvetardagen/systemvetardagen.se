@@ -53,13 +53,19 @@
                 </div> -->
       </div>
     </div>
+    <Blob type="5-b" height="30rem" class="blobby-thing" />
   </div>
 </template>
 
 <script>
 import Button from "@/components/Button.vue";
+import Blob from "@/components/Blob.vue";
 
 export default {
+  name: "sponsorSection",
+  components: {
+    Blob;
+  },
   data() {
     return {
       logoPath: "@/assets/img/company-logos/logo_",
@@ -73,15 +79,15 @@ export default {
       ],
     };
   },
-  name: "heroSection",
 };
-components: {
-  Button;
-}
 </script>
 <style>
 .companies {
   height: auto;
+
+</script>
+<style>
+.sponsors {
   display: flex;
   justify-content: center;
   padding: 5%;
@@ -128,5 +134,13 @@ components: {
     grid-template-columns: 30% 30% 30%;
     grid-gap: 2rem;
   }
+
+.sponsor-content {
+  z-index: 100;
+}
+
+.blobby-thing {
+  left: 0;
+  transform: translateX(-50%);
 }
 </style>

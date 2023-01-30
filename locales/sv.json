@@ -2,9 +2,9 @@
   "event_date": "9 Februari",
   "event_name": "Systemvetardagen 2022",
   "hero_title": "Hitta ditt nästa jobb!",
-  "event_description": "En av Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!",
-  "to_the_event": "Till mässan",
-  "contact_us": "Kontakta oss",
+  "event_description": "Kom till en av Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!",
+  "catalog_btn_title": "Katalog",
+  "contact_us_btn": "Kontakta oss",
   
   
   "sponsors": "Sponsorer",
@@ -73,6 +73,14 @@
   "company": "Företag",
   "name": "Namn",
   "email": "E-post",
-  "message": "Meddelande"
+  "message": "Meddelande",
+
+
+  "contact-form-title": "Kontakta oss",
+  "contact-form-name": "Namn",
+  "contact-form-company": "Företag",
+  "contact-form-email": "E-mail",
+  "contact-form-message": "Meddelande",
+  "contact-form-button": "Skicka"
 
 }

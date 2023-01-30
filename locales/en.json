@@ -2,9 +2,9 @@
   "event_date": "9th February",
   "event_name": "Systemvetardagen 2022",
   "hero_title": "Find your next job!",
-  "event_description": "One of the biggest job fairs in Sweden for students and employers in the IT-business!",
-  "to_the_event": "To the fair",
-  "contact_us": "Contact us",
+  "event_description": "Come to one of the biggest job fairs in Sweden for students and employers in the IT-business!",
+  "catalog_btn_title": "Catalog",
+  "contact_us_btn": "Contact us",
 
 
 
@@ -72,6 +72,14 @@
   "company": "company",
   "name": "name",
   "email": "email",
-  "message": "message"
+  "message": "message",
+
+
+  "contact-form-title": "Contact us",
+  "contact-form-name": "Name",
+  "contact-form-company": "Company",
+  "contact-form-email": "E-Mail",
+  "contact-form-message": "Message",
+  "contact-form-button": "Send"
 
 }
