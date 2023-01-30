@@ -53,18 +53,20 @@
                 </div> -->
       </div>
     </div>
-    <Blob type="5-b" height="30rem" class="blobby-thing" />
+    <!-- <Blob type="5-b" height="30rem" class="blobby-thing" /> -->
   </div>
 </template>
 
 <script>
-import Blob from "@/components/Blob.vue";
+// import Blob from "@/components/Blob.vue";
 
 export default {
   name: "sponsorSection",
+  /*
   components: {
     Blob,
   },
+  */
   data() {
     return {
       logoPath: "@/assets/img/company-logos/logo_",
