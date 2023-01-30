@@ -23,11 +23,11 @@
 </template>
 
 <script>
-import aboutCard from "@/components/aboutCard.vue";
+import AboutCard from "@/components/AboutCard.vue";
 
 export default {
   components: {
-    aboutCard,
+    AboutCard,
   },
   async asyncData({ $content, error }) {
     let posts;
@@ -65,10 +65,15 @@ export default {
 /* TEMPORARY*/
 section {
   margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 .leader-cards {
+  max-width: 64rem;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
 }

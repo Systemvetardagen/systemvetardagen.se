@@ -43,7 +43,7 @@
         </a>
       </div>
     </div>
-    <p v-if="post.about_you">{{ post.about_you }}</p>
+    <p class="bio-text" v-if="post.about_you">{{ post.about_you }}</p>
     <div>
       <a class="email-link" :href="'mailto:' + post.disk_mail">{{
         post.disk_mail
@@ -98,5 +98,13 @@ export default {
 .email-link {
   font-family: work-sans;
   color: var(--clr-blue-900);
+}
+
+.bio-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>
