@@ -41,5 +41,5 @@ export default {
 		oldCatalog
 		contact
 		sponsors
-
+  }
 </script>
