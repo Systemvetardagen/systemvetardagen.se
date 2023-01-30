@@ -44,7 +44,7 @@
       </div>
     </div>
     <p class="bio-text" v-if="post.about_you">{{ post.about_you }}</p>
-    <div>
+    <div class="email-links">
       <a class="email-link" :href="'mailto:' + post.disk_mail">{{
         post.disk_mail
       }}</a>
@@ -93,6 +93,13 @@ export default {
 .link-icon {
   width: 1.5rem;
   color: var(--clr-blue-900);
+}
+
+.email-links {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .email-link {
