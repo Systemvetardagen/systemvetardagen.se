@@ -1,5 +1,9 @@
 ---
-svd_year: 2023-01-28T17:37:22.328Z
+name: Björn-Albin Forsberg
+picture: /img/uploads/bjorn.webp
+role: Head of Business Relations and Sales
+group: Group Leader
+svd_year: 2023-01-28T17:37:22.312Z
 about_you: As Head of Business Relations and Sales, I have had shared
   responsibility for the sales of exhibition spaces and communication with
   exhibitors, working with twenty fantastic team members. My vision has been a
@@ -13,4 +17,7 @@ about_you: As Head of Business Relations and Sales, I have had shared
   The journey has been incredibly educational and exciting! After SVD 2023, I
   will focus on diving deeper into system development, programming and exploring
   my newfound interest in machine learning.
+disk_mail: bjorn.forsberg@disk.su.se
+personal_mail: forsberg.bjorn.a@gmail.com
+linkedin_link: www.linkedin.com/in/björnForsberg426AF6
 ---

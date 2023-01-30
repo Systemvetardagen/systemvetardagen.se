@@ -93,6 +93,8 @@
   "contact-form-company": "Företag",
   "contact-form-email": "E-mail",
   "contact-form-message": "Meddelande",
-  "contact-form-button": "Skicka"
+  "contact-form-button": "Skicka",
 
+  "about-heading": "Om oss",
+  "project-group-heading": "Projektgrupp"
 }

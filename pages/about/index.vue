@@ -1,32 +1,35 @@
 <template>
-  <main>
+  <div>
     <section v-if="posts">
-      <h1 class="title">About</h1>
+      <h1 class="title">{{ $t("about-heading") }}</h1>
+      <h2>{{ $t("project-group-heading") }}</h2>
       <div class="leader-cards">
-        <div class="leader-card" v-for="post of posts" :key="post.slug">
-          <div>
-            <h3 class="name">{{ post.name }}</h3>
-            <p>{{ post.role }}</p>
-          </div>
-          <div>
-            <a v-if="post.linkedin_link" :href="post.linkedin_link">LinkedIn</a>
-            <a v-if="post.portfolio_link" :href="post.portfolio_link"
-              >Link to Portfolio</a
-            >
-          </div>
-          <p v-if="post.about_you">{{ post.about_you }}</p>
-          <div>
-            <p>DISK-email: {{ post.disk_mail }}</p>
-            <p>Personal email: {{ post.personal_mail }}</p>
-          </div>
-        </div>
+        <about-card
+          v-for="post in postsGeneral"
+          v-if="lang(post.slug)"
+          :post="post"
+          :key="post.id"
+        />
+      </div>
+      <div class="leader-cards">
+        <about-card
+          v-for="post in postsGroupLeader"
+          v-if="lang(post.slug)"
+          :post="post"
+          :key="post.id"
+        />
       </div>
     </section>
-  </main>
+  </div>
 </template>
 
 <script>
+import AboutCard from "@/components/AboutCard.vue";
+
 export default {
+  components: {
+    AboutCard,
+  },
   async asyncData({ $content, error }) {
     let posts;
     try {
@@ -36,9 +39,24 @@ export default {
     }
     return { posts };
   },
+  methods: {
+    lang(postName) {
+      let p = String(postName);
+      if (this.$i18n.locale == "sv") {
+        return p.includes(".sv");
+      }
+      return p.includes(".en");
+    },
+  },
   computed: {
     showEnglishMessage() {
-      return this.$i18n.locale === "sv";
+      return this.$i18n.locale == "sv";
+    },
+    postsGeneral: function () {
+      return this.posts.filter((i) => i.group === "General");
+    },
+    postsGroupLeader: function () {
+      return this.posts.filter((i) => i.group === "Group Leader");
     },
   },
 };
@@ -48,23 +66,20 @@ export default {
 /* TEMPORARY*/
 section {
   margin-top: 3rem;
-}
-
-.name {
-  color: var(--clr-blue-900);
-}
-.leader-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.leader-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
-  padding: 2rem;
-  background-color: var(--clr-blue-100);
-  border-radius: 1rem;
-  width: 24rem;
+}
+
+.title {
+}
+
+.leader-cards {
+  max-width: 64rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 </style>
