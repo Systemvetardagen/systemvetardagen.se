@@ -14,8 +14,6 @@
 	</div>
 </template>
 <style>
-	
-
 </style>
 
 <script>
@@ -43,5 +41,5 @@ export default {
 		oldCatalog
 		contact
 		sponsors
-}
+
 </script>

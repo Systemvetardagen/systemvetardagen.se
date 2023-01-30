@@ -10,15 +10,19 @@
 					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
 				
-				<div class="normal" v-bind:class="{ active: isActive('/company') }">
-					<NuxtLink to="/company" class="header-link">{{$t('catalog')}}</NuxtLink>
+				<div class="normal" v-bind:class="{ active: isActive('#catalog') }">
+					<NuxtLink v-if="showEnglishMessage" to="/company/" class="header-link">{{$t('catalog')}}</NuxtLink>
+					<NuxtLink v-else="showEnglishMessage" to="/en/company/" class="header-link">{{$t('catalog')}}</NuxtLink>
 				</div>
 
 				
 			</nav>
-			<nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
-			<nuxt-link v-else="showEnglishMessage" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
 			
+			<nuxt-link v-if="showEnglishMessage && checkLang()" :to="switchLocalePath('en') + '/'" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
+			<nuxt-link v-else-if="showEnglishMessage === false && checkLang() && checkPath()" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else-if="showEnglishMessage === false && checkLang()" :to="switchLocalePath('sv') + '/'" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else-if="checkLang() === false" :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
 		</header>
 		
 		<!-- MOBILE NAV -->
@@ -44,12 +48,38 @@ export default {
 		return true
 	  };
     },
+	checkLang(){
+		let st = String(this.$route.path);
+		if(st.includes('.sv')){
+			return false;
+		}else if(st.includes('.en')){
+			return false;
+		}
+		return true;
+	},
+	changePath(){
+		let st = String(this.$route.path);
+		if(st.includes('.en')){
+			let st2 = st.replace('.en', '.sv');
+			return st2
+		}else{
+			let st2 = st.replace('.sv', '.en');
+			return st2
+		}
+	},
+	checkPath(){
+		let st = String(this.$route.path);
+		if(st.includes('/company')){
+			return false;
+		}
+		return true;
+	}
   },
   computed: {
     showEnglishMessage() {
       return this.$i18n.locale === 'sv';
-    }
-  }
+    },
+  },
 };
 </script>
 
