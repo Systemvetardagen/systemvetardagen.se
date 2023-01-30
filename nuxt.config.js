@@ -17,18 +17,14 @@ export default {
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "@/static/favicon.ico" },
-      // Font import for 'Proxima Nova' from Adobe Fonts
-      { rel: "stylesheet", href: "https://use.typekit.net/qny1lac.css" },
-    ],
+    link: [{ rel: "icon", type: "image/x-icon", href: "@/static/favicon.ico" }],
     script: [
       { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
-    ]
+    ],
   },
 
   server: {
-    host: "localhost"
+    host: "localhost",
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -57,7 +53,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   content: {
-    dir: 'content'
+    dir: "content",
   },
 
   // Collection of anonymous telemetry data about general usage: https://github.com/nuxt/telemetry
