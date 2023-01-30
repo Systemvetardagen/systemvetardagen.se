@@ -13,38 +13,42 @@
 </template>
 
 <script>
-    import Button from '@/components/Button.vue'
-    export default {
-        name: 'heroSection'
-    }
-    components: {
-        Button
-    }
+import Button from "@/components/Button.vue";
+export default {
+  name: "heroSection",
+};
+components: {
+  Button;
+}
 </script>
 <style>
-    .soon{
-        display: flex;
-        justify-content: center;
-        background:  linear-gradient(0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets\img\MicrosoftTeams-image.png');
-        background-position: center;
-        background-size: cover;
-        /* height: 100vh; */
-        background-repeat: no-repeat;
-        
-    }
-    .soon-text{
-        background-color: var(--clr-white);
-        padding: 1.5%;
-        border-radius: 5%;
-    }
-    @media (max-width: 600px) {
-    .soon-text {
+.soon {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("assets\img\MicrosoftTeams-image.png");
+  background-position: center;
+  background-size: cover;
+  /* height: 100vh; */
+  background-repeat: no-repeat;
+}
+.soon-text {
+  background-color: var(--clr-white);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+@media (max-width: 600px) {
+  .soon-text {
     width: 100%;
-    }
-    }
-    @media (min-width: 601px) {
-    .soon-text {
-    max-width: 40ch;
-    }
-    }
+  }
+}
+@media (min-width: 601px) {
+  .soon-text {
+    max-width: 45ch;
+  }
+}
 </style>
