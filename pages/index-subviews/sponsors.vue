@@ -12,15 +12,18 @@
       <div class="company-grid">
         <div class="company-logo">
           <img
+            src="@/assets/img/company-logos/logo_accenture.png"
+            alt="Accenture"
+          />
+        </div>
+        <div class="company-logo">
+          <img
             src="@/assets/img/company-logos/logo_capgemini.png"
             alt="Capgemini"
           />
         </div>
-        <div class="company-logo sweco">
-          <img
-            src="@/assets/img/company-logos/logo_sweco_black.png"
-            alt="Sweco"
-          />
+        <div class="company-logo">
+          <img src="@/assets/img/company-logos/logo_cygni.png" alt="Cygni" />
         </div>
         <div class="company-logo">
           <img
@@ -34,17 +37,14 @@
             alt="Innofactor"
           />
         </div>
-        <div class="company-logo">
-          <img src="@/assets/img/company-logos/logo_cygni.png" alt="Cygni" />
+        <div class="company-logo sweco">
+          <img
+            src="@/assets/img/company-logos/logo_sweco_black.png"
+            alt="Sweco"
+          />
         </div>
         <div class="company-logo">
           <img src="@/assets/img/company-logos/logo_zimply.png" alt="Zimply" />
-        </div>
-        <div class="company-logo">
-          <img
-            src="@/assets/img/company-logos/logo_accenture.png"
-            alt="Accenture"
-          />
         </div>
         <!-- <div class="company-logo">
                     <img 
