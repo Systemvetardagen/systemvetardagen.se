@@ -32,8 +32,6 @@
 </template>
 
 <script>
-import { labeledStatement, stringLiteral } from "@babel/types";
-
 export default {
   async asyncData({ $content, error }) {
     let posts;
