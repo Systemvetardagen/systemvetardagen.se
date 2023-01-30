@@ -58,13 +58,12 @@
 </template>
 
 <script>
-import Button from "@/components/Button.vue";
 import Blob from "@/components/Blob.vue";
 
 export default {
   name: "sponsorSection",
   components: {
-    Blob;
+    Blob,
   },
   data() {
     return {
@@ -84,9 +83,8 @@ export default {
 <style>
 .companies {
   height: auto;
+}
 
-</script>
-<style>
 .sponsors {
   display: flex;
   justify-content: center;
@@ -134,6 +132,7 @@ export default {
     grid-template-columns: 30% 30% 30%;
     grid-gap: 2rem;
   }
+}
 
 .sponsor-content {
   z-index: 100;
