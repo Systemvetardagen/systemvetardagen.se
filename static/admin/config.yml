@@ -14,59 +14,260 @@ i18n:
   default_locale: sv
 
 collections:
-  - name: 'company'
-    label: 'company'
-    folder: 'content/company'
+  - name: "company"
+    label: "company"
+    folder: "content/company"
     create: true
     slug: "{{title}}"
     i18n: true
     fields:
-      - { label: 'Logo', name: 'logo', widget: 'image', required: false, i18n: duplicate}
-      - { label: 'Title', name: 'title', wiget: 'string', required: true, i18n: duplicate}
-      - { label: 'Slogan', name: 'slogan', widget: 'string', required: false, i18n: true}
-      - { label: 'Founded (year)', name: 'founded', widget: 'datetime', date_format: 'YYYY', time_format: false, required: true, i18n: duplicate} #returns a time date string of the year
-      - { label: 'Number of employess in Sweden', name: 'number_of_employees_in_Sweden', widget: 'number', value_type: 'int', required: true, i18n: duplicate}
-      - { label: 'Number of employess internationally', name: 'number_of_employees_in_internationally', widget: 'number', value_type: 'int', required: true, i18n: duplicate}
-      - { label: 'Area of business (max 40 words)', name: 'area_of_business', widget: 'text', required: true, i18n: true}
-      - { label: 'About us (max 150 words)', name: 'about_us', widget: 'text', required: true, i18n: true}
-      - { label: 'Qualifications (max 35 words)', name: 'qualifications', widget: 'text', required: true, i18n: true}
+      - {
+          label: "Logo",
+          name: "logo",
+          widget: "image",
+          required: false,
+          i18n: duplicate,
+        }
+      - {
+          label: "Title",
+          name: "title",
+          wiget: "string",
+          required: true,
+          i18n: duplicate,
+        }
+      - {
+          label: "Slogan",
+          name: "slogan",
+          widget: "string",
+          required: false,
+          i18n: true,
+        }
+      - {
+          label: "Founded (year)",
+          name: "founded",
+          widget: "datetime",
+          date_format: "YYYY",
+          time_format: false,
+          required: true,
+          i18n: duplicate,
+        } #returns a time date string of the year
+      - {
+          label: "Number of employess in Sweden",
+          name: "number_of_employees_in_Sweden",
+          widget: "number",
+          value_type: "int",
+          required: true,
+          i18n: duplicate,
+        }
+      - {
+          label: "Number of employess internationally",
+          name: "number_of_employees_in_internationally",
+          widget: "number",
+          value_type: "int",
+          required: true,
+          i18n: duplicate,
+        }
+      - {
+          label: "Area of business (max 40 words)",
+          name: "area_of_business",
+          widget: "text",
+          required: true,
+          i18n: true,
+        }
+      - {
+          label: "About us (max 150 words)",
+          name: "about_us",
+          widget: "text",
+          required: true,
+          i18n: true,
+        }
+      - {
+          label: "Qualifications (max 35 words)",
+          name: "qualifications",
+          widget: "text",
+          required: true,
+          i18n: true,
+        }
 
-      - label: 'Contact persons'
-        name: 'contact_persons'
-        widget: 'list'
+      - label: "Contact persons"
+        name: "contact_persons"
+        widget: "list"
         allow_add: true
         required: true
         i18n: true
-        fields: 
-        - { label: 'Name', name: 'name', widget: 'string', required: true, i18n: true } 
-        - { label: 'Email', name: 'email', widget: 'string', required: true, i18n: true } 
-        - { label: 'Phone number', name: 'phone_number', widget: 'string', required: false, i18n: true }
-        
-      - { label: 'Link to postitions', name: 'link_to_positions', widget: 'string', required: true, i18n: duplicate}
-      - { label: 'Program', name: 'Program', widget: 'select', multiple: true,  options: ['Affärssystem och tjänstedesign', 'Data- och systemvetenskap', 'Datorspelsutveckling', 'Datavetenskap', 'Ekonomi och IT', 'Marknadskommunikation och IT', 'Digitala medier', 'Interaktionsdesign', 'Magister/Master'], required: true, i18n: true}
-      - { label: 'Positions', name: 'positions', widget: 'select', mulitple: true, options: ['Praktikplatser', 'Utlandstjänster', 'Traineeprogram', 'Heltidstjänster', 'Examensarbete', 'Deltidstjänster'], required: true, i18n: true}
-      - { label: 'Positions other', name: 'positions_other', widget: 'string', required: false, i18n: true}
+        fields:
+          - {
+              label: "Name",
+              name: "name",
+              widget: "string",
+              required: true,
+              i18n: true,
+            }
+          - {
+              label: "Email",
+              name: "email",
+              widget: "string",
+              required: true,
+              i18n: true,
+            }
+          - {
+              label: "Phone number",
+              name: "phone_number",
+              widget: "number",
+              required: false,
+              i18n: true,
+            }
 
-      - { label: 'Sponsor banner', name: 'banner', widget: 'image', required: false, i18n: duplicate}
-      - { label: 'Youtube video (sponsor)', name: 'youtube_video', widget: 'string', required: false, i18n: duplicate}
-      - { label: "Sponsor images", name: "sponsor_images", widget: "list", allow_add: true, required: false, i18n: true,
-        field: {
-          label: 'Sponsor image', name: 'sponsor_image', widget: image, i18n: duplicate
-          }
+      - {
+          label: "Link to postitions",
+          name: "link_to_positions",
+          widget: "string",
+          required: true,
+          i18n: duplicate,
+        }
+      - {
+          label: "Program",
+          name: "Program",
+          widget: "select",
+          multiple: true,
+          options:
+            [
+              "Affärssystem och tjänstedesign", "Enterprise Systems and Service Design"
+              "Data- och systemvetenskap", "Computer and System Sciences",
+              "Datorspelsutveckling", "Computer Game Development",
+              "Datavetenskap", Computer Science and Software Engineering,
+              "Ekonomi och IT", "Administration and Information Technology"
+              "Marknadskommunikation och IT", "Market Comunication and Information Technology",
+              "Digitala medier", "Digital media",
+              "Interaktionsdesign", "Interaction Design",
+              "Magister/Master", "Master"
+            ],
+          required: true,
+          i18n: true,
+        }
+      - {
+          label: "Positions",
+          name: "positions",
+          widget: "select",
+          mulitple: true,
+          options:
+            [
+              "Praktikplatser", "Internships",
+              "Utlandstjänster", "Foreign Services",
+              "Traineeprogram",
+              "Heltidstjänster", "Full time positions",
+              "Examensarbete", "Master thesis",
+              "Deltidstjänster", "Part-time positions"
+            ],
+          required: true,
+          i18n: true,
+        }
+      - {
+          label: "Positions other",
+          name: "positions_other",
+          widget: "string",
+          required: false,
+          i18n: true,
         }
 
-  - name: 'About us'
-    label: 'About us'
-    folder: 'content/aboutUs'
+      - {
+          label: "Sponsor banner",
+          name: "banner",
+          widget: "image",
+          required: false,
+          i18n: duplicate,
+        }
+      - {
+          label: "Youtube video (sponsor)",
+          name: "youtube_video",
+          widget: "string",
+          required: false,
+          i18n: duplicate,
+        }
+      - {
+          label: "Sponsor images",
+          name: "sponsor_images",
+          widget: "list",
+          allow_add: true,
+          required: false,
+          i18n: true,
+          field:
+            {
+              label: "Sponsor image",
+              name: "sponsor_image",
+              widget: image,
+              i18n: duplicate,
+            },
+        }
+
+  - name: "about"
+    label: "About"
+    folder: "content/about"
     create: true
-    slug: "{{title}}"
+    slug: "{{name}}"
     i18n: true
     fields:
-      - { label: 'Role', name: 'Role', widget: 'string', required: true}
-      - { label: 'Group', name: 'group', widget: 'select', options: ['General', 'Business Relations and Sales', 'Events', 'Logistics', 'Marketing', 'Web Development and Design', 'Groupleader'], required: true}
-      - { label: 'Name', name: 'name', widget: 'string', required: true}
-      - { label: 'About you', name: 'About_you', widget: 'text', required: true, i18n: true}
-      - { label: 'DISK mail', name: 'DISK_mail', widget: 'string', required: true}
-      - { label: 'Personal mail', name: 'Personal_mail', widget: 'string', required: false}
-      - { label: 'LinkedIn link', name: 'LinkedIn_link', widget: 'string', required: false}
-      - { label: 'Portfolio', name: 'Portfolio', widget: 'text', required: false} 
+      - { label: "Name", name: "name", widget: "string", required: true, i18n: duplicate }
+      - { label: "Picture", name: "picture", widget: "image", required: false, i18n: duplicate}
+      - { label: "Role", name: "role", widget: "string", required: true i18n: duplicate}
+      - {
+          label: "Group",
+          name: "group",
+          widget: "select",
+          options:
+            [
+              "General",
+              "Business Relations and Sales",
+              "Events",
+              "Logistics",
+              "Marketing",
+              "Web Development and Design",
+              "Group Leader",
+            ],
+          required: true,
+          i18n: duplicate
+        }
+      - {
+          label: "Systemvetardagen Year",
+          name: "svd_year",
+          widget: "datetime",
+          date_format: "YYYY",
+          time_format: false,
+          required: true,
+          i18n: duplicate
+        } #returns a time date string of the year
+      - {
+          label: "About you",
+          name: "about_you",
+          widget: "text",
+          required: false,
+          i18n: true,
+        }
+      - {
+          label: "DISK mail",
+          name: "disk_mail",
+          widget: "string",
+          required: true,
+          i18n: duplicate
+        }
+      - {
+          label: "Personal mail",
+          name: "personal_mail",
+          widget: "string",
+          required: false,
+          i18n: duplicate
+        }
+      - {
+          label: "LinkedIn link",
+          name: "linkedin_link",
+          widget: "string",
+          required: false,
+          i18n: duplicate
+        }
+      - {
+          label: "Portfolio link",
+          name: "portfolio_link",
+          widget: "text",
+          required: false,
+          i18n: duplicate
+        }

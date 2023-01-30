@@ -16,28 +16,30 @@
         >{{ line }}
       </span>
     </div>
-
     <div class="hero-content">
+      <!-- Hero image -->
+      <img
+        class="hero-image"
+        src="@/assets/img/hero-image.png"
+        alt="Image of a group of people by their computers"
+      />
       <!-- Hero Text -->
       <div class="hero-content-text">
         <h1 class="hero-heading" style="color: var(--clr-blue-600)">
           {{ $t("hero_title") }}
         </h1>
-        <h3 style="color: var(--clr-blue-900)">
+        <p class="subtitle" style="color: var(--clr-grey-900)">
           {{ $t("event_description") }}
-        </h3>
-      </div>
-
-      <!-- Hero Buttons -->
-      <div class="hero-buttons">
-        <Button title="Katalog" bColor="gradient">Katalog</Button>
-        <Button
-          title="Kontakta oss"
-          link=""
-          bColor="--clr-blue-200"
-          tColor="--clr-black-900"
-          >Kontakta oss</Button
-        >
+        </p>
+        <!-- Hero Buttons -->
+        <div class="hero-buttons">
+          <Button width="14rem" bColor="gradient">{{
+            $t("catalog_btn_title")
+          }}</Button>
+          <Button link="" bColor="--clr-blue-200" tColor="--clr-black-900">{{
+            $t("contact_us_btn")
+          }}</Button>
+        </div>
       </div>
     </div>
   </div>
@@ -148,6 +150,7 @@ export default {
       }
     },
   },
+
 };
 components: {
   Button;
@@ -209,24 +212,40 @@ components: {
 .hero-content {
   position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  /* line-height: 200%; */
   z-index: 2;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 
 .hero-content-text {
   max-width: 45ch;
 }
 
+.hero-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 45ch;
+}
+
+.hero-image {
+  max-width: 100%;
+}
+
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 4rem;
 }
 
 .hero-heading {
   max-width: 85%;
+}
+
+.subtitle {
+  font-weight: 700;
 }
 </style>

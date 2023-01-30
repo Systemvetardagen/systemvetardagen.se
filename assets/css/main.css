@@ -59,10 +59,6 @@ a {
     font-size: 18px;
   }
 }
-@font-face {
-  font-family: "SecularOne-Regular";
-  src: url(assets/fonts/SecularOne-Regular.ttf);
-}
 
 @font-face {
   font-family: "work-sans";
@@ -343,10 +339,6 @@ section {
   margin-bottom: 0;
 }
 
-.subtitle {
-  max-width: 50ch;
-}
-
 @media (min-width: 640px) {
   .hero {
     padding-bottom: 1.5rem;
@@ -411,24 +403,7 @@ footer {
     margin-left: 3rem;
   }
 }
-.faq {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.faq-question {
-  margin: 2rem 0;
-  margin-left: 4rem;
-}
-
-.faq p {
-  max-width: 50ch;
-  font-family: work-sans;
-}
 
 .join {
   padding-top: 0;
