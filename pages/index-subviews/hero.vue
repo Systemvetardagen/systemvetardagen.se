@@ -150,7 +150,6 @@ export default {
       }
     },
   },
-
 };
 components: {
   Button;
@@ -162,12 +161,7 @@ components: {
   height: 100vh;
   /* background-position: center; */
   /* background-repeat: no-repeat; */
-  justify-content: flex-end;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("@/assets/img/hero-img-provisional.png");
+  justify-content: center;
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -190,30 +184,21 @@ components: {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 150%;
+  -webkit-user-select: none;
+  user-select: none;
   word-break: break-all;
   transition: 0.4s;
 }
 
 .highlighted {
-  color: var(--clr-pink-600);
+  color: var(--clr-pink-400);
 }
 
-/* .hero::before {    
-      content: "";
-      background-image: url('@/assets/img/hero-img-provisional.png');
-      background-size: cover;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      opacity: 0.5;
-} */
 .hero-content {
   position: relative;
   display: flex;
   z-index: 2;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   flex-direction: row-reverse;
   flex-wrap: wrap;
