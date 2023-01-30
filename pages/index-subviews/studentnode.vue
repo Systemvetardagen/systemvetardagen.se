@@ -5,8 +5,8 @@
             <div class="studentnode">
                     <h2 style=" color:var(--clr-blue-600); text-align: center;">{{ $t('book_session') }}</h2>
                     <p>{{$t('student_node_intro')}}</p>
-                    <p>{{$t("student_node_howtoapply")}}</p>
-                    <p style="padding-bottom:5%; padding-top:5%"><ol>
+                    <p style="padding-top:1rem">{{$t("student_node_howtoapply")}}</p>
+                    <p style="padding-bottom:5%; padding-top:0rem"><ol>
                         <li>{{ $t('student_node_step1') }}<a style="color: var(--clr-blue-600);" href=https://mitt.systemvetardagen.se> {{ $t('student_node_link') }}</a></li>
                         <li>{{ $t('student_node_step2') }}</li>
                         <li>{{ $t('student_node_step3') }}</li>
@@ -44,6 +44,7 @@ export default {
     width:90%; 
     height: auto;
     opacity: 0.5;
+    align-self: center;
 }
 @media (min-width: 1024px) {
 		 .studentnode_main {
