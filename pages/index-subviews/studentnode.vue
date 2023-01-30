@@ -6,14 +6,14 @@
                     <h2 style=" color:var(--clr-blue-600); text-align: center;">{{ $t('book_session') }}</h2>
                     <p>{{$t('student_node_intro')}}</p>
                     <p>{{$t("student_node_howtoapply")}}</p>
-                    <p><ul>
+                    <p style="padding-bottom:5%; padding-top:5%"><ol>
                         <li>{{ $t('student_node_step1') }}<a style="color: var(--clr-blue-600);" href=https://mitt.systemvetardagen.se> {{ $t('student_node_link') }}</a></li>
                         <li>{{ $t('student_node_step2') }}</li>
                         <li>{{ $t('student_node_step3') }}</li>
                         <li>{{ $t('student_node_step4') }}</li>
                         <li>{{ $t('student_node_step5') }}</li>
                         <li>{{ $t('student_node_step6') }}</li>
-                    </ul></p>     
+                    </ol></p>     
                     <Button link="https://mitt.systemvetardagen.se/" bColor="--clr-pink-600" tColor="--clr-white">Register Now</Button> 
             </div>
         </div>
