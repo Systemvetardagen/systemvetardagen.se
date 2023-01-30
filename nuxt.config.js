@@ -50,11 +50,11 @@ export default {
     ],
     script: [
       { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },
-    ]
+    ],
   },
 
   server: {
-    host: "localhost"
+    host: "localhost",
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -83,7 +83,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
   content: {
-    dir: 'content'
+    dir: "content",
   },
 
   // Collection of anonymous telemetry data about general usage: https://github.com/nuxt/telemetry

@@ -2,43 +2,41 @@
 
 <template>
   <div class="wrapper">
-		<hero/>
-		<sponsors/>
-		<soon/>
-        <info/>
-		<faq/>
-		<oldCatalog/>
-		<!-- <Button title="See Map" link="map"/> -->
-		<contact/>
-	</div>
+    <hero />
+    <sponsors />
+    <soon />
+    <info />
+    <faq />
+    <oldCatalog />
+    <!-- <Button title="See Map" link="map"/> -->
+    <contact />
+  </div>
 </template>
 <style>
-	
-
 </style>
 
 <script>
-import hero from '@/pages/index-subviews/hero.vue'
-import soon from '@/pages/index-subviews/soon.vue'
-import Button from '@/components/Button.vue'
-import info from '@/pages/index-subviews/info.vue'
-import faq from '@/pages/index-subviews/faq.vue'
-import oldCatalog from './index-subviews/oldCatalog.vue'
-import contact from '@/pages/index-subviews/contact.vue'
-import sponsors from './index-subviews/sponsors.vue'
+import hero from "@/pages/index-subviews/hero.vue";
+import soon from "@/pages/index-subviews/soon.vue";
+import Button from "@/components/Button.vue";
+import info from "@/pages/index-subviews/info.vue";
+import faq from "@/pages/index-subviews/faq.vue";
+import oldCatalog from "./index-subviews/oldCatalog.vue";
+import contact from "@/pages/index-subviews/contact.vue";
+import sponsors from "./index-subviews/sponsors.vue";
 export default {
-	components: {hero, soon, info, faq, oldCatalog, contact, sponsors},
-  	name: 'IndexPage'
-}
+  components: { hero, soon, info, faq, oldCatalog, contact, sponsors },
+  name: "IndexPage",
+};
 
-	components: {
-		hero
-		soon
-        info
-		faq
-		Button
-		oldCatalog
-		contact
-		sponsors
+components: {
+  hero;
+  soon;
+  info;
+  faq;
+  Button;
+  oldCatalog;
+  contact;
+  sponsors;
 }
 </script>
