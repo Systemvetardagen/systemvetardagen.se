@@ -43,7 +43,7 @@
         </a>
       </div>
     </div>
-    <p class="bio-text" v-if="post.about_you">{{ post.about_you }}</p>
+    <!-- <p class="bio-text" v-if="post.about_you">{{ post.about_you }}</p> -->
     <div class="email-links">
       <a class="email-link" :href="'mailto:' + post.disk_mail">{{
         post.disk_mail
