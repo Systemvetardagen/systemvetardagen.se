@@ -42,9 +42,9 @@ export default {
     lang(postName) {
       let p = String(postName);
       if (this.$i18n.locale == "sv") {
-        return p.includes("sv");
+        return p.includes(".sv");
       }
-      return p.includes("en");
+      return p.includes(".en");
     },
   },
   computed: {
