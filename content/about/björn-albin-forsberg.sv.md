@@ -1,6 +1,6 @@
 ---
 name: Björn-Albin Forsberg
-picture: /img/uploads/björn.webp
+picture: /img/uploads/bjorn.webp
 role: Head of Business Relations and Sales
 group: Business Relations and Sales
 svd_year: 2023-01-28T17:37:22.312Z

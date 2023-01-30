@@ -59,10 +59,6 @@ a {
     font-size: 18px;
   }
 }
-@font-face {
-  font-family: "SecularOne-Regular";
-  src: url(assets/fonts/SecularOne-Regular.ttf);
-}
 
 @font-face {
   font-family: "work-sans";
