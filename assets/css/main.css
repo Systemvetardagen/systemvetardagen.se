@@ -68,6 +68,10 @@ a {
   font-family: "Overpass";
   src: url(assets\fonts\Overpass-Black.ttf);
 }
+@font-face {
+  font-family: "OverpassMono";
+  src: url(assets\fonts\OverpassMono-VariableFont_wght.ttf);
+}
 
 html {
   scroll-behavior: smooth;
