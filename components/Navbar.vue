@@ -5,27 +5,42 @@
 				<img src="@/assets/img/Symbol_&_Text_Logo_Black_&_Color.svg" class="logo" alt="Systemvetardagen logo">
 			</a>
 			<nav>
-				
-				<div v-bind:class="{ active: isActive('#home') }">
+				<!-- Home -->
+				<div v-if="showEnglishMessage" v-bind:class="{ active: isActive('/') }">
 					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
+				<div v-else v-bind:class="{ active: isActive('/en') }">
+					<NuxtLink to="/en" class="header-link" >{{$t('home')}}</NuxtLink>
+				</div>
 				
-				<div v-bind:class="{ active: isActive('#catalog') }">
-					<NuxtLink to="company" class="header-link">{{$t('catalog')}}</NuxtLink>
+				<!-- Catalog -->
+				<div v-if="showEnglishMessage" v-bind:class="{ active: isActive('/company') }">
+					<NuxtLink to="/en/company" class="header-link">{{$t('catalog')}}</NuxtLink>
+				</div>
+				<div v-else v-bind:class="{ active: isActive('/en/company') }">
+					<NuxtLink to="/company" class="header-link">{{$t('catalog')}}</NuxtLink>
+				</div>
+
+				<!-- About -->
+				<div v-if="showEnglishMessage" v-bind:class="{ active: isActive('/about') }">
+					<NuxtLink to="/about" class="header-link">{{$t('about')}}</NuxtLink>
+				</div>
+				<div v-else v-bind:class="{ active: isActive('/en/about') }">
+					<NuxtLink to="/about" class="header-link">{{$t('about')}}</NuxtLink>
 				</div>
 				
 				
 			</nav>
 			<nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')" class="link-fair"><img src="@/assets/img/UK.png"/></nuxt-link>
-			<nuxt-link v-else="showEnglishMessage" :to="switchLocalePath('sv')" class="link-fair"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else :to="switchLocalePath('sv')" class="link-fair"><img src="@/assets/img/Sweden.png"/></nuxt-link>
 			
 		</header>
 		
 		<!-- MOBILE NAV -->
 		
 		<header class="mobile-header">
-			<a href="#" class="logo-link">
-				<img src="@/assets/img/SvD_logo_128.png" class="logo" alt="Systemvetardagen logo">
+			<a href="#" class="logo-link mobile-logo-link">
+				<img src="@/assets/img/Symbol_&_Text_Logo_Black_&_Color.svg" class="logo" alt="Systemvetardagen logo">
 			</a>
 			<button @click="seen=!seen" class="nav-toggle">
 				<svg class="nav-toggle-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -37,12 +52,50 @@
 		</header>
 		<div class="sidebar" v-if="!seen">
 	
-			<div v-bind:class="{ active: isActive('#home') }" v-on:click="seen=!seen">
-					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
-				</div>
-				<div v-bind:class="{ active: isActive('#catalog') }" v-on:click="seen=!seen">
-					<NuxtLink to="company" class="header-link">{{$t('catalog')}}</NuxtLink>
-				</div>
+			<!-- Home -->
+			<div 
+				v-if="showEnglishMessage" 
+				v-bind:class="{ mactive: isActive('/') }"
+				class="mobile-header-container">
+				<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
+			</div>
+			<div 
+				v-else 
+				v-bind:class="{ mactive: isActive('/en') }"
+				class="mobile-header-container">
+				<NuxtLink to="/en" class="header-link" >{{$t('home')}}</NuxtLink>
+			</div>
+			
+			<!-- Catalog -->
+			<div 
+				v-if="showEnglishMessage" 
+				v-bind:class="{ mactive: isActive('/company') }"
+				class="mobile-header-container">
+				<NuxtLink to="/company" class="header-link">{{$t('catalog')}}</NuxtLink>
+			</div>
+			<div 
+				v-else 
+				v-bind:class="{ mactive: isActive('/en/company') }"
+				class="mobile-header-container">
+				<NuxtLink to="/en/company" class="header-link">{{$t('catalog')}}</NuxtLink>
+			</div>
+
+			<!-- About -->
+			<div 
+				v-if="showEnglishMessage" 
+				v-bind:class="{ mactive: isActive('/about') }"
+				class="mobile-header-container">
+				<NuxtLink to="/about" class="header-link">{{$t('about')}}</NuxtLink>
+			</div>
+			<div 
+				v-else 
+				v-bind:class="{ mactive: isActive('/en/about') }"
+				class="mobile-header-container">
+				<NuxtLink to="/about" class="header-link">{{$t('about')}}</NuxtLink>
+			</div>
+			<nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')" class="link-fair"><img src="@/assets/img/UK.png"/></nuxt-link>
+			<nuxt-link v-else :to="switchLocalePath('sv')" class="link-fair"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+
 		</div>
 
   </div>
@@ -73,27 +126,42 @@ export default {
 
 
 <style>
+	.sidebar > .link-fair {
+		position: absolute;
+		bottom: 3rem;
+		left: 1rem;
+	}
+
+	.mobile-header-container {
+		padding-left: 1.5rem;
+		color: black;
+		margin-top: 2rem;
+	}
 
 	.sidebar {
 		position: fixed;
 		height: 100%;
-		width: 60%;
+		width: 55%;
 		right: 0;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		background: var(--clr-white);
 		z-index: 100;
+		border-left: solid var(--clr-grey-300) 0.13rem;
 
 
 	}
-
+	.mactive {
+		padding-left: 1.2rem;
+		border-left: solid var(--clr-grey-1000) 0.3rem;
+	}
 	.active {
 		padding-bottom: 1rem;
 		border-bottom: solid var(--clr-grey-1000);
 	}
 	.main-header {
-	/* background: linear-gradient(var(--clr-white), transparent); */
+	background: var(--clr-white);
 	position: fixed;
 	/* width: 95%; */
 	height: 5rem;
@@ -108,7 +176,7 @@ export default {
 	left: 0;
 	z-index: 1000;
 	border-bottom: solid var(--clr-grey-300) 0.13rem;
-	margin: 0rem 1rem;
+	margin: 0rem;
 	align-self: center; 
 	}
 
@@ -129,10 +197,13 @@ export default {
 	font-size: 1.2rem;
 	font-weight: 700;
 	margin: 0 max(1rem, 2vw);
+	color: black;
 	}
 
-	nav > div > a {
+	nav > div > NuxtLink {
 	color: var(--clr-grey-1000);
+	text-decoration: none;
+
 	}
 
 	
@@ -163,7 +234,7 @@ export default {
 	}
 	.mobile-header {
 		display: flex;
-		background: linear-gradient(var(--clr-white), transparent);
+		/* background: linear-gradient(var(--clr-white), transparent); */
 		width: 100%;
 		position: fixed;
 		display: flex;
@@ -202,10 +273,16 @@ export default {
 	.header-link {
 		font-size: 1.8rem;
 		margin: 0.75rem 0;
+		align-content: center;
 	}
 	.link-fair {
 		margin-top: 2rem;
 	}
+	.logo-link {
+		padding-top: 1rem;
+		padding-left: 0.5rem;
+	}
+
 	}
 	.header-scrolled {
 	background: var(--clr-white);
