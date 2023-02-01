@@ -1,12 +1,8 @@
 <template>
-  <main>
+  <main >
     <section v-if="post">
-      <nav class="mb-8" aria-label="go back">
-        <router-back class="block" />
-      </nav>
-      
       <article>
-        <h1 class="">{{ post.title }}</h1>
+        <h1 class="">{{ post.slogan }}</h1>
       </article>
     </section>
   </main>
@@ -22,8 +18,6 @@ export default {
       error({ message: "Entry not found" });
     }
     return { post };
-  }
-}
+  },
+};
 </script> 
-
-

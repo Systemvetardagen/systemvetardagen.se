@@ -5,14 +5,17 @@
 				<img src="@/assets/img/Symbol_&_Text_Logo_Black_&_Color.svg" class="logo" alt="Systemvetardagen logo">
 			</a>
 			<nav>
+
 				<!-- Home -->
 				<div v-if="showEnglishMessage" v-bind:class="{ active: isActive('/') }">
+
 					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
 				<div v-else v-bind:class="{ active: isActive('/en') }">
 					<NuxtLink to="/en" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
 				
+
 				<!-- Catalog -->
 				<div v-if="showEnglishMessage" v-bind:class="{ active: isActive('/company') }">
 					<NuxtLink to="/en/company" class="header-link">{{$t('catalog')}}</NuxtLink>
@@ -27,13 +30,21 @@
 				</div>
 				<div v-else v-bind:class="{ active: isActive('/en/about') }">
 					<NuxtLink to="/about" class="header-link">{{$t('about')}}</NuxtLink>
+
 				</div>
-				
+
 				
 			</nav>
+
 			<nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')" class="link-fair"><img src="@/assets/img/UK.png"/></nuxt-link>
 			<nuxt-link v-else :to="switchLocalePath('sv')" class="link-fair"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+
 			
+			<nuxt-link v-if="showEnglishMessage && checkLang()" :to="switchLocalePath('en') + '/'" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
+			<nuxt-link v-else-if="showEnglishMessage === false && checkLang() && checkPath()" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else-if="showEnglishMessage === false && checkLang()" :to="switchLocalePath('sv') + '/'" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else-if="checkLang() === false" :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
 		</header>
 		
 		<!-- MOBILE NAV -->
@@ -115,12 +126,38 @@ export default {
 		return true
 	  };
     },
+	checkLang(){
+		let st = String(this.$route.path);
+		if(st.includes('.sv')){
+			return false;
+		}else if(st.includes('.en')){
+			return false;
+		}
+		return true;
+	},
+	changePath(){
+		let st = String(this.$route.path);
+		if(st.includes('.en')){
+			let st2 = st.replace('.en', '.sv');
+			return st2
+		}else{
+			let st2 = st.replace('.sv', '.en');
+			return st2
+		}
+	},
+	checkPath(){
+		let st = String(this.$route.path);
+		if(st.includes('/company')){
+			return false;
+		}
+		return true;
+	}
   },
   computed: {
     showEnglishMessage() {
       return this.$i18n.locale === 'sv';
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -151,51 +188,75 @@ export default {
 		border-left: solid var(--clr-grey-300) 0.13rem;
 
 
+
 	}
 	.mactive {
 		padding-left: 1.2rem;
 		border-left: solid var(--clr-grey-1000) 0.3rem;
 	}
-	.active {
-		padding-bottom: 1rem;
-		border-bottom: solid var(--clr-grey-1000);
+
+	.normal {
+		height: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		justify-items: center;
+		border-bottom-style: solid;
+		border-bottom-color: transparent;
 	}
+
+	/* changes transparent bottom border to grey */
+
+	.active {
+		border-bottom-color: var(--clr-grey-1000);
+	}
+
 	.main-header {
-	background: var(--clr-white);
-	position: fixed;
-	/* width: 95%; */
-	height: 5rem;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 1rem 1rem 0rem 1rem;
-	transition: background 0.2s;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1000;
-	border-bottom: solid var(--clr-grey-300) 0.13rem;
-	margin: 0rem;
-	align-self: center; 
+
+		background: white;
+		position: fixed;
+		/* width: 95%; */
+		height: 5rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0rem 2rem;
+		transition: background 0.2s;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+		border-bottom: solid var(--clr-grey-300) 0.13rem;
+		margin: 0rem 0rem;
+		align-self: center;
+		box-sizing: content-box;
+
 	}
 
 	.logo-link {
-	height: 4rem;
+	height: 3rem;
 	padding: 0rem 0;
 	}
 
 	.logo {
-	height: 80%;
+	height: 100%;
+	}
+
+	.btn-lang {
+		display: flex;
+		align-items: center;
 	}
 
 	nav {
 	display: flex;
+	align-items: flex-end;
+	height: 100%;
 	}
 
 	.header-link {
 	font-size: 1.2rem;
-	font-weight: 700;
+	font-weight: 600;
 	margin: 0 max(1rem, 2vw);
 	color: black;
 	}
@@ -205,8 +266,6 @@ export default {
 	text-decoration: none;
 
 	}
-
-	
 
 	.mobile-header {
 	display: none;
@@ -275,13 +334,15 @@ export default {
 		margin: 0.75rem 0;
 		align-content: center;
 	}
-	.link-fair {
+	.btn-lang {
 		margin-top: 2rem;
 	}
+
 	.logo-link {
 		padding-top: 1rem;
 		padding-left: 0.5rem;
 	}
+
 
 	}
 	.header-scrolled {

@@ -2,13 +2,25 @@
   "event_date": "9 Februari",
   "event_name": "Systemvetardagen 2022",
   "hero_title": "Hitta ditt nästa jobb!",
-  "event_description": "En av Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!",
-  "to_the_event": "Till mässan",
-  "contact_us": "Kontakta oss",
+  "event_description": "Kom till en av Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!",
+  "catalog_btn_title": "Katalog",
+  "contact_us_btn": "Kontakta oss",
   
   
   "sponsors": "Sponsorer",
   "exhibitor": "Utställare",
+
+
+  "book_session":"Book Interview Sessions",
+  "student_node_intro": "This year we have once again partnered up with StudentNode to offer students the opportunity of applying for interview sessions with the companies!",
+  "student_node_howtoapply":"Follow the steps to apply:",
+  "student_node_step1": "Go to ",
+  "student_node_link":"mitt.systemvetardagen.se",
+  "student_node_step2":"Register an account",
+  "student_node_step3": "Fill in all your info for the account and upload your CV. This way you increase your chances of getting your desired job!",
+  "student_node_step4":"Write and upload personlized cover letters for the companies that you apply for! This will make you stand out and in turn increase your chances!",
+  "student_node_step5": "Find the companies you are most interested in and select a time of your choosing to apply for an interview session.",
+  "student_node_step6":"Press “Ansök” to apply for the interview(s) and then press “Send times to my email” to send the selected times to your email inbox. Don’t forget to save the times to your calendar!",
  
  
   "coming_soon": "Kommer snart...",
@@ -73,6 +85,16 @@
   "company": "Företag",
   "name": "Namn",
   "email": "E-post",
-  "message": "Meddelande"
+  "message": "Meddelande",
 
+
+  "contact-form-title": "Kontakta oss",
+  "contact-form-name": "Namn",
+  "contact-form-company": "Företag",
+  "contact-form-email": "E-mail",
+  "contact-form-message": "Meddelande",
+  "contact-form-button": "Skicka",
+
+  "about-heading": "Om oss",
+  "project-group-heading": "Projektgrupp"
 }
