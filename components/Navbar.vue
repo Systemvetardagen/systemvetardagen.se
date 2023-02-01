@@ -7,29 +7,46 @@
 			<nav>
 
 				<!-- Home -->
-				<div v-if="showEnglishMessage" v-bind:class="{ active: isActive('/') }">
-
+				<div 
+					v-if="showEnglishMessage" 
+					v-bind:class="{ active: isActive('/') }"
+					class="normal">
 					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
-				<div v-else v-bind:class="{ active: isActive('/en') }">
+				<div 
+					v-else 
+					v-bind:class="{ active: isActive('/en') }"
+					class="normal">
 					<NuxtLink to="/en" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
 				
 
 				<!-- Catalog -->
-				<div v-if="showEnglishMessage" v-bind:class="{ active: isActive('/company') }">
-					<NuxtLink to="/en/company" class="header-link">{{$t('catalog')}}</NuxtLink>
-				</div>
-				<div v-else v-bind:class="{ active: isActive('/en/company') }">
+				<div 
+					v-if="showEnglishMessage" 
+					v-bind:class="{ active: isActive('/company') }"
+					class="normal">
 					<NuxtLink to="/company" class="header-link">{{$t('catalog')}}</NuxtLink>
+				</div>
+				<div 
+					v-else 
+					v-bind:class="{ active: isActive('/en/company') }"
+					class="normal">
+					<NuxtLink to="/en/company" class="header-link">{{$t('catalog')}}</NuxtLink>
 				</div>
 
 				<!-- About -->
-				<div v-if="showEnglishMessage" v-bind:class="{ active: isActive('/about') }">
+				<div 
+					v-if="showEnglishMessage" 
+					v-bind:class="{ active: isActive('/about') }"
+					class="normal">
 					<NuxtLink to="/about" class="header-link">{{$t('about')}}</NuxtLink>
 				</div>
-				<div v-else v-bind:class="{ active: isActive('/en/about') }">
-					<NuxtLink to="/about" class="header-link">{{$t('about')}}</NuxtLink>
+				<div 
+					v-else 
+					v-bind:class="{ active: isActive('/en/about') }"
+					class="normal">
+					<NuxtLink to="/en/about" class="header-link">{{$t('about')}}</NuxtLink>
 
 				</div>
 
@@ -40,11 +57,11 @@
 			<nuxt-link v-else :to="switchLocalePath('sv')" class="link-fair"><img src="@/assets/img/Sweden.png"/></nuxt-link>
 
 			
-			<nuxt-link v-if="showEnglishMessage && checkLang()" :to="switchLocalePath('en') + '/'" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
+			<!-- <nuxt-link v-if="showEnglishMessage && checkLang()" :to="switchLocalePath('en') + '/'" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
 			<nuxt-link v-else-if="showEnglishMessage === false && checkLang() && checkPath()" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
-			<nuxt-link v-else-if="showEnglishMessage === false && checkLang()" :to="switchLocalePath('sv') + '/'" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
-			<nuxt-link v-else-if="checkLang() === false" :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
-			<nuxt-link v-else :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else-if="showEnglishMessage === false && checkLang()" :to="switchLocalePath('sv') + '/'" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link> -->
+			<!-- <nuxt-link v-else-if="checkLang() === false" :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link> -->
 		</header>
 		
 		<!-- MOBILE NAV -->
