@@ -49,14 +49,14 @@
         background-repeat: no-repeat;
         margin-bottom: 0rem;
         margin-top: 0rem;
-        padding-bottom:5rem;
     }
     .info-first{
         margin-left: 0rem;
-        padding-bottom: 5rem;
+        padding-bottom: 2rem;
     }
     .info-second{
         margin-left: 0rem;
+        padding-bottom:5rem;
     }
     .info > div > p > ul {
         list-style-type: square;
