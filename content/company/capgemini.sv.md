@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/logo_capgemini.png
 title: Capgemini
 slogan: Get the future you want
 founded: 1967-02-05T13:21:28.410Z
@@ -35,4 +36,10 @@ program:
   - Interaktionsdesign
   - Magister/Master
 positions: Traineeprogram
+banner: /img/uploads/capgemini_banner.png
+youtube_video: https://www.youtube.com/watch?v=PO-0YqzVtgM&t=3s
+sponsor_images:
+  - /img/uploads/capgemini_picture-1.png
+  - /img/uploads/capgemini_picture-2.png
+  - /img/uploads/capgemini_picture-3.png
 ---

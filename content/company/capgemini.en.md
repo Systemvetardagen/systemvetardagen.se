@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/logo_capgemini.png
 title: Capgemini
 slogan: null
 founded: 1967-02-05T13:21:28.410Z
@@ -12,4 +13,6 @@ link_to_positions: https://www.capgemini.com/se-en/careers/
 program: []
 positions: null
 positions_other: null
+banner: /img/uploads/capgemini_banner.png
+youtube_video: https://www.youtube.com/watch?v=PO-0YqzVtgM&t=3s
 ---
