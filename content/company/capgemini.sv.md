@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/logo_capgemini.png
 title: Capgemini
 slogan: Get the future you want
 founded: 1967-02-05T13:21:28.410Z
