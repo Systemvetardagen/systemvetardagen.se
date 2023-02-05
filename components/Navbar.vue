@@ -344,7 +344,8 @@ nav > div > NuxtLink {
   }
   .mobile-header {
     display: flex;
-    /* background: linear-gradient(var(--clr-white), transparent); */
+    background-color: var(--clr-white);
+    border-bottom: solid var(--clr-grey-300) 0.13rem;
     width: 100%;
     position: fixed;
     display: flex;
@@ -390,8 +391,8 @@ nav > div > NuxtLink {
   }
 
   .logo-link {
-    padding-top: 1rem;
-    padding-left: 0.5rem;
+    padding: 0.5rem;
+    height: 4rem;
   }
 }
 .header-scrolled {
