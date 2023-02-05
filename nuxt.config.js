@@ -44,9 +44,10 @@ export default {
 
       // Font import for 'Proxima Nova' from Adobe Fonts
       { rel: "stylesheet", href: "https://use.typekit.net/qny1lac.css" },
-      
 
-      
+      { rel: "preload", href: '@/assets/fonts/Overpass-Black.ttf', as:'font'},
+      { rel: "preload", href: '@/assets/fonts/WorkSans-Regular.ttf',as:'font'},
+
     ],
     script: [
       { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" },

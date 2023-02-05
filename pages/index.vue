@@ -1,5 +1,4 @@
 <!-- use option (alt) + Z to wrap text in vs code -->
-
 <template>
   <div class="wrapper">
 		<hero/>
@@ -15,6 +14,7 @@
 </template>
 <style>
 </style>
+
 
 <script>
 import hero from '@/pages/index-subviews/hero.vue'
