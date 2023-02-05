@@ -18,7 +18,7 @@ contact_persons:
   - name: Monia Letmark
     email: monia.letmark@avanade.com
 link_to_positions: https://careers.avanade.com/jobsen/SearchJobs
-Program:
+program:
   - Data- och systemvetenskap
   - Datavetenskap
   - Interaktionsdesign
