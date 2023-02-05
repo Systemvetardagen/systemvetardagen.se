@@ -113,4 +113,9 @@
     </div>
   </section>
 </template>
+<script>
+   export default {
+      name: 'map',
+   }
+</script>
 

@@ -1,0 +1,67 @@
+<template>
+    <div id="oldCatalog" class="oldCatalog">
+
+       <!-- <div class="catpic"> -->
+        <img class="catpicmedia" src="@/assets/img/chessboard.png" alt="Old Calalog Placeholder">
+       <!-- </div> -->
+      
+        <div class="oldcatcontent">
+            <h2 style="color: var(--clr-blue-700)">{{ $t('old_cat_title')}}</h2>
+            <p> {{$t('old_cat_description')}} </p>
+        </div>
+        <Button link="" bColor="--clr-pink-600" tColor="--clr-white">{{ $t('old_cat_btn') }}</Button>
+        
+    </div>
+
+</template>
+
+<script>
+    import Button from '@/components/Button.vue'
+    //import { text } from 'body-parser';
+
+    export default {
+        name: 'oldCatalog',
+    
+    components: {
+        Button
+    },
+    data() {
+        return {
+      // the i18n translation variable
+      translation: this.$t('the_fair'),
+        }
+    }
+}
+
+</script>
+    
+<style>
+    .oldCatalog {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10% 5%;
+        align-items: baseline;
+        gap: 20px;
+        
+      
+    }
+    .catpicmedia {
+        width:90%; 
+        height: auto;
+    }
+
+    @media (min-width: 1024px) {
+		 .oldCatalog {
+            flex-direction: row;
+            padding: 20%;
+            padding-left: 7%;
+            padding-right: 13%;
+         }
+         .oldcatcontent {
+            padding-left: 5%;
+        }
+	  }
+
+
+</style>

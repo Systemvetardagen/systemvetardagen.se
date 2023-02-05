@@ -1,29 +1,52 @@
 {
   "event_date": "9 Februari",
   "event_name": "Systemvetardagen 2022",
-  "event_description": "En av Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!",
-  "to_the_event": "Till mässan",
-  "contact_us": "Kontakta oss",
-  "sponsors": "Sponsorers",
+  "hero_title": "Hitta ditt nästa jobb!",
+  "event_description": "Kom till en av Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!",
+  "catalog_btn_title": "Katalog",
+  "contact_us_btn": "Kontakta oss",
+  
+  
+  "sponsors": "Sponsorer",
   "exhibitor": "Utställare",
+
+
+  "book_session":"Book Interview Sessions",
+  "student_node_intro": "This year we have once again partnered up with StudentNode to offer students the opportunity of applying for interview sessions with the companies!",
+  "student_node_howtoapply":"Follow the steps to apply:",
+  "student_node_step1": "Go to ",
+  "student_node_link":"mitt.systemvetardagen.se",
+  "student_node_step2":"Register an account",
+  "student_node_step3": "Fill in all your info for the account and upload your CV. This way you increase your chances of getting your desired job!",
+  "student_node_step4":"Write and upload personlized cover letters for the companies that you apply for! This will make you stand out and in turn increase your chances!",
+  "student_node_step5": "Find the companies you are most interested in and select a time of your choosing to apply for an interview session.",
+  "student_node_step6":"Press “Ansök” to apply for the interview(s) and then press “Send times to my email” to send the selected times to your email inbox. Don’t forget to save the times to your calendar!",
+ 
+ 
   "coming_soon": "Kommer snart...",
   "it_is_almost_time!": "Snart är det dags!",
   "disk_introduction1": "För 26:e året i rad arrangeras Systemvetardagen på Stockholms universitet. Det är",
   "disk_introduction2": "från Data- och Systemvetenskapliga institutionen (DSV) egna arbetsmarknadsdag. Under dagen knyts värdefulla kontakter mellan studenter och näringsliv. Systemvetardagen är en unik mötesplats för studenter & organisationer inom IT-branschen.",
   "disk": "studentkåren DISKs",
+  
+  
   "the_fair_2022": "Mässan 2022",
   "event_description2": "Året upplaga av Systemvetardagen kommer ske i hybridform. Mässan kommer vara digital, i kombination med fysiska event och presentationer. På mässdagen kommer du se virtuella bås på mässhemsidan där du kan interagera med företagen och ta del av information och jobbannonser som de har laddat upp. Under dagen kommer live-föreläsningar hållas av våra sponsorer.",
   "for_those_of_you_who_will_participate": "För dig som ska delta",
+  
   "before_the_fair": "Inför mässan",
   "before_the_fair_description1": "Skapa en profil inför mässan, länken dit hittar du i menyraden.",
   "before_the_fair_description2": "Maximera dina chanser för att få en bra kontakt med företagen – följ rekommendationerna och fyll ut din profil till 100%.",
   "before_the_fair_description3": "Läs på! Katalogen ger en bra övergripande blick över alla företag som ställer ut.",
   "before_the_fair_description4": "Kolla in företagens montrar, många av dem är redan öppna! Här kan ni se allt om företagen, vad de erbjuder för tjänster och anmäla er för kontaktsamtal.",
   "before_the_fair_description5": "Sen är du redo för mässan!",
+ 
   "during_the_fair": "Under mässan",
   "during_the_fair_description1": "För att gå in på mässan klickar du på knappen, och där du får möjlighet att prata med företagen.",
   "during_the_fair_description2": "Kika in på företagens montrar, de är där för att få kontakt med studenter, så passa på!",
   "during_the_fair_description3": "Lär dig något nytt – Under dagen kommer mässans sponsorer hålla föreläsningar som är synliga på mässans startsida. Olika företag, med olika föreläsningar – passa på ställa frågor och få svar direkt!",
+ 
+ 
   "frequently_asked_questions": "Vanliga frågor",
   "question1": "Jag går inte på Stockholms Universitet, får jag ändå delta?",
   "answer1": "Ja, alla studenter är välkomna!",
@@ -31,16 +54,30 @@
   "answer2": "Nej, det är helt kostnadsfritt för studenter att delta på mässan.",
   "question3": "Kan jag delta på mässan om jag inte talar svenska?",
   "answer3": "Absolut! Mäss-hemsidan erbjuds på både svenska och engelska, och företagen som deltar pratar gärna engelska.",
-  "catalog_of_this_year": "Årets katalog!",
-  "catalog_description": "Snart kommer årets Systemvetardags-katalog! I den kommer du att hitta allt man behöver veta om eventet, med information om våra sponsorer, utställande företag och mycket mer!",
-  "catalog_2021": "Katalog 2021",
+ 
+ 
+  "old_cat_title": "Kolla in förra årets katalog!",
+  "old_cat_description": "Här kan du bläddra i katalogen från vår senaste mässa! I den kan du hitta information om sponsorerna, utställande företag och mycket mer!",
+  "old_cat_btn": "Katalog",
+
+ 
+  "catalog_2022": "Katalog 2021",
   "iPad1": "Anmäl dig och tävla om en iPad!",
   "iPad2": "Var med i utlottningen av en iPad! Delta genom att följa dessa enkla steg:",
+  
+  
+  
   "follow_on_instagram": "Följ oss på Instagram ",
   "sign_for_event": "Skapa en profil på mässhemsidan och anmäl dig till Systemvetardagen 2022!",
   "create_profile": "Skapa en profil",
   "send": "Skicka",
-  "follow_us": "Följ oss",
+
+
+  "footer_follow_title": "Följ oss",
+  "footer_address_title": "Adress",
+  "footer_contact_title": "Kontakt",
+
+
   "home": "Hem",
   "catalog": "Katalog",
   "contact": "Kontakt",
@@ -48,5 +85,16 @@
   "company": "Företag",
   "name": "Namn",
   "email": "E-post",
-  "message": "Meddelande"
+  "message": "Meddelande",
+
+
+  "contact-form-title": "Kontakta oss",
+  "contact-form-name": "Namn",
+  "contact-form-company": "Företag",
+  "contact-form-email": "E-mail",
+  "contact-form-message": "Meddelande",
+  "contact-form-button": "Skicka",
+
+  "about-heading": "Om oss",
+  "project-group-heading": "Projektgrupp"
 }
