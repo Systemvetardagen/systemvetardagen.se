@@ -235,7 +235,7 @@ export default {
 .sidebar {
   position: fixed;
   height: 100%;
-  width: 55%;
+  width: 75%;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -310,6 +310,7 @@ nav {
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0 max(1rem, 2vw);
+  padding: 1rem;
   color: black;
 }
 
