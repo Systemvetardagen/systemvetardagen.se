@@ -13,5 +13,6 @@ link_to_positions: https://www.capgemini.com/se-en/careers/
 program: []
 positions: null
 positions_other: null
+banner: /img/uploads/capgemini_banner.png
 youtube_video: https://www.youtube.com/watch?v=PO-0YqzVtgM&t=3s
 ---

@@ -36,5 +36,8 @@ program:
   - Interaktionsdesign
   - Magister/Master
 positions: Traineeprogram
+banner: /img/uploads/capgemini_banner.png
 youtube_video: https://www.youtube.com/watch?v=PO-0YqzVtgM&t=3s
+sponsor_images:
+  - /img/uploads/capgemini_picture-1.png
 ---
