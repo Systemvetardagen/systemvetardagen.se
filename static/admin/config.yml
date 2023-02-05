@@ -127,20 +127,29 @@ collections:
         }
       - {
           label: "Program",
-          name: "Program",
+          name: "program",
           widget: "select",
           multiple: true,
           options:
             [
-              "Affärssystem och tjänstedesign", "Enterprise Systems and Service Design"
-              "Data- och systemvetenskap", "Computer and System Sciences",
-              "Datorspelsutveckling", "Computer Game Development",
-              "Datavetenskap", Computer Science and Software Engineering,
-              "Ekonomi och IT", "Administration and Information Technology"
-              "Marknadskommunikation och IT", "Market Comunication and Information Technology",
-              "Digitala medier", "Digital media",
-              "Interaktionsdesign", "Interaction Design",
-              "Magister/Master", "Master"
+              "Affärssystem och tjänstedesign",
+              "Enterprise Systems and Service Design",
+              "Data- och systemvetenskap",
+              "Computer and System Sciences",
+              "Datorspelsutveckling",
+              "Computer Game Development",
+              "Datavetenskap",
+              Computer Science and Software Engineering,
+              "Ekonomi och IT",
+              "Administration and Information Technology",
+              "Marknadskommunikation och IT",
+              "Market Comunication and Information Technology",
+              "Digitala medier",
+              "Digital media",
+              "Interaktionsdesign",
+              "Interaction Design",
+              "Magister/Master",
+              "Master",
             ],
           required: true,
           i18n: true,
@@ -152,12 +161,17 @@ collections:
           mulitple: true,
           options:
             [
-              "Praktikplatser", "Internships",
-              "Utlandstjänster", "Foreign Services",
+              "Praktikplatser",
+              "Internships",
+              "Utlandstjänster",
+              "Foreign Services",
               "Traineeprogram",
-              "Heltidstjänster", "Full time positions",
-              "Examensarbete", "Master thesis",
-              "Deltidstjänster", "Part-time positions"
+              "Heltidstjänster",
+              "Full time positions",
+              "Examensarbete",
+              "Master thesis",
+              "Deltidstjänster",
+              "Part-time positions",
             ],
           required: true,
           i18n: true,
@@ -207,9 +221,27 @@ collections:
     slug: "{{name}}"
     i18n: true
     fields:
-      - { label: "Name", name: "name", widget: "string", required: true, i18n: duplicate }
-      - { label: "Picture", name: "picture", widget: "image", required: false, i18n: duplicate}
-      - { label: "Role", name: "role", widget: "string", required: true i18n: duplicate}
+      - {
+          label: "Name",
+          name: "name",
+          widget: "string",
+          required: true,
+          i18n: duplicate,
+        }
+      - {
+          label: "Picture",
+          name: "picture",
+          widget: "image",
+          required: false,
+          i18n: duplicate,
+        }
+      - {
+          label: "Role",
+          name: "role",
+          widget: "string",
+          required: true,
+          i18n: duplicate,
+        }
       - {
           label: "Group",
           name: "group",
@@ -225,7 +257,7 @@ collections:
               "Group Leader",
             ],
           required: true,
-          i18n: duplicate
+          i18n: duplicate,
         }
       - {
           label: "Systemvetardagen Year",
@@ -234,7 +266,7 @@ collections:
           date_format: "YYYY",
           time_format: false,
           required: true,
-          i18n: duplicate
+          i18n: duplicate,
         } #returns a time date string of the year
       - {
           label: "About you",
@@ -248,26 +280,26 @@ collections:
           name: "disk_mail",
           widget: "string",
           required: true,
-          i18n: duplicate
+          i18n: duplicate,
         }
       - {
           label: "Personal mail",
           name: "personal_mail",
           widget: "string",
           required: false,
-          i18n: duplicate
+          i18n: duplicate,
         }
       - {
           label: "LinkedIn link",
           name: "linkedin_link",
           widget: "string",
           required: false,
-          i18n: duplicate
+          i18n: duplicate,
         }
       - {
           label: "Portfolio link",
           name: "portfolio_link",
           widget: "text",
           required: false,
-          i18n: duplicate
+          i18n: duplicate,
         }
