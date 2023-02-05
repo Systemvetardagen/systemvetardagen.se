@@ -397,26 +397,6 @@ footer {
   margin-top: 2rem;
 }
 
-.info-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.info-second {
-  margin-top: 2rem;
-}
-
-@media (min-width: 1024px) {
-  .info-text {
-    flex-direction: row;
-  }
-  .info-second {
-    margin-top: 0;
-    margin-left: 3rem;
-  }
-}
-
-
 .join {
   padding-top: 0;
   padding-bottom: 0;
