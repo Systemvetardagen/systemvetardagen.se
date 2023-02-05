@@ -36,4 +36,5 @@ program:
   - Interaktionsdesign
   - Magister/Master
 positions: Traineeprogram
+youtube_video: https://www.youtube.com/watch?v=PO-0YqzVtgM&t=3s
 ---
