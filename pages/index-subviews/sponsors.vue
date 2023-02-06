@@ -26,31 +26,29 @@
           <img src="@/assets/img/company-logos/logo_cygni.png" alt="Cygni" />
         </div>
         <div class="company-logo">
-          <img
-            src="@/assets/img/company-logos/logo_handelsbanken.png"
-            alt="Handelsbanken"
-          />
+          <img src="@/assets/img/company-logos/logo_fra.jpg" alt="FRA" />
         </div>
-        <div class="company-logo">
-          <img
-            src="@/assets/img/company-logos/logo_innofactor.png"
-            alt="Innofactor"
-          />
-        </div>
-        <div class="company-logo sweco">
-          <img
-            src="@/assets/img/company-logos/logo_sweco_black.png"
-            alt="Sweco"
-          />
-        </div>
-        <div class="company-logo">
-          <img src="@/assets/img/company-logos/logo_zimply.png" alt="Zimply" />
-        </div>
-        <div class="company-logo">
-                    <img 
-                        src="@/assets/img/company-logos/logo_fra.png" 
-                        alt="FRA">
-                </div>
+      </div>
+      <div class="company-logo">
+        <img
+          src="@/assets/img/company-logos/logo_handelsbanken.png"
+          alt="Handelsbanken"
+        />
+      </div>
+      <div class="company-logo">
+        <img
+          src="@/assets/img/company-logos/logo_innofactor.png"
+          alt="Innofactor"
+        />
+      </div>
+      <div class="company-logo sweco">
+        <img
+          src="@/assets/img/company-logos/logo_sweco_black.png"
+          alt="Sweco"
+        />
+      </div>
+      <div class="company-logo">
+        <img src="@/assets/img/company-logos/logo_zimply.png" alt="Zimply" />
       </div>
     </div>
     <!-- <Blob type="5-b" height="30rem" class="blobby-thing" /> -->
@@ -97,6 +95,7 @@ export default {
   align-items: center;
   align-content: center;
 }
+
 .company-conent > h2 {
   align-self: center;
 }
@@ -122,6 +121,7 @@ export default {
 .company-logo > img {
   width: 90%;
 }
+
 .sweco {
   padding-bottom: 1.5rem;
 }
