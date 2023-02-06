@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+.wrapper {
+  padding-top: 4rem;
+}
+
 .button {
   background-color: transparent;
   font-weight: 700;
@@ -61,12 +65,10 @@ a {
   margin-right: 2.5rem;
 }
 
-
 /* General Page set-up */
 @media (min-width: 768px) {
   :root {
     font-size: 18px;
-    margin-top: 3rem;
   }
 }
 

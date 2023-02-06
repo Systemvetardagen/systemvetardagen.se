@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <section v-if="posts">
       <h1 class="title">{{ $t("about-heading") }}</h1>
       <h2>{{ $t("project-group-heading") }}</h2>
