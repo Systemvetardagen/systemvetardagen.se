@@ -154,7 +154,7 @@
         v-bind:class="{ mactive: isActive('/en/about') }"
         class="mobile-header-container"
       >
-        <NuxtLink to="/about" class="header-link">{{ $t("about") }}</NuxtLink>
+        <NuxtLink to="/en/about" class="header-link">{{ $t("about") }}</NuxtLink>
       </div>
       <nuxt-link
         v-if="showEnglishMessage"
