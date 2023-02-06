@@ -344,18 +344,11 @@ section {
   align-items: flex-start;
 }
 
-
-
-.hero-date {
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-
 @media (min-width: 640px) {
   .hero {
     padding-bottom: 1.5rem;
   }
-  .hero,
+
 section,
 footer {
     padding: 4rem;
