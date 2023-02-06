@@ -39,7 +39,7 @@ export default {
         content:
           "För 27:e året i rad arrangeras Systemvetardagen på Stockholms universitet, en av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT-branschen!",
       },
-      { property: "og:image", content: "assets/img/meta-image.jpg" },
+      { property: "og:image", content: "@/assets/img/meta-image.jpg" },
 
       // Twitter
       { property: "twitter:card", content: "summary_large_image" },
@@ -50,7 +50,7 @@ export default {
         content:
           "För 27:e året i rad arrangeras Systemvetardagen på Stockholms universitet, en av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT-branschen!",
       },
-      { property: "twitter:image", content: "assets/img/meta-image.jpg" },
+      { property: "twitter:image", content: "@/assets/img/meta-image.jpg" },
     ],
     link: [
       // { rel: "icon", type: "image/x-icon", href: "@/static/favicon.ico" },
