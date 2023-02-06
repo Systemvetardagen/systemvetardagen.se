@@ -25,9 +25,25 @@
           </iframe>
         </div>
         
-        <div v-if="post.sponsor_images" class="gallery">
+        <!-- <div v-if="post.sponsor_images" class="gallery">
           <div v-for="pic in this.post.sponsor_images" :key="pic.id" class="gallery-img">
             <img :src=ImageLink(pic) alt="sponsor image">
+          </div>
+        </div> -->
+
+        <div v-if="post.sponsor_images" class="gallery">
+          <div class="column">
+            <div class="gallery-item">
+              <img :src=ImageLink(this.post.sponsor_images[0]) alt="galery image 1" class="gallery-img">
+            </div>
+          </div>
+          <div class="column">
+            <div class="gallery-item">
+              <img :src=ImageLink(this.post.sponsor_images[1]) alt="galery image 2" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+              <img :src=ImageLink(this.post.sponsor_images[2]) alt="galery image 3" class="gallery-img">
+            </div>
           </div>
         </div>
 
@@ -117,5 +133,32 @@ img {
 .logo {
   width: 10rem;
 }
+
+.gallery {
+  /* Mobile first */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery .column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-item img {
+  width: 100%;
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .gallery {
+    flex-direction: row;
+  }
+}
+
 </style>
 

@@ -39,7 +39,7 @@ positions: Traineeprogram
 banner: /img/uploads/capgemini_banner.png
 youtube_video: https://www.youtube.com/embed/PO-0YqzVtgM
 sponsor_images:
-  - /img/uploads/capgemini_picture-1.png
-  - /img/uploads/capgemini_picture-2.png
-  - /img/uploads/capgemini_picture-3.png
+  - /img/uploads/capgemini_picture-1_cropped.png
+  - /img/uploads/capgemini_picture-2_cropped.png
+  - /img/uploads/capgemini_picture-3_cropped.png
 ---
