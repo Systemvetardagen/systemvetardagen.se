@@ -1,5 +1,5 @@
 <template>
-  <section class="contact">
+  <section class="contact" id="contact">
     <form class="contact-form" id="contact-form" @submit.prevent="submit">
       <h2 style="color: var(--clr-grey-900)">
         {{ $t("contact-form-title") }}

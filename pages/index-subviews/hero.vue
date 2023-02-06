@@ -36,7 +36,9 @@
           <!--           <Button width="14rem" bColor="gradient">{{
             $t("catalog_btn_title")
           }}</Button> -->
-          <Button link="" bColor="gradient">{{ $t("contact_us_btn") }}</Button>
+          <Button link="#contact" bColor="gradient">{{
+            $t("contact_us_btn")
+          }}</Button>
         </div>
       </div>
     </div>
