@@ -25,26 +25,22 @@
  
   "coming_soon": "Kommer snart...",
   "it_is_almost_time!": "Snart är det dags!",
-  "disk_introduction1": "För 26:e året i rad arrangeras Systemvetardagen på Stockholms universitet. Det är",
+  "disk_introduction1": "För 27:e året i rad arrangeras Systemvetardagen på Stockholms universitet. Det är",
+  "disk": " studentkåren DISKs",
   "disk_introduction2": "från Data- och Systemvetenskapliga institutionen (DSV) egna arbetsmarknadsdag. Under dagen knyts värdefulla kontakter mellan studenter och näringsliv. Systemvetardagen är en unik mötesplats för studenter & organisationer inom IT-branschen.",
-  "disk": "studentkåren DISKs",
   
-  
-  "the_fair_2022": "Mässan 2022",
-  "event_description2": "Året upplaga av Systemvetardagen kommer ske i hybridform. Mässan kommer vara digital, i kombination med fysiska event och presentationer. På mässdagen kommer du se virtuella bås på mässhemsidan där du kan interagera med företagen och ta del av information och jobbannonser som de har laddat upp. Under dagen kommer live-föreläsningar hållas av våra sponsorer.",
-  "for_those_of_you_who_will_participate": "För dig som ska delta",
+  "info_heading": "Tips för dig som deltar",
   
   "before_the_fair": "Inför mässan",
-  "before_the_fair_description1": "Skapa en profil inför mässan, länken dit hittar du i menyraden.",
-  "before_the_fair_description2": "Maximera dina chanser för att få en bra kontakt med företagen – följ rekommendationerna och fyll ut din profil till 100%.",
-  "before_the_fair_description3": "Läs på! Katalogen ger en bra övergripande blick över alla företag som ställer ut.",
-  "before_the_fair_description4": "Kolla in företagens montrar, många av dem är redan öppna! Här kan ni se allt om företagen, vad de erbjuder för tjänster och anmäla er för kontaktsamtal.",
-  "before_the_fair_description5": "Sen är du redo för mässan!",
+  "before_the_fair_description1": "Uppdatera ditt CV och ha det lättillgängligt så att du enkelt kan ge eller skicka det vid förfrågan.",
+  "before_the_fair_description2": "Kolla igenom katalogen (släpps snart!) och notera vilka företag du är intresserad av att prata med!",
+  "before_the_fair_description3": "Kolla in vilka företagsevent som du är intresserad av att gå på. Schemat kommer dyka upp i katalogen inom kort.",
+  "before_the_fair_description4": "Nu är du väl förberedd för mässan!",
  
   "during_the_fair": "Under mässan",
-  "during_the_fair_description1": "För att gå in på mässan klickar du på knappen, och där du får möjlighet att prata med företagen.",
-  "during_the_fair_description2": "Kika in på företagens montrar, de är där för att få kontakt med studenter, så passa på!",
-  "during_the_fair_description3": "Lär dig något nytt – Under dagen kommer mässans sponsorer hålla föreläsningar som är synliga på mässans startsida. Olika företag, med olika föreläsningar – passa på ställa frågor och få svar direkt!",
+  "during_the_fair_description1": "Använd mässkartan för att hitta företagen du är intresserad av.",
+  "during_the_fair_description2": "Gå runt på mässgolvet och prata med företagen. De är där för att få kontakt med studenter, så passa på!",
+  "during_the_fair_description3": "Lär dig något nytt – Under dagen kommer det att hållas företagsevent i Aula NOD. Se på schemat vilka event som låter intressanta!",
  
  
   "frequently_asked_questions": "Vanliga frågor",
@@ -56,8 +52,8 @@
   "answer3": "Absolut! Mäss-hemsidan erbjuds på både svenska och engelska, och företagen som deltar pratar gärna engelska.",
  
  
-  "old_cat_title": "Kolla in förra årets katalog!",
-  "old_cat_description": "Här kan du bläddra i katalogen från vår senaste mässa! I den kan du hitta information om sponsorerna, utställande företag och mycket mer!",
+  "old_cat_title": "Årets katalog!",
+  "old_cat_description": "Katalogen kommer väldigt snart! I den kommer du att hitta information om sponsorerna, utställande företag och mycket mer!",
   "old_cat_btn": "Katalog",
 
  

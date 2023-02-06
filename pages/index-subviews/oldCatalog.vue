@@ -3,15 +3,15 @@
     <div class="catalog-content">
       <img
         class="catalog-image"
-        src="@/assets/img/catalog2022_front.jpg"
+        src="@/assets/img/catalog_image.jpg"
         alt="Old Catalog Placeholder"
       />
       <div class="catalog-text">
         <h2 style="color: var(--clr-blue-600)">{{ $t("old_cat_title") }}</h2>
         <p>{{ $t("old_cat_description") }}</p>
-        <Button link="" bColor="--clr-pink-600" tColor="--clr-white">{{
+        <!-- <Button link="" bColor="--clr-pink-600" tColor="--clr-white">{{
           $t("old_cat_btn")
-        }}</Button>
+        }}</Button> -->
       </div>
     </div>
   </section>
