@@ -59,7 +59,6 @@ export default {
 
 .catalog-image {
   width: 16rem;
-  opacity: 80%;
   border-radius: 2rem;
 }
 
