@@ -5,16 +5,23 @@
         <div v-if="post.banner" class="banner">
           <!-- <img src="@/assets/img/uploads/capgemini_banner.png" alt="company banner" class="banner-img"> -->
           <img :src=ImageLink(this.post.banner) class="banner-img">
+        
+        <div class="banner-overlay">
+          <div class="logo">
+            <img :src=ImageLink(this.post.logo) alt="logo" class="logo-img">
+          </div>
+          
+          <h1 class="post-title">{{ post.title }}</h1>
+          <p class="post-location">Location: ??</p>
+          <p v-if="post.banner" class="post-tag">// Sponsor</p>
+          <p v-else class="post-tag">// </p>
         </div>
-        <div class="logo">
-          <img :src=ImageLink(this.post.logo) alt="logo" class="logo-img">
-        </div>
-        <div>
-          <h1 class="">{{ post.title }}</h1>
-          <h3>{{ post.slogan }}</h3>
-          <p>Grundades: {{ post.founded }}</p>
-          <p>{{ post.area_of_business }}</p>
-        </div>
+      </div>
+
+        <h3>{{ post.slogan }}</h3>
+        <p>Grundades: {{ post.founded }}</p>
+        <p>{{ post.area_of_business }}</p>
+        
         <p>{{ post.about_us }}</p>
         <div v-if="post.youtube_video" class="video">
           <iframe 
@@ -105,12 +112,39 @@ export default {
   flex-direction: column;
 }
 .banner {
+  background: linear-gradient(black, black, 0.1);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.banner-overlay {
+  position: absolute;
+  bottom: 5%;
+  padding: 1rem 5%;
+  color: var(--clr-blue-900);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 30;
+
 }
 .banner-img {
+ 
   width: 100%;
   height: auto;
+}
+.post-location {
+  padding-bottom: 0.5rem;
+  border-bottom: solid 2px var(--clr-white);
+  
+}
+.post-title {
+  padding-bottom: 2rem;
+}
+.post-tag {
+  align-self: flex-end;
+  padding-top: 0.5rem;
+  color: white;
 }
 .video {
   position: relative;
@@ -139,6 +173,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 10rem 0; 
 }
 
 .gallery .column {
