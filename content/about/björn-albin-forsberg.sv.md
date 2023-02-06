@@ -19,5 +19,5 @@ about_you: "Som Head of Business Relations and Sales har jag haft delat ansvar
   maskininlärning. "
 disk_mail: bjorn.forsberg@disk.su.se
 personal_mail: forsberg.bjorn.a@gmail.com
-linkedin_link: www.linkedin.com/in/björnforsberg
+linkedin_link: https://www.linkedin.com/in/björnforsberg
 ---
