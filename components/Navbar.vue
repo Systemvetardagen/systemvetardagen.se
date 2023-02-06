@@ -22,7 +22,7 @@
         </div>
 
         <!-- Catalog -->
-        <div
+        <!-- <div
           v-if="showEnglishMessage"
           v-bind:class="{ active: isActive('/company') }"
           class="normal"
@@ -39,7 +39,7 @@
           <NuxtLink to="/en/company" class="header-link">{{
             $t("catalog")
           }}</NuxtLink>
-        </div>
+        </div> -->
 
         <!-- About -->
         <div
@@ -122,7 +122,7 @@
       </div>
 
       <!-- Catalog -->
-      <div
+      <!-- <div
         v-if="showEnglishMessage"
         v-bind:class="{ mactive: isActive('/company') }"
         class="mobile-header-container"
@@ -139,7 +139,7 @@
         <NuxtLink to="/en/company" class="header-link">{{
           $t("catalog")
         }}</NuxtLink>
-      </div>
+      </div -->>
 
       <!-- About -->
       <div
