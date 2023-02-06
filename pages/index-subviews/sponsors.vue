@@ -46,11 +46,11 @@
         <div class="company-logo">
           <img src="@/assets/img/company-logos/logo_zimply.png" alt="Zimply" />
         </div>
-        <!-- <div class="company-logo">
+        <div class="company-logo">
                     <img 
-                        src="" 
+                        src="@/assets/img/company-logos/logo_fra.png" 
                         alt="FRA">
-                </div> -->
+                </div>
       </div>
     </div>
     <!-- <Blob type="5-b" height="30rem" class="blobby-thing" /> -->
