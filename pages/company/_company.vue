@@ -17,12 +17,13 @@
           <p v-else class="post-tag">// </p>
         </div>
       </div>
-
-        <h3>{{ post.slogan }}</h3>
+      <div class="post-info">
         <p>Grundades: {{ post.founded }}</p>
         <p>{{ post.area_of_business }}</p>
-        
-        <p>{{ post.about_us }}</p>
+      </div>
+      <div class="post-content">
+        <h3>{{ post.slogan }}</h3>
+        <p align="justify">{{ post.about_us }}</p>
         <div v-if="post.youtube_video" class="video">
           <iframe 
             class="yt-video" 
@@ -31,52 +32,56 @@
             allowfullscreen>
           </iframe>
         </div>
+      </div>
         
-        <!-- <div v-if="post.sponsor_images" class="gallery">
-          <div v-for="pic in this.post.sponsor_images" :key="pic.id" class="gallery-img">
-            <img :src=ImageLink(pic) alt="sponsor image">
-          </div>
-        </div> -->
 
-        <div v-if="post.sponsor_images" class="gallery">
-          <div class="column">
-            <div class="gallery-item">
-              <img :src=ImageLink(this.post.sponsor_images[0]) alt="galery image 1" class="gallery-img">
-            </div>
-          </div>
-          <div class="column">
-            <div class="gallery-item">
-              <img :src=ImageLink(this.post.sponsor_images[1]) alt="galery image 2" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-              <img :src=ImageLink(this.post.sponsor_images[2]) alt="galery image 3" class="gallery-img">
-            </div>
+      <div v-if="post.sponsor_images" class="gallery">
+        <div class="column">
+          <div class="gallery-item">
+            <img :src=ImageLink(this.post.sponsor_images[0]) alt="galery image 1" class="gallery-img">
           </div>
         </div>
-
-        <ul>
-          <h3>Anställer studenter från:</h3>
-          <li v-for="program in post.program" :key="program.id">
-            {{ program }}
-          </li>
-        </ul>
-        <p>Typer av anställningar: {{ post.positions }}</p>
-        <p>{{ post.qualifications }}</p>
-
-
-        <div>
-          <h3>Kontaktperson</h3>
-         
-            <div v-for="contact in this.post.contact_persons" class="company-contact" :key="contact.id">
-              <p>{{ contact.name }}</p>
-              <a href="">{{ contact.email }}</a>
-              <p>{{ contact.phone_number }}</p>
-            </div>
-          <!-- <p>Monia Letmark</p>
-          <a href="linkto:monia.letmark@avanade.com"
-            >monia.letmark@avanade.com</a
-          > -->
+        <div class="column">
+          <div class="gallery-item">
+            <img :src=ImageLink(this.post.sponsor_images[1]) alt="galery image 2" class="gallery-img">
+          </div>
+          <div class="gallery-item">
+            <img :src=ImageLink(this.post.sponsor_images[2]) alt="galery image 3" class="gallery-img">
+          </div>
         </div>
+      </div>
+
+      <div class="match-list">
+        <h3>{{ post.title }} is looking for:</h3>
+        <div class="match-list-items">
+          <ul>
+            <p>Programs:</p>
+            <li v-for="program in post.program" :key="program.id">
+              {{ program }}
+            </li>
+          </ul>
+          <ul>
+            <p>Positions:</p>
+            <li v-for="position in post.positions" :key="position.id">
+              {{ position }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <p>{{ post.qualifications }}</p>
+
+
+      <div style="padding: 3rem 5%;">
+        <h3>Kontaktperson(er)</h3>
+        
+          <div v-for="contact in this.post.contact_persons" class="company-contact" :key="contact.id">
+            <p>{{ contact.name }}</p>
+            <a href="">{{ contact.email }}</a>
+            <p>{{ contact.phone_number }}</p>
+          </div>
+      </div>
       </article>
     </section>
   </main>
@@ -146,6 +151,22 @@ export default {
   padding-top: 0.5rem;
   color: white;
 }
+.post-info {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+
+}
+
+.post-content {
+  padding: 5rem 5%;
+  display:flex;
+  flex-direction: column;
+}
+.post-content > p {
+  padding-bottom: 2rem;
+}
 .video {
   position: relative;
   width: 100%;
@@ -189,8 +210,38 @@ img {
   object-fit: cover;
 }
 
+.match-list {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 5%;
+}
+.match-list-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border-top: 2px var(--clr-black) solid;
+  border-bottom: 2px var(--clr-black) solid;
+}
+
+.match-list-items > ul {
+  padding: 1rem 2rem;
+}
+
+.match-list > ul > li {
+  font-weight: 10px;
+}
+
+.company-contact {
+  padding-bottom: 1rem;
+}
+
 @media only screen and (min-width: 768px) {
   .gallery {
+    flex-direction: row;
+  }
+  .match-list-items {
     flex-direction: row;
   }
 }
