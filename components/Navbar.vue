@@ -139,7 +139,7 @@
         <NuxtLink to="/en/company" class="header-link">{{
           $t("catalog")
         }}</NuxtLink>
-      </div -->>
+      </div -->
 
       <!-- About -->
       <div
@@ -355,6 +355,7 @@ nav > div > NuxtLink {
     z-index: 1000;
   }
   .main-header {
+    display: none;
     background-image: none;
     background-color: rgba(35, 53, 6, 0.8666666667);
     top: 0;
