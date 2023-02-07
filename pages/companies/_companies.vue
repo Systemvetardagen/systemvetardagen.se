@@ -2,9 +2,10 @@
   <main class="wrapper" id="top">
     <section v-if="post">
       <article class="post" id="post">
-        <div v-if="post.banner" class="banner">
+        <div  class="banner">
           <!-- <img src="@/assets/img/uploads/capgemini_banner.png" alt="company banner" class="banner-img"> -->
-          <img :src="ImageLink(this.post.banner)" class="banner-img" />
+          <img v-if="post.banner" :src="ImageLink(this.post.banner)" class="banner-img" />
+          <img v-else src="@/assets/img/no-sponsor-banner-img.png" alt="No sponsor image" class="banner-img">
           <div class="banner-shade"></div>
           <div class="banner-overlay">
             <div class="logo">
@@ -29,7 +30,7 @@
           <div class="table">
             <p class="table-left">Established</p><p class="table-right">{{ post.founded }}</p>
             <p class="table-left">Slogan</p><p class="table-right">{{ post.slogan }}</p>
-            <p class="table-left">Employees in Sweden</p><p class="table-right">{{ post.number_of_employees_in_sweden }}</p>
+            <p class="table-left">Employees in Sweden</p><p class="table-right">{{ post.number_of_employees_in_Sweden }}</p>
             <p class="table-left">Employees internationally</p><p class="table-right">{{ post.number_of_employees_in_internationally }}</p>
           </div>
           <p style="font-weight: 600;">Area of Business</p>
