@@ -29,23 +29,23 @@ extra_text: >-
 
   \
 
-  *The perfect start on your career*\
+  The perfect start on your career\
 
-  - 12 months of training and certifications adapted to your skills. You will develop the consultant techniques you need to succeed in your career.\
 
-  - Collaborations with prominent partners, among others Microsoft, Google, Amazon, SAP, Salesforce, Mulesoft, PEGA, Adobe and UIPath.\
+  * 12 months of training and certifications adapted to your skills. You will develop the consultant techniques you need to succeed in your career.\
 
-  - Possibility to work with the latest technology and gain experience from various projects.\
+  * Collaborations with prominent partners, among others Microsoft, Google, Amazon, SAP, Salesforce, Mulesoft, PEGA, Adobe and UIPath.\
 
-  - Support by a mentor whose role is to challenge, encourage and guide you.\
+  * Possibility to work with the latest technology and gain experience from various projects.\
 
-  - Multinational network of more than 350.000 of the brightest minds in the industry to inspire you.\
+  * Support by a mentor whose role is to challenge, encourage and guide you.\
 
-  - Encouraging work-life balance, support in achieving your potential both inside and outside the office.\
+  * Multinational network of more than 350.000 of the brightest minds in the industry to inspire you.\
 
-  - Competitive salary as well as great benefits and perks.\
+  * Encouraging work-life balance, support in achieving your potential both inside and outside the office.\
 
-  Ready to kickstart your career? Apply to IgnITe Graduate Program, next start in September 2023. For more information visit: https://www.capgemini.com/se-en/careers/career-paths/students-and-graduates/ignite-graduate-program/
+  * Competitive salary as well as great benefits and perks.\
+    Ready to kickstart your career? Apply to IgnITe Graduate Program, next start in September 2023. For more information visit: [IgnITe Graduate Program](<* https://www.capgemini.com/se-en/careers/career-paths/students-and-graduates/ignite-graduate-program/>)
 qualifications: Consulting and technology services, innovation and digital transformation.
 contact_persons: []
 link_to_positions: https://www.capgemini.com/se-en/careers/
