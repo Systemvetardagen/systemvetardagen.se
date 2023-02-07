@@ -28,27 +28,27 @@
         <div class="company-logo">
           <img src="@/assets/img/company-logos/logo_fra.jpg" alt="FRA" />
         </div>
-      </div>
-      <div class="company-logo">
-        <img
-          src="@/assets/img/company-logos/logo_handelsbanken.png"
-          alt="Handelsbanken"
-        />
-      </div>
-      <div class="company-logo">
-        <img
-          src="@/assets/img/company-logos/logo_innofactor.png"
-          alt="Innofactor"
-        />
-      </div>
-      <div class="company-logo sweco">
-        <img
-          src="@/assets/img/company-logos/logo_sweco_black.png"
-          alt="Sweco"
-        />
-      </div>
-      <div class="company-logo">
-        <img src="@/assets/img/company-logos/logo_zimply.png" alt="Zimply" />
+        <div class="company-logo">
+          <img
+            src="@/assets/img/company-logos/logo_handelsbanken.png"
+            alt="Handelsbanken"
+          />
+        </div>
+        <div class="company-logo">
+          <img
+            src="@/assets/img/company-logos/logo_innofactor.png"
+            alt="Innofactor"
+          />
+        </div>
+        <div class="company-logo sweco">
+          <img
+            src="@/assets/img/company-logos/logo_sweco_black.png"
+            alt="Sweco"
+          />
+        </div>
+        <div class="company-logo">
+          <img src="@/assets/img/company-logos/logo_zimply.png" alt="Zimply" />
+        </div>
       </div>
     </div>
     <!-- <Blob type="5-b" height="30rem" class="blobby-thing" /> -->
