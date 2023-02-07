@@ -16,7 +16,7 @@ i18n:
 collections:
   - name: "company"
     label: "company"
-    folder: "content/company"
+    folder: "content/companies"
     create: true
     slug: "{{title}}"
     i18n: true
