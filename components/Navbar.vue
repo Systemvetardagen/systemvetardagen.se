@@ -73,7 +73,7 @@
     <!-- MOBILE NAV -->
 
     <header class="mobile-header">
-      <NuxtLink to="/" class="logo-link mobile-logo-link">
+      <NuxtLink :to="localePath('/')" class="logo-link mobile-logo-link">
         <img
           src="@/assets/img/Symbol_&_Text_Logo_Black_&_Color.svg"
           class="logo"
