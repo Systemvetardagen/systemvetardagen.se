@@ -156,7 +156,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 .banner-overlay {
   position: absolute;
@@ -178,11 +178,11 @@ export default {
 .banner-img {
   width: 100%;
   height: auto;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
 }
 .banner-bar {
   position: absolute;
-  bottom: -0.5rem;
+  bottom: calc(clamp(2px, 1vw, 10px)*-1);
   left: 0;
   width: 100%;
   height: clamp(2px, 1vw, 10px);
@@ -324,6 +324,7 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
+  
   .gallery {
     flex-direction: row;
   }
