@@ -1,8 +1,9 @@
 ---
 logo: /img/uploads/logo_capgemini.png
 title: Capgemini
+sponsor: true
 slogan: Get the future you want
-founded: 1967-02-05T13:21:28.410Z
+founded: 1967
 number_of_employees_in_Sweden: 4600
 number_of_employees_in_internationally: 350000
 area_of_business: Ledande inom konsult- och tekniktjänser, innovation och digital transformation.
@@ -22,10 +23,10 @@ qualifications: Ledande inom konsult- och tekniktjänser, innovation och digital
 contact_persons:
   - name: Tarkan Cakici
     email: tarkan.cakici@capgemini.com
-    phone_number: -15
+    phone_number: "0736292443"
   - name: Emma Karlsson
     email: emma.a.karlsson@capgemini.com
-    phone_number: -35
+    phone_number: "0732316381"
 link_to_positions: https://www.capgemini.com/se-en/careers/
 program:
   - Affärssystem och tjänstedesign
@@ -35,7 +36,7 @@ program:
   - Marknadskommunikation och IT
   - Interaktionsdesign
   - Magister/Master
-positions: 
+positions:
   - Traineeprogram
 banner: /img/uploads/capgemini_banner_cropped.png
 youtube_video: https://www.youtube.com/embed/PO-0YqzVtgM
