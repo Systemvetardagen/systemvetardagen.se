@@ -185,7 +185,7 @@
         <div 
           class="map-section">
           <h3 
-            v-if="ShowingEnglishMessage"
+            v-if="showEnglishMessage"
             >Visit {{ post.title }} at: 
           </h3>
           <h3 
