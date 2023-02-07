@@ -20,7 +20,10 @@
             <p v-if="post.banner" class="post-tag">// Sponsor</p>
             <p v-else class="post-tag">//</p>
           </div>
+          <div class="banner-bar"></div>
         </div>
+
+
         <div class="post-info">
           <h3 style="align-self: center;">Company Info</h3>
           <div class="table">
@@ -142,25 +145,28 @@ export default {
   align-items: center;
 }
 .banner {
-  background: linear-gradient(black, black, 0.1);
+  
   display: flex;
   justify-content: flex-start;
   position: relative;
+
 }
 .banner-shade {
   background: RGB(0,0,0,0.5);
   position: absolute;
   width: 100%;
   height: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 .banner-overlay {
   position: absolute;
   bottom: 0;
-  padding: clamp(0.1rem, 2vw, 1.5rem) 5%;
+  padding: clamp(0.1rem, 2vw, 1.5rem) calc(clamp(-5%, -10vw, -18%) * -1);
   color: var(--clr-white);
   width: 100%;
   display: flex;
   flex-direction: column;
+
 
 }
 .banner-overlay > h1 {
@@ -169,13 +175,19 @@ export default {
 .banner-overlay > p {
     font-size: clamp(0.5rem, 2vw, 1rem)
 }
-
-
-
-
 .banner-img {
   width: 100%;
   height: auto;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.banner-bar {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: clamp(2px, 1vw, 10px);
+  background: linear-gradient(90deg, var(--clr-blue-600), var(--clr-pink-600), var(--clr-yellow-600));
+  border-radius: 0 0 1rem 1rem;
 }
 .post-location {
   padding-bottom: clamp(0.2rem, 1vw, 0.5rem);
@@ -194,7 +206,7 @@ export default {
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  padding: 3rem 5rem;
+  padding: 3rem 1.5rem;
   background: var(--clr-blue-100);
   color: var(--clr-blue-900);
   margin-top: 2rem;
@@ -304,6 +316,9 @@ img {
   }
   .match-list-items {
     flex-direction: row;
+  }
+  .post-info {
+    padding: 3rem 5rem;
   }
   .table {
     display: grid;
