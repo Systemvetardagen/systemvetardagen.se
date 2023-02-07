@@ -16,7 +16,7 @@ i18n:
 collections:
   - name: "company"
     label: "company"
-    folder: "content/company"
+    folder: "content/companies"
     create: true
     slug: "{{title}}"
     i18n: true
@@ -35,6 +35,12 @@ collections:
           required: true,
           i18n: duplicate,
         }
+      - { lable: "Sponsor?",
+          name: "sponsor",
+          widget: "boolean",
+          required: true,
+          18n: duplicate,
+          }
       - {
           label: "Slogan",
           name: "slogan",
@@ -45,12 +51,16 @@ collections:
       - {
           label: "Founded (year)",
           name: "founded",
-          widget: "datetime",
-          date_format: "YYYY",
-          time_format: false,
+          widget: "number",
           required: true,
           i18n: duplicate,
-        } #returns a time date string of the year
+        }
+      - { label: "Location",
+          name: "location",
+          widget: "string",
+          required: true,
+          i18n: duplicate,
+          }
       - {
           label: "Number of employess in Sweden",
           name: "number_of_employees_in_Sweden",
@@ -81,6 +91,12 @@ collections:
           required: true,
           i18n: true,
         }
+      - { lable: "Extra text",
+          name: "extra_text",
+          widget: "markdown",
+          required: false,
+          i18n: duplicate,
+          }
       - {
           label: "Qualifications (max 35 words)",
           name: "qualifications",
@@ -101,21 +117,21 @@ collections:
               name: "name",
               widget: "string",
               required: true,
-              i18n: true,
+              i18n: duplicate,
             }
           - {
               label: "Email",
               name: "email",
               widget: "string",
               required: true,
-              i18n: true,
+              i18n: duplicate,
             }
           - {
               label: "Phone number",
               name: "phone_number",
-              widget: "number",
+              widget: "string",
               required: false,
-              i18n: true,
+              i18n: duplicate,
             }
 
       - {
@@ -158,7 +174,7 @@ collections:
           label: "Positions",
           name: "positions",
           widget: "select",
-          mulitple: true,
+          multiple: true,
           options:
             [
               "Praktikplatser",

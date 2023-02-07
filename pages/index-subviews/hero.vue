@@ -33,14 +33,17 @@
         </p>
         <!-- Hero Buttons -->
         <div class="hero-buttons">
-          <Button width="14rem" bColor="gradient">{{
+          <!--           <Button width="14rem" bColor="gradient">{{
             $t("catalog_btn_title")
-          }}</Button>
-          <Button link="" bColor="--clr-blue-200" tColor="--clr-black-900">{{
+          }}</Button> -->
+          <Button link="#contact" bColor="gradient">{{
             $t("contact_us_btn")
           }}</Button>
         </div>
       </div>
+    </div>
+    <div class="hero-date-wrapper">
+      <h3 class="hero-date">{{ $t("event_date") }}</h3>
     </div>
   </div>
 </template>
@@ -158,13 +161,14 @@ components: {
 
 <style>
 .hero {
-  height: 100vh;
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
+  min-height: 100vh;
+  padding: 0;
   justify-content: center;
   background-size: cover;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 #hero-text-block {
@@ -188,6 +192,7 @@ components: {
   user-select: none;
   word-break: break-all;
   transition: 0.4s;
+  z-index: 1;
 }
 
 .highlighted {
@@ -196,6 +201,7 @@ components: {
 
 .hero-content {
   position: relative;
+  padding: 1.5rem;
   display: flex;
   z-index: 2;
   justify-content: center;
@@ -232,5 +238,22 @@ components: {
 
 .subtitle {
   font-weight: 700;
+}
+
+.hero-date-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-white);
+  padding: 2rem;
+  margin-top: 2rem;
+  z-index: 10;
+  justify-self: flex-end;
+}
+
+.hero-date {
+  font-weight: bold;
+  text-align: center;
+  color: var(--clr-pink-600);
 }
 </style>

@@ -1,6 +1,7 @@
 /* In css comments require / + *; use shortcut cmd + / (ctr + /) for more convenience */
 
 
+
 /* Buttons */
 html,body
 {
@@ -12,6 +13,10 @@ html,body
 }
 a {
   text-decoration: none;
+}
+
+.wrapper {
+  padding-top: 4rem;
 }
 
 .button {
@@ -60,7 +65,6 @@ a {
   margin-right: 2.5rem;
 }
 
-
 /* General Page set-up */
 @media (min-width: 768px) {
   :root {
@@ -71,10 +75,12 @@ a {
 @font-face {
   font-family: "work-sans";
   src: url(assets\fonts\WorkSans-Regular.ttf);
+  font-display: block;
 }
 @font-face {
   font-family: "Overpass";
   src: url(assets\fonts\Overpass-Black.ttf);
+  font-display: block;
 }
 @font-face {
   font-family: "OverpassMono";
@@ -96,7 +102,7 @@ body {
   color: var(--clr-darkblue);
   margin: 0;
   padding: 0;
-  font-family: Overpass, work-sans;
+  font-family: Overpass, work-sans,sans-serif;
   letter-spacing: 0.03rem;
 }
 
@@ -130,17 +136,18 @@ h2,
 h3 {
   margin-top: 0;
   font-family: Overpass;
+  font-weight: initial;
 }
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 3rem;
+  line-height: 100%;
   margin-bottom: 0;
 }
 
 @media (min-width: 640px) {
   h1 {
     font-size: 3.5rem;
-    line-height: 100%;
   }
 }
 h2 {
@@ -340,18 +347,11 @@ section {
   align-items: flex-start;
 }
 
-
-
-.hero-date {
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-
 @media (min-width: 640px) {
   .hero {
     padding-bottom: 1.5rem;
   }
-  .hero,
+
 section,
 footer {
     padding: 4rem;
@@ -393,26 +393,6 @@ footer {
   margin-top: 2rem;
 }
 
-.info-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.info-second {
-  margin-top: 2rem;
-}
-
-@media (min-width: 1024px) {
-  .info-text {
-    flex-direction: row;
-  }
-  .info-second {
-    margin-top: 0;
-    margin-left: 3rem;
-  }
-}
-
-
 .join {
   padding-top: 0;
   padding-bottom: 0;
@@ -449,59 +429,6 @@ footer {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.catalog-content {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  background-color: var(--clr-lightblue);
-}
-
-.catalog-text {
-  margin-top: 3rem;
-}
-
-@media (min-width: 1024px) {
-  .catalog-content {
-    flex-direction: row;
-    align-items: center;
-  }
-  .catalog-text {
-    margin-top: 0;
-    margin-left: 3rem;
-  }
-}
-.catalog-image {
-  width: 16rem;
-  border: 0.5rem solid var(--clr-white);
-}
-
-.catalog p {
-  max-width: 50ch;
-}
-
-.modal-overlay {
-  background-color: rgba(0, 0, 0, 0.6666666667);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  display: none;
-  place-items: center;
-}
-
-.modal {
-  position: relative;
-  background-color: var(--clr-darkblue);
-  width: 100%;
-  height: 100%;
-  max-width: 64rem;
-  max-height: 44rem;
-  border-radius: 1rem;
-  padding: 2.5rem;
 }
 
 .fair-content {

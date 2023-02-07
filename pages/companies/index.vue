@@ -1,18 +1,18 @@
 <template>
-  <main>
+  <main class="wrapper">
     <section v-if="posts">
       <h1 class="title">Company</h1>
       <div>
         <div v-for="post of posts" :key="post.slug">
           <div v-if="showEnglishMessage">
-            <li v-if="post.slug === post.title + '.sv'">
-              <NuxtLink :to="post.title + '.sv'">{{ post.title }}</NuxtLink>
+            <li v-if="post.slug === post.title.toLowerCase() + '.sv'">
+              <NuxtLink :to="post.title.toLowerCase() + '.sv'">{{ post.title }}</NuxtLink>
             </li>
           </div>
 
           <div v-else="showEnglishMessage">
-            <li v-if="post.slug === post.title + '.en'">
-              <NuxtLink :to="post.title + '.en'">{{ post.title }}</NuxtLink>
+            <li v-if="post.slug === post.title.toLowerCase() + '.en'">
+              <NuxtLink :to="post.title.toLowerCase() + '.en'">{{ post.title }}</NuxtLink>
             </li>
           </div>
         </div>
@@ -26,7 +26,7 @@ export default {
   async asyncData({ $content, error }) {
     let posts;
     try {
-      posts = await $content("company").fetch();
+      posts = await $content("companies").fetch();
     } catch (e) {
       error({ message: "Posts not found" });
     }
@@ -35,11 +35,6 @@ export default {
   computed: {
     showEnglishMessage() {
       return this.$i18n.locale === "sv";
-    },
-  },
-  methods: {
-    create(post) {
-      return "https://systemvetardagen.se/en/company/" + post + ".en";
     },
   },
 };
