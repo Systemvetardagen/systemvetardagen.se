@@ -17,19 +17,19 @@
         <!-- Catalog -->
         <!-- <div
           v-if="showEnglishMessage"
-          v-bind:class="{ active: isActive('/company') }"
+          v-bind:class="{ active: isActive('/companies') }"
           class="normal"
         >
-          <NuxtLink to="/company" class="header-link">{{
+          <NuxtLink to="/companies" class="header-link">{{
             $t("catalog")
           }}</NuxtLink>
         </div>
         <div
           v-else
-          v-bind:class="{ active: isActive('/en/company') }"
+          v-bind:class="{ active: isActive('/en/companies') }"
           class="normal"
         >
-          <NuxtLink to="/en/company" class="header-link">{{
+          <NuxtLink to="/en/companies" class="header-link">{{
             $t("catalog")
           }}</NuxtLink>
         </div> -->
@@ -117,19 +117,19 @@
       <!-- Catalog -->
       <!-- <div
         v-if="showEnglishMessage"
-        v-bind:class="{ mactive: isActive('/company') }"
+        v-bind:class="{ mactive: isActive('/companies') }"
         class="mobile-header-container"
       >
-        <NuxtLink to="/company" class="header-link">{{
+        <NuxtLink to="/companies" class="header-link">{{
           $t("catalog")
         }}</NuxtLink>
       </div>
       <div
         v-else
-        v-bind:class="{ mactive: isActive('/en/company') }"
+        v-bind:class="{ mactive: isActive('/en/companies') }"
         class="mobile-header-container"
       >
-        <NuxtLink to="/en/company" class="header-link">{{
+        <NuxtLink to="/en/companies" class="header-link">{{
           $t("catalog")
         }}</NuxtLink>
       </div -->
@@ -197,7 +197,7 @@ export default {
     },
     checkPath() {
       let st = String(this.$route.path);
-      if (st.includes("/company")) {
+      if (st.includes("/companies")) {
         return false;
       }
       return true;

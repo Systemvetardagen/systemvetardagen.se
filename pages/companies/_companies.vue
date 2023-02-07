@@ -103,7 +103,7 @@ export default {
   async asyncData({ $content, params, error }) {
     let post;
     try {
-      post = await $content("company", params.company).fetch();
+      post = await $content("companies", params.companies).fetch();
     } catch (e) {
       error({ message: "Entry not found" });
     }
