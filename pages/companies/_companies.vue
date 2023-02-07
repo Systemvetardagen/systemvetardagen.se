@@ -1,7 +1,7 @@
 <template>
-  <main class="wrapper">
+  <main class="wrapper" id="top">
     <section v-if="post">
-      <article class="post">
+      <article class="post" id="post">
         <div v-if="post.banner" class="banner">
           <!-- <img src="@/assets/img/uploads/capgemini_banner.png" alt="company banner" class="banner-img"> -->
           <img :src="ImageLink(this.post.banner)" class="banner-img" />
@@ -106,16 +106,53 @@
             :key="contact.id"
           >
             <p>{{ contact.name }}</p>
-            <a href="">{{ contact.email }}</a>
+            <a :href="'mailto:' + contact.email">{{ contact.email }}</a>
             <p>{{ contact.phone_number }}</p>
           </div>
         </div>
+
+        <div class="map-section">
+          <h3>Visit {{ post.title }} at: </h3>
+          <p>Location</p>
+          <div class="map"><p>Map</p></div>
+        </div>
+
+        <div class="bottom-buttons">
+          <Button
+            v-if="showEnglishMessage"
+            link="/companies"
+            borderCol="--crl-black"
+            bColor="transparent"
+            tColor="--crl-black"
+            class="bb"
+            >Go Back</Button>
+          <Button
+            v-else
+            link="/en/companies"
+            borderCol="--crl-black"
+            bColor="transparent"
+            tColor="--crl-black"
+            class="bb"
+            >Go Back</Button>
+
+          <Button
+            link="#top"
+            borderCol="--crl-black"
+            bColor="transparent"
+            tColor="--crl-black"
+            class="bb"
+            >Go Up</Button>
+        </div>
+
+
+
       </article>
     </section>
   </main>
 </template>
 
 <script>
+import Button from '@/components/Button.vue'
 export default {
   methods: {
     ImageLink(cmsImg) {
@@ -135,6 +172,14 @@ export default {
       error({ message: "Entry not found" });
     }
     return { post };
+  },
+  components: {
+    Button
+  },
+  computed: {
+    showEnglishMessage() {
+      return this.$i18n.locale === "sv";
+    },
   },
 };
 </script> 
@@ -322,7 +367,26 @@ img {
 .company-contact {
   padding-bottom: 1rem;
 }
+.map-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.map {
+  background: var(--clr-yellow-200);
+  width: clamp(30ch, 80vw, 60ch);
+  height: 10rem;
+}
+.bottom-buttons {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
 
+}
+.bb {
+  margin-bottom: 2rem;
+}
 @media only screen and (min-width: 768px) {
   
   .gallery {
@@ -346,6 +410,12 @@ img {
   }
   .table-right {
     text-align: right;
+  }
+  .bottom-buttons {
+    flex-direction: row;
+  }
+  .bb {
+    margin-right: 3rem;
   }
 }
 </style>
