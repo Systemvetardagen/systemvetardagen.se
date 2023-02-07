@@ -1,18 +1,28 @@
 <template>
   <div>
-		<header class="main-header" data-visible="false">
-			<a href="https://systemvetardagen.se" class="logo-link main-logo-link">
-				<img src="@/assets/img/Symbol_&_Text_Logo_Black_&_Color.svg" class="logo" alt="Systemvetardagen logo">
-			</a>
-			<nav>
-				
-				<div class="normal" v-bind:class="{ active: isActive('/') }">
-					<NuxtLink :to="localePath('/')" class="header-link" >{{$t('home')}}</NuxtLink>
-				</div>
-				
-				<div class="normal" v-bind:class="{ active: isActive('#catalog') }">
-					<NuxtLink v-if="showEnglishMessage" :to="localePath('/companies') + '/'" class="header-link">{{$t('catalog')}}</NuxtLink>
-				</div>
+    <header class="main-header" data-visible="false">
+      <a href="https://systemvetardagen.se" class="logo-link main-logo-link">
+        <img
+          src="@/assets/img/Symbol_&_Text_Logo_Black_&_Color.svg"
+          class="logo"
+          alt="Systemvetardagen logo"
+        />
+      </a>
+      <nav>
+        <div class="normal" v-bind:class="{ active: isActive('/') }">
+          <NuxtLink :to="localePath('/')" class="header-link">{{
+            $t("home")
+          }}</NuxtLink>
+        </div>
+
+        <!-- <div class="normal" v-bind:class="{ active: isActive('#catalog') }">
+          <NuxtLink
+            v-if="showEnglishMessage"
+            :to="localePath('/companies') + '/'"
+            class="header-link"
+            >{{ $t("catalog") }}</NuxtLink
+          >
+        </div> -->
 
         <!-- Catalog -->
         <!-- <div
@@ -59,14 +69,26 @@
         class="link-fair"
         ><img src="@/assets/img/UK.png"
       /></nuxt-link>
-      <nuxt-link v-else-if="showEnglishMessage === false && checkLang() && checkPath()" :to="switchLocalePath('sv')" class="link-fair"
+      <nuxt-link
+        v-else-if="showEnglishMessage === false && checkLang() && checkPath()"
+        :to="switchLocalePath('sv')"
+        class="link-fair"
         ><img src="@/assets/img/Sweden.png"
       /></nuxt-link>
-      <nuxt-link v-else-if="showEnglishMessage === false && checkLang()" :to="switchLocalePath('sv') + '/'" class="btn-lang"
-      ><img src="@/assets/img/Sweden.png"
+      <nuxt-link
+        v-else-if="showEnglishMessage === false && checkLang()"
+        :to="switchLocalePath('sv') + '/'"
+        class="btn-lang"
+        ><img src="@/assets/img/Sweden.png"
       /></nuxt-link>
-      <nuxt-link v-else-if="checkLang() === false" :to="changePath()" class="btn-lang"
-      ><img v-if="showEnglishMessage" src="@/assets/img/UK.png"/><img v-else="showEnglishMessage" src="@/assets/img/Sweden.png"/>
+      <nuxt-link
+        v-else-if="checkLang() === false"
+        :to="changePath()"
+        class="btn-lang"
+        ><img v-if="showEnglishMessage" src="@/assets/img/UK.png" /><img
+          v-else="showEnglishMessage"
+          src="@/assets/img/Sweden.png"
+        />
       </nuxt-link>
       <!-- <nuxt-link v-if="showEnglishMessage && checkLang()" :to="switchLocalePath('en') + '/'" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
 			<nuxt-link v-else-if="showEnglishMessage === false && checkLang() && checkPath()" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
@@ -152,7 +174,9 @@
         v-bind:class="{ mactive: isActive('/en/about') }"
         class="mobile-header-container"
       >
-        <NuxtLink to="/en/about" class="header-link">{{ $t("about") }}</NuxtLink>
+        <NuxtLink to="/en/about" class="header-link">{{
+          $t("about")
+        }}</NuxtLink>
       </div>
       <nuxt-link
         v-if="showEnglishMessage"

@@ -1,87 +1,105 @@
 <template>
-  <main>
+  <main class="wrapper">
     <section v-if="post">
       <article class="post">
         <div v-if="post.banner" class="banner">
           <!-- <img src="@/assets/img/uploads/capgemini_banner.png" alt="company banner" class="banner-img"> -->
-          <img :src=ImageLink(this.post.banner) class="banner-img">
-        
-        <div class="banner-overlay">
-          <div class="logo">
-            <img :src=ImageLink(this.post.logo) alt="logo" class="logo-img">
-          </div>
-          
-          <h1 class="post-title">{{ post.title }}</h1>
-          <p class="post-location">Location: ??</p>
-          <p v-if="post.banner" class="post-tag">// Sponsor</p>
-          <p v-else class="post-tag">// </p>
-        </div>
-      </div>
-      <div class="post-info">
-        <p>Grundades: {{ post.founded }}</p>
-        <p>{{ post.area_of_business }}</p>
-      </div>
-      <div class="post-content">
-        <h3>{{ post.slogan }}</h3>
-        <p align="justify">{{ post.about_us }}</p>
-        <div v-if="post.youtube_video" class="video">
-          <iframe 
-            class="yt-video" 
-            :src=this.post.youtube_video 
-            frameborder="0" 
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-        
+          <img :src="ImageLink(this.post.banner)" class="banner-img" />
 
-      <div v-if="post.sponsor_images" class="gallery">
-        <div class="column">
-          <div class="gallery-item">
-            <img :src=ImageLink(this.post.sponsor_images[0]) alt="galery image 1" class="gallery-img">
+          <div class="banner-overlay">
+            <div class="logo">
+              <img
+                :src="ImageLink(this.post.logo)"
+                alt="logo"
+                class="logo-img"
+              />
+            </div>
+
+            <h1 class="post-title">{{ post.title }}</h1>
+            <p class="post-location">Location: ??</p>
+            <p v-if="post.banner" class="post-tag">// Sponsor</p>
+            <p v-else class="post-tag">//</p>
           </div>
         </div>
-        <div class="column">
-          <div class="gallery-item">
-            <img :src=ImageLink(this.post.sponsor_images[1]) alt="galery image 2" class="gallery-img">
-          </div>
-          <div class="gallery-item">
-            <img :src=ImageLink(this.post.sponsor_images[2]) alt="galery image 3" class="gallery-img">
+        <div class="post-info">
+          <p>Grundades: {{ post.founded }}</p>
+          <p>{{ post.area_of_business }}</p>
+        </div>
+        <div class="post-content">
+          <h3>{{ post.slogan }}</h3>
+          <p align="justify">{{ post.about_us }}</p>
+          <div v-if="post.youtube_video" class="video">
+            <iframe
+              class="yt-video"
+              :src="this.post.youtube_video"
+              frameborder="0"
+              allowfullscreen
+            >
+            </iframe>
           </div>
         </div>
-      </div>
 
-      <div class="match-list">
-        <h3>{{ post.title }} is looking for:</h3>
-        <div class="match-list-items">
-          <ul>
-            <p>Programs:</p>
-            <li v-for="program in post.program" :key="program.id">
-              {{ program }}
-            </li>
-          </ul>
-          <ul>
-            <p>Positions:</p>
-            <li v-for="position in post.positions" :key="position.id">
-              {{ position }}
-            </li>
-          </ul>
+        <div v-if="post.sponsor_images" class="gallery">
+          <div class="column">
+            <div class="gallery-item">
+              <img
+                :src="ImageLink(this.post.sponsor_images[0])"
+                alt="galery image 1"
+                class="gallery-img"
+              />
+            </div>
+          </div>
+          <div class="column">
+            <div class="gallery-item">
+              <img
+                :src="ImageLink(this.post.sponsor_images[1])"
+                alt="galery image 2"
+                class="gallery-img"
+              />
+            </div>
+            <div class="gallery-item">
+              <img
+                :src="ImageLink(this.post.sponsor_images[2])"
+                alt="galery image 3"
+                class="gallery-img"
+              />
+            </div>
+          </div>
         </div>
-      </div>
 
-      
-      <p>{{ post.qualifications }}</p>
+        <div class="match-list">
+          <h3>{{ post.title }} is looking for:</h3>
+          <div class="match-list-items">
+            <ul>
+              <p>Programs:</p>
+              <li v-for="program in post.program" :key="program.id">
+                {{ program }}
+              </li>
+            </ul>
+            <ul>
+              <p>Positions:</p>
+              <li v-for="position in post.positions" :key="position.id">
+                {{ position }}
+              </li>
+            </ul>
+          </div>
+        </div>
 
+        <p>{{ post.qualifications }}</p>
 
-      <div style="padding: 3rem 5%;">
-        <h3>Kontaktperson(er)</h3>
-        
-          <div v-for="contact in this.post.contact_persons" class="company-contact" :key="contact.id">
+        <div style="padding: 3rem 5%">
+          <h3>Kontaktperson(er)</h3>
+
+          <div
+            v-for="contact in this.post.contact_persons"
+            class="company-contact"
+            :key="contact.id"
+          >
             <p>{{ contact.name }}</p>
             <a href="">{{ contact.email }}</a>
             <p>{{ contact.phone_number }}</p>
           </div>
-      </div>
+        </div>
       </article>
     </section>
   </main>
@@ -91,11 +109,10 @@
 export default {
   methods: {
     ImageLink(cmsImg) {
-      const link = "/_nuxt/assets" + cmsImg
-      console.log(link)
-      return link
-
-    }
+      const link = "/_nuxt/assets" + cmsImg;
+      console.log(link);
+      return link;
+    },
   },
   props: {
     // bannerLink: "@/assets" + this.post.banner
@@ -131,17 +148,14 @@ export default {
   display: flex;
   flex-direction: column;
   flex-shrink: 30;
-
 }
 .banner-img {
- 
   width: 100%;
   height: auto;
 }
 .post-location {
   padding-bottom: 0.5rem;
   border-bottom: solid 2px var(--clr-white);
-  
 }
 .post-title {
   padding-bottom: 2rem;
@@ -152,16 +166,15 @@ export default {
   color: white;
 }
 .post-info {
-  display:flex;
+  display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items:center;
-
+  align-items: center;
 }
 
 .post-content {
   padding: 5rem 5%;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 .post-content > p {
@@ -194,7 +207,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 10rem 0; 
+  padding: 10rem 0;
 }
 
 .gallery .column {
@@ -211,7 +224,7 @@ img {
 }
 
 .match-list {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 5%;
@@ -245,6 +258,5 @@ img {
     flex-direction: row;
   }
 }
-
 </style>
 
