@@ -16,7 +16,7 @@
             </div>
 
             <h1 class="post-title">{{ post.title }}</h1>
-            <p class="post-location">Location: ??</p>
+            <p class="post-location">Location: TBA</p>
             <p v-if="post.banner" class="post-tag">// Sponsor</p>
             <p v-else class="post-tag">//</p>
           </div>
@@ -37,7 +37,7 @@
         </div>
         <div class="post-content">
           <h3>{{ post.slogan }}</h3>
-          <p align="justify">{{ post.about_us }}</p>
+          <p>{{ post.about_us }}</p>
           <div v-if="post.youtube_video" class="video">
             <iframe
               class="yt-video"
