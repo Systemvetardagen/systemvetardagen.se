@@ -16,6 +16,7 @@
         >{{ line }}
       </span>
     </div>
+    <div></div>
     <div class="hero-content">
       <!-- Hero image -->
       <img
@@ -42,8 +43,14 @@
         </div>
       </div>
     </div>
-    <div class="hero-date-wrapper">
-      <h3 class="hero-date">{{ $t("event_date") }}</h3>
+    <div class="hero-info-wrapper">
+      <p class="hero-info-text">{{ $t("event_date") }}, 10:00</p>
+      <p
+        class="hero-info-text"
+        style="color: var(--clr-grey-900); text-align: center"
+      >
+        Kista NOD, Borgarfjordsgatan 12
+      </p>
     </div>
   </div>
 </template>
@@ -168,6 +175,7 @@ components: {
   position: relative;
   overflow: hidden;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -240,19 +248,21 @@ components: {
   font-weight: 700;
 }
 
-.hero-date-wrapper {
+.hero-info-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--clr-white);
   padding: 2rem;
   margin-top: 2rem;
   z-index: 10;
+  background-color: var(--clr-white);
+  font-weight: bold;
   justify-self: flex-end;
 }
 
-.hero-date {
-  font-weight: bold;
+.hero-info-text {
+  font-family: OverpassMono;
   text-align: center;
   color: var(--clr-pink-600);
 }
