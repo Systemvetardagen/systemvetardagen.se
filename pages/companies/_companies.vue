@@ -22,7 +22,14 @@
           </div>
         </div>
         <div class="post-info">
-          <p>Grundades: {{ post.founded }}</p>
+          <h3 style="align-self: center;">Company Info</h3>
+          <div class="table">
+            <p class="table-left">Established</p><p class="table-right">{{ post.founded }}</p>
+            <p class="table-left">Slogan</p><p class="table-right">{{ post.slogan }}</p>
+            <p class="table-left">Employees in Sweden</p><p class="table-right">{{ post.number_of_employees_in_sweden }}</p>
+            <p class="table-left">Employees internationally</p><p class="table-right">{{ post.number_of_employees_in_internationally }}</p>
+          </div>
+          <p style="font-weight: 600;">Area of Business</p>
           <p>{{ post.area_of_business }}</p>
         </div>
         <div class="post-content">
@@ -71,7 +78,7 @@
           <h3>{{ post.title }} is looking for:</h3>
           <div class="match-list-items">
             <ul>
-              <p>Programs:</p>
+              <p style="font-weight:900;">Programs:</p>
               <li v-for="program in post.program" :key="program.id">
                 {{ program }}
               </li>
@@ -132,6 +139,7 @@ export default {
 .post {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .banner {
   background: linear-gradient(black, black, 0.1);
@@ -185,13 +193,37 @@ export default {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding: 3rem 5rem;
+  background: var(--clr-blue-100);
+  color: var(--clr-blue-900);
+  margin-top: 2rem;
+  max-width: 60ch;
+  align-self: center
 }
 
-.post-content {
-  padding: 5rem 5%;
+.table {
   display: flex;
   flex-direction: column;
+  padding: 2rem 0;
+
+}
+.table-left {
+  font-weight: 600;
+}
+.table-right {
+  padding-bottom: 0.3rem;
+
+ 
+}
+
+
+.post-content {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 60ch;
+
 }
 .post-content > p {
   padding-bottom: 2rem;
@@ -272,6 +304,19 @@ img {
   }
   .match-list-items {
     flex-direction: row;
+  }
+  .table {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0.5rem;
+    padding: 2rem 0;
+
+  }
+  .table-left {
+   font-weight: 600;
+  }
+  .table-right {
+    text-align: right;
   }
 }
 </style>

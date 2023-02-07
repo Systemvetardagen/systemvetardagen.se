@@ -2,7 +2,7 @@
 logo: /img/uploads/logo_capgemini.png
 title: Capgemini
 slogan: Get the future you want
-founded: 1967-02-05T13:21:28.410Z
+founded: 1967
 number_of_employees_in_Sweden: 4600
 number_of_employees_in_internationally: 350000
 area_of_business: Ledande inom konsult- och tekniktjänser, innovation och digital transformation.
