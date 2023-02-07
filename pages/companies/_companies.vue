@@ -141,28 +141,38 @@ export default {
 }
 .banner-overlay {
   position: absolute;
-  bottom: 5%;
-  padding: 1rem 5%;
+  bottom: 0;
+  padding: clamp(0.1rem, 2vw, 1.5rem) 5%;
   color: var(--clr-blue-900);
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex-shrink: 30;
+
 }
+.banner-overlay > h1 {
+      font-size: clamp(0.5rem, 5vw , 3rem)
+}
+.banner-overlay > p {
+    font-size: clamp(0.5rem, 2vw, 1rem)
+}
+
+
+
+
 .banner-img {
   width: 100%;
   height: auto;
 }
 .post-location {
-  padding-bottom: 0.5rem;
+  padding-bottom: clamp(0.2rem, 1vw, 0.5rem);
   border-bottom: solid 2px var(--clr-white);
 }
 .post-title {
-  padding-bottom: 2rem;
+  padding-bottom: clamp(0.1rem, 2.5vw, 3rem)
 }
 .post-tag {
   align-self: flex-end;
-  padding-top: 0.5rem;
+  padding-top: clamp(0.2rem, 1vw, 0.5rem);
   color: white;
 }
 .post-info {
@@ -199,7 +209,7 @@ img {
   height: auto;
 }
 .logo {
-  width: 10rem;
+  width: clamp(5rem, 20vw, 12rem);
 }
 
 .gallery {
