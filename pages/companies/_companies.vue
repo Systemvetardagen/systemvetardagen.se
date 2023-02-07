@@ -17,7 +17,7 @@
             </div>
 
             <h1 class="post-title">{{ post.title }}</h1>
-            <p class="post-location">Location: TBA</p>
+            <p class="post-location">{{ $t("location") }}: TBA</p>
             <p v-if="post.banner" class="post-tag">// Sponsor</p>
             <p v-else class="post-tag">//</p>
           </div>
@@ -26,20 +26,63 @@
 
 
         <div class="post-info">
-          <h3 style="align-self: center;">Company Info</h3>
-          <div class="table">
-            <p class="table-left">Established</p><p class="table-right">{{ post.founded }}</p>
-            <p class="table-left">Slogan</p><p class="table-right">{{ post.slogan }}</p>
-            <p class="table-left">Employees in Sweden</p><p class="table-right">{{ post.number_of_employees_in_Sweden }}</p>
-            <p class="table-left">Employees internationally</p><p class="table-right">{{ post.number_of_employees_in_internationally }}</p>
+          <h3 
+            style="align-self: center;"
+            >{{ $t("company-info") }}
+          </h3>
+          <div 
+            class="table">
+            <p 
+              class="table-left"
+              >{{ $t("established") }}
+            </p>
+            <p 
+              class="table-right"
+              >{{ post.founded }}
+            </p>
+            <p
+              class="table-left"
+              >{{ $t("slogan") }}
+            </p>
+            <p 
+              class="table-right"
+              >{{ post.slogan }}
+            </p>
+            <p 
+              class="table-left"
+              >{{ $t("employees-sv") }}
+            </p>
+            <p 
+              class="table-right"
+              >{{ post.number_of_employees_in_Sweden }}
+            </p>
+            <p 
+              class="table-left"
+              >{{ $t("employees-int") }}
+            </p>
+            <p 
+              class="table-right"
+              >{{ post.number_of_employees_in_internationally }}
+            </p>
           </div>
-          <p style="font-weight: 600;">Area of Business</p>
-          <p>{{ post.area_of_business }}</p>
+          <p 
+            style="font-weight: 600;"
+            >{{ $t("bis-area") }}</p>
+          <p
+            >{{ post.area_of_business }}
+          </p>
         </div>
-        <div class="post-content">
+
+
+        <div 
+          class="post-content">
           <h3>{{ post.slogan }}</h3>
           <p>{{ post.about_us }}</p>
-          <div v-if="post.youtube_video" class="video">
+
+
+          <div 
+            v-if="post.youtube_video" 
+            class="video">
             <iframe
               class="yt-video"
               :src="this.post.youtube_video"
@@ -50,7 +93,9 @@
           </div>
         </div>
 
-        <div v-if="post.sponsor_images" class="gallery">
+        <div 
+          v-if="post.sponsor_images" 
+          class="gallery">
           <div class="column">
             <div class="gallery-item">
               <img
@@ -79,43 +124,64 @@
         </div>
 
         <div class="match-list">
-          <h3>{{ post.title }} is looking for:</h3>
+          <h3
+            >{{ post.title }} 
+             {{ $t("looking-for") }}
+          </h3>
           <div class="match-list-items">
             <ul>
-              <p style="font-weight:700;">Programs:</p>
-              <li v-for="program in post.program" :key="program.id">
-                {{ program }}
+              <p 
+                style="font-weight:700;"
+                >{{ $t("programs") }}:
+              </p>
+              <li 
+                v-for="program in post.program" :key="program.id"
+                >{{ program }}
               </li>
             </ul>
             <ul>
-              <p style="font-weight:700;">Positions:</p>
-              <li v-for="position in post.positions" :key="position.id">
-                {{ position }}
+              <p 
+                style="font-weight:700;"
+                >{{ $t("positions") }}:
+              </p>
+              <li 
+                v-for="position in post.positions" :key="position.id"
+                >{{ position }}
               </li>
             </ul>
           </div>
         </div>
 
-        <!-- <p>{{ post.qualifications }}</p> -->
+
 
         <div class="post-contact">
-          <h3>Kontaktperson(er)</h3>
+          <h3>{{ $t("company-contact") }}</h3>
 
           <div
             v-for="contact in this.post.contact_persons"
             class="company-contact"
             :key="contact.id"
-          >
-            <p>{{ contact.name }}</p>
+          > <p>{{ contact.name }}</p>
             <a :href="'mailto:' + contact.email">{{ contact.email }}</a>
             <p>{{ contact.phone_number }}</p>
           </div>
         </div>
 
-        <div class="map-section">
-          <h3>Visit {{ post.title }} at: </h3>
+        <div 
+          class="map-section">
+          <h3 
+            v-if="ShowingEnglishMessage"
+            >Visit {{ post.title }} at: 
+          </h3>
+          <h3 
+            v-else
+            >Visit {{ post.title }} at: 
+          </h3>
           <p>Location</p>
-          <div class="map"><p>Map</p></div>
+          <div 
+            class="map"
+            ><p>Map</p>
+          </div>
         </div>
 
         <div class="bottom-buttons">
@@ -134,7 +200,8 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >Go Back</Button>
+            >Go Back
+          </Button>
 
           <Button
             link="#top"
@@ -142,10 +209,9 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >Go Up</Button>
+            >Go Up
+          </Button>
         </div>
-
-
 
       </article>
     </section>
