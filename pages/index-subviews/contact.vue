@@ -1,7 +1,7 @@
 <template>
-  <section class="contact">
+  <section class="contact" id="contact">
     <form class="contact-form" id="contact-form" @submit.prevent="submit">
-      <h2 style="color: var(--clr-grey-1000)">
+      <h2 style="color: var(--clr-grey-900)">
         {{ $t("contact-form-title") }}
       </h2>
       <div class="inputs">
@@ -125,7 +125,7 @@ components: {
   padding-top: 0;
   display: flex;
   flex-direction: row;
-  background: var(--clr-blue-200);
+  background: var(--clr-blue-100);
   justify-content: space-between;
   padding-right: 0;
   padding-bottom: 5rem;
@@ -179,29 +179,28 @@ textarea {
   background-color: white;
   border-radius: 0.4rem;
   color: var(--clr-grey-500);
-  /* transition: border-color 0.2s; */
+  transition: outline 0.2s;
   border: none;
 }
 
 input:focus,
 textarea:focus {
-  /* border-color: var(--clr-blue); */
-  outline: none;
+  outline: solid 0.25rem var(--clr-blue-600);
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: var(--clr-grey-500);
+  color: var(--clr-grey-700);
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: var(--clr-grey-500);
+  color: var(--clr-grey-700);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--clr-grey-500);
+  color: var(--clr-grey-700);
 }
 
 .button-form {
@@ -225,7 +224,7 @@ textarea::placeholder {
   padding: 0.4em 2.5em;
   border-radius: 0.5rem;
 
-  background: var(--clr-pink-700);
+  background: var(--clr-pink-600);
   color: var(--clr-white);
 }
 
