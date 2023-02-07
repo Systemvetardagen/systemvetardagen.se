@@ -2,8 +2,9 @@
   <main class="wrapper" id="top">
     <section v-if="post">
       <article class="post" id="post">
+
+        <!-- BANNER -->
         <div  class="banner">
-          <!-- <img src="@/assets/img/uploads/capgemini_banner.png" alt="company banner" class="banner-img"> -->
           <img v-if="post.banner" :src="ImageLink(this.post.banner)" class="banner-img" />
           <img v-else src="@/assets/img/no-sponsor-banner-img.png" alt="No sponsor image" class="banner-img">
           <div class="banner-shade"></div>
@@ -23,8 +24,9 @@
           </div>
           <div class="banner-bar"></div>
         </div>
+        <!-- END BANNER -->
 
-
+        <!-- CCOMPANY INFO -->
         <div class="post-info">
           <h3 
             style="align-self: center;"
@@ -72,14 +74,15 @@
             >{{ post.area_of_business }}
           </p>
         </div>
+        <!-- END COMPANY INFO -->
 
-
+        <!-- ARTICLE MAIN CONTENT -->
         <div 
           class="post-content">
           <h3>{{ post.slogan }}</h3>
           <p>{{ post.about_us }}</p>
 
-
+          <!-- YOUTUBE VIDEO -->
           <div 
             v-if="post.youtube_video" 
             class="video">
@@ -91,8 +94,11 @@
             >
             </iframe>
           </div>
+          <!-- END YOUTUBE VIDEO -->
         </div>
+        <!-- END MAIN CONTENT -->
 
+        <!-- SPONSOR IMAGES // GALLERY -->
         <div 
           v-if="post.sponsor_images" 
           class="gallery">
@@ -122,7 +128,10 @@
             </div>
           </div>
         </div>
+        <!-- END SPONSOR IMAGES // GALLERY -->
 
+
+        <!-- MATCH LIST -->
         <div class="match-list">
           <h3
             >{{ post.title }} 
@@ -151,9 +160,10 @@
             </ul>
           </div>
         </div>
+        <!-- END MATCH LIST -->
 
 
-
+        <!-- COMPANY CONTACT -->
         <div class="post-contact">
           <h3>{{ $t("company-contact") }}</h3>
 
@@ -161,12 +171,17 @@
             v-for="contact in this.post.contact_persons"
             class="company-contact"
             :key="contact.id"
-          > <p>{{ contact.name }}</p>
-            <a :href="'mailto:' + contact.email">{{ contact.email }}</a>
+            ><p>{{ contact.name }}</p>
+            <a 
+              :href="'mailto:' + contact.email"
+              >{{ contact.email }}
+            </a>
             <p>{{ contact.phone_number }}</p>
           </div>
         </div>
+        <!-- END COMPANY CONTACT -->
 
+        <!-- MAP -->
         <div 
           class="map-section">
           <h3 
@@ -183,7 +198,10 @@
             ><p>Map</p>
           </div>
         </div>
+        <!-- END MAP -->
 
+
+        <!-- BOTTOM BUTTONS -->
         <div class="bottom-buttons">
           <Button
             v-if="showEnglishMessage"
@@ -212,6 +230,7 @@
             >Go Up
           </Button>
         </div>
+        <!-- END BOTTOM BUTTONS -->
 
       </article>
     </section>
@@ -256,6 +275,8 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+
+/* BANNER */
 .banner {
   
   display: flex;
@@ -278,8 +299,6 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-
-
 }
 .banner-overlay > h1 {
       font-size: clamp(0.5rem, 5vw , 3rem)
@@ -301,6 +320,9 @@ export default {
   background: linear-gradient(90deg, var(--clr-blue-600), var(--clr-pink-600), var(--clr-yellow-600));
   border-radius: 0 0 1rem 1rem;
 }
+.logo {
+  width: clamp(5rem, 20vw, 12rem);
+}
 .post-location {
   padding-bottom: clamp(0.2rem, 1vw, 0.5rem);
   border-bottom: solid 2px var(--clr-white);
@@ -313,6 +335,9 @@ export default {
   padding-top: clamp(0.2rem, 1vw, 0.5rem);
   color: white;
 }
+
+
+/* COMPANY INFO */
 .post-info {
   display: flex;
   justify-content: center;
@@ -326,22 +351,21 @@ export default {
   align-self: center
 }
 
+/* Table */
 .table {
   display: flex;
   flex-direction: column;
   padding: 2rem 0;
-
 }
 .table-left {
   font-weight: 600;
 }
 .table-right {
   padding-bottom: 0.3rem;
-
- 
 }
 
 
+/* MAIN COMPANY CONTENT */
 .post-content {
   padding: 5rem 0;
   display: flex;
@@ -352,6 +376,8 @@ export default {
 .post-content > p {
   padding-bottom: 2rem;
 }
+
+/* YouTube Video */
 .video {
   position: relative;
   width: 100%;
@@ -367,14 +393,12 @@ export default {
   height: 100%;
   border-radius: 10px;
 }
+
+/* SPONSOR IMAGES // GALLERY */
 img {
   width: 100%;
   height: auto;
 }
-.logo {
-  width: clamp(5rem, 20vw, 12rem);
-}
-
 .gallery {
   /* Mobile first */
   display: flex;
@@ -382,7 +406,6 @@ img {
   gap: 20px;
   padding: 10rem 0;
 }
-
 .gallery .column {
   display: flex;
   flex-direction: column;
@@ -390,9 +413,7 @@ img {
 }
 .gallery-img {
   border-radius: 10px;
-
 }
-
 .image-item img {
   width: 100%;
   border-radius: 5px;
@@ -400,31 +421,32 @@ img {
   object-fit: cover;
 }
 
+
+/* MATCH LIST */
 .match-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 0;
- 
 }
 .match-list-items {
   display: flex;
   flex-direction: column;
   align-items: space-around;
   justify-content: space-around;
-
   border-top: 2px var(--clr-black) solid;
   border-bottom: 2px var(--clr-black) solid;
   width: clamp(30ch, 80vw, 60ch)
 }
-
 .match-list-items > ul {
   padding: 1rem 2rem;
 }
-
 .match-list > ul > li {
   font-weight: 10px;
 }
+
+
+/* COMPANY CONTACT */
 .post-contact {
   width: clamp(30ch, 80vw, 60ch);
   display: flex;
@@ -434,6 +456,9 @@ img {
 .company-contact {
   padding-bottom: 1rem;
 }
+
+
+/* MAP */
 .map-section {
   display: flex;
   align-items: center;
@@ -445,6 +470,9 @@ img {
   width: clamp(30ch, 80vw, 60ch);
   height: 10rem;
 }
+
+
+/* BUTTOM BUTTONS */
 .bottom-buttons {
   display: flex;
   flex-direction: column;
@@ -454,6 +482,9 @@ img {
 .bb {
   margin-bottom: 2rem;
 }
+
+
+/* DESKTOP MODIFICATIONS */
 @media only screen and (min-width: 768px) {
   
   .gallery {
