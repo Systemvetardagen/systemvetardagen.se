@@ -54,15 +54,20 @@
       </nav>
 
       <nuxt-link
-        v-if="showEnglishMessage"
-        :to="switchLocalePath('en')"
+        v-if="showEnglishMessage && checkLang()"
+        :to="switchLocalePath('en') + '/'"
         class="link-fair"
         ><img src="@/assets/img/UK.png"
       /></nuxt-link>
-      <nuxt-link v-else :to="switchLocalePath('sv')" class="link-fair"
+      <nuxt-link v-else-if="showEnglishMessage === false && checkLang() && checkPath()" :to="switchLocalePath('sv')" class="link-fair"
         ><img src="@/assets/img/Sweden.png"
       /></nuxt-link>
-
+      <nuxt-link v-else-if="showEnglishMessage === false && checkLang()" :to="switchLocalePath('sv') + '/'" class="btn-lang"
+      ><img src="@/assets/img/Sweden.png"
+      /></nuxt-link>
+      <nuxt-link v-else-if="checkLang() === false" :to="changePath()" class="btn-lang"
+      ><img v-if="showEnglishMessage" src="@/assets/img/UK.png"/><img v-else="showEnglishMessage" src="@/assets/img/Sweden.png"/>
+      </nuxt-link>
       <!-- <nuxt-link v-if="showEnglishMessage && checkLang()" :to="switchLocalePath('en') + '/'" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
 			<nuxt-link v-else-if="showEnglishMessage === false && checkLang() && checkPath()" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
 			<nuxt-link v-else-if="showEnglishMessage === false && checkLang()" :to="switchLocalePath('sv') + '/'" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link> -->
@@ -189,10 +194,12 @@ export default {
       let st = String(this.$route.path);
       if (st.includes(".en")) {
         let st2 = st.replace(".en", ".sv");
-        return st2;
+        let st3 = st2.replace("/en", "");
+        return st3;
       } else {
         let st2 = st.replace(".sv", ".en");
-        return st2;
+        let st3 = st2.replace("/companies", "/en/companies");
+        return st3;
       }
     },
     checkPath() {
