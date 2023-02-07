@@ -7,22 +7,22 @@
 			<nav>
 				
 				<div class="normal" v-bind:class="{ active: isActive('/') }">
-					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
+					<NuxtLink :to="localePath('/')" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
 				
 				<div class="normal" v-bind:class="{ active: isActive('#catalog') }">
-					<NuxtLink v-if="showEnglishMessage" to="/company/" class="header-link">{{$t('catalog')}}</NuxtLink>
-					<NuxtLink v-else="showEnglishMessage" to="/en/company/" class="header-link">{{$t('catalog')}}</NuxtLink>
+					<NuxtLink :to="localePath('/company') + '/'" class="header-link">{{$t('catalog')}}</NuxtLink>
+					
 				</div>
 
 				
 			</nav>
 			
-			<nuxt-link v-if="showEnglishMessage && checkLang()" :to="switchLocalePath('en') + '/'" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
-			<nuxt-link v-else-if="showEnglishMessage === false && checkLang() && checkPath()" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
-			<nuxt-link v-else-if="showEnglishMessage === false && checkLang()" :to="switchLocalePath('sv') + '/'" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
-			<nuxt-link v-else-if="checkLang() === false" :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
-			<nuxt-link v-else :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-if="showEnglishMessage && checkLangCompany()" :to="switchLocalePath('en') + '/'" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
+			<nuxt-link v-else-if="showEnglishMessage === false && checkLangCompany() && checkPath()" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else-if="showEnglishMessage === false && checkLangCompany()" :to="switchLocalePath('sv') + '/'" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
+			<nuxt-link v-else-if="checkLangCompany() === false" :to="changePath()" class="btn-lang"><img v-if="showEnglishMessage" src="@/assets/img/UK.png"/><img v-else="showEnglishMessage" src="@/assets/img/Sweden.png"/></nuxt-link>
+			
 		</header>
 		
 		<!-- MOBILE NAV -->
@@ -48,7 +48,7 @@ export default {
 		return true
 	  };
     },
-	checkLang(){
+	checkLangCompany(){
 		let st = String(this.$route.path);
 		if(st.includes('.sv')){
 			return false;
@@ -61,10 +61,12 @@ export default {
 		let st = String(this.$route.path);
 		if(st.includes('.en')){
 			let st2 = st.replace('.en', '.sv');
-			return st2
+			let st3 = st2.replace('/en', '');
+			return st3
 		}else{
 			let st2 = st.replace('.sv', '.en');
-			return st2
+			let st3 = st2.replace('/company', '/en/company')
+			return st3
 		}
 	},
 	checkPath(){
@@ -73,6 +75,15 @@ export default {
 			return false;
 		}
 		return true;
+	},
+	choosePic(){
+		let st = String(this.$route.path);
+		if(st.includes('.sv')){
+			return "@/assets/img/Sweden.png";
+		}else if(st.includes('.en')){
+			return "@/assets/img/UK.png";
+		}
+
 	}
   },
   computed: {
