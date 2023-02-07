@@ -6,13 +6,13 @@
         <div v-for="post of posts" :key="post.slug">
           <div v-if="showEnglishMessage">
             <li v-if="post.slug === post.title.toLowerCase() + '.sv'">
-              <NuxtLink :to="post.title.toLowerCase() + '.sv'">{{ post.title }}</NuxtLink>
+              <NuxtLink :to="formatLink(post.title) + '.sv'">{{ post.title }}</NuxtLink>
             </li>
           </div>
 
           <div v-else="showEnglishMessage">
             <li v-if="post.slug === post.title.toLowerCase() + '.en'">
-              <NuxtLink :to="post.title.toLowerCase() + '.en'">{{ post.title }}</NuxtLink>
+              <NuxtLink :to="post.title.lowerCase() + '.en'">{{ post.title }}</NuxtLink>
             </li>
           </div>
         </div>
