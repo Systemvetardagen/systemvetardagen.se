@@ -81,13 +81,13 @@
           <h3>{{ post.title }} is looking for:</h3>
           <div class="match-list-items">
             <ul>
-              <p style="font-weight:900;">Programs:</p>
+              <p style="font-weight:700;">Programs:</p>
               <li v-for="program in post.program" :key="program.id">
                 {{ program }}
               </li>
             </ul>
             <ul>
-              <p>Positions:</p>
+              <p style="font-weight:700;">Positions:</p>
               <li v-for="position in post.positions" :key="position.id">
                 {{ position }}
               </li>
@@ -95,9 +95,9 @@
           </div>
         </div>
 
-        <p>{{ post.qualifications }}</p>
+        <!-- <p>{{ post.qualifications }}</p> -->
 
-        <div style="padding: 3rem 5%">
+        <div class="post-contact">
           <h3>Kontaktperson(er)</h3>
 
           <div
@@ -292,15 +292,18 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 5%;
+  padding: 3rem 0;
+ 
 }
 .match-list-items {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: space-around;
+  justify-content: space-around;
 
   border-top: 2px var(--clr-black) solid;
   border-bottom: 2px var(--clr-black) solid;
+  width: clamp(30ch, 80vw, 60ch)
 }
 
 .match-list-items > ul {
@@ -310,7 +313,12 @@ img {
 .match-list > ul > li {
   font-weight: 10px;
 }
-
+.post-contact {
+  width: clamp(30ch, 80vw, 60ch);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .company-contact {
   padding-bottom: 1rem;
 }
