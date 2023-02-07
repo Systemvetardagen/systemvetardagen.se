@@ -38,6 +38,7 @@ program:
   - Magister/Master
 positions:
   - Traineeprogram
+  - Heltidstjänster
 banner: /img/uploads/capgemini_banner_cropped.png
 youtube_video: https://www.youtube.com/embed/PO-0YqzVtgM
 sponsor_images:
