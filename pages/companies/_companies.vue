@@ -266,14 +266,18 @@ img {
   /* Mobile first */
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   padding: 10rem 0;
 }
 
 .gallery .column {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+}
+.gallery-img {
+  border-radius: 10px;
+
 }
 
 .image-item img {
