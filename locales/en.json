@@ -1,8 +1,8 @@
 {
-  "event_date": "9th February",
+  "event_date": "February 15th, 2023",
   "event_name": "Systemvetardagen 2022",
   "hero_title": "Find your next job!",
-  "event_description": "Come to one of the biggest job fairs in Sweden for students and employers in the IT-business!",
+  "event_description": "Come to Systemvetardagen, one of the biggest job fairs in Sweden for students and employers in the IT-business!",
   "catalog_btn_title": "Catalog",
   "contact_us_btn": "Contact us",
 
@@ -25,26 +25,25 @@
 
   "coming_soon": "Coming soon...",
   "it_is_almost_time!": "It is almost time!",
-  "disk_introduction1": "For the 26th year in a row, Systemvetardagen is arranged at Stockholm University. It is the ",
+  "disk_introduction1": "For the 27th year in a row, Systemvetardagen is arranged at Stockholm University. It is the ",
   "disk_introduction2": ", from the Department of Data and Systems Science DSV, own job fair day. During the day, valuable contacts are made between students and the business community. Systemvetardagen is a unique meeting place for students & organizations in the IT industry.",
   "disk": "student union DISKs",
 
 
   "the_fair_2022": "The fair 2022",
   "event_description2": "This year's edition of Systemvetardagen will take place in hybrid form. The fair will be digital, in combination with physical events and presentations. On the day of the fair, you will see virtual booths on the fair website where you can interact with the companies and take part of information about the companies and job advertisements that they have uploaded. During the day, live lectures will be held by our sponsors.",
-  "for_those_of_you_who_will_participate": "For those of you who will participate",
+  "info_heading": "Tips for those who participate",
 
   "before_the_fair": "Before the fair",
-  "before_the_fair_description1": "Create a profile for the fair, you’ll find the link there in the menu above.",
-  "before_the_fair_description2": "Maximize your chances to get a good connection interaction with the companies – Follow the recommendations and fill out your whole profile.",
-  "before_the_fair_description3": "Read up! The catalogue will give you a good overview of all the exhibiting companies.",
-  "before_the_fair_description4": "Check out the companies' booths, a lot of them are already open! Here you can find everything about the companies, what positions they’re offering and the sign up for contact calls. ",
-  "before_the_fair_description5": "Then you’re ready for the fair!",
+  "before_the_fair_description1": "Update you CV and have it easily available so that you can give or send it to a company if you get asked for it.",
+  "before_the_fair_description2": "Look through the catalog (will be available soon!) and make note of which companies you are interested in talking to.",
+  "before_the_fair_description3": "Look into which company events you are interested in. The event schedule will be available soon!",
+  "before_the_fair_description4": "Now you’re well prepared for the fair!",
 
   "during_the_fair": "During the fair",
-  "during_the_fair_description1": "To join the fair you press the button, and there you will get the opportunity to speak with the companies.",
-  "during_the_fair_description2": "Visit the companies' booths, they are there to get in touch with students, so take the opportunity!",
-  "during_the_fair_description3": "Learn something new – During the day the fairs sponsors will hold lectures which will be visible on the fairs start page. Different companies, with different lectures - take the opportunity to ask questions and get answers immediately! ",
+  "during_the_fair_description1": "Use the fair map to find the companies that you are interested in.",
+  "during_the_fair_description2": "Walk around on the fair floor and talk to the companies. They are there to come into contact with students, so take the opportunity!",
+  "during_the_fair_description3": "Learn something new – During the day there will be company events in Aula NOD. Check out the schedule to see which events sound interesting to you!",
   
   
   "frequently_asked_questions": "Frequently asked questions",
@@ -56,8 +55,8 @@
   "answer3": "Absolutely! The website is offered in both Swedish and English, and the participating companies are happy to speak English.",
   
   
-  "old_cat_title": "Have a look at last year's catalog!",
-  "old_cat_description": "This year's catalog is coming soon! In it you will find everything you need to know about the event, with information about our sponsors, exhibiting companies and much more!",
+  "old_cat_title": "This year's catalog!",
+  "old_cat_description": "The catalog is coming very soon! In it you will find everything you need to know about the event, with information about our sponsors, exhibiting companies and much more!",
   "old_cat_btn": "Catalog",
 
   
@@ -78,6 +77,7 @@
   "follow_us": "Follow us",
   "home": "Home",
   "catalog": "Catalog",
+  "about": "About",
   "contact": "Contact",
   "the_fair": "The fair",
   "company": "company",

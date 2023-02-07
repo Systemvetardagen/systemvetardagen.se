@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper">
     <section v-if="posts">
       <h1 class="title">{{ $t("about-heading") }}</h1>
       <h2>{{ $t("project-group-heading") }}</h2>
@@ -65,7 +65,7 @@ export default {
 <style scoped>
 /* TEMPORARY*/
 section {
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   display: flex;
   flex-direction: column;
   align-items: center;

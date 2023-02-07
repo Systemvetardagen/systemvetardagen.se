@@ -1,5 +1,5 @@
 ---
-name: Björn-Albin Forsberg
+name: Björn Forsberg
 picture: /img/uploads/bjorn.webp
 role: Head of Business Relations and Sales
 group: Group Leader
@@ -19,5 +19,5 @@ about_you: "Som Head of Business Relations and Sales har jag haft delat ansvar
   maskininlärning. "
 disk_mail: bjorn.forsberg@disk.su.se
 personal_mail: forsberg.bjorn.a@gmail.com
-linkedin_link: www.linkedin.com/in/björnForsberg426AF6
+linkedin_link: https://www.linkedin.com/in/björnforsberg
 ---

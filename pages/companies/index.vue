@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="wrapper">
     <section v-if="posts">
       <h1 class="title">Company</h1>
       <div>
