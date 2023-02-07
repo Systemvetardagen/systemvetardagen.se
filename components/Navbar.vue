@@ -7,12 +7,11 @@
 			<nav>
 				
 				<div class="normal" v-bind:class="{ active: isActive('/') }">
-					<NuxtLink to="/" class="header-link" >{{$t('home')}}</NuxtLink>
+					<NuxtLink :to="localePath('/')" class="header-link" >{{$t('home')}}</NuxtLink>
 				</div>
 				
 				<div class="normal" v-bind:class="{ active: isActive('#catalog') }">
-					<NuxtLink v-if="showEnglishMessage" to="/company/" class="header-link">{{$t('catalog')}}</NuxtLink>
-					<NuxtLink v-else="showEnglishMessage" to="/en/company/" class="header-link">{{$t('catalog')}}</NuxtLink>
+					<NuxtLink v-if="showEnglishMessage" :to="localePath('/companies') + '/'" class="header-link">{{$t('catalog')}}</NuxtLink>
 				</div>
 
 				
