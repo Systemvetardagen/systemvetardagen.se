@@ -2,10 +2,11 @@
   <main>
     <section v-if="post">
       <article class="post">
-        <div v-if="post.banner" class="banner">
+        <div  class="banner">
           <!-- <img src="@/assets/img/uploads/capgemini_banner.png" alt="company banner" class="banner-img"> -->
-          <img :src=ImageLink(this.post.banner) class="banner-img">
-        
+          <img v-if="post.banner" :src=ImageLink(this.post.banner) class="banner-img">
+          <img v-else src="@/assets/img/soon_image.png" class="banner-img">
+
         <div class="banner-overlay">
           <div class="logo">
             <img :src=ImageLink(this.post.logo) alt="logo" class="logo-img">
@@ -55,13 +56,13 @@
         <h3>{{ post.title }} is looking for:</h3>
         <div class="match-list-items">
           <ul>
-            <p>Programs:</p>
+            <p style="font-weight: bold;">Programs:</p>
             <li v-for="program in post.program" :key="program.id">
               {{ program }}
             </li>
           </ul>
           <ul>
-            <p>Positions:</p>
+            <p style="font-weight: bold;">Positions:</p>
             <li v-for="position in post.positions" :key="position.id">
               {{ position }}
             </li>
@@ -78,7 +79,7 @@
         
           <div v-for="contact in this.post.contact_persons" class="company-contact" :key="contact.id">
             <p>{{ contact.name }}</p>
-            <a href="">{{ contact.email }}</a>
+            <a :href="'mailto:' + contact.email">{{ contact.email }}</a>
             <p>{{ contact.phone_number }}</p>
           </div>
       </div>
@@ -99,6 +100,7 @@ export default {
   },
   props: {
     // bannerLink: "@/assets" + this.post.banner
+    alternativeBanner: "/img/soon_image.png"
   },
   async asyncData({ $content, params, error }) {
     let post;
@@ -134,7 +136,7 @@ export default {
 
 }
 .banner-img {
- 
+  background-image: linear-gradient(black, black, 0.5);
   width: 100%;
   height: auto;
 }
