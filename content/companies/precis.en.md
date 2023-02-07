@@ -22,13 +22,13 @@ link_to_positions: https://www.precisdigital.com/open-jobs/
 program:
   - Computer and System Sciences
   - Digital media
-  - Datavetenskap
   - Master
   - Market Comunication and Information Technology
   - Interaction Design
-  - Ekonomi och IT
+  - Computer Science and Software Engineering
+  - Administration and Information Technology
 positions:
-  - Praktikplatser
-  - Heltidstjänster
-  - Deltidstjänster
+  - Internships
+  - Full time positions
+  - Part-time positions
 ---
