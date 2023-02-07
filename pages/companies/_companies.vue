@@ -5,7 +5,7 @@
         <div v-if="post.banner" class="banner">
           <!-- <img src="@/assets/img/uploads/capgemini_banner.png" alt="company banner" class="banner-img"> -->
           <img :src="ImageLink(this.post.banner)" class="banner-img" />
-
+          <div class="banner-shade"></div>
           <div class="banner-overlay">
             <div class="logo">
               <img
@@ -139,11 +139,17 @@ export default {
   justify-content: flex-start;
   position: relative;
 }
+.banner-shade {
+  background: RGB(0,0,0,0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 .banner-overlay {
   position: absolute;
   bottom: 0;
   padding: clamp(0.1rem, 2vw, 1.5rem) 5%;
-  color: var(--clr-blue-900);
+  color: var(--clr-white);
   width: 100%;
   display: flex;
   flex-direction: column;
