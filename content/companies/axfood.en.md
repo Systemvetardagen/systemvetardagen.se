@@ -1,6 +1,6 @@
 ---
 logo: /img/uploads/axfood_logotyp_black_rgb-1.png
-title: Axfood
+title: Axfood (incomplete)
 sponsor: false
 slogan: Welcome to Axfood's family of possibilities
 founded: 2000
