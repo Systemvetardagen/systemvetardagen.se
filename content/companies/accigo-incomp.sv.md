@@ -1,10 +1,10 @@
 ---
 logo: /img/uploads/accigo-1.jpg
-title: Accigo (1 field missing)
+title: Accigo
 sponsor: false
 founded: 2007
 number_of_employees_in_Sweden: 160
-number_of_employees_in_internationally: 0
+number_of_employees_in_internationally: ""
 area_of_business: Affärssystem, Systemutvecklare, Integrationsutvecklare,
   Webbutvecklare, informationssäkerhet, IT-säkerhet, Systemarkitektur, Business
   Intelligence, Projektledning, Testledning, Förändringsledning, CRM, Supply
