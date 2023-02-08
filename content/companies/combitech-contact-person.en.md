@@ -1,6 +1,6 @@
 ---
 logo: /img/uploads/combi_image-21.jpg
-title: Combitech (contact person?)
+title: Combitech
 sponsor: false
 slogan: Technology with a purpose
 founded: 1981
