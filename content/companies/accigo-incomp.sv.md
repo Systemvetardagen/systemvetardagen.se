@@ -1,6 +1,6 @@
 ---
 logo: /img/uploads/accigo-1.jpg
-title: Accigo (incomp)
+title: Accigo (1 field missing)
 sponsor: false
 founded: 2007
 number_of_employees_in_Sweden: 160
