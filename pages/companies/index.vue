@@ -1,7 +1,7 @@
 <template>
   <main class="wrapper">
     <section v-if="posts">
-      <h1 class="title">Company</h1>
+      <h1 class="title">{{ $t("companies") }}</h1>
       <div class="company-cards">
         <div v-for="post of posts" :key="post.slug">
           <div v-if="showEnglishMessage">
@@ -13,11 +13,11 @@
           </div>
 
           <div v-else="showEnglishMessage">
-            <li v-if="post.slug === post.title.toLowerCase() + '.en'">
-              <NuxtLink :to="post.title.toLowerCase() + '.en'">{{
-                post.title
-              }}</NuxtLink>
-            </li>
+            <div v-if="post.slug === post.title.toLowerCase() + '.en'">
+              <NuxtLink :to="post.title.toLowerCase() + '.en'">
+                <company-card class="company-card" :company="post" />
+              </NuxtLink>
+            </div>
           </div>
         </div>
       </div>

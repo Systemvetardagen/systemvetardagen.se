@@ -2,11 +2,19 @@
   <main class="wrapper" id="top">
     <section v-if="post">
       <article class="post" id="post">
-
         <!-- BANNER -->
-        <div  class="banner">
-          <img v-if="post.banner" :src="ImageLink(this.post.banner)" class="banner-img" />
-          <img v-else src="@/assets/img/no-sponsor-banner-img.png" alt="No sponsor image" class="banner-img">
+        <div class="banner">
+          <img
+            v-if="post.banner"
+            :src="ImageLink(this.post.banner)"
+            class="banner-img"
+          />
+          <img
+            v-else
+            src="@/assets/img/nod_gradient_colors.jpg"
+            alt="No sponsor image"
+            class="banner-img"
+          />
           <div class="banner-shade"></div>
           <div class="banner-overlay">
             <div class="logo">
@@ -28,64 +36,31 @@
 
         <!-- CCOMPANY INFO -->
         <div class="post-info">
-          <h3 
-            style="align-self: center;"
-            >{{ $t("company-info") }}
-          </h3>
-          <div 
-            class="table">
-            <p 
-              class="table-left"
-              >{{ $t("established") }}
-            </p>
-            <p 
-              class="table-right"
-              >{{ post.founded }}
-            </p>
-            <p
-              class="table-left"
-              >{{ $t("slogan") }}
-            </p>
-            <p 
-              class="table-right"
-              >{{ post.slogan }}
-            </p>
-            <p 
-              class="table-left"
-              >{{ $t("employees-sv") }}
-            </p>
-            <p 
-              class="table-right"
-              >{{ post.number_of_employees_in_Sweden }}
-            </p>
-            <p 
-              class="table-left"
-              >{{ $t("employees-int") }}
-            </p>
-            <p 
-              class="table-right"
-              >{{ post.number_of_employees_in_internationally }}
+          <h3 style="align-self: center">{{ $t("company-info") }}</h3>
+          <div class="table">
+            <p class="table-left">{{ $t("established") }}</p>
+            <p class="table-right">{{ post.founded }}</p>
+            <p class="table-left">{{ $t("slogan") }}</p>
+            <p class="table-right">{{ post.slogan }}</p>
+            <p class="table-left">{{ $t("employees-sv") }}</p>
+            <p class="table-right">{{ post.number_of_employees_in_Sweden }}</p>
+            <p class="table-left">{{ $t("employees-int") }}</p>
+            <p class="table-right">
+              {{ post.number_of_employees_in_internationally }}
             </p>
           </div>
-          <p 
-            style="font-weight: 600;"
-            >{{ $t("bis-area") }}</p>
-          <p
-            >{{ post.area_of_business }}
-          </p>
+          <p style="font-weight: 600">{{ $t("bis-area") }}</p>
+          <p>{{ post.area_of_business }}</p>
         </div>
         <!-- END COMPANY INFO -->
 
         <!-- ARTICLE MAIN CONTENT -->
-        <div 
-          class="post-content">
+        <div class="post-content">
           <h3>{{ post.slogan }}</h3>
           <p>{{ post.about_us }}</p>
 
           <!-- YOUTUBE VIDEO -->
-          <div 
-            v-if="post.youtube_video" 
-            class="video">
+          <div v-if="post.youtube_video" class="video">
             <iframe
               class="yt-video"
               :src="this.post.youtube_video"
@@ -99,9 +74,7 @@
         <!-- END MAIN CONTENT -->
 
         <!-- SPONSOR IMAGES // GALLERY -->
-        <div 
-          v-if="post.sponsor_images" 
-          class="gallery">
+        <div v-if="post.sponsor_images" class="gallery">
           <div class="column">
             <div class="gallery-item">
               <img
@@ -130,38 +103,28 @@
         </div>
         <!-- END SPONSOR IMAGES // GALLERY -->
 
-
         <!-- MATCH LIST -->
         <div class="match-list">
-          <h3
-            >{{ post.title }} 
-             {{ $t("looking-for") }}
+          <h3>
+            {{ post.title }}
+            {{ $t("looking-for") }}
           </h3>
           <div class="match-list-items">
             <ul>
-              <p 
-                style="font-weight:700;"
-                >{{ $t("programs") }}:
-              </p>
-              <li 
-                v-for="program in post.program" :key="program.id"
-                >{{ program }}
+              <p style="font-weight: 700">{{ $t("programs") }}:</p>
+              <li v-for="program in post.program" :key="program.id">
+                {{ program }}
               </li>
             </ul>
             <ul>
-              <p 
-                style="font-weight:700;"
-                >{{ $t("positions") }}:
-              </p>
-              <li 
-                v-for="position in post.positions" :key="position.id"
-                >{{ position }}
+              <p style="font-weight: 700">{{ $t("positions") }}:</p>
+              <li v-for="position in post.positions" :key="position.id">
+                {{ position }}
               </li>
             </ul>
           </div>
         </div>
         <!-- END MATCH LIST -->
-
 
         <!-- COMPANY CONTACT -->
         <div class="post-contact">
@@ -171,49 +134,37 @@
             v-for="contact in this.post.contact_persons"
             class="company-contact"
             :key="contact.id"
-            ><p>{{ contact.name }}</p>
-            <a 
-              :href="'mailto:' + contact.email"
-              >{{ contact.email }}
-            </a>
+          >
+            <p>{{ contact.name }}</p>
+            <a :href="'mailto:' + contact.email">{{ contact.email }} </a>
             <p>{{ contact.phone_number }}</p>
           </div>
         </div>
         <!-- END COMPANY CONTACT -->
 
         <!-- MAP -->
-        <div 
-          class="map-section">
-          <h3 
-            v-if="showEnglishMessage"
-            >Visit {{ post.title }} at: 
-          </h3>
-          <h3 
-            v-else
-            >Visit {{ post.title }} at: 
-          </h3>
+        <div class="map-section">
+          <h3 v-if="showEnglishMessage">Visit {{ post.title }} at:</h3>
+          <h3 v-else>Visit {{ post.title }} at:</h3>
           <p>Location</p>
-          <div 
-            class="map"
-            ><p>Map</p>
-          </div>
+          <div class="map"><p>Map</p></div>
         </div>
         <!-- END MAP -->
-
 
         <!-- BOTTOM BUTTONS -->
         <div class="bottom-buttons">
           <Button
             v-if="showEnglishMessage"
-            link="/companies"
+            link="/companies/"
             borderCol="--crl-black"
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >Go Back</Button>
+            >Gå tillbaka</Button
+          >
           <Button
             v-else
-            link="/en/companies"
+            link="/en/companies/"
             borderCol="--crl-black"
             bColor="transparent"
             tColor="--crl-black"
@@ -231,14 +182,13 @@
           </Button>
         </div>
         <!-- END BOTTOM BUTTONS -->
-
       </article>
     </section>
   </main>
 </template>
 
 <script>
-import Button from '@/components/Button.vue'
+import Button from "@/components/Button.vue";
 export default {
   methods: {
     ImageLink(cmsImg) {
@@ -260,7 +210,7 @@ export default {
     return { post };
   },
   components: {
-    Button
+    Button,
   },
   computed: {
     showEnglishMessage() {
@@ -278,14 +228,14 @@ export default {
 
 /* BANNER */
 .banner {
-  
   display: flex;
   justify-content: flex-start;
   position: relative;
-
+  width: 100%;
+  max-height: 18rem;
 }
 .banner-shade {
-  background: RGB(0,0,0,0.5);
+  background: RGB(0, 0, 0, 0.5);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -301,23 +251,29 @@ export default {
   flex-direction: column;
 }
 .banner-overlay > h1 {
-      font-size: clamp(0.5rem, 5vw , 3rem)
+  font-size: clamp(1.8rem, 5vw, 3rem);
 }
 .banner-overlay > p {
-    font-size: clamp(0.5rem, 2vw, 1rem)
+  font-size: clamp(0.5rem, 2vw, 1rem);
 }
 .banner-img {
   width: 100%;
-  height: auto;
+  max-height: 32rem;
   border-radius: 0.5rem 0.5rem 0rem 0rem;
+  object-fit: cover;
 }
 .banner-bar {
   position: absolute;
-  bottom: calc(clamp(2px, 1vw, 10px)*-1);
+  bottom: calc(clamp(2px, 1vw, 10px) * -1);
   left: 0;
   width: 100%;
   height: clamp(2px, 1vw, 10px);
-  background: linear-gradient(90deg, var(--clr-blue-600), var(--clr-pink-600), var(--clr-yellow-600));
+  background: linear-gradient(
+    90deg,
+    var(--clr-blue-600),
+    var(--clr-pink-600),
+    var(--clr-yellow-600)
+  );
   border-radius: 0 0 1rem 1rem;
 }
 .logo {
@@ -328,14 +284,13 @@ export default {
   border-bottom: solid 2px var(--clr-white);
 }
 .post-title {
-  padding-bottom: clamp(0.1rem, 2.5vw, 3rem)
+  padding-bottom: clamp(0.1rem, 2.5vw, 3rem);
 }
 .post-tag {
   align-self: flex-end;
   padding-top: clamp(0.2rem, 1vw, 0.5rem);
   color: white;
 }
-
 
 /* COMPANY INFO */
 .post-info {
@@ -348,7 +303,7 @@ export default {
   color: var(--clr-blue-900);
   margin-top: 2rem;
   max-width: 60ch;
-  align-self: center
+  align-self: center;
 }
 
 /* Table */
@@ -364,14 +319,12 @@ export default {
   padding-bottom: 0.3rem;
 }
 
-
 /* MAIN COMPANY CONTENT */
 .post-content {
   padding: 5rem 0;
   display: flex;
   flex-direction: column;
   max-width: 60ch;
-
 }
 .post-content > p {
   padding-bottom: 2rem;
@@ -421,7 +374,6 @@ img {
   object-fit: cover;
 }
 
-
 /* MATCH LIST */
 .match-list {
   display: flex;
@@ -436,7 +388,7 @@ img {
   justify-content: space-around;
   border-top: 2px var(--clr-black) solid;
   border-bottom: 2px var(--clr-black) solid;
-  width: clamp(30ch, 80vw, 60ch)
+  width: clamp(30ch, 80vw, 60ch);
 }
 .match-list-items > ul {
   padding: 1rem 2rem;
@@ -444,7 +396,6 @@ img {
 .match-list > ul > li {
   font-weight: 10px;
 }
-
 
 /* COMPANY CONTACT */
 .post-contact {
@@ -456,7 +407,6 @@ img {
 .company-contact {
   padding-bottom: 1rem;
 }
-
 
 /* MAP */
 .map-section {
@@ -471,22 +421,18 @@ img {
   height: 10rem;
 }
 
-
 /* BUTTOM BUTTONS */
 .bottom-buttons {
   display: flex;
   flex-direction: column;
   padding-top: 3rem;
-
 }
 .bb {
   margin-bottom: 2rem;
 }
 
-
 /* DESKTOP MODIFICATIONS */
 @media only screen and (min-width: 768px) {
-  
   .gallery {
     flex-direction: row;
   }
@@ -501,10 +447,9 @@ img {
     grid-template-columns: 50% 50%;
     grid-gap: 0.5rem;
     padding: 2rem 0;
-
   }
   .table-left {
-   font-weight: 600;
+    font-weight: 600;
   }
   .table-right {
     text-align: right;
