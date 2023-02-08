@@ -1,11 +1,11 @@
 ---
 logo: /img/uploads/axfood_logotyp_black_rgb-1.png
-title: Axfood (1 field missing)
+title: Axfood
 sponsor: false
 slogan: Välkommen till Axfoods familj av möjligheter
 founded: 2000
 number_of_employees_in_Sweden: 12202
-number_of_employees_in_internationally: 0
+number_of_employees_in_internationally: ""
 area_of_business: Systems development, business intelligence, project
   management, UX design, Front end, back end.
 about_us: Axfood är en ledande koncern inom svensk dagligvaruhandel. Vår familj
