@@ -12,11 +12,15 @@
           <input type="checkbox" v-model="selectedPrograms" :value="program"/>
           {{ program }}
         </label>
+        <button @click.prevent="selectedPrograms = []">Clear selection</button>
+      </form>
+      <form>
         <h3>Positions:</h3>
         <label v-for="position in allPositions" :key="position">
           <input type="checkbox" v-model="selectedPositions" :value="position">
           {{ position }}
         </label>
+        <button @click.prevent="selectedPositions = []">Clear selection</button>
       </form>
 
       <div class="company-cards">
