@@ -46,10 +46,7 @@ export default {
       return this.$i18n.locale === "sv";
     },
     filterdPosts(){
-      if(this.showEnglishMessage){
-        return this.posts.filter(e => e.slug.includes("." + this.$i18n.locale))
-      }
-    }
+      return this.posts.filter(e => e.slug.includes("." + this.$i18n.locale))
   },
   methods: {
 
