@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/zimply_logo.png
 title: Zimply
 sponsor: true
 slogan: Det enkla sättet att automatisera arbetsuppgifter.
