@@ -1,5 +1,5 @@
 ---
-logo: /img/uploads/combi_image-21.jpg
+logo: /img/uploads/combitech.png
 title: Combitech
 sponsor: false
 slogan: Technology with a purpose
