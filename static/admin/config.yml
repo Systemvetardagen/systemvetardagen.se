@@ -39,7 +39,7 @@ collections:
           lable: "Sponsor?",
           name: "sponsor",
           widget: "boolean",
-          required: true,
+          required: false,
           18n: duplicate,
         }
       - {
@@ -141,7 +141,7 @@ collections:
           label: "Link to postitions",
           name: "link_to_positions",
           widget: "string",
-          required: true,
+          required: false,
           i18n: duplicate,
         }
       - {
