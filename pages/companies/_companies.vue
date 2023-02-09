@@ -18,11 +18,7 @@
           <div class="banner-shade"></div>
           <div class="banner-overlay">
             <div class="logo">
-              <img
-                :src="ImageLink(this.post.logo)"
-                alt="logo"
-                class="logo-img"
-              />
+              <nuxt-img :src="this.post.logo" alt="logo" class="logo-img" />
             </div>
 
             <h1 class="post-title">{{ post.title }}</h1>

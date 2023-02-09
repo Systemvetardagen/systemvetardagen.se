@@ -1,7 +1,12 @@
 <template>
   <div class="card">
     <div class="logo-wrapper">
-      <img class="logo" :src="ImageLink(this.company.logo)" alt="" />
+      <nuxt-img
+        v-if="company.logo"
+        class="logo"
+        :src="this.company.logo"
+        alt=""
+      />
     </div>
     <h3>{{ company.title }}</h3>
   </div>
