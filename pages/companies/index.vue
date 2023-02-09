@@ -48,7 +48,6 @@ export default {
     filterdPosts() {
       return this.posts.filter((e) => e.slug.includes("." + this.$i18n.locale));
     },
-    methods: {},
   },
 };
 </script> 
