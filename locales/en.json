@@ -79,7 +79,7 @@
   "about": "About",
   "contact": "Contact",
   "the_fair": "The fair",
-  "company": "company",
+  "companies": "Companies",
   "name": "name",
   "email": "email",
   "message": "message",
@@ -93,5 +93,19 @@
   "contact-form-button": "Send",
 
   "about-heading": "About",
-  "project-group-heading": "Project Group"
+  "project-group-heading": "Project Group",
+
+  "location": "Location",
+  "company-info": "Company Info",
+  "established": "Established",
+  "slogan": "Slogan",
+  "employees-sv": "Employees in Sweden",
+  "employees-int": "Employees internationally",
+  "bis-area": "Area of Business",
+  "looking-for": "is looking for",
+  "programs": "Programs",
+  "positions": "Positions",
+  "company-contact": "Contact",
+  "go-back": "Back to Catalog",
+  "go-top": "Back to Top"
 }

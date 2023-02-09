@@ -25,5 +25,6 @@ program:
   - Affärssystem och tjänstedesign
   - Ekonomi och IT
   - Marknadskommunikation och IT
-positions: Heltidstjänster
+positions: 
+  - Heltidstjänster
 ---

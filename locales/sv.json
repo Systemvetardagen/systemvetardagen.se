@@ -78,7 +78,7 @@
   "about": "Om oss",
   "contact": "Kontakt",
   "the_fair": "Mässan",
-  "company": "Företag",
+  "companies": "Företag",
   "name": "Namn",
   "email": "E-post",
   "message": "Meddelande",
@@ -92,5 +92,19 @@
   "contact-form-button": "Skicka",
 
   "about-heading": "Om oss",
-  "project-group-heading": "Projektgrupp"
+  "project-group-heading": "Projektgrupp",
+
+  "location": "Location",
+  "company-info": "Company Info",
+  "established": "Established",
+  "slogan": "Slogan",
+  "employees-sv": "Employees in Sweden",
+  "employees-int": "Employees internationally",
+  "bis-area": "Area of Business",
+  "looking-for": "is looking for",
+  "programs": "Programs",
+  "positions": "Positions",
+  "company-contact": "Contact",
+  "go-back": "Back to Catalog",
+  "go-top": "Back to Top"
 }
