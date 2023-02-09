@@ -6,13 +6,13 @@
         <div v-for="post of filterdPosts" :key="post.slug">
           <!---<div v-if="showEnglishMessage">
             <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
-              <NuxtLink :to="post.slug">
-                <company-card class="company-card" :company="post" />
-              </NuxtLink>
-            </div>
-          </div>
+          <NuxtLink :to="post.slug">
+            <company-card class="company-card" :company="post" />
+          </NuxtLink>
+        </div>
+      </div>
 
-          <!--<div v-else="showEnglishMessage">
+      <!--<div v-else="showEnglishMessage">
             <div v-if="post.slug === post.title.toLowerCase() + '.en'">
               <NuxtLink :to="post.title.toLowerCase() + '.en'">
                 <company-card class="company-card" :company="post" />
@@ -45,12 +45,11 @@ export default {
     showEnglishMessage() {
       return this.$i18n.locale === "sv";
     },
-    filterdPosts(){
-      return this.posts.filter(e => e.slug.includes("." + this.$i18n.locale))
+    filterdPosts() {
+      return this.posts.filter((e) => e.slug.includes("." + this.$i18n.locale));
+    },
+    methods: {},
   },
-  methods: {
-
-  }
 };
 </script> 
 <style scoped>
