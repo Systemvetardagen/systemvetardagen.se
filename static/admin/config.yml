@@ -76,7 +76,7 @@ collections:
           name: "number_of_employees_in_internationally",
           widget: "number",
           value_type: "int",
-          required: true,
+          required: false,
           i18n: duplicate,
         }
       - {
@@ -112,7 +112,7 @@ collections:
         name: "contact_persons"
         widget: "list"
         allow_add: true
-        required: true
+        required: false
         i18n: true
         fields:
           - {
