@@ -160,7 +160,7 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/i18n", "@nuxtjs/content"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/content", "@nuxt/image"],
   i18n: {
     locales: ["en", "sv"],
     defaultLocale: "sv",
@@ -178,4 +178,8 @@ export default {
 
   // Collection of anonymous telemetry data about general usage: https://github.com/nuxt/telemetry
   telemetry: false,
+
+  image: {
+    dir: 'assets'
+  }
 };

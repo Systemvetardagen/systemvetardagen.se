@@ -4,9 +4,9 @@
       <article class="post" id="post">
         <!-- BANNER -->
         <div class="banner">
-          <img
+          <nuxt-img
             v-if="post.banner"
-            :src="ImageLink(this.post.banner)"
+            :src="this.post.banner"
             class="banner-img"
           />
           <img
@@ -77,25 +77,25 @@
         <div v-if="post.sponsor_images" class="gallery">
           <div class="column">
             <div class="gallery-item">
-              <img
-                :src="ImageLink(this.post.sponsor_images[0])"
-                alt="galery image 1"
+              <nuxt-img
+                :src="this.post.sponsor_images[0]"
+                alt="gallery image 1"
                 class="gallery-img"
               />
             </div>
           </div>
           <div class="column">
             <div class="gallery-item">
-              <img
-                :src="ImageLink(this.post.sponsor_images[1])"
-                alt="galery image 2"
+              <nuxt-img
+                :src="this.post.sponsor_images[1]"
+                alt="gallery image 2"
                 class="gallery-img"
               />
             </div>
             <div class="gallery-item">
-              <img
-                :src="ImageLink(this.post.sponsor_images[2])"
-                alt="galery image 3"
+              <nuxt-img
+                :src="this.post.sponsor_images[2]"
+                alt="gallery image 3"
                 class="gallery-img"
               />
             </div>
