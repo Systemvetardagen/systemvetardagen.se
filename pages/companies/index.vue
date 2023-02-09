@@ -42,6 +42,9 @@
             />
             <label :for="program">{{ program }}</label>
           </div>
+          <button @click.prevent="selectedPrograms = []">
+            Clear selection
+          </button>
         </div>
         and
         <span
@@ -78,6 +81,9 @@
             />
             <label :for="position">{{ position }}</label>
           </div>
+          <button @click.prevent="selectedPositions = []">
+            Clear selection
+          </button>
         </div>
       </div>
       <div class="company-cards">
