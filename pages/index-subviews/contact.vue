@@ -120,7 +120,7 @@ components: {
   Button;
 }
 </script>
-<style>
+<style scoped>
 .contact {
   padding-top: 0;
   display: flex;
