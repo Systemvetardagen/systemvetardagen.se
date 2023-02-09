@@ -32,10 +32,10 @@ link_to_positions: https://www.zingtongroup.com/accelerate/
 program:
   - Enterprise Systems and Service Design
   - Computer and System Sciences
-  - Ekonomi och IT
   - Interaction Design
   - Master
   - Digital media
+  - Administration and Information Technology
 positions:
   - Traineeprogram
   - Full time positions
