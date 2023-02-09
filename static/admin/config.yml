@@ -113,7 +113,7 @@ collections:
         widget: "list"
         allow_add: true
         required: false
-        i18n: duplicate
+        i18n: true
         fields:
           - {
               label: "Name",
@@ -223,7 +223,7 @@ collections:
           widget: "list",
           allow_add: true,
           required: false,
-          i18n: duplicate,
+          i18n: true,
           field:
             {
               label: "Sponsor image",
