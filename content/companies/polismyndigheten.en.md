@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/polisen-logo.png
 title: Polismyndigheten
 founded: 2015
 number_of_employees_in_Sweden: 36000
