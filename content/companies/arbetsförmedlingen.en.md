@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/arbetsformedlingen.png
 title: Arbetsförmedlingen
 founded: 1902
 number_of_employees_in_Sweden: ""

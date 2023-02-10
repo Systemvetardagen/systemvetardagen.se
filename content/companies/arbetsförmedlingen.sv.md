@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/arbetsformedlingen.png
 title: Arbetsförmedlingen
 slogan: "Jobba hos oss - utvecklas tillsammans med 1 000 IT-kollegor "
 founded: 1902
