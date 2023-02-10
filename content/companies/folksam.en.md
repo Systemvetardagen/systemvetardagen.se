@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/folksam-logo.png
 title: Folksam
 founded: 1908
 number_of_employees_in_Sweden: 4000
