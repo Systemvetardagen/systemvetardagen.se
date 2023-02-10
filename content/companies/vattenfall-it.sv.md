@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/vattenfall_logo.svg
 title: Vattenfall IT
 slogan: För en fossilfri framtid
 founded: 1909

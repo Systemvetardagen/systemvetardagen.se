@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/vattenfall_logo.svg
 title: Vattenfall IT
 slogan: Fossile free living within one generation
 founded: 1909
