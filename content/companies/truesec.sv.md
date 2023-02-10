@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/truesec_logo.png
 title: Truesec
 slogan: ”A safe digital future”
 founded: 2005
