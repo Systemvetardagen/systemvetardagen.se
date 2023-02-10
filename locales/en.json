@@ -107,5 +107,24 @@
   "positions": "Positions",
   "company-contact": "Contact",
   "go-back": "Back to Catalog",
-  "go-top": "Back to Top"
+  "go-top": "Back to Top",
+  "filter-programs": [
+    "Enterprise Systems and Service Design",
+    "Computer and System Sciences",
+    "Computer Game Development",
+    "Computer Science and Software Engineering",
+    "Administration and Information Technology",
+    "Market Comunication and Information Technology",
+    "Digital media",
+    "Interaction Design",
+    "Master"
+  ],
+  "filter-positions": [
+    "Internships",
+    "Foreign Services",
+    "Traineeprogram",
+    "Full time positions",
+    "Master thesis",
+    "Part-time positions"
+  ]
 }

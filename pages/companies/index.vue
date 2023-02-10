@@ -126,6 +126,8 @@ export default {
       programsVisible: false,
       selectedPrograms: [],
       selectedPositions: [],
+      filterPrograms: [],
+      filterPositions: [],
     };
   },
   components: {
@@ -149,8 +151,10 @@ export default {
     },
   },
   created() {
-    this.allPrograms = require("@/content/filter_data.json").programs;
-    this.allPositions = require("@/content/filter_data.json").positions;
+    // this.allPrograms = require("@/content/filter_data.json").programs;
+    // this.allPositions = require("@/content/filter_data.json").positions;
+    this.allPrograms = this.$t("filter-programs");
+    this.allPositions = this.$t("filter-positions");
   },
   methods: {
     filterOneCondition(condition, selection) {

@@ -106,5 +106,25 @@
   "positions": "Positions",
   "company-contact": "Contact",
   "go-back": "Back to Catalog",
-  "go-top": "Back to Top"
+  "go-top": "Back to Top",
+
+  "filter-programs": [
+    "Affärssystem & tjänstedesign",
+    "Data- & systemvetenskap",
+    "Datorspelsutveckling",
+    "Datavetenskap",
+    "Ekonomi & IT",
+    "Marknadskommunikation & IT",
+    "Digitala medier",
+    "Interaktionsdesign",
+    "Master"
+  ],
+  "filter-positions": [
+    "Praktikplatser",
+    "Utlandstjänster",
+    "Traineeprogram",
+    "Heltidstjänster",
+    "Master thesis",
+    "Deltidstjänster"
+  ]
 }
