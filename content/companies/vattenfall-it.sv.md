@@ -3,7 +3,7 @@ title: Vattenfall IT
 slogan: För en fossilfri framtid
 founded: 1909
 number_of_employees_in_Sweden: 300
-number_of_employees_in_internationally: 1200
+number_of_employees_in_internationally: 19000
 area_of_business: "Allt inom IT. Spridning från projektledning till
   cybersäkerhet och infrastruktur. "
 about_us: "Vattenfall är en av Europas största producenter och återförsäljare av

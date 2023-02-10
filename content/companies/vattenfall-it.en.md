@@ -3,7 +3,7 @@ title: Vattenfall IT
 slogan: Fossile free living within one generation
 founded: 1909
 number_of_employees_in_Sweden: 300
-number_of_employees_in_internationally: 1200
+number_of_employees_in_internationally: 19000
 area_of_business: "Everything within IT with a spread from project management to
   cyber security and infrastructure. "
 about_us: Vattenfall is one of Europe's largest producers and retailers of
