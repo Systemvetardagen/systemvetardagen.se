@@ -1,5 +1,5 @@
 ---
-logo: /img/uploads/knowit.png
+logo: /img/uploads/logotype-knowit-digital-black.png
 title: Knowit
 sponsor: false
 slogan: We create a sustainable and humane society through digitalization and
