@@ -171,7 +171,8 @@ export default {
       if (!searchText) {
         return true
       }
-      return new RegExp(searchText.split('').join('.*?'), 'i').test(title)
+      let strippedInput = searchText.replace(/[^a-z]+/gi, '').toLowerCase()
+      return new RegExp(strippedInput.split('').join('.*?'), 'i').test(title)
     }
   },
 };
