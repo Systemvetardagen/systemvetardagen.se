@@ -3,9 +3,6 @@
     <section v-if="posts">
       <h1 class="title">{{ $t("companies") }}</h1>
 
-      <!-- temporary form for filter. Please note that it is now only developed with core feature,
-        allPrograms and allPositions are string arrays imported from a hardcoded file
-        (extracted from static/admin/config.yml) and did not consider i18n -->
       <div class="filter-paragraph">
         Showing companies for
         <span
@@ -163,7 +160,8 @@ export default {
         return true;
       }
       // else display post whose condition includes any item in selection
-      return selection.some((s) => condition.includes(s));
+      let formattedSelection = selection.map(s => s.replace(/&/g, 'och'))
+      return formattedSelection.some((s) => condition.includes(s));
     },
   },
 };
