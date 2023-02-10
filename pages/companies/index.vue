@@ -3,6 +3,10 @@
     <section v-if="posts">
       <h1 class="title">{{ $t("companies") }}</h1>
 
+      <div class="search-field">
+        <input type="text" v-model="searchText" placeholder="Search companies by name">
+      </div>
+
       <div class="filter-paragraph">
         Showing companies for
         <span
@@ -93,7 +97,8 @@
               :company="post"
               v-if="
                 filterOneCondition(post.program, selectedPrograms) &&
-                filterOneCondition(post.positions, selectedPositions)
+                filterOneCondition(post.positions, selectedPositions) &&
+                searchCompany(post.title, searchText)
               "
             />
           </NuxtLink>
@@ -125,6 +130,7 @@ export default {
       selectedPositions: [],
       filterPrograms: [],
       filterPositions: [],
+      searchText: null
     };
   },
   components: {
@@ -148,8 +154,6 @@ export default {
     },
   },
   created() {
-    // this.allPrograms = require("@/content/filter_data.json").programs;
-    // this.allPositions = require("@/content/filter_data.json").positions;
     this.allPrograms = this.$t("filter-programs");
     this.allPositions = this.$t("filter-positions");
   },
@@ -161,8 +165,14 @@ export default {
       }
       // else display post whose condition includes any item in selection
       let formattedSelection = selection.map(s => s.replace(/&/g, 'och'))
-      return formattedSelection.some((s) => condition.includes(s));
+      return formattedSelection.some(s => condition.includes(s));
     },
+    searchCompany(title, searchText) {
+      if (!searchText) {
+        return true
+      }
+      return new RegExp(searchText.split('').join('.*?'), 'i').test(title)
+    }
   },
 };
 </script> 
