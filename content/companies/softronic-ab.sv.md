@@ -1,5 +1,5 @@
 ---
-logo: /img/uploads/18700344_1370680062967309_5573752032447725433_n.png
+logo: /img/uploads/softronic.png
 title: Softronic AB
 slogan: "GoodTech - Ledande teknik som gör gott i samhället. "
 founded: 1982
