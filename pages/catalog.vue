@@ -3,6 +3,12 @@
     <h1>Catalog</h1>
     <Button link="/companies/" bColor="gradient">Companies</Button>
     <div v-for="post of filterdPosts" :key="post.slug">
+      <h4>{{ post.title }}</h4>
+      <img :src="post.post_image">
+      <p>{{ post.date_of_creation }}</p>
+      <p>{{ post.body }}</p>
+      <li v-for="items in post.authors">{{ items }}</li>
+      <li v-for="items in post.images"
     
     </div>
 
@@ -26,6 +32,11 @@ export default {
       return this.posts.filter((e) => e.slug.includes("." + this.$i18n.locale));
     },
   },
+  methods: {
+    count(post){
+      this.post.length
+    }
+  }
 }
 
 </script>
