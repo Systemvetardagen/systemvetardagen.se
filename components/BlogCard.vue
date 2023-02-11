@@ -50,10 +50,10 @@ export default {
 }
 
 .post-img {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
   max-width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 1rem;
   margin-bottom: 1rem;
 }
