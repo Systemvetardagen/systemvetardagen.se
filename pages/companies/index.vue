@@ -3,13 +3,6 @@
     <section v-if="posts">
       <h1 class="title">{{ $t("companies") }}</h1>
 
-      <div class="search-field">
-        <input type="text" ref="inputRef" v-model.trim="searchText" placeholder="Search companies by name">
-        <button v-if="searchText" @click.prevent="clearInputAndFocus">
-          Clear
-        </button>
-      </div>
-
       <div class="filter-paragraph">
         Showing companies for
         <span
@@ -90,6 +83,42 @@
           </button>
         </div>
       </div>
+
+      <div class="search-field">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="search-icon"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+            clip-rule="evenodd"
+          />
+        </svg>
+
+        <input
+          class="search-input"
+          type="text"
+          ref="inputRef"
+          v-model.trim="searchText"
+          placeholder="Search companies"
+        />
+        <svg
+          v-if="searchText"
+          @click="clearInputAndFocus"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="clear-search-button"
+        >
+          <path
+            d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
+          />
+        </svg>
+      </div>
+
       <div class="company-cards">
         <div v-for="post of filterdPosts" :key="post.slug">
           <!---<div v-if="showEnglishMessage">
@@ -133,7 +162,7 @@ export default {
       selectedPositions: [],
       filterPrograms: [],
       filterPositions: [],
-      searchText: null
+      searchText: null,
     };
   },
   components: {
@@ -167,19 +196,19 @@ export default {
         return true;
       }
       // else display post whose condition includes any item in selection
-      let formattedSelection = selection.map(s => s.replace(/&/g, 'och'))
-      return formattedSelection.some(s => condition.includes(s));
+      let formattedSelection = selection.map((s) => s.replace(/&/g, "och"));
+      return formattedSelection.some((s) => condition.includes(s));
     },
     searchCompany(title, searchText) {
       if (!searchText) {
-        return true
+        return true;
       }
       return new RegExp(searchText, 'i').test(title)
     },
     clearInputAndFocus() {
-      this.searchText = null
-      this.$refs.inputRef.focus()
-    }
+      this.searchText = null;
+      this.$refs.inputRef.focus();
+    },
   },
 };
 </script> 
@@ -224,6 +253,39 @@ export default {
 label {
   font-family: work-sans;
 }
+
+.search-field {
+  width: 24rem;
+  max-width: 100%;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  border: solid 0.2rem var(--clr-grey-200);
+  padding: 0.5rem;
+  display: flex;
+}
+
+.search-icon {
+  color: var(--clr-grey-500);
+  width: 1.25rem;
+}
+
+.search-input {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.search-field:focus-within {
+  border-color: var(--clr-blue-500);
+}
+
+.clear-search-button {
+  width: 1.25rem;
+  background-color: none;
+  border: none;
+  cursor: pointer;
+}
+
 .company-cards {
   display: flex;
   flex-wrap: wrap;
