@@ -323,9 +323,9 @@ collections:
           i18n: duplicate,
         }
 
-  - name: "preview"
-    label: "Preview"
-    folder: "content/preview"
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
     create: true
     slug: "{{title}}"
     i18n: true
@@ -335,28 +335,28 @@ collections:
           name: "title",
           widget: "string",
           required: true,
-          i18n: true
+          i18n: true,
         }
       - {
           label: "Post image",
           name: "post_image",
           widget: "image",
           required: false,
-          i18n: duplicate
+          i18n: duplicate,
         }
       - {
           label: "Body",
           name: "body",
           widget: "text",
           required: true,
-          i18n: true
+          i18n: true,
         }
       - {
           label: "Date of creation",
           name: "date_of_creation",
-          widget: "number",
+          widget: "date",
           required: true,
-          i18n: duplicate
+          i18n: duplicate,
         }
       - {
           label: "Authors",
@@ -381,11 +381,5 @@ collections:
           required: false,
           i18n: true,
           field:
-            {
-              label: "Image",
-              name: "image",
-              widget: "image",
-              i18n: duplicate,
-            },
+            { label: "Image", name: "image", widget: "image", i18n: duplicate },
         }
-      
