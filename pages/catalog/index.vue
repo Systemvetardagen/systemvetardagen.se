@@ -5,7 +5,7 @@
       <Button link="/companies/" bColor="gradient">Companies</Button>
       <h2>Inlägg</h2>
       <BlogCard v-for="post of filteredPosts" :post="post" :key="post.slug" />
-      <h2>Schema</h2>
+      <h2>{{ $t("aulanod-program") }}</h2>
       <div class="schedule">
         <div v-for="event in schedule" :key="event.id" class="schedule-row">
           <p class="event-name">{{ event.company }}</p>

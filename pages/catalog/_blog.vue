@@ -1,16 +1,18 @@
 <template>
   <div class="wrapper">
-    <img v-if="post.post_image" :src="post.post_image" />
-    <h1>{{ post.title }}</h1>
-    <p>{{ parseDate(post.date_of_creation) }}</p>
-    <p>{{ post.body }}</p>
-    <h3>Authors</h3>
-    <li v-for="item in post.authors" :key="item.id">{{ item.name }}</li>
-    <ul v-if="post.images">
-      <li v-for="item in post.images" :key="item.id">
-        <img :src="item" />
-      </li>
-    </ul>
+    <section>
+      <img v-if="post.post_image" :src="post.post_image" />
+      <h1>{{ post.title }}</h1>
+      <p>{{ parseDate(post.date_of_creation) }}</p>
+      <p>{{ post.body_text }}</p>
+      <h3>Authors</h3>
+      <li v-for="item in post.authors" :key="item.id">{{ item.name }}</li>
+      <ul v-if="post.images">
+        <li v-for="item in post.images" :key="item.id">
+          <img :src="item" />
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
 <script>
