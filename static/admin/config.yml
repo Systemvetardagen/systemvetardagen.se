@@ -346,7 +346,7 @@ collections:
         }
       - {
           label: "Body",
-          name: "body",
+          name: "bodyy",
           widget: "text",
           required: true,
           i18n: true,
