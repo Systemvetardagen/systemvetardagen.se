@@ -8,7 +8,8 @@
         <span
           class="dropdown-toggle programs-toggle"
           @click="programsVisible = !programsVisible"
-          >all programs
+          >
+          {{ filterText(selectedPrograms, "programs") }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -47,7 +48,8 @@
         <span
           class="dropdown-toggle positions-toggle"
           @click="positionsVisible = !positionsVisible"
-          >all positions
+          >
+          {{ filterText(selectedPositions, "positions") }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -230,6 +232,14 @@ export default {
       if (!(event.target.closest(`.` + filter + `-toggle`) || event.target.closest(`.dropdown-container`))) {
         this[filter + "Visible"] = false;
       }
+    },
+
+    filterText(selected, type) {
+      return selected.length < 1 ?
+              "all " + type :
+              selected.length < 2 ?
+                selected[0] :
+                selected.length + " " + type
     }
   },
 };
