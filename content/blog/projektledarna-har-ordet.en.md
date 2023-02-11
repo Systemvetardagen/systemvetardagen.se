@@ -1,5 +1,5 @@
 ---
-title: The Project Leaders have the floor!
+title: Finally in person again!
 post_image: /img/uploads/projektledarna.jpg
 body_text: >-
   Did we know what we were getting into when in April 2022 we agreed to our

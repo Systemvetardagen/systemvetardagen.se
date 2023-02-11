@@ -6,8 +6,13 @@
         :src="post.post_image"
         class="post-img"
       ></nuxt-img>
-      <h3>{{ post.title }}</h3>
-      <p class="body-text">{{ post.body_text }}</p>
+      <div class="card-text">
+        <h3>{{ post.title }}</h3>
+        <p class="body-text">{{ post.body_text }}</p>
+        <Nuxt-Link :to="post.slug" class="link"
+          >{{ $t("read-more") }} ></Nuxt-Link
+        >
+      </div>
     </article>
   </NuxtLink>
 </template>
@@ -22,11 +27,18 @@ export default {
 
 <style scoped>
 .card {
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 1rem;
-  width: 24rem;
+  width: 100%;
+  max-width: 24rem;
   color: initial;
-  border: solid 0.25rem var(--clr-grey-300);
+  border: solid 0.15rem var(--clr-grey-100);
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .body-text {
@@ -38,9 +50,20 @@ export default {
 }
 
 .post-img {
-  height: 100%;
-  width: auto;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
   border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.link {
+  margin-top: 1rem;
+  color: var(--clr-blue-600);
+}
+
+p {
+  color: var(--clr-grey-500);
 }
 </style>

@@ -1,5 +1,5 @@
 ---
-title: Projektledarna har ordet!
+title: Äntligen på plats igen!
 post_image: /img/uploads/projektledarna.jpg
 body_text: >-
   Visste vi vad vi gav oss in på när vi i april 2022 tackade ja till våra
@@ -25,5 +25,4 @@ body_text: >-
 
   Alex Littorin Projektledare, Josefin Lundgren Projektkoordinator
 date_of_creation: 2023-02-11T19:59:08.210Z
-authors: []
 ---

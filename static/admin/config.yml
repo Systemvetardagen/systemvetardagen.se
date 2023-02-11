@@ -347,7 +347,7 @@ collections:
       - {
           label: "Body",
           name: "body_text",
-          widget: "text",
+          widget: "markdown",
           required: true,
           i18n: true,
         }
