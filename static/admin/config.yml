@@ -322,3 +322,64 @@ collections:
           required: false,
           i18n: duplicate,
         }
+
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{title}}"
+    i18n: true
+    fields:
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          required: true,
+          i18n: true,
+        }
+      - {
+          label: "Post image",
+          name: "post_image",
+          widget: "image",
+          required: false,
+          i18n: duplicate,
+        }
+      - {
+          label: "Body",
+          name: "body_text",
+          widget: "text",
+          required: true,
+          i18n: true,
+        }
+      - {
+          label: "Date of creation",
+          name: "date_of_creation",
+          widget: "date",
+          required: true,
+          i18n: duplicate,
+        }
+      - {
+          label: "Authors",
+          name: "authors",
+          widget: "list",
+          allow_add: true,
+          required: false,
+          i18n: true,
+          field:
+            {
+              label: "Author",
+              name: "author",
+              widget: "string",
+              i18n: duplicate,
+            },
+        }
+      - {
+          label: "Images",
+          name: "images",
+          widget: "list",
+          allow_add: true,
+          required: false,
+          i18n: true,
+          field:
+            { label: "Image", name: "image", widget: "image", i18n: duplicate },
+        }
