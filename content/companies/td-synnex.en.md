@@ -1,5 +1,5 @@
 ---
-logo: /img/uploads/td-synnex_logo_white-1.png
+logo: /img/uploads/td_synnex_logo.png
 title: TD SYNNEX
 slogan: Unlock your potential
 founded: 1972
