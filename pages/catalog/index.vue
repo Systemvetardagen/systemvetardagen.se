@@ -1,15 +1,17 @@
 <template>
   <div class="wrapper">
-    <section>
-      <h1>Catalog</h1>
-      <Button link="/companies/" bColor="gradient">Companies</Button>
-      <h2>Inlägg</h2>
+    <section class="content">
+      <h1>{{ $t("catalog") }}</h1>
+      <Button link="/companies/" bColor="gradient">{{
+        $t("all-companies-btn")
+      }}</Button>
+      <h2>{{ $t("posts-heading") }}</h2>
       <BlogCard v-for="post of filteredPosts" :post="post" :key="post.slug" />
       <h2>{{ $t("aulanod-program") }}</h2>
       <div class="schedule">
         <div v-for="event in schedule" :key="event.id" class="schedule-row">
+          <p class="event-time">{{ event.time }}</p>
           <p class="event-name">{{ event.company }}</p>
-          <p>{{ event.time }}</p>
           <p>{{ event.title }}</p>
         </div>
       </div>
@@ -71,11 +73,19 @@ export default {
 };
 </script>
 <style scoped>
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .schedule {
   max-width: 48rem;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 1rem;
+  overflow-x: scroll;
 }
 .schedule-row {
   display: contents;
@@ -83,5 +93,9 @@ export default {
 
 .event-name {
   font-weight: bold;
+}
+
+.event-time {
+  white-space: nowrap;
 }
 </style>

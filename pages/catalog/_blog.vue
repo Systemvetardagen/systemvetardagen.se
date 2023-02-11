@@ -3,10 +3,19 @@
     <section>
       <img v-if="post.post_image" :src="post.post_image" />
       <h1>{{ post.title }}</h1>
-      <p>{{ parseDate(post.date_of_creation) }}</p>
+      <div class="post-info">
+        <p>
+          <span class="info-label">Posted: </span
+          >{{ parseDate(post.date_of_creation) }}
+        </p>
+        <p>
+          <span class="info-label">Authors: </span>
+          <span v-for="item in post.authors" :key="item.id"
+            >{{ item.name }}
+          </span>
+        </p>
+      </div>
       <p>{{ post.body_text }}</p>
-      <h3>Authors</h3>
-      <li v-for="item in post.authors" :key="item.id">{{ item.name }}</li>
       <ul v-if="post.images">
         <li v-for="item in post.images" :key="item.id">
           <img :src="item" />
@@ -49,8 +58,18 @@ export default {
       var day = date.getDate();
       var month = this.getMonthName(date.getMonth()); // Months are zero indexed
       var year = date.getFullYear();
-      return `Posted ${day} ${month}, ${year}`;
+      return `${day} ${month}, ${year}`;
     },
   },
 };
 </script>
+
+<style scoped>
+.post-info {
+  padding: 2rem;
+}
+
+.info-label {
+  font-weight: bold;
+}
+</style>
