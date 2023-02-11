@@ -276,7 +276,7 @@ label {
   border: none;
 }
 
-.search-input:focus {
+.search-field:focus-within {
   border-color: var(--clr-blue-500);
 }
 
