@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/ey_logo_beam_rgb.gif
 title: "EY "
 sponsor: false
 slogan: "Building a Better Working World "
