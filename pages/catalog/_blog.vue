@@ -1,26 +1,32 @@
 <template>
   <div class="wrapper">
     <section>
-      <img v-if="post.post_image" :src="post.post_image" />
-      <h1>{{ post.title }}</h1>
-      <div class="post-info">
-        <p>
-          <span class="info-label">Posted: </span
-          >{{ parseDate(post.date_of_creation) }}
-        </p>
-        <p>
-          <span class="info-label">Authors: </span>
-          <span v-for="item in post.authors" :key="item.id"
-            >{{ item.name }}
-          </span>
-        </p>
+      <div class="content">
+        <nuxt-img
+          class="post-img"
+          v-if="post.post_image"
+          :src="post.post_image"
+        />
+        <h2>{{ post.title }}</h2>
+        <div v-if="post.date_of_creation || post.authors" class="post-info">
+          <p>
+            <span v-if="post.date_of_creation" class="info-label">Posted: </span
+            >{{ parseDate(post.date_of_creation) }}
+          </p>
+          <p v-if="post.authors">
+            <span class="info-label">Authors: </span>
+            <span v-for="item in post.authors" :key="item.id"
+              >{{ item.name }}
+            </span>
+          </p>
+        </div>
+        <p>{{ post.body_text }}</p>
+        <ul v-if="post.images">
+          <li v-for="item in post.images" :key="item.id">
+            <img :src="item" />
+          </li>
+        </ul>
       </div>
-      <p>{{ post.body_text }}</p>
-      <ul v-if="post.images">
-        <li v-for="item in post.images" :key="item.id">
-          <img :src="item" />
-        </li>
-      </ul>
     </section>
   </div>
 </template>
@@ -65,8 +71,22 @@ export default {
 </script>
 
 <style scoped>
+.content {
+  max-width: 65ch;
+}
+
+h2 {
+  text-align: center;
+}
+
+.post-img {
+  max-width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
 .post-info {
-  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .info-label {

@@ -6,8 +6,10 @@
         :src="post.post_image"
         class="post-img"
       ></nuxt-img>
-      <h3>{{ post.title }}</h3>
-      <p class="body-text">{{ post.body_text }}</p>
+      <div class="card-text">
+        <h3>{{ post.title }}</h3>
+        <p class="body-text">{{ post.body_text }}</p>
+      </div>
     </article>
   </NuxtLink>
 </template>
@@ -22,11 +24,12 @@ export default {
 
 <style scoped>
 .card {
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 1rem;
-  width: 24rem;
+  width: 100%;
+  max-width: 24rem;
   color: initial;
-  border: solid 0.25rem var(--clr-grey-300);
+  border: solid 0.15rem var(--clr-grey-100);
 }
 
 .body-text {
@@ -40,7 +43,13 @@ export default {
 .post-img {
   height: 100%;
   width: auto;
+  max-width: 100%;
   object-fit: cover;
   border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--clr-grey-500);
 }
 </style>
