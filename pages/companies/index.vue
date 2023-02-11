@@ -82,6 +82,10 @@
             Clear selection
           </button>
         </div>
+
+        <button @click.prevent="selectedPrograms = []; selectedPositions = []">
+          Clear filters
+        </button>
       </div>
 
       <div class="search-field">
@@ -160,14 +164,14 @@ export default {
       programsVisible: false,
       selectedPrograms: [],
       selectedPositions: [],
-      filterPrograms: [],
-      filterPositions: [],
       searchText: null,
     };
   },
+
   components: {
     CompanyCard,
   },
+
   async asyncData({ $content, error }) {
     let posts;
     try {
@@ -177,6 +181,7 @@ export default {
     }
     return { posts };
   },
+
   computed: {
     showEnglishMessage() {
       return this.$i18n.locale === "sv";
@@ -185,10 +190,19 @@ export default {
       return this.posts.filter((e) => e.slug.includes("." + this.$i18n.locale));
     },
   },
+
   created() {
     this.allPrograms = this.$t("filter-programs");
     this.allPositions = this.$t("filter-positions");
   },
+
+  mounted() {
+    document.addEventListener("click", event => {
+      this.hideDropdown(event, "programs");
+      this.hideDropdown(event, "positions");
+    });
+  },
+
   methods: {
     filterOneCondition(condition, selection) {
       // when no filter selected, display all posts
@@ -199,16 +213,24 @@ export default {
       let formattedSelection = selection.map((s) => s.replace(/&/g, "och"));
       return formattedSelection.some((s) => condition.includes(s));
     },
+
     searchCompany(title, searchText) {
       if (!searchText) {
         return true;
       }
-      return new RegExp(searchText, 'i').test(title)
+      return new RegExp(searchText, 'i').test(title);
     },
+
     clearInputAndFocus() {
       this.searchText = null;
       this.$refs.inputRef.focus();
     },
+
+    hideDropdown(event, filter) {
+      if (!(event.target.closest(`.` + filter + `-toggle`) || event.target.closest(`.dropdown-container`))) {
+        this[filter + "Visible"] = false;
+      }
+    }
   },
 };
 </script> 
@@ -292,6 +314,7 @@ label {
   justify-content: center;
   max-width: 64rem;
 }
+
 .company-card {
   margin: 1rem;
 }
