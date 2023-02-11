@@ -4,7 +4,7 @@ title: Arbetsförmedlingen
 slogan: "Jobba hos oss - utvecklas tillsammans med 1 000 IT-kollegor "
 founded: 1902
 number_of_employees_in_Sweden: ""
-number_of_employees_in_internationally: 0
+number_of_employees_in_internationally: ""
 area_of_business: "Kom till oss och prata om bland annat: Systemutveckling,
   testautomation, IT-drift, UX-design, datalagring, cybersäkerhet, AI, NLP,
   robotics, CRM-system, avancerad dataanalys, kravhantering av IT-system,

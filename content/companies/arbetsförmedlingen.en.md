@@ -3,7 +3,7 @@ logo: /img/uploads/arbetsformedlingen.png
 title: Arbetsförmedlingen
 founded: 1902
 number_of_employees_in_Sweden: ""
-number_of_employees_in_internationally: 0
+number_of_employees_in_internationally: ""
 area_of_business: Systems development, test automation, IT operation, UX, data
   storage, cyber security, AI, NLP, robotics, CRM systems, advanced data
   analysis, requirements management of IT systems, testing, process modelling,
