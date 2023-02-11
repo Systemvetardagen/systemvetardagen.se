@@ -23,6 +23,17 @@ body_text: >-
   Varmt välkomna till Systemvetardagen
 
 
-  Alex Littorin Projektledare, Josefin Lundgren Projektkoordinator
+  **Alex Littorin**\
+
+  Projektledare\
+
+  [LinkedIn](https://www.linkedin.com/in/alex-littorin-6a7907bb/)
+
+
+  **Josefin Lundgren**\
+
+  Projektkoordinator\
+
+  [LinkedIn](https://www.linkedin.com/in/josefinlundgren/)
 date_of_creation: 2023-02-11T19:59:08.210Z
 ---
