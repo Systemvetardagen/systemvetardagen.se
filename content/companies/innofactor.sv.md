@@ -13,7 +13,7 @@ about_us: "Vi jobbar tillsammans, hjälper och utmanar varandra och har roligt p
   innovativa och avancerade verksamhetslösningar. Vårt huvudsakliga uppdrag är
   att ge både organisationer och individer chansen att göra en skillnad i den
   digitala världen. "
-qualifications: CRM, .net ,jira Systemvetare
+qualifications: CRM, .net, Jira Systemvetare
 contact_persons:
   - name: "Elin Trotz "
     email: elin.trotz@innofactor.com

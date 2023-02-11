@@ -10,7 +10,7 @@ area_of_business: Systems development, business intelligence, project management
 about_us: "Our mission is to drive the #ModernDigitalOrganization. It presents
   us with the opportunity - and challenge - to think people-centric in every
   piece of software we build and every service we deliver."
-qualifications: .net, microsoft 365, power platform
+qualifications: .net, Microsoft 365, Power Platform
 contact_persons:
   - name: "Elin Trotz "
     email: elin.trotz@innofactor.com
