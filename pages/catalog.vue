@@ -7,8 +7,8 @@
       <img :src="post.post_image">
       <p>{{ post.date_of_creation }}</p>
       <p>{{ post.body }}</p>
-      <li v-for="items in post.authors">{{ items }}</li>
-      <li v-for="items in post.images"
+      <li v-for="item in post.authors">{{ item }}</li>
+      <li v-for="item in post.images"><img :src="item"></li>
     
     </div>
 
