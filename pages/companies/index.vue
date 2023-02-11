@@ -174,8 +174,7 @@ export default {
       if (!searchText) {
         return true
       }
-      let strippedInput = searchText.replace(/[^a-z]+/gi, '').toLowerCase()
-      return new RegExp(strippedInput.split('').join('.*?'), 'i').test(title)
+      return new RegExp(searchText, 'i').test(title)
     },
     clearInputAndFocus() {
       this.searchText = null
