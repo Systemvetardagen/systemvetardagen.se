@@ -331,33 +331,33 @@ collections:
     i18n: true
     fields:
       - {
-        label: "Title",
-        name: "title",
-        widget: "string",
-        required: true,
-        i18n: true
-      }
+          label: "Title",
+          name: "title",
+          widget: "string",
+          required: true,
+          i18n: true
+        }
       - {
-        label: "Post image",
-        name: "post_image",
-        widget: "image",
-        required: false,
-        i18n: duplicate
-      }
+          label: "Post image",
+          name: "post_image",
+          widget: "image",
+          required: false,
+          i18n: duplicate
+        }
       - {
-        label: "Body",
-        name: "body",
-        widget: "text",
-        required: true,
-        i18n: true
-      }
+          label: "Body",
+          name: "body",
+          widget: "text",
+          required: true,
+          i18n: true
+        }
       - {
-        label: "Date of creation",
-        name: "date_of_creation",
-        widget: "number",
-        required: true,
-        i18n: duplicate
-      }
+          label: "Date of creation",
+          name: "date_of_creation",
+          widget: "number",
+          required: true,
+          i18n: duplicate
+        }
       - {
           label: "Authors",
           name: "authors",
@@ -373,7 +373,7 @@ collections:
               i18n: duplicate,
             },
         }
-        - {
+      - {
           label: "Images",
           name: "images",
           widget: "list",
