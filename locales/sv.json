@@ -102,8 +102,8 @@
   "employees-int": "Employees internationally",
   "bis-area": "Area of Business",
   "looking-for": "is looking for",
-  "programs": "Programs",
-  "positions": "Positions",
+  "programs": "Program",
+  "positions": "Positioner",
   "company-contact": "Contact",
   "go-back": "Back to Catalog",
   "go-top": "Back to Top",
@@ -126,5 +126,10 @@
     "Heltidstjänster",
     "Master thesis",
     "Deltidstjänster"
-  ]
+  ],
+  "showing-companies-for": "Visar företag för ",
+  "and": " och ",
+  "all": "alla",
+  "clear-filters": "Rensa filter",
+  "clear-selection": "Rensa"
 }

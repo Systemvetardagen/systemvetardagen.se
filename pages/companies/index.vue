@@ -4,12 +4,12 @@
       <h1 class="title">{{ $t("companies") }}</h1>
 
       <div class="filter-paragraph">
-        Showing companies for
+        {{ $t("showing-companies-for") }}
         <span
           class="dropdown-toggle programs-toggle"
           @click="programsVisible = !programsVisible"
-          >
-          {{ filterText(selectedPrograms, "programs") }}
+        >
+          {{ filterText(selectedPrograms, $t("programs").toLowerCase()) }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -41,15 +41,15 @@
             <label :for="program">{{ program }}</label>
           </div>
           <button @click.prevent="selectedPrograms = []">
-            Clear selection
+            {{ $t("clear-selection") }}
           </button>
         </div>
-        and
+        {{ $t("and") }}
         <span
           class="dropdown-toggle positions-toggle"
           @click="positionsVisible = !positionsVisible"
-          >
-          {{ filterText(selectedPositions, "positions") }}
+        >
+          {{ filterText(selectedPositions, $t("positions").toLowerCase()) }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -65,7 +65,10 @@
             />
           </svg>
         </span>
-        <div v-show="positionsVisible" class="dropdown-container">
+        <div
+          v-show="positionsVisible"
+          class="dropdown-container positions-dropdown"
+        >
           <div
             class="dropdown-positions"
             v-for="position in allPositions"
@@ -81,14 +84,19 @@
             <label :for="position">{{ position }}</label>
           </div>
           <button @click.prevent="selectedPositions = []">
-            Clear selection
+            {{ $t("clear-selection") }}
           </button>
         </div>
-
-        <button @click.prevent="selectedPrograms = []; selectedPositions = []">
-          Clear filters
-        </button>
       </div>
+      <button
+        @click.prevent="
+          selectedPrograms = [];
+          selectedPositions = [];
+        "
+        class="clear-filter-btn"
+      >
+        {{ $t("clear-filters") }}
+      </button>
 
       <div class="search-field">
         <svg
@@ -167,6 +175,7 @@ export default {
       selectedPrograms: [],
       selectedPositions: [],
       searchText: null,
+      allString: null,
     };
   },
 
@@ -196,10 +205,11 @@ export default {
   created() {
     this.allPrograms = this.$t("filter-programs");
     this.allPositions = this.$t("filter-positions");
+    this.allString = this.$t("all");
   },
 
   mounted() {
-    document.addEventListener("click", event => {
+    document.addEventListener("click", (event) => {
       this.hideDropdown(event, "programs");
       this.hideDropdown(event, "positions");
     });
@@ -220,7 +230,7 @@ export default {
       if (!searchText) {
         return true;
       }
-      return new RegExp(searchText, 'i').test(title);
+      return new RegExp(searchText, "i").test(title);
     },
 
     clearInputAndFocus() {
@@ -229,18 +239,23 @@ export default {
     },
 
     hideDropdown(event, filter) {
-      if (!(event.target.closest(`.` + filter + `-toggle`) || event.target.closest(`.dropdown-container`))) {
+      if (
+        !(
+          event.target.closest(`.` + filter + `-toggle`) ||
+          event.target.closest(`.dropdown-container`)
+        )
+      ) {
         this[filter + "Visible"] = false;
       }
     },
 
     filterText(selected, type) {
-      return selected.length < 1 ?
-              "all " + type :
-              selected.length < 2 ?
-                selected[0] :
-                selected.length + " " + type
-    }
+      return selected.length < 1
+        ? this.allString + " " + type
+        : selected.length < 2
+        ? selected[0]
+        : selected.length + " " + type;
+    },
   },
 };
 </script> 
@@ -257,14 +272,23 @@ export default {
   gap: 0.5rem;
 }
 
+.positions-dropdown {
+  right: 0;
+}
+
 .dropdown-toggle {
   padding: 0.25rem;
+  border-radius: 0.5rem;
   -moz-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 
 .filter-paragraph {
   line-height: 200%;
+  margin-top: 2rem;
+  font-family: work-sans;
+  position: relative;
 }
 
 .programs-toggle {
@@ -289,7 +313,7 @@ label {
 .search-field {
   width: 24rem;
   max-width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   border-radius: 0.5rem;
   border: solid 0.2rem var(--clr-grey-200);
   padding: 0.5rem;
@@ -327,5 +351,20 @@ label {
 
 .company-card {
   margin: 1rem;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: var(--clr-blue-100);
+  color: var(--clr-blue-900);
+  font-family: Work-Sans;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.clear-filter-btn {
+  margin-top: 1rem;
 }
 </style>

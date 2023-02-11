@@ -126,5 +126,10 @@
     "Full time positions",
     "Master thesis",
     "Part-time positions"
-  ]
+  ],
+  "showing-companies-for": "Showing companies for ",
+  "and": "and",
+  "all": "all",
+  "clear-filters": "Clear filters",
+  "clear-selection": "Clear"
 }
