@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/ea_logo.png
 title: Electronic Arts
 slogan: Vi finns till för att inspirera världen att spela
 founded: 1980

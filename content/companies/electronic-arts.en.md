@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/ea_logo.png
 title: Electronic Arts
 slogan: We exist to inspire the world to play
 founded: 1980
