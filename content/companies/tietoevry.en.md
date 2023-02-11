@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/tietoevry-logo.png
 title: Tietoevry
 slogan: We create purposeful technology that reinvents the world for good.
 founded: 1968
