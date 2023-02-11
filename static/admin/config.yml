@@ -327,7 +327,7 @@ collections:
     label: "Preview"
     folder: "content/preview"
     create: true
-    slug: "{{name}}"
+    slug: "{{title}}"
     i18n: true
     fields:
       - {
