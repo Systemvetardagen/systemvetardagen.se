@@ -4,7 +4,7 @@ title: HiQ
 sponsor: false
 slogan: Simplifying the world with tech
 founded: 1995
-number_of_employees_in_Sweden: 0
+number_of_employees_in_Sweden: ""
 number_of_employees_in_internationally: 2000
 area_of_business: Java Developer, Front-end Developer, Embedded Software
   Developer, C++ Developer, DevOps, Scrum Master, Solution Architect, C#
