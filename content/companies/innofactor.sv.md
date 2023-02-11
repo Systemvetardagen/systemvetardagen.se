@@ -2,7 +2,7 @@
 logo: /img/uploads/original.png
 title: Innofactor
 sponsor: true
-slogan: "People first "
+slogan: People First
 founded: 1999
 number_of_employees_in_Sweden: 70
 number_of_employees_in_internationally: 500
@@ -26,5 +26,8 @@ positions:
   - Traineeprogram
   - Heltidstjänster
   - Examensarbete
-sponsor_images: []
+banner: /img/uploads/innofactor_banner.png
+sponsor_images:
+  - /img/uploads/innfactor_picture1_croppe.png
+  - /img/uploads/innfactor_picture2_croppe.png
 ---
