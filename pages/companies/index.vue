@@ -4,7 +4,10 @@
       <h1 class="title">{{ $t("companies") }}</h1>
 
       <div class="search-field">
-        <input type="text" v-model="searchText" placeholder="Search companies by name">
+        <input type="text" ref="inputRef" v-model.trim="searchText" placeholder="Search companies by name">
+        <button v-if="searchText" @click.prevent="clearInputAndFocus">
+          Clear
+        </button>
       </div>
 
       <div class="filter-paragraph">
@@ -173,6 +176,10 @@ export default {
       }
       let strippedInput = searchText.replace(/[^a-z]+/gi, '').toLowerCase()
       return new RegExp(strippedInput.split('').join('.*?'), 'i').test(title)
+    },
+    clearInputAndFocus() {
+      this.searchText = null
+      this.$refs.inputRef.focus()
     }
   },
 };
