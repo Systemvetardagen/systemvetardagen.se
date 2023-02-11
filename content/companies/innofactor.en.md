@@ -2,11 +2,11 @@
 logo: /img/uploads/original.png
 title: Innofactor
 sponsor: true
-slogan: "People first "
+slogan: People First
 founded: 1999
 number_of_employees_in_Sweden: 70
 number_of_employees_in_internationally: 500
-area_of_business: Systems development, business intelligence, project management
+area_of_business: Systems Development, Business Intelligence, Project Management.
 about_us: "Our mission is to drive the #ModernDigitalOrganization. It presents
   us with the opportunity - and challenge - to think people-centric in every
   piece of software we build and every service we deliver."
@@ -23,4 +23,8 @@ positions:
   - Traineeprogram
   - Full time positions
   - Master thesis
+banner: /img/uploads/innofactor_banner.png
+sponsor_images:
+  - /img/uploads/innfactor_picture1_croppe.png
+  - /img/uploads/innfactor_picture2_croppe.png
 ---
