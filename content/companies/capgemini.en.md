@@ -47,11 +47,30 @@ extra_text: >-
   * Competitive salary as well as great benefits and perks.\
     Ready to kickstart your career? Apply to IgnITe Graduate Program, next start in September 2023. For more information visit: [IgnITe Graduate Program](<* https://www.capgemini.com/se-en/careers/career-paths/students-and-graduates/ignite-graduate-program/>)
 qualifications: Consulting and technology services, innovation and digital transformation.
-contact_persons: []
+contact_persons:
+  - name: Tarkan Cakici
+    email: tarkan.cakici@capgemini.com
+    phone_number: "0736292443"
+  - name: Emma Karlsson
+    email: emma.a.karlsson@capgemini.com
+    phone_number: "0732316381"
 link_to_positions: https://www.capgemini.com/se-en/careers/
-program: []
-positions: []
+program:
+  - Enterprise Systems and Service Design
+  - Computer and System Sciences
+  - Computer Science and Software Engineering
+  - Administration and Information Technology
+  - Market Comunication and Information Technology
+  - Interaction Design
+  - Master
+positions:
+  - Traineeprogram
+  - Full time positions
 positions_other: null
 banner: /img/uploads/capgemini_banner.png
 youtube_video: https://www.youtube.com/watch?v=PO-0YqzVtgM&t=3s
+sponsor_images:
+  - /img/uploads/capgemini_picture-1_cropped.png
+  - /img/uploads/capgemini_picture-2_cropped.png
+  - /img/uploads/capgemini_picture-3_cropped.png
 ---
