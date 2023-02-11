@@ -9,6 +9,9 @@
       <div class="card-text">
         <h3>{{ post.title }}</h3>
         <p class="body-text">{{ post.body_text }}</p>
+        <Nuxt-Link :to="post.slug" class="link"
+          >{{ $t("read-more") }} ></Nuxt-Link
+        >
       </div>
     </article>
   </NuxtLink>
@@ -32,6 +35,12 @@ export default {
   border: solid 0.15rem var(--clr-grey-100);
 }
 
+.card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .body-text {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -47,6 +56,11 @@ export default {
   object-fit: cover;
   border-radius: 1rem;
   margin-bottom: 1rem;
+}
+
+.link {
+  margin-top: 1rem;
+  color: var(--clr-blue-600);
 }
 
 p {
