@@ -4,44 +4,40 @@
   "event_description": "Kom till Systemvetardagen, en av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT-branschen!",
   "catalog_btn_title": "Katalog",
   "contact_us_btn": "Kontakta oss",
-  
-  
+
   "sponsors": "Sponsorer",
   "exhibitor": "Utställare",
 
-
-  "book_session":"Book Interview Sessions",
+  "book_session": "Book Interview Sessions",
   "student_node_intro": "This year we have once again partnered up with StudentNode to offer students the opportunity of applying for interview sessions with the companies!",
-  "student_node_howtoapply":"Follow the steps to apply:",
+  "student_node_howtoapply": "Follow the steps to apply:",
   "student_node_step1": "Go to ",
-  "student_node_link":"mitt.systemvetardagen.se",
-  "student_node_step2":"Register an account",
+  "student_node_link": "mitt.systemvetardagen.se",
+  "student_node_step2": "Register an account",
   "student_node_step3": "Fill in all your info for the account and upload your CV. This way you increase your chances of getting your desired job!",
-  "student_node_step4":"Write and upload personlized cover letters for the companies that you apply for! This will make you stand out and in turn increase your chances!",
+  "student_node_step4": "Write and upload personlized cover letters for the companies that you apply for! This will make you stand out and in turn increase your chances!",
   "student_node_step5": "Find the companies you are most interested in and select a time of your choosing to apply for an interview session.",
-  "student_node_step6":"Press “Ansök” to apply for the interview(s) and then press “Send times to my email” to send the selected times to your email inbox. Don’t forget to save the times to your calendar!",
- 
- 
+  "student_node_step6": "Press “Ansök” to apply for the interview(s) and then press “Send times to my email” to send the selected times to your email inbox. Don’t forget to save the times to your calendar!",
+
   "coming_soon": "Kommer snart...",
   "it_is_almost_time!": "Snart är det dags!",
   "disk_introduction1": "För 27:e året i rad arrangeras Systemvetardagen på Stockholms universitet. Det är",
   "disk": " studentkåren DISKs",
   "disk_introduction2": "från Data- och Systemvetenskapliga institutionen (DSV) egna arbetsmarknadsdag. Under dagen knyts värdefulla kontakter mellan studenter och näringsliv. Systemvetardagen är en unik mötesplats för studenter & organisationer inom IT-branschen.",
-  
+
   "info_heading": "Tips för dig som deltar",
-  
+
   "before_the_fair": "Inför mässan",
   "before_the_fair_description1": "Uppdatera ditt CV och ha det lättillgängligt så att du enkelt kan ge eller skicka det vid förfrågan.",
   "before_the_fair_description2": "Kolla igenom katalogen (släpps snart!) och notera vilka företag du är intresserad av att prata med!",
   "before_the_fair_description3": "Kolla in vilka företagsevent som du är intresserad av att gå på. Schemat kommer dyka upp i katalogen inom kort.",
   "before_the_fair_description4": "Nu är du väl förberedd för mässan!",
- 
+
   "during_the_fair": "Under mässan",
   "during_the_fair_description1": "Använd mässkartan för att hitta företagen du är intresserad av.",
   "during_the_fair_description2": "Gå runt på mässgolvet och prata med företagen. De är där för att få kontakt med studenter, så passa på!",
   "during_the_fair_description3": "Lär dig något nytt – Under dagen kommer det att hållas företagsevent i Aula NOD. Se på schemat vilka event som låter intressanta!",
- 
- 
+
   "frequently_asked_questions": "Vanliga frågor",
   "question1": "Jag går inte på Stockholms Universitet, får jag ändå delta?",
   "answer1": "Ja, alla studenter är välkomna!",
@@ -49,29 +45,23 @@
   "answer2": "Nej, det är helt kostnadsfritt för studenter att delta på mässan.",
   "question3": "Kan jag delta på mässan om jag inte talar svenska?",
   "answer3": "Absolut! Mäss-hemsidan erbjuds på både svenska och engelska, och företagen som deltar pratar gärna engelska.",
- 
- 
+
   "old_cat_title": "Årets katalog!",
   "old_cat_description": "Katalogen kommer väldigt snart! I den kommer du att hitta information om sponsorerna, utställande företag och mycket mer!",
   "old_cat_btn": "Katalog",
 
- 
   "catalog_2022": "Katalog 2021",
   "iPad1": "Anmäl dig och tävla om en iPad!",
   "iPad2": "Var med i utlottningen av en iPad! Delta genom att följa dessa enkla steg:",
-  
-  
-  
+
   "follow_on_instagram": "Följ oss på Instagram ",
   "sign_for_event": "Skapa en profil på mässhemsidan och anmäl dig till Systemvetardagen 2022!",
   "create_profile": "Skapa en profil",
   "send": "Skicka",
 
-
   "footer_follow_title": "Följ oss",
   "footer_address_title": "Adress",
   "footer_contact_title": "Kontakt",
-
 
   "home": "Hem",
   "catalog": "Katalog",
@@ -82,7 +72,6 @@
   "name": "Namn",
   "email": "E-post",
   "message": "Meddelande",
-
 
   "contact-form-title": "Kontakta oss",
   "contact-form-name": "Namn",
@@ -102,12 +91,36 @@
   "employees-int": "Employees internationally",
   "bis-area": "Area of Business",
   "looking-for": "is looking for",
-  "programs": "Programs",
-  "positions": "Positions",
+  "programs": "Program",
+  "positions": "Positioner",
   "company-contact": "Contact",
   "go-back": "Back to Catalog",
   "go-top": "Back to Top",
 
+  "filter-programs": [
+    "Affärssystem & tjänstedesign",
+    "Data- & systemvetenskap",
+    "Datorspelsutveckling",
+    "Datavetenskap",
+    "Ekonomi & IT",
+    "Marknadskommunikation & IT",
+    "Digitala medier",
+    "Interaktionsdesign",
+    "Master"
+  ],
+  "filter-positions": [
+    "Praktikplatser",
+    "Utlandstjänster",
+    "Traineeprogram",
+    "Heltidstjänster",
+    "Master thesis",
+    "Deltidstjänster"
+  ],
+  "showing-companies-for": "Visar företag för ",
+  "and": " och ",
+  "all": "alla",
+  "clear-filters": "Rensa filter",
+  "clear-selection": "Rensa",
   "posts-heading": "Projektledarna har ordet!",
   "read-more": "Läs mer",
   "aulanod-program": "Aula NOD Program",

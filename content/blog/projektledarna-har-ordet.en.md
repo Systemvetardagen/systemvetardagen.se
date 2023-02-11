@@ -24,6 +24,17 @@ body_text: >-
   Warmly welcome to Systemvetardagen
 
 
-  Alex Littorin Project Manager, Josefin Lundgren Project Coordinator
+  **Alex Littorin**\
+
+  Project Leader\
+
+  [LinkedIn](https://www.linkedin.com/in/alex-littorin-6a7907bb/)
+
+
+  **Josefin Lundgren**\
+
+  Project Coordinator[\
+
+  LinkedIn](https://www.linkedin.com/in/josefinlundgren/)
 date_of_creation: 2023-02-11T19:59:08.210Z
 ---
