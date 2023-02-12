@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="post.slug">
+  <NuxtLink :to="localePath({name: 'catalog-blog', params: {blog: post.slug.split('.')[0]}})">
     <article class="card">
       <nuxt-img
         v-if="post.post_image"
@@ -9,7 +9,7 @@
       <div class="card-text">
         <h3>{{ post.title }}</h3>
         <p class="body-text">{{ post.body_text }}</p>
-        <Nuxt-Link :to="post.slug" class="link"
+        <Nuxt-Link :to="localePath({name: 'catalog-blog', params: {blog: post.slug.split('.')[0]}})" class="link"
           >{{ $t("read-more") }} ></Nuxt-Link
         >
       </div>
