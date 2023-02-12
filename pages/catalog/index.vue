@@ -155,7 +155,9 @@ export default {
 .content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 4rem;
+  max-width: 100%;
 }
 
 h1,
@@ -168,6 +170,7 @@ h2 {
 }
 
 .blog-section {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
