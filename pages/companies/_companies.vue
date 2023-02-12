@@ -125,19 +125,25 @@
             {{ post.title }}
             {{ $t("looking-for") }}
           </h3>
-          <div class="match-list-items">
-            <ul>
-              <p style="font-weight: 700">{{ $t("programs") }}:</p>
-              <li v-for="program in post.program" :key="program.id">
-                {{ program }}
-              </li>
-            </ul>
-            <ul>
-              <p style="font-weight: 700">{{ $t("positions") }}:</p>
-              <li v-for="position in post.positions" :key="position.id">
-                {{ position }}
-              </li>
-            </ul>
+          <div class="match-items">
+            <div class="match-list-items">
+              <ul>
+                <p style="font-weight: 700">{{ $t("programs") }}</p>
+                <li v-for="program in post.program" :key="program.id">
+                  {{ program }}
+                </li>
+              </ul>
+              <ul>
+                <p style="font-weight: 700">{{ $t("positions") }}</p>
+                <li v-for="position in post.positions" :key="position.id">
+                  {{ position }}
+                </li>
+              </ul>
+            </div>
+            <div class="match-qualifications">
+              <p style="font-weight: 700">{{ $t("qualifications") }}</p>
+              <p>{{ post.qualifications }}</p>
+            </div>
           </div>
         </div>
         <!-- END MATCH LIST -->
@@ -416,18 +422,24 @@ img {
   align-items: center;
   padding: 3rem 0;
 }
+
+.match-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 0;
+  border-top: 2px var(--clr-grey-300) solid;
+  border-bottom: 2px var(--clr-grey-300) solid;
+}
+
 .match-list-items {
   display: flex;
   flex-direction: column;
   align-items: space-around;
   justify-content: space-around;
-  border-top: 2px var(--clr-black) solid;
-  border-bottom: 2px var(--clr-black) solid;
   width: clamp(30ch, 80vw, 60ch);
 }
-.match-list-items > ul {
-  padding: 1rem 2rem;
-}
+
 .match-list > ul > li {
   font-weight: 10px;
 }
@@ -474,8 +486,10 @@ img {
   .match-list-items {
     flex-direction: row;
   }
+
   .post-info {
     padding: 3rem 5rem;
+    border-radius: 1rem;
   }
   .table {
     display: grid;
