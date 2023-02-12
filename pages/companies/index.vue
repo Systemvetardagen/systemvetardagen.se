@@ -226,7 +226,10 @@ export default {
       if (!searchText) {
         return true;
       }
-      return new RegExp(searchText, "i").test(title);
+      let formattedText = searchText.replace(/a/gi, "[aäå]")
+                                    .replace(/o/gi, "[oö]")
+                                    .replace(/u/gi, "[uü]");
+      return new RegExp(formattedText, "i").test(title);
     },
 
     clearInputAndFocus() {
