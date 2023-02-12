@@ -27,8 +27,8 @@ h3 {
 .logo-wrapper {
   width: 9rem;
   height: 5rem;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
   padding: 1rem;
   background-color: var(--clr-white);
   border-radius: 1rem;
@@ -51,6 +51,7 @@ h3 {
 
 .logo {
   width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 </style>

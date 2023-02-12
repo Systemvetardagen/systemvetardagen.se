@@ -265,9 +265,9 @@ export default {
 .banner-overlay {
   position: absolute;
   bottom: 0;
-  padding: clamp(0.5rem, 2vw, 1.5rem) calc(clamp(-5%, -10vw, -10%) * -1);
   color: var(--clr-white);
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -279,7 +279,7 @@ export default {
 }
 .banner-img {
   width: 100%;
-  max-height: 32rem;
+
   border-radius: 0.5rem 0.5rem 0rem 0rem;
   object-fit: cover;
 }
@@ -298,10 +298,11 @@ export default {
   border-radius: 0 0 1rem 1rem;
 }
 .logo {
+  display: flex;
   width: clamp(12rem, 20vw, 16rem);
-  max-height: 10rem;
-  object-fit: contain;
+  height: 80%;
   padding: 2rem;
+  margin: 2rem;
   background-color: var(--clr-white);
   border-radius: 1rem;
 }

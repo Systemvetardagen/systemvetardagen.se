@@ -188,7 +188,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .sidebar > .link-fair {
   position: absolute;
   bottom: 3rem;
