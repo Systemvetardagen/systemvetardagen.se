@@ -34,19 +34,35 @@
         <div class="post-info">
           <h3 style="align-self: center">{{ $t("company-info") }}</h3>
           <div class="table">
-            <p class="table-left">{{ $t("established") }}</p>
-            <p class="table-right">{{ post.founded }}</p>
-            <p class="table-left">{{ $t("slogan") }}</p>
-            <p class="table-right">{{ post.slogan }}</p>
-            <p class="table-left">{{ $t("employees-sv") }}</p>
-            <p class="table-right">{{ post.number_of_employees_in_Sweden }}</p>
-            <p class="table-left">{{ $t("employees-int") }}</p>
-            <p class="table-right">
+            <p v-if="post.founded" class="table-left">
+              {{ $t("established") }}
+            </p>
+            <p v-if="post.founded" class="table-right">{{ post.founded }}</p>
+            <p v-if="post.slogan" class="table-left">{{ $t("slogan") }}</p>
+            <p v-if="post.slogan" class="table-right">{{ post.slogan }}</p>
+            <p v-if="post.number_of_employees_in_Sweden" class="table-left">
+              {{ $t("employees-sv") }}
+            </p>
+            <p v-if="post.number_of_employees_in_Sweden" class="table-right">
+              {{ post.number_of_employees_in_Sweden }}
+            </p>
+            <p
+              v-if="post.number_of_employees_in_internationally"
+              class="table-left"
+            >
+              {{ $t("employees-int") }}
+            </p>
+            <p
+              v-if="post.number_of_employees_in_internationally"
+              class="table-right"
+            >
               {{ post.number_of_employees_in_internationally }}
             </p>
           </div>
-          <p style="font-weight: 600">{{ $t("bis-area") }}</p>
-          <p>{{ post.area_of_business }}</p>
+          <p v-if="post.area_of_business" style="font-weight: 600">
+            {{ $t("bis-area") }}
+          </p>
+          <p v-if="post.area_of_business">{{ post.area_of_business }}</p>
         </div>
         <!-- END COMPANY INFO -->
 
@@ -66,6 +82,7 @@
             </iframe>
           </div>
           <!-- END YOUTUBE VIDEO -->
+          <div v-if="post.extra_text" v-html="markdownToHtml"></div>
         </div>
         <!-- END MAIN CONTENT -->
 
@@ -185,6 +202,8 @@
 
 <script>
 import Button from "@/components/Button.vue";
+import marked from "marked";
+
 export default {
   methods: {
     ImageLink(cmsImg) {
@@ -211,6 +230,9 @@ export default {
   computed: {
     showEnglishMessage() {
       return this.$i18n.locale === "sv";
+    },
+    markdownToHtml() {
+      return marked.parse(this.post.extra_text);
     },
   },
 };
