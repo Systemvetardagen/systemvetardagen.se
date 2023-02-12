@@ -15,49 +15,16 @@
           }}</NuxtLink>
         </div>
 
-        <!-- <div class="normal" v-bind:class="{ active: isActive('#catalog') }">
-          <NuxtLink
-            v-if="showEnglishMessage"
-            :to="localePath('/companies') + '/'"
-            class="header-link"
-            >{{ $t("catalog") }}</NuxtLink
-          >
-        </div> -->
-
         <!-- Catalog -->
-        <!-- <div
-          v-if="showEnglishMessage"
-          v-bind:class="{ active: isActive('/companies') }"
-          class="normal"
-        >
-          <NuxtLink to="/companies" class="header-link">{{
+        <div class="normal" v-bind:class="{ active: isActive('/catalog/') }">
+          <NuxtLink :to="localePath('/catalog') + '/'" class="header-link">{{
             $t("catalog")
           }}</NuxtLink>
         </div>
-        <div
-          v-else
-          v-bind:class="{ active: isActive('/en/companies') }"
-          class="normal"
-        >
-          <NuxtLink to="/en/companies" class="header-link">{{
-            $t("catalog")
-          }}</NuxtLink>
-        </div> -->
 
         <!-- About -->
-        <div
-          v-if="showEnglishMessage"
-          v-bind:class="{ active: isActive('/about') }"
-          class="normal"
-        >
-          <NuxtLink to="/about" class="header-link">{{ $t("about") }}</NuxtLink>
-        </div>
-        <div
-          v-else
-          v-bind:class="{ active: isActive('/en/about') }"
-          class="normal"
-        >
-          <NuxtLink to="/en/about" class="header-link">{{
+        <div v-bind:class="{ active: isActive('/about/') }" class="normal">
+          <NuxtLink :to="localePath('/about') + '/'" class="header-link">{{
             $t("about")
           }}</NuxtLink>
         </div>
@@ -127,54 +94,32 @@
     <div class="sidebar" v-if="!seen">
       <!-- Home -->
       <div
-        v-if="showEnglishMessage"
         v-bind:class="{ mactive: isActive('/') }"
         class="mobile-header-container"
       >
-        <NuxtLink to="/" class="header-link">{{ $t("home") }}</NuxtLink>
-      </div>
-      <div
-        v-else
-        v-bind:class="{ mactive: isActive('/en') }"
-        class="mobile-header-container"
-      >
-        <NuxtLink to="/en" class="header-link">{{ $t("home") }}</NuxtLink>
+        <NuxtLink :to="localePath('/')" class="header-link">{{
+          $t("home")
+        }}</NuxtLink>
       </div>
 
       <!-- Catalog -->
-      <!-- <div
+      <div
         v-if="showEnglishMessage"
-        v-bind:class="{ mactive: isActive('/companies') }"
+        v-bind:class="{ mactive: isActive('/catalog/') }"
         class="mobile-header-container"
       >
-        <NuxtLink to="/companies" class="header-link">{{
+        <NuxtLink :to="localePath('/catalog') + '/'" class="header-link">{{
           $t("catalog")
         }}</NuxtLink>
       </div>
-      <div
-        v-else
-        v-bind:class="{ mactive: isActive('/en/companies') }"
-        class="mobile-header-container"
-      >
-        <NuxtLink to="/en/companies" class="header-link">{{
-          $t("catalog")
-        }}</NuxtLink>
-      </div -->
 
       <!-- About -->
       <div
         v-if="showEnglishMessage"
-        v-bind:class="{ mactive: isActive('/about') }"
+        v-bind:class="{ mactive: isActive('/about/') }"
         class="mobile-header-container"
       >
-        <NuxtLink to="/about" class="header-link">{{ $t("about") }}</NuxtLink>
-      </div>
-      <div
-        v-else
-        v-bind:class="{ mactive: isActive('/en/about') }"
-        class="mobile-header-container"
-      >
-        <NuxtLink to="/en/about" class="header-link">{{
+        <NuxtLink :to="localePath('/about') + '/'" class="header-link">{{
           $t("about")
         }}</NuxtLink>
       </div>

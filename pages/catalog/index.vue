@@ -148,6 +148,10 @@ h2 {
   text-align: center;
 }
 
+h2 {
+  color: var(--clr-blue-600);
+}
+
 .blog-section {
   display: flex;
   flex-direction: column;
