@@ -14,48 +14,66 @@
       <div class="sponsors">
         <h2>{{ $t("sponsors") }}</h2>
         <div class="company-grid">
-          <div class="company-logo">
+          <NuxtLink
+            :to="localePath('/companies/accenture')"
+            class="company-logo"
+          >
             <img
               src="@/assets/img/company-logos/logo_accenture.png"
               alt="Accenture"
             />
-          </div>
-          <div class="company-logo">
+          </NuxtLink>
+          <NuxtLink
+            :to="localePath('/companies/capgemini')"
+            class="company-logo"
+          >
             <img
               src="@/assets/img/company-logos/logo_capgemini.png"
               alt="Capgemini"
             />
-          </div>
-          <div class="company-logo">
+          </NuxtLink>
+          <NuxtLink
+            :to="localePath('/companies/capgemini')"
+            class="company-logo"
+          >
             <img src="@/assets/img/company-logos/logo_cygni.png" alt="Cygni" />
-          </div>
-          <div class="company-logo">
+          </NuxtLink>
+          <NuxtLink :to="localePath('/companies/fra')" class="company-logo">
             <img src="@/assets/img/company-logos/logo_fra.jpg" alt="FRA" />
-          </div>
-          <div class="company-logo">
+          </NuxtLink>
+          <NuxtLink
+            :to="localePath('/companies/handelsbanken')"
+            class="company-logo"
+          >
             <img
               src="@/assets/img/company-logos/logo_handelsbanken.png"
               alt="Handelsbanken"
             />
-          </div>
-          <div class="company-logo">
+          </NuxtLink>
+          <NuxtLink
+            :to="localePath('/companies/innofactor')"
+            class="company-logo"
+          >
             <img
               src="@/assets/img/company-logos/logo_innofactor.png"
               alt="Innofactor"
             />
-          </div>
-          <div class="company-logo sweco">
+          </NuxtLink>
+          <NuxtLink
+            :to="localePath('/companies/sweco')"
+            class="company-logo sweco"
+          >
             <img
               src="@/assets/img/company-logos/logo_sweco_black.png"
               alt="Sweco"
             />
-          </div>
-          <div class="company-logo">
+          </NuxtLink>
+          <NuxtLink :to="localePath('/companies/zimply')" class="company-logo">
             <img
               src="@/assets/img/company-logos/logo_zimply.png"
               alt="Zimply"
             />
-          </div>
+          </NuxtLink>
         </div>
       </div>
       <Button :link="localePath('/companies') + '/'" bColor="gradient">{{
