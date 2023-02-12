@@ -21,31 +21,34 @@ about_us: >-
 
   Get The Future You Want | www.capgemini.com"
 extra_text: >-
-  **IgnITe Graduate Program**\
+  **IgnITe Graduate Program**
 
   \
 
-  Capgemini’s IgnITe Graduate Program gives you a unique opportunity to kick-start your career. It nurtures young talent and helps you make the most of your ideas and ambitions. During 12 months you will develop all the skills you need to succeed as a consultant.\
+  Capgemini’s IgnITe Graduate Program gives you a unique opportunity to kick-start your career. It nurtures young talent and helps you make the most of your ideas and ambitions. During 12 months you will develop all the skills you need to succeed as a consultant.
 
   \
 
-  The perfect start on your career\
+  The perfect start on your career
 
 
-  * 12 months of training and certifications adapted to your skills. You will develop the consultant techniques you need to succeed in your career.\
+  * 12 months of training and certifications adapted to your skills. You will develop the consultant techniques you need to succeed in your career.
 
-  * Collaborations with prominent partners, among others Microsoft, Google, Amazon, SAP, Salesforce, Mulesoft, PEGA, Adobe and UIPath.\
+  * Collaborations with prominent partners, among others Microsoft, Google, Amazon, SAP, Salesforce, Mulesoft, PEGA, Adobe and UIPath.
 
-  * Possibility to work with the latest technology and gain experience from various projects.\
+  * Possibility to work with the latest technology and gain experience from various projects.
 
-  * Support by a mentor whose role is to challenge, encourage and guide you.\
+  * Support by a mentor whose role is to challenge, encourage and guide you.
 
-  * Multinational network of more than 350.000 of the brightest minds in the industry to inspire you.\
+  * Multinational network of more than 350.000 of the brightest minds in the industry to inspire you.
 
-  * Encouraging work-life balance, support in achieving your potential both inside and outside the office.\
+  * Encouraging work-life balance, support in achieving your potential both inside and outside the office.
 
-  * Competitive salary as well as great benefits and perks.\
-    Ready to kickstart your career? Apply to IgnITe Graduate Program, next start in September 2023. For more information visit: [IgnITe Graduate Program](<* https://www.capgemini.com/se-en/careers/career-paths/students-and-graduates/ignite-graduate-program/>)
+  * Competitive salary as well as great benefits and perks.
+
+  \
+
+  Ready to kickstart your career? Apply to IgnITe Graduate Program, next start in September 2023. For more information visit: [IgnITe Graduate Program](https://www.capgemini.com/se-en/careers/career-paths/students-and-graduates/ignite-graduate-program/)
 qualifications: Consulting and technology services, innovation and digital transformation.
 contact_persons:
   - name: Tarkan Cakici

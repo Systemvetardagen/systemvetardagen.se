@@ -34,13 +34,16 @@ extra_text: >-
 
   Är du en person som vill vara med och utveckla och driva Handelsbanken framåt inom Tech, Data och Innovation? Nu kan du skicka in en intresseanmälan till våra två traineeprogram. Business & Tech och traineeprogrammet inom Systemutveckling.\
 
-  I Business & Tech programmet får du möjlighet att jobba i utvecklingsnära roller i en stor organisation – samtidigt som du får den stöttning och utbildning för att starta din karriär på bästa tänkbara sätt. https://knowledge.nexertechtalent.com/talangprogram-handelsbanken?hsCtaTracking=219466db-2552-488a-9bfb-746bbe419918%7C79b5cf5d-0d4f-48b8-9251-1cc8ec45ba6c\
+  I Business & Tech programmet får du möjlighet att jobba i utvecklingsnära roller i en stor organisation – samtidigt som du får den stöttning och utbildning för att starta din karriär på bästa tänkbara sätt. https://knowledge.nexertechtalent.com/talangprogram-handelsbanken?hsCtaTracking=219466db-2552-488a-9bfb-746bbe419918%7C79b5cf5d-0d4f-48b8-9251-1cc8ec45ba6c \
+
 
   I vårt traineeprogram inom systemutveckling får du chansen att bli en viktig spelare där du, tillsammans med ditt team, är med och utvecklar Handelsbankens infrastruktur och tjänster.\
 
   Handelsbanken - Intresseanmälan för vårt traineeprogram inom systemutveckling (easycruit.com)\
 
   Låter det intressant? Gå in på länkarna och läs mer om vårt program.\
+
+  \
 
   Ta chansen att starta din karriär med oss!
 qualifications: Java, Python, Cobol, SQL, .Net
