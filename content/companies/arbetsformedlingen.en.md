@@ -39,5 +39,5 @@ program:
 positions:
   - Traineeprogram
   - Full time positions
-  - Master thesis
+  - Thesis project
 ---

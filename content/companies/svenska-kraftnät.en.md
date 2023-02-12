@@ -33,6 +33,6 @@ positions:
   - Internships
   - Traineeprogram
   - Full time positions
-  - Master thesis
+  - Thesis project
 positions_other: Summerjobs
 ---

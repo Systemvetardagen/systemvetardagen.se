@@ -37,5 +37,5 @@ program:
   - Master
 positions:
   - Full time positions
-  - Master thesis
+  - Thesis project
 ---

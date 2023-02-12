@@ -34,12 +34,18 @@
         </p>
         <!-- Hero Buttons -->
         <div class="hero-buttons">
-          <!--           <Button width="14rem" bColor="gradient">{{
-            $t("catalog_btn_title")
-          }}</Button> -->
-          <Button link="#contact" bColor="gradient">{{
-            $t("contact_us_btn")
-          }}</Button>
+          <Button
+            :link="localePath('/catalog/' + '/')"
+            width="14rem"
+            bColor="gradient"
+            >{{ $t("catalog_btn_title") }}</Button
+          >
+          <Button
+            link="#contact"
+            bColor="--clr-blue-100"
+            tColor="--clr-blue-900"
+            >{{ $t("contact_us_btn") }}</Button
+          >
         </div>
       </div>
     </div>

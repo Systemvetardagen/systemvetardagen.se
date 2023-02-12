@@ -37,5 +37,5 @@ program:
 positions:
   - Internships
   - Full time positions
-  - Master thesis
+  - Thesis project
 ---

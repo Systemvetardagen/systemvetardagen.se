@@ -21,6 +21,6 @@ program:
   - Interaction Design
 positions:
   - Full time positions
-  - Master thesis
+  - Thesis project
   - Internships
 ---

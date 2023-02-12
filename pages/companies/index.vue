@@ -27,7 +27,7 @@
         </span>
         <div v-show="programsVisible" class="dropdown-container">
           <div
-            class="dropdown-program"
+            class="dropdown-program dropdown-filter-item"
             v-for="program in allPrograms"
             :key="program"
           >
@@ -70,7 +70,7 @@
           class="dropdown-container positions-dropdown"
         >
           <div
-            class="dropdown-positions"
+            class="dropdown-positions dropdown-filter-item"
             v-for="position in allPositions"
             :key="position"
           >
@@ -89,6 +89,7 @@
         </div>
       </div>
       <button
+        v-if="selectedPrograms || selectedPositions"
         @click.prevent="
           selectedPrograms = [];
           selectedPositions = [];
@@ -269,7 +270,11 @@ export default {
   box-shadow: 0 0.25rem 0.5rem #0002;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  line-height: 150%;
+}
+
+.dropdown-filter-item {
+  padding: 0.25rem 0;
 }
 
 .positions-dropdown {
@@ -347,10 +352,14 @@ label {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 64rem;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-.company-card {
-  margin: 1rem;
+@media (min-width: 768px) {
+  .company-cards {
+    gap: 2rem;
+  }
 }
 
 button {

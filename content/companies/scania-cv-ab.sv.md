@@ -35,5 +35,5 @@ program:
 positions:
   - Traineeprogram
   - Heltidstjänster
-  - Master thesis
+  - Thesis project
 ---

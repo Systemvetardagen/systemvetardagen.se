@@ -17,14 +17,14 @@
           />
           <div class="banner-shade"></div>
           <div class="banner-overlay">
-            <div class="logo">
+            <div v-if="post.logo" class="logo">
               <nuxt-img :src="this.post.logo" alt="logo" class="logo-img" />
             </div>
 
-            <h1 class="post-title">{{ post.title }}</h1>
-            <p class="post-location">{{ $t("location") }}: TBA</p>
+            <h1 v-if="!post.logo" class="post-title">{{ post.title }}</h1>
+            <!-- <p class="post-location">{{ $t("location") }}: TBA</p>
             <p v-if="post.banner" class="post-tag">// Sponsor</p>
-            <p v-else class="post-tag">//</p>
+            <p v-else class="post-tag">//</p> -->
           </div>
           <div class="banner-bar"></div>
         </div>
@@ -34,19 +34,35 @@
         <div class="post-info">
           <h3 style="align-self: center">{{ $t("company-info") }}</h3>
           <div class="table">
-            <p class="table-left">{{ $t("established") }}</p>
-            <p class="table-right">{{ post.founded }}</p>
-            <p class="table-left">{{ $t("slogan") }}</p>
-            <p class="table-right">{{ post.slogan }}</p>
-            <p class="table-left">{{ $t("employees-sv") }}</p>
-            <p class="table-right">{{ post.number_of_employees_in_Sweden }}</p>
-            <p class="table-left">{{ $t("employees-int") }}</p>
-            <p class="table-right">
+            <p v-if="post.founded" class="table-left">
+              {{ $t("established") }}
+            </p>
+            <p v-if="post.founded" class="table-right">{{ post.founded }}</p>
+            <p v-if="post.slogan" class="table-left">{{ $t("slogan") }}</p>
+            <p v-if="post.slogan" class="table-right">{{ post.slogan }}</p>
+            <p v-if="post.number_of_employees_in_Sweden" class="table-left">
+              {{ $t("employees-sv") }}
+            </p>
+            <p v-if="post.number_of_employees_in_Sweden" class="table-right">
+              {{ post.number_of_employees_in_Sweden }}
+            </p>
+            <p
+              v-if="post.number_of_employees_in_internationally"
+              class="table-left"
+            >
+              {{ $t("employees-int") }}
+            </p>
+            <p
+              v-if="post.number_of_employees_in_internationally"
+              class="table-right"
+            >
               {{ post.number_of_employees_in_internationally }}
             </p>
           </div>
-          <p style="font-weight: 600">{{ $t("bis-area") }}</p>
-          <p>{{ post.area_of_business }}</p>
+          <p v-if="post.area_of_business" style="font-weight: 600">
+            {{ $t("bis-area") }}
+          </p>
+          <p v-if="post.area_of_business">{{ post.area_of_business }}</p>
         </div>
         <!-- END COMPANY INFO -->
 
@@ -66,38 +82,42 @@
             </iframe>
           </div>
           <!-- END YOUTUBE VIDEO -->
+          <div
+            v-if="post.extra_text"
+            v-html="markdownToHtml"
+            class="extra-text"
+          ></div>
+          <!-- SPONSOR IMAGES // GALLERY -->
+          <div v-if="post.sponsor_images" class="gallery">
+            <div class="column">
+              <div class="gallery-item">
+                <nuxt-img
+                  :src="this.post.sponsor_images[0]"
+                  alt="gallery image 1"
+                  class="gallery-img"
+                />
+              </div>
+            </div>
+            <div class="column">
+              <div class="gallery-item">
+                <nuxt-img
+                  :src="this.post.sponsor_images[1]"
+                  alt="gallery image 2"
+                  class="gallery-img"
+                />
+              </div>
+              <div class="gallery-item">
+                <nuxt-img
+                  :src="this.post.sponsor_images[2]"
+                  alt="gallery image 3"
+                  class="gallery-img"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- END SPONSOR IMAGES // GALLERY -->
         </div>
         <!-- END MAIN CONTENT -->
-
-        <!-- SPONSOR IMAGES // GALLERY -->
-        <div v-if="post.sponsor_images" class="gallery">
-          <div class="column">
-            <div class="gallery-item">
-              <nuxt-img
-                :src="this.post.sponsor_images[0]"
-                alt="gallery image 1"
-                class="gallery-img"
-              />
-            </div>
-          </div>
-          <div class="column">
-            <div class="gallery-item">
-              <nuxt-img
-                :src="this.post.sponsor_images[1]"
-                alt="gallery image 2"
-                class="gallery-img"
-              />
-            </div>
-            <div class="gallery-item">
-              <nuxt-img
-                :src="this.post.sponsor_images[2]"
-                alt="gallery image 3"
-                class="gallery-img"
-              />
-            </div>
-          </div>
-        </div>
-        <!-- END SPONSOR IMAGES // GALLERY -->
 
         <!-- MATCH LIST -->
         <div class="match-list">
@@ -131,42 +151,36 @@
             class="company-contact"
             :key="contact.id"
           >
-            <p>{{ contact.name }}</p>
-            <a :href="'mailto:' + contact.email">{{ contact.email }} </a>
+            <p>
+              <b>{{ contact.name }}</b>
+            </p>
+            <a class="email" :href="'mailto:' + contact.email"
+              >{{ contact.email }}
+            </a>
             <p>{{ contact.phone_number }}</p>
           </div>
         </div>
         <!-- END COMPANY CONTACT -->
 
         <!-- MAP -->
-        <div class="map-section">
+        <!--         <div class="map-section">
           <h3 v-if="showEnglishMessage">Visit {{ post.title }} at:</h3>
           <h3 v-else>Visit {{ post.title }} at:</h3>
           <p>Location</p>
           <div class="map"><p>Map</p></div>
-        </div>
+        </div> -->
         <!-- END MAP -->
 
         <!-- BOTTOM BUTTONS -->
         <div class="bottom-buttons">
           <Button
-            v-if="showEnglishMessage"
             link="/companies/"
             borderCol="--crl-black"
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >Gå tillbaka</Button
+            >{{ $t("go-back") }}</Button
           >
-          <Button
-            v-else
-            link="/en/companies/"
-            borderCol="--crl-black"
-            bColor="transparent"
-            tColor="--crl-black"
-            class="bb"
-            >Go Back
-          </Button>
 
           <Button
             link="#top"
@@ -174,7 +188,7 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >Go Up
+            >{{ $t("go-top") }}
           </Button>
         </div>
         <!-- END BOTTOM BUTTONS -->
@@ -185,6 +199,8 @@
 
 <script>
 import Button from "@/components/Button.vue";
+import marked from "marked";
+
 export default {
   methods: {
     ImageLink(cmsImg) {
@@ -212,10 +228,13 @@ export default {
     showEnglishMessage() {
       return this.$i18n.locale === "sv";
     },
+    markdownToHtml() {
+      return marked.parse(this.post.extra_text);
+    },
   },
 };
 </script> 
-<style>
+<style scoped>
 .post {
   display: flex;
   flex-direction: column;
@@ -240,7 +259,7 @@ export default {
 .banner-overlay {
   position: absolute;
   bottom: 0;
-  padding: clamp(0.1rem, 2vw, 1.5rem) calc(clamp(-5%, -10vw, -18%) * -1);
+  padding: clamp(0.5rem, 2vw, 1.5rem) calc(clamp(-5%, -10vw, -10%) * -1);
   color: var(--clr-white);
   width: 100%;
   display: flex;
@@ -273,8 +292,24 @@ export default {
   border-radius: 0 0 1rem 1rem;
 }
 .logo {
-  width: clamp(5rem, 20vw, 12rem);
+  width: clamp(12rem, 20vw, 16rem);
+  max-height: 10rem;
+  object-fit: contain;
+  padding: 2rem;
+  background-color: var(--clr-white);
+  border-radius: 1rem;
 }
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.email {
+  font-family: work-sans;
+}
+
 .post-location {
   padding-bottom: clamp(0.2rem, 1vw, 0.5rem);
   border-bottom: solid 2px var(--clr-white);
@@ -317,13 +352,17 @@ export default {
 
 /* MAIN COMPANY CONTENT */
 .post-content {
-  padding: 5rem 0;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   max-width: 60ch;
 }
 .post-content > p {
   padding-bottom: 2rem;
+}
+
+.extra-text {
+  margin-top: 4rem;
 }
 
 /* YouTube Video */
@@ -353,7 +392,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 10rem 0;
+  margin: 4rem 0;
 }
 .gallery .column {
   display: flex;

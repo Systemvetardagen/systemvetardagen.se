@@ -38,7 +38,6 @@ export default {
 .card-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
 
 .body-text {
@@ -61,6 +60,7 @@ export default {
 .link {
   margin-top: 1rem;
   color: var(--clr-blue-600);
+  align-self: flex-end;
 }
 
 p {

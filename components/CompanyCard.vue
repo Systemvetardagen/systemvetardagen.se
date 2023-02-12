@@ -1,15 +1,8 @@
 <template>
-  <div class="card">
-    <div class="logo-wrapper">
-      <nuxt-img
-        v-if="company.logo"
-        class="logo"
-        :src="this.company.logo"
-        alt=""
-      />
-    </div>
-    <h3>{{ company.title }}</h3>
+  <div v-if="company.logo" class="logo-wrapper">
+    <nuxt-img class="logo" :src="this.company.logo" alt="" />
   </div>
+  <h3 v-else>{{ company.title }}</h3>
 </template>
 <script>
 export default {
@@ -27,31 +20,37 @@ export default {
 };
 </script>
 <style scoped>
-.card {
-  width: 20rem;
-  height: 12rem;
-  padding: 2rem;
-  background-color: var(--clr-blue-100);
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
 h3 {
   color: var(--clr-blue-900);
 }
 
 .logo-wrapper {
-  width: 50%;
-  padding: 0.5rem 1rem;
+  width: 9rem;
+  height: 5rem;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
   background-color: var(--clr-white);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
+  border: solid 0.25rem var(--clr-blue-100);
+  transition: border-color 0.2s;
+}
+
+@media (min-width: 768px) {
+  .logo-wrapper {
+    width: 20rem;
+    height: 12rem;
+    padding: 1.5rem;
+    border-width: 0.5rem;
+  }
+}
+
+.logo-wrapper:hover {
+  border-color: var(--clr-blue-300);
 }
 
 .logo {
-  height: auto;
   width: 100%;
+  object-fit: contain;
 }
 </style>

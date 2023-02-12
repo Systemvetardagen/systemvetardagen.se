@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <section class="content">
-      <h1>{{ $t("catalog") }}</h1>
+      <h1>{{ $t("catalog") }} 2023</h1>
       <div class="blog-section">
         <h2>{{ $t("posts-heading") }}</h2>
         <BlogCard
@@ -146,6 +146,10 @@ export default {
 h1,
 h2 {
   text-align: center;
+}
+
+h2 {
+  color: var(--clr-blue-600);
 }
 
 .blog-section {
