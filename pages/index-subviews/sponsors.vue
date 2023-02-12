@@ -59,6 +59,12 @@
           <img src="@/assets/img/company-logos/logo_zimply.png" alt="Zimply" />
         </NuxtLink>
       </div>
+      <Button
+        class="companies-btn"
+        :link="localePath('/companies') + '/'"
+        bColor="gradient"
+        >{{ $t("all-companies-btn") }}</Button
+      >
     </div>
     <!-- <Blob type="5-b" height="30rem" class="blobby-thing" /> -->
   </div>
@@ -149,5 +155,9 @@ export default {
 .blobby-thing {
   left: 0;
   transform: translateX(-50%);
+}
+
+.companies-btn {
+  margin-top: 4rem;
 }
 </style>
