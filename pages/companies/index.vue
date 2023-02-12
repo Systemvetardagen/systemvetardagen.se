@@ -138,7 +138,7 @@
         <div v-for="post of filteredPosts" :key="post.slug">
           <!---<div v-if="showEnglishMessage">
             <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
-          <NuxtLink :to="post.slug">
+            <NuxtLink :to="localePath({name: 'companies-companies', params: {companies: post.slug.split('.')[0]}})">
             <company-card class="company-card" :company="post" />
           </NuxtLink>
         </div>

@@ -218,10 +218,10 @@ export default {
   props: {
     // bannerLink: "@/assets" + this.post.banner
   },
-  async asyncData({ $content, params, error }) {
+  async asyncData({ $content, params, error, i18n }) {
     let post;
     try {
-      post = await $content("companies", params.companies).fetch();
+      post = await $content("companies", params.companies + '.' + i18n.locale).fetch();
     } catch (e) {
       error({ message: "Entry not found" });
     }

@@ -34,10 +34,10 @@
 import marked from "marked";
 
 export default {
-  async asyncData({ $content, params, error }) {
+  async asyncData({ $content, params, error, i18n }) {
     let post;
     try {
-      post = await $content("blog", params.blog).fetch();
+      post = await $content("blog", params.blog + '.' + i18n.locale).fetch();
     } catch (e) {
       error({ message: "Entry not found" });
     }
