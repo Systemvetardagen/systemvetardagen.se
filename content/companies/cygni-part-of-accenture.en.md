@@ -1,6 +1,6 @@
 ---
 logo: /img/uploads/logo_cygni-2.png
-title: Cygni - part of Accenture
+title: Cygni
 sponsor: true
 founded: 2006
 number_of_employees_in_Sweden: 230
