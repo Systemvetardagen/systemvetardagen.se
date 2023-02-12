@@ -31,8 +31,8 @@
 
   "before_the_fair": "Before the fair",
   "before_the_fair_description1": "Update you CV and have it easily available so that you can give or send it to a company if you get asked for it.",
-  "before_the_fair_description2": "Look through the catalog (will be available soon!) and make note of which companies you are interested in talking to.",
-  "before_the_fair_description3": "Look into which company events you are interested in. The event schedule will be available soon!",
+  "before_the_fair_description2": "Look through the catalog and make note of which companies you are interested in talking to.",
+  "before_the_fair_description3": "Look into which company events you are interested in.",
   "before_the_fair_description4": "Now you’re well prepared for the fair!",
 
   "during_the_fair": "During the fair",
@@ -47,19 +47,12 @@
   "answer2": "No, it’s completely free for all students to attend the fair and its events.",
   "question3": "Can I participate in the fair if I don't speak Swedish?",
   "answer3": "Absolutely! The website is offered in both Swedish and English, and the participating companies are happy to speak English.",
+  "question4": "Do I need to sign up to attend the fair?",
+  "answer4": "No, you don't need to sign up to attend the fair or to go to the events in Aula NOD!",
 
   "old_cat_title": "This year's catalog!",
-  "old_cat_description": "The catalog is coming very soon! In it you will find everything you need to know about the event, with information about our sponsors, exhibiting companies and much more!",
-  "old_cat_btn": "Catalog",
-
-  "catalog_2022": "Catalog 2021",
-  "iPad1": "Sign up and compete for an iPad!",
-  "iPad2": "Enter the draw for an iPad! Enter by following these simple steps:",
-
-  "follow_on_instagram": "Follow us on Instagram ",
-  "sign_for_event": "Create a profile on the fair website and sign up for Systemvetardagen 2022",
-  "create_profile": "Create a profile",
-  "send": "Send",
+  "old_cat_description": "The catalog is here and now in digital and interactive form! In it you will find everything you need to know about the event, with information about our sponsors, exhibiting companies and much more!",
+  "old_cat_btn": "Catalog 2023",
 
   "footer_follow_title": "Follow us",
   "footer_address_title": "Address",

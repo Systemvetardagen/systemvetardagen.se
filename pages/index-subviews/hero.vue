@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class="hero-info-wrapper">
-      <p class="hero-info-text">{{ $t("event_date") }}, 10:00</p>
+      <p class="hero-info-text">{{ $t("event_date") }}, 10:00 - 16:00</p>
       <p
         class="hero-info-text"
         style="color: var(--clr-grey-900); text-align: center"

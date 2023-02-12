@@ -89,7 +89,7 @@
         </div>
       </div>
       <button
-        v-if="selectedPrograms || selectedPositions"
+        v-if="selectedPrograms.length !== 0 || selectedPositions.length !== 0"
         @click.prevent="
           selectedPrograms = [];
           selectedPositions = [];
@@ -138,21 +138,18 @@
         <div v-for="post of filteredPosts" :key="post.slug">
           <!---<div v-if="showEnglishMessage">
             <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
-            <NuxtLink :to="localePath({name: 'companies-companies', params: {companies: post.slug.split('.')[0]}})">
+          <NuxtLink
+            :to="
+              localePath({
+                name: 'companies-companies',
+                params: { companies: post.slug.split('.')[0] },
+              })
+            "
+          >
             <company-card class="company-card" :company="post" />
           </NuxtLink>
         </div>
       </div>
-
-      <!--<div v-else="showEnglishMessage">
-            <div v-if="post.slug === post.title.toLowerCase() + '.en'">
-              <NuxtLink :to="post.title.toLowerCase() + '.en'">
-                <company-card class="company-card" :company="post" />
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
-      </div>-->
     </section>
   </main>
 </template>
@@ -288,6 +285,10 @@ export default {
 }
 
 .filter-paragraph {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   line-height: 200%;
   margin-top: 2rem;
   font-family: work-sans;

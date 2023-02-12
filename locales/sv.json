@@ -29,8 +29,8 @@
 
   "before_the_fair": "Inför mässan",
   "before_the_fair_description1": "Uppdatera ditt CV och ha det lättillgängligt så att du enkelt kan ge eller skicka det vid förfrågan.",
-  "before_the_fair_description2": "Kolla igenom katalogen (släpps snart!) och notera vilka företag du är intresserad av att prata med!",
-  "before_the_fair_description3": "Kolla in vilka företagsevent som du är intresserad av att gå på. Schemat kommer dyka upp i katalogen inom kort.",
+  "before_the_fair_description2": "Kolla igenom katalogen och notera vilka företag du är intresserad av att prata med!",
+  "before_the_fair_description3": "Kolla in vilka företagsevent som du är intresserad av att gå på.",
   "before_the_fair_description4": "Nu är du väl förberedd för mässan!",
 
   "during_the_fair": "Under mässan",
@@ -45,14 +45,12 @@
   "answer2": "Nej, det är helt kostnadsfritt för studenter att delta på mässan.",
   "question3": "Kan jag delta på mässan om jag inte talar svenska?",
   "answer3": "Absolut! Mäss-hemsidan erbjuds på både svenska och engelska, och företagen som deltar pratar gärna engelska.",
+  "question4": "Behöver jag anmäla mig för att vara med på mässan?",
+  "answer4": "Nej, man behöver inte anmäla sig för att komma på mässan eller för att gå på eventen i Aula NOD!",
 
   "old_cat_title": "Årets katalog!",
-  "old_cat_description": "Katalogen kommer väldigt snart! I den kommer du att hitta information om sponsorerna, utställande företag och mycket mer!",
-  "old_cat_btn": "Katalog",
-
-  "catalog_2022": "Katalog 2021",
-  "iPad1": "Anmäl dig och tävla om en iPad!",
-  "iPad2": "Var med i utlottningen av en iPad! Delta genom att följa dessa enkla steg:",
+  "old_cat_description": "Katalogen är här och nu i digital och interaktiv form! I den kan du hitta information om sponsorerna, utställande företag och mycket mer!",
+  "old_cat_btn": "Katalog 2023",
 
   "follow_on_instagram": "Följ oss på Instagram ",
   "sign_for_event": "Skapa en profil på mässhemsidan och anmäl dig till Systemvetardagen 2022!",

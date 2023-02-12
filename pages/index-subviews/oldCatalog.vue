@@ -9,9 +9,7 @@
       <div class="catalog-text">
         <h2 style="color: var(--clr-blue-600)">{{ $t("old_cat_title") }}</h2>
         <p>{{ $t("old_cat_description") }}</p>
-        <!-- <Button link="" bColor="--clr-pink-600" tColor="--clr-white">{{
-          $t("old_cat_btn")
-        }}</Button> -->
+        <Button :link="localePath('/catalog')">{{ $t("old_cat_btn") }}</Button>
       </div>
     </div>
   </section>

@@ -22,6 +22,12 @@
           {{ $t("answer3") }}
         </p>
       </div>
+      <div class="faq-question">
+        <h3 style="color: var(--clr-pink-600)">{{ $t("question4") }}</h3>
+        <p>
+          {{ $t("answer4") }}
+        </p>
+      </div>
     </div>
   </section>
 </template>
