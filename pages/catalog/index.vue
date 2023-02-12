@@ -58,7 +58,7 @@
           </div>
         </div>
       </div>
-      <Button link="/companies/" bColor="gradient">{{
+      <Button :link="localePath('/companies') + '/'" bColor="gradient">{{
         $t("all-companies-btn")
       }}</Button>
       <div class="schedule">
