@@ -134,33 +134,19 @@
         </svg>
       </div>
 
-      <div class="company-cards">
-        <div v-for="post of filterdPosts" :key="post.slug">
-          <!---<div v-if="showEnglishMessage">
-            <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
+      <div class="company-cards" filterdPosts().filterOneCondition(post.program, selectedPrograms).
+                filterOneCondition(post.positions, selectedPositions).
+                searchCompany(post.title, searchText)>
+        <div v-for="post of filterdPosts(selectedPrograms, selectedPositions, searchText)" :key="post.slug">
           <NuxtLink :to="post.slug">
             <company-card
               class="company-card"
               :company="post"
-              v-if="
-                filterOneCondition(post.program, selectedPrograms) &&
-                filterOneCondition(post.positions, selectedPositions) &&
-                searchCompany(post.title, searchText)
-              "
+              
             />
           </NuxtLink>
         </div>
       </div>
-
-      <!--<div v-else="showEnglishMessage">
-            <div v-if="post.slug === post.title.toLowerCase() + '.en'">
-              <NuxtLink :to="post.title.toLowerCase() + '.en'">
-                <company-card class="company-card" :company="post" />
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
-      </div>-->
     </section>
   </main>
 </template>
@@ -198,9 +184,6 @@ export default {
     showEnglishMessage() {
       return this.$i18n.locale === "sv";
     },
-    filterdPosts() {
-      return this.posts.filter((e) => e.slug.includes("." + this.$i18n.locale));
-    },
   },
 
   created() {
@@ -232,6 +215,10 @@ export default {
         return true;
       }
       return new RegExp(searchText, "i").test(title);
+    },
+
+    filterdPosts(selectedPrograms, selectedPositions, searchText) {
+      return this.posts.filter((e) => e.slug.includes("." + this.$i18n.locale) && this.filterOneCondition(e.program, selectedPrograms) && this.filterOneCondition(e.positions, selectedPositions) && this.searchCompany(e.title, searchText));
     },
 
     clearInputAndFocus() {
