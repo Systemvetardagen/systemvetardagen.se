@@ -36,6 +36,6 @@ program:
   - Computer Science and Software Engineering
   - Master
 positions:
-  - Master thesis
+  - Thesis project
   - Full time positions
 ---

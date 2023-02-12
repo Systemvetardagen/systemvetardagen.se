@@ -38,6 +38,6 @@ program:
   - Master
 positions:
   - Internships
-  - Master thesis
+  - Thesis project
   - Full time positions
 ---

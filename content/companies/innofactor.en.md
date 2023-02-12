@@ -22,7 +22,7 @@ program:
 positions:
   - Traineeprogram
   - Full time positions
-  - Master thesis
+  - Thesis project
 banner: /img/uploads/innofactor_banner.png
 sponsor_images:
   - /img/uploads/innfactor_picture1_croppe.png

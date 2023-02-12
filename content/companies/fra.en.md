@@ -31,6 +31,6 @@ program:
   - Magister/Master
   - Computer Game Development
 positions:
-  - Master thesis
+  - Thesis project
   - Full time positions
 ---

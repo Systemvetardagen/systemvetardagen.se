@@ -31,5 +31,5 @@ program:
   - Digital media
 positions:
   - Full time positions
-  - Master thesis
+  - Thesis project
 ---

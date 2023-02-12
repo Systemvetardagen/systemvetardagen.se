@@ -59,5 +59,5 @@ positions:
   - Foreign Services
   - Traineeprogram
   - Full time positions
-  - Master thesis
+  - Thesis project
 ---
