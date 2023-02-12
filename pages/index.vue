@@ -38,3 +38,8 @@ export default {
   name: "IndexPage",
 };
 </script>
+<style scoped>
+html {
+  scroll-behavior: smooth;
+}
+</style>

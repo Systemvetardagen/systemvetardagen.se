@@ -9,7 +9,6 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
 }
 a {
   text-decoration: none;
@@ -85,10 +84,6 @@ a {
 @font-face {
   font-family: "OverpassMono";
   src: url(assets\fonts\OverpassMono-VariableFont_wght.ttf);
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 *,
