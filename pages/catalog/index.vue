@@ -32,10 +32,7 @@
               alt="Capgemini"
             />
           </NuxtLink>
-          <NuxtLink
-            :to="localePath('/companies/capgemini')"
-            class="company-logo"
-          >
+          <NuxtLink :to="localePath('/companies/cygni')" class="company-logo">
             <img src="@/assets/img/company-logos/logo_cygni.png" alt="Cygni" />
           </NuxtLink>
           <NuxtLink :to="localePath('/companies/fra')" class="company-logo">
