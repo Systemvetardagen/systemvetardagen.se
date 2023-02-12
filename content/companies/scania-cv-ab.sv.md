@@ -1,5 +1,5 @@
 ---
-logo: /img/uploads/scania_lock-up_v_pos_m_rgb-1.png
+logo: /img/uploads/scania.png
 title: Scania CV AB
 sponsor: false
 slogan: We Drive Real Change
