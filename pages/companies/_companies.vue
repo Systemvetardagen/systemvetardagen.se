@@ -116,37 +116,37 @@
             </div>
           </div>
           <!-- END SPONSOR IMAGES // GALLERY -->
-        </div>
-        <!-- END MAIN CONTENT -->
 
-        <!-- MATCH LIST -->
-        <div class="match-list">
-          <h3>
-            {{ post.title }}
-            {{ $t("looking-for") }}
-          </h3>
-          <div class="match-items">
-            <div class="match-list-items">
-              <ul>
-                <p style="font-weight: 700">{{ $t("programs") }}</p>
-                <li v-for="program in post.program" :key="program.id">
-                  {{ program }}
-                </li>
-              </ul>
-              <ul>
-                <p style="font-weight: 700">{{ $t("positions") }}</p>
-                <li v-for="position in post.positions" :key="position.id">
-                  {{ position }}
-                </li>
-              </ul>
-            </div>
-            <div class="match-qualifications">
-              <p style="font-weight: 700">{{ $t("qualifications") }}</p>
-              <p>{{ post.qualifications }}</p>
+          <!-- MATCH LIST -->
+          <div class="match-list">
+            <h3>
+              {{ post.title }}
+              {{ $t("looking-for") }}
+            </h3>
+            <div class="match-items">
+              <div class="match-list-items">
+                <ul>
+                  <p style="font-weight: 700">{{ $t("programs") }}</p>
+                  <li v-for="program in post.program" :key="program.id">
+                    {{ program }}
+                  </li>
+                </ul>
+                <ul>
+                  <p style="font-weight: 700">{{ $t("positions") }}</p>
+                  <li v-for="position in post.positions" :key="position.id">
+                    {{ position }}
+                  </li>
+                </ul>
+              </div>
+              <div class="match-qualifications">
+                <p style="font-weight: 700">{{ $t("qualifications") }}</p>
+                <p>{{ post.qualifications }}</p>
+              </div>
             </div>
           </div>
+          <!-- END MATCH LIST -->
         </div>
-        <!-- END MATCH LIST -->
+        <!-- END MAIN CONTENT -->
 
         <!-- COMPANY CONTACT -->
         <div class="post-contact">
