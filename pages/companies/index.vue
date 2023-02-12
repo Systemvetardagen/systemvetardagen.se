@@ -135,19 +135,11 @@
       </div>
 
       <div class="company-cards">
-        <div v-for="post of filterdPosts" :key="post.slug">
+        <div v-for="post of filteredPosts" :key="post.slug">
           <!---<div v-if="showEnglishMessage">
             <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
           <NuxtLink :to="post.slug">
-            <company-card
-              class="company-card"
-              :company="post"
-              v-if="
-                filterOneCondition(post.program, selectedPrograms) &&
-                filterOneCondition(post.positions, selectedPositions) &&
-                searchCompany(post.title, searchText)
-              "
-            />
+            <company-card class="company-card" :company="post" />
           </NuxtLink>
         </div>
       </div>
@@ -198,8 +190,14 @@ export default {
     showEnglishMessage() {
       return this.$i18n.locale === "sv";
     },
-    filterdPosts() {
-      return this.posts.filter((e) => e.slug.includes("." + this.$i18n.locale));
+    filteredPosts() {
+      return this.posts.filter(
+        (post) =>
+          post.slug.includes("." + this.$i18n.locale) &&
+          this.filterOneCondition(post.program, this.selectedPrograms) &&
+          this.filterOneCondition(post.positions, this.selectedPositions) &&
+          this.searchCompany(post.title, this.searchText)
+      );
     },
   },
 
