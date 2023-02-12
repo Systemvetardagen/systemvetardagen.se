@@ -22,6 +22,7 @@
     "webpack": "^4.46.0"
   },
   "devDependencies": {
-    "@nuxt/image": "^0.7.1"
+    "@nuxt/image": "^0.7.1",
+    "@types/marked": "^4.0.8"
   }
 }

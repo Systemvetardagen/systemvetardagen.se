@@ -20,7 +20,7 @@
             </span>
           </p>
         </div>
-        <p>{{ post.body_text }}</p>
+        <div v-html="markdownToHtml"></div>
         <ul v-if="post.images">
           <li v-for="item in post.images" :key="item.id">
             <img :src="item" />
@@ -31,6 +31,8 @@
   </div>
 </template>
 <script>
+import marked from "marked";
+
 export default {
   async asyncData({ $content, params, error }) {
     let post;
@@ -65,6 +67,11 @@ export default {
       var month = this.getMonthName(date.getMonth()); // Months are zero indexed
       var year = date.getFullYear();
       return `${day} ${month}, ${year}`;
+    },
+  },
+  computed: {
+    markdownToHtml() {
+      return marked.parse(this.post.body_text);
     },
   },
 };
