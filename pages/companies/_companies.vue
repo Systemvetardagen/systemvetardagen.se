@@ -90,7 +90,7 @@
           <!-- SPONSOR IMAGES // GALLERY -->
           <div v-if="post.sponsor_images" class="gallery">
             <div class="column">
-              <div class="gallery-item">
+              <div v-if="post.sponsor_images[0]" class="gallery-item">
                 <nuxt-img
                   :src="this.post.sponsor_images[0]"
                   alt="gallery image 1"
@@ -99,14 +99,14 @@
               </div>
             </div>
             <div class="column">
-              <div class="gallery-item">
+              <div v-if="post.sponsor_images[1]" class="gallery-item">
                 <nuxt-img
                   :src="this.post.sponsor_images[1]"
                   alt="gallery image 2"
                   class="gallery-img"
                 />
               </div>
-              <div class="gallery-item">
+              <div v-if="post.sponsor_images[2]" class="gallery-item">
                 <nuxt-img
                   :src="this.post.sponsor_images[2]"
                   alt="gallery image 3"
@@ -138,7 +138,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="match-qualifications">
+              <div v-if="post.qualifications" class="match-qualifications">
                 <p style="font-weight: 700">{{ $t("qualifications") }}</p>
                 <p>{{ post.qualifications }}</p>
               </div>
@@ -149,7 +149,7 @@
         <!-- END MAIN CONTENT -->
 
         <!-- COMPANY CONTACT -->
-        <div class="post-contact">
+        <div v-if="post.contact_persons" class="post-contact">
           <h3>{{ $t("company-contact") }}</h3>
 
           <div
@@ -157,13 +157,16 @@
             class="company-contact"
             :key="contact.id"
           >
-            <p>
+            <p v-if="contact.name">
               <b>{{ contact.name }}</b>
             </p>
-            <a class="email" :href="'mailto:' + contact.email"
+            <a
+              v-if="contact.email"
+              class="email"
+              :href="'mailto:' + contact.email"
               >{{ contact.email }}
             </a>
-            <p>{{ contact.phone_number }}</p>
+            <p v-if="contact.email">{{ contact.phone_number }}</p>
           </div>
         </div>
         <!-- END COMPANY CONTACT -->
@@ -221,7 +224,10 @@ export default {
   async asyncData({ $content, params, error, i18n }) {
     let post;
     try {
-      post = await $content("companies", params.companies + '.' + i18n.locale).fetch();
+      post = await $content(
+        "companies",
+        params.companies + "." + i18n.locale
+      ).fetch();
     } catch (e) {
       error({ message: "Entry not found" });
     }
