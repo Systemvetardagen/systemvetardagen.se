@@ -143,6 +143,12 @@
                 <p>{{ post.qualifications }}</p>
               </div>
             </div>
+            <a
+              v-if="post.link_to_positions"
+              :href="post.link_to_positions"
+              class="link"
+              >{{ $t("company-learn-more") }} {{ post.title }} ></a
+            >
           </div>
           <!-- END MATCH LIST -->
         </div>
@@ -162,7 +168,7 @@
             </p>
             <a
               v-if="contact.email"
-              class="email"
+              class="email link"
               :href="'mailto:' + contact.email"
               >{{ contact.email }}
             </a>
@@ -460,6 +466,11 @@ img {
 }
 .company-contact {
   padding-bottom: 1rem;
+}
+
+.link {
+  margin-top: 2rem;
+  color: var(--clr-blue-600);
 }
 
 /* MAP */
