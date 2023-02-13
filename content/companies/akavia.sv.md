@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/akavia_logo.jpg
 title: Akavia
 slogan: Ett Akavia
 founded: 2020

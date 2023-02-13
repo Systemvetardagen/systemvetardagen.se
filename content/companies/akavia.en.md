@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/akavia_logo.jpg
 title: Akavia
 founded: 2020
 number_of_employees_in_Sweden: 180
