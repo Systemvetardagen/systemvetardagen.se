@@ -40,4 +40,8 @@ positions:
   - Internships
   - Thesis project
   - Full time positions
+sponsor_images:
+  - /img/uploads/sweco_picture-1_cropped.png
+  - /img/uploads/sweco_picture-2_cropped.png
+  - /img/uploads/sweco_picture-3_cropped.png
 ---
