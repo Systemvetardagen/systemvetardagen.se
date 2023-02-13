@@ -1,6 +1,6 @@
 ---
 title: Sveriges Television
-founded: 1955
+founded: 1956
 number_of_employees_in_Sweden: 2098
 area_of_business: Media, product development, system development
 about_us: >-
