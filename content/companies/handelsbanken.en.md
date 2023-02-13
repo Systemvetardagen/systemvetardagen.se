@@ -63,4 +63,8 @@ positions:
   - Traineeprogram
   - Full time positions
   - Thesis project
+sponsor_images:
+  - /img/uploads/handelsbanken_picture-1.png
+  - /img/uploads/handelsbanken-bild-2-1.png
+  - /img/uploads/handelsbanken-bild3-1.png
 ---
