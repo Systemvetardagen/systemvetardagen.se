@@ -70,8 +70,8 @@ positions:
   - Traineeprogram
   - Full time positions
 positions_other: null
-banner: ""
-youtube_video: https://www.youtube.com/watch?v=PO-0YqzVtgM&t=3s
+banner: /img/uploads/capgemini_banner_cropped.png
+youtube_video: ""
 sponsor_images:
   - /img/uploads/capgemini_picture-1_cropped.png
   - /img/uploads/capgemini_picture-2_cropped.png
