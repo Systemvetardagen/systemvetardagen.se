@@ -1,7 +1,7 @@
 ---
 logo: /img/uploads/sweco_logo.png
 title: Sweco
-sponsor: false
+sponsor: true
 slogan: Transforming society together
 founded: 1889
 number_of_employees_in_Sweden: 6000
@@ -24,6 +24,22 @@ about_us: >-
 
 
   Together with our customers, we contribute to a better world.
+extra_text: >-
+  Tillsammans formar vi framtidens samhällen.\
+
+  På Sweco värderar vi laget och allas kompetenser. Vi vet att det bara är när vi samarbetar som vi har rätt förutsättningar för att uppnå det extraordinära. Vill du vara med och utforma framtidens samhällen tillsammans med våra kunder och 18 500 arkitekter, ingenjörer och andra specialister?\
+
+  \
+
+  En av Sveriges bästa arbetsgivare för specialister inom IT och tech.\
+
+  Som digital expert hos oss får du bidra till verklig förändring och tillsammans med våra kunder implementera ny teknik och hitta nya digitala sätt att lösa utmaningar på. Vill du ta vara på digitaliseringens möjligheter och skapa framtidens samhällen tillsammans med oss?\
+
+  \
+
+  En fot in.\
+
+  Vi vet hur svårt det kan vara som ny på arbetsmarknaden. Därför erbjuder vi exjobb, mentorprogrammet Hej tech-tjej samt utlyser roller där du får växa tillsammans med oss, där personliga egenskaper trumfar kraven på tidigare erfarenhet. Mer information hittar du på www.sweco.se/karriar/digital. Ses vi på jobbet nästa gång?
 qualifications: JavaScript-frameworks, Java, Node.js or .Net. Relational
   databases with spatial extension such as PostGIS, Oracle Spatial or SQL
   Server. Cloud services (AWS, Azure)
@@ -40,6 +56,7 @@ positions:
   - Internships
   - Thesis project
   - Full time positions
+banner: /img/uploads/sweco_banner_cropped.png
 sponsor_images:
   - /img/uploads/sweco_picture-1_cropped.png
   - /img/uploads/sweco_picture-2_cropped.png
