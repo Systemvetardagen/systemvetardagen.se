@@ -298,7 +298,7 @@ collections:
           label: "DISK mail",
           name: "disk_mail",
           widget: "string",
-          required: true,
+          required: false,
           i18n: duplicate,
         }
       - {
@@ -318,6 +318,13 @@ collections:
       - {
           label: "Portfolio link",
           name: "portfolio_link",
+          widget: "text",
+          required: false,
+          i18n: duplicate,
+        }
+      - {
+          label: "Github link",
+          name: "github_link",
           widget: "text",
           required: false,
           i18n: duplicate,
