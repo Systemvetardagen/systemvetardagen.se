@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/logo_svt.png
 title: Sveriges Television
 founded: 1956
 number_of_employees_in_Sweden: 2100
