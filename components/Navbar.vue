@@ -104,7 +104,6 @@
 
       <!-- Catalog -->
       <div
-        v-if="showEnglishMessage"
         v-bind:class="{ mactive: isActive('/catalog/') }"
         class="mobile-header-container"
       >
@@ -115,7 +114,6 @@
 
       <!-- About -->
       <div
-        v-if="showEnglishMessage"
         v-bind:class="{ mactive: isActive('/about/') }"
         class="mobile-header-container"
       >
