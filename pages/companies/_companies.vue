@@ -22,9 +22,9 @@
             </div>
 
             <h1 v-if="!post.logo" class="post-title">{{ post.title }}</h1>
-            <!-- <p class="post-location">{{ $t("location") }}: TBA</p>
+            <p class="post-location">{{ $t("location") }}: TBA</p>
             <p v-if="post.banner" class="post-tag">// Sponsor</p>
-            <p v-else class="post-tag">//</p> -->
+            <p v-else class="post-tag">//</p>
           </div>
           <div class="banner-bar"></div>
         </div>
@@ -268,7 +268,7 @@ export default {
   max-height: 18rem;
 }
 .banner-shade {
-  background: RGB(0, 0, 0, 0.5);
+  background: RGB(255, 255, 255, 0.8);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -277,11 +277,12 @@ export default {
 .banner-overlay {
   position: absolute;
   bottom: 0;
-  color: var(--clr-white);
+  color: var(--clr-grey-1000);
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 0 5% 0.5rem 5%;
 }
 .banner-overlay > h1 {
   font-size: clamp(1.8rem, 5vw, 3rem);
@@ -315,7 +316,7 @@ export default {
   height: 80%;
   padding: 2rem;
   margin: 2rem;
-  background-color: var(--clr-white);
+  /* background-color: var(--clr-white); */
   border-radius: 1rem;
 }
 
@@ -331,7 +332,7 @@ export default {
 
 .post-location {
   padding-bottom: clamp(0.2rem, 1vw, 0.5rem);
-  border-bottom: solid 2px var(--clr-white);
+  border-bottom: solid 2px var(--clr-grey-1000);
 }
 .post-title {
   padding-bottom: clamp(0.1rem, 2.5vw, 3rem);
@@ -339,7 +340,7 @@ export default {
 .post-tag {
   align-self: flex-end;
   padding-top: clamp(0.2rem, 1vw, 0.5rem);
-  color: white;
+  color: var(--clr-grey-1000)
 }
 
 /* COMPANY INFO */
