@@ -189,13 +189,24 @@
         <!-- BOTTOM BUTTONS -->
         <div class="bottom-buttons">
           <Button
+            v-if="showEnglishMessage"
             link="/companies/"
             borderCol="--crl-black"
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >{{ $t("go-back") }}</Button
-          >
+            >{{ $t("go-back") }}
+          </Button>
+
+          <Button
+            v-else
+            link="/en/companies/"
+            borderCol="--crl-black"
+            bColor="transparent"
+            tColor="--crl-black"
+            class="bb"
+            >{{ $t("go-back") }}
+          </Button>
 
           <Button
             link="#top"

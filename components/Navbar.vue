@@ -97,7 +97,7 @@
         :to="changePath()"
         class="btn-lang"
         ><img v-if="showEnglishMessage" src="@/assets/img/UK.png" /><img
-          v-else="showEnglishMessage"
+          v-else
           src="@/assets/img/Sweden.png"
         />
       </nuxt-link>
