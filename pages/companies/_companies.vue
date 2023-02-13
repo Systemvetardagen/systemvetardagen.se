@@ -189,7 +189,7 @@
         <!-- BOTTOM BUTTONS -->
         <div class="bottom-buttons">
           <Button
-            link="/companies/"
+            :link="localePath('/companies/')"
             borderCol="--crl-black"
             bColor="transparent"
             tColor="--crl-black"
