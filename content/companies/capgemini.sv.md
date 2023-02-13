@@ -69,7 +69,7 @@ positions:
   - Traineeprogram
   - Heltidstjänster
 banner: /img/uploads/capgemini_banner_cropped.png
-youtube_video: https://www.youtube.com/embed/PO-0YqzVtgM
+youtube_video: ""
 sponsor_images:
   - /img/uploads/capgemini_picture-1_cropped.png
   - /img/uploads/capgemini_picture-2_cropped.png
