@@ -34,6 +34,7 @@ positions:
   - Traineeprogram
   - Heltidstjänster
 banner: /img/uploads/cygni_banner_cropped.png
+youtube_video: https://www.youtube.com/embed=L8MdSzSOe-8
 sponsor_images:
   - /img/uploads/cygni_picture-1_cropped.png
   - /img/uploads/cygni_picture-2_cropped.png
