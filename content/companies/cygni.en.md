@@ -24,4 +24,9 @@ program:
 positions:
   - Traineeprogram
   - Full time positions
+banner: /img/uploads/cygni_banner_cropped.png
+sponsor_images:
+  - /img/uploads/cygni_picture-1_cropped.png
+  - /img/uploads/cygni_picture-2_cropped.png
+  - /img/uploads/cygni_picture-3_cropped.png
 ---
