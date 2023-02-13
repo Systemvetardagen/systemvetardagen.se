@@ -3,7 +3,7 @@ logo: /img/uploads/logo_cygni-2.png
 title: Cygni
 sponsor: true
 founded: 2006
-number_of_employees_in_Sweden: 230
+number_of_employees_in_Sweden: 240
 number_of_employees_in_internationally: 0
 area_of_business: Systems development, consulting
 about_us: Cygni, part of Accenture; we are an IT consultancy with the vision of

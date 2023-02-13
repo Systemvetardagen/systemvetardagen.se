@@ -3,7 +3,7 @@ logo: /img/uploads/logo_cygni-2.png
 title: Cygni
 sponsor: true
 founded: 2006
-number_of_employees_in_Sweden: 230
+number_of_employees_in_Sweden: 240
 number_of_employees_in_internationally: 0
 area_of_business: Systemutveckling, Konsulting
 about_us: Vår vision har sedan dag ett varit enkel och tydlig. Vi ska vara den
@@ -23,9 +23,9 @@ extra_text: >-
   "Cygni sponsrar allt som är bra" och vi gillar att umgås! Därför anordnar vi aktiviteter tillsammans däribland gemensamma höst och vårkonferenser.
 qualifications: Java, C#/.NET, JavaScript, Node, Kotlin
 contact_persons:
-  - name: Pia Hellquist
-    email: pia.hellquist@cygni.se
-    phone_number: "0725552373"
+  - name: Frida Åkerdal
+    email: ""
+    phone_number: ""
 program:
   - Data- och systemvetenskap
   - Datavetenskap
