@@ -2,8 +2,8 @@
 logo: /img/uploads/tcs_logo.jpg
 title: Tata Consultancy Services
 founded: 1968
-number_of_employees_in_Sweden: 20
-number_of_employees_in_internationally: 615
+number_of_employees_in_Sweden: ""
+number_of_employees_in_internationally: 615000
 area_of_business: >-
   About Tata Consultancy Services (TCS)
 
