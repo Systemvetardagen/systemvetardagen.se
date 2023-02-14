@@ -3,7 +3,7 @@ logo: /img/uploads/cgi_logo.png
 title: CGI
 founded: 1976
 number_of_employees_in_Sweden: 4000
-number_of_employees_in_internationally: 89999
+number_of_employees_in_internationally: 90000
 area_of_business: Systemutveckling, Affärssystem, Business intelligence,
   Interaktionsdesign, Säkerhet, Projektledning, Test, Verksamhetsutveckling
 about_us: Vår värld är föränderlig. Så är också IT-branschen. CGI arbetar för
