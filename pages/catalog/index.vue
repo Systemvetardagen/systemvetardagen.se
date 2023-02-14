@@ -76,6 +76,10 @@
       <Button :link="localePath('/companies') + '/'" bColor="gradient">{{
         $t("all-companies-btn")
       }}</Button>
+      <div class="map">
+        <h2>{{ $t('map-heading') }}</h2>
+        <img src="@/assets/img/map_companies.svg" alt="Map of company placement" class="map-img">
+      </div>
       <div class="schedule">
         <h2>{{ $t("aulanod-program") }}</h2>
         <div class="schedule-grid">
@@ -192,6 +196,15 @@ h2 {
   align-items: center;
   border-radius: 1rem;
   justify-content: center;
+}
+
+.map {
+  width: 100%;
+  max-width: 64rem;
+}
+
+.map-img {
+  width: 100%;
 }
 
 .schedule {
