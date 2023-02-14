@@ -1,4 +1,5 @@
 ---
+logo: /img/uploads/cgi_logo.png
 title: CGI
 founded: 1976
 number_of_employees_in_Sweden: 4800
