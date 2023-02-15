@@ -59,7 +59,7 @@ positions:
   - Thesis project
   - Full time positions
 banner: /img/uploads/fra_banner_1.jpg
-youtube_video: https://youtu.be/yaZKJz6d_ww
+youtube_video: https://www.youtube.com/embed/yaZKJz6d_ww&feature=youtu.be
 sponsor_images:
   - /img/uploads/fra_image_1.jpg
   - /img/uploads/fra_image_2.jpg
