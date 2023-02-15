@@ -57,7 +57,7 @@ positions:
   - Examensarbete
   - Heltidstjänster
 banner: /img/uploads/sweco_banner_cropped.png
-youtube_video: https://www.youtube.com/watch?v=CWahCwlK814
+youtube_video: https://www.youtube.com/embed/CWahCwlK814
 sponsor_images:
   - /img/uploads/sweco_picture-1_cropped.png
   - /img/uploads/sweco_picture-2_cropped.png
