@@ -44,8 +44,14 @@ extra_text: >-
 
   Ta chansen att starta din karriär med oss!
 qualifications: Java, Python, Cobol, SQL, .Net
-link_to_positions: Linnea Brandt, linnea.brandt@handelsbanken.se, +46 704954160
-  Alva Jonerot, alva.jonerot@handelsbanken.se, +46 730422134
+contact_persons:
+  - name: Linnea Brandt
+    email: linnea.brandt@handelsbanken.se
+    phone_number: +46 704954160
+  - name: Alva Jonerot
+    email: alva.jonerot@handelsbanken.se
+    phone_number: +46 730422134
+link_to_positions: https://www.linkedin.com/company/handelsbanken/jobs/
 program:
   - Affärssystem och tjänstedesign
   - Data- och systemvetenskap
@@ -61,6 +67,7 @@ positions:
   - Traineeprogram
   - Heltidstjänster
   - Examensarbete
+banner: /img/uploads/handelsbanken_picture-3_cropped.png
 sponsor_images:
   - /img/uploads/handelsbanken_picture-1.png
   - /img/uploads/handelsbanken-bild-2-1.png
