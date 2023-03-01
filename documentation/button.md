@@ -3,14 +3,16 @@
 This is a custom button component for the SvD website. It already includes the desired styling. 
 
 ### Implementation
-    <Button
-        :link=      <STRING>
-        width=      <STRING> (optional)
-        bColor=     <STRING> (optional)
-        tColor=     <STRING> (optional)
-        borderCol=  <STRING> (optional)
-        > <SLOT>
-    </Button>
+```HTML
+<Button
+    :link=      STRING
+    width=      STRING (optional)
+    bColor=     STRING (optional)
+    tColor=     STRING (optional)
+    borderCol=  STRING (optional)
+    > <SLOT>
+</Button>
+```
 
 ## Attributes
 **:link** \
@@ -38,12 +40,13 @@ Specify the border color of the button by also setting the bColor to "transparen
 
 
 ## Example
-
+```HTML
     <Button
         link="#contact"
         bColor="--clr-blue-100"
         tColor="--clr-blue-900"
         >{{ $t("contact_us_btn") }}
     </Button>
+```
 
 ![button_example](/documentation/img/button_example.png)
