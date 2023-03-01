@@ -1,3 +1,5 @@
+<!-- Information about the fair, for before & during the fair -->
+
 <template>
     <section>
         <div class="info">

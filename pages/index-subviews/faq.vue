@@ -36,7 +36,7 @@ export default {
   name: "faq",
 };
 </script>
-<style>
+<style scoped>
 .faq {
   display: flex;
   flex-direction: column;
@@ -51,9 +51,6 @@ export default {
   gap: 2rem;
 }
 
-.faq-question {
-  max-width: 100%;
-}
 
 @media (min-width: 850px) {
   .faq-questions {

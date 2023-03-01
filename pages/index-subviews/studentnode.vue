@@ -27,7 +27,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .studentnode_main {
     display: flex;
     flex-wrap: nowrap;

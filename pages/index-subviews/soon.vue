@@ -21,7 +21,7 @@ components: {
   Button;
 }
 </script>
-<style>
+<style scoped>
 .soon {
   display: flex;
   justify-content: center;
