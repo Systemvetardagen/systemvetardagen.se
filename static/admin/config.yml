@@ -7,26 +7,26 @@ backend:
 
 media_folder: "assets/img/uploads"
 public_folder: "/img/uploads"
-
+# Used for translation, documentation can be found at https://www.netlifycms.org/docs/beta-features/#i18n-support
 i18n:
   structure: multiple_files
   locales: [sv, en]
   default_locale: sv
-
+# Specifies what fields should show upp on the cms, documentation at https://www.netlifycms.org/docs/collection-types/#header
 collections:
   - name: "company"
     label: "company"
-    folder: "content/companies"
-    create: true
-    slug: "{{title}}"
-    i18n: true
+    folder: "content/companies" # defines where the files created will be placed
+    create: true # allows users to create new files
+    slug: "{{title}}" # Defienes how the name for a new file created by the cms should look, needs to have {{}} around it
+    i18n: true # defines if it uses language translation default is false
     fields:
       - {
-          label: "Logo",
-          name: "logo",
-          widget: "image",
-          required: false,
-          i18n: duplicate,
+          label: "Logo", # what the field will be called in the cms part where you enter information, no writing conventions needed
+          name: "logo", # Is the name of the filed in the file the cms will create, need to be writen in snake cases see SVD wiki for info
+          widget: "image", # defines the type of data, possible choices found at https://www.netlifycms.org/docs/widgets/#header
+          required: false, # defines if the field is mandatory to enter or not
+          i18n: duplicate, # will copy the innformation enterd on the default language
         }
       - {
           label: "Title",
@@ -47,7 +47,7 @@ collections:
           name: "slogan",
           widget: "string",
           required: false,
-          i18n: true,
+          i18n: true, # will require you to enter the information in multiple languages
         }
       - {
           label: "Founded (year)",
