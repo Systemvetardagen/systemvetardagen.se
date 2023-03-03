@@ -97,7 +97,7 @@
 
 <script>
 export default {
-  // This method vill fetch the a list of all the cms entries in a specified folder
+  // This method vill fetch a list of all the cms entries in a specified folder
   async asyncData({ $content, error }) {
     let posts;
     try {
