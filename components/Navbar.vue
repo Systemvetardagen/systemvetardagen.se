@@ -32,7 +32,7 @@
 
       <nuxt-link
         v-if="showEnglishMessage && checkLang()"
-        :to="switchLocalePath('en') + '/'"
+        :to="switchLocalePath('en') + '/'" 
         class="link-fair"
         ><img src="@/assets/img/UK.png"
       /></nuxt-link>

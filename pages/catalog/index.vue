@@ -97,10 +97,11 @@
 
 <script>
 export default {
+  // This method vill fetch the a list of all the cms entries in a specified folder
   async asyncData({ $content, error }) {
     let posts;
     try {
-      posts = await $content("blog").fetch();
+      posts = await $content("blog").fetch(); //Gets the data from the content/blog path
     } catch (e) {
       error({ message: "Posts not found" });
     }

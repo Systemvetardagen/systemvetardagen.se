@@ -62,17 +62,18 @@ export default {
   components: {
     AboutCard,
   },
+  // This method vill fetch the a list of all the cms entries in a specified folder
   async asyncData({ $content, error }) {
     let posts;
     try {
-      posts = await $content("about").fetch();
+      posts = await $content("about").fetch(); //Gets the data from the content/about path
     } catch (e) {
       error({ message: "Posts not found" });
     }
     return { posts };
   },
   methods: {
-    lang(postName) {
+    lang(postName) { //Checks for current language
       let p = String(postName);
       if (this.$i18n.locale == "sv") {
         return p.includes(".sv");
