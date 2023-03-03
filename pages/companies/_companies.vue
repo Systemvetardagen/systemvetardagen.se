@@ -227,12 +227,13 @@ export default {
   props: {
     // bannerLink: "@/assets" + this.post.banner
   },
+  //Gets a specifik unique entry from the cms in the specified folder based on the value of params.
   async asyncData({ $content, params, error, i18n }) {
     let post;
     try {
       post = await $content(
         "companies",
-        params.companies + "." + i18n.locale
+        params.companies + "." + i18n.locale //Spefifies that the fetch funktion should se difference betwen the same cms entry in different languages 
       ).fetch();
     } catch (e) {
       error({ message: "Entry not found" });
@@ -243,7 +244,7 @@ export default {
     Button,
   },
   computed: {
-    showEnglishMessage() {
+    showEnglishMessage() { //Checks if the current choosen language is swedish.
       return this.$i18n.locale === "sv";
     },
     markdownToHtml() {
