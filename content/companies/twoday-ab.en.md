@@ -22,12 +22,8 @@ about_us: >-
 
   Working in twoday, is all about the people. Because what really matters is who you choose to be around. With drive, adaptability, and a big heart, we make a difference today – and prepare ourselves, our clients, and society for what tomorrow will bring.
 contact_persons:
-  - name: Ender Kökat
-    email: "ender.kokat@twoday.se "
-  - name: Camila Moca
-    email: camila.moca@twoday.com
-  - name: Robin Smith
-    email: robin.smith@twoday.com
+  - email: shiva.shourie@sdworx.com
+    name: Shiva Shourie
 link_to_positions: https://twoday.se/karriar
 program:
   - Enterprise Systems and Service Design
