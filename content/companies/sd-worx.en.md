@@ -16,8 +16,8 @@ about_us: >-
 qualifications: Web development in Angular, C#, SQL or equivalent. Test
   automation, data science, requirements, integration.
 contact_persons:
-  - name: Erik Andersson
-    email: erik.andersson@sdworx.com
+  - email: shiva.shourie@sdworx.com
+    name: Shiva Shourie
 link_to_positions: https://www.sdworx.se/sv-se/om-oss/karriar
 program:
   - Computer and System Sciences
