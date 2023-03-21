@@ -18,8 +18,8 @@ about_us: >-
 qualifications: Webbutveckling med Angular, C#, SQL eller motsvarande.
   Testautomation, data science, kravställning, integration.
 contact_persons:
-  - name: Erik Andersson
-    email: erik.andersson@sdworx.com
+  - name: Shiva Shourie
+    email: shiva.shourie@sdworx.com
 link_to_positions: https://www.sdworx.se/sv-se/om-oss/karriar
 program:
   - Data- och systemvetenskap
