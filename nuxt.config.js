@@ -169,6 +169,7 @@ export default {
       messages: { en, sv },
     },
   },
+  ///////////////////////////////////
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
