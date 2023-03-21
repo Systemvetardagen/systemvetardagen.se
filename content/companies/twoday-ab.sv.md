@@ -27,8 +27,12 @@ qualifications: Vue, Angular, React, Svelte, C#./NET, SQL, Typescript,
   JavaScript, HTML, CSS (SCSS), Business Intelligence, Qlik Sense, Power BI,
   Tableau, Rest API:er, Azure, CD/CI
 contact_persons:
-  - name: Shiva Shourie
-    email: shiva.shourie@sdworx.com
+  - name: Ender Kökat
+    email: ender.kokat@twoday.se
+  - name: Camila Moca
+    email: camila.moca@twoday.com
+  - name: Robin Smith
+    email: robin.smith@twoday.com
 link_to_positions: https://twoday.se/karriar
 program:
   - Affärssystem och tjänstedesign
