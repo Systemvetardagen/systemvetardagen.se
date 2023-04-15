@@ -29,7 +29,8 @@ import oldCatalog from './index-subviews/oldCatalog.vue'
 import contact from '@/pages/index-subviews/contact.vue'
 import sponsors from './index-subviews/sponsors.vue'
 export default {
-	components: {hero, countdown, soon, info, faq, oldCatalog, contact, sponsors},
+	// add countdown between hero and soon when the actual date and time has been determined
+	components: {hero, soon, info, faq, oldCatalog, contact, sponsors},
   	name: 'IndexPage'
 }
 

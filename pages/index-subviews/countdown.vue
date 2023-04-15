@@ -1,8 +1,8 @@
-<!-- all hardcoded text here, replace with var if needed -->
 <template>
     <div id="countdown">
         <div>
-            <h2 id="countdown-date" style="color: var(--clr-pink-600)">15 February, 2023</h2>
+            <!-- dummy date here, to be changed according to the actual date -->
+            <h2 id="countdown-date" style="color: var(--clr-pink-600)">15 February, 2024</h2>
             <h3 id="countdown-timer">
                 {{ days }} days & {{ pad(hours) }}:{{ pad(minutes) }}:{{ pad(seconds) }}
             </h3>
@@ -16,7 +16,8 @@ export default {
 
     data() {
         return {
-            countDownDate: new Date(new Intl.DateTimeFormat('en-US', {
+            // set the time zone and foramat of count down time
+            countDownTime: new Date(new Intl.DateTimeFormat('en-US', {
                 timeZone: 'Europe/Stockholm',
                 year: 'numeric',
                 month: '2-digit',
@@ -24,15 +25,17 @@ export default {
                 hour: '2-digit',
                 minute: '2-digit',
                 second: '2-digit'
-            }).format(new Date('2023-02-15T10:00:00'))),
+            // dummy date here, to be changed according to the actual date
+            }).format(new Date('2024-02-15T10:00:00'))),
             intervalId: null,
             currentTime: new Date().getTime()
         }
     },
 
     computed: {
+        // caculate and return the days, hours, minutes, seconds from current time to count down time
         timeLeft() {
-            let distance = this.countDownDate - this.currentTime
+            let distance = this.countDownTime - this.currentTime
             return {
                 days: Math.floor(distance / (1000 * 60 * 60 * 24)),
                 hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
@@ -55,6 +58,11 @@ export default {
     },
 
     mounted() {
+        // get current time every second, in reality this would get executed 3 times
+        // per second, since the index contains components that trigger multiple lifecycle
+        // reloads concurrently, can't avoid.
+        // ATTENTION FOR WORKING WITH LIFECYCLE HOOKS HERE: do not assume they would get
+        // triggered only once. good luck if someone tries to reduce the reloads.
         this.intervalId = setInterval(() => {
             this.currentTime = new Date().getTime()
         }, 1000)
@@ -65,6 +73,8 @@ export default {
     },
 
     methods: {
+        // uniform the format of calculated result, fill with 0 from the start when the
+        // result is less than two digits
         pad(num) {
             return num.toString().padStart(2, '0')
         }
