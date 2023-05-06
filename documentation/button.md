@@ -50,3 +50,14 @@ Specify the border color of the button by also setting the bColor to "transparen
 ```
 
 ![button_example](/documentation/img/button_example.png)
+
+This is a custom button component for the SvD website. 
+
+    <Button
+        :link=      <STRING>
+        width=      <STRING> (optional)
+        bColor=     <STRING> (optional)
+        tColor=     <STRING> (optional)
+        borderCol=  <STRING> (optional)
+        > <SLOT>
+    </Button>

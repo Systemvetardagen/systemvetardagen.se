@@ -28,7 +28,7 @@ qualifications: Vue, Angular, React, Svelte, C#./NET, SQL, Typescript,
   Tableau, Rest API:er, Azure, CD/CI
 contact_persons:
   - name: Ender Kökat
-    email: "ender.kokat@twoday.se "
+    email: ender.kokat@twoday.se
   - name: Camila Moca
     email: camila.moca@twoday.com
   - name: Robin Smith

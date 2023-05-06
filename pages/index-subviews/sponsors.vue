@@ -1,14 +1,10 @@
+<!-- The sponsors grid, linking to the catalog, featured on the landing page. -->
 <template>
   <div class="companies">
     <div class="company-content">
       <h2 style="color: var(--clr-blue-700)">{{ $t("sponsors") }}</h2>
 
-      <!-- <div class="sponsor-grid">
-                <div class="sponsor-logo" v-for="logo in logos" :key="logo.name">
-                    <img v-bind:src=" '/_nuxt/assets/img/sponsor-logos/logo_' + logo.img" v-bind:alt= logo.name >
-                </div>
-            </div> -->
-
+      <!-- Since we hadn't figured out nuxt-image yet, we hard-coded this grid. -->
       <div class="company-grid">
         <NuxtLink :to="localePath('/companies/accenture')" class="company-logo">
           <img
@@ -66,23 +62,18 @@
         >{{ $t("all-companies-btn") }}</Button
       >
     </div>
-    <!-- <Blob type="5-b" height="30rem" class="blobby-thing" /> -->
   </div>
 </template>
 
 <script>
-// import Blob from "@/components/Blob.vue";
 
 export default {
   name: "sponsorSection",
-  /*
-  components: {
-    Blob,
-  },
-  */
   data() {
     return {
       logoPath: "@/assets/img/company-logos/logo_",
+
+      // This dictionary is from an attempt to create the grid dynamically. 
       logos: [
         { name: "Capgemini", img: "capgemini.png" },
         { name: "Sweco", img: "sweco_black.png" },
@@ -95,7 +86,11 @@ export default {
   },
 };
 </script>
-<style>
+
+
+<style scoped>
+
+/* CONTAINER */
 .companies {
   height: auto;
   display: flex;
@@ -111,10 +106,12 @@ export default {
   align-content: center;
 }
 
+/* TTITLE */
 .company-conent > h2 {
   align-self: center;
 }
 
+/* GRID */
 .company-grid {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -141,23 +138,18 @@ export default {
   padding-bottom: 1.5rem;
 }
 
+
+/* BUTTON */
+
+.companies-btn {
+  margin-top: 4rem;
+}
+
+/* MEDIA QUERRY */
 @media (min-width: 1024px) {
   .company-grid {
     grid-template-columns: 30% 30% 30%;
     grid-gap: 2rem;
   }
-}
-
-.sponsor-content {
-  z-index: 100;
-}
-
-.blobby-thing {
-  left: 0;
-  transform: translateX(-50%);
-}
-
-.companies-btn {
-  margin-top: 4rem;
 }
 </style>
