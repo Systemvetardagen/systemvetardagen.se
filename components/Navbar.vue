@@ -148,7 +148,7 @@ export default {
         return true;
       }
     },
-    checkLang() { // checks the current languag by testing if the path contains .sv or .en
+    checkLang() { // checks the current language by testing if the path contains .sv or .en
       let st = String(this.$route.path);
       if (st.includes(".sv")) {
         return false;
@@ -169,7 +169,7 @@ export default {
         return st3;
       }
     },
-    checkPath() { // checks if the current page is for a company from the cms by lookign for the word companies in the path
+    checkPath() { // checks if the current page is for a company from the cms by looking for the word companies in the path
       let st = String(this.$route.path);
       if (st.includes("/companies")) {
         return false;

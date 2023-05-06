@@ -34,11 +34,11 @@
 import marked from "marked";
 
 export default {
-  //Gets a specifik unique entry from the cms generated files in the specified folder based on the value of params.
+  //Gets a specific unique entry from the cms generated files in the specified folder based on the value of params.
   async asyncData({ $content, params, error, i18n }) {
     let post;
     try {
-      post = await $content("blog", params.blog + '.' + i18n.locale).fetch(); //Spefifies that the fetch funktion should se difference betwen the same cms entry in different languages 
+      post = await $content("blog", params.blog + '.' + i18n.locale).fetch(); //Spefifies that the fetch function should see difference between the same cms entry in different languages 
     } catch (e) {
       error({ message: "Entry not found" });
     }

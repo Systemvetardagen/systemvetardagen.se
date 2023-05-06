@@ -176,7 +176,7 @@ export default {
   async asyncData({ $content, error }) {
     let posts;
     try {
-      posts = await $content("companies").fetch(); //Gets the data from the content/companies path
+      posts = await $content("companies").fetch(); // Gets the data from the content/companies path
     } catch (e) {
       error({ message: "Posts not found" });
     }
