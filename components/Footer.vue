@@ -3,6 +3,8 @@
     <footer>
       <div class="footer-wrapper">
         <div class="footer-content" style="color: var(--clr-blue-900)">
+
+          <!-- FOLLOW US -->
           <div class="social-links">
             <h2>{{ $t("footer_follow_title") }}</h2>
             <a
@@ -60,12 +62,16 @@
               <span>LinkedIn</span>
             </a>
           </div>
+
+          <!-- ADDRESS -->
           <div>
             <h2>{{ $t("footer_address_title") }}</h2>
             <address>
               Studentkåren DISK<br />Borgarfjordsgatan 12<br />164 40 Kista
             </address>
           </div>
+
+          <!-- CONTACT -->
           <div>
             <h2>{{ $t("footer_contact_title") }}</h2>
             <a class="link-text" href="mailto:systemvetardagen@disk.su.se">
@@ -86,13 +92,16 @@
             </a>
           </div>
         </div>
+
+        <!-- Trademark -->
         <p style="color: var(--clr-blue-400)">© Systemvetardagen 2023</p>
       </div>
     </footer>
   </div>
 </template>
   
-  <style>
+<style>
+/* CONTAINER */
 footer {
   background-color: var(--clr-blue-100);
 }
@@ -119,6 +128,7 @@ footer {
   }
 }
 
+/* FOLLOW US */
 .social-links {
   display: flex;
   flex-direction: column;
@@ -143,6 +153,7 @@ footer {
   color: var(--clr-pink-600);
 }
 
+/* ADDRESS */
 address {
   font-style: normal;
 }

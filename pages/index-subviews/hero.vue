@@ -1,5 +1,7 @@
 <template>
   <div id="home" class="hero">
+
+    <!-- TEXT BLOCK BG -->
     <div id="hero-text-block" ref="heroTextBlock">
       <span
         class="hero-bg-span"
@@ -17,14 +19,16 @@
       </span>
     </div>
     <div></div>
+
+    <!-- FOREGROUND CONTENT -->
     <div class="hero-content">
-      <!-- Hero image -->
+      <!-- HERO IMAGE -->
       <img
         class="hero-image"
         src="@/assets/img/hero-image.png"
         alt="Image of a group of people by their computers"
       />
-      <!-- Hero Text -->
+      <!-- HERO TEXT -->
       <div class="hero-content-text">
         <h1 class="hero-heading" style="color: var(--clr-blue-600)">
           {{ $t("hero_title") }}
@@ -32,7 +36,7 @@
         <p class="subtitle" style="color: var(--clr-grey-900)">
           {{ $t("event_description") }}
         </p>
-        <!-- Hero Buttons -->
+        <!-- HERO BUTTONS -->
         <div class="hero-buttons">
           <Button
             :link="localePath('/catalog/' + '/')"
@@ -49,6 +53,8 @@
         </div>
       </div>
     </div>
+
+    <!-- HERO INFO -->
     <div class="hero-info-wrapper">
       <p class="hero-info-text">{{ $t("event_date") }}, 10:00 - 16:00</p>
       <p
@@ -63,7 +69,6 @@
 
 <script>
 import Button from "@/components/Button.vue";
-//import { text } from 'body-parser';
 
 export default {
   name: "heroSection",
@@ -182,6 +187,8 @@ components: {
 </script>
 
 <style>
+
+/* CONTAINER */
 .hero {
   min-height: 100vh;
   padding: 0;
@@ -194,6 +201,7 @@ components: {
   flex-direction: column;
 }
 
+/* TEXT BLOCK BG */
 #hero-text-block {
   position: absolute;
   text-align: center;
@@ -204,6 +212,10 @@ components: {
   z-index: 1;
 }
 
+/* temporary style, to be finalised by design/css team */
+/* - haha good joke */
+/* no jokes in the code pls */
+/* jk this will stay lol */
 .hero-bg-span {
   color: var(--clr-pink-100);
   font-family: "OverpassMono";
@@ -221,6 +233,7 @@ components: {
   color: var(--clr-pink-400);
 }
 
+/* FOREGROUND */
 .hero-content {
   position: relative;
   padding: 1.5rem;
@@ -262,6 +275,7 @@ components: {
   font-weight: 700;
 }
 
+/* HERO INFO */
 .hero-info-wrapper {
   display: flex;
   flex-direction: column;

@@ -172,11 +172,11 @@ export default {
   components: {
     CompanyCard,
   },
-
+  // This method vill fetch a list of all the cms entries in a specified folder
   async asyncData({ $content, error }) {
     let posts;
     try {
-      posts = await $content("companies").fetch();
+      posts = await $content("companies").fetch(); // Gets the data from the content/companies path
     } catch (e) {
       error({ message: "Posts not found" });
     }
@@ -191,6 +191,7 @@ export default {
       return this.posts.filter(
         (post) =>
           post.slug.includes("." + this.$i18n.locale) &&
+          // display companies with selected conditions and matched search text
           this.filterOneCondition(post.program, this.selectedPrograms) &&
           this.filterOneCondition(post.positions, this.selectedPositions) &&
           this.searchCompany(post.title, this.searchText)
@@ -217,18 +218,23 @@ export default {
       if (!selection || !selection.length) {
         return true;
       }
-      // else display post whose condition includes any item in selection
+      // the text displaying on page is used as matching term, '&' would be
+      // replaced with 'och' to match the actual text in CMS
       let formattedSelection = selection.map((s) => s.replace(/&/g, "och"));
+      // when there's filter selected, display posts whose condition includes any item in selection
       return formattedSelection.some((s) => condition.includes(s));
     },
 
     searchCompany(title, searchText) {
+      // when no searchText entered, display all posts
       if (!searchText) {
         return true;
       }
+      // repalce a, o, u in searchText with strings including all special characters
       let formattedText = searchText.replace(/a/gi, "[aäå]")
                                     .replace(/o/gi, "[oö]")
                                     .replace(/u/gi, "[uü]");
+      // when there's searchText entered, display posts whose title matches the searchText
       return new RegExp(formattedText, "i").test(title);
     },
 
@@ -248,11 +254,17 @@ export default {
       }
     },
 
+    // text in filter boxes
     filterText(selected, type) {
+      // if no filter selected
       return selected.length < 1
+      // display 'all' + type
         ? this.allString + " " + type
+        // else if 1 filter selected
         : selected.length < 2
+        // display the selected text
         ? selected[0]
+        // else display the amount of selected filters + type
         : selected.length + " " + type;
     },
   },

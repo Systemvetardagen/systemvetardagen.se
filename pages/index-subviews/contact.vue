@@ -1,10 +1,16 @@
+<!-- The 'contact us' section on the bottom of the landing page. -->
 <template>
   <section class="contact" id="contact">
     <form class="contact-form" id="contact-form" @submit.prevent="submit">
+
+      <!-- TITLE -->
       <h2 style="color: var(--clr-grey-900)">
         {{ $t("contact-form-title") }}
       </h2>
+
+      <!-- INPUTS -->
       <div class="inputs">
+        <!-- Name -->
         <input
           type="text"
           :placeholder="this.$t('contact-form-name')"
@@ -12,6 +18,8 @@
           v-model="name"
           required
         />
+
+        <!-- E-Mail -->
         <input
           type="email"
           :placeholder="this.$t('contact-form-email')"
@@ -19,6 +27,8 @@
           v-model="email"
           required
         />
+
+        <!-- Company -->
         <input
           type="text"
           :placeholder="this.$t('contact-form-company')"
@@ -27,6 +37,7 @@
           required
         />
 
+        <!-- Honeypot -->
         <input
           v-model="botmsg"
           autocomplete="off"
@@ -37,6 +48,7 @@
           style="display: none"
         />
 
+        <!-- Message -->
         <textarea
           class="form-message"
           name="message"
@@ -46,17 +58,17 @@
           style="resize: none"
         ></textarea>
       </div>
+
+      <!-- BUTTON -->
+      <!-- the custom button didn't work for the form; therefore, we used the standard button and styled it accrdingly. -->
       <button type="submit" class="btn-form">
         {{ $t("contact-form-button") }}
       </button>
-      <!-- <Button 
-                        :title="this.$t('contact-form-button')" 
-                        bColor="--clr-pink-700" 
-                        v-type="submit"
-                        form="contact-form"
-                        ></Button> -->
     </form>
 
+
+    <!-- BLOB -->
+    <!-- The blob image disappears on mobile. -->
     <img
       class="contact-blob-nod"
       src="@/assets/img/blob-6d-nodImage-white.png"
@@ -66,13 +78,14 @@
 </template>
  <script>
 import Button from "@/components/Button.vue";
-import { file } from "@babel/types";
+
 export default {
   methods: {
+    // This function is called upon completion of the form. It takes the entered data and sends it to a cloudflare worker from where the data is send to the info.systemvetardagen@disk.su.se via.
     submit(event) {
-      console.log("Step 0");
       event.preventDefault();
-      console.log("Step 1 complete");
+      
+      // while filling the form, the data is stored in the vue data properties defined below, which are connected to the input tags in the template via v-model. In this function these data tags ( e.g., this.name) are added to a dictionary.
       try {
         let body = {
           name: this.name,
@@ -81,14 +94,14 @@ export default {
           message: this.message,
           botField: this.botmsg,
         };
-        console.log(body);
+
+        // This dictionary is then parsed as json and posted to the worker. 
         fetch(this.url, {
           method: "POST",
           body: JSON.stringify(body),
         }).then((response) => {
           console.log(response.status);
         });
-        //console.log(request.status.stringify());
         this.clearForm();
         alert("Your message has been sent!");
       } catch (err) {
@@ -105,6 +118,8 @@ export default {
     },
   },
   data() {
+
+    // These are the properties that store the form inputs. They are connected to the template via v-model. 
     return {
       name: "",
       email: "",
@@ -120,7 +135,11 @@ components: {
   Button;
 }
 </script>
+
+
 <style scoped>
+
+/* CONTAINERS */
 .contact {
   padding-top: 0;
   display: flex;
@@ -151,24 +170,14 @@ components: {
   padding-top: 10rem;
 }
 
+/* INPUTS */
+
 .inputs {
   display: flex;
   flex-direction: column;
 }
 
-@media (min-width: 1024px) {
-  .inputs {
-    flex-direction: column;
-  }
-  .inputs-left-col {
-    margin-right: 1rem;
-  }
 
-  .contact-blob-nod {
-    padding-top: 10rem;
-    visibility: visible;
-  }
-}
 input,
 textarea {
   margin: 0;
@@ -188,6 +197,7 @@ textarea:focus {
   outline: solid 0.25rem var(--clr-blue-600);
 }
 
+/* placeholder (for different client systems) */
 input::-moz-placeholder,
 textarea::-moz-placeholder {
   color: var(--clr-grey-700);
@@ -203,6 +213,9 @@ textarea::placeholder {
   color: var(--clr-grey-700);
 }
 
+
+/* SUBMIT BUTTON */
+
 .button-form {
   margin-top: 0;
   width: 12rem;
@@ -210,30 +223,37 @@ textarea::placeholder {
 }
 
 .btn-form {
-  /* background-color: var(--clr-blue); */
   font-weight: 500;
-
-  /* color: var(--clr-white); */
   border: none;
-
   text-align: center center;
   text-decoration: none;
   display: inline-block;
   font-size: 1.22rem;
-  /* margin-top: 2rem; */
   padding: 0.4em 2.5em;
   border-radius: 0.5rem;
-
   background: var(--clr-pink-600);
   color: var(--clr-white);
 }
 
+
+/* MEDIA QUERRIES */
+
+@media (min-width: 1024px) {
+  .inputs {
+    flex-direction: column;
+  }
+  .inputs-left-col {
+    margin-right: 1rem;
+  }
+
+  .contact-blob-nod {
+    padding-top: 10rem;
+    visibility: visible;
+  }
+}
+
 @media (max-width: 1024px) {
   .contact-blob-nod {
-    /* padding-top: 20rem;
-    padding-right: 20rem; */
-    /* overflow: auto;
-    padding-top: 20rem; */
     visibility: hidden;
   }
 }

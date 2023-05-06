@@ -1,6 +1,8 @@
 <template>
   <div>
     <header class="main-header" data-visible="false">
+
+      <!--  LOGO-LINK -->
       <a href="https://systemvetardagen.se" class="logo-link main-logo-link">
         <img
           src="@/assets/img/Symbol_&_Text_Logo_Black_&_Color.svg"
@@ -8,7 +10,11 @@
           alt="Systemvetardagen logo"
         />
       </a>
+
+      <!-- DESKTOP -->
       <nav>
+
+        <!-- Home -->
         <div class="normal" v-bind:class="{ active: isActive('/') }">
           <NuxtLink :to="localePath('/')" class="header-link">{{
             $t("home")
@@ -32,7 +38,7 @@
 
       <nuxt-link
         v-if="showEnglishMessage && checkLang()"
-        :to="switchLocalePath('en') + '/'"
+        :to="switchLocalePath('en') + '/'" 
         class="link-fair"
         ><img src="@/assets/img/UK.png"
       /></nuxt-link>
@@ -57,11 +63,7 @@
           src="@/assets/img/Sweden.png"
         />
       </nuxt-link>
-      <!-- <nuxt-link v-if="showEnglishMessage && checkLang()" :to="switchLocalePath('en') + '/'" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
-			<nuxt-link v-else-if="showEnglishMessage === false && checkLang() && checkPath()" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
-			<nuxt-link v-else-if="showEnglishMessage === false && checkLang()" :to="switchLocalePath('sv') + '/'" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link> -->
-      <!-- <nuxt-link v-else-if="checkLang() === false" :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
-			<nuxt-link v-else :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link> -->
+ 
     </header>
 
     <!-- MOBILE NAV -->
@@ -148,7 +150,7 @@ export default {
         return true;
       }
     },
-    checkLang() {
+    checkLang() { // checks the current language by testing if the path contains .sv or .en
       let st = String(this.$route.path);
       if (st.includes(".sv")) {
         return false;
@@ -157,7 +159,7 @@ export default {
       }
       return true;
     },
-    changePath() {
+    changePath() { // changes the language of a page by changing the path of the current url
       let st = String(this.$route.path);
       if (st.includes(".en")) {
         let st2 = st.replace(".en", ".sv");
@@ -169,7 +171,7 @@ export default {
         return st3;
       }
     },
-    checkPath() {
+    checkPath() { // checks if the current page is for a company from the cms by looking for the word companies in the path
       let st = String(this.$route.path);
       if (st.includes("/companies")) {
         return false;
