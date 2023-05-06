@@ -1,6 +1,8 @@
 <template>
   <div>
     <header class="main-header" data-visible="false">
+
+      <!--  LOGO-LINK -->
       <a href="https://systemvetardagen.se" class="logo-link main-logo-link">
         <img
           src="@/assets/img/Symbol_&_Text_Logo_Black_&_Color.svg"
@@ -8,7 +10,11 @@
           alt="Systemvetardagen logo"
         />
       </a>
+
+      <!-- DESKTOP -->
       <nav>
+
+        <!-- Home -->
         <div class="normal" v-bind:class="{ active: isActive('/') }">
           <NuxtLink :to="localePath('/')" class="header-link">{{
             $t("home")
@@ -57,11 +63,7 @@
           src="@/assets/img/Sweden.png"
         />
       </nuxt-link>
-      <!-- <nuxt-link v-if="showEnglishMessage && checkLang()" :to="switchLocalePath('en') + '/'" class="btn-lang"><img src="@/assets/img/UK.png"/></nuxt-link>
-			<nuxt-link v-else-if="showEnglishMessage === false && checkLang() && checkPath()" :to="switchLocalePath('sv')" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
-			<nuxt-link v-else-if="showEnglishMessage === false && checkLang()" :to="switchLocalePath('sv') + '/'" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link> -->
-      <!-- <nuxt-link v-else-if="checkLang() === false" :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link>
-			<nuxt-link v-else :to="changePath()" class="btn-lang"><img src="@/assets/img/Sweden.png"/></nuxt-link> -->
+ 
     </header>
 
     <!-- MOBILE NAV -->
