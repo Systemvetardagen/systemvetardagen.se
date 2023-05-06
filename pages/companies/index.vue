@@ -172,11 +172,11 @@ export default {
   components: {
     CompanyCard,
   },
-
+  // This method vill fetch a list of all the cms entries in a specified folder
   async asyncData({ $content, error }) {
     let posts;
     try {
-      posts = await $content("companies").fetch();
+      posts = await $content("companies").fetch(); // Gets the data from the content/companies path
     } catch (e) {
       error({ message: "Posts not found" });
     }
