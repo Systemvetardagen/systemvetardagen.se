@@ -86,10 +86,12 @@ export default {
   },
 
   created() {
+    // read the text to cover the background with from the path '/content/bg_text.json'
     this.lines = require("@/content/bg_text.json").lines;
     this.concatLines = this.lines.concat([]);
 
     setInterval(() => {
+      // every 2 seconds, generate a random index to highlight for 1.2 second
       this.highlightedIndex = Math.floor(
         Math.random() * this.concatLines.length
       );
@@ -100,8 +102,9 @@ export default {
   },
 
   mounted() {
+    // execute handleResize on the resize of viewport 
     window.addEventListener("resize", this.handleResize);
-    // getting the chracter size from a test span and the div size of the image
+    // getting the character size from a test span and the div size of the image
     this.textBlock = this.$refs.heroTextBlock;
     const span = this.$el.querySelector("#span-for-calculation");
     const computedStyle = window.getComputedStyle(span);
@@ -110,14 +113,14 @@ export default {
     this.divHeight = this.textBlock.offsetHeight;
     this.characterWidth = parseFloat(computedStyle.fontSize);
     this.characterHeight = parseFloat(computedStyle.lineHeight);
-    this.generateText();
 
+    this.generateText();
     this.$nextTick(() => this.spliceText());
   },
 
   computed: {
-    // calculate how many characters are needed to cover the image
-    // coefficient to be adjusted according to font
+    // calculate how many characters are needed to cover the image,
+    // coefficient (0.6) to be adjusted according to font
     charactersNeeded() {
       return (
         Math.floor(this.divWidth / (this.characterWidth * 0.6)) *
@@ -130,17 +133,20 @@ export default {
     handleResize() {
       if (!this.textBlock.offsetWidth) return;
       this.divWidth = this.textBlock.offsetWidth;
+
       this.generateText();
       this.$nextTick(() => this.spliceText());
     },
 
     generateText() {
       let neededLen = this.charactersNeeded;
+      // get the total string length of the concatLines array
       let linesLen = this.concatLines.reduce(
         (acc, line) => acc + line.length,
         0
       );
-      // if provided array is not enough to cover the image
+      // if provided array is not enough to cover the image,
+      // repeat the array until the length's enough
       while (neededLen > linesLen) {
         this.concatLines = this.concatLines.concat(this.lines);
         linesLen = this.concatLines.reduce((acc, line) => acc + line.length, 0);
@@ -149,12 +155,15 @@ export default {
       this.generated = true;
     },
 
-    // delete the elements of the array that go beyond visible area
-    // otherwise when a generated highlightedIndex belongs to a hidden span
+    // delete the elements of the string array that go beyond visible area.
+    // otherwise when a generated highlightedIndex belongs to a hidden span,
     // the highlighting would not be visible
     spliceText() {
       this.spans = this.$el.querySelectorAll(".displaying-spans");
       let hiddenIndex;
+      // check one span at a time, see if its top is exceeding the height of
+      // the textBlock div and total string length till this span is enough
+      // if yes, get the index of this span and delete spans after it
       for (let i = 0, linesLen = 0; i < this.spans.length; i++) {
         let span = this.spans[i];
         linesLen += span.innerText.length;
@@ -205,6 +214,8 @@ components: {
 
 /* temporary style, to be finalised by design/css team */
 /* - haha good joke */
+/* no jokes in the code pls */
+/* jk this will stay lol */
 .hero-bg-span {
   color: var(--clr-pink-100);
   font-family: "OverpassMono";
