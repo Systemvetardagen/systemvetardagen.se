@@ -16,7 +16,7 @@
 
         <!-- Home -->
         <div class="normal" v-bind:class="{ active: isActive('/') }">
-          <NuxtLink :to="localePath('/')" class="header-link">{{
+          <NuxtLink :to="localePath('/old_index')" class="header-link">{{
             $t("home")
           }}</NuxtLink>
         </div>
@@ -38,7 +38,7 @@
 
       <nuxt-link
         v-if="showEnglishMessage && checkLang()"
-        :to="switchLocalePath('en') + '/'" 
+        :to="switchLocalePath('en') + '/'"
         class="link-fair"
         ><img src="@/assets/img/UK.png"
       /></nuxt-link>
@@ -63,7 +63,7 @@
           src="@/assets/img/Sweden.png"
         />
       </nuxt-link>
- 
+
     </header>
 
     <!-- MOBILE NAV -->
