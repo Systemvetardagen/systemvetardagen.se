@@ -36,6 +36,12 @@
         </div>
       </nav>
 
+      <div class="login-button-div">
+        <button>
+          Log-In
+        </button>
+      </div>
+
       <nuxt-link
         v-if="showEnglishMessage && checkLang()"
         :to="switchLocalePath('en') + '/'" 
