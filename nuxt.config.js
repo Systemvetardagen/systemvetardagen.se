@@ -160,7 +160,17 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxtjs/i18n", "@nuxtjs/content", "@nuxt/image"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/content", "@nuxt/image", '@nuxtjs/axios',
+  '@nuxtjs/auth-next'],
+  auth: {
+    strategies: {
+      auth0: {
+        domain: 'dev-c8midue0dr5yhdtp.eu.auth0.com',
+        clientId: 'CVU5YkDteo49lZFZZrfd39pHX6xbMw2d',
+        audience: 'https://dev-c8midue0dr5yhdtp.eu.auth0.com/api/v2/'
+      }
+    }
+  },
   i18n: {
     locales: ["en", "sv"],
     defaultLocale: "sv",

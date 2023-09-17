@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@auth0/auth0-spa-js": "^2.1.2",
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/content": "^0.3.0",
     "@nuxtjs/i18n": "^7.2.0",
