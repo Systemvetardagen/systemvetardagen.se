@@ -37,7 +37,8 @@
       </nav>
 
       <div class="login-button-div">
-        <button>
+        <button
+          @click="logIn()">
           Log-In
         </button>
       </div>
@@ -151,6 +152,9 @@ export default {
   },
 
   methods: {
+    logIn() {
+      this.$auth.loginWith('auth0')
+    },
     isActive(cpath) {
       if (this.$route.path == cpath) {
         return true;
