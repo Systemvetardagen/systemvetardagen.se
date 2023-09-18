@@ -37,7 +37,14 @@
       </nav>
 
       <div class="login-button-div">
+        <button 
+          v-if="this.$auth.loggedIn"
+          @click="logOut()"
+        >
+          Log-out
+        </button>
         <button
+          v-else
           @click="logIn()">
           Log-In
         </button>
@@ -152,8 +159,13 @@ export default {
   },
 
   methods: {
+    async logOut() {
+      await this.$auth.logout()
+    },
     logIn() {
-      this.$auth.loginWith('auth0')
+      if (this.$auth.loginWith('auth0')) {
+        console.log(this.$auth.user)
+      }
     },
     isActive(cpath) {
       if (this.$route.path == cpath) {

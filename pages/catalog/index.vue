@@ -97,6 +97,7 @@
 
 <script>
 export default {
+  middleware: 'alt-auth',
   // This method vill fetch a list of all the cms entries in a specified folder
   async asyncData({ $content, error }) {
     let posts;

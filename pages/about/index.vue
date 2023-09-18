@@ -59,6 +59,7 @@
 import AboutCard from "@/components/AboutCard.vue";
 
 export default {
+  middleware: 'auth',
   components: {
     AboutCard,
   },

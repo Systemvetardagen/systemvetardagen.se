@@ -167,7 +167,8 @@ export default {
       auth0: {
         domain: 'dev-c8midue0dr5yhdtp.eu.auth0.com',
         clientId: 'CVU5YkDteo49lZFZZrfd39pHX6xbMw2d',
-        audience: 'https://dev-c8midue0dr5yhdtp.eu.auth0.com/api/v2/'
+        audience: 'https://dev-c8midue0dr5yhdtp.eu.auth0.com/api/v2/',
+        logoutRedirectUri: 'http://localhost:3000'
       }
     }
   },
