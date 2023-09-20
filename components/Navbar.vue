@@ -48,6 +48,11 @@
           @click="logIn()">
           Log-In
         </button>
+        <button
+          v-if="this.$auth.loggedIn"
+          @click="showUser">
+          Show User
+        </button>
       </div>
 
       <nuxt-link
@@ -171,6 +176,10 @@ export default {
       if (this.$route.path == cpath) {
         return true;
       }
+    },
+    showUser() {
+      console.clear()
+      console.log(this.$auth.user)
     },
     checkLang() { // checks the current language by testing if the path contains .sv or .en
       let st = String(this.$route.path);
