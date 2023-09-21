@@ -42,7 +42,7 @@
             :link="localePath('/catalog/' + '/')"
             width="14rem"
             bColor="gradient"
-            >{{ $t("catalog_btn_title") }}</Button
+            >Random Text</Button
           >
           <Button
             link="#contact"
