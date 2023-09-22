@@ -180,6 +180,7 @@ export default {
     showUser() {
       console.clear()
       console.log(this.$auth.user)
+      
     },
     checkLang() { // checks the current language by testing if the path contains .sv or .en
       let st = String(this.$route.path);
