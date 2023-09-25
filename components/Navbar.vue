@@ -53,6 +53,11 @@
           @click="showUser">
           Show User
         </button>
+        <div >
+          <NuxtLink :to="localePath('/user-landing') + '/'">
+            User page
+          </NuxtLink>
+        </div>
       </div>
 
       <nuxt-link
