@@ -63,7 +63,7 @@
       >
         Kista NOD, Borgarfjordsgatan 12
       </p>
-      <p>Hello this is a change!</p>
+     
     </div>
   </div>
 </template>
