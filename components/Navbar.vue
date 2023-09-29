@@ -149,7 +149,12 @@ export default {
       seen: true,
     };
   },
-
+  mounted() {
+    window.addEventListener('resize', this.handleResize);
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.handleResize);
+  },
   methods: {
     isActive(cpath) {
       if (this.$route.path == cpath) {
@@ -184,6 +189,11 @@ export default {
       }
       return true;
     },
+    handleResize() { // Handles the event of resizing the window
+      if (window.innerWidth > 768) { // Width 768 is the breakpoint for mobile view
+        this.seen = true; // Seen is the variable that controls if the mobile menu is visible or not
+      }
+    }
   },
   computed: {
     showEnglishMessage() {
