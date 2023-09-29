@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper container">
         <H1>User info page</H1>
-            <div v-if="this.$auth.loggedIn" class="logged">
+        <div v-if="this.$auth.loggedIn" class="logged">
             <h2>You are logged in.</h2>
             <p>You have the following roles: {{ userRoles }}</p>
             <button
@@ -13,16 +13,21 @@
                 @click="logOut()"
                 >Log out
             </button>
-    </div>
+        </div>
 
-    <div v-else-if="!this.$auth.loggedIn" class="logged">
-        <h2>You are logged out!</h2>
-        <p>Please log in.</p>
-        <button
-            @click="logIn()"
-            >Log in
-        </button>
-    </div>
+        <div v-else-if="!this.$auth.loggedIn" class="logged">
+            <div class="loginInfo">
+                <h2>You are logged out!</h2>
+                <p>Please log in.</p>
+                <button
+                    @click="logIn()"
+                    >Log in
+                </button>
+            </div>
+            <div class="upload">
+                <v-file-input label="File input"></v-file-input>
+            </div>
+        </div>
     </div>
   
 
@@ -35,7 +40,7 @@
         // },
         data() {
             return {
-                userRoles: this.getUserRoles()
+                //userRoles: this.getUserRoles()
             }
         },
         methods: {
