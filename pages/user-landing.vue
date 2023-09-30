@@ -2,17 +2,38 @@
     <div class="wrapper container">
         <H1>User info page</H1>
         <div v-if="this.$auth.loggedIn" class="logged">
-            <h2>You are logged in.</h2>
-            <p>You have the following roles: {{ userRoles }}</p>
-            <button
-                @click="logUserroles()"
-            >
-                Log roles
-            </button>
-            <button
-                @click="logOut()"
-                >Log out
-            </button>
+            <div class="loginInfo">
+                <h2>You are logged in.</h2>
+                <p>You have the following roles: </p>
+                <button
+                    @click="logUserroles()"
+                >
+                    Log roles
+                </button>
+                <button
+                    @click="logOut()"
+                    >Log out
+                </button>
+            </div>
+            <div class="upload">
+                <!-- <v-file-input label="File input"></v-file-input> -->
+                <button class="btn btn-info" @click="onPickFile">Upload profile picture</button>
+                <input
+                    type="file"
+                    style="display: none"
+                    ref="fileInput"
+                    accept="image/*"
+                    @change="onFilePicked"/>
+
+                <button @click="uploadFile()">Upload File</button>
+                <button @click="getFileUrl()">Get File URL</button>
+
+                <nuxt-img
+                    :src="this.fileUrl"
+                    alt="no file yet!"
+                ></nuxt-img>
+                <img :src="this.fileUrl" alt="not file yet!">
+            </div>
         </div>
 
         <div v-else-if="!this.$auth.loggedIn" class="logged">
@@ -34,13 +55,19 @@
 </template>
 
 <script>
+    
     export default {
         // props: {
         //     userRoles: this.getUserRoles()
         // },
+        image: {
+            domains: ['https://firebasestorage.googleapis.com']
+        },
         data() {
             return {
                 //userRoles: this.getUserRoles()
+                file: null,
+                fileUrl: "nothing"
             }
         },
         methods: {
@@ -70,12 +97,60 @@
                 .then(response => response.text())
                 .then(result => console.log(result))
                 .catch(error => console.log('error', error));
+            },
+            async uploadFile() {
+                //const storageRef = this.$fire.storage.ref().child(this.uploadFile.name)
+                const message = 'Nuxt-Fire with Firebase Storage rocks!'
+                const uploadTask = this.$fire.storage.ref(this.file.name).put(this.file)
+                uploadTask.on(
+                    "state_changed",
+                    (snapshot) => {
+                        //
+                        alert('File uploaded')
+                    },
+                    (error) => console.log(error),
+                    () => {
+                        this.$fire.storage.ref().child(this.file.name).getDownLoadURL().then(url => {
+                            console.log(url)
+                        })
+                    }
+                )
+                
+            },
+            async getFileUrl() {
+                const storageRef = this.$fire.storage.ref().child(this.file.name)
+                try {
+                    const url = await storageRef.getDownloadURL()
+                    //alert(`The file can be found here: ${url}`)
+                    this.fileUrl = url
+                    console.log(this.fileUrl)
+                } catch (e) {
+                    alert(e.message)
+                }
+            },
+            onPickFile () {
+                this.$refs.fileInput.click()
+            },
+            onFilePicked (event) {
+                const files = event.target.files
+                let filename = files[0].name
+                const fileReader = new FileReader()
+                fileReader.addEventListener('load', () => {
+                    this.imageUrl = fileReader.result
+                })
+                fileReader.readAsDataURL(files[0])
+                this.file = files[0]
             }
         }
     }
 </script>
 
 <style>
+    .upload {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .container {
         margin-top: 3rem;
         display: flex;
@@ -87,6 +162,11 @@
     }
     .logged {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .loginInfo {
+        display:flex;
         flex-direction: column;
         align-items: center;
     }
