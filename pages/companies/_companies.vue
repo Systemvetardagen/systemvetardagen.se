@@ -348,7 +348,6 @@ export default {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
   padding: 3rem 1.5rem;
   background: var(--clr-blue-100);
   color: var(--clr-blue-900);
