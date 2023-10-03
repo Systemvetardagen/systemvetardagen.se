@@ -67,7 +67,6 @@
     </header>
 
     <!-- MOBILE NAV -->
-
     <header class="mobile-header">
       <NuxtLink :to="localePath('/')" class="logo-link mobile-logo-link">
         <img
@@ -98,9 +97,11 @@
       <div
         v-bind:class="{ mactive: isActive('/') }"
         class="mobile-header-container"
+        @click="seen = !seen"
       >
         <NuxtLink :to="localePath('/')" class="header-link">{{
           $t("home")
+
         }}</NuxtLink>
       </div>
 
@@ -108,6 +109,7 @@
       <div
         v-bind:class="{ mactive: isActive('/catalog/') }"
         class="mobile-header-container"
+        @click="seen = !seen"
       >
         <NuxtLink :to="localePath('/catalog') + '/'" class="header-link">{{
           $t("catalog")
@@ -118,20 +120,24 @@
       <div
         v-bind:class="{ mactive: isActive('/about/') }"
         class="mobile-header-container"
+        @click="seen = !seen"
       >
         <NuxtLink :to="localePath('/about') + '/'" class="header-link">{{
           $t("about")
         }}</NuxtLink>
       </div>
-      <nuxt-link
-        v-if="showEnglishMessage"
-        :to="switchLocalePath('en')"
-        class="link-fair"
-        ><img src="@/assets/img/UK.png"
-      /></nuxt-link>
-      <nuxt-link v-else :to="switchLocalePath('sv')" class="link-fair"
-        ><img src="@/assets/img/Sweden.png"
-      /></nuxt-link>
+
+      <!-- Change language -->
+      <div @click="seen = !seen" class="link-fair">
+        <nuxt-link
+          v-if="showEnglishMessage"
+          :to="switchLocalePath('en')"
+          ><img src="@/assets/img/UK.png"
+        /></nuxt-link>
+        <nuxt-link v-else :to="switchLocalePath('sv')"
+          ><img src="@/assets/img/Sweden.png"
+        /></nuxt-link>
+      </div>
     </div>
   </div>
 </template>
@@ -143,7 +149,12 @@ export default {
       seen: true,
     };
   },
-
+  mounted() {
+    window.addEventListener('resize', this.handleResize);
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.handleResize);
+  },
   methods: {
     isActive(cpath) {
       if (this.$route.path == cpath) {
@@ -178,6 +189,11 @@ export default {
       }
       return true;
     },
+    handleResize() { // Handles the event of resizing the window
+      if (window.innerWidth > 768) { // Width 768 is the breakpoint for mobile view
+        this.seen = true; // Seen is the variable that controls if the mobile menu is visible or not
+      }
+    }
   },
   computed: {
     showEnglishMessage() {
