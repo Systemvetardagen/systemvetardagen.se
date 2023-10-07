@@ -196,6 +196,7 @@
     display: flex;
     align-items: center;
     height: fit-content;
+    color: black;
   }
 
   .main-button:hover {
