@@ -102,7 +102,7 @@ export default {
   },
 
   mounted() {
-    // execute handleResize on the resize of viewport 
+    // execute handleResize on the resize of viewport
     window.addEventListener("resize", this.handleResize);
     // getting the character size from a test span and the div size of the image
     this.textBlock = this.$refs.heroTextBlock;
