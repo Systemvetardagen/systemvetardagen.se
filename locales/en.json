@@ -135,6 +135,7 @@
     "aboveButton": "Want to take a look at last year's event?",
     "buttonLong": "Go\u00a0to\u00a0Systemvetardagen\u00a02023",
     "buttonShort": "Go\u00a0to\u00a02023",
-    "organizedBy": "Systemvetardagen is organized by the student union DISK at the\u00a0Department\u00a0of\u00a0Computer\u00a0and\u00a0Systems\u00a0Sciences at Stockholm\u00a0University"
+    "organizedBy": "Systemvetardagen is organized by the student union DISK at the\u00a0Department\u00a0of\u00a0Computer\u00a0and\u00a0Systems\u00a0Sciences at Stockholm\u00a0University",
+    "contactUsPrompt": "Contact us"
   }
 }

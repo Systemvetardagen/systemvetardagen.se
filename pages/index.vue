@@ -39,7 +39,7 @@
                d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
              />
            </svg>
-           <p>Kontakta oss</p>
+           <p>{{ $t("temporaryLandingPage.contactUsPrompt") }}</p>
          </a>
        </div>
        <div class="socials-container">
@@ -247,7 +247,7 @@
 
   .socials-container {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     margin-bottom: 1rem;
   }
 
@@ -296,9 +296,9 @@
     color: black;
   }
 
-  .socials-container a:focus,
-  .email-container:focus,
-  main a:focus {
+  .socials-container a:focus-visible,
+  .email-container:focus-visible,
+  main a:focus-visible {
     outline: 3px dashed black;
     outline-offset: 4px;
   }
