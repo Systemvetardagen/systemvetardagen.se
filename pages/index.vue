@@ -153,11 +153,6 @@ h2 {
   color: black;
 }
 
-.main-button:hover {
-  background-color: black;
-  color: white;
-}
-
 .main-info {
   width: 80%;
   margin-top: 4rem;
@@ -228,10 +223,6 @@ h2 {
   text-decoration: underline;
 }
 
-.email-container:hover {
-  color: black;
-}
-
 .logo-link svg {
   margin: 0;
   height: 2rem;
@@ -240,10 +231,6 @@ h2 {
 
 .socials-container a {
   color: white;
-}
-
-.socials-container a:hover {
-  color: black;
 }
 
 .socials-container a:focus-visible,
@@ -256,6 +243,18 @@ main a:focus-visible {
 .email-container svg {
   height: 1.5rem;
   width: 1.5rem;
+}
+
+@media (hover: hover) {
+  .main-button:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .email-container:hover,
+  .socials-container a:hover {
+    color: black;
+  }
 }
 
 @media only screen and (max-width: 620px) {
