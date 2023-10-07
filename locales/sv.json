@@ -126,5 +126,16 @@
   "aulanod-program": "Aula NOD Program",
   "all-companies-btn": "Se alla företag",
 
-  "map-heading": "Företagsplacering"
+  "map-heading": "Företagsplacering",
+
+  "temporaryLandingPage": {
+    "heading": "Systemvetardagen 2024",
+    "subheading": "Under konstruktion",
+    "tagline": "En av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom\u00a0IT‑branchen.",
+    "shortDateInfo": "Våren 2024 i Kista, Stockholm.",
+    "aboveButton": "Vill du kika på förra årets event?",
+    "buttonLong": "Gå\u00a0till\u00a0Systemvetardagen\u00a02023",
+    "buttonShort": "Gå\u00a0till\u00a02023",
+    "organizedBy": "Systemvetardagen arrangeras av studentkåren DISK vid Instutitionen\u00a0för\u00a0data-\u00a0och\u00a0systemvetenskap vid Stockholms\u00a0universitet"
+  }
 }
