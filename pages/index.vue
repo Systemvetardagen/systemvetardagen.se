@@ -11,12 +11,13 @@
             </p>
              <p class="main-info-bottom">Spring 2024 in Kista, Stockholm.</p>
           </div>
-          <p class="above-button-text">Want to take a look at last year's event?</p>
+          <p class="above-button-text">Want to take a look at last year's event? {{ windowWidth }}</p>
           <NuxtLink
            :to="localePath('/old_index')"
          >
             <button>
-              Go&nbsp;to&nbsp;Systemvetardagen&nbsp;2023
+              <span v-if="windowWidth > 300">Go&nbsp;to&nbsp;Systemvetardagen&nbsp;2023</span>
+              <span v-else>Go to 2023</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="arrow" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
               </svg>
@@ -35,8 +36,28 @@
 
  export default {
   layout: 'temporary-landing-page',
+  name: "IndexPage",
+  data() {
+    return {
+      windowWidth: 0,
+    };
+  },
+  mounted() {
+    // Initial window width
+    this.windowWidth = window.innerWidth;
 
-   name: "IndexPage",
+    // Listen for window resize event
+    window.addEventListener('resize', this.handleResize);
+  },
+  destroyed() {
+      window.removeEventListener('resize', this.handleResize);
+  },
+  methods: {
+      handleResize() {
+          this.windowWidth = window.innerWidth;
+      }
+  }
+
  };
  </script>
 
@@ -126,7 +147,7 @@
     text-align: center;
     font-weight: 300;
     letter-spacing: 1%;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem;
   }
 
   .footer-text {
@@ -184,22 +205,28 @@
 
     button {
       font-size: 1rem;
-      padding: 0.5rem 0.8rem;
+      padding: 0.7rem 0.8rem;
       width: 100%;
     }
   }
 
   @media only screen and (max-width: 300px) {
     h1 {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
     }
 
     button {
-      font-size: 0.7rem;
+      font-size: 1rem;
     }
 
     .arrow {
       height: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 300px) {
+    h1 {
+      display: none;
     }
   }
 </style>
