@@ -91,7 +91,8 @@
               systemvetardagen<br />@disk.su.se
             </a>
           </div>
-        </div>
+
+         
 
         <!-- Trademark -->
         <p style="color: var(--clr-blue-400)">© Systemvetardagen 2023</p>
