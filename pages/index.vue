@@ -12,9 +12,9 @@
         </p>
       </div>
       <div class="pdf-container">
-        <p class="pdf-container-header">For companies:</p>
+        <p class="pdf-container-header">{{ $t("temporaryLandingPage.pdfHeader") }}</p>
         <a class="pdf-download" href="/infoblad2024.pdf" target="_blank">
-          <span>Get the 2024 info sheet</span><PDFIcon />
+          <span>{{ $t("temporaryLandingPage.pdfLinkPrompt") }}</span><PDFIcon />
         </a>
       </div>
       <p class="above-button-text">{{ $t("temporaryLandingPage.aboveButton") }}</p>
@@ -357,6 +357,10 @@ main a:focus-visible {
 @media only screen and (max-width: 300px) {
   h1 {
     display: none;
+  }
+
+  .pdf-container {
+    padding: 0.4rem;
   }
 }
 </style>
