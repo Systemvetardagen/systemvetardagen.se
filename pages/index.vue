@@ -11,6 +11,12 @@
           {{ $t("temporaryLandingPage.shortDateInfo") }}
         </p>
       </div>
+      <div class="pdf-container">
+        <p class="pdf-container-header">{{ $t("temporaryLandingPage.pdfHeader") }}</p>
+        <a class="pdf-download" href="/infoblad2024.pdf" target="_blank">
+          <span>{{ $t("temporaryLandingPage.pdfLinkPrompt") }}</span><PDFIcon />
+        </a>
+      </div>
       <p class="above-button-text">{{ $t("temporaryLandingPage.aboveButton") }}</p>
       <NuxtLink :to="localePath('/old_index')" class="main-button">
         <span v-if="windowWidth > 300">{{ $t("temporaryLandingPage.buttonLong") }}</span>
@@ -50,6 +56,7 @@ import InstagramLogo from "@/components/icons/InstagramLogo.vue";
 import FacebookLogo from "@/components/icons/FacebookLogo.vue";
 import LinkedInLogo from "@/components/icons/LinkedInLogo.vue";
 import MailIcon from "@/components/icons/MailIcon.vue";
+import PDFIcon from "@/components/icons/PDFIcon.vue";
 
 export default {
   layout: 'temporary-landing-page',
@@ -61,6 +68,7 @@ export default {
     FacebookLogo,
     MailIcon,
     LinkedInLogo,
+    PDFIcon
   },
   data() {
     return {
@@ -158,7 +166,7 @@ h2 {
   margin-top: 4rem;
   line-height: 1.5;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .main-info-bottom {
@@ -245,6 +253,43 @@ main a:focus-visible {
   width: 1.5rem;
 }
 
+.pdf-container {
+  padding: 1.5rem 2rem 2rem 2rem;
+  outline: 1px solid white;
+  margin-bottom: 3rem;
+}
+
+.pdf-container-header {
+  font-family: work-sans;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pdf-download {
+  color: white;
+  font-family: work-sans;
+  font-weight: 300;
+  text-decoration: underline;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.pdf-download span {
+  margin-right: 0.5rem;
+}
+
+.pdf-download svg {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+.pdf-download:hover {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
 @media (hover: hover) {
   .main-button:hover {
     background-color: black;
@@ -265,7 +310,7 @@ main a:focus-visible {
 
 @media only screen and (max-width: 767px) {
   .main-info {
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -312,6 +357,10 @@ main a:focus-visible {
 @media only screen and (max-width: 300px) {
   h1 {
     display: none;
+  }
+
+  .pdf-container {
+    padding: 0.4rem;
   }
 }
 </style>
