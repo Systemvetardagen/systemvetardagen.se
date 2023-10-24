@@ -2,15 +2,9 @@
   <div class="wrapper">
     <section class="content">
       <h1>{{ $t("catalog") }} 2023</h1>
-      <div class="blog-section">
-        <h2>{{ $t("posts-heading") }}</h2>
-        <BlogCard
-          v-for="post of filteredPosts"
-          :post="post"
-          :key="post.slug"
-          class="post-card"
-        />
-      </div>
+      <Button :link="localePath('/companies') + '/'" bColor="gradient">{{
+        $t("all-companies-btn")
+      }}</Button>
       <div class="sponsors">
         <h2>{{ $t("sponsors") }}</h2>
         <div class="company-grid">
@@ -73,9 +67,6 @@
           </NuxtLink>
         </div>
       </div>
-      <Button :link="localePath('/companies') + '/'" bColor="gradient">{{
-        $t("all-companies-btn")
-      }}</Button>
       <div class="map">
         <h2>{{ $t('map-heading') }}</h2>
         <img src="@/assets/img/map_companies.svg" alt="Map of company placement" class="map-img">
@@ -89,6 +80,15 @@
             <p>{{ event.title }}</p>
           </div>
         </div>
+      </div>
+      <div class="blog-section">
+        <h2>{{ $t("posts-heading") }}</h2>
+        <BlogCard
+          v-for="post of filteredPosts"
+          :post="post"
+          :key="post.slug"
+          class="post-card"
+        />
       </div>
     </section>
   </div>
@@ -182,7 +182,7 @@ h2 {
 }
 
 .company-grid {
-  max-width: 42rem;
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -191,12 +191,17 @@ h2 {
 
 .company-logo {
   border: none;
-  height: auto;
-  width: 8rem;
+  height: 10rem;
+  width: 10rem;
   display: flex;
   align-items: center;
   border-radius: 1rem;
   justify-content: center;
+}
+
+.company-logo img {
+  width: 100%;
+  height: auto;
 }
 
 .map {

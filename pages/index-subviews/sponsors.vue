@@ -3,7 +3,6 @@
   <div class="companies">
     <div class="company-content">
       <h2 style="color: var(--clr-blue-700)">{{ $t("sponsors") }}</h2>
-
       <!-- Since we hadn't figured out nuxt-image yet, we hard-coded this grid. -->
       <div class="company-grid">
         <NuxtLink :to="localePath('/companies/accenture')" class="company-logo">
@@ -73,7 +72,7 @@ export default {
     return {
       logoPath: "@/assets/img/company-logos/logo_",
 
-      // This dictionary is from an attempt to create the grid dynamically. 
+      // This dictionary is from an attempt to create the grid dynamically.
       logos: [
         { name: "Capgemini", img: "capgemini.png" },
         { name: "Sweco", img: "sweco_black.png" },
