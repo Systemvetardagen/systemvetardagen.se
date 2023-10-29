@@ -4,9 +4,9 @@
       <article class="post" id="post">
         <!-- BANNER -->
         <div class="banner">
-          <nuxt-img
+          <img
             v-if="post.banner"
-            :src="this.post.banner"
+            :src="post.banner.url"
             class="banner-img"
           />
           <img
@@ -18,10 +18,10 @@
           <div class="banner-shade"></div>
           <div class="banner-overlay">
             <div v-if="post.logo" class="logo">
-              <nuxt-img :src="this.post.logo" alt="logo" class="logo-img" />
+              <img :src="this.post.logo.url" alt="logo" class="logo-img" />
             </div>
 
-            <h1 v-if="!post.logo" class="post-title">{{ post.title }}</h1>
+            <!-- <h1 v-if="!post.logo && post.title" class="post-title">{{ post.title }}</h1> -->
             <!-- <p class="post-location">{{ $t("location") }}: TBA</p>
             <p v-if="post.banner" class="post-tag">// Sponsor</p>
             <p v-else class="post-tag">//</p> -->
@@ -39,7 +39,7 @@
             </p>
             <p v-if="post.founded" class="table-right">{{ post.founded }}</p>
             <p v-if="post.slogan" class="table-left">{{ $t("slogan") }}</p>
-            <p v-if="post.slogan" class="table-right">{{ post.slogan }}</p>
+            <p v-if="post.slogan" class="table-right">{{ post.slogan[locale] }}</p>
             <p v-if="post.number_of_employees_in_Sweden" class="table-left">
               {{ $t("employees-sv") }}
             </p>
@@ -62,14 +62,14 @@
           <p v-if="post.area_of_business" style="font-weight: 600">
             {{ $t("bis-area") }}
           </p>
-          <p v-if="post.area_of_business">{{ post.area_of_business }}</p>
+          <p v-if="post.area_of_business">{{ post.area_of_business[locale] }}</p>
         </div>
         <!-- END COMPANY INFO -->
 
         <!-- ARTICLE MAIN CONTENT -->
         <div class="post-content">
-          <h3>{{ post.slogan }}</h3>
-          <p>{{ post.about_us }}</p>
+          <h3>{{ post.slogan[locale] }}</h3>
+          <p v-if="post.about_us">{{ post.about_us[locale] }}</p>
 
           <!-- YOUTUBE VIDEO -->
           <div v-if="post.youtube_video" class="video">
@@ -127,20 +127,20 @@
               <div class="match-list-items">
                 <ul>
                   <p style="font-weight: 700">{{ $t("programs") }}</p>
-                  <li v-for="program in post.program" :key="program.id">
-                    {{ program }}
+                  <li v-for="program in post.program" :key="program[locale]">
+                    {{ program[locale] }}
                   </li>
                 </ul>
                 <ul>
                   <p style="font-weight: 700">{{ $t("positions") }}</p>
-                  <li v-for="position in post.positions" :key="position.id">
-                    {{ position }}
+                  <li v-for="position in post.positions" :key="position[locale]">
+                    {{ position[locale] }}
                   </li>
                 </ul>
               </div>
               <div v-if="post.qualifications" class="match-qualifications">
                 <p style="font-weight: 700">{{ $t("qualifications") }}</p>
-                <p>{{ post.qualifications }}</p>
+                <p>{{ post.qualifications[locale] }}</p>
               </div>
             </div>
             <a
@@ -215,6 +215,8 @@
 <script>
 import Button from "@/components/Button.vue";
 import marked from "marked";
+import { getDataFromDataBase, uploadDataToStorage, writeToDataBase } from "@/app/firebase.js";
+
 
 export default {
   methods: {
@@ -230,15 +232,14 @@ export default {
   //Gets a specific entry from the cms in the specified folder based on the value of params.
   async asyncData({ $content, params, error, i18n }) {
     let post;
+    let locale = i18n.locale || "sv";
+    console.log(params.companies)
     try {
-      post = await $content(
-        "companies",
-        params.companies + "." + i18n.locale // Specifies that the fetch function should see difference between the same cms entry in different languages 
-      ).fetch();
+      post = await getDataFromDataBase(`companies/${params.companies}`);
     } catch (e) {
       error({ message: "Entry not found" });
     }
-    return { post };
+    return { post, locale };
   },
   components: {
     Button,
