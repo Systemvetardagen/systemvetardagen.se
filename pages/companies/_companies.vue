@@ -4,7 +4,7 @@
       <article class="post" id="post">
         <!-- BANNER -->
         <div class="banner">
-          <nuxt-img
+          <img
             v-if="post.banner"
             :src="this.post.banner"
             class="banner-img"
@@ -18,7 +18,7 @@
           <div class="banner-shade"></div>
           <div class="banner-overlay">
             <div v-if="post.logo" class="logo">
-              <nuxt-img :src="this.post.logo" alt="logo" class="logo-img" />
+              <img :src="this.post.logo" alt="logo" class="logo-img" />
             </div>
 
             <h1 v-if="!post.logo" class="post-title">{{ post.title }}</h1>
@@ -37,7 +37,7 @@
             <p v-if="post.founded" class="table-left">
               {{ $t("established") }}
             </p>
-            <p v-if="post.founded" class="table-right">{{ post.founded }}</p>
+            <p v-if="post.founded" class="table-right">{{ post.founded.split('-')[0] }}</p>
             <p v-if="post.slogan" class="table-left">{{ $t("slogan") }}</p>
             <p v-if="post.slogan" class="table-right">{{ post.slogan }}</p>
             <p v-if="post.number_of_employees_in_Sweden" class="table-left">
@@ -62,20 +62,20 @@
           <p v-if="post.area_of_business" style="font-weight: 600">
             {{ $t("bis-area") }}
           </p>
-          <p v-if="post.area_of_business">{{ post.area_of_business }}</p>
+          <p v-if="post.area_of_business">{{ post.area_of_business[locale] }}</p>
         </div>
         <!-- END COMPANY INFO -->
 
         <!-- ARTICLE MAIN CONTENT -->
         <div class="post-content">
           <h3>{{ post.slogan }}</h3>
-          <p>{{ post.about_us }}</p>
+          <p>{{ post.about_us[locale] }}</p>
 
           <!-- YOUTUBE VIDEO -->
-          <div v-if="post.youtube_video" class="video">
+          <div v-if="post.sponsor_youtube_video" class="video">
             <iframe
               class="yt-video"
-              :src="this.post.youtube_video"
+              :src="this.post.sponsor_youtube_video"
               frameborder="0"
               allowfullscreen
             >
@@ -83,7 +83,7 @@
           </div>
           <!-- END YOUTUBE VIDEO -->
           <div
-            v-if="post.extra_text"
+            v-if="post.sponsor_extra_text"
             v-html="markdownToHtml"
             class="extra-text"
           ></div>
@@ -91,7 +91,7 @@
           <div v-if="post.sponsor_images" class="gallery">
             <div class="column">
               <div v-if="post.sponsor_images[0]" class="gallery-item">
-                <nuxt-img
+                <img
                   :src="this.post.sponsor_images[0]"
                   alt="gallery image 1"
                   class="gallery-img"
@@ -100,14 +100,14 @@
             </div>
             <div class="column">
               <div v-if="post.sponsor_images[1]" class="gallery-item">
-                <nuxt-img
+                <img
                   :src="this.post.sponsor_images[1]"
                   alt="gallery image 2"
                   class="gallery-img"
                 />
               </div>
               <div v-if="post.sponsor_images[2]" class="gallery-item">
-                <nuxt-img
+                <img
                   :src="this.post.sponsor_images[2]"
                   alt="gallery image 3"
                   class="gallery-img"
@@ -127,20 +127,20 @@
               <div class="match-list-items">
                 <ul>
                   <p style="font-weight: 700">{{ $t("programs") }}</p>
-                  <li v-for="program in post.program" :key="program.id">
+                  <li v-for="program in post.programs_data[locale]" :key="program.id">
                     {{ program }}
                   </li>
                 </ul>
                 <ul>
                   <p style="font-weight: 700">{{ $t("positions") }}</p>
-                  <li v-for="position in post.positions" :key="position.id">
+                  <li v-for="position in post.positions_data[locale]" :key="position.id">
                     {{ position }}
                   </li>
                 </ul>
               </div>
               <div v-if="post.qualifications" class="match-qualifications">
                 <p style="font-weight: 700">{{ $t("qualifications") }}</p>
-                <p>{{ post.qualifications }}</p>
+                <p>{{ post.qualifications[locale] }}</p>
               </div>
             </div>
             <a
@@ -216,6 +216,12 @@
 import Button from "@/components/Button.vue";
 import marked from "marked";
 
+import {
+  API_Call_Company,
+  API_Call_Company_Details,
+  image_url
+} from "@/app/companyCall.js";
+
 export default {
   methods: {
     ImageLink(cmsImg) {
@@ -229,30 +235,103 @@ export default {
   },
   //Gets a specific entry from the cms in the specified folder based on the value of params.
   async asyncData({ $content, params, error, i18n }) {
+    let companyName = params.companies;
+    let locale = i18n.locale;
     let post;
     try {
-      post = await $content(
-        "companies",
-        params.companies + "." + i18n.locale // Specifies that the fetch function should see difference between the same cms entry in different languages 
-      ).fetch();
+      post = await API_Call_Company(companyName);
+      post.title = post.companyName
+      post.logo = image_url(post.logo);
+      post.banner = post.banner ? image_url(post.banner) : null;
+      post.sponsor_images = [];
+      if (post.sponsor_image1){
+        post.sponsor_images.push(image_url(post.sponsor_image1));
+      }
+      if (post.sponsor_image2){
+        post.sponsor_images.push(image_url(post.sponsor_image2));
+      }
+      if (post.sponsor_image3){
+        post.sponsor_images.push(image_url(post.sponsor_image3));
+      }
+      const ids = {
+        programs: post.programs || [],
+        positions: post.positions || [],
+        contacts: post.contacts || [],
+        translations: post.translations || [],
+      };
+      const data_detail = await API_Call_Company_Details(ids);
+      post.programs_data = {
+        sv: [],
+        en: []
+      }
+
+      data_detail.programs.forEach(item => {
+        const { languages_code, program } = item;
+        if (languages_code === 'en') {
+          post.programs_data.en.push(program);
+        } else if (languages_code === 'sv') {
+          post.programs_data.sv.push(program);
+        }
+      });
+
+
+      post.positions_data = {
+        sv: [],
+        en: []
+      }
+
+      data_detail.positions.forEach(item => {
+        const { languages_id, position } = item;
+        if (languages_id === 'en') {
+          post.positions_data.en.push(position);
+        } else if (languages_id === 'sv') {
+          post.positions_data.sv.push(position);
+        }
+      });
+
+      post.contact_persons = data_detail.contact_persons;
+
+      if(data_detail.translations[0].about_us){
+        post.about_us = {
+          en: data_detail.translations[0].about_us,
+          sv: data_detail.translations[1].about_us
+        }
+      }
+
+      if(data_detail.translations[0].area_of_business){
+        post.area_of_business = {
+          en: data_detail.translations[0].area_of_business,
+          sv: data_detail.translations[1].area_of_business
+        }
+      }
+
+      if(data_detail.translations[0].qualifications){
+        post.qualifications = {
+          en: data_detail.translations[0].qualifications,
+          sv: data_detail.translations[1].qualifications
+        }
+      }
+
     } catch (e) {
       error({ message: "Entry not found" });
     }
-    return { post };
+
+    return { post, companyName, locale };
   },
   components: {
     Button,
   },
   computed: {
-    showEnglishMessage() { // Checks if the current chosen language is swedish.
+    showEnglishMessage() {
+      // Checks if the current chosen language is swedish.
       return this.$i18n.locale === "sv";
     },
     markdownToHtml() {
-      return marked.parse(this.post.extra_text);
+      return marked.parse(this.post.sponsor_extra_text);
     },
   },
 };
-</script> 
+</script>
 <style scoped>
 .post {
   display: flex;
@@ -530,4 +609,3 @@ img {
   }
 }
 </style>
-
