@@ -1,9 +1,12 @@
-export const API_Token = "";
+if (!process.env.API_TOKEN) {
+    throw Error('No api token configered in .env')
+}
+
+export const API_Token = process.env.API_TOKEN;
 export const Base_URL = "https://systemvetardagencms.up.railway.app/";
 
 const headers = { 
-    'Authorization': `Bearer ${API_Token}`,
-    'mode': 'no-cors'
+    'Authorization': `Bearer ${API_Token}`
 };
 
 export const API_Call_Company = async (name) => {

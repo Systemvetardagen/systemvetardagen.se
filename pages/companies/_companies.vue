@@ -240,7 +240,7 @@ export default {
     let post;
     try {
       post = await API_Call_Company(companyName);
-      post.title = post.companyName
+      post.title = companyName;
       post.logo = image_url(post.logo);
       post.banner = post.banner ? image_url(post.banner) : null;
       post.sponsor_images = [];
@@ -294,21 +294,21 @@ export default {
       if(data_detail.translations[0].about_us){
         post.about_us = {
           en: data_detail.translations[0].about_us,
-          sv: data_detail.translations[1].about_us
+          sv: data_detail.translations[data_detail.translations.length > 1 ? 1 : 0].about_us
         }
       }
 
       if(data_detail.translations[0].area_of_business){
         post.area_of_business = {
           en: data_detail.translations[0].area_of_business,
-          sv: data_detail.translations[1].area_of_business
+          sv: data_detail.translations[data_detail.translations.length > 1 ? 1 : 0].area_of_business
         }
       }
 
       if(data_detail.translations[0].qualifications){
         post.qualifications = {
           en: data_detail.translations[0].qualifications,
-          sv: data_detail.translations[1].qualifications
+          sv: data_detail.translations[data_detail.translations.length > 1 ? 1 : 0].qualifications
         }
       }
 

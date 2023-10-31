@@ -5,6 +5,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
 
+  env: {
+    API_TOKEN: process.env.API_TOKEN
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Systemvetardagen 2023",
