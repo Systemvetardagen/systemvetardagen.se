@@ -30,7 +30,7 @@
         </div>
         <!-- END BANNER -->
 
-        <!-- CCOMPANY INFO -->
+        <!-- COMPANY INFO -->
         <div class="post-info">
           <h3 style="align-self: center">{{ $t("company-info") }}</h3>
           <div class="table">
