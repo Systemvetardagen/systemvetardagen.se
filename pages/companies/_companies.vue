@@ -291,24 +291,41 @@ export default {
 
       post.contact_persons = data_detail.contact_persons;
 
+      let langCode = {
+        en: 0,
+        sv: 0
+      }
+
+      if(data_detail.translations[0].languages_code === "en"){
+        langCode["en"]=0;
+        if(data_detail.translations.length > 1 && data_detail.translations[1].languages_code === "sv"){
+          langCode["sv"]=1;
+        }
+      } else if (data_detail.translations[0].languages_code === "sv"){
+        langCode["sv"]=0;
+        if(data_detail.translations.length > 1 && data_detail.translations[1].languages_code === "en"){
+          langCode["en"]=1;
+        }
+      }
+
       if(data_detail.translations[0].about_us){
         post.about_us = {
-          en: data_detail.translations[0].about_us,
-          sv: data_detail.translations[data_detail.translations.length > 1 ? 1 : 0].about_us
+          en: data_detail.translations[langCode.en].about_us,
+          sv: data_detail.translations[langCode.sv].about_us
         }
       }
 
       if(data_detail.translations[0].area_of_business){
         post.area_of_business = {
-          en: data_detail.translations[0].area_of_business,
-          sv: data_detail.translations[data_detail.translations.length > 1 ? 1 : 0].area_of_business
+          en: data_detail.translations[langCode.en].area_of_business,
+          sv: data_detail.translations[langCode.sv].area_of_business
         }
       }
 
       if(data_detail.translations[0].qualifications){
         post.qualifications = {
-          en: data_detail.translations[0].qualifications,
-          sv: data_detail.translations[data_detail.translations.length > 1 ? 1 : 0].qualifications
+          en: data_detail.translations[langCode.en].qualifications,
+          sv: data_detail.translations[langCode.sv].qualifications
         }
       }
 
