@@ -10,11 +10,11 @@ const headers = {
 };
 
 export const API_Call_Company = async (name) => {
+    console.log(name)
     const response = await fetch(`${Base_URL}items/companies?filter[company_name][_in]=${name}`, {headers});
     const json = await response.json();
     const data = json.data[0];
 
-    console.log(data)
     return data;
 }
 

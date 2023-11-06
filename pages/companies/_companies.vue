@@ -234,12 +234,17 @@ export default {
     // bannerLink: "@/assets" + this.post.banner
   },
   //Gets a specific entry from the cms in the specified folder based on the value of params.
-  async asyncData({ $content, params, error, i18n }) {
+  async asyncData({ $content ,params, error, i18n }) {
     let companyName = params.companies;
     let locale = i18n.locale;
     let post;
     try {
       post = await API_Call_Company(companyName);
+      if (post.status !== "published"){
+        if(params.companies.indexOf("draft") === -1){
+          throw new Error('Post not found');
+        }
+      }
       post.title = companyName;
       post.logo = image_url(post.logo);
       post.banner = post.banner ? image_url(post.banner) : null;
