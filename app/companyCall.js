@@ -10,11 +10,62 @@ const headers = {
 };
 
 export const API_Call_Company = async (name) => {
+    console.log(name)
     const response = await fetch(`${Base_URL}items/companies?filter[company_name][_in]=${name}`, {headers});
     const json = await response.json();
     const data = json.data[0];
 
     return data;
+}
+
+export const API_Call_Companies = async () => {
+    const response = await fetch(`${Base_URL}items/companies`, {headers});
+    const json = await response.json();
+    const data = json.data;
+
+    const positionIds = data.flatMap(item => item.positions);
+    const programIds = data.flatMap(item => item.programs);
+
+
+    const response2 = await fetch(`${Base_URL}items/companies_positions/?filter[id][_in]=${positionIds.join(',')}`, {headers});
+    const positions = (await response2.json()).data;
+
+
+    const response3 = await fetch(`${Base_URL}items/companies_programs/?filter[id][_in]=${programIds.join(',')}`, {headers});
+    const programs = (await response3.json()).data;
+
+
+    data.forEach(company => {
+        const related_positions = positions.filter(position => {return position.companies_id === company.id});
+        const related_programs = programs.filter(program => company.id === program.companies_id);
+        company.positionsIds = related_positions.flatMap(item => item.positions_id);
+        company.programsIds = related_programs.flatMap(item => item.programs_id);
+        company.logo = company.logo ? image_url(company.logo) : null;
+    });
+
+    return data;
+}
+
+export const API_Call_Programs = async () => {
+    const response1 = await fetch(`${Base_URL}items/programs`, {headers});
+    const data = (await response1.json()).data;
+    const translationsIds = data.flatMap(item => item.translations);
+    const response2 = await fetch(`${Base_URL}items/programs_translations/?filter[id][_in]=${translationsIds.join(',')}`, {headers});
+    const programs = (await response2.json()).data;
+
+
+    return programs;
+}
+
+export const API_Call_Positions = async () => {
+    const response1 = await fetch(`${Base_URL}items/positions`, {headers});
+    const data = (await response1.json()).data;
+    const translationsIds = data.flatMap(item => item.translations);
+    const response2 = await fetch(`${Base_URL}items/positions_translations/?filter[id][_in]=${translationsIds.join(',')}`, {headers});
+    const positions = (await response2.json()).data;
+
+
+    return positions;
 }
 
 export const API_Call_Company_Details = async(ids) => {

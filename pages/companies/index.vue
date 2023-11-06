@@ -28,17 +28,17 @@
         <div v-show="programsVisible" class="dropdown-container">
           <div
             class="dropdown-program dropdown-filter-item"
-            v-for="program in allPrograms"
-            :key="program"
+            v-for="program in allPrograms[locale]"
+            :key="program.id"
           >
             <input
               type="checkbox"
               :name="program"
-              :id="program"
+              :id="program.id"
               :value="program"
               v-model="selectedPrograms"
             />
-            <label :for="program">{{ program }}</label>
+            <label :for="program">{{ program.name }}</label>
           </div>
           <button @click.prevent="selectedPrograms = []">
             {{ $t("clear-selection") }}
@@ -71,17 +71,17 @@
         >
           <div
             class="dropdown-positions dropdown-filter-item"
-            v-for="position in allPositions"
-            :key="position"
+            v-for="position in allPositions[locale]"
+            :key="position.id"
           >
             <input
               type="checkbox"
               :name="position"
-              :id="position"
+              :id="position.id"
               :value="position"
               v-model="selectedPositions"
             />
-            <label :for="position">{{ position }}</label>
+            <label :for="position">{{ position.name }}</label>
           </div>
           <button @click.prevent="selectedPositions = []">
             {{ $t("clear-selection") }}
@@ -135,14 +135,14 @@
       </div>
 
       <div class="company-cards">
-        <div v-for="post of filteredPosts" :key="post.slug">
+        <div v-for="post of filteredPosts" :key="post.company_name">
           <!---<div v-if="showEnglishMessage">
             <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
           <NuxtLink
             :to="
               localePath({
                 name: 'companies-companies',
-                params: { companies: post.slug.split('.')[0] },
+                params: { companies: post.company_name },
               })
             "
           >
@@ -156,6 +156,13 @@
 
 <script>
 import CompanyCard from "@/components/CompanyCard.vue";
+
+import {
+  API_Call_Companies,
+  API_Call_Programs,
+  API_Call_Positions,
+  image_url,
+} from "@/app/companyCall.js";
 
 export default {
   data() {
@@ -173,14 +180,54 @@ export default {
     CompanyCard,
   },
   // This method vill fetch a list of all the cms entries in a specified folder
-  async asyncData({ $content, error }) {
+  async asyncData({ $content, error, i18n }) {
+    let locale = i18n.locale;
     let posts;
+    let allPrograms = {
+      en: [],
+      sv: [],
+    };
+    let allPositions = {
+      en: [],
+      sv: [],
+    };
+
     try {
-      posts = await $content("companies").fetch(); // Gets the data from the content/companies path
+      const positions = await API_Call_Positions();
+      positions.forEach((item) => {
+        if (item.languages_id === "en") {
+          allPositions.en.push({
+            id: item.positions_id,
+            name: item.position,
+          });
+        } else if (item.languages_id === "sv") {
+          allPositions.sv.push({
+            id: item.positions_id,
+            name: item.position,
+          });
+        }
+      });
+      const programs = await API_Call_Programs();
+      programs.forEach((item) => {
+        if (item.languages_code === "en") {
+          allPrograms.en.push({
+            id: item.programs_id,
+            name: item.program,
+          });
+        } else if (item.languages_code === "sv") {
+          allPrograms.sv.push({
+            id: item.programs_id,
+            name: item.program,
+          });
+        }
+      });
+
+      posts = await API_Call_Companies();
+
     } catch (e) {
       error({ message: "Posts not found" });
     }
-    return { posts };
+    return { posts, allPositions, allPrograms, locale };
   },
 
   computed: {
@@ -190,18 +237,16 @@ export default {
     filteredPosts() {
       return this.posts.filter(
         (post) =>
-          post.slug.includes("." + this.$i18n.locale) &&
           // display companies with selected conditions and matched search text
-          this.filterOneCondition(post.program, this.selectedPrograms) &&
-          this.filterOneCondition(post.positions, this.selectedPositions) &&
-          this.searchCompany(post.title, this.searchText)
+          post.status === "published" &&
+          this.filterOneCondition(post.programsIds, this.selectedPrograms) &&
+          this.filterOneCondition(post.positionsIds, this.selectedPositions) &&
+          this.searchCompany(post.company_name, this.searchText)
       );
     },
   },
 
   created() {
-    this.allPrograms = this.$t("filter-programs");
-    this.allPositions = this.$t("filter-positions");
     this.allString = this.$t("all");
   },
 
@@ -218,11 +263,7 @@ export default {
       if (!selection || !selection.length) {
         return true;
       }
-      // the text displaying on page is used as matching term, '&' would be
-      // replaced with 'och' to match the actual text in CMS
-      let formattedSelection = selection.map((s) => s.replace(/&/g, "och"));
-      // when there's filter selected, display posts whose condition includes any item in selection
-      return formattedSelection.some((s) => condition.includes(s));
+      return selection.some((s) => condition.includes(s.id));
     },
 
     searchCompany(title, searchText) {
@@ -231,9 +272,10 @@ export default {
         return true;
       }
       // repalce a, o, u in searchText with strings including all special characters
-      let formattedText = searchText.replace(/a/gi, "[aäå]")
-                                    .replace(/o/gi, "[oö]")
-                                    .replace(/u/gi, "[uü]");
+      let formattedText = searchText
+        .replace(/a/gi, "[aäå]")
+        .replace(/o/gi, "[oö]")
+        .replace(/u/gi, "[uü]");
       // when there's searchText entered, display posts whose title matches the searchText
       return new RegExp(formattedText, "i").test(title);
     },
@@ -258,18 +300,18 @@ export default {
     filterText(selected, type) {
       // if no filter selected
       return selected.length < 1
-      // display 'all' + type
-        ? this.allString + " " + type
-        // else if 1 filter selected
-        : selected.length < 2
-        // display the selected text
-        ? selected[0]
-        // else display the amount of selected filters + type
-        : selected.length + " " + type;
+        ? // display 'all' + type
+          this.allString + " " + type
+        : // else if 1 filter selected
+        selected.length < 2
+        ? // display the selected text
+          selected[0].name
+        : // else display the amount of selected filters + type
+          selected.length + " " + type;
     },
   },
 };
-</script> 
+</script>
 <style scoped>
 .dropdown-container {
   position: absolute;
