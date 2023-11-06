@@ -34,10 +34,10 @@
         <div class="post-info">
           <h3 style="align-self: center">{{ $t("company-info") }}</h3>
           <div class="table">
-            <p v-if="post.founded" class="table-left">
+            <p v-if="post.year_founded" class="table-left">
               {{ $t("established") }}
             </p>
-            <p v-if="post.founded" class="table-right">{{ post.founded.split('-')[0] }}</p>
+            <p v-if="post.year_founded" class="table-right">{{ post.year_founded }}</p>
             <p v-if="post.slogan" class="table-left">{{ $t("slogan") }}</p>
             <p v-if="post.slogan" class="table-right">{{ post.slogan }}</p>
             <p v-if="post.number_of_employees_in_sweden" class="table-left">
