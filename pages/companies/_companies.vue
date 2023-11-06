@@ -40,23 +40,23 @@
             <p v-if="post.founded" class="table-right">{{ post.founded.split('-')[0] }}</p>
             <p v-if="post.slogan" class="table-left">{{ $t("slogan") }}</p>
             <p v-if="post.slogan" class="table-right">{{ post.slogan }}</p>
-            <p v-if="post.number_of_employees_in_Sweden" class="table-left">
+            <p v-if="post.number_of_employees_in_sweden" class="table-left">
               {{ $t("employees-sv") }}
             </p>
-            <p v-if="post.number_of_employees_in_Sweden" class="table-right">
-              {{ post.number_of_employees_in_Sweden }}
+            <p v-if="post.number_of_employees_in_sweden" class="table-right">
+              {{ post.number_of_employees_in_sweden }}
             </p>
             <p
-              v-if="post.number_of_employees_in_internationally"
+              v-if="post.number_of_employees_internationally"
               class="table-left"
             >
               {{ $t("employees-int") }}
             </p>
             <p
-              v-if="post.number_of_employees_in_internationally"
+              v-if="post.number_of_employees_internationally"
               class="table-right"
             >
-              {{ post.number_of_employees_in_internationally }}
+              {{ post.number_of_employees_internationally }}
             </p>
           </div>
           <p v-if="post.area_of_business" style="font-weight: 600">
