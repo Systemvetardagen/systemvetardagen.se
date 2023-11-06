@@ -226,7 +226,7 @@ export default {
   methods: {
     ImageLink(cmsImg) {
       const link = "/_nuxt/assets" + cmsImg;
-      console.log(link);
+      //console.log(link);
       return link;
     },
   },
@@ -240,11 +240,11 @@ export default {
     let post;
     try {
       post = await API_Call_Company(companyName);
-      if (post.status !== "published"){
-        if(params.companies.indexOf("draft") === -1){
-          throw new Error('Post not found');
-        }
-      }
+      // if (post.status !== "published"){
+      //   if(params.companies.indexOf("draft") === -1){
+      //     throw new Error('Post not found');
+      //   }
+      // }
       post.title = companyName;
       post.logo = image_url(post.logo);
       post.banner = post.banner ? image_url(post.banner) : null;

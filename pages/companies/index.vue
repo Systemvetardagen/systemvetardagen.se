@@ -238,7 +238,7 @@ export default {
       return this.posts.filter(
         (post) =>
           // display companies with selected conditions and matched search text
-          post.status === "published" &&
+          post.status === "published" || (this.$preview && "draft") &&
           this.filterOneCondition(post.programsIds, this.selectedPrograms) &&
           this.filterOneCondition(post.positionsIds, this.selectedPositions) &&
           this.searchCompany(post.company_name, this.searchText)
