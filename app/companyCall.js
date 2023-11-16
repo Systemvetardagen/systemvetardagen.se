@@ -1,7 +1,7 @@
 if (!process.env.API_TOKEN) {
     throw Error('No api token configered in .env')
 }
-
+// TODO: some perf optimizations with data fetching, doesnt need to be sequential 
 export const API_Token = process.env.API_TOKEN;
 export const Base_URL = "https://systemvetardagencms.up.railway.app/";
 
@@ -74,7 +74,16 @@ export const API_Call_Company_Details = async(ids) => {
     if (ids.programs){
         const response1 = await fetch(`${Base_URL}items/companies_programs/?filter[id][_in]=${ids.programs.join(',')}`, {headers});
         const programs1 = (await response1.json()).data;
-        const programIds = programs1.map(item => item.programs_id);
+        const response1p1 = await fetch(`${Base_URL}items/companies_programs_1/?filter[id][_in]=${ids.programs.join(',')}`, {headers});
+        const programs1p1 = (await response1p1.json()).data;
+
+        //thiss combines bachelor and master programs for now
+        const programIds = programs1.concat(programs1p1).map(item => item.programs_id);
+        //const programIds = programs1.map(item => item.programs_id);
+        console.log(programs1.concat(programs1p1))
+        
+
+
         const response2 = await fetch(`${Base_URL}items/programs/?filter[id][_in]=${programIds.join(',')}`, {headers});
         const programs2 = (await response2.json()).data;
         const translationsIds = programs2.flatMap(item => item.translations)

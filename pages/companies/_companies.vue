@@ -260,7 +260,8 @@ export default {
         post.sponsor_images.push(image_url(post.sponsor_image3));
       }
       const ids = {
-        programs: post.programs || [],
+        //regular programs and master programs now get combined, we can change this later
+        programs: post.programs.concat(post.master_programs) || [],
         positions: post.positions || [],
         contacts: post.contacts || [],
         translations: post.translations || [],
