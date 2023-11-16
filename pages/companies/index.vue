@@ -1,43 +1,21 @@
 <template>
   <main class="wrapper">
     <section v-if="posts">
+      <h1 v-if="this.$preview" class="preview-title">This is a preview of the page</h1>
       <h1 class="title">{{ $t("companies") }}</h1>
 
       <div class="filter-paragraph">
         {{ $t("showing-companies-for") }}
-        <span
-          class="dropdown-toggle programs-toggle"
-          @click="programsVisible = !programsVisible"
-        >
+        <span class="dropdown-toggle programs-toggle" @click="programsVisible = !programsVisible">
           {{ filterText(selectedPrograms, $t("programs").toLowerCase()) }}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="3"
-            stroke="currentColor"
-            class="chevron"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
+            class="chevron">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
           </svg>
         </span>
         <div v-show="programsVisible" class="dropdown-container">
-          <div
-            class="dropdown-program dropdown-filter-item"
-            v-for="program in allPrograms[locale]"
-            :key="program.id"
-          >
-            <input
-              type="checkbox"
-              :name="program"
-              :id="program.id"
-              :value="program"
-              v-model="selectedPrograms"
-            />
+          <div class="dropdown-program dropdown-filter-item" v-for="program in allPrograms[locale]" :key="program.id">
+            <input type="checkbox" :name="program" :id="program.id" :value="program" v-model="selectedPrograms" />
             <label :for="program">{{ program.name }}</label>
           </div>
           <button @click.prevent="selectedPrograms = []">
@@ -45,42 +23,17 @@
           </button>
         </div>
         {{ $t("and") }}
-        <span
-          class="dropdown-toggle positions-toggle"
-          @click="positionsVisible = !positionsVisible"
-        >
+        <span class="dropdown-toggle positions-toggle" @click="positionsVisible = !positionsVisible">
           {{ filterText(selectedPositions, $t("positions").toLowerCase()) }}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="3"
-            stroke="currentColor"
-            class="chevron"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
+            class="chevron">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
           </svg>
         </span>
-        <div
-          v-show="positionsVisible"
-          class="dropdown-container positions-dropdown"
-        >
-          <div
-            class="dropdown-positions dropdown-filter-item"
-            v-for="position in allPositions[locale]"
-            :key="position.id"
-          >
-            <input
-              type="checkbox"
-              :name="position"
-              :id="position.id"
-              :value="position"
-              v-model="selectedPositions"
-            />
+        <div v-show="positionsVisible" class="dropdown-container positions-dropdown">
+          <div class="dropdown-positions dropdown-filter-item" v-for="position in allPositions[locale]"
+            :key="position.id">
+            <input type="checkbox" :name="position" :id="position.id" :value="position" v-model="selectedPositions" />
             <label :for="position">{{ position.name }}</label>
           </div>
           <button @click.prevent="selectedPositions = []">
@@ -88,64 +41,41 @@
           </button>
         </div>
       </div>
-      <button
-        v-if="selectedPrograms.length !== 0 || selectedPositions.length !== 0"
-        @click.prevent="
-          selectedPrograms = [];
-          selectedPositions = [];
-        "
-        class="clear-filter-btn"
-      >
+      <button v-if="selectedPrograms.length !== 0 || selectedPositions.length !== 0" @click.prevent="
+        selectedPrograms = [];
+      selectedPositions = [];
+      " class="clear-filter-btn">
         {{ $t("clear-filters") }}
       </button>
 
       <div class="search-field">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          class="search-icon"
-        >
-          <path
-            fill-rule="evenodd"
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="search-icon">
+          <path fill-rule="evenodd"
             d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-            clip-rule="evenodd"
-          />
+            clip-rule="evenodd" />
         </svg>
 
-        <input
-          class="search-input"
-          type="text"
-          ref="inputRef"
-          v-model.trim="searchText"
-          placeholder="Search companies"
-        />
-        <svg
-          v-if="searchText"
-          @click="clearInputAndFocus"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          class="clear-search-button"
-        >
+        <input class="search-input" type="text" ref="inputRef" v-model.trim="searchText" placeholder="Search companies" />
+        <svg v-if="searchText" @click="clearInputAndFocus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+          fill="currentColor" class="clear-search-button">
           <path
-            d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
-          />
+            d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
         </svg>
       </div>
 
       <div class="company-cards">
+        <div v-if="!showCompanies && !this.$preview">
+          <h2>Companies coming soon</h2>
+          <h2>Check out the old catalog</h2>
+        </div>
         <div v-for="post of filteredPosts" :key="post.company_name">
           <!---<div v-if="showEnglishMessage">
             <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
-          <NuxtLink
-            :to="
-              localePath({
-                name: 'companies-companies',
-                params: { companies: post.company_name },
-              })
-            "
-          >
+          <NuxtLink :to="localePath({
+            name: 'companies-companies',
+            params: { companies: post.company_name },
+          })
+            ">
             <company-card class="company-card" :company="post" />
           </NuxtLink>
         </div>
@@ -173,6 +103,7 @@ export default {
       selectedPositions: [],
       searchText: null,
       allString: null,
+      showCompanies: process.env.SHOW_COMPANIES,
     };
   },
 
@@ -238,10 +169,14 @@ export default {
       return this.posts.filter(
         (post) =>
           // display companies with selected conditions and matched search text
-          post.status === "published" || (this.$preview && "draft") &&
-          this.filterOneCondition(post.programsIds, this.selectedPrograms) &&
-          this.filterOneCondition(post.positionsIds, this.selectedPositions) &&
-          this.searchCompany(post.company_name, this.searchText)
+          this.$preview ||
+          (
+            (post.status === "published" && process.env.SHOW_COMPANIES) &&
+            this.filterOneCondition(post.programsIds, this.selectedPrograms) &&
+            this.filterOneCondition(post.positionsIds, this.selectedPositions) &&
+            this.searchCompany(post.company_name, this.searchText)
+          )
+
       );
     },
   },
@@ -301,12 +236,12 @@ export default {
       // if no filter selected
       return selected.length < 1
         ? // display 'all' + type
-          this.allString + " " + type
+        this.allString + " " + type
         : // else if 1 filter selected
         selected.length < 2
-        ? // display the selected text
+          ? // display the selected text
           selected[0].name
-        : // else display the amount of selected filters + type
+          : // else display the amount of selected filters + type
           selected.length + " " + type;
     },
   },
@@ -432,4 +367,11 @@ button {
 .clear-filter-btn {
   margin-top: 1rem;
 }
+
+.preview-title {  
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+
 </style>

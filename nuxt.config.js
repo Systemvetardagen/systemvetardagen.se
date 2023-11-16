@@ -6,7 +6,8 @@ export default {
   target: "static",
 
   env: {
-    API_TOKEN: process.env.API_TOKEN
+    API_TOKEN: process.env.API_TOKEN,
+    SHOW_COMPANIES: process.env.SHOW_COMPANIES === 'true' ? true : false
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
