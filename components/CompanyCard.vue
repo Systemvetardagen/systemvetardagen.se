@@ -1,8 +1,8 @@
 <template>
-  <div v-if="company.logo" class="logo-wrapper">
-    <nuxt-img class="logo" :src="this.company.logo" alt="" />
+  <div class="logo-wrapper">
+    <img v-if="company.logo" class="logo" :src="this.company.logo" alt="" />
+    <h3 v-else>{{ company.title ? company.title : company.company_name }}</h3>
   </div>
-  <h3 v-else>{{ company.title }}</h3>
 </template>
 <script>
 export default {
@@ -29,6 +29,7 @@ h3 {
   height: 5rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 1rem;
   background-color: var(--clr-white);
   border-radius: 1rem;
