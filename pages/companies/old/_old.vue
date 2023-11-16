@@ -189,7 +189,7 @@
         <!-- BOTTOM BUTTONS -->
         <div class="bottom-buttons">
           <Button
-            :link="localePath('/companies/')"
+            :link="localePath('/companies/old')"
             borderCol="--crl-black"
             bColor="transparent"
             tColor="--crl-black"
@@ -233,7 +233,7 @@ export default {
     try {
       post = await $content(
         "companies",
-        params.companies + "." + i18n.locale // Specifies that the fetch function should see difference between the same cms entry in different languages 
+        params.old + "." + i18n.locale // Specifies that the fetch function should see difference between the same cms entry in different languages 
       ).fetch();
     } catch (e) {
       error({ message: "Entry not found" });

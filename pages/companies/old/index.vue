@@ -141,8 +141,8 @@
           <NuxtLink
             :to="
               localePath({
-                name: 'companies-old-companies',
-                params: { companies: post.slug.split('.')[0] },
+                name: 'companies-old-old',
+                params: { old: post.slug.split('.')[0] },
               })
             "
           >
