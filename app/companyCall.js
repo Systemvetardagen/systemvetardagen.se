@@ -79,9 +79,6 @@ export const API_Call_Company_Details = async(ids) => {
 
         //thiss combines bachelor and master programs for now
         const programIds = programs1.concat(programs1p1).map(item => item.programs_id);
-        //const programIds = programs1.map(item => item.programs_id);
-        console.log(programs1.concat(programs1p1))
-        
 
 
         const response2 = await fetch(`${Base_URL}items/programs/?filter[id][_in]=${programIds.join(',')}`, {headers});
