@@ -125,5 +125,19 @@
   "aulanod-program": "Aula NOD Program",
   "all-companies-btn": "View all companies",
 
-  "map-heading": "Company placement"
+  "map-heading": "Company placement",
+
+  "temporaryLandingPage": {
+    "heading": "Systemvetardagen 2024",
+    "subheading": "🚧 Under construction 🚧",
+    "tagline": "One of the biggest job fairs in Sweden for students and employers in the\u00a0IT‑business.",
+    "shortDateInfo": "February 21, 2024 in Kista, Stockholm.",
+    "aboveButton": "Want to take a look at last year's event?",
+    "buttonLong": "Go\u00a0to\u00a0Systemvetardagen\u00a02023",
+    "buttonShort": "Go\u00a0to\u00a02023",
+    "organizedBy": "Systemvetardagen is organized by the student union DISK at the\u00a0Department\u00a0of\u00a0Computer\u00a0and\u00a0Systems\u00a0Sciences at Stockholm\u00a0University",
+    "contactUsPrompt": "Contact us",
+    "pdfHeader": "For companies:",
+    "pdfLinkPrompt": "Get the 2024 info sheet"
+  }
 }
