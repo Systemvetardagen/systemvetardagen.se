@@ -146,7 +146,7 @@
               })
             "
           >
-            <company-card class="company-card" :company="post" />
+            <old-company-card class="company-card" :company="post" />
           </NuxtLink>
         </div>
       </div>
@@ -155,7 +155,7 @@
 </template>
 
 <script>
-import CompanyCard from "@/components/CompanyCard.vue";
+import OldCompanyCard from "@/components/OldCompanyCard.vue";
 
 export default {
   data() {
@@ -170,7 +170,7 @@ export default {
   },
 
   components: {
-    CompanyCard,
+    OldCompanyCard,
   },
   // This method vill fetch a list of all the cms entries in a specified folder
   async asyncData({ $content, error }) {
