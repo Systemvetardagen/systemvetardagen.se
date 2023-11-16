@@ -1,7 +1,7 @@
 <template>
   <main class="wrapper">
     <section v-if="posts">
-      <h1 v-if="this.$preview" class="preview-title">This is a preview of the page</h1>
+      <h1 v-if="isPreview" class="preview-title">This is a preview of the page</h1>
       <h1 class="title">{{ $t("companies") }}</h1>
 
       <div class="filter-paragraph">
@@ -64,9 +64,9 @@
       </div>
 
       <div class="company-cards">
-        <div v-if="!showCompanies && !this.$preview">
+        <div v-if="!showCompanies && !isPreview">
           <h2>Companies coming soon</h2>
-          <h2>Check out the old catalog</h2>
+          <h2>Check out the <NuxtLink :to="localePath('/companies/old')">old</NuxtLink> catalog</h2>
         </div>
         <div v-for="post of filteredPosts" :key="post.company_name">
           <!---<div v-if="showEnglishMessage">
@@ -104,6 +104,7 @@ export default {
       searchText: null,
       allString: null,
       showCompanies: process.env.SHOW_COMPANIES,
+      isPreview: this.$preview,
     };
   },
 

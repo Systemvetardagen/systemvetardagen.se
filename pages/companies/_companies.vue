@@ -2,7 +2,7 @@
   <main class="wrapper" id="top">
     <section v-if="post">
       <article class="post" id="post">
-        <h1 v-if="this.$preview" class="preview-title">This is a preview of the page</h1>
+        <h1 v-if="isPreview" class="preview-title">This is a preview of the page</h1>
         <!-- BANNER -->
         <div class="banner">
           <img
@@ -224,6 +224,11 @@ import {
 } from "@/app/companyCall.js";
 
 export default {
+  data() {
+    return {
+      isPreview: this.$preview
+    }
+  },
   methods: {
     ImageLink(cmsImg) {
       const link = "/_nuxt/assets" + cmsImg;
