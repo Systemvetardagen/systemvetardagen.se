@@ -268,12 +268,24 @@ export default {
   width: 100%;
   max-height: 18rem;
 }
+
 .banner-shade {
   background: RGB(0, 0, 0, 0.5);
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+.banner-shade::before {
+  content: "2023";
+    background-color: #ffffff;
+    padding: 15px;
+    left: calc(50% - 30px);
+    top: -25px;
+    border-radius: 20px;
+    position: absolute;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 }
 .banner-overlay {
   position: absolute;

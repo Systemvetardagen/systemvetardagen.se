@@ -55,12 +55,19 @@
           <img src="@/assets/img/company-logos/logo_zimply.png" alt="Zimply" />
         </NuxtLink>
       </div>
-      <Button
+      <div class="companies_wrapper">
+        <Button
         class="companies-btn"
         :link="localePath('/companies') + '/'"
         bColor="gradient"
-        >{{ $t("all-companies-btn") }}</Button
-      >
+        >{{ $t("all-companies-btn") }}</Button>
+        <NuxtLink
+        class="old-companies-link"
+        :to="localePath('/companies2023') + '/'"
+        >
+          {{ $t("companies_2023") }}
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>
@@ -141,8 +148,31 @@ export default {
 
 /* BUTTON */
 
-.companies-btn {
+.companies_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 4rem;
+}
+
+.companies-btn {
+  margin: 1rem;
+}
+.old-companies-link {
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 22px;
+  background: -webkit-linear-gradient(
+    0deg,
+    var(--clr-blue-600),
+    var(--clr-pink-600),
+    var(--clr-yellow-600)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  -webkit-text-stroke-width: .7px;
+  -webkit-text-stroke-color: black;
 }
 
 /* MEDIA QUERRY */
