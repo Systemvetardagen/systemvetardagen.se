@@ -5,6 +5,11 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
 
+  env: {
+    API_TOKEN: process.env.API_TOKEN,
+    SHOW_COMPANIES: process.env.SHOW_COMPANIES === 'true' ? true : false
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Systemvetardagen 2023",
@@ -151,7 +156,7 @@ export default {
   css: ["@/assets/css/main.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['./plugins/preview.client.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
