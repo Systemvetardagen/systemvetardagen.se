@@ -112,7 +112,7 @@ footer {
   background: rgb(255,204,112);
   background: linear-gradient(45deg, rgba(255,204,112,1) 0%, rgba(200,80,192,1) 50%, rgba(65,72,208,1) 100%);
   display: flex;
-  align-items: ;
+  
   justify-content: space-between;
   padding-top: 6rem;
   flex-direction: column;
