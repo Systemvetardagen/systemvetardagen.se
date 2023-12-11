@@ -208,7 +208,11 @@ export default {
   },
   components: {
     Button,
-    CompanyInfo
+    CompanyInfo,
+    Banner, 
+    PartnerContent,
+    MatchList,
+    CompanyContact
 },
   computed: {
     showEnglishMessage() {
