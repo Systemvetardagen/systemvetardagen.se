@@ -19,7 +19,7 @@ export const API_Call_Company = async (name) => {
 }
 
 export const API_Call_Companies = async () => {
-    const response = await fetch(`${Base_URL}items/companies`, {headers});
+    const response = await fetch(`${Base_URL}items/companies?filter[status][_in]=published,draft`, {headers});
     const json = await response.json();
     const data = json.data;
 
