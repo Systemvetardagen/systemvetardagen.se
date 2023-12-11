@@ -17,13 +17,13 @@
 
 
 <script>
-import hero from "@/pages/index-subviews/hero.vue";
-import soon from "@/pages/index-subviews/soon.vue";
-import info from "@/pages/index-subviews/info.vue";
-import faq from "@/pages/index-subviews/faq.vue";
-import oldCatalog from "./index-subviews/oldCatalog.vue";
-import contact from "@/pages/index-subviews/contact.vue";
-import sponsors from "./index-subviews/sponsors.vue";
+import hero from "@/components/subViews/landing/hero.vue";
+import soon from "@/components/subViews/landing/soon.vue";
+import info from "@/components/subViews/landing/info.vue";
+import faq from "@/components/subViews/landing/faq.vue";
+import oldCatalog from "@/components/subViews/landing/oldCatalog.vue";
+import contact from "@/components/subViews/landing/contact.vue";
+import sponsors from "@/components/subViews/landing/sponsors.vue";
 
 export default {
   components: {
