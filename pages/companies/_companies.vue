@@ -247,21 +247,7 @@ export default {
 
 
 
-/* COMPANY CONTACT */
-.post-contact {
-  width: clamp(30ch, 80vw, 60ch);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.company-contact {
-  padding-bottom: 1rem;
-}
 
-.link {
-  margin-top: 2rem;
-  color: var(--clr-blue-600);
-}
 
 /* MAP */
 .map-section {

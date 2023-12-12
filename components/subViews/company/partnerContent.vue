@@ -109,4 +109,12 @@ img {
   object-fit: cover;
 }
 
+/* DESKTOP MODIFICATIONS */
+@media only screen and (min-width: 768px) {
+  .gallery {
+    flex-direction: row;
+  }
+  
+}
+
 </style>
