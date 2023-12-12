@@ -38,7 +38,7 @@ h3 {
 }
 
 .sponsor {
-  border: solid 0.25rem var(--clr-pink-200)
+  border-color: var(--clr-pink-200)
 }
 
 @media (min-width: 768px) {
@@ -50,8 +50,12 @@ h3 {
   }
 }
 
+
 .logo-wrapper:hover {
   border-color: var(--clr-blue-300);
+}
+.sponsor:hover {
+  border-color: var(--clr-pink-400)
 }
 
 .logo {
