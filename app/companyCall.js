@@ -41,6 +41,7 @@ export const API_Call_Companies = async () => {
         company.positionsIds = related_positions.flatMap(item => item.positions_id);
         company.programsIds = related_programs.flatMap(item => item.programs_id);
         company.logo = company.logo ? image_url(company.logo) : null;
+        company.sponsor = company. sponsor
     });
 
     return data;

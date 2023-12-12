@@ -63,12 +63,32 @@
         </svg>
       </div>
 
-      <div class="company-cards">
+      <div class="company-card-container">
         <div v-if="!showCompanies && !isPreview">
           <h2>Companies coming soon</h2>
           <h2>Check out the <NuxtLink :to="localePath('/companies/old')">old</NuxtLink> catalog</h2>
         </div>
-        <div v-for="post of filteredPosts" :key="post.company_name">
+
+
+        <!-- Partners -->
+        <div v-if="filteredPosts.some(post => post.sponsor)">
+          <h3>Partners</h3>
+          <div class="underline"></div>
+          <div class="company-cards" v-for="post of filteredPosts" :key="post.company_name" v-if="post.sponsor">
+            <!---<div v-if="showEnglishMessage">
+              <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
+            <NuxtLink :to="localePath({
+              name: 'companies-companies',
+              params: { companies: post.company_name },
+            })
+              ">
+              <company-card class="company-card" :company="post" />
+            </NuxtLink>
+          </div>
+          <div class="underline"></div>
+        </div>
+        <!-- Non-Partners -->
+        <div class="company-cards" v-for="post of filteredPosts" :key="post.company_name" v-if="!post.sponsor">
           <!---<div v-if="showEnglishMessage">
             <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
           <NuxtLink :to="localePath({
@@ -80,6 +100,8 @@
           </NuxtLink>
         </div>
       </div>
+
+      
     </section>
   </main>
 </template>
@@ -339,13 +361,22 @@ label {
   cursor: pointer;
 }
 
+.company-card-container {
+  margin-top: 2rem;
+  width: 85%;
+}
+.underline {
+  height: 1px;
+  background-color: var(--clr-grey-500);
+  width: 100%;
+}
 .company-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 64rem;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 2rem 0rem;
 }
 
 @media (min-width: 768px) {
