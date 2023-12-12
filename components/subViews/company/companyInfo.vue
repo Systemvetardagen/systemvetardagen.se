@@ -37,7 +37,8 @@
 <script>
     export default {
         props: {
-            post: Object
+            post: Object,
+            locale: Object
         }
     }
 

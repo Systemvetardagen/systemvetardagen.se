@@ -9,7 +9,7 @@
 
 
         <!-- COMPANY INFO -->
-        <CompanyInfo :post="this.post"/>
+        <CompanyInfo :post="this.post" :locale="this.locale"/>
 
 
         <!-- ARTICLE MAIN CONTENT -->
@@ -22,7 +22,7 @@
 
 
           <!-- MATCH LIST -->
-          <MatchList :post="this.post"/>
+          <MatchList :post="this.post" :locale="this.locale"/>
 
         </div>
         <!-- END MAIN CONTENT -->
