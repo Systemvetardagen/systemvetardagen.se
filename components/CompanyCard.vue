@@ -1,5 +1,5 @@
 <template>
-  <div class="logo-wrapper">
+  <div class="logo-wrapper" :class="{sponsor: company.sponsor}">
     <img v-if="company.logo" class="logo" :src="this.company.logo" alt="" />
     <h3 v-else>{{ company.title ? company.title : company.company_name }}</h3>
   </div>
@@ -35,6 +35,10 @@ h3 {
   border-radius: 1rem;
   border: solid 0.25rem var(--clr-blue-100);
   transition: border-color 0.2s;
+}
+
+.sponsor {
+  border: solid 0.25rem var(--clr-pink-200)
 }
 
 @media (min-width: 768px) {
