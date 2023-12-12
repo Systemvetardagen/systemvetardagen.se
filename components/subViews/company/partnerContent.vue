@@ -51,11 +51,18 @@
 </template>
 
 <script>
-    export default {
-        props: {
-            post: Object
-        }
-    }
+  import marked from "marked"
+
+  export default {
+      props: {
+          post: Object
+      },
+      computed: {
+        markdownToHtml() {
+          return marked.parse(this.post.sponsor_extra_text);
+        },
+      }
+  }
 
 </script>
 
