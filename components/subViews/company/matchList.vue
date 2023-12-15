@@ -36,7 +36,8 @@
 <script>
     export default {
         props: {
-            post: Object
+            post: Object,
+            locale: Object
         }
     }
 
@@ -70,6 +71,15 @@
 
 .match-list > ul > li {
   font-weight: 10px;
+}
+/* DESKTOP MODIFICATIONS */
+@media only screen and (min-width: 768px) {
+  
+  .match-list-items {
+    flex-direction: row;
+  }
+
+  
 }
 
 </style>

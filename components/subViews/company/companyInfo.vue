@@ -37,7 +37,8 @@
 <script>
     export default {
         props: {
-            post: Object
+            post: Object,
+            locale: Object
         }
     }
 
@@ -69,6 +70,27 @@
 }
 .table-right {
   padding-bottom: 0.3rem;
+}
+
+/* DESKTOP MODIFICATIONS */
+@media only screen and (min-width: 768px) {
+
+  .post-info {
+    padding: 3rem 5rem;
+    border-radius: 1rem;
+  }
+  .table {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0.5rem;
+    padding: 2rem 0;
+  }
+  .table-left {
+    font-weight: 600;
+  }
+  .table-right {
+    text-align: right;
+  }
 }
 
 </style>
