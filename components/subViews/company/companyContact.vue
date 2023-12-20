@@ -15,7 +15,7 @@
                   </p>
                   <a
                     v-if="contact.email"
-                    class="email link"
+                    class="email"
                     :href="'mailto:' + contact.email"
                     >  {{ contact.email }}
                   </a>
@@ -25,14 +25,29 @@
 
             </div>
           </div>
+
+          <div v-if="post.link_to_positions" class="external-link">
+            <a :href="post.link_to_positions"
+              >
+              {{ $t("company-learn-more") }} 
+              {{ post.title }} 
+              <ExternalLink class="icon"/>
+            </a>
+
+          </div>
+
         </div>
 </template>
 
 <script>
     import ShadowBox from '@/Components/ShadowBox.vue/'
+    import ExternalLink from '@/Components/icons/ExternalLink.vue/'
     export default {
         props: {
             post: Object
+        },
+        components: {
+          ExternalLink
         }
     }
 
@@ -93,6 +108,27 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.external-link {
+  margin-top: 1.5rem;
+  color: #2F2F2F;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 100% */
+  letter-spacing: 0.00938rem;
+
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.icon {
+  height: 1.3rem;
+  color: #2F2F2F;
 }
 
 /* DESKTOP MODIFICATIONS */
