@@ -54,10 +54,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
-.box {
-  margin-bottom: 1rem;
-}
+
 
 .inner-box-layout {
   display: flex;
@@ -99,10 +98,10 @@
 /* DESKTOP MODIFICATIONS */
 @media only screen and (min-width: 768px) {
   .cards-container {
-    flex-direction: row;
-    align-items: baseline;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
-    
   }
 
   
