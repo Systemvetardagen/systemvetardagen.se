@@ -1,92 +1,94 @@
 <template>
-    <div class="post-info">
-          <h3 style="align-self: center">{{ $t("company-info") }}</h3>
+  <div class="post-info">
+    <ShadowBox>
+      <div class="inner-box">
+          <p class="heading">{{ post.company_name }}</p>
           <div class="table">
-            <p v-if="post.year_founded" class="table-left">
-              {{ $t("established") }}
-            </p>
+            <p v-if="post.year_founded" class="table-left">{{ $t("established") }}</p>
             <p v-if="post.year_founded" class="table-right">{{ post.year_founded }}</p>
-            <p v-if="post.slogan" class="table-left">{{ $t("slogan") }}</p>
-            <p v-if="post.slogan" class="table-right">{{ post.slogan }}</p>
-            <p v-if="post.number_of_employees_in_sweden" class="table-left">
-              {{ $t("employees-sv") }}
-            </p>
-            <p v-if="post.number_of_employees_in_sweden" class="table-right">
-              {{ post.number_of_employees_in_sweden }}
-            </p>
-            <p
-              v-if="post.number_of_employees_internationally"
-              class="table-left"
-            >
-              {{ $t("employees-int") }}
-            </p>
-            <p
-              v-if="post.number_of_employees_internationally"
-              class="table-right"
-            >
-              {{ post.number_of_employees_internationally }}
-            </p>
+            <p v-if="post.number_of_employees_in_sweden" class="table-left"> {{ $t("employees-sv") }}</p>
+            <p v-if="post.number_of_employees_in_sweden" class="table-right">{{ post.number_of_employees_in_sweden }}</p>
+            <p v-if="post.number_of_employees_internationally" class="table-left">{{ $t("employees-int") }}</p>
+            <p v-if="post.number_of_employees_internationally" class="table-right">{{ post.number_of_employees_internationally }}</p>
           </div>
-          <p v-if="post.area_of_business" style="font-weight: 600">
-            {{ $t("bis-area") }}
-          </p>
-          <p v-if="post.area_of_business">{{ post.area_of_business[locale] }}</p>
         </div>
+    </ShadowBox>
+  </div>
+
+
 </template>
 
 <script>
-    export default {
-        props: {
-            post: Object,
-            locale: Object
-        }
-    }
+  import ShadowBox from '@/Components/ShadowBox.vue/'
+  export default {
+      props: {
+          post: Object,
+          locale: Object
+      }
+  }
 
 </script>
 
 <style scoped>
-    /* COMPANY INFO */
+/* COMPANY INFO */
+
 .post-info {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 3rem 1.5rem;
-  background: var(--clr-blue-100);
-  color: var(--clr-blue-900);
   margin-top: 2rem;
-  max-width: 60ch;
-  align-self: center;
+}
+.inner-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  width: 20rem;
+  padding: 1.5rem 0;
+}
+
+.heading {
+  color: #000;
+  font-size: 1.4375rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2.0625rem; /* 143.478% */
+  letter-spacing: 0.1725rem;
+  text-transform: uppercase;
 }
 
 /* Table */
 .table {
   display: flex;
   flex-direction: column;
-  padding: 2rem 0;
+  align-items: center;
+
+}
+.table-left .table-right {
+  color: #000;
+  font-size: 1.5625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.0625rem; /* 132% */
 }
 .table-left {
-  font-weight: 600;
+  font-weight: 500;
+
 }
 .table-right {
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.5rem;
 }
 
 /* DESKTOP MODIFICATIONS */
 @media only screen and (min-width: 768px) {
 
-  .post-info {
-    padding: 3rem 5rem;
-    border-radius: 1rem;
+  .inner-box {
+    width: 30rem;
   }
   .table {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 0.5rem;
-    padding: 2rem 0;
   }
   .table-left {
-    font-weight: 600;
+
   }
   .table-right {
     text-align: right;
