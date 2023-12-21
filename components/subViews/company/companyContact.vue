@@ -126,7 +126,7 @@
   font-weight: 400;
   line-height: 1.5rem; /* 100% */
   letter-spacing: 0.00938rem;
-
+  padding-left: 1rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -145,6 +145,10 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+  }
+
+  .external-link {
+    padding-left: 0;
   }
 
   
