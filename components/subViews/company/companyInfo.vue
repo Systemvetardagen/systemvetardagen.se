@@ -4,12 +4,20 @@
       <div class="inner-box">
           <p class="heading">{{ post.company_name }}</p>
           <div class="table">
-            <p v-if="post.year_founded" class="table-left">{{ $t("established") }}</p>
-            <p v-if="post.year_founded" class="table-right">{{ post.year_founded }}</p>
-            <p v-if="post.number_of_employees_in_sweden" class="table-left"> {{ $t("employees-sv") }}</p>
-            <p v-if="post.number_of_employees_in_sweden" class="table-right">{{ post.number_of_employees_in_sweden }}</p>
-            <p v-if="post.number_of_employees_internationally" class="table-left">{{ $t("employees-int") }}</p>
-            <p v-if="post.number_of_employees_internationally" class="table-right">{{ post.number_of_employees_internationally }}</p>
+            <div class="table-row">
+              <p v-if="post.year_founded" class="table-left">{{ $t("established") }}</p>
+              <p v-if="post.year_founded" class="table-right">{{ post.year_founded }}</p>
+            </div>
+            <div class="table-row">
+              <p v-if="post.number_of_employees_in_sweden" class="table-left"> {{ $t("employees-sv") }}</p>
+              <p v-if="post.number_of_employees_in_sweden" class="table-right">{{ post.number_of_employees_in_sweden }}</p>
+            </div>
+            <div class="table-row">
+              <p v-if="post.number_of_employees_internationally" class="table-left">{{ $t("employees-int") }}</p>
+              <p v-if="post.number_of_employees_internationally" class="table-right">{{ post.number_of_employees_internationally }}</p>
+            </div>
+
+            
           </div>
         </div>
     </ShadowBox>
@@ -61,12 +69,17 @@
   align-items: center;
 
 }
-.table-left .table-right {
+.table-row {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+.table-left, .table-right {
   color: #000;
-  font-size: 1.5625rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 2.0625rem; /* 132% */
+
 }
 .table-left {
   font-weight: 500;
@@ -80,18 +93,28 @@
 @media only screen and (min-width: 768px) {
 
   .inner-box {
-    width: 30rem;
+    width: 25rem;
   }
   .table {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-gap: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .table-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: stretch;
+    gap: 1rem;
+    padding: 0.5rem 0;
   }
   .table-left {
 
   }
   .table-right {
-    text-align: right;
+    
+    padding-bottom: 0;
+
   }
 }
 
