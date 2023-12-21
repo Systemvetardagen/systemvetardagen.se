@@ -1,24 +1,34 @@
 <template>
     <div v-if="post.contact_persons" class="post-contact">
+          <!-- Heading -->
           <h2>{{ $t("company-contact") }}</h2>
-
+          
+          <!-- Contact Cards -->
           <div class="cards-container">
+
+            <!-- Contact Card Loop -->
             <div
               v-for="contact in this.post.contact_persons"
-              class="company-contact"
+              class="card"
               :key="contact.id"
             >
+              <!-- Outer Box -->
               <ShadowBox class="box">
+
+                <!-- Inner Box -->
                 <Div class="inner-box-layout">
+                  <!-- Name -->
                   <p v-if="contact.name" class="name">
                     {{ contact.name }}
                   </p>
+                  <!-- Email -->
                   <a
                     v-if="contact.email"
                     class="email"
                     :href="'mailto:' + contact.email"
                     >  {{ contact.email }}
                   </a>
+                  <!-- Phone Number -->
                   <p v-if="contact.phone_number" class="phone">{{ contact.phone_number }} </p>
                 </Div>
               </ShadowBox>
@@ -26,6 +36,7 @@
             </div>
           </div>
 
+          <!-- Link to Positions -->
           <div v-if="post.link_to_positions" class="external-link">
             <a :href="post.link_to_positions"
               >
@@ -58,7 +69,6 @@
 
     /* COMPANY CONTACT */
 .post-contact {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,8 +85,6 @@
 
 .inner-box-layout {
   display: flex;
-  
-  /* padding: 1.25rem 5.25rem; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -118,7 +126,6 @@
   font-weight: 400;
   line-height: 1.5rem; /* 100% */
   letter-spacing: 0.00938rem;
-
 
   display: flex;
   flex-direction: row;

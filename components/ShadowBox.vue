@@ -1,25 +1,9 @@
 <template>
     <div class="box-style">
-      <slot> </slot>
-
+        <slot> </slot>
     </div>
 </template>
-  <script>
-  export default {
-    props: {
-      company: Object,
-    },
-    methods: {
-      // Doesn't work in production
-      ImageLink(cmsImg) {
-        const link = "/_nuxt/assets" + cmsImg;
-        console.log(link);
-        return link;
-      },
-    },
-  };
-  </script>
-  <style scoped>
+<style scoped>
 
   .box-style {
     border-radius: 1.25rem;
@@ -28,8 +12,6 @@
 
     /* standard shadow */
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
-    
   }
 
-  </style>
+</style>
