@@ -138,6 +138,7 @@
     "organizedBy": "Systemvetardagen is organized by the student union DISK at the\u00a0Department\u00a0of\u00a0Computer\u00a0and\u00a0Systems\u00a0Sciences at Stockholm\u00a0University",
     "contactUsPrompt": "Contact us",
     "pdfHeader": "For companies:",
-    "pdfLinkPrompt": "Get the 2024 info sheet"
+    "pdfLinkPromptSv": "Infobladet för 2024",
+    "pdfLinkPromptEn": "Info sheet (English version)"
   }
 }

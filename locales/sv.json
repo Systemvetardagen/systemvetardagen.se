@@ -139,6 +139,7 @@
     "organizedBy": "Systemvetardagen arrangeras av studentkåren DISK vid Instutitionen\u00a0för\u00a0data-\u00a0och\u00a0systemvetenskap vid Stockholms\u00a0universitet",
     "contactUsPrompt": "Kontakta oss",
     "pdfHeader": "För företag:",
-    "pdfLinkPrompt": "Infobladet för 2024"
+    "pdfLinkPromptSv": "Infobladet för 2024",
+    "pdfLinkPromptEn": "Info sheet (English version)"
   }
 }
