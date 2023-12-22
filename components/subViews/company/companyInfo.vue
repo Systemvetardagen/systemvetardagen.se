@@ -48,6 +48,8 @@
 
 .post-info {
   margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 .inner-box {
   display: flex;
@@ -56,6 +58,7 @@
   gap: 0.625rem;
   width: 20rem;
   padding: 1.5rem 0;
+  align-self: center;
 }
 
 .heading {
@@ -96,10 +99,11 @@
 }
 
 /* DESKTOP MODIFICATIONS */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 450px) {
 
   .inner-box {
     width: 25rem;
+    
   }
   .table {
     display: flex;
