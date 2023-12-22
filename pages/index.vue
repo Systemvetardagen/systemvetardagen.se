@@ -13,8 +13,11 @@
       </div>
       <div class="pdf-container">
         <p class="pdf-container-header">{{ $t("temporaryLandingPage.pdfHeader") }}</p>
-        <a class="pdf-download" href="/infoblad2024.pdf" target="_blank">
-          <span>{{ $t("temporaryLandingPage.pdfLinkPrompt") }}</span><PDFIcon />
+        <a class="pdf-download" href="/infoblad/infoblad_2024_sv.pdf" target="_blank">
+          <span>{{ $t("temporaryLandingPage.pdfLinkPromptSv") }}</span><PDFIcon />
+        </a>
+        <a class="pdf-download" href="/infoblad/infoblad_2024_en.pdf" target="_blank">
+          <span>{{ $t("temporaryLandingPage.pdfLinkPromptEn") }}</span><PDFIcon />
         </a>
       </div>
       <p class="above-button-text">{{ $t("temporaryLandingPage.aboveButton") }}</p>
@@ -257,13 +260,16 @@ main a:focus-visible {
   padding: 1.5rem 2rem 2rem 2rem;
   outline: 1px solid white;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .pdf-container-header {
   font-family: work-sans;
   font-weight: 300;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .pdf-download {
