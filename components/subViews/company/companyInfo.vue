@@ -10,11 +10,11 @@
             </div>
             <div class="table-row">
               <p v-if="post.number_of_employees_in_sweden" class="table-left"> {{ $t("employees-sv") }}</p>
-              <p v-if="post.number_of_employees_in_sweden" class="table-right">{{ post.number_of_employees_in_sweden }}</p>
+              <p v-if="post.number_of_employees_in_sweden" class="table-right">{{ separateDecimals(post.number_of_employees_in_sweden) }}</p>
             </div>
             <div class="table-row">
               <p v-if="post.number_of_employees_internationally" class="table-left">{{ $t("employees-int") }}</p>
-              <p v-if="post.number_of_employees_internationally" class="table-right">{{ post.number_of_employees_internationally }}</p>
+              <p v-if="post.number_of_employees_internationally" class="table-right">{{ separateDecimals(post.number_of_employees_internationally) }}</p>
             </div>
 
             
@@ -32,6 +32,12 @@
       props: {
           post: Object,
           locale: Object
+      },
+      methods: {
+        separateDecimals(number) {
+          const output = number.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+          return output
+        }
       }
   }
 
@@ -105,7 +111,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-self: stretch;
-    gap: 1rem;
+    gap: 2rem;
     padding: 0.5rem 0;
   }
   .table-left {
