@@ -3,180 +3,33 @@
     <section v-if="post">
       <article class="post" id="post">
         <h1 v-if="isPreview" class="preview-title">This is a preview of the page</h1>
+        
         <!-- BANNER -->
-        <div class="banner">
-          <img
-            v-if="post.banner"
-            :src="this.post.banner"
-            class="banner-img"
-          />
-          <img
-            v-else
-            src="@/assets/img/nod_gradient_colors.jpg"
-            alt="No sponsor image"
-            class="banner-img"
-          />
-          <div class="banner-shade"></div>
-          <div class="banner-overlay">
-            <div v-if="post.logo" class="logo">
-              <img :src="this.post.logo" alt="logo" class="logo-img" />
-            </div>
+        <Banner :post="this.post"/>
 
-            <h1 v-if="!post.logo" class="post-title">{{ post.title }}</h1>
-            <!-- <p class="post-location">{{ $t("location") }}: TBA</p>
-            <p v-if="post.banner" class="post-tag">// Sponsor</p>
-            <p v-else class="post-tag">//</p> -->
-          </div>
-          <div class="banner-bar"></div>
-        </div>
-        <!-- END BANNER -->
 
         <!-- COMPANY INFO -->
-        <div class="post-info">
-          <h3 style="align-self: center">{{ $t("company-info") }}</h3>
-          <div class="table">
-            <p v-if="post.year_founded" class="table-left">
-              {{ $t("established") }}
-            </p>
-            <p v-if="post.year_founded" class="table-right">{{ post.year_founded }}</p>
-            <p v-if="post.slogan" class="table-left">{{ $t("slogan") }}</p>
-            <p v-if="post.slogan" class="table-right">{{ post.slogan }}</p>
-            <p v-if="post.number_of_employees_in_sweden" class="table-left">
-              {{ $t("employees-sv") }}
-            </p>
-            <p v-if="post.number_of_employees_in_sweden" class="table-right">
-              {{ post.number_of_employees_in_sweden }}
-            </p>
-            <p
-              v-if="post.number_of_employees_internationally"
-              class="table-left"
-            >
-              {{ $t("employees-int") }}
-            </p>
-            <p
-              v-if="post.number_of_employees_internationally"
-              class="table-right"
-            >
-              {{ post.number_of_employees_internationally }}
-            </p>
-          </div>
-          <p v-if="post.area_of_business" style="font-weight: 600">
-            {{ $t("bis-area") }}
-          </p>
-          <p v-if="post.area_of_business">{{ post.area_of_business[locale] }}</p>
-        </div>
-        <!-- END COMPANY INFO -->
+        <CompanyInfo :post="this.post" :locale="this.locale"/>
+
 
         <!-- ARTICLE MAIN CONTENT -->
         <div class="post-content">
           <h3>{{ post.slogan }}</h3>
           <p>{{ post.about_us[locale] }}</p>
 
-          <!-- YOUTUBE VIDEO -->
-          <div v-if="post.sponsor_youtube_video" class="video">
-            <iframe
-              class="yt-video"
-              :src="this.post.sponsor_youtube_video"
-              frameborder="0"
-              allowfullscreen
-            >
-            </iframe>
-          </div>
-          <!-- END YOUTUBE VIDEO -->
-          <div
-            v-if="post.sponsor_extra_text"
-            v-html="markdownToHtml"
-            class="extra-text"
-          ></div>
-          <!-- SPONSOR IMAGES // GALLERY -->
-          <div v-if="post.sponsor_images" class="gallery">
-            <div class="column">
-              <div v-if="post.sponsor_images[0]" class="gallery-item">
-                <img
-                  :src="this.post.sponsor_images[0]"
-                  alt="gallery image 1"
-                  class="gallery-img"
-                />
-              </div>
-            </div>
-            <div class="column">
-              <div v-if="post.sponsor_images[1]" class="gallery-item">
-                <img
-                  :src="this.post.sponsor_images[1]"
-                  alt="gallery image 2"
-                  class="gallery-img"
-                />
-              </div>
-              <div v-if="post.sponsor_images[2]" class="gallery-item">
-                <img
-                  :src="this.post.sponsor_images[2]"
-                  alt="gallery image 3"
-                  class="gallery-img"
-                />
-              </div>
-            </div>
-          </div>
-          <!-- END SPONSOR IMAGES // GALLERY -->
+          <!-- PARTNER CONTENT -->
+          <PartnerContent :post="this.post"/>
+
 
           <!-- MATCH LIST -->
-          <div class="match-list">
-            <h3>
-              {{ post.title }}
-              {{ $t("looking-for") }}
-            </h3>
-            <div class="match-items">
-              <div class="match-list-items">
-                <ul>
-                  <p style="font-weight: 700">{{ $t("programs") }}</p>
-                  <li v-for="program in post.programs_data[locale]" :key="program.id">
-                    {{ program }}
-                  </li>
-                </ul>
-                <ul>
-                  <p style="font-weight: 700">{{ $t("positions") }}</p>
-                  <li v-for="position in post.positions_data[locale]" :key="position.id">
-                    {{ position }}
-                  </li>
-                </ul>
-              </div>
-              <div v-if="post.qualifications" class="match-qualifications">
-                <p style="font-weight: 700">{{ $t("qualifications") }}</p>
-                <p>{{ post.qualifications[locale] }}</p>
-              </div>
-            </div>
-            <a
-              v-if="post.link_to_positions"
-              :href="post.link_to_positions"
-              class="link"
-              >{{ $t("company-learn-more") }} {{ post.title }} ></a
-            >
-          </div>
-          <!-- END MATCH LIST -->
+          <MatchList :post="this.post" :locale="this.locale"/>
+
         </div>
         <!-- END MAIN CONTENT -->
 
         <!-- COMPANY CONTACT -->
-        <div v-if="post.contact_persons" class="post-contact">
-          <h3>{{ $t("company-contact") }}</h3>
+        <CompanyContact :post="this.post"/>
 
-          <div
-            v-for="contact in this.post.contact_persons"
-            class="company-contact"
-            :key="contact.id"
-          >
-            <p v-if="contact.name">
-              <b>{{ contact.name }}</b>
-            </p>
-            <a
-              v-if="contact.email"
-              class="email link"
-              :href="'mailto:' + contact.email"
-              >{{ contact.email }}
-            </a>
-            <p v-if="contact.email">{{ contact.phone_number }}</p>
-          </div>
-        </div>
-        <!-- END COMPANY CONTACT -->
 
         <!-- MAP -->
         <!--         <div class="map-section">
@@ -216,12 +69,18 @@
 <script>
 import Button from "@/components/Button.vue";
 import marked from "marked";
+import Banner from "@/components/subViews/company/banner.vue"
+import CompanyInfo from "@/components/subViews/company/companyInfo.vue"
+import PartnerContent from "@/components/subViews/company/partnerContent.vue"
+import MatchList from "@/components/subViews/company/matchList.vue"
+import CompanyContact from "@/components/subViews/company/companyContact.vue"
 
 import {
   API_Call_Company,
   API_Call_Company_Details,
   image_url
 } from "@/app/companyCall.js";
+
 
 export default {
   data() {
@@ -349,7 +208,12 @@ export default {
   },
   components: {
     Button,
-  },
+    CompanyInfo,
+    Banner, 
+    PartnerContent,
+    MatchList,
+    CompanyContact
+},
   computed: {
     showEnglishMessage() {
       // Checks if the current chosen language is swedish.
@@ -361,6 +225,7 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .post {
   display: flex;
@@ -368,115 +233,6 @@ export default {
   align-items: center;
 }
 
-/* BANNER */
-.banner {
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
-  width: 100%;
-  max-height: 18rem;
-}
-.banner-shade {
-  background: RGB(0, 0, 0, 0.5);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.5rem 0.5rem 0rem 0rem;
-}
-.banner-overlay {
-  position: absolute;
-  bottom: 0;
-  color: var(--clr-white);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.banner-overlay > h1 {
-  font-size: clamp(1.8rem, 5vw, 3rem);
-}
-.banner-overlay > p {
-  font-size: clamp(0.5rem, 2vw, 1rem);
-}
-.banner-img {
-  width: 100%;
-
-  border-radius: 0.5rem 0.5rem 0rem 0rem;
-  object-fit: cover;
-}
-.banner-bar {
-  position: absolute;
-  bottom: calc(clamp(2px, 1vw, 10px) * -1);
-  left: 0;
-  width: 100%;
-  height: clamp(2px, 1vw, 10px);
-  background: linear-gradient(
-    90deg,
-    var(--clr-blue-600),
-    var(--clr-pink-600),
-    var(--clr-yellow-600)
-  );
-  border-radius: 0 0 1rem 1rem;
-}
-.logo {
-  display: flex;
-  width: clamp(12rem, 20vw, 16rem);
-  height: 80%;
-  padding: 2rem;
-  margin: 2rem;
-  background-color: var(--clr-white);
-  border-radius: 1rem;
-}
-
-.logo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.email {
-  font-family: work-sans;
-}
-
-.post-location {
-  padding-bottom: clamp(0.2rem, 1vw, 0.5rem);
-  border-bottom: solid 2px var(--clr-white);
-}
-.post-title {
-  padding-bottom: clamp(0.1rem, 2.5vw, 3rem);
-}
-.post-tag {
-  align-self: flex-end;
-  padding-top: clamp(0.2rem, 1vw, 0.5rem);
-  color: white;
-}
-
-/* COMPANY INFO */
-.post-info {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 3rem 1.5rem;
-  background: var(--clr-blue-100);
-  color: var(--clr-blue-900);
-  margin-top: 2rem;
-  max-width: 60ch;
-  align-self: center;
-}
-
-/* Table */
-.table {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 0;
-}
-.table-left {
-  font-weight: 600;
-}
-.table-right {
-  padding-bottom: 0.3rem;
-}
 
 /* MAIN COMPANY CONTENT */
 .post-content {
@@ -489,98 +245,9 @@ export default {
   padding-bottom: 2rem;
 }
 
-.extra-text {
-  margin-top: 4rem;
-}
 
-/* YouTube Video */
-.video {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
-  align-self: center;
-}
-.yt-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
 
-/* SPONSOR IMAGES // GALLERY */
-img {
-  width: 100%;
-  height: auto;
-}
-.gallery {
-  /* Mobile first */
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 4rem 0;
-}
-.gallery .column {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.gallery-img {
-  border-radius: 10px;
-}
-.image-item img {
-  width: 100%;
-  border-radius: 5px;
-  height: 100%;
-  object-fit: cover;
-}
 
-/* MATCH LIST */
-.match-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3rem 0;
-}
-
-.match-items {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 2rem 0;
-  border-top: 2px var(--clr-grey-300) solid;
-  border-bottom: 2px var(--clr-grey-300) solid;
-}
-
-.match-list-items {
-  display: flex;
-  flex-direction: column;
-  align-items: space-around;
-  justify-content: space-around;
-  width: clamp(30ch, 80vw, 60ch);
-}
-
-.match-list > ul > li {
-  font-weight: 10px;
-}
-
-/* COMPANY CONTACT */
-.post-contact {
-  width: clamp(30ch, 80vw, 60ch);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.company-contact {
-  padding-bottom: 1rem;
-}
-
-.link {
-  margin-top: 2rem;
-  color: var(--clr-blue-600);
-}
 
 /* MAP */
 .map-section {
