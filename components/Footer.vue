@@ -3,13 +3,13 @@
     <div class="line"></div>
     <div class="content-container">
       <div class="socials-container">
-       <!-- Instagram -->
-        <a href="https://www.instagram.com/systemvetardagen/">
-          <InstagramLogo />
-        </a>
         <!-- Facebook -->
         <a href="https://www.facebook.com/Systemvetardagen/">
           <FacebookLogo />
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/systemvetardagen/">
+          <InstagramLogo />
         </a>
         <!-- LinkedIN -->
         <a href="https://www.linkedin.com/company/systemvetardagen/">
@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .footer-content {
   width: 100%;
@@ -69,13 +69,12 @@ export default {
 }
 
 .content-container {
-  padding: 1.6rem 2rem;
-  padding-bottom: 2.5rem;
+  padding: 1.2rem 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 1.4rem;
-  column-gap: 5rem;
+  column-gap: 4rem;
   height: 100%;
   align-items: center;
 }
@@ -87,12 +86,12 @@ export default {
 }
 
 .footer-content .address p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .socials-container {
   display: flex;
-  gap: 3rem;
+  gap: 1.6rem;
   height: 100%;
 }
 
@@ -102,7 +101,7 @@ export default {
 
 .socials-container svg {
   height: fit-content;
-  width: 2.5rem;
+  width: 1.8rem;
   fill: #666666;
 }
 
