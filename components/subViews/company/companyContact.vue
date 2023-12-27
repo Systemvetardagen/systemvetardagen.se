@@ -1,78 +1,74 @@
 <template>
-    <div v-if="post.contact_persons" class="post-contact">
-          <!-- Heading -->
-          <h2>{{ $t("company-contact") }}</h2>
-          
-          <!-- Contact Cards -->
-          <div class="cards-container">
+  <div v-if="post.contact_persons" class="post-contact">
 
-            <!-- Contact Card Loop -->
-            <div
-              v-for="contact in this.post.contact_persons"
-              class="card"
-              :key="contact.id"
-            >
-              <!-- Outer Box -->
-              <ShadowBox class="box">
+    <!-- Heading -->
+    <h2>{{ $t("company-contact") }}</h2>
 
-                <!-- Inner Box -->
-                <Div class="inner-box-layout">
-                  <!-- Name -->
-                  <p v-if="contact.name" class="name">
-                    {{ contact.name }}
-                  </p>
-                  <!-- Email -->
-                  <a
-                    v-if="contact.email"
-                    class="email"
-                    :href="'mailto:' + contact.email"
-                    >  {{ contact.email }}
-                  </a>
-                  <!-- Phone Number -->
-                  <p v-if="contact.phone_number" class="phone">{{ contact.phone_number }} </p>
-                </Div>
-              </ShadowBox>
+    <!-- Contact Cards -->
+    <div class="cards-container">
 
-            </div>
-          </div>
+      <!-- Contact Card Loop -->
+      <div
+        v-for="contact in this.post.contact_persons"
+        class="card"
+        :key="contact.id"
+      >
+        <!-- Outer Box -->
+        <ShadowBox class="box">
 
-          <!-- Link to Positions -->
-          <div v-if="post.link_to_positions" class="external-link">
-            <a :href="post.link_to_positions"
-              >
-              {{ $t("company-learn-more") }} 
-              {{ post.title }} 
-              <ExternalLink class="icon"/>
+          <!-- Inner Box -->
+          <div class="inner-box-layout">
+            <!-- Name -->
+            <p v-if="contact.name" class="name">
+              {{ contact.name }}
+            </p>
+            <!-- Email -->
+            <a
+              v-if="contact.email"
+              class="email"
+              :href="'mailto:' + contact.email"
+              >  {{ contact.email }}
             </a>
-
+            <!-- Phone Number -->
+            <p v-if="contact.phone_number" class="phone">{{ contact.phone_number }} </p>
           </div>
+        </ShadowBox>
 
-        </div>
+      </div>
+    </div>
+
+    <!-- Link to Positions -->
+    <div v-if="post.link_to_positions" class="external-link">
+      <a :href="post.link_to_positions"
+        >
+        {{ $t("company-learn-more") }}
+        {{ post.title }}
+        <ExternalLink class="icon"/>
+      </a>
+    </div>
+  </div>
 </template>
 
 <script>
-    import ShadowBox from '@/Components/ShadowBox.vue/'
-    import ExternalLink from '@/Components/icons/ExternalLink.vue/'
-    export default {
-        props: {
-            post: Object
-        },
-        components: {
-          ExternalLink
-        }
+  import ShadowBox from '@/Components/ShadowBox.vue/'
+  import ExternalLink from '@/Components/icons/ExternalLink.vue/'
+  export default {
+    props: {
+      post: Object
+    },
+    components: {
+      ExternalLink
     }
-
+  }
 </script>
 
 <style scoped>
 
-
-    /* COMPANY CONTACT */
+/* COMPANY CONTACT */
 .post-contact {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .cards-container{
@@ -82,29 +78,28 @@
   gap: 1rem;
 }
 
-
 .inner-box-layout {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.625rem;
-  width: 20rem;
-  padding: 1.25rem;
+  gap: 0.4rem;
+  min-width: 20rem;
+  padding: 1rem;
 }
 
 .name {
   color: #000;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 
 .email {
-  margin-top: 0.5rem;
+  /*margin-top: 0.5rem;*/
   color: #3F21F8;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -112,7 +107,7 @@
 
 .phone {
   color: #000;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -121,7 +116,7 @@
 .external-link {
   margin-top: 1.5rem;
   color: #2F2F2F;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5rem; /* 100% */
@@ -130,7 +125,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-
 }
 
 .icon {
@@ -150,11 +144,6 @@
   .external-link {
     padding-left: 0;
   }
-
-  
 }
-
-
-
 
 </style>
