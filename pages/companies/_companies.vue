@@ -8,14 +8,16 @@
         <Banner :post="this.post"/>
 
 
-        <!-- COMPANY INFO -->
-        <CompanyInfo :post="this.post" :locale="this.locale"/>
+
 
 
         <!-- ARTICLE MAIN CONTENT -->
         <div class="post-content">
           <h3>{{ post.slogan }}</h3>
           <p>{{ post.about_us[locale] }}</p>
+
+          <!-- COMPANY INFO -->
+          <CompanyInfo :post="this.post" :locale="this.locale"/>
 
           <!-- PARTNER CONTENT -->
           <PartnerContent :post="this.post"/>
