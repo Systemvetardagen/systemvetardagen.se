@@ -215,7 +215,7 @@ li {
   --clr-purple: rgb(158, 41, 241);
   --clr-lightpurple: rgba(158, 41, 241, 0.53);
   --clr-lightblue: rgba(82, 99, 250, 0.53);
-  
+
   /* new color variables to use */
   /* shades of blue */
   --clr-blue-100: #F2F3FF;
@@ -261,13 +261,14 @@ li {
   --clr-grey-800: #464646;
   --clr-grey-900: #303030;
   --clr-grey-1000: #1B1B1B;
-  
+
   --width-p: 47%;
   --height-p:14.25rem;
 }
 
 
 /* Footer */
+/*
 footer {
   background-color: var(--clr-lightblue);
 }
@@ -282,8 +283,10 @@ footer {
 .footer-content div {
   margin-bottom: 2rem;
 }
+*/
 
 @media (min-width: 1024px) {
+  /*
   .footer-content {
     flex-direction: row;
   }
@@ -291,6 +294,7 @@ footer {
     margin-right: 2rem;
     min-width: 12rem;
   }
+  */
 }
 .social-links {
   display: flex;
