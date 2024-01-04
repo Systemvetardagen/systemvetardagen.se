@@ -8,7 +8,21 @@
 
         <!-- Section: Bachelors -->
         <div class="section">
-          <p style="font-weight: 700">{{ $t("programs") }}</p>
+          <p class="section-heading">{{ $t("programs") }}</p>
+          <div class="tag-list">
+            <div 
+              class="tag"
+              style="background-color: var(--clr-pink-600);"
+              v-for="program in post.programs_data[locale]" 
+              :key="program.id">
+              {{ program }}
+            </div>
+          </div>
+        </div>
+
+         <!-- Section: Masters -->
+        <!-- <div class="section">
+          <p class="section-heading">{{ $t("programs") }}</p>
           <div class="tag-list">
             <div 
               class="tag"
@@ -17,20 +31,21 @@
               {{ program }}
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- Section: Qualifications -->
         <div v-if="post.qualifications" class="section">
-          <p style="font-weight: 700">{{ $t("qualifications") }}</p>
+          <p class="section-heading">{{ $t("qualifications") }}</p>
           <p class="border-box">{{ post.qualifications[locale] }}</p>
         </div>
 
         <!-- Section: Positions -->
         <div class="section">
-          <div class="ag-list">
-            <p style="font-weight: 700">{{ $t("positions") }}</p>
+          <p class="section-heading">{{ $t("positions") }}</p>
+          <div class="tag-list">
             <div
               class="tag" 
+              style="background-color: var(--clr-blue-600);"
               v-for="position in post.positions_data[locale]" 
               :key="position.id">
               {{ position }}
@@ -54,34 +69,68 @@
 </script>
 
 <style scoped>
-    /* MATCH LIST */
+/* MATCH LIST */
 .match-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .items {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   padding: 2rem 0;
-  border-top: 2px var(--clr-grey-300) solid;
-  border-bottom: 2px var(--clr-grey-300) solid;
 }
 
-.list-items {
+.section {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  align-items: space-around;
-  justify-content: space-around;
-  width: clamp(30ch, 80vw, 60ch);
+  padding: 1rem 0;
 }
 
-.match-list > ul > li {
-  font-weight: 10px;
+.tag-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  align-items: base-line;
 }
+
+.tag {
+  display: flex;
+  padding: 0.3rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 20rem;
+
+  border-radius: 1.875rem;
+  background: #6CAF61;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.section-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.border-box {
+  border-radius: 0.9375rem;
+  border: 1px solid #696969;
+  margin-top: 1rem;
+  padding: 2rem 1.5rem;
+  font-size: 0.9rem;
+
+}
+
+
+
 /* DESKTOP MODIFICATIONS */
 @media only screen and (min-width: 768px) {
   
