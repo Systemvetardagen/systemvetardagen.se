@@ -1,36 +1,46 @@
 <template>
     <div class="match-list">
-          <h3>
-            {{ post.title }}
-            {{ $t("looking-for") }}
-          </h3>
-          <div class="match-items">
-            <div class="match-list-items">
-              <ul>
-                <p style="font-weight: 700">{{ $t("programs") }}</p>
-                <li v-for="program in post.programs_data[locale]" :key="program.id">
-                  {{ program }}
-                </li>
-              </ul>
-              <ul>
-                <p style="font-weight: 700">{{ $t("positions") }}</p>
-                <li v-for="position in post.positions_data[locale]" :key="position.id">
-                  {{ position }}
-                </li>
-              </ul>
-            </div>
-            <div v-if="post.qualifications" class="match-qualifications">
-              <p style="font-weight: 700">{{ $t("qualifications") }}</p>
-              <p>{{ post.qualifications[locale] }}</p>
+      <h3>
+        {{ post.title }}
+        {{ $t("looking-for") }}
+      </h3>
+      <div class="items">
+
+        <!-- Section: Bachelors -->
+        <div class="section">
+          <p style="font-weight: 700">{{ $t("programs") }}</p>
+          <div class="tag-list">
+            <div 
+              class="tag"
+              v-for="program in post.programs_data[locale]" 
+              :key="program.id">
+              {{ program }}
             </div>
           </div>
-          <a
-            v-if="post.link_to_positions"
-            :href="post.link_to_positions"
-            class="link"
-            >{{ $t("company-learn-more") }} {{ post.title }} ></a
-          >
         </div>
+
+        <!-- Section: Qualifications -->
+        <div v-if="post.qualifications" class="section">
+          <p style="font-weight: 700">{{ $t("qualifications") }}</p>
+          <p class="border-box">{{ post.qualifications[locale] }}</p>
+        </div>
+
+        <!-- Section: Positions -->
+        <div class="section">
+          <div class="ag-list">
+            <p style="font-weight: 700">{{ $t("positions") }}</p>
+            <div
+              class="tag" 
+              v-for="position in post.positions_data[locale]" 
+              :key="position.id">
+              {{ position }}
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
 </template>
 
 <script>
@@ -52,7 +62,7 @@
   padding: 3rem 0;
 }
 
-.match-items {
+.items {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -61,7 +71,7 @@
   border-bottom: 2px var(--clr-grey-300) solid;
 }
 
-.match-list-items {
+.list-items {
   display: flex;
   flex-direction: column;
   align-items: space-around;
@@ -75,7 +85,7 @@
 /* DESKTOP MODIFICATIONS */
 @media only screen and (min-width: 768px) {
   
-  .match-list-items {
+  .list-items {
     flex-direction: row;
   }
 
