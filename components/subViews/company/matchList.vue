@@ -107,12 +107,13 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 20rem;
+  max-width: 15rem;
 
   border-radius: 1.875rem;
   background: #6CAF61;
   color: white;
   font-size: 0.9rem;
+  align-self: center;
 }
 
 .section-heading {
