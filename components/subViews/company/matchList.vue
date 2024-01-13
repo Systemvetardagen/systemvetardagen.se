@@ -2,7 +2,7 @@
     <div class="match-list">
           <h3>
             {{ post.title }}
-            {{ $t("looking-for") }}
+            {{ $t("company_page.looking-for") }}
           </h3>
           <div class="match-items">
             <div class="match-list-items">
@@ -28,7 +28,7 @@
             v-if="post.link_to_positions"
             :href="post.link_to_positions"
             class="link"
-            >{{ $t("company_page.company-learn-more") }} {{ post.title }} ></a
+            >{{ $t("company_page.learn-more") }} {{ post.title }} ></a
           >
         </div>
 </template>

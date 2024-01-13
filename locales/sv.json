@@ -2,9 +2,9 @@
   "landing_page": {
     "hero": {
       "event_date": "15 Februari 2023",
-      "hero_title": "Hitta ditt drömjobb!",
+      "title": "Hitta ditt drömjobb!",
       "event_description": "Kom till Systemvetardagen, en av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT-branschen!",
-      "catalog_btn_title": "Katalog",
+      "catalog_btn": "Katalog",
       "contact_us_btn": "Kontakta oss"
     },
     "sponsors": "Sponsorer",
@@ -102,10 +102,12 @@
     "read-more": "Läs mer",
     "aulanod-program": "Aula NOD Program",
     "all-companies-btn": "Se alla företag",
-  
+    "programs": "Program",
+    "positions": "Positioner",
     "map-heading": "Företagsplacering",
     "catalog": "Katalog",
-    "sponsors": "Sponsorer"
+    "sponsors": "Sponsorer",
+    "companies": "Företag"
   
   },
   "company_page": {
@@ -119,13 +121,15 @@
     "looking-for": "letar efter",
     "programs": "Program",
     "positions": "Positioner",
-    "company-contact": "Kontakt",
+    "contact": "Kontakt",
     "go-back": "Tillbaka till företag",
-    "go-top": "Scrolla till toppen"
+    "go-top": "Scrolla till toppen",
+    "qualifications":"Meriterande kunskaper",
+    "learn-more": "Läs mer om att jobba hos"
   },
   "about_page": {
-    "about-heading": "Om oss",
-    "project-group-heading": "Projektgrupp"
+    "heading": "Om oss",
+    "project_group_heading": "Projektgrupp"
   
   },
 

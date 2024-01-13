@@ -31,7 +31,7 @@
       <!-- HERO TEXT -->
       <div class="hero-content-text">
         <h1 class="hero-heading" style="color: var(--clr-blue-600)">
-          {{ $t("landing_page.hero.hero_title") }}
+          {{ $t("landing_page.hero.title") }}
         </h1>
         <p class="subtitle" style="color: var(--clr-grey-900)">
           {{ $t("landing_page.hero.event_description") }}
@@ -42,7 +42,7 @@
             :link="localePath('/catalog/' + '/')"
             width="14rem"
             bColor="gradient"
-            >{{ $t("landing_page.hero.catalog_btn_title") }}</Button
+            >{{ $t("landing_page.hero.catalog_btn") }}</Button
           >
           <Button
             link="#contact"

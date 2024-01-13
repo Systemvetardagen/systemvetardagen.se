@@ -50,7 +50,7 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >{{ $t("go-back") }}</Button
+            >{{ $t("company_page.go-back") }}</Button
           >
 
           <Button
@@ -59,7 +59,7 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >{{ $t("go-top") }}
+            >{{ $t("company_page.go-top") }}
           </Button>
         </div>
         <!-- END BOTTOM BUTTONS -->

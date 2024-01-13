@@ -2,9 +2,9 @@
   "landing_page": {
     "hero": {
       "event_date": "February 15th, 2023",
-      "hero_title": "Find your dream job!",
+      "title": "Find your dream job!",
       "event_description": "Come to Systemvetardagen, one of the biggest job fairs in Sweden for students and employers in the IT-business!",
-      "catalog_btn_title": "Catalog",
+      "catalog_btn": "Catalog",
       "contact_us_btn": "Contact us"
     },
     "sponsors": "Sponsors",
@@ -99,7 +99,8 @@
   
     "map-heading": "Company placement",
     "catalog": "Catalog",
-    "sponsors": "Sponsors"
+    "sponsors": "Sponsors",
+    "companies": "Companies"
   },
   "company_page": {
     "location": "Location",
@@ -112,15 +113,15 @@
     "looking-for": "is looking for",
     "programs": "Programs",
     "positions": "Positions",
-    "company-contact": "Contact",
+    "contact": "Contact",
     "go-back": "Back to companies",
     "go-top": "Scroll to top",
     "qualifications": "Qualifications",
-    "company-learn-more": "Learn more about working at"
+    "learn-more": "Learn more about working at"
   },
   "about_page": {
-    "about-heading": "About",
-    "project-group-heading": "Project Group"
+    "heading": "About",
+    "project_group_heading": "Project Group"
   
   },
 
