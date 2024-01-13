@@ -31,10 +31,10 @@
       <!-- HERO TEXT -->
       <div class="hero-content-text">
         <h1 class="hero-heading" style="color: var(--clr-blue-600)">
-          {{ $t("hero_title") }}
+          {{ $t("landing_page.hero.hero_title") }}
         </h1>
         <p class="subtitle" style="color: var(--clr-grey-900)">
-          {{ $t("event_description") }}
+          {{ $t("landing_page.hero.event_description") }}
         </p>
         <!-- HERO BUTTONS -->
         <div class="hero-buttons">
@@ -42,13 +42,13 @@
             :link="localePath('/catalog/' + '/')"
             width="14rem"
             bColor="gradient"
-            >{{ $t("catalog_btn_title") }}</Button
+            >{{ $t("landing_page.hero.catalog_btn_title") }}</Button
           >
           <Button
             link="#contact"
             bColor="--clr-blue-100"
             tColor="--clr-blue-900"
-            >{{ $t("contact_us_btn") }}</Button
+            >{{ $t("landing_page.hero.contact_us_btn") }}</Button
           >
         </div>
       </div>
@@ -56,7 +56,7 @@
 
     <!-- HERO INFO -->
     <div class="hero-info-wrapper">
-      <p class="hero-info-text">{{ $t("event_date") }}, 10:00 - 16:00</p>
+      <p class="hero-info-text">{{ $t("landing_page.hero.event_date") }}, 10:00 - 16:00</p>
       <p
         class="hero-info-text"
         style="color: var(--clr-grey-900); text-align: center"

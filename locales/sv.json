@@ -32,7 +32,8 @@
       
       "the_fair_2022": "The fair 2022",
       "event_description2": "This year's edition of Systemvetardagen will take place in hybrid form. The fair will be digital, in combination with physical events and presentations. On the day of the fair, you will see virtual booths on the fair website where you can interact with the companies and take part of information about the companies and job advertisements that they have uploaded. During the day, live lectures will be held by our sponsors.",
-      "info_heading": "Tips for those who participate",
+      
+      "info_heading": "Tips för dig som deltar",
 
       "before_the_fair": "Inför mässan",
       "before_the_fair_description1": "Uppdatera ditt CV och ha det lättillgängligt så att du enkelt kan ge eller skicka det vid förfrågan.",
@@ -102,7 +103,9 @@
     "aulanod-program": "Aula NOD Program",
     "all-companies-btn": "Se alla företag",
   
-    "map-heading": "Företagsplacering"
+    "map-heading": "Företagsplacering",
+    "catalog": "Katalog",
+    "sponsors": "Sponsorer"
   
   },
   "company_page": {
@@ -128,16 +131,21 @@
 
   "temporaryLandingPage": {
     "heading": "Systemvetardagen 2024",
-    "subheading": "🚧 Under construction 🚧",
-    "tagline": "One of the biggest job fairs in Sweden for students and employers in the\u00a0IT‑business.",
-    "shortDateInfo": "February 21, 2024 in Kista, Stockholm.",
-    "aboveButton": "Want to take a look at last year's event?",
-    "buttonLong": "Go\u00a0to\u00a0Systemvetardagen\u00a02023",
-    "buttonShort": "Go\u00a0to\u00a02023",
-    "organizedBy": "Systemvetardagen is organized by the student union DISK at the\u00a0Department\u00a0of\u00a0Computer\u00a0and\u00a0Systems\u00a0Sciences at Stockholm\u00a0University",
-    "contactUsPrompt": "Contact us",
-    "pdfHeader": "For companies:",
-    "pdfLinkPrompt": "Get the 2024 info sheet"
-  }
+    "subheading": "🚧 Under konstruktion 🚧",
+    "tagline": "En av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom\u00a0IT‑branchen.",
+    "shortDateInfo": "21 februari 2024 i Kista Stockholm.",
+    "aboveButton": "Vill du kika på förra årets event?",
+    "buttonLong": "Gå\u00a0till\u00a0Systemvetardagen\u00a02023",
+    "buttonShort": "Gå\u00a0till\u00a02023",
+    "organizedBy": "Systemvetardagen arrangeras av studentkåren DISK vid Instutitionen\u00a0för\u00a0data-\u00a0och\u00a0systemvetenskap vid Stockholms\u00a0universitet",
+    "contactUsPrompt": "Kontakta oss",
+    "pdfHeader": "För företag:",
+    "pdfLinkPrompt": "Infobladet för 2024"
+  },
 
+  "navbar": {
+    "home": "Hem",
+    "catalog": "Katalog",
+    "about": "Om oss"
+  }
 }

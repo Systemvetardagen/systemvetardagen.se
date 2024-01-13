@@ -7,20 +7,20 @@
           <div class="match-items">
             <div class="match-list-items">
               <ul>
-                <p style="font-weight: 700">{{ $t("programs") }}</p>
+                <p style="font-weight: 700">{{ $t("company_page.programs") }}</p>
                 <li v-for="program in post.programs_data[locale]" :key="program.id">
                   {{ program }}
                 </li>
               </ul>
               <ul>
-                <p style="font-weight: 700">{{ $t("positions") }}</p>
+                <p style="font-weight: 700">{{ $t("company_page.positions") }}</p>
                 <li v-for="position in post.positions_data[locale]" :key="position.id">
                   {{ position }}
                 </li>
               </ul>
             </div>
             <div v-if="post.qualifications" class="match-qualifications">
-              <p style="font-weight: 700">{{ $t("qualifications") }}</p>
+              <p style="font-weight: 700">{{ $t("company_page.qualifications") }}</p>
               <p>{{ post.qualifications[locale] }}</p>
             </div>
           </div>
@@ -28,7 +28,7 @@
             v-if="post.link_to_positions"
             :href="post.link_to_positions"
             class="link"
-            >{{ $t("company-learn-more") }} {{ post.title }} ></a
+            >{{ $t("company_page.company-learn-more") }} {{ post.title }} ></a
           >
         </div>
 </template>

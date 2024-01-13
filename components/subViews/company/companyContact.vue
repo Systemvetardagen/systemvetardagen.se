@@ -2,7 +2,7 @@
   <div v-if="post.contact_persons" class="post-contact">
 
     <!-- Heading -->
-    <h2>{{ $t("company-contact") }}</h2>
+    <h2>{{ $t("company_page.company-contact") }}</h2>
 
     <!-- Contact Cards -->
     <div class="cards-container">
@@ -41,7 +41,7 @@
     <div v-if="post.link_to_positions" class="external-link">
       <a :href="post.link_to_positions"
         >
-        {{ $t("company-learn-more") }}
+        {{ $t("company_page.company-learn-more") }}
         {{ post.title }}
         <ExternalLink class="icon"/>
       </a>

@@ -90,15 +90,16 @@
     "all": "all",
     "clear-filters": "Clear filters",
     "clear-selection": "Clear",
-    "qualifications": "Qualifications",
-    "company-learn-more": "Learn more about working at",
+    
   
     "posts-heading": "The Project Leaders have the floor!",
     "read-more": "Read more",
     "aulanod-program": "Aula NOD Program",
     "all-companies-btn": "View all companies",
   
-    "map-heading": "Company placement"
+    "map-heading": "Company placement",
+    "catalog": "Catalog",
+    "sponsors": "Sponsors"
   },
   "company_page": {
     "location": "Location",
@@ -113,7 +114,9 @@
     "positions": "Positions",
     "company-contact": "Contact",
     "go-back": "Back to companies",
-    "go-top": "Scroll to top"
+    "go-top": "Scroll to top",
+    "qualifications": "Qualifications",
+    "company-learn-more": "Learn more about working at"
   },
   "about_page": {
     "about-heading": "About",
@@ -133,6 +136,12 @@
     "contactUsPrompt": "Contact us",
     "pdfHeader": "For companies:",
     "pdfLinkPrompt": "Get the 2024 info sheet"
+  },
+
+  "navbar": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "about": "About"
   }
 
 }
