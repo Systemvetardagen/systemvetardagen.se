@@ -13,40 +13,16 @@
       </div>
       <div class="links">
         <a v-if="post.linkedin_link" :href="post.linkedin_link">
-          <svg
-            class="link-icon"
-            role="img"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-          >
-            <title>LinkedIn</title>
-            <path
-              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-            />
-          </svg>
+          <LinkedInLogo class="link-icon"/>
         </a>
         <a v-if="post.portfolio_link" :href="post.portfolio_link">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="link-icon"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
-            />
-          </svg>
+          <WWWIcon class="link-icon"/>
         </a>
         <a v-if="post.personal_mail" :href="'mailto:' + post.personal_mail">
-          <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
-          </svg>
+          <MailIcon class="link-icon"/>
+        </a>
+        <a v-if="post.github" :href="'mailto:' + post.github">
+          <GitHubLogo class="link-icon"/>
         </a>
       </div>
     </div>
@@ -63,10 +39,20 @@
 </template>
 
 <script>
+import LinkedInLogo from '@/components/icons/LinkedInLogo.vue'
+import MailIcon from '@/components/icons/MailIcon.vue'
+import WWWIcon from '@/components/icons/WWWIcon.vue'
+import GitHubLogo from '@/components/icons/GitHubLogo.vue'
 export default {
   props: {
     post: Object,
   },
+  components: {
+    LinkedInLogo,
+    MailIcon,
+    WWWIcon,
+    GitHubLogo
+  }
 };
 </script>
 
@@ -111,7 +97,7 @@ export default {
 }
 
 .link-icon {
-  height: 1.3rem;
+  width: 1.3rem;
   color: black;
   margin: 0
 }
