@@ -77,7 +77,7 @@ export default {
 .leader-card-header {
   display: flex;
   flex-direction: row;
-  max-width: 18rem;
+  max-width: 15rem;
   justify-content: space-between;
   
 }
@@ -90,8 +90,8 @@ export default {
 }
 
 .portrait-img {
-  width: 18rem;
-  height: 18rem;  
+  width: 15rem;
+  height: 15rem;  
   border-radius: 0.7rem 0.7rem 0rem 0rem;
   border: 3.418px solid #000; 
 }

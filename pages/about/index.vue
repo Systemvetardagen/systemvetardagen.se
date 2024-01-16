@@ -18,7 +18,6 @@
             <a v-if="post.personal_mail" :href="'mailto:' + post.personal_mail">
               <MailIcon class="link-icon"/>
             </a>
-
             <a v-if="post.portfolio_link" :href="post.portfolio_link">
               <WWWIcon class="link-icon"/>
             </a>
@@ -93,7 +92,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .leader-cards {
@@ -101,7 +100,7 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .heading-wdd {
