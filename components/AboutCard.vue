@@ -1,14 +1,15 @@
 <template>
   <div class="leader-card">
-    <div class="leader-card-header">
+    
       <img
         :src="require('@/assets' + post.picture)"
         alt="portrait"
         class="portrait-img"
       />
+    <div class="leader-card-header">  
       <div>
-        <h3 class="name">{{ post.name }}</h3>
-        <p>{{ post.role }}</p>
+        <p class="name">{{ post.name }}</p>
+        <p class="wrap-text"> {{ post.role }}</p>
       </div>
       <div class="links">
         <a v-if="post.linkedin_link" :href="post.linkedin_link">
@@ -41,17 +42,23 @@
             />
           </svg>
         </a>
+        <a v-if="post.personal_mail" :href="'mailto:' + post.personal_mail">
+          <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+          </svg>
+        </a>
       </div>
     </div>
     <!-- <p class="bio-text" v-if="post.about_you">{{ post.about_you }}</p> -->
-    <div class="email-links">
+    <!-- <div class="email-links">
       <a class="email-link" :href="'mailto:' + post.disk_mail">{{
         post.disk_mail
       }}</a>
       <a class="email-link" :href="'mailto:' + post.disk_mail">{{
         post.personal_mail
       }}</a>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -65,34 +72,48 @@ export default {
 
 <style scoped>
 .name {
-  color: var(--clr-blue-900);
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
+.wrap-text {
+  overflow-wrap: break-word;
+}
+
 .leader-card {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 2rem;
-  background-color: var(--clr-blue-100);
-  border-radius: 1rem;
-  width: 20rem;
+  
+  
 }
 
 .leader-card-header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
+  flex-direction: row;
+  max-width: 18rem;
+  justify-content: space-between;
+  
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 0.3rem;
 }
 
 .portrait-img {
-  width: 65%;
-  margin-inline: auto;
+  width: 18rem;
+  height: 18rem;  
+  border-radius: 0.7rem 0.7rem 0rem 0rem;
+  border: 3.418px solid #000; 
 }
 
 .link-icon {
-  width: 1.5rem;
-  color: var(--clr-blue-900);
+  height: 1.3rem;
+  color: black;
+  margin: 0
 }
 
 .email-links {
