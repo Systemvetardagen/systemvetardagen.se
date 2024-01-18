@@ -13,7 +13,7 @@
             <div 
               class="tag"
               style="background-color: var(--clr-pink-600);"
-              v-for="program in post.programs_data[locale]" 
+              v-for="program in post.programs_data_bachelor[locale]"
               :key="program.id">
               {{ program }}
             </div>
@@ -21,17 +21,17 @@
         </div>
 
          <!-- Section: Masters -->
-        <!-- <div class="section">
+        <div class="section">
           <p class="section-heading">{{ $t("programs") }}</p>
           <div class="tag-list">
             <div 
               class="tag"
-              v-for="program in post.programs_data[locale]" 
+              v-for="program in post.programs_data_master[locale]" 
               :key="program.id">
               {{ program }}
             </div>
           </div>
-        </div> -->
+        </div>
 
         <!-- Section: Qualifications -->
         <div v-if="post.qualifications" class="section">
