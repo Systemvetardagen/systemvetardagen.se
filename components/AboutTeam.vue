@@ -1,6 +1,6 @@
 <template>
     <div>
-    <h2 class="heading-wdd">{{teamName}}</h2>
+    <h3 class="heading-wdd">{{teamName}}</h3>
     <div class="leader-cards">
         <about-card 
             v-for="post in posts" 
@@ -8,8 +8,9 @@
             :post="post" 
             :key="post.id"
         />
-        <button class="expand-btn" @click="toggleExpansion()">{{buttonText}}</button>
+        
     </div>
+    <button class="expand-btn" @click="toggleExpansion()">{{buttonText}}</button>
     <div class="posts-wdd" v-if="isExpanded">
         <div v-for="post in posts" v-if="lang(post.slug) && post.pos=='member'" :key="post.id" class="post-wdd">
             <p class="post-name">{{ post.name }}</p>
@@ -97,6 +98,9 @@ export default {
 
 <style scoped>
 /* TEMPORARY*/
+h3 {
+  margin-bottom: 1rem;
+}
 section {
   /* margin-top: 3rem; */
   display: flex;
@@ -109,9 +113,10 @@ section {
   max-width: 64rem;
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 3rem;
-  margin-bottom: 5rem;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .heading-wdd {
@@ -121,13 +126,12 @@ section {
 
 .expand-btn {
   cursor: pointer;
-  color: blue; /* or any other color */
-  text-decoration: underline;
+  color: var(--clr-blue-800);/* or any other color */
+  font-weight: 500;
   background: none;
   border: none;
   padding: 0;
   margin: 0;
-  height: 2rem;
   align-self: flex-end;
 }
 
@@ -136,13 +140,14 @@ section {
   flex-direction: flex-start;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-top: 1rem;
 }
 
 .post-wdd {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  width: 15rem;
+  width: 16rem;
 }
 
 .link-icon {
@@ -153,5 +158,17 @@ section {
 
 .post-name {
   font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .leader-cards {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 3rem;
+    margin-bottom: 1rem;
+}
+
 }
 </style>

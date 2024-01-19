@@ -1,11 +1,12 @@
 <template>
   <div class="leader-card">
     
-      <img
-        :src="require('@/assets' + post.picture)"
-        alt="portrait"
-        class="portrait-img"
-      />
+    <img
+      v-if="post.picture"
+      :src="require('@/assets' + post.picture)"
+      alt="portrait"
+      class="portrait-img"
+    />
     <div class="leader-card-header">  
       <div>
         <p class="name">{{ post.name }}</p>
@@ -68,7 +69,7 @@ export default {
 
 .leader-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
   
   
@@ -76,7 +77,7 @@ export default {
 
 .leader-card-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   max-width: 15rem;
   justify-content: space-between;
   
@@ -90,9 +91,9 @@ export default {
 }
 
 .portrait-img {
-  width: 15rem;
-  height: 15rem;  
-  border-radius: 0.7rem 0.7rem 0rem 0rem;
+  width: 5rem;
+  height: 5rem;  
+  border-radius: 0.7rem 0rem 0rem 0.7rem;
   border: 3.418px solid #000; 
 }
 
@@ -102,23 +103,37 @@ export default {
   margin: 0
 }
 
-.email-links {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
 
-.email-link {
-  font-family: work-sans;
-  color: var(--clr-blue-900);
-}
 
-.bio-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 8;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
+
+@media only screen and (min-width: 768px) {
+  .portrait-img {
+    width: 15rem;
+    height: 15rem;  
+    border-radius: 0.7rem 0.7rem 0rem 0rem;
+    border: 3.418px solid #000; 
+  }
+  .leader-card-header {
+    display: flex;
+    flex-direction: row;
+    max-width: 15rem;
+    justify-content: space-between;
+  }
+  .leader-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    
+  }
+
+.leader-card-header {
+    display: flex;
+    flex-direction: row;
+    max-width: 15rem;
+    justify-content: space-between;
+    
+  }
 }
 </style>

@@ -2,9 +2,8 @@
   <div class="wrapper">
     <section v-if="posts">
       <h1 class="title">{{ $t("about-heading") }}</h1>
-
-      <!-- <AboutTeam :posts="this.posts.filter((i)=> {i.team==='wdd'})"/>  -->
-        <AboutTeam :posts="postsWDD" teamName="Web Development & Design"/>
+      <!-- <AboutTeam :posts="this.posts.filter((i)=> {i.team ==='wdd'})"/>  -->
+      <AboutTeam :posts="postsWDD" teamName="Web Development & Design"/>
     </section>
   </div>
 </template>
@@ -77,7 +76,7 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .heading-wdd {
