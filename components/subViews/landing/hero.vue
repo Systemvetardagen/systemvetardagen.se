@@ -1,36 +1,41 @@
 <template>
   <div id="home" class="hero">
 
+    <!-- BACKGROUND -->
+    <div class="background"></div>
+
     <!-- FOREGROUND CONTENT -->
     <div class="hero-content">
-      <!-- HERO IMAGE -->
+      <!-- HERO Logo -->
       <img
-        class="hero-image"
-        src="@/assets/img/hero-image.png"
-        alt="Image of a group of people by their computers"
+        class="hero-logo"
+        src="@/assets/img/svd_logo_white.svg"
+        alt="Systemvatardagen Logo (white)"
       />
+       <!-- HERO INFO -->
+      <div class="hero-info-wrapper">
+        <p class="hero-info-text">{{ $t("landing_page.hero.event_date") }}</p>
+        <p class="hero-info-text"> 10:00 - 16:00</p>
+        <p
+          class="hero-info-address"
+          
+        >
+          Kista NOD, Borgarfjordsgatan 12
+        </p>
+      </div>
       <!-- HERO TEXT -->
       <div class="hero-content-text">
-        <h1 class="hero-heading" style="color: var(--clr-blue-600)">
-          {{ $t("landing_page.hero.title") }}
-        </h1>
-        <p class="subtitle" style="color: var(--clr-grey-900)">
-          {{ $t("landing_page.hero.event_description") }}
-        </p>
+       
         <!-- HERO BUTTONS -->
         <div class="hero-buttons">
           <Button
             :link="localePath('/catalog/' + '/')"
-            width="14rem"
-            bColor="gradient"
+            
+            bColor="transparent"
+            
             >{{ $t("landing_page.hero.catalog_btn") }}</Button
           >
-          <Button
-            link="#contact"
-            bColor="--clr-blue-100"
-            tColor="--clr-blue-900"
-            >{{ $t("landing_page.hero.contact_us_btn") }}</Button
-          >
+
         </div>
       </div>
     </div>
@@ -53,61 +58,50 @@ import Button from "@/components/Button.vue";
 
 export default {
   name: "heroSection",
-
+  components: {
+    Button
+  }
 };
-components: {
-  Button;
-}
+
 </script>
 
 <style>
 
 /* CONTAINER */
 .hero {
-  min-height: 100vh;
-  padding: 0;
-  justify-content: center;
-  background-size: cover;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+
+position: relative
+
+
+
+
 }
 
-
-
-/* temporary style, to be finalised by design/css team */
-/* - haha good joke */
-/* no jokes in the code pls */
-/* jk this will stay lol */
-.hero-bg-span {
-  color: var(--clr-pink-100);
-  font-family: "OverpassMono";
-  font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 150%;
-  -webkit-user-select: none;
-  user-select: none;
-  word-break: break-all;
-  transition: 0.4s;
+.background {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
+  background: linear-gradient(26deg, #4158D0 2.77%, #C850C0 51.55%, #FFCC70 100.34%);
+  filter: blur(0px);
 }
 
-.highlighted {
-  color: var(--clr-pink-400);
-}
+
+
+
 
 /* FOREGROUND */
 .hero-content {
   position: relative;
   padding: 1.5rem;
   display: flex;
-  z-index: 2;
+  z-index: 1;
   justify-content: center;
   align-items: center;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 3rem;
 }
 
@@ -122,8 +116,9 @@ components: {
   max-width: 45ch;
 }
 
-.hero-image {
-  max-width: 100%;
+.hero-logo {
+  max-width: 25rem;
+  margin: 5rem 3rem 0 3rem;
 }
 
 .hero-buttons {
@@ -146,17 +141,19 @@ components: {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  margin-top: 2rem;
-  z-index: 10;
-  background-color: var(--clr-white);
-  font-weight: bold;
+  color: var(--clr-white);
   justify-self: flex-end;
+  font-family: OverpassMono;
+  font-weight: 300;
+  gap: 0.5rem;
 }
 
 .hero-info-text {
-  font-family: OverpassMono;
   text-align: center;
-  color: var(--clr-pink-600);
+  font-size: 1.5rem
+}
+.hero-info-address {
+  text-align: center;
+  font-size: 1rem;
 }
 </style>

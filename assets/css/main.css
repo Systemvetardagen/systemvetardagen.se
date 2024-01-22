@@ -331,7 +331,7 @@ address {
 
 
 /* Hero */
-.hero,
+
 section,
 footer {
   padding: 1.5rem 1.5rem;
@@ -347,9 +347,7 @@ section {
 }
 
 @media (min-width: 640px) {
-  .hero {
-    padding-bottom: 1.5rem;
-  }
+
 
 section,
 footer {
@@ -360,20 +358,12 @@ footer {
     align-items: center;
   }
 }
-.hero-buttons {
-  display: flex;
-}
 
 .button-contact {
   margin-left: 1rem;
 }
 
-.hero-chevron-down {
-  width: 2rem;
-  color: var(--clr-white);
-  align-self: center;
-  margin-top: 2rem;
-}
+
 
 
 /* Sections */

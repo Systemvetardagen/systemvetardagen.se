@@ -1,155 +1,141 @@
 {
-  "landing_page": {
-    "hero": {
-      "event_date": "15 Februari 2023",
-      "title": "Hitta ditt drömjobb!",
-      "event_description": "Kom till Systemvetardagen, en av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT-branschen!",
-      "catalog_btn": "Katalog",
-      "contact_us_btn": "Kontakta oss"
+  "about_page": {
+    "heading": "Om oss",
+    "project_group_heading": "Projektgrupp"
+  },
+  "catalog_page": {
+    "all": "alla",
+    "all-companies-btn": "Se alla företag",
+    "and": " och ",
+    "aulanod-program": "Aula NOD Program",
+    "catalog": "Katalog",
+    "clear-filters": "Rensa filter",
+    "clear-selection": "Rensa",
+    "companies": "Företag",
+    "company-learn-more": "Läs mer om att jobba hos",
+    "filter-positions": {
+      "0": "Praktikplatser",
+      "1": "Utlandstjänster",
+      "2": "Traineeprogram",
+      "3": "Heltidstjänster",
+      "4": "Examensarbete",
+      "5": "Deltidstjänster"
     },
-    "sponsors": "Sponsorer",
+    "filter-programs": {
+      "0": "Affärssystem & tjänstedesign",
+      "1": "Data- & systemvetenskap",
+      "2": "Datorspelsutveckling",
+      "3": "Datavetenskap",
+      "4": "Ekonomi & IT",
+      "5": "Marknadskommunikation & IT",
+      "6": "Digitala medier",
+      "7": "Interaktionsdesign",
+      "8": "Magister/Master"
+    },
+    "map-heading": "Företagsplacering",
+    "positions": "Positioner",
+    "posts-heading": "Projektledarna har ordet!",
+    "programs": "Program",
+    "qualifications": "Meriterande kunskaper",
+    "read-more": "Läs mer",
+    "showing-companies-for": "Visar företag för ",
+    "sponsors": "Sponsorer"
+  },
+  "company_page": {
+    "bis-area": "Verksamhetsområde",
+    "company-info": "Företagsinfo",
+    "contact": "Kontakt",
+    "employees-int": "Anställda internationellt",
+    "employees-sv": "Anställda i Sverige",
+    "established": "Grundades",
+    "go-back": "Tillbaka till företag",
+    "go-top": "Scrolla till toppen",
+    "learn-more": "Läs mer om att jobba hos",
+    "location": "Placering",
+    "looking-for": "letar efter",
+    "positions": "Positioner",
+    "programs": "Program",
+    "qualifications": "Meriterande kunskaper",
+    "slogan": "Slogan"
+  },
+  "landing_page": {
+    "contact_form": {
+      "button": "Skicka",
+      "company": "Företag",
+      "email": "E-mail",
+      "message": "Meddelande",
+      "name": "Namn",
+      "title": "Kontakta oss"
+    },
     "exhibitor": "Utställare",
-    "student_node": {
-      "book_session": "Book Interview Sessions",
-      "intro": "This year we have once again partnered up with StudentNode to offer students the opportunity of applying for interview sessions with the companies!",
-      "howtoapply": "Follow the steps to apply:",
-      "step1": "Go to ",
-      "link": "mitt.systemvetardagen.se",
-      "step2": "Register an account",
-      "step3": "Fill in all your info for the account and upload your CV. This way you increase your chances of getting your desired job!",
-      "step4": "Write and upload personlized cover letters for the companies that you apply for! This will make you stand out and in turn increase your chances!",
-      "step5": "Find the companies you are most interested in and select a time of your choosing to apply for an interview session.",
-      "tep6": "Press “Ansök” to apply for the interview(s) and then press “Send times to my email” to send the selected times to your email inbox. Don’t forget to save the times to your calendar!"
-    
+    "hero": {
+      "catalog_btn": "Se alla uställande företag",
+      "contact_us_btn": "Kontakta oss",
+      "event_date": "Onsdag 21 Februari 2024",
+      "event_description": "Kom till Systemvetardagen, en av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT-branschen!",
+      "title": "Hitta ditt drömjobb!"
     },
     "info": {
-      "coming_soon": "Kommer snart...",
-      "it_is_almost_time!": "Snart är det dags!",
-      "disk_introduction1": "För 27:e året i rad arrangeras Systemvetardagen på Stockholms universitet. Det är",
-      "disk": " studentkåren DISKs",
-      "disk_introduction2": "från Data- och Systemvetenskapliga institutionen (DSV) egna arbetsmarknadsdag. Under dagen knyts värdefulla kontakter mellan studenter och näringsliv. Systemvetardagen är en unik mötesplats för studenter & organisationer inom IT-branschen.",
-    
-      
-      "the_fair_2022": "The fair 2022",
-      "event_description2": "This year's edition of Systemvetardagen will take place in hybrid form. The fair will be digital, in combination with physical events and presentations. On the day of the fair, you will see virtual booths on the fair website where you can interact with the companies and take part of information about the companies and job advertisements that they have uploaded. During the day, live lectures will be held by our sponsors.",
-      
-      "info_heading": "Tips för dig som deltar",
-
+      "answer1": "Ja, alla studenter är välkomna!",
+      "answer2": "Nej, det är helt kostnadsfritt för studenter att delta på mässan.",
+      "answer3": "Absolut! Mäss-hemsidan erbjuds på både svenska och engelska, och företagen som deltar pratar gärna engelska.",
+      "answer4": "Nej, man behöver inte anmäla sig för att komma på mässan eller för att gå på eventen i Aula NOD!",
       "before_the_fair": "Inför mässan",
       "before_the_fair_description1": "Uppdatera ditt CV och ha det lättillgängligt så att du enkelt kan ge eller skicka det vid förfrågan.",
       "before_the_fair_description2": "Kolla igenom katalogen och notera vilka företag du är intresserad av att prata med!",
       "before_the_fair_description3": "Kolla in vilka företagsevent som du är intresserad av att gå på.",
       "before_the_fair_description4": "Nu är du väl förberedd för mässan!",
-
-
+      "coming_soon": "Kommer snart...",
+      "disk": " studentkåren DISKs",
+      "disk_introduction1": "För 27:e året i rad arrangeras Systemvetardagen på Stockholms universitet. Det är",
+      "disk_introduction2": "från Data- och Systemvetenskapliga institutionen (DSV) egna arbetsmarknadsdag. Under dagen knyts värdefulla kontakter mellan studenter och näringsliv. Systemvetardagen är en unik mötesplats för studenter & organisationer inom IT-branschen.",
       "during_the_fair": "Under mässan",
       "during_the_fair_description1": "Använd mässkartan för att hitta företagen du är intresserad av.",
       "during_the_fair_description2": "Gå runt på mässgolvet och prata med företagen. De är där för att få kontakt med studenter, så passa på!",
       "during_the_fair_description3": "Lär dig något nytt – Under dagen kommer det att hållas företagsevent i Aula NOD. Se på schemat vilka event som låter intressanta!",
-
+      "event_description2": "This year's edition of Systemvetardagen will take place in hybrid form. The fair will be digital, in combination with physical events and presentations. On the day of the fair, you will see virtual booths on the fair website where you can interact with the companies and take part of information about the companies and job advertisements that they have uploaded. During the day, live lectures will be held by our sponsors.",
       "frequently_asked_questions": "Vanliga frågor",
+      "info_heading": "Tips för dig som deltar",
+      "it_is_almost_time!": "Snart är det dags!",
       "question1": "Jag går inte på Stockholms Universitet, får jag ändå delta?",
-      "answer1": "Ja, alla studenter är välkomna!",
       "question2": "Kostar det något att delta?",
-      "answer2": "Nej, det är helt kostnadsfritt för studenter att delta på mässan.",
       "question3": "Kan jag delta på mässan om jag inte talar svenska?",
-      "answer3": "Absolut! Mäss-hemsidan erbjuds på både svenska och engelska, och företagen som deltar pratar gärna engelska.",
       "question4": "Behöver jag anmäla mig för att vara med på mässan?",
-      "answer4": "Nej, man behöver inte anmäla sig för att komma på mässan eller för att gå på eventen i Aula NOD!"
-
+      "the_fair_2022": "The fair 2022"
     },
-    "old_cat_title": "Årets katalog!",
-    "old_cat_description": "Katalogen är här och nu i digital och interaktiv form! I den kan du hitta information om sponsorerna, utställande företag och mycket mer!",
     "old_cat_btn": "Katalog 2023",
-    "contact_form": {
-      "title": "Kontakta oss",
-      "name": "Namn",
-      "company": "Företag",
-      "email": "E-mail",
-      "message": "Meddelande",
-      "button": "Skicka"
+    "old_cat_description": "Katalogen är här och nu i digital och interaktiv form! I den kan du hitta information om sponsorerna, utställande företag och mycket mer!",
+    "old_cat_title": "Årets katalog!",
+    "sponsors": "Sponsorer",
+    "student_node": {
+      "book_session": "Book Interview Sessions",
+      "howtoapply": "Follow the steps to apply:",
+      "intro": "This year we have once again partnered up with StudentNode to offer students the opportunity of applying for interview sessions with the companies!",
+      "link": "mitt.systemvetardagen.se",
+      "step1": "Go to ",
+      "step2": "Register an account",
+      "step3": "Fill in all your info for the account and upload your CV. This way you increase your chances of getting your desired job!",
+      "step4": "Write and upload personlized cover letters for the companies that you apply for! This will make you stand out and in turn increase your chances!",
+      "step5": "Find the companies you are most interested in and select a time of your choosing to apply for an interview session.",
+      "tep6": "Press “Ansök” to apply for the interview(s) and then press “Send times to my email” to send the selected times to your email inbox. Don’t forget to save the times to your calendar!"
     }
   },
-  "catalog_page": {
-    "filter-programs": [
-      "Affärssystem & tjänstedesign",
-      "Data- & systemvetenskap",
-      "Datorspelsutveckling",
-      "Datavetenskap",
-      "Ekonomi & IT",
-      "Marknadskommunikation & IT",
-      "Digitala medier",
-      "Interaktionsdesign",
-      "Magister/Master"
-    ],
-    "filter-positions": [
-      "Praktikplatser",
-      "Utlandstjänster",
-      "Traineeprogram",
-      "Heltidstjänster",
-      "Examensarbete",
-      "Deltidstjänster"
-    ],
-    "showing-companies-for": "Visar företag för ",
-    "and": " och ",
-    "all": "alla",
-    "clear-filters": "Rensa filter",
-    "clear-selection": "Rensa",
-    "qualifications": "Meriterande kunskaper",
-    "company-learn-more": "Läs mer om att jobba hos",
-  
-    "posts-heading": "Projektledarna har ordet!",
-    "read-more": "Läs mer",
-    "aulanod-program": "Aula NOD Program",
-    "all-companies-btn": "Se alla företag",
-    "programs": "Program",
-    "positions": "Positioner",
-    "map-heading": "Företagsplacering",
-    "catalog": "Katalog",
-    "sponsors": "Sponsorer",
-    "companies": "Företag"
-  
-  },
-  "company_page": {
-    "location": "Placering",
-    "company-info": "Företagsinfo",
-    "established": "Grundades",
-    "slogan": "Slogan",
-    "employees-sv": "Anställda i Sverige",
-    "employees-int": "Anställda internationellt",
-    "bis-area": "Verksamhetsområde",
-    "looking-for": "letar efter",
-    "programs": "Program",
-    "positions": "Positioner",
-    "contact": "Kontakt",
-    "go-back": "Tillbaka till företag",
-    "go-top": "Scrolla till toppen",
-    "qualifications":"Meriterande kunskaper",
-    "learn-more": "Läs mer om att jobba hos"
-  },
-  "about_page": {
-    "heading": "Om oss",
-    "project_group_heading": "Projektgrupp"
-  
-  },
-
-  "temporaryLandingPage": {
-    "heading": "Systemvetardagen 2024",
-    "subheading": "🚧 Under konstruktion 🚧",
-    "tagline": "En av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom\u00a0IT‑branchen.",
-    "shortDateInfo": "21 februari 2024 i Kista Stockholm.",
-    "aboveButton": "Vill du kika på förra årets event?",
-    "buttonLong": "Gå\u00a0till\u00a0Systemvetardagen\u00a02023",
-    "buttonShort": "Gå\u00a0till\u00a02023",
-    "organizedBy": "Systemvetardagen arrangeras av studentkåren DISK vid Instutitionen\u00a0för\u00a0data-\u00a0och\u00a0systemvetenskap vid Stockholms\u00a0universitet",
-    "contactUsPrompt": "Kontakta oss",
-    "pdfHeader": "För företag:",
-    "pdfLinkPrompt": "Infobladet för 2024"
-  },
-
   "navbar": {
-    "home": "Hem",
+    "about": "Om oss",
     "catalog": "Katalog",
-    "about": "Om oss"
+    "home": "Hem"
+  },
+  "temporaryLandingPage": {
+    "aboveButton": "Vill du kika på förra årets event?",
+    "buttonLong": "Gå till Systemvetardagen 2023",
+    "buttonShort": "Gå till 2023",
+    "contactUsPrompt": "Kontakta oss",
+    "heading": "Systemvetardagen 2024",
+    "organizedBy": "Systemvetardagen arrangeras av studentkåren DISK vid Instutitionen för data- och systemvetenskap vid Stockholms universitet",
+    "pdfHeader": "För företag:",
+    "pdfLinkPrompt": "Infobladet för 2024",
+    "shortDateInfo": "21 februari 2024 i Kista Stockholm.",
+    "subheading": "🚧 Under konstruktion 🚧",
+    "tagline": "En av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT‑branchen."
   }
 }

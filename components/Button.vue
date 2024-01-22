@@ -50,7 +50,7 @@
         background: linear-gradient(90deg, var(--clr-blue-600), var(--clr-pink-600), var(--clr-yellow-600));
         padding:0.6em 2.5em;
         border: none;
-        border-radius: 0.5rem;
+        border-radius: 3rem;
         
         /* Text */
         font-weight: 500;
