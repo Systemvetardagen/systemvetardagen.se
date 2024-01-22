@@ -2,7 +2,7 @@
 <template>
   <div class="companies">
     <div class="company-content">
-      <h2 style="color: var(--clr-blue-700)">{{ $t("sponsors") }}</h2>
+      <h2 style="color: var(--clr-blue-700)">{{ $t("landing_page.sponsors") }}</h2>
       <!-- Since we hadn't figured out nuxt-image yet, we hard-coded this grid. -->
       <div class="company-grid">
         <NuxtLink :to="localePath('/companies/old/accenture')" class="company-logo">
@@ -58,7 +58,7 @@
         class="companies-btn"
         :link="localePath('/companies/old') + '/'"
         bColor="gradient"
-        >{{ $t("all-companies-btn") }}</Button
+        >{{ $t("catalog_page.all-companies-btn") }}</Button
       >
     </div>
   </div>

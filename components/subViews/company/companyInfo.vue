@@ -5,15 +5,15 @@
           <p class="heading">{{ post.company_name }}</p>
           <div class="table">
             <div class="table-row">
-              <p v-if="post.year_founded" class="table-left">{{ $t("established") }}</p>
+              <p v-if="post.year_founded" class="table-left">{{ $t("company_page.established") }}</p>
               <p v-if="post.year_founded" class="table-right">{{ post.year_founded }}</p>
             </div>
             <div class="table-row">
-              <p v-if="post.number_of_employees_in_sweden" class="table-left"> {{ $t("employees-sv") }}</p>
+              <p v-if="post.number_of_employees_in_sweden" class="table-left"> {{ $t("company_page.employees-sv") }}</p>
               <p v-if="post.number_of_employees_in_sweden" class="table-right">{{ separateDecimals(post.number_of_employees_in_sweden) }}</p>
             </div>
             <div class="table-row">
-              <p v-if="post.number_of_employees_internationally" class="table-left">{{ $t("employees-int") }}</p>
+              <p v-if="post.number_of_employees_internationally" class="table-left">{{ $t("company_page.employees-int") }}</p>
               <p v-if="post.number_of_employees_internationally" class="table-right">{{ separateDecimals(post.number_of_employees_internationally) }}</p>
             </div>
 

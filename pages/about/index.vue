@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
     <section v-if="posts">
-      <h1 class="title">{{ $t("about-heading") }}</h1>
-      <h2>{{ $t("project-group-heading") }}</h2>
+      <h1 class="title">{{ $t("about_page.heading") }}</h1>
+      <h2>{{ $t("about_page.project_group_heading") }}</h2>
       <div class="leader-cards">
         <about-card v-for="post in postsGeneral" v-if="lang(post.slug)" :post="post" :key="post.id" />
       </div>

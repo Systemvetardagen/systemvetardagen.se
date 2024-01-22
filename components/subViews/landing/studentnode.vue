@@ -3,16 +3,16 @@
         <div class="studentnode_main">
             <img class="SNimage" src="@/assets/img/StudentNodeimage.jpg">
             <div class="studentnode">
-                    <h2 style=" color:var(--clr-blue-600); text-align: center;">{{ $t('book_session') }}</h2>
-                    <p>{{$t('student_node_intro')}}</p>
-                    <p style="padding-top:1rem">{{$t("student_node_howtoapply")}}</p>
+                    <h2 style=" color:var(--clr-blue-600); text-align: center;">{{ $t('landing_page.student_node.book_session') }}</h2>
+                    <p>{{$t('landing_page.student_node.intro')}}</p>
+                    <p style="padding-top:1rem">{{$t("landing_page.student_node.howtoapply")}}</p>
                     <p style="padding-bottom:5%; padding-top:0rem"><ol>
-                        <li>{{ $t('student_node_step1') }}<a style="color: var(--clr-blue-600);" href=https://mitt.systemvetardagen.se> {{ $t('student_node_link') }}</a></li>
-                        <li>{{ $t('student_node_step2') }}</li>
-                        <li>{{ $t('student_node_step3') }}</li>
-                        <li>{{ $t('student_node_step4') }}</li>
-                        <li>{{ $t('student_node_step5') }}</li>
-                        <li>{{ $t('student_node_step6') }}</li>
+                        <li>{{ $t('landing_page.student_node.step1') }}<a style="color: var(--clr-blue-600);" href=https://mitt.systemvetardagen.se> {{ $t('landing_page.student_node.link') }}</a></li>
+                        <li>{{ $t('landing_page.student_node.step2') }}</li>
+                        <li>{{ $t('landing_page.student_node.step3') }}</li>
+                        <li>{{ $t('landing_page.student_node.step4') }}</li>
+                        <li>{{ $t('landing_page.student_node.step5') }}</li>
+                        <li>{{ $t('landing_page.student_node.step6') }}</li>
                     </ol></p>     
                     <Button link="https://mitt.systemvetardagen.se/" bColor="--clr-pink-600" tColor="--clr-white">Register Now</Button> 
             </div>
