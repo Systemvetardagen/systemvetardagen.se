@@ -22,7 +22,7 @@
 
          <!-- Section: Masters -->
         <div class="section">
-          <p class="section-heading">{{ $t("programs") }}</p>
+          <p class="section-heading">{{ $t("master_programs") }}</p>
           <div class="tag-list">
             <div 
               class="tag"
