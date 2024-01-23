@@ -102,6 +102,9 @@
     "old_cat_btn": "Catalog 2023",
     "old_cat_description": "The catalog is here and now in digital and interactive form! In it you will find everything you need to know about the event, with information about our sponsors, exhibiting companies and much more!",
     "old_cat_title": "This year's catalog!",
+    "slogan": {
+      "tagline": "One of the biggest job fairs in Sweden for students and employers in the IT‑business."
+    },
     "sponsors": "Sponsors",
     "student_node": {
       "book_session": "Book Interview Sessions",

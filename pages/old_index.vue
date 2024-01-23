@@ -2,6 +2,7 @@
 <template>
   <div class="wrapper">
     <hero />
+    <slogan/>
     <sponsors />
     <soon />
     <!-- <studentnode/> -->
@@ -9,7 +10,7 @@
     <faq />
     <oldCatalog />
     <!-- <Button title="See Map" link="map"/> -->
-    <contact />
+    <!-- <contact /> -->
   </div>
 </template>
 <style>
@@ -24,6 +25,7 @@ import faq from "@/components/subViews/landing/faq.vue";
 import oldCatalog from "@/components/subViews/landing/oldCatalog.vue";
 import contact from "@/components/subViews/landing/contact.vue";
 import sponsors from "@/components/subViews/landing/sponsors.vue";
+import slogan from "@/components/subViews/landing/slogan.vue"
 
 export default {
   components: {
@@ -34,6 +36,7 @@ export default {
     oldCatalog,
     contact,
     sponsors,
+    slogan,
   },
   name: "IndexPage",
 };

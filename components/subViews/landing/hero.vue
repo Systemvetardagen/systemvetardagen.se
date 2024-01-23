@@ -30,25 +30,12 @@
         <div class="hero-buttons">
           <Button
             :link="localePath('/catalog/' + '/')"
-            
             bColor="transparent"
-            
             >{{ $t("landing_page.hero.catalog_btn") }}</Button
           >
 
         </div>
       </div>
-    </div>
-
-    <!-- HERO INFO -->
-    <div class="hero-info-wrapper">
-      <p class="hero-info-text">{{ $t("landing_page.hero.event_date") }}, 10:00 - 16:00</p>
-      <p
-        class="hero-info-text"
-        style="color: var(--clr-grey-900); text-align: center"
-      >
-        Kista NOD, Borgarfjordsgatan 12
-      </p>
     </div>
   </div>
 </template>
@@ -68,13 +55,8 @@ export default {
 <style>
 
 /* CONTAINER */
-.hero {
-
-position: relative
-
-
-
-
+.hero { 
+  position: relative
 }
 
 .background {
@@ -88,9 +70,6 @@ position: relative
   background: linear-gradient(26deg, #4158D0 2.77%, #C850C0 51.55%, #FFCC70 100.34%);
   filter: blur(0px);
 }
-
-
-
 
 
 /* FOREGROUND */

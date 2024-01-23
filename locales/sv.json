@@ -106,6 +106,9 @@
     "old_cat_btn": "Katalog 2023",
     "old_cat_description": "Katalogen är här och nu i digital och interaktiv form! I den kan du hitta information om sponsorerna, utställande företag och mycket mer!",
     "old_cat_title": "Årets katalog!",
+    "slogan": {
+      "tagline": "En av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT‑branchen."
+    },
     "sponsors": "Sponsorer",
     "student_node": {
       "book_session": "Book Interview Sessions",
