@@ -48,7 +48,7 @@ export default {
   height: auto;
   display: flex;
   justify-content: center;
-  padding: 5%;
+  padding: 0 2rem;
 }
 
 .company-content {
