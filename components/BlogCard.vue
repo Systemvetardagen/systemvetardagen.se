@@ -10,7 +10,7 @@
         <h3>{{ post.title }}</h3>
         <p class="body-text">{{ post.body_text }}</p>
         <Nuxt-Link :to="localePath({name: 'catalog-blog', params: {blog: post.slug.split('.')[0]}})" class="link"
-          >{{ $t("read-more") }} ></Nuxt-Link
+          >{{ $t("blog.read-more") }} ></Nuxt-Link
         >
       </div>
     </article>
@@ -27,12 +27,12 @@ export default {
 
 <style scoped>
 .card {
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 1rem;
   width: 100%;
-  max-width: 24rem;
+  max-width: 18rem;
   color: initial;
-  border: solid 0.15rem var(--clr-grey-100);
+  border: solid 0.1rem var(--clr-grey-300);
 }
 
 .card-text {
@@ -58,12 +58,42 @@ export default {
 }
 
 .link {
-  margin-top: 1rem;
+  
   color: var(--clr-blue-600);
   align-self: flex-end;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 p {
   color: var(--clr-grey-500);
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 720px) {
+  .card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 35rem;
+    height: auto;
+  }
+  .card-text {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 1rem;
+  }
+  .post-img {
+    width: 40%;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+  }
+
 }
 </style>

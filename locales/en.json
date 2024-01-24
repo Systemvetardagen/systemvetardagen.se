@@ -3,6 +3,9 @@
     "heading": "About",
     "project_group_heading": "Project Group"
   },
+  "blog": {
+    "read-more": "Read more"
+  },
   "catalog_page": {
     "all": "all",
     "all-companies-btn": "View all companies",

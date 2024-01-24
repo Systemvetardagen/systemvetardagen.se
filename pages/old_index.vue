@@ -7,6 +7,14 @@
     <banner img="systemvetardagen-oversikt">{{$t('landing_page.banner.meet')}}</banner>
     <!-- <studentnode/> -->
     <description/>
+    <div class="blog-section">
+        <BlogCard
+          v-for="post of filteredPosts"
+          :post="post"
+          :key="post.slug"
+          class="post-card"
+        />
+      </div>
     <banner img="systemvetardagen-nod">{{ $t('landing_page.banner.nod') }}</banner>
     <oldCatalog />
     <!-- <Button title="See Map" link="map"/> -->
@@ -28,7 +36,19 @@ import sponsors from "@/components/subViews/landing/sponsors.vue";
 import slogan from "@/components/subViews/landing/slogan.vue"
 import banner from "@/components/subViews/landing/banner.vue"
 import description from "@/components/subViews/landing/description.vue"
+import blog from "@/components/subViews/landing/blog.vue"
+import BlogCard from "@/components/BlogCard.vue"
 export default {
+  // This method vill fetch a list of all the cms entries in a specified folder
+  async asyncData({ $content, error }) {
+    let posts;
+    try {
+    posts = await $content("blog").fetch(); //Gets the data from the content/blog path
+    } catch (e) {
+    error({ message: "Posts not found" });
+    }
+    return { posts };
+  },
   components: {
     hero,
     soon,
@@ -39,13 +59,26 @@ export default {
     sponsors,
     slogan,
     banner,
-    description
+    description,
+    blog,
+    BlogCard
+  },
+  computed: {
+    filteredPosts() {
+      return this.posts.filter((e) => e.slug.includes("." + this.$i18n.locale));
+    },
   },
   name: "IndexPage",
 };
 </script>
 <style scoped>
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
+  .blog-section {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>
