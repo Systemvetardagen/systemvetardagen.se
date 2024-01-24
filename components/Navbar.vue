@@ -16,13 +16,13 @@
 
         <!-- Home -->
         <div class="normal" v-bind:class="{ active: isActive('/') }">
-          <NuxtLink :to="localePath('/old_index')" class="header-link">{{
+          <NuxtLink :to="localePath('/')" class="header-link">{{
             $t("navbar.home")
           }}</NuxtLink>
         </div>
 
         <!-- Catalog -->
-        <div class="normal" v-bind:class="{ active: isActive('/catalog/') }">
+        <div class="normal" v-bind:class="{ active: isActive('/companies') }">
           <NuxtLink :to="localePath('/companies') + '/'" class="header-link">{{
             $t("navbar.catalog")
           }}</NuxtLink>
@@ -107,7 +107,7 @@
 
       <!-- Catalog -->
       <div
-        v-bind:class="{ mactive: isActive('/catalog/') }"
+        v-bind:class="{ mactive: isActive('/companies/') }"
         class="mobile-header-container"
         @click="seen = !seen"
       >
@@ -123,7 +123,7 @@
         @click="seen = !seen"
       >
         <NuxtLink :to="localePath('/about') + '/'" class="header-link">{{
-          $t("nabbar.about")
+          $t("navbar.about")
         }}</NuxtLink>
       </div>
 
