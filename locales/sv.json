@@ -111,6 +111,8 @@
   
   },
   "company_page": {
+    "floor": "floor",
+    "booth": "booth",
     "location": "Placering",
     "company-info": "Företagsinfo",
     "established": "Grundades",

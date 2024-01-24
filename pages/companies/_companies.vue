@@ -9,6 +9,14 @@
 
 
 
+        <!-- PLACEMENT -->
+        <Placement :post="this.post"></Placement>
+
+
+
+        <!-- LOGO AREA -->
+        <LogoArea :post="this.post" :locale="this.locale"/>
+
 
 
         <!-- ARTICLE MAIN CONTENT -->
@@ -72,6 +80,8 @@
 import Button from "@/components/Button.vue";
 import marked from "marked";
 import Banner from "@/components/subViews/company/banner.vue"
+import LogoArea from "../../components/subViews/company/logoArea.vue";
+import Placement from "../../components/subViews/company/placement.vue";
 import CompanyInfo from "@/components/subViews/company/companyInfo.vue"
 import PartnerContent from "@/components/subViews/company/partnerContent.vue"
 import MatchList from "@/components/subViews/company/matchList.vue"
@@ -211,10 +221,12 @@ export default {
   components: {
     Button,
     CompanyInfo,
-    Banner, 
+    Banner,
     PartnerContent,
     MatchList,
-    CompanyContact
+    CompanyContact,
+    LogoArea,
+    Placement
 },
   computed: {
     showEnglishMessage() {

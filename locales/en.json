@@ -103,6 +103,8 @@
     "companies": "Companies"
   },
   "company_page": {
+    "floor": "floor",
+    "booth": "booth",
     "location": "Location",
     "company-info": "Company Info",
     "established": "Established",

@@ -13,11 +13,6 @@
           />
           <div class="banner-shade"></div>
           <div class="banner-overlay">
-            <div v-if="post.logo" class="logo">
-              <img :src="this.post.logo" alt="logo" class="logo-img" />
-            </div>
-
-            <h1 v-if="!post.logo" class="post-title">{{ post.title }}</h1>
             <!-- <p class="post-location">{{ $t("location") }}: TBA</p>
             <p v-if="post.banner" class="post-tag">// Sponsor</p>
             <p v-else class="post-tag">//</p> -->
@@ -86,21 +81,6 @@
     );
     border-radius: 0 0 1rem 1rem;
     }
-    .logo {
-    display: flex;
-    width: clamp(12rem, 20vw, 16rem);
-    height: 80%;
-    padding: 2rem;
-    margin: 2rem;
-    background-color: var(--clr-white);
-    border-radius: 1rem;
-    }
-
-    .logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    }
 
     .email {
     font-family: work-sans;
@@ -109,9 +89,6 @@
     .post-location {
     padding-bottom: clamp(0.2rem, 1vw, 0.5rem);
     border-bottom: solid 2px var(--clr-white);
-    }
-    .post-title {
-    padding-bottom: clamp(0.1rem, 2.5vw, 3rem);
     }
     .post-tag {
     align-self: flex-end;
