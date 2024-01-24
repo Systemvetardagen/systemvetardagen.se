@@ -74,6 +74,11 @@
       "name": "Namn",
       "title": "Kontakta oss"
     },
+    "description": {
+      "para1": "För 28:e året i rad arrangeras Systemvetardagen på Stockholms universitet Campus Kista.",
+      "para2": "Det är studentkåren DISKs från Institutionen för data- och systemvetenskap (DSV) egna arbetsmarknadsdag.",
+      "para3": "Alla studenter är välkomna (även om du inte går på Stockholms universitet) och det är helt kostnadsfritt att delta - det är bara att dyka upp!"
+    },
     "exhibitor": "Utställare",
     "hero": {
       "catalog_btn": "Se alla uställande företag",
@@ -109,6 +114,10 @@
       "question3": "Kan jag delta på mässan om jag inte talar svenska?",
       "question4": "Behöver jag anmäla mig för att vara med på mässan?",
       "the_fair_2022": "The fair 2022"
+    },
+    "links": {
+      "about": "Läs mer om Systemvetardagen",
+      "plan_visit": "Planera ditt besök"
     },
     "old_cat_btn": "Katalog 2023",
     "old_cat_description": "Katalogen är här och nu i digital och interaktiv form! I den kan du hitta information om sponsorerna, utställande företag och mycket mer!",

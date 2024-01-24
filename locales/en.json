@@ -70,6 +70,11 @@
       "name": "Name",
       "title": "Contact us"
     },
+    "description": {
+      "para1": "For the 27th year in a row, Systemvetardagen is arranged at Stockholm University campus Kista.",
+      "para2": "It is the student union DISKs , from the Department of Data and Systems Science DSV, own job fair day.",
+      "para3": "All students are welcome (even if you are not a student at Stockholm University) and the entire event is free - just show up! "
+    },
     "exhibitor": "Exhibitor",
     "hero": {
       "catalog_btn": "See all exhibitors",
@@ -105,6 +110,10 @@
       "question3": "Can I participate in the fair if I don't speak Swedish?",
       "question4": "Do I need to sign up to attend the fair?",
       "the_fair_2022": "The fair 2022"
+    },
+    "links": {
+      "about": "Learn more about Systemvetardagen",
+      "plan_visit": "Plan your visit"
     },
     "old_cat_btn": "Catalog 2023",
     "old_cat_description": "The catalog is here and now in digital and interactive form! In it you will find everything you need to know about the event, with information about our sponsors, exhibiting companies and much more!",

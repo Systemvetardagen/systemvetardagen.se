@@ -1,10 +1,12 @@
 <template>
     <div class="container">
-        <p>För 28:e året i rad arrangeras Systemvetardagen på Stockholms universitet Campus Kista. </p>
-        <p>Det är studentkåren DISKs från Institutionen för data- och systemvetenskap (DSV) egna arbetsmarknadsdag.</p>
-        <p>Alla studenter är välkomna (även om du inte går på Stockholms universitet) och det är helt kostnadsfritt att delta - det är bara att dyka upp!</p>
+        <p>{{$t('landing_page.description.para1')}}</p>
+        <p>{{$t('landing_page.description.para2')}}</p>
+        <p>{{$t('landing_page.description.para3')}}</p>
     </div>
 </template>
+<script>
+</script>
 <style scoped>
     .container {
         display: flex;

@@ -4,7 +4,7 @@
             <div class="link-container">
                 <img src="@/assets/img/fair_bw.png" alt="Fair Floor" class="bg-img">
                 <div class="foreground">
-                    <p>Learn more about Systemvetardagen</p>
+                    <p>{{$t('landing_page.links.about')}}</p>
                 </div>
             </div> 
         </a>
@@ -12,7 +12,7 @@
             <div class="link-container">
                 <img src="@/assets/img/nod-bw.png" alt="Nod Building" class="bg-img">
                 <div class="foreground">
-                    <p>Plan your visit</p>
+                    <p>{{$t('landing_page.links.plan_visit')}}</p>
                 </div>
             </div> 
         </a>
