@@ -5,7 +5,6 @@
     <slogan/>
     <sponsors />
     <banner img="systemvetardagen-oversikt">{{$t('landing_page.banner.meet')}}</banner>
-    <soon />
     <!-- <studentnode/> -->
     <description/>
     <banner img="systemvetardagen-nod">{{ $t('landing_page.banner.nod') }}</banner>

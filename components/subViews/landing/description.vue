@@ -9,8 +9,16 @@
     .container {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
         justify-items: center;
         align-items: center;
+        padding: 2rem;
+        
     }
+    p {
+        text-align: center;
+        max-width: 30rem;
+    }
+
+
 </style>
