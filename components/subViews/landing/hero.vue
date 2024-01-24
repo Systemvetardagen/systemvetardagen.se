@@ -56,7 +56,8 @@ export default {
 
 /* CONTAINER */
 .hero { 
-  position: relative
+  position: relative;
+  height: 100vh
 }
 
 .background {

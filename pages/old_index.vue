@@ -81,4 +81,10 @@ export default {
     flex-direction: column;
     align-items: center;
   }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 </style>

@@ -254,7 +254,7 @@ export default {
   background: white;
   position: fixed;
   /* width: 95%; */
-  height: 5rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -295,8 +295,9 @@ nav {
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0 max(1rem, 2vw);
-  padding: 1rem;
+  padding-bottom: 0.3rem;
   color: black;
+  align-self: flex-end;
 }
 
 nav > div > NuxtLink {
@@ -338,6 +339,7 @@ nav > div > NuxtLink {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    height: 3rem;
   }
   .main-header {
     display: none;
