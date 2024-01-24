@@ -11,11 +11,11 @@
     .container {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
         justify-items: center;
         align-items: center;
-        padding: 2rem;
-        
+        padding: 1rem 2rem;
+        line-height: 1.5;
     }
     p {
         text-align: center;

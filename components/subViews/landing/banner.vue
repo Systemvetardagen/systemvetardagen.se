@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        
+
         <img :src="require(`~/assets/img/${img}.png`)" class="bg-img" />
         <div class="foreground">
             <div class="box">
@@ -25,7 +25,7 @@
     display: flex;
     align-items: center; /* Optional: Center the content vertically */
     justify-content: center;
-    margin: 2rem 0;
+    margin: 0rem 0;
 }
 
 .bg-img {
