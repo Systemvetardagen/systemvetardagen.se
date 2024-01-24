@@ -9,9 +9,9 @@
       <div class="card-text">
         <h3>{{ post.title }}</h3>
         <p class="body-text">{{ post.body_text }}</p>
-        <Nuxt-Link :to="localePath({name: 'catalog-blog', params: {blog: post.slug.split('.')[0]}})" class="link"
-          >{{ $t("blog.read-more") }} ></Nuxt-Link
-        >
+        <Nuxt-Link :to="localePath({name: 'catalog-blog', params: {blog: post.slug.split('.')[0]}})" class="link">
+          {{ $t("blog.read-more") }}
+        </Nuxt-Link>
       </div>
     </article>
   </NuxtLink>
@@ -58,7 +58,7 @@ export default {
 }
 
 .link {
-  
+
   color: var(--clr-blue-600);
   align-self: flex-end;
   font-size: 0.8rem;

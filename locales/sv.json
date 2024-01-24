@@ -4,7 +4,7 @@
     "project_group_heading": "Projektgrupp"
   },
   "blog": {
-    "read-more": "!translation-missing"
+    "read-more": "Läs mer"
   },
   "catalog_page": {
     "all": "alla",
@@ -76,7 +76,7 @@
     },
     "description": {
       "para1": "För 28:e året i rad arrangeras Systemvetardagen på Stockholms universitet Campus Kista.",
-      "para2": "Det är studentkåren DISKs från Institutionen för data- och systemvetenskap (DSV) egna arbetsmarknadsdag.",
+      "para2": "Det är en arbetsmarknadsdag organiserad av DISK, studentkåren på Institutionen för data- och systemvetenskap (DSV).",
       "para3": "Alla studenter är välkomna (även om du inte går på Stockholms universitet) och det är helt kostnadsfritt att delta - det är bara att dyka upp!"
     },
     "exhibitor": "Utställare",
