@@ -23,7 +23,7 @@
 
         <!-- Catalog -->
         <div class="normal" v-bind:class="{ active: isActive('/catalog/') }">
-          <NuxtLink :to="localePath('/catalog') + '/'" class="header-link">{{
+          <NuxtLink :to="localePath('/companies') + '/'" class="header-link">{{
             $t("navbar.catalog")
           }}</NuxtLink>
         </div>
@@ -111,7 +111,7 @@
         class="mobile-header-container"
         @click="seen = !seen"
       >
-        <NuxtLink :to="localePath('/catalog') + '/'" class="header-link">{{
+        <NuxtLink :to="localePath('/companies') + '/'" class="header-link">{{
           $t("navbar.catalog")
         }}</NuxtLink>
       </div>
