@@ -4,10 +4,11 @@
     <hero />
     <slogan/>
     <sponsors />
+    <banner img="systemvetardagen-oversikt">{{$t('landing_page.banner.meet')}}</banner>
     <soon />
     <!-- <studentnode/> -->
-    <info />
-    <faq />
+    <description/>
+    <banner img="systemvetardagen-nod">{{ $t('landing_page.banner.nod') }}</banner>
     <oldCatalog />
     <!-- <Button title="See Map" link="map"/> -->
     <!-- <contact /> -->
@@ -26,7 +27,8 @@ import oldCatalog from "@/components/subViews/landing/oldCatalog.vue";
 import contact from "@/components/subViews/landing/contact.vue";
 import sponsors from "@/components/subViews/landing/sponsors.vue";
 import slogan from "@/components/subViews/landing/slogan.vue"
-
+import banner from "@/components/subViews/landing/banner.vue"
+import description from "@/components/subViews/landing/description.vue"
 export default {
   components: {
     hero,
@@ -37,6 +39,8 @@ export default {
     contact,
     sponsors,
     slogan,
+    banner,
+    description
   },
   name: "IndexPage",
 };

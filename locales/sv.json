@@ -59,6 +59,10 @@
     "slogan": "Slogan"
   },
   "landing_page": {
+    "banner": {
+      "meet": "Träffa 37 företag från IT-branschen",
+      "nod": "Föreläsningar i Aula Nod"
+    },
     "contact_form": {
       "button": "Skicka",
       "company": "Företag",
@@ -109,7 +113,7 @@
     "slogan": {
       "tagline": "En av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT‑branchen."
     },
-    "sponsors": "Sponsorer",
+    "sponsors": "Våra partners",
     "student_node": {
       "book_session": "Book Interview Sessions",
       "howtoapply": "Follow the steps to apply:",
