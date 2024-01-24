@@ -1,9 +1,6 @@
 <template>
   <div id="home" class="hero">
 
-    <!-- BACKGROUND -->
-    <div class="background"></div>
-
     <!-- FOREGROUND CONTENT -->
     <div class="hero-content">
       <!-- HERO Logo -->
@@ -18,14 +15,14 @@
         <p class="hero-info-text"> 10:00 - 16:00</p>
         <p
           class="hero-info-address"
-          
+
         >
-          Kista NOD, Borgarfjordsgatan 12
+          Kista NOD, Borgarfjordsgatan 12s
         </p>
       </div>
       <!-- HERO TEXT -->
       <div class="hero-content-text">
-       
+
         <!-- HERO BUTTONS -->
         <div class="hero-buttons">
           <Button
@@ -55,34 +52,23 @@ export default {
 <style>
 
 /* CONTAINER */
-.hero { 
-  position: relative;
-  height: 100vh
-}
-
-.background {
-  position: absolute;
-  text-align: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: linear-gradient(26deg, #4158D0 2.77%, #C850C0 51.55%, #FFCC70 100.34%);
-  filter: blur(0px);
+.hero {
+  /*position: relative;*/
+  /*height: 100vh*/
 }
 
 
 /* FOREGROUND */
 .hero-content {
-  position: relative;
-  padding: 1.5rem;
+  min-height: calc(100vh - 3rem); /*3rem for navbar*/
+  padding: 4rem 1.5rem;
   display: flex;
   z-index: 1;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 3rem;
+  background: linear-gradient(26deg, #4158D0 2.77%, #C850C0 51.55%, #FFCC70 100.34%);
 }
 
 .hero-content-text {
@@ -98,7 +84,7 @@ export default {
 
 .hero-logo {
   max-width: 25rem;
-  margin: 5rem 3rem 0 3rem;
+  margin: 0rem 3rem;
 }
 
 .hero-buttons {
