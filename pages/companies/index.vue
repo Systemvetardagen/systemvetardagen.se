@@ -65,8 +65,8 @@
 
       <div class="company-cards">
         <div v-if="!showCompanies && !isPreview">
-          <h2>Companies coming soon</h2>
-          <h2>Check out the <NuxtLink :to="localePath('/companies/old')">old</NuxtLink> catalog</h2>
+          <h2>{{$t('catalog_page.coming_soon')}}</h2>
+          <!-- <h2>Check out the <NuxtLink :to="localePath('/companies/old')">old</NuxtLink> catalog</h2> -->
         </div>
         <div v-for="post of filteredPosts" :key="post.company_name">
           <!---<div v-if="showEnglishMessage">

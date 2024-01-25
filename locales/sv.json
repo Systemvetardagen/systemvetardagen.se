@@ -14,6 +14,7 @@
     "catalog": "Katalog",
     "clear-filters": "Rensa filter",
     "clear-selection": "Rensa",
+    "coming_soon": "!translation-missing",
     "companies": "Företag",
     "company-learn-more": "Läs mer om att jobba hos",
     "filter-positions": {
@@ -83,10 +84,10 @@
     "hero": {
       "catalog_btn": "Se alla utställande företag",
       "contact_us_btn": "Kontakta oss",
-      "event_date": "Onsdag 21 februari 2024",
-      "event_time": "10:00 - 16:00",
       "event_address": "Kista NOD, Borgarfjordsgatan 12",
+      "event_date": "Onsdag 21 februari 2024",
       "event_description": "Kom till Systemvetardagen, en av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT-branschen!",
+      "event_time": "10:00 - 16:00",
       "title": "Hitta ditt drömjobb!"
     },
     "info": {
