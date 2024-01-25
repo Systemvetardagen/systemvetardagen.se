@@ -61,7 +61,8 @@ export default {
 }
 .logo {
   display: flex;
-  width: clamp(24rem, 20vw, 24rem);
+  aspect-ratio: 4 / 3;
+  max-width: 300px;
   height: 80%;
   padding: 2rem;
   margin: 1rem;
@@ -113,6 +114,9 @@ export default {
 @media only screen and (max-width: 700px) {
   .logo-area {
     flex-wrap: wrap;
+  }
+  .logo {
+    max-width: 200px;
   }
 }
 </style>
