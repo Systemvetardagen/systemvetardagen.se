@@ -11,13 +11,14 @@
       />
        <!-- HERO INFO -->
       <div class="hero-info-wrapper">
-        <p class="hero-info-text">{{ $t("landing_page.hero.event_date") }}</p>
-        <p class="hero-info-text"> 10:00 - 16:00</p>
-        <p
-          class="hero-info-address"
-
-        >
-          Kista NOD, Borgarfjordsgatan 12s
+        <p class="hero-info-text">
+          {{ $t("landing_page.hero.event_date") }}
+        </p>
+        <p class="hero-info-text">
+          {{ $t("landing_page.hero.event_time") }}
+        </p>
+        <p class="hero-info-address">
+          {{ $t("landing_page.hero.event_address") }}
         </p>
       </div>
       <!-- HERO TEXT -->
@@ -28,9 +29,9 @@
           <Button
             :link="localePath('/catalog/' + '/')"
             bColor="transparent"
-            >{{ $t("landing_page.hero.catalog_btn") }}</Button
           >
-
+            {{ $t("landing_page.hero.catalog_btn") }}
+          </Button>
         </div>
       </div>
     </div>
