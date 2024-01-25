@@ -58,7 +58,6 @@ export default {
   /*height: 100vh*/
 }
 
-
 /* FOREGROUND */
 .hero-content {
   min-height: calc(100vh - 3rem); /*3rem for navbar*/
