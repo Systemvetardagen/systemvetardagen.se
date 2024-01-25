@@ -9,28 +9,28 @@
         <!-- Section: Bachelors -->
         <div class="section">
           <p class="section-heading">{{ $t("programs") }}</p>
-          <div class="tag-list">
-            <div 
+          <ul class="tag-list">
+            <li 
               class="tag"
               style="background-color: var(--clr-pink-600);"
               v-for="program in post.programs_data_bachelor[locale]"
               :key="program.id">
               {{ program }}
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
 
          <!-- Section: Masters -->
         <div class="section">
           <p class="section-heading">{{ $t("master_programs") }}</p>
-          <div class="tag-list">
-            <div 
+          <ul class="tag-list">
+            <li 
               class="tag"
               v-for="program in post.programs_data_master[locale]" 
               :key="program.id">
               {{ program }}
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
 
         <!-- Section: Qualifications -->
@@ -42,15 +42,15 @@
         <!-- Section: Positions -->
         <div class="section">
           <p class="section-heading">{{ $t("positions") }}</p>
-          <div class="tag-list">
-            <div
+          <ul class="tag-list">
+            <li
               class="tag" 
               style="background-color: var(--clr-blue-600);"
               v-for="position in post.positions_data[locale]" 
               :key="position.id">
               {{ position }}
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
 
 
@@ -70,6 +70,9 @@
 
 <style scoped>
 /* MATCH LIST */
+li {
+  margin: 0;
+}
 .match-list {
   display: flex;
   flex-direction: column;
