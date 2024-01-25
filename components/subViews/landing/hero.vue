@@ -27,7 +27,7 @@
         <!-- HERO BUTTONS -->
         <div class="hero-buttons">
           <Button
-            :link="localePath('/catalog/' + '/')"
+            :link="localePath('/companies/' + '/')"
             bColor="transparent"
           >
             {{ $t("landing_page.hero.catalog_btn") }}
