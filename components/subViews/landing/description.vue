@@ -8,19 +8,21 @@
 <script>
 </script>
 <style scoped>
-    .container {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        justify-items: center;
-        align-items: center;
-        padding: 1rem 2rem;
-        line-height: 1.5;
-    }
-    p {
-        text-align: center;
-        max-width: 30rem;
-    }
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    line-height: 1.5;
+  }
+  p {
+    text-align: center;
+    max-width: 30rem;
+    color: #424242;
+    font-size: 1rem;
+  }
 
 
 </style>
