@@ -69,6 +69,21 @@ export default {
   flex-direction: column;
   gap: 3rem;
   background: linear-gradient(26deg, #4158D0 2.77%, #C850C0 51.55%, #FFCC70 100.34%);
+  background: linear-gradient(-100deg, #4158D0, #C850C0, #FFCC70);
+  background-size: 300% 300%;
+  animation: Background 45s ease infinite;
+}
+
+@keyframes Background {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
 }
 
 .hero-content-text {
