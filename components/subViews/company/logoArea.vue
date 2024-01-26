@@ -49,15 +49,24 @@ export default {
 <style scoped>
 .logo-area {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   margin-top: 1rem;
+  width: 100%;
 }
 
 .area-of-business {
   text-align: center;
   margin: 1rem;
+  font-size: 18px;
+  font-weight: 400;
+  flex: 1;
+}
+
+.area-of-business p{
+font-family: "IBMPlexMono" !important;
+line-height: 33px;
 }
 .logo {
   display: flex;
@@ -68,7 +77,7 @@ export default {
   margin: 1rem;
   background-color: var(--clr-white);
   border-radius: 1rem;
-  border: 1px solid #e5e5e5;
+  border: 2px solid #989898;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -111,9 +120,14 @@ export default {
 .socials-container svg:hover {
   fill: black;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 850px) {
+
+  .area-of-business {
+    min-width: 400px;
+  }
   .logo-area {
     flex-wrap: wrap;
+    justify-content: center;
   }
   .logo {
     max-width: 200px;

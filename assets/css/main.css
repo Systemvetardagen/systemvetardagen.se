@@ -86,6 +86,11 @@ a {
   src: url(assets\fonts\OverpassMono-VariableFont_wght.ttf);
 }
 
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url(assets\fonts\IBMPlexMono-Regular.ttf);
+}
+
 *,
 ::before,
 ::after {
