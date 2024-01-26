@@ -97,14 +97,15 @@ img {
 .gallery {
   /* Mobile first */
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 4rem 0;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+  margin: 4rem 1rem;
+  
 }
 .gallery .column {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.5rem;
 }
 .gallery-img {
   border-radius: 10px;
@@ -117,9 +118,12 @@ img {
 }
 
 /* DESKTOP MODIFICATIONS */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 520px) {
   .gallery {
     flex-direction: row;
+    gap: 1rem;
+    margin: 4rem 0;
+    
   }
   
 }
