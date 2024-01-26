@@ -18,7 +18,7 @@
       </div>
       <div class="text-block">
         <h3>{{$t('about_page.description.heading4')}}</h3>
-        <p>{{$t('about_page.description.para4')}}<a href="mailto:systemvetardagen@disk.su.se">systemvetardagen@disk.su.se</a></p>
+        <p>{{$t('about_page.description.para4')}}<a href="mailto:systemvetardagen@disk.su.se">systemvetardagen@disk.su.se</a>.</p>
       </div>
 
     </div>
