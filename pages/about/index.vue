@@ -5,20 +5,20 @@
     <!-- Text -->
     <div class="text">
       <div class="text-block">
-        <h3>What is Systemvetardagen?</h3>
-        <p>Systemvetardagen is an annual career fair for students and recent graduates focusing on the IT sector. The fair is hosted by the Student Union DISK, a student union at the Department of Computer and Systems Sciences in Kista at Stockholm University. This event is completely free to attend for all students!</p>
+        <h3>{{$t('about_page.description.heading1')}}</h3>
+        <p>{{$t('about_page.description.para1')}}</p>
       </div>
       <div class="text-block">
-        <h3>Where & when is it?</h3>
-        <p>In 2024 the fair is held on the 21st of February between 10-16 in Kista Nod, located at Borgarfjordsgatan 12 in Stockholm. No sign-up is needed, just come as you are!</p>
+        <h3>{{$t('about_page.description.heading2')}}</h3>
+        <p>{{$t('about_page.description.para2')}}</p>
       </div>
       <div class="text-block">
-        <h3>What companies are attending this year?</h3>
-        <p>You can find all the displaying companies in our company catalogue (coming soon).</p>
+        <h3>{{$t('about_page.description.heading3')}}</h3>
+        <p>{{$t('about_page.description.para3')}}</p>
       </div>
       <div class="text-block">
-        <h3>How can I as a company display?</h3>
-        <p>Email us at <a href="mailto:systemvetardagen@disk.su.se">systemvetardagen@disk.su.se</a></p>
+        <h3>{{$t('about_page.description.heading4')}}</h3>
+        <p>{{$t('about_page.description.para4')}}<a href="mailto:systemvetardagen@disk.su.se">systemvetardagen@disk.su.se</a></p>
       </div>
 
     </div>

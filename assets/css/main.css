@@ -454,19 +454,7 @@ footer {
   text-align: left;
 }
 
-.soon {
-  background-image: url("@/assets/img/soon_image.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  aspect-ratio: 2/1;
-  min-height: 48rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .soon-content {
   max-width: 70ch;
