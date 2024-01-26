@@ -18,6 +18,7 @@
   },
   "catalog_page": {
     "all": "all",
+    "all-companies": "All Companies",
     "all-companies-btn": "View all companies",
     "and": "and",
     "aulanod-program": "Aula NOD Program",
@@ -46,8 +47,12 @@
       "8": "Master"
     },
     "map-heading": "Company placement",
+    "partners": "Our Partners",
     "posts-heading": "The Project Leaders have the floor!",
     "read-more": "Read more",
+    "search_input": {
+      "placeholder": "Search companies"
+    },
     "showing-companies-for": "Showing companies for ",
     "sponsors": "Sponsors"
   },

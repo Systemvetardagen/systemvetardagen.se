@@ -55,7 +55,8 @@
             clip-rule="evenodd" />
         </svg>
 
-        <input class="search-input" type="text" ref="inputRef" v-model.trim="searchText" placeholder="Search companies" />
+        <input class="search-input" type="text" ref="inputRef" v-model.trim="searchText" :placeholder="$t('catalog_page.search_input.placeholder')"
+       />
         <svg v-if="searchText" @click="clearInputAndFocus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
           fill="currentColor" class="clear-search-button">
           <path
@@ -326,6 +327,7 @@ label {
   width: 100%;
   outline: none;
   border: none;
+  background:transparent;
 }
 
 .search-field:focus-within {
