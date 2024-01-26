@@ -25,12 +25,13 @@ h3 {
 }
 
 .logo-wrapper {
-  width: 9rem;
-  height: 5rem;
+  width: 15rem;
+  height: 7rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+
   background-color: var(--clr-white);
   border-radius: 1rem;
   box-shadow: 0px 2px 5px 0px rgba(128, 128, 128, 0.10), 0px 10px 10px 0px rgba(128, 128, 128, 0.09), 0px 22px 13px 0px rgba(128, 128, 128, 0.05), 0px 39px 16px 0px rgba(128, 128, 128, 0.01), 0px 61px 17px 0px rgba(128, 128, 128, 0.00);
@@ -38,15 +39,21 @@ h3 {
 }
 
 .sponsor {
-  border-color: var(--clr-pink-200)
+  border-color: var(--clr-pink-200);
+
 }
 
 @media (min-width: 768px) {
   .logo-wrapper {
-    width: 20rem;
-    height: 12rem;
+    width: 15rem;
+    height: 9rem;
     padding: 1.5rem;
     border-width: 0.5rem;
+  }
+  .sponsor {
+    width: 20rem;
+    height: 12rem;
+    
   }
 }
 
