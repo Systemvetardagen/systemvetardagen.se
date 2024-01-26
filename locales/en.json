@@ -1,5 +1,15 @@
 {
   "about_page": {
+    "description": {
+      "heading1": "What is Systemvetardagen?",
+      "heading2": "Where & when is it?",
+      "heading3": "What companies are attending this year?",
+      "heading4": "How can I as a company display?",
+      "para1": "Systemvetardagen is an annual career fair for students and recent graduates focusing on the IT sector. The fair is hosted by the Student Union DISK, a student union at the Department of Computer and Systems Sciences in Kista at Stockholm University. This event is completely free to attend for all students!",
+      "para2": "In 2024 the fair is held on the 21st of February between 10-16 in Kista Nod, located at Borgarfjordsgatan 12 in Stockholm. No sign-up is needed, just come as you are!",
+      "para3": "You can find all the displaying companies in our company catalogue (coming soon).",
+      "para4": "Email us at "
+    },
     "heading": "About",
     "project_group_heading": "Project Group"
   },
