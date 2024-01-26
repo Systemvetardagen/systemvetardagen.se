@@ -72,7 +72,7 @@
   
     .link:hover .link-text {
       font-size: 1.2rem; /* Increase font size on hover */
-      color: var(--clr-pink-700); /* Change color on hover */
+      /* color: var(--clr-pink-700); Change color on hover */
     }
   
     @media only screen and (min-width: 720px) {
