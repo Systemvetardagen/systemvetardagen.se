@@ -1,21 +1,21 @@
 <template>
     <div class="container">
-      <a href="#" class="link">
+      <NuxtLink :to="localePath('/about')" class="link">
         <div class="link-container">
           <img src="@/assets/img/fair_bw.png" alt="Fair Floor" class="bg-img">
           <div class="foreground">
             <p class="link-text">{{$t('landing_page.links.about')}}</p>
           </div>
         </div>
-      </a>
-      <a href="#" class="link">
+    </NuxtLink>
+    <NuxtLink :to="localePath('/')" class="link">
         <div class="link-container">
-          <img src="@/assets/img/nod_11.jpg" alt="Nod Building" class="bg-img">
-          <div class="foreground">
+            <img src="@/assets/img/nod_11.jpg" alt="Nod Building" class="bg-img">
+            <div class="foreground">
             <p class="link-text">{{$t('landing_page.links.plan_visit')}}</p>
-          </div>
+            </div>
         </div>
-      </a>
+    </NuxtLink>
     </div>
   </template>
   <script>

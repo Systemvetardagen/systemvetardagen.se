@@ -1,23 +1,29 @@
 <template>
     <div class="container">
-
-        <img :src="require(`~/assets/img/${img}.png`)" class="bg-img" />
-        <div class="foreground">
-            <div class="box">
-                <p><slot></slot></p>
+        <NuxtLink :to="localePath(path)" class="link">
+            <img :src="require(`~/assets/img/${img}.png`)" class="bg-img" />
+            <div class="foreground">
+                <div class="box">
+                    <p><slot></slot></p>
+                </div>
             </div>
-        </div>
+        </NuxtLink>
+
     </div>
 </template>
 <script>
     export default {
         props: {
             img: String,
-
+            path: String,
         }
     }
 </script>
 <style scoped>
+.link {
+    color: inherit;
+    text-decoration: none;
+}
 .container {
     position: relative;
     aspect-ratio: 60/11;

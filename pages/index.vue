@@ -4,7 +4,7 @@
     <hero />
     <slogan/>
     <sponsors />
-    <banner img="systemvetardagen-oversikt">{{$t('landing_page.banner.meet')}}</banner>
+    <banner img="systemvetardagen-oversikt" path="/companies">{{$t('landing_page.banner.meet')}}</banner>
     <description/>
     <div class="blog-section">
         <BlogCard
