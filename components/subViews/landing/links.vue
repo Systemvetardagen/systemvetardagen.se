@@ -19,16 +19,20 @@
     </div>
   </template>
   <script>
-  
+
   </script>
   <style scoped>
     .container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 1rem;
+      justify-content: center;
+      row-gap: 1rem;
+      column-gap: 3rem;
+      margin-bottom: 2rem;
     }
-  
+
     .link-container {
       position: relative;
       aspect-ratio: 4/3;
@@ -36,24 +40,32 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
-  
+
     .bg-img {
-      position: absolute;
+      /*position: absolute;*/
       text-align: center;
-      top: 0;
-      left: 0;
-      width: 100%;
+      /*top: 0;
+      left: 0;*/
+      max-height: 100%;
+      /*max-width: 100%;*/
+      object-fit: cover;
       z-index: 1;
-      filter: grayscale(100%) brightness(60%);
+      filter: grayscale(100%) brightness(50%);
+      transition: all .3s ease-in-out;
     }
-  
+
     .link:hover .bg-img {
-      filter: grayscale(100%) brightness(80%);
+      filter: grayscale(100%) brightness(70%);
+      transform: scale(1.03);
     }
-  
+
     .foreground {
-      position: relative;
+      position: absolute;
+      /*position: relative;*/
+      height: 100%;
+      width: 100%;
       display: flex;
       z-index: 1;
       justify-content: center;
@@ -61,26 +73,22 @@
       flex-direction: column;
       gap: 3rem;
     }
-  
+
     .link-text {
       color: white;
       text-align: center;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: font-size 0.3s, color 0.3s; /* Add transition properties */
+      font-size: 1.1rem;
+      transition: font-size 0.3s ease-in-out; /* Add transition properties */
+      text-shadow: 0px 0px 16px rgba(0,0,0,0.8);
+      font-family: OverpassMedium, sans-serif;
+      font-weight: 300;
+      line-height: 1.5;
+      margin-bottom: 0;
     }
-  
+
     .link:hover .link-text {
-      font-size: 1.2rem; /* Increase font size on hover */
+      font-size: 1.14rem; /* Increase font size on hover */
       /* color: var(--clr-pink-700); Change color on hover */
     }
-  
-    @media only screen and (min-width: 720px) {
-      .container {
-        flex-direction: row;
-        justify-content: center;
-        gap: 5rem;
-      }
-    }
+
   </style>
-  

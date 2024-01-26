@@ -97,6 +97,11 @@ footer {
   font-display: block;
 }
 @font-face {
+  font-family: "OverpassMedium";
+  src: url(assets\fonts\Overpass-Medium.ttf);
+  font-display: block;
+}
+@font-face {
   font-family: "OverpassMono";
   src: url(assets\fonts\OverpassMono-VariableFont_wght.ttf);
 }
