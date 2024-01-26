@@ -116,7 +116,7 @@ footer {
 }
 
 body {
-  background-color: var(--clr-white);
+  background-color: #EFEFEF;
   color: var(--clr-darkblue);
   margin: 0;
   padding: 0;

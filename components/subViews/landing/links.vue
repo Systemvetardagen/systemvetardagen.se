@@ -2,7 +2,7 @@
     <div class="container">
       <NuxtLink :to="localePath('/about')" class="link">
         <div class="link-container">
-          <img src="@/assets/img/fair_bw.png" alt="Fair Floor" class="bg-img">
+          <img src="@/assets/img/crowded-from-above.jpg" alt="Fair Floor" class="bg-img">
           <div class="foreground">
             <p class="link-text">{{$t('landing_page.links.about')}}</p>
           </div>
@@ -49,7 +49,7 @@
     }
   
     .link:hover .bg-img {
-      filter: grayscale(0%) brightness(80%);
+      filter: grayscale(100%) brightness(80%);
     }
   
     .foreground {
