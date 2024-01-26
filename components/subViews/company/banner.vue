@@ -11,19 +11,8 @@
             alt="No sponsor image"
             class="banner-img"
           />
-          <div class="banner-shade"></div>
-          <div class="banner-overlay">
-            <div v-if="post.logo" class="logo">
-              <img :src="this.post.logo" alt="logo" class="logo-img" />
-            </div>
-
-            <h1 v-if="!post.logo" class="post-title">{{ post.title }}</h1>
-            <!-- <p class="post-location">{{ $t("location") }}: TBA</p>
-            <p v-if="post.banner" class="post-tag">// Sponsor</p>
-            <p v-else class="post-tag">//</p> -->
-          </div>
-          <div class="banner-bar"></div>
-        </div>
+          
+    </div>
 </template>
 
 <script>
@@ -38,11 +27,9 @@
 <style scoped>
     /* BANNER */
     .banner {
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-    width: 100%;
-    max-height: 18rem;
+    aspect-ratio: 3/1;
+    max-width: 1000px;
+
     }
     .banner-shade {
     background: RGB(0, 0, 0, 0.5);
@@ -69,7 +56,7 @@
     .banner-img {
     width: 100%;
 
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
+
     object-fit: cover;
     }
     .banner-bar {
