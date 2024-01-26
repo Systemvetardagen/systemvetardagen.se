@@ -72,8 +72,7 @@
 
         <!-- Partners -->
         <div v-if="filteredPosts.some(post => post.sponsor)">
-          <h3>Partners</h3>
-          <div class="underline"></div>
+          <h3 class="cat-heading">{{$t('catalog_page.partners')}}</h3>
           <div class="company-cards" v-for="post of filteredPosts" :key="post.company_name" v-if="post.sponsor">
             <!---<div v-if="showEnglishMessage">
               <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
@@ -88,6 +87,7 @@
           <div class="underline"></div>
         </div>
         <!-- Non-Partners -->
+        <h3 class="cat-heading">{{$t('catalog_page.all-companies')}}</h3>
         <div class="company-cards" v-for="post of filteredPosts" :key="post.company_name" v-if="!post.sponsor">
           <!---<div v-if="showEnglishMessage">
             <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
@@ -369,6 +369,7 @@ label {
   height: 1px;
   background-color: var(--clr-grey-500);
   width: 100%;
+  margin-bottom: 3rem;
 }
 .company-cards {
   display: flex;
@@ -406,6 +407,14 @@ button {
 }
 .wrapper {
   background: #EFEFEF;
+}
+
+.cat-heading {
+  color: #6B6B6B;
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
 }
 
 </style>
