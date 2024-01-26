@@ -32,8 +32,9 @@ export default {
       ],
       partners: [
         {name: "Akavia", path: "/companies"},
-        {name: "Scania CV", path: "/companies"},
         {name: "Accenture", path: "/companies"},
+        {name: "Handelsbanken", path: "/companies"},
+        {name: "Swedbank", path: "/companies"},
       ]
     };
   },
