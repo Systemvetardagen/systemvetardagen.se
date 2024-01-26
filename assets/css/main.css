@@ -14,6 +14,21 @@ a {
   text-decoration: none;
 }
 
+main {
+
+}
+
+.page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  margin-top: auto;
+}
+
 .wrapper {
   padding-top: 3rem;
 }
@@ -90,6 +105,14 @@ a {
 ::before,
 ::after {
   box-sizing: border-box;
+}
+
+#__nuxt {
+  height: 100vh;
+}
+
+#__layout {
+  height: 100%;
 }
 
 body {
