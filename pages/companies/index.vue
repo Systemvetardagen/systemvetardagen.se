@@ -404,6 +404,8 @@ button {
   text-decoration: underline;
   margin-bottom: 1rem;
 }
-
+.wrapper {
+  background: #EFEFEF;
+}
 
 </style>

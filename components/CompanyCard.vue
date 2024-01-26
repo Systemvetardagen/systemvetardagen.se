@@ -33,7 +33,7 @@ h3 {
   padding: 1rem;
   background-color: var(--clr-white);
   border-radius: 1rem;
-  border: solid 0.25rem var(--clr-blue-100);
+  box-shadow: 0px 2px 5px 0px rgba(128, 128, 128, 0.10), 0px 10px 10px 0px rgba(128, 128, 128, 0.09), 0px 22px 13px 0px rgba(128, 128, 128, 0.05), 0px 39px 16px 0px rgba(128, 128, 128, 0.01), 0px 61px 17px 0px rgba(128, 128, 128, 0.00);
   transition: border-color 0.2s;
 }
 
