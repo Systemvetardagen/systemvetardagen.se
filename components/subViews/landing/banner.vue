@@ -1,61 +1,72 @@
 <template>
-    <div class="container">
-        <NuxtLink :to="localePath(path)" class="link">
-            <div>
-                <img :src="require(`~/assets/img/${img}.jpg`)" class="bg-img" />
-                <div class="line"></div>
-            </div>
-            <div class="foreground">
-                <div class="box">
-                    <p><slot></slot></p>
-                </div>
-            </div>
-            
-        </NuxtLink>
-        <div class="banner-bar"></div>
-    </div>
+  <div class="banner">
+    <NuxtLink :to="localePath(path)" class="link">
+      <div class="container">
+        <img :src="require(`~/assets/img/${img}.jpg`)" class="bg-img" />
+        <div class="foreground">
+          <div class="box">
+            <p><slot></slot></p>
+          </div>
+        </div>
+        <GradientLine />
+      </div>
+    </NuxtLink>
+  </div>
 </template>
+
 <script>
-    export default {
-        props: {
-            img: String,
-            path: String,
-        }
-    }
+import GradientLine from "@/components/GradientLine";
+export default {
+  props: {
+    img: String,
+    path: String,
+  }
+}
 </script>
 <style scoped>
-.link {
-    color: inherit;
-    text-decoration: none;
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
+
+.link {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  max-width: 1200px;
+}
+
 .container {
-    position: relative;
-    aspect-ratio: 30/11;
-    width: 100%;
-    display: flex;
-    align-items: center; /* Optional: Center the content vertically */
-    justify-content: center;
-    margin: 0rem 0;
-    background: linear-gradient(45deg, rgba(65, 72, 208, 1) 0%, rgba(200, 80, 192, 1) 50%, rgba(255, 204, 112, 1) 100%);
-    border-bottom: 10px solid transparent;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0;
+  gap: 0;
+  padding: 0;
+  height: fit-content;
+  max-width: 1200px;
 }
 
 .bg-img {
-    position: absolute;
-    text-align: center;
-    aspect-ratio: 30/11;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    object-fit: cover;
-    filter: grayscale(100%);
-
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  object-fit: cover;
+  filter: grayscale(100%);
+  vertical-align: baseline;
+  height: 9rem;
+  max-width: 1200px;
 }
 
 .foreground {
-
-    position: relative;
+    position: absolute;
     display: flex;
     z-index: 1;
     justify-content: center;
@@ -70,37 +81,9 @@
     padding: 0.5rem;
 }
 
-.line {
-  width: 100%;
-  height: 3px;
-  background-color: gold;
-  margin-bottom: 0;
-  padding: 0;
-  background: rgb(255,204,112);
-  background: linear-gradient(45deg, rgba(65,72,208,1) 0%, rgba(200,80,192,1) 50%, rgba(255,204,112,1) 100%);
-}
-
-.banner-bar {
-    position: absolute;
-    bottom: calc(clamp(13px, 1vw, 20px) * -1);
-    left: 0;
-    width: 100%;
-    height: clamp(4px, 1vw, 10px);
-    background: linear-gradient(
-        90deg,
-        var(--clr-blue-800),
-        var(--clr-pink-800),
-        var(--clr-yellow-800)
-    );
-
-    }
-
-@media screen and (min-width: 720px) {
-    .container {
-        aspect-ratio: 60/11;
-    }
-    .bg-img {
-        aspect-ratio: 60/11;
-    }
+@media screen and (min-width: 1000px) {
+  .bg-img {
+    height: 11rem;
+  }
 }
 </style>
