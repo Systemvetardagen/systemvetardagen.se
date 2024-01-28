@@ -82,6 +82,13 @@
       "meet": "Träffa över 40 företag från IT-branschen",
       "nod": "Föreläsningar i Aula Nod"
     },
+    "countdown": {
+      "countdown_text": "Snart är det dags!",
+      "day": "dagar",
+      "hour": "timmar",
+      "min": "minuter",
+      "sec": "sekunder"
+    },
     "contact_form": {
       "button": "Skicka",
       "company": "Företag",
@@ -134,7 +141,7 @@
       "the_fair_2022": "The fair 2022"
     },
     "links": {
-      "about": "Läs mer om Systemvetardagen",
+      "about": "Läs mer omSystemvetardagen",
       "plan_visit": "Planera ditt besök"
     },
     "old_cat_btn": "Katalog 2023",

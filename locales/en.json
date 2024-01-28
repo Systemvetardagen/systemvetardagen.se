@@ -78,6 +78,13 @@
       "meet": "Meet over 40 companies from the IT sector",
       "nod": "Lectures in Aula NOD"
     },
+    "countdown": {
+      "countdown_text": "",
+      "day": "day",
+      "hour": "hour",
+      "min": "minute",
+      "sec": "second"
+    },
     "contact_form": {
       "button": "Send",
       "company": "Company",

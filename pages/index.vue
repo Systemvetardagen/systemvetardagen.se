@@ -5,6 +5,7 @@
     <slogan/>
     <sponsors />
     <banner img="crowded-from-above" path="/companies">{{$t('landing_page.banner.meet')}}</banner>
+    <countdown />
     <description/>
     <div class="blog-section">
         <BlogCard
@@ -32,6 +33,7 @@ import contact from "@/components/subViews/landing/contact.vue";
 import sponsors from "@/components/subViews/landing/sponsors.vue";
 import slogan from "@/components/subViews/landing/slogan.vue"
 import banner from "@/components/subViews/landing/banner.vue"
+import countdown from "@/components/subViews/landing/countdown.vue"
 import description from "@/components/subViews/landing/description.vue"
 import blog from "@/components/subViews/landing/blog.vue"
 import BlogCard from "@/components/BlogCard.vue"
@@ -58,6 +60,7 @@ export default {
     sponsors,
     slogan,
     banner,
+    countdown,
     description,
     blog,
     BlogCard,

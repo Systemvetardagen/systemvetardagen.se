@@ -1,13 +1,36 @@
 <template>
-  <div id="countdown">
-    <div>
-      <h2 id="countdown-date" style="color: var(--clr-pink-600)">
-        21 February, 2024
-      </h2>
-      <h3 id="countdown-timer">
-        {{ days }} days & {{ pad(hours) }}:{{ pad(minutes) }}:{{ pad(seconds) }}
-      </h3>
-    </div>
+  <div class="container">
+    <p class="countdown-text">
+      {{ $t("landing_page.countdown.countdown_text") }}
+    </p>
+    <table class="countdown">
+      <tr>
+        <td>
+          <h1 class="countdown-timer">{{ days }}</h1>
+          <p class="time-unit">
+            {{ $t("landing_page.countdown.day") }}
+          </p>
+        </td>
+        <td>
+          <h1 class="countdown-timer">{{ pad(hours) }}</h1>
+          <p class="time-unit">
+            {{ $t("landing_page.countdown.hour") }}
+          </p>
+        </td>
+        <td>
+          <h1 class="countdown-timer">{{ pad(minutes) }}</h1>
+          <p class="time-unit">
+            {{ $t("landing_page.countdown.min") }}
+          </p>
+        </td>
+        <td>
+          <h1 class="countdown-timer">{{ pad(seconds) }}</h1>
+          <p class="time-unit">
+            {{ $t("landing_page.countdown.sec") }}
+          </p>
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -61,8 +84,7 @@ export default {
     },
   },
 
-  created() {
-    console.log("created");
+  mounted() {
     this.intervalId = setInterval(() => {
       this.currentTime = Date.now();
     }, 1000);
@@ -82,15 +104,45 @@ export default {
 };
 </script>
 
-<style>
-#countdown {
+<style scoped>
+.container {
+  padding: 0rem 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 5%;
+  align-items: center;
 }
 
-#countdown-timer {
-  font-variant-numeric: tabular-nums;
+.countdown-text {
+  color: black;
   text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.02rem;
+}
+.countdown {
+  margin-top: 0.5rem;
+}
+.countdown td {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.countdown-timer {
+  color: black;
+  font-variant-numeric: tabular-nums;
+}
+
+.time-unit {
+  font-weight: bold;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0rem 3rem;
+  }
 }
 </style>
