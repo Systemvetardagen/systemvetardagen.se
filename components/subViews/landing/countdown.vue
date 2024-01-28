@@ -174,7 +174,7 @@ export default {
   }
 
   .countdown-timer {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .countdown td {
