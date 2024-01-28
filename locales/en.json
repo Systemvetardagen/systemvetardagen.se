@@ -78,13 +78,6 @@
       "meet": "Meet over 40 companies from the IT sector",
       "nod": "Lectures in Aula NOD"
     },
-    "countdown": {
-      "countdown_text": "",
-      "day": "day",
-      "hour": "hour",
-      "min": "minute",
-      "sec": "second"
-    },
     "contact_form": {
       "button": "Send",
       "company": "Company",
@@ -92,6 +85,13 @@
       "message": "Message",
       "name": "Name",
       "title": "Contact us"
+    },
+    "countdown": {
+      "countdown_text": "It's almost time!",
+      "day": "days",
+      "hour": "hours",
+      "min": "minutes",
+      "sec": "seconds"
     },
     "description": {
       "para1": "For the 28th year in a row, Systemvetardagen is arranged at Stockholm University Campus Kista.",

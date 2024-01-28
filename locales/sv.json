@@ -82,13 +82,6 @@
       "meet": "Träffa över 40 företag från IT-branschen",
       "nod": "Föreläsningar i Aula Nod"
     },
-    "countdown": {
-      "countdown_text": "Snart är det dags!",
-      "day": "dagar",
-      "hour": "timmar",
-      "min": "minuter",
-      "sec": "sekunder"
-    },
     "contact_form": {
       "button": "Skicka",
       "company": "Företag",
@@ -96,6 +89,13 @@
       "message": "Meddelande",
       "name": "Namn",
       "title": "Kontakta oss"
+    },
+    "countdown": {
+      "countdown_text": "Snart är det dags!",
+      "day": "dagar",
+      "hour": "timmar",
+      "min": "minuter",
+      "sec": "sekunder"
     },
     "description": {
       "para1": "För 28:e året i rad arrangeras Systemvetardagen på Stockholms universitet Campus Kista.",
