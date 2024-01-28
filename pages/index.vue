@@ -10,6 +10,7 @@
     <div class="blog-section">
         <BlogCard
           v-for="post of filteredPosts"
+          v-if="post.featured"
           :post="post"
           :key="post.slug"
           class="post-card"
