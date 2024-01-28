@@ -2,7 +2,7 @@
 <template>
   <div class="companies">
     <div class="company-content">
-      <p >{{ $t("landing_page.sponsors") }}</p>
+      <p class="partner-heading">{{ $t("landing_page.sponsors") }}</p>
       <!-- Since we hadn't figured out nuxt-image yet, we hard-coded this grid. -->
       <div class="company-grid">
         <NuxtLink v-for="partner in this.partners" :to="localePath(partner.path)" >
@@ -60,6 +60,13 @@ export default {
   align-content: center;
 }
 
+.partner-heading {
+  color: var(--clr-grey-500);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+}
+
 
 /* GRID */
 .company-grid {
@@ -69,7 +76,7 @@ export default {
   align-items: center;
   justify-items: center;
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .company-name {
