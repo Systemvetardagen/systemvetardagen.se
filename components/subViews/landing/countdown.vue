@@ -50,6 +50,7 @@ export default {
           hour: "2-digit",
           minute: "2-digit",
           second: "2-digit",
+          // replace with the new date of this year
         }).format(new Date("2024-02-21T10:00:00"))
       ),
       intervalId: null,
@@ -85,6 +86,10 @@ export default {
   },
 
   mounted() {
+    // do not try to calculate the time once and -1 sec here,
+    // for some reason (maybe it's Nuxt), same components are
+    // getting instantiated repeatedly, subtracting would
+    // result in -3 per second or so
     this.intervalId = setInterval(() => {
       this.currentTime = Date.now();
     }, 1000);
