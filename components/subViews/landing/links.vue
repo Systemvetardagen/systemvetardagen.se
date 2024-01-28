@@ -86,9 +86,4 @@
       margin-bottom: 0;
     }
 
-    .link:hover .link-text {
-      font-size: 1.14rem; /* Increase font size on hover */
-      /* color: var(--clr-pink-700); Change color on hover */
-    }
-
   </style>
