@@ -15,22 +15,22 @@
       <nav>
 
         <!-- Home -->
-        <div class="normal" v-bind:class="{ active: isActive('/') }">
+        <div class="normal" v-bind:class="{ active: isActive(localePath('/')) }">
           <NuxtLink :to="localePath('/')" class="header-link">{{
             $t("navbar.home")
           }}</NuxtLink>
         </div>
 
         <!-- Catalog -->
-        <div class="normal" v-bind:class="{ active: isActive('/companies') }">
-          <NuxtLink :to="localePath('/companies') + '/'" class="header-link">{{
+        <div class="normal" v-bind:class="{ active: isActive(localePath('/companies/')) }">
+          <NuxtLink :to="localePath('/companies/') " class="header-link">{{
             $t("navbar.catalog")
           }}</NuxtLink>
         </div>
 
         <!-- About -->
-        <div v-bind:class="{ active: isActive('/about/') }" class="normal">
-          <NuxtLink :to="localePath('/about') + '/'" class="header-link">{{
+        <div v-bind:class="{ active: isActive(localePath('/about/')) }" class="normal">
+          <NuxtLink :to="localePath('/about/') " class="header-link">{{
             $t("navbar.about")
           }}</NuxtLink>
         </div>
@@ -95,7 +95,7 @@
     <div class="sidebar" v-if="!seen">
       <!-- Home -->
       <div
-        v-bind:class="{ mactive: isActive('/') }"
+        v-bind:class="{ mactive: isActive(localePath('/')) }"
         class="mobile-header-container"
         @click="seen = !seen"
       >
@@ -107,22 +107,22 @@
 
       <!-- Catalog -->
       <div
-        v-bind:class="{ mactive: isActive('/companies/') }"
+        v-bind:class="{ mactive: isActive(localePath('/companies/')) }"
         class="mobile-header-container"
         @click="seen = !seen"
       >
-        <NuxtLink :to="localePath('/companies') + '/'" class="header-link">{{
+        <NuxtLink :to="localePath('/companies/')" class="header-link">{{
           $t("navbar.catalog")
         }}</NuxtLink>
       </div>
 
       <!-- About -->
       <div
-        v-bind:class="{ mactive: isActive('/about/') }"
+        v-bind:class="{ mactive: isActive(localePath('/about/')) }"
         class="mobile-header-container"
         @click="seen = !seen"
       >
-        <NuxtLink :to="localePath('/about') + '/'" class="header-link">{{
+        <NuxtLink :to="localePath('/about/')" class="header-link">{{
           $t("navbar.about")
         }}</NuxtLink>
       </div>
