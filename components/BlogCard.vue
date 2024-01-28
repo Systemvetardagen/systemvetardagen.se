@@ -33,11 +33,13 @@ export default {
   max-width: 18rem;
   color: initial;
   border: solid 0.1rem var(--clr-grey-300);
+  background-color: white;
 }
 
 .card-text {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .body-text {
@@ -58,11 +60,11 @@ export default {
 }
 
 .link {
-
   color: var(--clr-blue-600);
   align-self: flex-end;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 500;
+  margin-top: 1rem;
 }
 
 h3 {
