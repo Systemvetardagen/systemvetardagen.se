@@ -40,7 +40,7 @@ export default {
 
   data() {
     return {
-      // set the time zone and foramat of count down time
+      // set the time zone and format of count down time
       countDownTime: new Date(
         new Intl.DateTimeFormat("en-US", {
           timeZone: "Europe/Stockholm",
@@ -127,17 +127,21 @@ export default {
   line-height: normal;
   letter-spacing: 0.02rem;
 }
+
 .countdown {
   margin-top: 0.5rem;
 }
+
 .countdown td {
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .countdown-timer {
   color: black;
   font-variant-numeric: tabular-nums;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .time-unit {
@@ -148,6 +152,15 @@ export default {
 @media only screen and (min-width: 768px) {
   .container {
     padding: 0rem 3rem;
+  }
+
+  .countdown-timer {
+    font-size: 3rem;
+  }
+
+  .countdown td {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
 }
 </style>
