@@ -126,13 +126,15 @@ export default {
   margin-top: 0.5rem;
 }
 .countdown td {
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .countdown-timer {
   color: black;
   font-variant-numeric: tabular-nums;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .time-unit {
@@ -144,5 +146,12 @@ export default {
   .container {
     padding: 0rem 3rem;
   }
+  .countdown-timer {
+    font-size: 3rem;
+  }
+  .countdown td {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
 }
 </style>
