@@ -116,6 +116,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 100%;
 }
 
 .countdown-text {
@@ -161,6 +162,24 @@ export default {
   .countdown td {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    padding: 0rem 3rem;
+  }
+
+  .countdown-timer {
+    font-size: 1rem;
+  }
+
+  .countdown td {
+    padding: 0.5rem;
+  }
+
+  .time-unit {
+    font-weight: 300;
   }
 }
 </style>
