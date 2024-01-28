@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <p class="countdown-text">
+    <h2 class="countdown-text">
       {{ $t("landing_page.countdown.countdown_text") }}
-    </p>
+    </h2>
     <table class="countdown">
       <tr>
         <td>
@@ -17,13 +17,13 @@
             {{ $t("landing_page.countdown.hour") }}
           </p>
         </td>
-        <td>
+        <td id="minutes">
           <p class="countdown-timer">{{ pad(minutes) }}</p>
           <p class="time-unit">
             {{ $t("landing_page.countdown.min") }}
           </p>
         </td>
-        <td>
+        <td id="seconds">
           <p class="countdown-timer">{{ pad(seconds) }}</p>
           <p class="time-unit">
             {{ $t("landing_page.countdown.sec") }}
@@ -119,6 +119,10 @@ export default {
   min-width: 100%;
 }
 
+.container h2 {
+  font-family: OverpassMedium;
+}
+
 .countdown-text {
   color: black;
   text-align: center;
@@ -146,7 +150,6 @@ export default {
 }
 
 .time-unit {
-  font-weight: bold;
   text-align: center;
 }
 
@@ -180,6 +183,12 @@ export default {
 
   .time-unit {
     font-weight: 300;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  #seconds, #minutes {
+    display: none;
   }
 }
 </style>
