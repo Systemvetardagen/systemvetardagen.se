@@ -93,7 +93,6 @@ export default {
 }
 
 .socials-container svg {
-  height: fit-content;
   width: 1.8rem;
   fill: #666666;
 }
