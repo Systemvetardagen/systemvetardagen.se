@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <!-- Banner -->
-    <img src="@/assets/img/about-banner.png" alt="About Banner" class="banner">
+    <img src="@/assets/img/guy-with-shirt-back.jpg" alt="Person wearing a systemvetardagen t-shirt" class="banner">
     <!-- Text -->
     <div class="text">
       <div class="text-block">
@@ -66,25 +66,36 @@ export default {
     },
   },
 };
-</script> 
+</script>
 
 <style scoped>
+
+p {
+  line-height: 1.5;
+}
+
 .wrapper {
-  margin-bottom: 5rem; 
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem; 
+  gap: 1rem;
   justify-items: center;
   align-items: center;
 }
 .banner {
-  width: 100%
+  width: 100%;
+  max-width: 1200px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  aspect-ratio: 4 / 1;
+  object-fit: cover;
+  object-position: 0 34%;
 }
 /* Text */
 .text {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2.4rem;
   max-width: 35rem;
   justify-items: flex-start;
   align-items: flex-start;
@@ -131,6 +142,13 @@ section {
 
 .post-name {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 500px) {
+  .banner {
+    aspect-ratio: 5 / 2;
+    object-position: 0 34%;
+  }
 }
 
 

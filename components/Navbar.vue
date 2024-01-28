@@ -229,6 +229,7 @@ export default {
   z-index: 100;
   border-left: solid var(--clr-grey-300) 0.13rem;
 }
+
 .mactive {
   padding-left: 1.2rem;
   border-left: solid var(--clr-grey-1000) 0.3rem;
@@ -293,7 +294,7 @@ nav {
 
 .header-link {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 400;
   margin: 0 max(1rem, 2vw);
   padding-bottom: 0.3rem;
   color: black;
