@@ -35,6 +35,7 @@ export default {
 .banner p {
   font-family: IBMPlexMono;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .link {
@@ -90,4 +91,12 @@ export default {
     height: 11rem;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .banner p {
+    font-family: IBMPlexMono;
+    font-size: 0.7rem;
+  }
+}
+
 </style>
