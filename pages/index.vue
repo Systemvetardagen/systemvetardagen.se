@@ -18,6 +18,7 @@
       </div>
     <banner img="auditorium-seats">{{ $t('landing_page.banner.nod') }}</banner>
     <links/>
+
   </div>
 </template>
 <style>
@@ -78,6 +79,7 @@ export default {
 <style scoped>
   html {
     scroll-behavior: smooth;
+
   }
   .blog-section {
     max-width: 100%;
