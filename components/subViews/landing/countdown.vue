@@ -6,25 +6,25 @@
     <table class="countdown">
       <tr>
         <td>
-          <h1 class="countdown-timer">{{ days }}</h1>
+          <p class="countdown-timer">{{ days }}</p>
           <p class="time-unit">
             {{ $t("landing_page.countdown.day") }}
           </p>
         </td>
         <td>
-          <h1 class="countdown-timer">{{ pad(hours) }}</h1>
+          <p class="countdown-timer">{{ pad(hours) }}</p>
           <p class="time-unit">
             {{ $t("landing_page.countdown.hour") }}
           </p>
         </td>
         <td>
-          <h1 class="countdown-timer">{{ pad(minutes) }}</h1>
+          <p class="countdown-timer">{{ pad(minutes) }}</p>
           <p class="time-unit">
             {{ $t("landing_page.countdown.min") }}
           </p>
         </td>
         <td>
-          <h1 class="countdown-timer">{{ pad(seconds) }}</h1>
+          <p class="countdown-timer">{{ pad(seconds) }}</p>
           <p class="time-unit">
             {{ $t("landing_page.countdown.sec") }}
           </p>
