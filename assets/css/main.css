@@ -159,6 +159,10 @@ button {
   cursor: pointer;
 }
 
+strong {
+  font-weight: 500;
+}
+
 
 /* Text */
 h1,
