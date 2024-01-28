@@ -92,5 +92,6 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    background-color: #f8f8f8;
   }
 </style>
