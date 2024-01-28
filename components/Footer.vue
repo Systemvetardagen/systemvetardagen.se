@@ -52,6 +52,7 @@ export default {
   padding: 0;
   background-color: white;
   margin: 0;
+  height: fit-content;
 }
 
 .line {
@@ -73,7 +74,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 1.4rem;
+  row-gap: 1rem;
   column-gap: 4rem;
   height: 100%;
   align-items: center;
@@ -92,7 +93,7 @@ export default {
 .socials-container {
   display: flex;
   gap: 1.6rem;
-  height: 100%;
+  height: fit-content;
 }
 
 .socials-container a {
