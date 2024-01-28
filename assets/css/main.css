@@ -105,6 +105,14 @@ footer {
   font-family: "OverpassMono";
   src: url(assets\fonts\OverpassMono-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url(assets\fonts\IBMPlexMono-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 *,
 ::before,

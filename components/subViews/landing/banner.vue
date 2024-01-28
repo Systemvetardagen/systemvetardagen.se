@@ -32,6 +32,11 @@ export default {
   width: 100%;
 }
 
+.banner p {
+  font-family: IBMPlexMono;
+  font-size: 0.9rem;
+}
+
 .link {
   color: inherit;
   text-decoration: none;
@@ -66,19 +71,18 @@ export default {
 }
 
 .foreground {
-    position: absolute;
-    display: flex;
-    z-index: 1;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 3rem;
-
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .box {
-    background: white;
-    padding: 0.5rem;
+  background: white;
+  padding: 0.5rem 1rem;
 }
 
 @media screen and (min-width: 1000px) {
