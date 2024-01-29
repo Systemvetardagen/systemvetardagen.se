@@ -268,8 +268,8 @@ export default {
   /*color: red;*/
 }
 
-.nuxt-link-exact-active {
-  color: red;
+nav .nuxt-link-exact-active {
+  /*color: red;*/
   color: var(--clr-grey-1000);
   border-bottom: 1.5px solid var(--clr-grey-1000);
   margin-bottom: -2px;
@@ -279,7 +279,7 @@ export default {
   font-weight: 500;
 }
 
-.active a {
+nav .active a {
   color: var(--clr-grey-1000);
   border-bottom: 1.5px solid var(--clr-grey-1000);
   margin-bottom: -2px;
