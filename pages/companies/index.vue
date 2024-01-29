@@ -17,6 +17,8 @@
           <div class="dropdown-program dropdown-filter-item" v-for="program in allPrograms[locale]" :key="program.id">
             <input type="checkbox" :name="program" :id="program.id" :value="program" v-model="selectedPrograms" />
             <label :for="program">{{ program.name }}</label>
+            <label class="tag master" v-if="program.master">Master</label>
+            <label class="tag bachelor" v-else>Bachelor</label>
           </div>
           <button @click.prevent="selectedPrograms = []">
             {{ $t("catalog_page.clear_selection") }}
@@ -161,6 +163,7 @@ export default {
           allPositions.en.push({
             id: item.positions_id,
             name: item.position,
+
           });
         } else if (item.languages_id === "sv") {
           allPositions.sv.push({
@@ -175,11 +178,13 @@ export default {
           allPrograms.en.push({
             id: item.programs_id,
             name: item.program,
+            master: item.master,
           });
         } else if (item.languages_code === "sv") {
           allPrograms.sv.push({
             id: item.programs_id,
-            name: item.program,     
+            name: item.program,  
+            master: item.master,  
           });
         }
       });
@@ -423,6 +428,20 @@ button {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+}
+
+.tag {
+  color: white;
+  padding: 3px 10px;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+}
+
+.master {
+  background-color: var(--clr-blue-800);
+}
+.bachelor {
+  background-color: var(--clr-pink-800);
 }
 
 </style>

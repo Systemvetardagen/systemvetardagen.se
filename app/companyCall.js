@@ -54,8 +54,19 @@ export const API_Call_Programs = async () => {
     const response2 = await fetch(`${Base_URL}items/programs_translations/?filter[id][_in]=${translationsIds.join(',')}`, {headers});
     const programs = (await response2.json()).data;
 
+    // Add the "master" property from data to programs
+    const programsWithMaster = programs.map(program => {
+        const correspondingDataItem = data.find(item => item.translations.includes(program.id));
+        return {
+            ...program,
+            master: correspondingDataItem ? correspondingDataItem.master : null
+        };
+    });
 
-    return programs;
+    console.log(data);
+    console.log(programsWithMaster);
+
+    return programsWithMaster;
 }
 
 export const API_Call_Positions = async () => {
