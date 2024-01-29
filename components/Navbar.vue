@@ -276,9 +276,9 @@ export default {
 
 .link-fair {
   /*background-color: red;*/
-  display: flex;
+  /*display: flex;
   height: 100%;
-  align-items: center;
+  align-items: center;*/
 }
 
 .link-fair img {
