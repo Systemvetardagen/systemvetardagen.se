@@ -3,13 +3,13 @@
     <header class="main-header" data-visible="false">
 
       <!--  LOGO-LINK -->
-      <a href="https://systemvetardagen.se" class="logo-link main-logo-link">
+      <NuxtLink :to="localePath('/')" class="logo-link main-logo-link">
         <img
-          src="@/assets/img/Symbol_&_Text_Logo_Black_&_Color.svg"
+          src="@/assets/img/systemvetardagen-logo/Text_Logo_Black.svg"
           class="logo"
           alt="Systemvetardagen logo"
         />
-      </a>
+      </NuxtLink>
 
       <!-- DESKTOP -->
       <nav>
@@ -40,25 +40,30 @@
         v-if="showEnglishMessage && checkLang()"
         :to="switchLocalePath('en') + '/'"
         class="link-fair"
-        ><img src="@/assets/img/UK.png"
-      /></nuxt-link>
+      >
+        <img src="@/assets/img/UK.png"/>
+      </nuxt-link>
       <nuxt-link
         v-else-if="showEnglishMessage === false && checkLang() && checkPath()"
         :to="switchLocalePath('sv')"
         class="link-fair"
-        ><img src="@/assets/img/Sweden.png"
-      /></nuxt-link>
+      >
+        <img src="@/assets/img/Sweden.png"/>
+      </nuxt-link>
       <nuxt-link
         v-else-if="showEnglishMessage === false && checkLang()"
         :to="switchLocalePath('sv') + '/'"
         class="btn-lang"
-        ><img src="@/assets/img/Sweden.png"
-      /></nuxt-link>
+      >
+        <img src="@/assets/img/Sweden.png"/>
+      </nuxt-link>
       <nuxt-link
         v-else-if="checkLang() === false"
         :to="changePath()"
         class="btn-lang"
-        ><img v-if="showEnglishMessage" src="@/assets/img/UK.png" /><img
+      >
+        <img v-if="showEnglishMessage" src="@/assets/img/UK.png" />
+        <img
           v-else="showEnglishMessage"
           src="@/assets/img/Sweden.png"
         />
@@ -70,26 +75,13 @@
     <header class="mobile-header">
       <NuxtLink :to="localePath('/')" class="logo-link mobile-logo-link">
         <img
-          src="@/assets/img/Symbol_&_Text_Logo_Black_&_Color.svg"
+          src="@/assets/img/systemvetardagen-logo/Text_Logo_Black.svg"
           class="logo"
           alt="Systemvetardagen logo"
         />
       </NuxtLink>
       <button @click="seen = !seen" class="nav-toggle">
-        <svg
-          class="nav-toggle-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
+        <HamburgerMenu />
       </button>
     </header>
     <div class="sidebar" v-if="!seen">
@@ -99,10 +91,9 @@
         class="mobile-header-container"
         @click="seen = !seen"
       >
-        <NuxtLink :to="localePath('/')" class="header-link">{{
-          $t("navbar.home")
-
-        }}</NuxtLink>
+        <NuxtLink :to="localePath('/')" class="header-link">
+          {{ $t("navbar.home") }}
+        </NuxtLink>
       </div>
 
       <!-- Catalog -->
@@ -111,9 +102,9 @@
         class="mobile-header-container"
         @click="seen = !seen"
       >
-        <NuxtLink :to="localePath('/companies/')" class="header-link">{{
-          $t("navbar.catalog")
-        }}</NuxtLink>
+        <NuxtLink :to="localePath('/companies/')" class="header-link">
+          {{ $t("navbar.catalog") }}
+        </NuxtLink>
       </div>
 
       <!-- About -->
@@ -122,28 +113,31 @@
         class="mobile-header-container"
         @click="seen = !seen"
       >
-        <NuxtLink :to="localePath('/about/')" class="header-link">{{
-          $t("navbar.about")
-        }}</NuxtLink>
+        <NuxtLink :to="localePath('/about/')" class="header-link">
+          {{ $t("navbar.about") }}
+        </NuxtLink>
       </div>
 
       <!-- Change language -->
       <div @click="seen = !seen" class="link-fair">
-        <nuxt-link
-          v-if="showEnglishMessage"
-          :to="switchLocalePath('en')"
-          ><img src="@/assets/img/UK.png"
-        /></nuxt-link>
-        <nuxt-link v-else :to="switchLocalePath('sv')"
-          ><img src="@/assets/img/Sweden.png"
-        /></nuxt-link>
+        <nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')">
+          <img src="@/assets/img/UK.png"/>
+        </nuxt-link>
+        <nuxt-link v-else :to="switchLocalePath('sv')">
+          <img src="@/assets/img/Sweden.png" />
+        </nuxt-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import HamburgerMenu from '@/components/icons/HamburgerMenu';
+
 export default {
+  components: {
+    HamburgerMenu
+  },
   data() {
     return {
       seen: true,
@@ -206,49 +200,85 @@ export default {
 
 <style scoped>
 .sidebar > .link-fair {
-  position: absolute;
-  bottom: 3rem;
-  left: 1rem;
+  margin-top: 1rem;
 }
 
-.mobile-header-container {
-  padding-left: 1.5rem;
-  color: black;
-  margin-top: 2rem;
+.sidebar  .link-fair img {
+  height: 2.5rem;
+}
+
+.mobile-header-container a {
+  /*padding-left: 1.5rem;*/
+  color: var(--clr-grey-600);
+  /*margin-top: 2rem;*/
+  font-weight: 400;
 }
 
 .sidebar {
   position: fixed;
-  height: 100%;
-  width: 75%;
+  top: 3rem;
+  height: fit-content;
+  width: 100%;
   right: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1.4rem;
+  padding: 2rem;
   background: var(--clr-white);
   z-index: 100;
-  border-left: solid var(--clr-grey-300) 0.13rem;
+  /*border-left: solid var(--clr-grey-300) 2px;*/
+  border-bottom: 1px solid var(--clr-grey-300);
 }
 
-.mactive {
-  padding-left: 1.2rem;
-  border-left: solid var(--clr-grey-1000) 0.3rem;
+.mactive a {
+  /*padding-left: 1.2rem;*/
+  /*border-left: solid var(--clr-grey-1000) 0.3rem;*/
+  font-weight: 500;
+  color: var(--clr-grey-1000);
+  border-bottom: 2px solid var(--clr-grey-1000);
+  margin-bottom: -2px;
 }
 
 .normal {
-  height: 4rem;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   justify-items: center;
   border-bottom-style: solid;
   border-bottom-color: transparent;
+  /*background-color: dodgerblue;*/
 }
 
 /* changes transparent bottom border to grey */
 
 .active {
-  border-bottom-color: var(--clr-grey-1000);
+  /*border-bottom-color: var(--clr-grey-1000);*/
+  /*color: red;*/
+}
+
+.active a {
+  color: var(--clr-grey-1000);
+  border-bottom: 2px solid var(--clr-grey-1000);
+  margin-bottom: -2px;
+  font-weight: 500;
+  /*border-bottom-color: var(--clr-grey-1000);*/
+}
+
+.normal:not(.active) a:hover {
+  color: var(--clr-grey-800);
+}
+
+.link-fair {
+  /*background-color: red;*/
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.link-fair img {
+  height: 1.8rem;
 }
 
 .main-header {
@@ -288,17 +318,18 @@ export default {
 
 nav {
   display: flex;
-  align-items: flex-end;
+  /*align-items: flex-end;*/
   height: 100%;
+  gap: 1rem;
 }
 
 .header-link {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   margin: 0 max(1rem, 2vw);
-  padding-bottom: 0.3rem;
-  color: black;
-  align-self: flex-end;
+  /*padding-bottom: 0.3rem;*/
+  color: var(--clr-grey-600);
+  /*align-self: flex-end;*/
 }
 
 nav > div > NuxtLink {
