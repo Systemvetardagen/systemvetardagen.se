@@ -12,7 +12,7 @@
       </NuxtLink>
 
       <!-- DESKTOP -->
-      <nav>
+      <nav class="desktop">
 
         <!-- Home -->
         <div class="normal">
@@ -80,46 +80,40 @@
           alt="Systemvetardagen logo"
         />
       </NuxtLink>
-      <button @click="seen = !seen" class="nav-toggle">
+      <button @click="mobileNavOpen = !mobileNavOpen" class="nav-toggle">
         <HamburgerMenu />
       </button>
     </header>
-    <div class="sidebar" v-if="!seen">
+    <nav class="sidebar" v-if="!mobileNavOpen">
       <!-- Home -->
-      <div
-        v-bind:class="{ mactive: isActive(localePath('/')) }"
-        class="mobile-header-container"
-        @click="seen = !seen"
-      >
-        <NuxtLink :to="localePath('/')" class="header-link">
+      <div class="mobile-header-container" @click="mobileNavOpen = !mobileNavOpen">
+        <NuxtLink :to="localePath('/')" activeClass="active" class="header-link">
           {{ $t("navbar.home") }}
         </NuxtLink>
       </div>
 
       <!-- Catalog -->
       <div
-        v-bind:class="{ mactive: isActive(localePath('/companies/')) }"
         class="mobile-header-container"
-        @click="seen = !seen"
+        @click="mobileNavOpen = !mobileNavOpen"
       >
-        <NuxtLink :to="localePath('/companies/')" class="header-link">
+        <NuxtLink :to="localePath('/companies/')" activeClass="active" class="header-link">
           {{ $t("navbar.catalog") }}
         </NuxtLink>
       </div>
 
       <!-- About -->
       <div
-        v-bind:class="{ mactive: isActive(localePath('/about/')) }"
         class="mobile-header-container"
-        @click="seen = !seen"
+        @click="mobileNavOpen = !mobileNavOpen"
       >
-        <NuxtLink :to="localePath('/about/')" class="header-link">
+        <NuxtLink :to="localePath('/about/')" activeClass="active" class="header-link">
           {{ $t("navbar.about") }}
         </NuxtLink>
       </div>
 
       <!-- Change language -->
-      <div @click="seen = !seen" class="link-fair">
+      <div @click="mobileNavOpen = !mobileNavOpen" class="link-fair">
         <nuxt-link v-if="showEnglishMessage" :to="switchLocalePath('en')">
           <img src="@/assets/img/UK.png"/>
         </nuxt-link>
@@ -127,7 +121,7 @@
           <img src="@/assets/img/Sweden.png" />
         </nuxt-link>
       </div>
-    </div>
+    </nav>
   </div>
 </template>
 
@@ -140,7 +134,7 @@ export default {
   },
   data() {
     return {
-      seen: true,
+      mobileNavOpen: true,
     };
   },
   mounted() {
@@ -150,11 +144,6 @@ export default {
     window.removeEventListener('resize', this.handleResize);
   },
   methods: {
-    isActive(cpath) {
-      if (this.$route.path == cpath) {
-        return true;
-      }
-    },
     checkLang() { // checks the current language by testing if the path contains .sv or .en
       let st = String(this.$route.path);
       if (st.includes(".sv")) {
@@ -185,7 +174,7 @@ export default {
     },
     handleResize() { // Handles the event of resizing the window
       if (window.innerWidth > 768) { // Width 768 is the breakpoint for mobile view
-        this.seen = true; // Seen is the variable that controls if the mobile menu is visible or not
+        this.mobileNavOpen = true; // mobileNavOpen is the variable that controls if the mobile menu is visible or not
       }
     }
   },
@@ -232,22 +221,13 @@ export default {
   right: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
   gap: 1.4rem;
   padding: 2rem;
   background: var(--clr-white);
   z-index: 100;
   /*border-left: solid var(--clr-grey-300) 2px;*/
   border-bottom: 1px solid var(--clr-grey-300);
-}
-
-.mactive a {
-  /*padding-left: 1.2rem;*/
-  /*border-left: solid var(--clr-grey-1000) 0.3rem;*/
-  font-weight: 500;
-  color: var(--clr-grey-1000);
-  border-bottom: 1.5px solid var(--clr-grey-1000);
-  margin-bottom: -2px;
 }
 
 .normal {
@@ -258,7 +238,6 @@ export default {
   justify-items: center;
   border-bottom-style: solid;
   border-bottom-color: transparent;
-  /*background-color: dodgerblue;*/
 }
 
 /* changes transparent bottom border to grey */
@@ -269,7 +248,6 @@ export default {
 }
 
 nav .nuxt-link-exact-active {
-  /*color: red;*/
   color: var(--clr-grey-1000);
   border-bottom: 1.5px solid var(--clr-grey-1000);
   margin-bottom: -2px;
@@ -287,18 +265,10 @@ nav .active a {
   top: 1px;
   padding-bottom: 2px;
   font-weight: 500;
-  /*border-bottom-color: var(--clr-grey-1000);*/
 }
 
 .normal:not(.active) a:hover {
   color: var(--clr-grey-800);
-}
-
-.link-fair {
-  /*background-color: red;*/
-  /*display: flex;
-  height: 100%;
-  align-items: center;*/
 }
 
 .link-fair img {
@@ -308,7 +278,6 @@ nav .active a {
 .main-header {
   background: white;
   position: fixed;
-  /* width: 95%; */
   height: 3rem;
   display: flex;
   align-items: center;
@@ -335,9 +304,8 @@ nav .active a {
   height: 100%;
 }
 
-nav {
+nav.desktop {
   display: flex;
-  /*align-items: flex-end;*/
   height: 100%;
   gap: 1rem;
 }
@@ -406,11 +374,6 @@ nav > div > NuxtLink {
   .main-header {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-  }
-  nav {
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
   }
   .header-link {
     font-size: 1.8rem;
