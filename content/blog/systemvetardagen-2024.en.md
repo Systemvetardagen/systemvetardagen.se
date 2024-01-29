@@ -23,6 +23,22 @@ body_text: >-
 
   \
  
-  **Warm welcome to Systemvetardagen 2024!**
+  Warm welcome to Systemvetardagen 2024!\
+
+  \
+
+  **Giancarlo Valverde**\
+
+  Project Manager\
+
+  [LinkedIn](https://www.linkedin.com/in/giancarlo-valverde-340a501b4/)\
+
+  \
+
+  **Sofia Roos**\
+
+  Project Coordinator\
+
+  [LinkedIn](https://www.linkedin.com/in/sofia-roos-97b84117b/)
 date_of_creation: 2024-01-28T11:00:08.210Z
 ---
