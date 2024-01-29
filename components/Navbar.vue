@@ -5,7 +5,7 @@
       <!--  LOGO-LINK -->
       <NuxtLink :to="localePath('/')" class="logo-link main-logo-link">
         <img
-          src="@/assets/img/systemvetardagen-logo/Text_Logo_Black.svg"
+          src="@/assets/img/systemvetardagen-logo/svd-logo-horizontal.svg"
           class="logo"
           alt="Systemvetardagen logo"
         />
@@ -73,9 +73,9 @@
 
     <!-- MOBILE NAV -->
     <header class="mobile-header">
-      <NuxtLink :to="localePath('/')" class="logo-link mobile-logo-link">
+      <NuxtLink :to="localePath('/')" class="logo-link">
         <img
-          src="@/assets/img/systemvetardagen-logo/Text_Logo_Black.svg"
+          src="@/assets/img/systemvetardagen-logo/svd-logo-horizontal.svg"
           class="logo"
           alt="Systemvetardagen logo"
         />
@@ -296,8 +296,8 @@ nav .active a {
 }
 
 .logo-link {
-  height: 3rem;
-  padding: 0rem 0;
+  height: 2rem;
+  padding: 0;
 }
 
 .logo {
@@ -326,7 +326,6 @@ nav > div > NuxtLink {
   color: var(--clr-grey-1000);
   height: 3rem;
   padding: 0.5rem;
-  margin-right: 0.5rem;
 }
 
 .nav-toggle-icon {
@@ -350,6 +349,7 @@ nav > div > NuxtLink {
     align-items: center;
     z-index: 1000;
     height: 3rem;
+    padding: 0 0.5rem;
   }
   .main-header {
     display: none;
@@ -385,8 +385,7 @@ nav > div > NuxtLink {
   }
 
   .logo-link {
-    padding: 0.5rem;
-    height: 4rem;
+    height: 2rem;
   }
 }
 .header-scrolled {
