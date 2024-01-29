@@ -260,8 +260,11 @@ export default {
 
 .active a {
   color: var(--clr-grey-1000);
-  border-bottom: 2px solid var(--clr-grey-1000);
+  border-bottom: 1.5px solid var(--clr-grey-1000);
   margin-bottom: -2px;
+  position: relative;
+  top: 1px;
+  padding-bottom: 2px;
   font-weight: 500;
   /*border-bottom-color: var(--clr-grey-1000);*/
 }
