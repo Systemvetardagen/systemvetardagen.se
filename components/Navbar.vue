@@ -237,7 +237,7 @@ export default {
   /*border-left: solid var(--clr-grey-1000) 0.3rem;*/
   font-weight: 500;
   color: var(--clr-grey-1000);
-  border-bottom: 2px solid var(--clr-grey-1000);
+  border-bottom: 1.5px solid var(--clr-grey-1000);
   margin-bottom: -2px;
 }
 
