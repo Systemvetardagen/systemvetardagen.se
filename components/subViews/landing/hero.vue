@@ -25,7 +25,7 @@
       <div class="hero-content-text">
 
         <!-- HERO BUTTONS -->
-        <div class="hero-buttons">
+        <div class="hero-buttons" v-if="false">
           <Button
             :link="localePath('/companies/' + '/')"
             bColor="transparent"
