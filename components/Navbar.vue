@@ -212,6 +212,7 @@ export default {
   color: var(--clr-grey-600);
   /*margin-top: 2rem;*/
   font-weight: 400;
+  font-size: 1.2rem;
 }
 
 .sidebar {
