@@ -15,22 +15,22 @@
       <nav>
 
         <!-- Home -->
-        <div class="normal" v-bind:class="{ active: isActive(localePath('/')) }">
-          <NuxtLink :to="localePath('/')" class="header-link">{{
-            $t("navbar.home")
-          }}</NuxtLink>
+        <div class="normal">
+          <NuxtLink activeClass="active" :to="localePath('/')" class="header-link">
+            {{ $t("navbar.home") }}
+          </NuxtLink>
         </div>
 
         <!-- Catalog -->
-        <div class="normal" v-bind:class="{ active: isActive(localePath('/companies/')) }">
-          <NuxtLink :to="localePath('/companies/') " class="header-link">{{
+        <div class="normal">
+          <NuxtLink :to="localePath('/companies/') " activeClass="active" class="header-link">{{
             $t("navbar.catalog")
           }}</NuxtLink>
         </div>
 
         <!-- About -->
-        <div v-bind:class="{ active: isActive(localePath('/about/')) }" class="normal">
-          <NuxtLink :to="localePath('/about/') " class="header-link">{{
+        <div class="normal">
+          <NuxtLink :to="localePath('/about/')" activeClass="active" class="header-link">{{
             $t("navbar.about")
           }}</NuxtLink>
         </div>
@@ -215,6 +215,15 @@ export default {
   font-size: 1.2rem;
 }
 
+.header-link {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 max(1rem, 2vw);
+  /*padding-bottom: 0.3rem;*/
+  color: var(--clr-grey-600);
+  /*align-self: flex-end;*/
+}
+
 .sidebar {
   position: fixed;
   top: 3rem;
@@ -257,6 +266,17 @@ export default {
 .active {
   /*border-bottom-color: var(--clr-grey-1000);*/
   /*color: red;*/
+}
+
+.nuxt-link-exact-active {
+  color: red;
+  color: var(--clr-grey-1000);
+  border-bottom: 1.5px solid var(--clr-grey-1000);
+  margin-bottom: -2px;
+  position: relative;
+  top: 1px;
+  padding-bottom: 2px;
+  font-weight: 500;
 }
 
 .active a {
@@ -320,15 +340,6 @@ nav {
   /*align-items: flex-end;*/
   height: 100%;
   gap: 1rem;
-}
-
-.header-link {
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 0 max(1rem, 2vw);
-  /*padding-bottom: 0.3rem;*/
-  color: var(--clr-grey-600);
-  /*align-self: flex-end;*/
 }
 
 nav > div > NuxtLink {
