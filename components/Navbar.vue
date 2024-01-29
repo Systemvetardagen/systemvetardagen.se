@@ -53,14 +53,14 @@
       <nuxt-link
         v-else-if="showEnglishMessage === false && checkLang()"
         :to="switchLocalePath('sv') + '/'"
-        class="btn-lang"
+        class="link-fair"
       >
         <img src="@/assets/img/Sweden.png"/>
       </nuxt-link>
       <nuxt-link
         v-else-if="checkLang() === false"
         :to="changePath()"
-        class="btn-lang"
+        class="link-fair"
       >
         <img v-if="showEnglishMessage" src="@/assets/img/UK.png" />
         <img
@@ -309,11 +309,6 @@ export default {
 
 .logo {
   height: 100%;
-}
-
-.btn-lang {
-  display: flex;
-  align-items: center;
 }
 
 nav {
