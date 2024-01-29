@@ -2,25 +2,25 @@
     <div class="match-list">
           <h3>
             {{ post.title }}
-            {{ $t("looking-for") }}
+            {{ $t("company_page.looking-for") }}
           </h3>
           <div class="match-items">
             <div class="match-list-items">
               <ul>
-                <p style="font-weight: 700">{{ $t("programs") }}</p>
+                <p style="font-weight: 700">{{ $t("company_page.programs") }}</p>
                 <li v-for="program in post.programs_data[locale]" :key="program.id">
                   {{ program }}
                 </li>
               </ul>
               <ul>
-                <p style="font-weight: 700">{{ $t("positions") }}</p>
+                <p style="font-weight: 700">{{ $t("company_page.positions") }}</p>
                 <li v-for="position in post.positions_data[locale]" :key="position.id">
                   {{ position }}
                 </li>
               </ul>
             </div>
             <div v-if="post.qualifications" class="match-qualifications">
-              <p style="font-weight: 700">{{ $t("qualifications") }}</p>
+              <p style="font-weight: 700">{{ $t("company_page.qualifications") }}</p>
               <p>{{ post.qualifications[locale] }}</p>
             </div>
           </div>
@@ -28,7 +28,7 @@
             v-if="post.link_to_positions"
             :href="post.link_to_positions"
             class="link"
-            >{{ $t("company-learn-more") }} {{ post.title }} ></a
+            >{{ $t("company_page.learn-more") }} {{ post.title }} ></a
           >
         </div>
 </template>
@@ -36,7 +36,8 @@
 <script>
     export default {
         props: {
-            post: Object
+            post: Object,
+            locale: Object
         }
     }
 
@@ -70,6 +71,15 @@
 
 .match-list > ul > li {
   font-weight: 10px;
+}
+/* DESKTOP MODIFICATIONS */
+@media only screen and (min-width: 768px) {
+  
+  .match-list-items {
+    flex-direction: row;
+  }
+
+  
 }
 
 </style>

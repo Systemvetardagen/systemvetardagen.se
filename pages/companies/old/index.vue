@@ -1,15 +1,15 @@
 <template>
   <main class="wrapper">
     <section v-if="posts">
-      <h1 class="title">{{ $t("companies") }}</h1>
+      <h1 class="title">{{ $t("catalog_page.companies") }}</h1>
 
       <div class="filter-paragraph">
-        {{ $t("showing-companies-for") }}
+        {{ $t("catalog_page.showing-companies-for") }}
         <span
           class="dropdown-toggle programs-toggle"
           @click="programsVisible = !programsVisible"
         >
-          {{ filterText(selectedPrograms, $t("programs").toLowerCase()) }}
+          {{ filterText(selectedPrograms, $t("catalog_page.programs").toLowerCase()) }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -41,7 +41,7 @@
             <label :for="program">{{ program }}</label>
           </div>
           <button @click.prevent="selectedPrograms = []">
-            {{ $t("clear-selection") }}
+            {{ $t("catalog_page.clear-selection") }}
           </button>
         </div>
         {{ $t("and") }}
@@ -49,7 +49,7 @@
           class="dropdown-toggle positions-toggle"
           @click="positionsVisible = !positionsVisible"
         >
-          {{ filterText(selectedPositions, $t("positions").toLowerCase()) }}
+          {{ filterText(selectedPositions, $t("catalog_page.positions").toLowerCase()) }}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -84,7 +84,7 @@
             <label :for="position">{{ position }}</label>
           </div>
           <button @click.prevent="selectedPositions = []">
-            {{ $t("clear-selection") }}
+            {{ $t("catalog_page.clear-selection") }}
           </button>
         </div>
       </div>
@@ -96,7 +96,7 @@
         "
         class="clear-filter-btn"
       >
-        {{ $t("clear-filters") }}
+        {{ $t("catalog_page.clear-filters") }}
       </button>
 
       <div class="search-field">
@@ -200,9 +200,9 @@ export default {
   },
 
   created() {
-    this.allPrograms = this.$t("filter-programs");
-    this.allPositions = this.$t("filter-positions");
-    this.allString = this.$t("all");
+    this.allPrograms = this.$t("catalog_page.filter-programs");
+    this.allPositions = this.$t("catalog_page.filter-positions");
+    this.allString = this.$t("catalog_page.all");
   },
 
   mounted() {

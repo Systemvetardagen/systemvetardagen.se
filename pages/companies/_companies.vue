@@ -8,8 +8,7 @@
         <Banner :post="this.post"/>
 
 
-        <!-- COMPANY INFO -->
-        <CompanyInfo :post="this.post"/>
+
 
 
         <!-- ARTICLE MAIN CONTENT -->
@@ -17,12 +16,15 @@
           <h3>{{ post.slogan }}</h3>
           <p>{{ post.about_us[locale] }}</p>
 
+          <!-- COMPANY INFO -->
+          <CompanyInfo :post="this.post" :locale="this.locale"/>
+
           <!-- PARTNER CONTENT -->
           <PartnerContent :post="this.post"/>
 
 
           <!-- MATCH LIST -->
-          <MatchList :post="this.post"/>
+          <MatchList :post="this.post" :locale="this.locale"/>
 
         </div>
         <!-- END MAIN CONTENT -->
@@ -48,7 +50,7 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >{{ $t("go-back") }}</Button
+            >{{ $t("company_page.go-back") }}</Button
           >
 
           <Button
@@ -57,7 +59,7 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >{{ $t("go-top") }}
+            >{{ $t("company_page.go-top") }}
           </Button>
         </div>
         <!-- END BOTTOM BUTTONS -->
@@ -208,7 +210,11 @@ export default {
   },
   components: {
     Button,
-    CompanyInfo
+    CompanyInfo,
+    Banner, 
+    PartnerContent,
+    MatchList,
+    CompanyContact
 },
   computed: {
     showEnglishMessage() {
@@ -243,21 +249,7 @@ export default {
 
 
 
-/* COMPANY CONTACT */
-.post-contact {
-  width: clamp(30ch, 80vw, 60ch);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.company-contact {
-  padding-bottom: 1rem;
-}
 
-.link {
-  margin-top: 2rem;
-  color: var(--clr-blue-600);
-}
 
 /* MAP */
 .map-section {

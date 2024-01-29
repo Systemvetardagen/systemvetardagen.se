@@ -51,11 +51,18 @@
 </template>
 
 <script>
-    export default {
-        props: {
-            post: Object
-        }
-    }
+  import marked from "marked"
+
+  export default {
+      props: {
+          post: Object
+      },
+      computed: {
+        markdownToHtml() {
+          return marked.parse(this.post.sponsor_extra_text);
+        },
+      }
+  }
 
 </script>
 
@@ -107,6 +114,14 @@ img {
   border-radius: 5px;
   height: 100%;
   object-fit: cover;
+}
+
+/* DESKTOP MODIFICATIONS */
+@media only screen and (min-width: 768px) {
+  .gallery {
+    flex-direction: row;
+  }
+  
 }
 
 </style>
