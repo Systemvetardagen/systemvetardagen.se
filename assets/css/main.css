@@ -14,8 +14,23 @@ a {
   text-decoration: none;
 }
 
+main {
+
+}
+
+.page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  margin-top: auto;
+}
+
 .wrapper {
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 
 .button {
@@ -82,9 +97,22 @@ a {
   font-display: block;
 }
 @font-face {
+  font-family: "OverpassMedium";
+  src: url(assets\fonts\Overpass-Medium.ttf);
+  font-display: block;
+}
+@font-face {
   font-family: "OverpassMono";
   src: url(assets\fonts\OverpassMono-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url(assets\fonts\IBMPlexMono-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 *,
 ::before,
@@ -92,13 +120,20 @@ a {
   box-sizing: border-box;
 }
 
+#__nuxt {
+  height: 100vh;
+}
+
+#__layout {
+  height: 100%;
+}
+
 body {
-  background-color: var(--clr-white);
+  background-color: #f8f8f8;
   color: var(--clr-darkblue);
   margin: 0;
   padding: 0;
   font-family: work-sans, sans-serif;
-  letter-spacing: 0.03rem;
 }
 
 ::-moz-selection {
@@ -122,6 +157,10 @@ button {
 
 button {
   cursor: pointer;
+}
+
+strong {
+  font-weight: 500;
 }
 
 
@@ -331,7 +370,7 @@ address {
 
 
 /* Hero */
-.hero,
+
 section,
 footer {
   padding: 1.5rem 1.5rem;
@@ -347,9 +386,7 @@ section {
 }
 
 @media (min-width: 640px) {
-  .hero {
-    padding-bottom: 1.5rem;
-  }
+
 
 section,
 footer {
@@ -360,20 +397,12 @@ footer {
     align-items: center;
   }
 }
-.hero-buttons {
-  display: flex;
-}
 
 .button-contact {
   margin-left: 1rem;
 }
 
-.hero-chevron-down {
-  width: 2rem;
-  color: var(--clr-white);
-  align-self: center;
-  margin-top: 2rem;
-}
+
 
 
 /* Sections */
@@ -442,19 +471,7 @@ footer {
   text-align: left;
 }
 
-.soon {
-  background-image: url("@/assets/img/soon_image.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  aspect-ratio: 2/1;
-  min-height: 48rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .soon-content {
   max-width: 70ch;

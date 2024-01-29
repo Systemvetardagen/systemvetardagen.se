@@ -50,8 +50,8 @@
 </template>
 
 <script>
-  import ShadowBox from '@/Components/ShadowBox.vue/'
-  import ExternalLink from '@/Components/icons/ExternalLink.vue/'
+  import ShadowBox from '@/components/ShadowBox.vue/'
+  import ExternalLink from '@/components/icons/ExternalLink.vue/'
   export default {
     props: {
       post: Object

@@ -20,7 +20,7 @@
             </span>
           </p>
         </div>
-        <div v-html="markdownToHtml"></div>
+        <div class="body-text" v-html="markdownToHtml"></div>
         <ul v-if="post.images">
           <li v-for="item in post.images" :key="item.id">
             <img :src="item" />
@@ -38,7 +38,7 @@ export default {
   async asyncData({ $content, params, error, i18n }) {
     let post;
     try {
-      post = await $content("blog", params.blog + '.' + i18n.locale).fetch(); //Spefifies that the fetch function should see difference between the same cms entry in different languages 
+      post = await $content("blog", params.blog + '.' + i18n.locale).fetch(); //Spefifies that the fetch function should see difference between the same cms entry in different languages
     } catch (e) {
       error({ message: "Entry not found" });
     }
@@ -83,10 +83,6 @@ export default {
   max-width: 65ch;
 }
 
-h2 {
-  text-align: center;
-}
-
 .post-img {
   max-width: 100%;
   border-radius: 1rem;
@@ -95,9 +91,18 @@ h2 {
 
 .post-info {
   margin-bottom: 2rem;
+  color: var(--clr-grey-500);
+}
+
+.post-info p {
+  font-size: 0.9rem;
 }
 
 .info-label {
-  font-weight: bold;
+  font-weight: 500;
+}
+
+.body-text {
+  line-height: 1.6;
 }
 </style>
