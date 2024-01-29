@@ -18,16 +18,16 @@
   },
   "catalog_page": {
     "all": "all",
-    "all-companies": "All Companies",
-    "all-companies-btn": "View all companies",
+    "all_companies": "All Companies",
+    "all_companies_btn": "View all companies",
     "and": "and",
-    "aulanod-program": "Aula NOD Program",
+    "aulanod_program": "Aula NOD Program",
     "catalog": "Catalog",
-    "clear-filters": "Clear filters",
-    "clear-selection": "Clear",
+    "clear_filters": "Clear filters",
+    "clear_selection": "Clear",
     "coming_soon": "Catalog coming soon!",
     "companies": "Companies",
-    "filter-positions": {
+    "filter_positions": {
       "0": "Internships",
       "1": "Foreign Services",
       "2": "Traineeprogram",
@@ -35,7 +35,7 @@
       "4": "Thesis project",
       "5": "Part-time positions"
     },
-    "filter-programs": {
+    "filter_programs": {
       "0": "Enterprise Systems and Service Design",
       "1": "Computer and System Sciences",
       "2": "Computer Game Development",
@@ -46,11 +46,11 @@
       "7": "Interaction Design",
       "8": "Master"
     },
-    "map-heading": "Company placement",
+    "map_heading": "Company placement",
     "partners": "Our Partners",
-    "posts-heading": "The Project Leaders have the floor!",
-    "read-more": "Read more",
-    "showing-companies-for": "Showing companies for ",
+    "posts_heading": "The Project Leaders have the floor!",
+    "read_more": "Read more",
+    "showing_companies_for": "Showing companies for ",
     "sponsors": "Sponsors"
   },
   "company_page": {

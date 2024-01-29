@@ -5,9 +5,9 @@
       <h1 class="title">{{ $t("catalog_page.companies") }}</h1>
 
       <div class="filter-paragraph">
-        {{ $t("showing-companies-for") }}
+        {{ $t("catalog_page.showing_companies_for") }}
         <span class="dropdown-toggle programs-toggle" @click="programsVisible = !programsVisible">
-          {{ filterText(selectedPrograms, $t("programs").toLowerCase()) }}
+          {{ filterText(selectedPrograms, $t("catalog_page.programs").toLowerCase()) }}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
             class="chevron">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -19,12 +19,12 @@
             <label :for="program">{{ program.name }}</label>
           </div>
           <button @click.prevent="selectedPrograms = []">
-            {{ $t("clear-selection") }}
+            {{ $t("catalog_page.clear_selection") }}
           </button>
         </div>
-        {{ $t("and") }}
+        {{ $t("catalog_page.and") }}
         <span class="dropdown-toggle positions-toggle" @click="positionsVisible = !positionsVisible">
-          {{ filterText(selectedPositions, $t("positions").toLowerCase()) }}
+          {{ filterText(selectedPositions, $t("catalog_page.positions").toLowerCase()) }}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
             class="chevron">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -37,7 +37,7 @@
             <label :for="position">{{ position.name }}</label>
           </div>
           <button @click.prevent="selectedPositions = []">
-            {{ $t("clear-selection") }}
+            {{ $t("catalog_page.clear_selection") }}
           </button>
         </div>
       </div>
@@ -45,7 +45,7 @@
         selectedPrograms = [];
       selectedPositions = [];
       " class="clear-filter-btn">
-        {{ $t("clear-filters") }}
+        {{ $t("catalog_page.clear_filters") }}
       </button>
 
       <div class="search-field">
@@ -91,7 +91,7 @@
           <div class="underline"></div>
         </div>
         <!-- Non-Partners -->
-        <h3 class="cat-heading">{{$t('catalog_page.all-companies')}}</h3>
+        <h3 class="cat-heading">{{$t('catalog_page.all_companies')}}</h3>
         <div class="company-cards">
           <!---<div v-if="showEnglishMessage">
             <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
@@ -179,7 +179,7 @@ export default {
         } else if (item.languages_code === "sv") {
           allPrograms.sv.push({
             id: item.programs_id,
-            name: item.program,
+            name: item.program,     
           });
         }
       });
@@ -213,7 +213,7 @@ export default {
   },
 
   created() {
-    this.allString = this.$t("all");
+    this.allString = this.$t("catalog_page.all");
   },
 
   mounted() {

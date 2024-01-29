@@ -18,17 +18,17 @@
   },
   "catalog_page": {
     "all": "alla",
-    "all-companies": "Alla Företag",
-    "all-companies-btn": "Se alla företag",
+    "all_companies": "Alla Företag",
+    "all_companies_btn": "Se alla företag",
     "and": " och ",
-    "aulanod-program": "Aula NOD Program",
+    "aulanod_program": "Aula NOD Program",
     "catalog": "Katalog",
-    "clear-filters": "Rensa filter",
-    "clear-selection": "Rensa",
+    "clear_filters": "Rensa filter",
+    "clear_selection": "Rensa",
     "coming_soon": "Årets företag presenteras inom kort!",
     "companies": "Företag",
-    "company-learn-more": "Läs mer om att jobba hos",
-    "filter-positions": {
+    "company_learn_more": "Läs mer om att jobba hos",
+    "filter_positions": {
       "0": "Praktikplatser",
       "1": "Utlandstjänster",
       "2": "Traineeprogram",
@@ -36,7 +36,7 @@
       "4": "Examensarbete",
       "5": "Deltidstjänster"
     },
-    "filter-programs": {
+    "filter_programs": {
       "0": "Affärssystem & tjänstedesign",
       "1": "Data- & systemvetenskap",
       "2": "Datorspelsutveckling",
@@ -47,14 +47,14 @@
       "7": "Interaktionsdesign",
       "8": "Magister/Master"
     },
-    "map-heading": "Företagsplacering",
+    "map_heading": "Företagsplacering",
     "partners": "Våra Partners",
     "positions": "Positioner",
-    "posts-heading": "Projektledarna har ordet!",
+    "posts_heading": "Projektledarna har ordet!",
     "programs": "Program",
     "qualifications": "Meriterande kunskaper",
-    "read-more": "Läs mer",
-    "showing-companies-for": "Visar företag för ",
+    "read_more": "Läs mer",
+    "showing_companies_for": "Visar företag för ",
     "sponsors": "Sponsorer"
   },
   "company_page": {
