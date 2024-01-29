@@ -225,9 +225,10 @@ export default {
   gap: 1.4rem;
   padding: 2rem;
   background: var(--clr-white);
-  z-index: 100;
+  z-index: 9999;
   /*border-left: solid var(--clr-grey-300) 2px;*/
-  border-bottom: 1px solid var(--clr-grey-300);
+  border-bottom: 1px solid var(--clr-grey-200);
+  box-shadow: 0px 8px 8px rgba(149, 157, 165, 0.1) ;
 }
 
 .normal {
@@ -289,10 +290,12 @@ nav .active a {
   bottom: 0;
   left: 0;
   z-index: 1000;
-  border-bottom: solid var(--clr-grey-300) 0.13rem;
+  /*border-bottom: solid var(--clr-grey-300) 0.13rem;*/
   margin: 0rem 0rem;
   align-self: center;
   box-sizing: content-box;
+  border-bottom: 1px solid var(--clr-grey-200);
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
 }
 
 .logo-link {
@@ -341,7 +344,7 @@ nav > div > NuxtLink {
   .mobile-header {
     display: flex;
     background-color: var(--clr-white);
-    border-bottom: solid var(--clr-grey-300) 0.13rem;
+    /*border-bottom: solid var(--clr-grey-300) 0.13rem;*/
     width: 100%;
     position: fixed;
     display: flex;
@@ -350,6 +353,8 @@ nav > div > NuxtLink {
     z-index: 1000;
     height: 3rem;
     padding: 0 0.5rem;
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+    border-bottom: 1px solid var(--clr-grey-200);
   }
   .main-header {
     display: none;
