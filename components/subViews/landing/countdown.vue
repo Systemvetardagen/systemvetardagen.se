@@ -59,7 +59,7 @@ export default {
   },
 
   computed: {
-    // caculate and return the days, hours, minutes, seconds from current time to count down time
+    // calculate and return the days, hours, etc. from current time to count down time
     timeLeft() {
       let distance = this.countDownTime - this.currentTime;
       return {
@@ -86,10 +86,9 @@ export default {
   },
 
   mounted() {
-    // do not try to calculate the time once and -1 sec here,
-    // for some reason (maybe it's Nuxt), same components are
-    // getting instantiated repeatedly, subtracting would
-    // result in -3 per second or so
+    // do not try to calculate the time once and -1 sec here, for some reason (maybe
+    // it's Nuxt), same components are getting instantiated repeatedly, subtracting
+    // would result in -3 per second, check issue #271
     this.intervalId = setInterval(() => {
       this.currentTime = Date.now();
     }, 1000);
