@@ -40,6 +40,7 @@ import MailIcon from '@/components/icons/MailIcon.vue'
 import WWWIcon from '@/components/icons/WWWIcon.vue'
 import GitHubLogo from '@/components/icons/GitHubLogo.vue'
 
+
 export default {
   props: {
     posts: Array,
@@ -125,14 +126,14 @@ section {
 }
 
 .expand-btn {
-  cursor: pointer;
-  color: var(--clr-blue-800);/* or any other color */
-  font-weight: 500;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  align-self: flex-end;
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+
+  border-radius: 6.9375rem;
+  border: 1px solid #000;
 }
 
 .posts-wdd {
