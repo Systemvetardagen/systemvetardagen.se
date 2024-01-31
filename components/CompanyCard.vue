@@ -35,35 +35,38 @@ h3 {
   background-color: var(--clr-white);
   border-radius: 1rem;
   box-shadow: 0px 2px 5px 0px rgba(128, 128, 128, 0.10), 0px 10px 10px 0px rgba(128, 128, 128, 0.09), 0px 22px 13px 0px rgba(128, 128, 128, 0.05), 0px 39px 16px 0px rgba(128, 128, 128, 0.01), 0px 61px 17px 0px rgba(128, 128, 128, 0.00);
-  transition: border-color 0.2s;
-}
-
-.sponsor {
-  border-color: var(--clr-pink-200);
 
 }
+
+.logo-wrapper:hover{
+  width: 17rem;
+  height: 9rem;
+}
+
 
 @media (min-width: 768px) {
   .logo-wrapper {
     width: 15rem;
     height: 9rem;
     padding: 1.5rem;
-    border-width: 0.5rem;
   }
+
+  .logo-wrapper:hover{
+  width: 15.5rem;
+  height: 9.5rem;
+}
   .sponsor {
     width: 20rem;
     height: 12rem;
     
   }
+  .sponsor:hover {
+    width: 21rem;
+    height: 13rem;
+  }
 }
 
 
-.logo-wrapper:hover {
-  border-color: var(--clr-blue-300);
-}
-.sponsor:hover {
-  border-color: var(--clr-pink-400)
-}
 
 .logo {
   width: 100%;
