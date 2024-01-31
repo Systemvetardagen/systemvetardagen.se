@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <section v-if="posts">
-      <h1 class="title">{{ $t("about-heading") }}</h1>
+      <h2>{{$t('about_page.project_group.heading')}}</h2>
       <!-- <AboutTeam :posts="this.posts.filter((i)=> {i.team ==='wdd'})"/>  -->
       <AboutTeam :posts="postsWDD" teamName="Web Development & Design"/>
     </section>

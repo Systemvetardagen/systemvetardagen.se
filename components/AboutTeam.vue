@@ -1,6 +1,6 @@
 <template>
     <div>
-    <h3 class="heading-wdd">{{teamName}}</h3>
+    <p class="heading">{{teamName.toUpperCase()}}</p>
     <div class="leader-cards">
         <about-card 
             v-for="post in posts" 
@@ -120,9 +120,14 @@ section {
   margin-bottom: 1rem;
 }
 
-.heading-wdd {
-  margin-top: 2rem;
-  align-self: flex-start;
+.heading {
+  color: #000;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.3125rem;
+  padding: 1rem 0;
 }
 
 .expand-btn {
