@@ -8,6 +8,7 @@
     <info />
     <faq />
     <oldCatalog />
+    <studentNode/>
     <!-- <Button title="See Map" link="map"/> -->
     <contact />
   </div>
@@ -24,6 +25,7 @@ import faq from "@/components/subViews/landing/faq.vue";
 import oldCatalog from "@/components/subViews/landing/oldCatalog.vue";
 import contact from "@/components/subViews/landing/contact.vue";
 import sponsors from "@/components/subViews/landing/sponsors.vue";
+import studentNode from '@/components/subViews/landing/studentnode.vue'
 
 export default {
   components: {
@@ -34,6 +36,7 @@ export default {
     oldCatalog,
     contact,
     sponsors,
+    studentNode
   },
   name: "IndexPage",
 };
