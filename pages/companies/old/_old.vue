@@ -32,16 +32,16 @@
 
         <!-- CCOMPANY INFO -->
         <div class="post-info">
-          <h3 style="align-self: center">{{ $t("company-info") }}</h3>
+          <h3 style="align-self: center">{{ $t("company_page.company-info") }}</h3>
           <div class="table">
             <p v-if="post.founded" class="table-left">
-              {{ $t("established") }}
+              {{ $t("company_page.established") }}
             </p>
             <p v-if="post.founded" class="table-right">{{ post.founded }}</p>
-            <p v-if="post.slogan" class="table-left">{{ $t("slogan") }}</p>
+            <p v-if="post.slogan" class="table-left">{{ $t("company_page.slogan") }}</p>
             <p v-if="post.slogan" class="table-right">{{ post.slogan }}</p>
             <p v-if="post.number_of_employees_in_Sweden" class="table-left">
-              {{ $t("employees-sv") }}
+              {{ $t("company_page.employees-sv") }}
             </p>
             <p v-if="post.number_of_employees_in_Sweden" class="table-right">
               {{ post.number_of_employees_in_Sweden }}
@@ -50,7 +50,7 @@
               v-if="post.number_of_employees_in_internationally"
               class="table-left"
             >
-              {{ $t("employees-int") }}
+              {{ $t("company_page.employees-int") }}
             </p>
             <p
               v-if="post.number_of_employees_in_internationally"
@@ -60,7 +60,7 @@
             </p>
           </div>
           <p v-if="post.area_of_business" style="font-weight: 600">
-            {{ $t("bis-area") }}
+            {{ $t("company_page.bis-area") }}
           </p>
           <p v-if="post.area_of_business">{{ post.area_of_business }}</p>
         </div>
@@ -121,25 +121,25 @@
           <div class="match-list">
             <h3>
               {{ post.title }}
-              {{ $t("looking-for") }}
+              {{ $t("company_page.looking-for") }}
             </h3>
             <div class="match-items">
               <div class="match-list-items">
                 <ul>
-                  <p style="font-weight: 700">{{ $t("programs") }}</p>
+                  <p style="font-weight: 700">{{ $t("company_page.programs") }}</p>
                   <li v-for="program in post.program" :key="program.id">
                     {{ program }}
                   </li>
                 </ul>
                 <ul>
-                  <p style="font-weight: 700">{{ $t("positions") }}</p>
+                  <p style="font-weight: 700">{{ $t("company_page.positions") }}</p>
                   <li v-for="position in post.positions" :key="position.id">
                     {{ position }}
                   </li>
                 </ul>
               </div>
               <div v-if="post.qualifications" class="match-qualifications">
-                <p style="font-weight: 700">{{ $t("qualifications") }}</p>
+                <p style="font-weight: 700">{{ $t("company_page.qualifications") }}</p>
                 <p>{{ post.qualifications }}</p>
               </div>
             </div>
@@ -147,7 +147,7 @@
               v-if="post.link_to_positions"
               :href="post.link_to_positions"
               class="link"
-              >{{ $t("company-learn-more") }} {{ post.title }} ></a
+              >{{ $t("company_page.learn-more") }} {{ post.title }} ></a
             >
           </div>
           <!-- END MATCH LIST -->
@@ -156,7 +156,7 @@
 
         <!-- COMPANY CONTACT -->
         <div v-if="post.contact_persons" class="post-contact">
-          <h3>{{ $t("company-contact") }}</h3>
+          <h3>{{ $t("company_page.contact") }}</h3>
 
           <div
             v-for="contact in this.post.contact_persons"
@@ -194,7 +194,7 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >{{ $t("go-back") }}</Button
+            >{{ $t("company_page.go-back") }}</Button
           >
 
           <Button
@@ -203,7 +203,7 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >{{ $t("go-top") }}
+            >{{ $t("company_page.go-top") }}
           </Button>
         </div>
         <!-- END BOTTOM BUTTONS -->

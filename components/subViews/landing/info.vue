@@ -1,23 +1,23 @@
 <template>
     <section>
         <div class="info">
-          <h2 class="info-heading">{{ $t('info_heading') }}</h2>
+          <h2 class="info-heading">{{ $t('landing_page.info.info_heading') }}</h2>
           <div class="info-lists">
             <div>
-                <h3 style="color: var(--clr-pink-600); text-align: center;">{{ $t('before_the_fair') }}</h3>
+                <h3 style="color: var(--clr-pink-600); text-align: center;">{{ $t('landing_page.info.before_the_fair') }}</h3>
                 <p><ul class="list">
-                    <li>{{ $t('before_the_fair_description1') }}</li>
-                    <li>{{ $t('before_the_fair_description2') }}</li>
-                    <li>{{ $t('before_the_fair_description3') }}</li>
+                    <li>{{ $t('landing_page.info.before_the_fair_description1') }}</li>
+                    <li>{{ $t('landing_page.info.before_the_fair_description2') }}</li>
+                    <li>{{ $t('landing_page.info.before_the_fair_description3') }}</li>
                 </ul></p>
-                <p>{{ $t('before_the_fair_description4') }}</p>
+                <p>{{ $t('landing_page.info.before_the_fair_description4') }}</p>
             </div>
             <div>
-                <h3 style="color: var(--clr-pink-600); text-align: center;">{{ $t('during_the_fair') }}</h3>
+                <h3 style="color: var(--clr-pink-600); text-align: center;">{{ $t('landing_page.info.during_the_fair') }}</h3>
                 <p><ul>
-                    <li>{{ $t('during_the_fair_description1') }}</li>
-                    <li>{{ $t('during_the_fair_description2') }}</li>
-                    <li>{{ $t('during_the_fair_description3') }}</li>
+                    <li>{{ $t('landing_page.info.during_the_fair_description1') }}</li>
+                    <li>{{ $t('landing_page.info.during_the_fair_description2') }}</li>
+                    <li>{{ $t('landing_page.info.during_the_fair_description3') }}</li>
                 </ul></p>
             </div>
           </div>

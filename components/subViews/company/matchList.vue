@@ -1,5 +1,6 @@
 <template>
     <div class="match-list">
+
       <h3>
         {{ post.title }}
         {{ $t("looking-for") }}
@@ -51,6 +52,7 @@
               {{ position }}
             </li>
           </ul>
+
         </div>
 
 

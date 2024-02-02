@@ -1,6 +1,6 @@
 <template>
   <footer class="footer-content">
-    <div class="line"></div>
+    <GradientLine />
     <div class="content-container">
       <div class="socials-container">
         <!-- Facebook -->
@@ -31,12 +31,14 @@
 import InstagramLogo from "@/components/icons/InstagramLogo.vue";
 import FacebookLogo from "@/components/icons/FacebookLogo.vue";
 import LinkedInLogo from "@/components/icons/LinkedInLogo.vue";
+import GradientLine from "@/components/GradientLine";
 
 export default {
   components: {
     InstagramLogo,
     FacebookLogo,
     LinkedInLogo,
+    GradientLine
   },
   methods: {
 }
@@ -52,16 +54,7 @@ export default {
   padding: 0;
   background-color: white;
   margin: 0;
-}
-
-.line {
-  width: 100%;
-  height: 3px;
-  background-color: gold;
-  margin-bottom: 0;
-  padding: 0;
-  background: rgb(255,204,112);
-  background: linear-gradient(45deg, rgba(65,72,208,1) 0%, rgba(200,80,192,1) 50%, rgba(255,204,112,1) 100%);
+  height: fit-content;
 }
 
 .footer-content .socials-container {
@@ -73,7 +66,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 1.4rem;
+  row-gap: 1rem;
   column-gap: 4rem;
   height: 100%;
   align-items: center;
@@ -92,7 +85,7 @@ export default {
 .socials-container {
   display: flex;
   gap: 1.6rem;
-  height: 100%;
+  height: fit-content;
 }
 
 .socials-container a {
@@ -100,7 +93,6 @@ export default {
 }
 
 .socials-container svg {
-  height: fit-content;
   width: 1.8rem;
   fill: #666666;
 }

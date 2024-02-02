@@ -2,12 +2,12 @@
   <main class="wrapper">
     <section v-if="posts">
       <h1 v-if="isPreview" class="preview-title">This is a preview of the page</h1>
-      <h1 class="title">{{ $t("companies") }}</h1>
+      <h1 class="title">{{ $t("catalog_page.companies") }}</h1>
 
       <div class="filter-paragraph">
-        {{ $t("showing-companies-for") }}
+        {{ $t("catalog_page.showing-companies-for") }}
         <span class="dropdown-toggle programs-toggle" @click="programsVisible = !programsVisible">
-          {{ filterText(selectedPrograms, $t("programs").toLowerCase()) }}
+          {{ filterText(selectedPrograms, $t("catalog_page.programs").toLowerCase()) }}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
             class="chevron">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -19,12 +19,12 @@
             <label :for="program">{{ program.name }}</label>
           </div>
           <button @click.prevent="selectedPrograms = []">
-            {{ $t("clear-selection") }}
+            {{ $t("catalog_page.clear-selection") }}
           </button>
         </div>
-        {{ $t("and") }}
+        {{ $t("catalog_page.and") }}
         <span class="dropdown-toggle positions-toggle" @click="positionsVisible = !positionsVisible">
-          {{ filterText(selectedPositions, $t("positions").toLowerCase()) }}
+          {{ filterText(selectedPositions, $t("catalog_page.positions").toLowerCase()) }}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
             class="chevron">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -37,7 +37,7 @@
             <label :for="position">{{ position.name }}</label>
           </div>
           <button @click.prevent="selectedPositions = []">
-            {{ $t("clear-selection") }}
+            {{ $t("catalog_page.clear-selection") }}
           </button>
         </div>
       </div>
@@ -45,7 +45,7 @@
         selectedPrograms = [];
       selectedPositions = [];
       " class="clear-filter-btn">
-        {{ $t("clear-filters") }}
+        {{ $t("catalog_page.clear-filters") }}
       </button>
 
       <div class="search-field">
@@ -55,7 +55,8 @@
             clip-rule="evenodd" />
         </svg>
 
-        <input class="search-input" type="text" ref="inputRef" v-model.trim="searchText" placeholder="Search companies" />
+        <input class="search-input" type="text" ref="inputRef" v-model.trim="searchText" :placeholder="$t('catalog_page.search_input.placeholder')"
+       />
         <svg v-if="searchText" @click="clearInputAndFocus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
           fill="currentColor" class="clear-search-button">
           <path
@@ -65,8 +66,8 @@
 
       <div class="company-cards">
         <div v-if="!showCompanies && !isPreview">
-          <h2>Companies coming soon</h2>
-          <h2>Check out the <NuxtLink :to="localePath('/companies/old')">old</NuxtLink> catalog</h2>
+          <h2>{{$t('catalog_page.coming_soon')}}</h2>
+          <!-- <h2>Check out the <NuxtLink :to="localePath('/companies/old')">old</NuxtLink> catalog</h2> -->
         </div>
         <div v-for="post of filteredPosts" :key="post.company_name">
           <!---<div v-if="showEnglishMessage">
@@ -183,7 +184,7 @@ export default {
   },
 
   created() {
-    this.allString = this.$t("all");
+    this.allString = this.$t("catalog_page.all");
   },
 
   mounted() {
@@ -326,6 +327,7 @@ label {
   width: 100%;
   outline: none;
   border: none;
+  background:transparent;
 }
 
 .search-field:focus-within {
