@@ -289,11 +289,14 @@ export default {
   padding: 2rem;
   border-radius: 1rem;
   background-color: var(--clr-white);
-  margin-top: 1rem;
   box-shadow: 0 0.25rem 0.5rem #0002;
   display: flex;
   flex-direction: column;
   line-height: 150%;
+  text-align: left;
+  left: 50%;
+  transform: translateX(-50%); 
+
 }
 
 .dropdown-filter-item {
@@ -321,6 +324,13 @@ export default {
   margin-top: 2rem;
   font-family: work-sans;
   position: relative;
+  width: 100%;
+  /* display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  justify-content: center; */
+  text-align: center;
+
 }
 
 .programs-toggle {
@@ -418,8 +428,13 @@ button {
   text-decoration: underline;
   margin-bottom: 1rem;
 }
-.wrapper {
+section {
   background: #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding-top: 5rem;
 }
 
 .cat-heading {

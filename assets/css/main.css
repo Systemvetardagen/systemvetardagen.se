@@ -328,7 +328,7 @@ address {
 
 /* Hero */
 .hero,
-section,
+
 footer {
   padding: 1.5rem 1.5rem;
   max-width: 100%;
@@ -336,22 +336,18 @@ footer {
   flex-direction: column;
 }
 
-section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  align-items: flex-start;
-}
+
 
 @media (min-width: 640px) {
   .hero {
     padding-bottom: 1.5rem;
   }
 
-section,
+
 footer {
     padding: 4rem;
   }
-  section,
+
 footer {
     align-items: center;
   }
