@@ -370,8 +370,8 @@ address {
 
 
 /* Hero */
+.hero,
 
-section,
 footer {
   padding: 1.5rem 1.5rem;
   max-width: 100%;
@@ -388,7 +388,7 @@ section {
 @media (min-width: 640px) {
 
 
-section,
+
 footer {
     padding: 4rem;
   }
