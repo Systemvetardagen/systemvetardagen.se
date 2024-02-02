@@ -1,4 +1,4 @@
-img<template>
+<template>
   <div class="wrapper">
     <section class="content">
       <h1>{{ $t("catalog_page.catalog") }} 2023</h1>
