@@ -12,6 +12,8 @@
     },
     "heading": "About",
     "project_group": {
+      "collapse": "Hide team",
+      "expand": "View team",
       "heading": "Project Group 2024"
     }
   },

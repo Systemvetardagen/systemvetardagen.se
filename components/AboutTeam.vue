@@ -14,7 +14,7 @@
        
         
     </div>
-    <button v-if="members.length != 0" class="expand-btn" @click="toggleExpansion()">{{buttonText}}</button>
+    <button v-if="members.length != 0" class="expand-btn" @click="toggleExpansion()">{{isExpanded ? $t('about_page.project_group.collapse') : $t('about_page.project_group.expand')}}</button>
     <div class="posts-wdd" v-if="isExpanded">
       <!-- change to post.position=='member' -->
         <div v-for="post in members"  :key="post.id" class="post-wdd">
@@ -95,7 +95,7 @@ export default {
       return this.$i18n.locale == "sv";
     },
     buttonText() {
-      return this.isExpanded ? 'See less' : 'See more';
+      return this.isExpanded ? $t('about_page.project_group.expand') : $t('about_page.project_group.collapse');
     },
     head() {
       return this.posts.filter(p => p.position === "head")[0]

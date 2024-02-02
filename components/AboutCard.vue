@@ -103,7 +103,9 @@ export default {
   margin: 0
 }
 
-
+img {
+  object-fit: cover;
+}
 
 
 

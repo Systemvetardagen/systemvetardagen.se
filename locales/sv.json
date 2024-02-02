@@ -12,6 +12,8 @@
     },
     "heading": "Om oss",
     "project_group": {
+      "collapse": "Dölj team",
+      "expand": "Visa team",
       "heading": "Projektgrupp 2024"
     }
   },
