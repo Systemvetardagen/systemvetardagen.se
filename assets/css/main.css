@@ -168,6 +168,10 @@ strong {
   font-weight: 500;
 }
 
+p {
+  line-height: 1.5;
+}
+
 
 /* Text */
 h1,
@@ -385,8 +389,8 @@ footer {
 }
 
 section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  /*padding-top: 5rem;*/
+  /*padding-bottom: 5rem;*/
   align-items: flex-start;
 }
 
