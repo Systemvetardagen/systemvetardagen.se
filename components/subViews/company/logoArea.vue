@@ -54,20 +54,21 @@ export default {
   flex-direction: row;
   margin-top: 1rem;
   width: 100%;
+  max-width: 1000px;
 }
 
-.area-of-business {
+.area-of-business p {
+  font-family: "IBMPlexMono" !important;
+  line-height: 33px;
   text-align: center;
   margin: 1rem;
-  font-size: 18px;
+  font-size: 0.8rem;
   font-weight: 400;
   flex: 1;
+  color: var(--clr-grey-700);
+  max-width: 700px;
 }
 
-.area-of-business p{
-font-family: "IBMPlexMono" !important;
-line-height: 33px;
-}
 .logo {
   display: flex;
   aspect-ratio: 4 / 3;
@@ -91,7 +92,7 @@ line-height: 33px;
 }
 
 .content-container {
-  padding: 1.2rem 2rem;
+  /*padding: 1.2rem 2rem;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -113,13 +114,14 @@ line-height: 33px;
 
 .socials-container svg {
   height: fit-content;
-  width: 1.8rem;
+  width: 1.4rem;
   fill: #666666;
 }
 
 .socials-container svg:hover {
   fill: black;
 }
+
 @media only screen and (max-width: 850px) {
 
   .area-of-business {
