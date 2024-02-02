@@ -13,11 +13,11 @@
         </iframe>
     </div>
     <!-- END YOUTUBE VIDEO -->
-    <div
-    v-if="post.sponsor_extra_text"
-    v-html="markdownToHtml"
-    class="extra-text"
-    ></div>
+    <markdownArea
+      v-if="post.sponsor_extra_text"
+      :htmlContent="markdownToHtml"
+      class="extra-text"
+    ></markdownArea>
     <!-- SPONSOR IMAGES // GALLERY -->
     <div v-if="post.sponsor_images" class="gallery">
     <div class="column">
@@ -52,16 +52,25 @@
 
 <script>
   import marked from "marked"
+  import markdownArea from "./markdownArea.vue"
 
   export default {
+      components: {
+        markdownArea
+      },
       props: {
           post: Object
+      },
+      data() {
+        return {
+          contentChanged: false,
+        }
       },
       computed: {
         markdownToHtml() {
           return marked.parse(this.post.sponsor_extra_text);
         },
-      }
+      },
   }
 
 </script>
@@ -71,6 +80,7 @@
 .extra-text {
   margin-top: 4rem;
 }
+
 
 /* YouTube Video */
 .video {
