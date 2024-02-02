@@ -211,8 +211,8 @@ input, textarea, p, li, td {
 
 ul {
   align-items: center;
-  max-width: 50ch;
-  padding-left: 1rem;
+  /*max-width: 50ch;*/
+  /*padding-left: 1rem;*/
 }
 
 li {
