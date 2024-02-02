@@ -52,23 +52,18 @@
 
         <!-- BOTTOM BUTTONS -->
         <div class="bottom-buttons">
-          <Button
-            :link="localePath('/companies/')"
-            borderCol="--crl-black"
-            bColor="transparent"
-            tColor="--crl-black"
-            class="bb"
-            >{{ $t("company_page.go-back") }}</Button
+          <a
+            :href="localePath('/companies/')"
+
+            class="btn"
+            >{{ $t("company_page.go-back") }}</a
           >
 
-          <Button
-            link="#top"
-            borderCol="--crl-black"
-            bColor="transparent"
-            tColor="--crl-black"
-            class="bb"
+          <a
+            href="#top"
+            class="btn"
             >{{ $t("company_page.go-top") }}
-          </Button>
+        </a>
         </div>
         <!-- END BOTTOM BUTTONS -->
       </article>
@@ -288,10 +283,33 @@ export default {
   display: flex;
   flex-direction: column;
   padding-top: 3rem;
+  gap: 2rem;
 }
-.bb {
-  margin-bottom: 2rem;
-}
+
+.btn {
+    /* Alignment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Shape and Background */
+    padding: 0.6em 1.5em;
+    border: none;
+    border-radius: 3rem;
+
+    /* Text */
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.22rem;
+    color: var(--clr-grey-900);
+    border: solid 0.15rem var(--clr-grey-900);
+  }
+
+  .btn.hovered {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgb(245, 245, 245);
+  }
 
 /* DESKTOP MODIFICATIONS */
 @media only screen and (min-width: 768px) {
