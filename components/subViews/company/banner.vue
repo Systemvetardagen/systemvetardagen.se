@@ -29,12 +29,15 @@
     .banner {
     aspect-ratio: 3/1;
     max-width: 1000px;
+    width: 100%;
+    overflow: hidden;
     }
 
     .banner-img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
-    overflow: hidden;
+
     }
 
 
