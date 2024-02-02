@@ -2,6 +2,7 @@
     <div>
     <p class="heading">{{teamName.toUpperCase()}}</p>
     <div class="leader-cards">
+      <!-- should be two about-cards with v-if post.position=='head' and 'vice respectively' -->
         <about-card 
             v-for="post in posts" 
             v-if="lang(post.slug) && post.pos=='mngm'" 
@@ -12,6 +13,7 @@
     </div>
     <button class="expand-btn" @click="toggleExpansion()">{{buttonText}}</button>
     <div class="posts-wdd" v-if="isExpanded">
+      <!-- change to post.position=='member' -->
         <div v-for="post in posts" v-if="lang(post.slug) && post.pos=='member'" :key="post.id" class="post-wdd">
             <p class="post-name">{{ post.name }}</p>
             <p>{{ post.role }}</p>

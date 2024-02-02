@@ -2,7 +2,7 @@
   <div class="wrapper">
     <section v-if="posts">
       <h2>{{$t('about_page.project_group.heading')}}</h2>
-      <!-- <AboutTeam :posts="this.posts.filter((i)=> {i.team ==='wdd'})"/>  -->
+      <!-- Pass all team members to team as props.  -->
       <AboutTeam :posts="posts.filter((i) => i.team === 'wdd')" teamName="Web Development & Design"/>
     </section>
   </div>
