@@ -1,7 +1,7 @@
 <template>
     <div class="partnercontent">
 
-  
+
     <!-- YOUTUBE VIDEO -->
     <div v-if="post.sponsor_youtube_video" class="video">
         <iframe
@@ -67,7 +67,7 @@
 </script>
 
 <style scoped>
-    
+
 .extra-text {
   margin-top: 4rem;
 }
@@ -98,13 +98,14 @@ img {
   /* Mobile first */
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin: 4rem 0;
+  gap: 0.5rem;
+  margin: 2rem 0;
+
 }
 .gallery .column {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.5rem;
 }
 .gallery-img {
   border-radius: 10px;
@@ -117,11 +118,14 @@ img {
 }
 
 /* DESKTOP MODIFICATIONS */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 520px) {
   .gallery {
     flex-direction: row;
+    gap: 1rem;
+    margin: 4rem 0;
+
   }
-  
+
 }
 
 </style>
