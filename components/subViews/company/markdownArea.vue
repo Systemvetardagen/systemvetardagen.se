@@ -40,4 +40,8 @@
       margin: 0.2rem 0 0.7rem 0;
       line-height: 1.5;
     }
+
+    #htmlContainer a {
+      text-decoration: underline;
+    }
   </style>
