@@ -3,27 +3,30 @@
     <p class="heading">{{teamName.toUpperCase()}}</p>
     <div class="leader-cards">
       <!-- should be two about-cards with v-if post.position=='head' and 'vice respectively' -->
-        <about-card 
-            v-for="post in posts" 
-            v-if="lang(post.slug) && post.pos=='mngm'" 
-            :post="post" 
-            :key="post.id"
+        <about-card  
+            :post="head" 
+            :key="head.id"
         />
+        <about-card  
+            :post="vice" 
+            :key="vice.id"
+        />
+       
         
     </div>
-    <button class="expand-btn" @click="toggleExpansion()">{{buttonText}}</button>
+    <button v-if="members.length != 0" class="expand-btn" @click="toggleExpansion()">{{buttonText}}</button>
     <div class="posts-wdd" v-if="isExpanded">
       <!-- change to post.position=='member' -->
-        <div v-for="post in posts" v-if="lang(post.slug) && post.pos=='member'" :key="post.id" class="post-wdd">
+        <div v-for="post in members"  :key="post.id" class="post-wdd">
             <p class="post-name">{{ post.name }}</p>
             <p>{{ post.role }}</p>
             <div>
-            <a v-if="post.personal_mail" :href="'mailto:' + post.personal_mail">
+            <a v-if="post.email" :href="'mailto:' + post.email">
                 <MailIcon class="link-icon"/>
             </a>
-            <a v-if="post.portfolio_link" :href="post.portfolio_link">
+            <!-- <a v-if="post.portfolio_link" :href="post.portfolio_link">
                 <WWWIcon class="link-icon"/>
-            </a>
+            </a> -->
             <a v-if="post.linkedin_link" :href="post.linkedin_link">
                 <LinkedInLogo class="link-icon"/>
             </a>
@@ -61,15 +64,15 @@ export default {
     GitHubLogo
   },
   // This method vill fetch a list of all the cms entries in a specified folder
-  async asyncData({ $content, error }) {
-    let posts;
-    try {
-      posts = await $content("about").fetch(); //Gets the data from the content/about path
-    } catch (e) {
-      error({ message: "Posts not found" });
-    }
-    return { posts };
-  },
+  // async asyncData({ $content, error }) {
+  //   let posts;
+  //   try {
+  //     posts = await $content("about").fetch(); //Gets the data from the content/about path
+  //   } catch (e) {
+  //     error({ message: "Posts not found" });
+  //   }
+  //   return { posts };
+  // },
   methods: {
     lang(postName) { //Checks for current language
       let p = String(postName);
@@ -93,6 +96,15 @@ export default {
     },
     buttonText() {
       return this.isExpanded ? 'See less' : 'See more';
+    },
+    head() {
+      return this.posts.filter(p => p.position === "head")[0]
+    },
+    vice() {
+      return this.posts.filter(p => p.position === "vice")[0]
+    },
+    members() {
+      return this.posts.filter(p => p.position === "member")
     }
 
   },

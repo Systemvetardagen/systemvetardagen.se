@@ -2,8 +2,8 @@
   <div class="leader-card">
     
     <img
-      v-if="post.picture"
-      :src="require('@/assets' + post.picture)"
+      v-if="post.portrait"
+      :src="post.portrait"
       alt="portrait"
       class="portrait-img"
     />
@@ -16,10 +16,10 @@
         <a v-if="post.linkedin_link" :href="post.linkedin_link">
           <LinkedInLogo class="link-icon"/>
         </a>
-        <a v-if="post.portfolio_link" :href="post.portfolio_link">
+        <!-- <a v-if="post.portfolio_link" :href="post.portfolio_link">
           <WWWIcon class="link-icon"/>
-        </a>
-        <a v-if="post.personal_mail" :href="'mailto:' + post.personal_mail">
+        </a> -->
+        <a v-if="post.email" :href="'mailto:' + post.email">
           <MailIcon class="link-icon"/>
         </a>
         <a v-if="post.github" :href="'mailto:' + post.github">
