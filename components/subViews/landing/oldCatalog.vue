@@ -14,9 +14,9 @@
 
       <!-- CATALOG TEXT -->
       <div class="catalog-text">
-        <h2 style="color: var(--clr-blue-600)">{{ $t("old_cat_title") }}</h2>
-        <p>{{ $t("old_cat_description") }}</p>
-        <Button :link="localePath('/catalog')">{{ $t("old_cat_btn") }}</Button>
+        <h2 style="color: var(--clr-blue-600)">{{ $t("landing_page.old_cat_title") }}</h2>
+        <p>{{ $t("landing_page.old_cat_description") }}</p>
+        <Button :link="localePath('/catalog')">{{ $t("landing_page.old_cat_btn") }}</Button>
       </div>
     </div>
   </section>

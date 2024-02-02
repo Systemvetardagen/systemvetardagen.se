@@ -50,7 +50,7 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >{{ $t("go-back") }}</Button
+            >{{ $t("company_page.go-back") }}</Button
           >
 
           <Button
@@ -59,7 +59,7 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >{{ $t("go-top") }}
+            >{{ $t("company_page.go-top") }}
           </Button>
         </div>
         <!-- END BOTTOM BUTTONS -->
@@ -242,6 +242,7 @@ export default {
   display: flex;
   flex-direction: column;
   max-width: 60ch;
+  padding: 0 1.5rem;
 }
 .post-content > p {
   padding-bottom: 2rem;
