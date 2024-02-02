@@ -143,17 +143,23 @@ export default {
         translations: post.translations || [],
       };
       const data_detail = await API_Call_Company_Details(ids);
-      post.programs_data = {
+      post.programs_data_master = {
+        sv: [],
+        en: []
+      }
+      post.programs_data_bachelor = {
         sv: [],
         en: []
       }
 
       data_detail.programs.forEach(item => {
-        const { languages_code, program } = item;
+        const { languages_code, program, is_master } = item;
         if (languages_code === 'en') {
-          post.programs_data.en.push(program);
+          if(is_master) post.programs_data_master.en.push(program);
+          else post.programs_data_bachelor.en.push(program);
         } else if (languages_code === 'sv') {
-          post.programs_data.sv.push(program);
+          if(is_master) post.programs_data_master.sv.push(program);
+          else post.programs_data_bachelor.sv.push(program);
         }
       });
 
@@ -254,6 +260,7 @@ export default {
   display: flex;
   flex-direction: column;
   max-width: 60ch;
+  padding: 0 1.5rem;
 }
 .post-content > p {
   padding-bottom: 2rem;

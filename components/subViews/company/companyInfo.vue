@@ -27,7 +27,7 @@
 </template>
 
 <script>
-  import ShadowBox from '@/Components/ShadowBox.vue/'
+  import ShadowBox from '@/components/ShadowBox.vue/'
   export default {
       props: {
           post: Object,

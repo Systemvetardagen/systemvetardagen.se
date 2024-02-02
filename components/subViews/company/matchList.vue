@@ -1,36 +1,63 @@
 <template>
     <div class="match-list">
-          <h3>
-            {{ post.title }}
-            {{ $t("company_page.looking-for") }}
-          </h3>
-          <div class="match-items">
-            <div class="match-list-items">
-              <ul>
-                <p style="font-weight: 700">{{ $t("company_page.programs") }}</p>
-                <li v-for="program in post.programs_data[locale]" :key="program.id">
-                  {{ program }}
-                </li>
-              </ul>
-              <ul>
-                <p style="font-weight: 700">{{ $t("company_page.positions") }}</p>
-                <li v-for="position in post.positions_data[locale]" :key="position.id">
-                  {{ position }}
-                </li>
-              </ul>
-            </div>
-            <div v-if="post.qualifications" class="match-qualifications">
-              <p style="font-weight: 700">{{ $t("company_page.qualifications") }}</p>
-              <p>{{ post.qualifications[locale] }}</p>
-            </div>
-          </div>
-          <a
-            v-if="post.link_to_positions"
-            :href="post.link_to_positions"
-            class="link"
-            >{{ $t("company_page.learn-more") }} {{ post.title }} ></a
-          >
+
+      <h3>
+        {{ post.title }}
+        {{ $t("looking-for") }}
+      </h3>
+      <div class="items">
+
+        <!-- Section: Bachelors -->
+        <div class="section">
+          <p class="section-heading">{{ $t("programs") }}</p>
+          <ul class="tag-list">
+            <li
+              class="tag"
+              style="background-color: var(--clr-pink-600);"
+              v-for="program in post.programs_data_bachelor[locale]"
+              :key="program.id">
+              {{ program }}
+            </li>
+          </ul>
         </div>
+
+         <!-- Section: Masters -->
+        <div class="section">
+          <p class="section-heading">{{ $t("master_programs") }}</p>
+          <ul class="tag-list">
+            <li
+              class="tag"
+              v-for="program in post.programs_data_master[locale]"
+              :key="program.id">
+              {{ program }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Section: Qualifications -->
+        <div v-if="post.qualifications" class="section">
+          <p class="section-heading">{{ $t("qualifications") }}</p>
+          <p class="border-box">{{ post.qualifications[locale] }}</p>
+        </div>
+
+        <!-- Section: Positions -->
+        <div class="section">
+          <p class="section-heading">{{ $t("positions") }}</p>
+          <ul class="tag-list">
+            <li
+              class="tag"
+              style="background-color: var(--clr-blue-600);"
+              v-for="position in post.positions_data[locale]"
+              :key="position.id">
+              {{ position }}
+            </li>
+          </ul>
+
+        </div>
+
+
+      </div>
+    </div>
 </template>
 
 <script>
@@ -44,42 +71,82 @@
 </script>
 
 <style scoped>
-    /* MATCH LIST */
+/* MATCH LIST */
+li {
+  margin: 0;
+}
 .match-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 0;
-}
-
-.match-items {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   padding: 2rem 0;
-  border-top: 2px var(--clr-grey-300) solid;
-  border-bottom: 2px var(--clr-grey-300) solid;
 }
 
-.match-list-items {
+.items {
   display: flex;
   flex-direction: column;
-  align-items: space-around;
-  justify-content: space-around;
-  width: clamp(30ch, 80vw, 60ch);
+  align-items: center;
+  gap: 1rem;
+  padding: 0rem 0;
 }
 
-.match-list > ul > li {
-  font-weight: 10px;
+.section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 0;
+  line-height: 1.5;
+  text-align: center;
 }
+
+.tag-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  /*padding-top: 0rem;*/
+  align-items: flex-start;
+}
+
+.tag {
+  display: flex;
+  padding: 0.3rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* max-width: 15rem; */
+  text-align: center;
+  border-radius: 1.875rem;
+  background: #6CAF61;
+  color: white;
+  font-size: 0.9rem;
+  /* align-self: center; */
+}
+
+.section-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.border-box {
+  border-radius: 0.9375rem;
+  border: 1px solid var(--clr-grey-200);
+  margin-top: 1rem;
+  padding: 1.6rem 2rem;
+  font-size: 0.9rem;
+  background-color: white;
+}
+
+
+
 /* DESKTOP MODIFICATIONS */
 @media only screen and (min-width: 768px) {
-  
-  .match-list-items {
+
+  .list-items {
     flex-direction: row;
   }
 
-  
+
 }
 
 </style>

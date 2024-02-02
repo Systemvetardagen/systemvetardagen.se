@@ -11,6 +11,7 @@
             alt="No sponsor image"
             class="banner-img"
           />
+
           <div class="banner-shade"></div>
           <div class="banner-overlay">
             <!-- <p class="post-location">{{ $t("location") }}: TBA</p>
@@ -19,6 +20,7 @@
           </div>
           <div class="banner-bar"></div>
         </div>
+
 </template>
 
 <script>
@@ -33,40 +35,15 @@
 <style scoped>
     /* BANNER */
     .banner {
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-    width: 100%;
-    max-height: 18rem;
+    aspect-ratio: 3/1;
+    max-width: 1000px;
     }
-    .banner-shade {
-    background: RGB(0, 0, 0, 0.5);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
-    }
-    .banner-overlay {
-    position: absolute;
-    bottom: 0;
-    color: var(--clr-white);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    }
-    .banner-overlay > h1 {
-    font-size: clamp(1.8rem, 5vw, 3rem);
-    }
-    .banner-overlay > p {
-    font-size: clamp(0.5rem, 2vw, 1rem);
-    }
+    
     .banner-img {
     width: 100%;
-
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
     object-fit: cover;
     }
+
     .banner-bar {
     position: absolute;
     bottom: calc(clamp(2px, 1vw, 10px) * -1);
@@ -95,6 +72,7 @@
     padding-top: clamp(0.2rem, 1vw, 0.5rem);
     color: white;
     }
+
 
 
 
