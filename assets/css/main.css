@@ -114,6 +114,11 @@ footer {
 
 
 
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url(assets\fonts\IBMPlexMono-Regular.ttf);
+}
+
 *,
 ::before,
 ::after {
