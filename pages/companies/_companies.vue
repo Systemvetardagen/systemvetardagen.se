@@ -291,10 +291,6 @@ export default {
     flex-direction: row;
   }
 
-  .post-info {
-    padding: 3rem 5rem;
-    border-radius: 1rem;
-  }
   .table {
     display: grid;
     grid-template-columns: 50% 50%;
