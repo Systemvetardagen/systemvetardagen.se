@@ -52,7 +52,6 @@ export default {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-top: 1rem;
   width: 100%;
   max-width: 1000px;
 }

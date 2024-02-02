@@ -11,14 +11,6 @@
             alt="No sponsor image"
             class="banner-img"
           />
-
-          <div class="banner-shade"></div>
-          <div class="banner-overlay">
-            <!-- <p class="post-location">{{ $t("location") }}: TBA</p>
-            <p v-if="post.banner" class="post-tag">// Sponsor</p>
-            <p v-else class="post-tag">//</p> -->
-          </div>
-          <div class="banner-bar"></div>
         </div>
 
 </template>
@@ -38,7 +30,7 @@
     aspect-ratio: 3/1;
     max-width: 1000px;
     }
-    
+
     .banner-img {
     width: 100%;
     object-fit: cover;

@@ -109,7 +109,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin: 2rem 0;
+  margin-top: 2rem;
 
 }
 .gallery .column {
@@ -132,7 +132,6 @@ img {
   .gallery {
     flex-direction: row;
     gap: 1rem;
-    margin: 4rem 0;
 
   }
 
