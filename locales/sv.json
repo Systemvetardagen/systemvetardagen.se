@@ -72,9 +72,10 @@
     "learn-more": "Läs mer om att jobba hos",
     "location": "Placering",
     "looking-for": "letar efter",
-    "positions": "Positioner",
-    "programs": "Program",
-    "qualifications": "Meriterande kunskaper",
+    "bachelors-programs-heading": "Kandidatprogram",
+    "masters-programs-heading": "Masterprogram",
+    "qualifications-heading": "Meriterande kunskaper",
+    "positions-heading": "Positioner",
     "slogan": "Slogan"
   },
   "landing_page": {
