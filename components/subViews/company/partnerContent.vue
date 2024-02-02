@@ -1,7 +1,7 @@
 <template>
     <div class="partnercontent">
 
-  
+
     <!-- YOUTUBE VIDEO -->
     <div v-if="post.sponsor_youtube_video" class="video">
         <iframe
@@ -67,7 +67,7 @@
 </script>
 
 <style scoped>
-    
+
 .extra-text {
   margin-top: 4rem;
 }
@@ -97,10 +97,10 @@ img {
 .gallery {
   /* Mobile first */
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 0.5rem;
-  margin: 4rem 1rem;
-  
+  margin: 2rem 0;
+
 }
 .gallery .column {
   display: flex;
@@ -123,9 +123,9 @@ img {
     flex-direction: row;
     gap: 1rem;
     margin: 4rem 0;
-    
+
   }
-  
+
 }
 
 </style>
