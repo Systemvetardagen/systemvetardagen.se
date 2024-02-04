@@ -16,12 +16,12 @@
         <div v-show="programsVisible" class="dropdown-container">
           <div class="dropdown-program dropdown-filter-item" v-for="program in allPrograms[locale]" :key="program.id">
             <input type="checkbox" :name="program" :id="program.id" :value="program" v-model="selectedPrograms" />
-            <label :for="program">{{ program.name }}</label>
-            <label class="tag master" v-if="program.master">Master</label>
-            <label class="tag bachelor" v-else>Bachelor</label>
+            <label :for="program.id">{{ program.name }}</label>
+            <span class="tag master" v-if="program.master">Master</span>
+            <span class="tag bachelor" v-else>Bachelor</span>
           </div>
-          <button @click.prevent="selectedPrograms = []">
-            {{ $t("catalog_page.clear_selection") }}
+          <button @click.prevent="selectedPrograms = []" class="clear-filter-btn">
+            {{ $t("catalog_page.clear_selections") }}
           </button>
         </div>
         {{ $t("catalog_page.and") }}
@@ -38,7 +38,7 @@
             <input type="checkbox" :name="position" :id="position.id" :value="position" v-model="selectedPositions" />
             <label :for="position">{{ position.name }}</label>
           </div>
-          <button @click.prevent="selectedPositions = []">
+          <button class="clear-filter-btn" @click.prevent="selectedPositions = []">
             {{ $t("catalog_page.clear_selection") }}
           </button>
         </div>
@@ -71,16 +71,15 @@
           <h2>Check out the <NuxtLink :to="localePath('/companies/old')">old</NuxtLink> catalog</h2>
         </div>
 
-
         <!-- Partners -->
         <div v-if="filteredPosts.some(post => post.sponsor)">
           <h3 class="cat-heading">{{$t('catalog_page.partners')}}</h3>
           <div class="company-cards">
             <!---<div v-if="showEnglishMessage">
               <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
-            <NuxtLink 
-              v-for="post of filteredPosts" 
-              :key="post.company_name" 
+            <NuxtLink
+              v-for="post of filteredPosts"
+              :key="post.company_name"
               v-if="post.sponsor"
               :to="localePath({
                 name: 'companies-companies',
@@ -97,9 +96,9 @@
         <div class="company-cards">
           <!---<div v-if="showEnglishMessage">
             <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
-          <NuxtLink 
-            v-for="post of filteredPosts" 
-            :key="post.company_name" 
+          <NuxtLink
+            v-for="post of filteredPosts"
+            :key="post.company_name"
             v-if="!post.sponsor"
             :to="localePath({
               name: 'companies-companies',
@@ -111,7 +110,7 @@
         </div>
       </div>
 
-      
+
     </section>
   </main>
 </template>
@@ -183,8 +182,8 @@ export default {
         } else if (item.languages_code === "sv") {
           allPrograms.sv.push({
             id: item.programs_id,
-            name: item.program,  
-            master: item.master,  
+            name: item.program,
+            master: item.master,
           });
         }
       });
@@ -284,19 +283,21 @@ export default {
 };
 </script>
 <style scoped>
+
 .dropdown-container {
   position: absolute;
-  padding: 2rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
   background-color: var(--clr-white);
   box-shadow: 0 0.25rem 0.5rem #0002;
   display: flex;
   flex-direction: column;
-  line-height: 150%;
-  text-align: left;
+  line-height: 1.5;
+  width: 100%;
+  line-height: 1.7;
+  top: 100%;
   left: 50%;
-  transform: translateX(-50%); 
-
+  transform: translateX(-50%);
 }
 
 .dropdown-filter-item {
@@ -421,10 +422,10 @@ button {
 }
 
 .clear-filter-btn {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
-.preview-title {  
+.preview-title {
   text-decoration: underline;
   margin-bottom: 1rem;
 }
