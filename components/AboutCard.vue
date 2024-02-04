@@ -105,6 +105,8 @@ export default {
 
 img {
   object-fit: cover;
+  aspect-ratio: 1/1;
+  object-position: center 30%;
 }
 
 
