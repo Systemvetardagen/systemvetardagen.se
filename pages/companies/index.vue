@@ -14,11 +14,20 @@
           </svg>
         </span>
         <div v-show="programsVisible" class="dropdown-container">
-          <div class="dropdown-program dropdown-filter-item" v-for="program in allPrograms[locale]" :key="program.id">
+          <p class="dropdown-heading">Bachelor</p>
+          <div class="dropdown-program dropdown-filter-item" v-for="program in allPrograms[locale]" v-if="!program.master" :key="program.id">
             <input type="checkbox" :name="program" :id="program.id" :value="program" v-model="selectedPrograms" />
             <label :for="program.id">{{ program.name }}</label>
-            <span class="tag master" v-if="program.master">Master</span>
-            <span class="tag bachelor" v-else>Bachelor</span>
+            <!-- <span class="tag master" v-if="program.master">Master</span>
+            <span class="tag bachelor" v-else>Bachelor</span> -->
+          </div>
+          <div class="dropdown-spacer"></div>
+          <p class="dropdown-heading">Master</p>
+          <div class="dropdown-program dropdown-filter-item" v-for="program in allPrograms[locale]" v-if="program.master" :key="program.id">
+            <input type="checkbox" :name="program" :id="program.id" :value="program" v-model="selectedPrograms" />
+            <label :for="program.id">{{ program.name }}</label>
+            <!-- <span class="tag master" v-if="program.master">Master</span>
+            <span class="tag bachelor" v-else>Bachelor</span> -->
           </div>
           <button @click.prevent="selectedPrograms = []" class="clear-filter-btn">
             {{ $t("catalog_page.clear_selections") }}
@@ -293,11 +302,7 @@ export default {
   display: flex;
   flex-direction: column;
   line-height: 1.5;
-  width: 100%;
-  line-height: 1.7;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 1rem;
 }
 
 .dropdown-filter-item {
@@ -325,12 +330,7 @@ export default {
   margin-top: 2rem;
   font-family: work-sans;
   position: relative;
-  width: 100%;
-  /* display: flex;
-  gap: 0.3rem;
-  align-items: center;
-  justify-content: center; */
-  text-align: center;
+
 
 }
 
@@ -458,6 +458,14 @@ section {
 }
 .bachelor {
   background-color: var(--clr-pink-800);
+}
+
+.dropdown-spacer {
+  padding: 0.5rem
+}
+
+.dropdown-heading {
+  font-weight: bold;
 }
 
 </style>
