@@ -1,31 +1,31 @@
 <template>
   <section id="FAQ" class="faq">
     <h2 style="color: var(--clr-blue-600); align-self: center">
-      {{ $t("frequently_asked_questions") }}
+      {{ $t("landing_page.info.frequently_asked_questions") }}
     </h2>
     <div class="faq-questions">
       <div class="faq-question">
-        <h3 style="color: var(--clr-pink-600)">{{ $t("question1") }}</h3>
+        <h3 style="color: var(--clr-pink-600)">{{ $t("landing_page.info.question1") }}</h3>
         <p>
-          {{ $t("answer1") }}
+          {{ $t("landing_page.info.answer1") }}
         </p>
       </div>
       <div class="faq-question">
-        <h3 style="color: var(--clr-pink-600)">{{ $t("question2") }}</h3>
+        <h3 style="color: var(--clr-pink-600)">{{ $t("landing_page.info.question2") }}</h3>
         <p>
-          {{ $t("answer2") }}
+          {{ $t("landing_page.info.answer2") }}
         </p>
       </div>
       <div class="faq-question">
-        <h3 style="color: var(--clr-pink-600)">{{ $t("question3") }}</h3>
+        <h3 style="color: var(--clr-pink-600)">{{ $t("landing_page.info.question3") }}</h3>
         <p>
-          {{ $t("answer3") }}
+          {{ $t("landing_page.info.answer3") }}
         </p>
       </div>
       <div class="faq-question">
-        <h3 style="color: var(--clr-pink-600)">{{ $t("question4") }}</h3>
+        <h3 style="color: var(--clr-pink-600)">{{ $t("landing_page.info.question4") }}</h3>
         <p>
-          {{ $t("answer4") }}
+          {{ $t("landing_page.info.answer4") }}
         </p>
       </div>
     </div>

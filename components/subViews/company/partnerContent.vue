@@ -1,7 +1,7 @@
 <template>
     <div class="partnercontent">
 
-  
+
     <!-- YOUTUBE VIDEO -->
     <div v-if="post.sponsor_youtube_video" class="video">
         <iframe
@@ -13,11 +13,11 @@
         </iframe>
     </div>
     <!-- END YOUTUBE VIDEO -->
-    <div
-    v-if="post.sponsor_extra_text"
-    v-html="markdownToHtml"
-    class="extra-text"
-    ></div>
+    <markdownArea
+      v-if="post.sponsor_extra_text"
+      :htmlContent="markdownToHtml"
+      class="extra-text"
+    ></markdownArea>
     <!-- SPONSOR IMAGES // GALLERY -->
     <div v-if="post.sponsor_images" class="gallery">
     <div class="column">
@@ -52,25 +52,35 @@
 
 <script>
   import marked from "marked"
+  import markdownArea from "./markdownArea.vue"
 
   export default {
+      components: {
+        markdownArea
+      },
       props: {
           post: Object
+      },
+      data() {
+        return {
+          contentChanged: false,
+        }
       },
       computed: {
         markdownToHtml() {
           return marked.parse(this.post.sponsor_extra_text);
         },
-      }
+      },
   }
 
 </script>
 
 <style scoped>
-    
+
 .extra-text {
   margin-top: 4rem;
 }
+
 
 /* YouTube Video */
 .video {
@@ -98,13 +108,14 @@ img {
   /* Mobile first */
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin: 4rem 0;
+  gap: 0.5rem;
+  margin-top: 2rem;
+
 }
 .gallery .column {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.5rem;
 }
 .gallery-img {
   border-radius: 10px;
@@ -117,11 +128,13 @@ img {
 }
 
 /* DESKTOP MODIFICATIONS */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 520px) {
   .gallery {
     flex-direction: row;
+    gap: 1rem;
+
   }
-  
+
 }
 
 </style>

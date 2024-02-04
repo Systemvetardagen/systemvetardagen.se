@@ -1,6 +1,29 @@
 <template>
   <div class="wrapper">
-    <section v-if="posts">
+    <!-- Banner -->
+    <img src="@/assets/img/guy-with-shirt-back.jpg" alt="Person wearing a systemvetardagen t-shirt" class="banner">
+    <!-- Text -->
+    <div class="text">
+      <div class="text-block">
+        <h3>{{$t('about_page.description.heading1')}}</h3>
+        <p>{{$t('about_page.description.para1')}}</p>
+      </div>
+      <div class="text-block">
+        <h3>{{$t('about_page.description.heading2')}}</h3>
+        <p>{{$t('about_page.description.para2')}}</p>
+      </div>
+      <div class="text-block">
+        <h3>{{$t('about_page.description.heading3')}}</h3>
+        <p>{{$t('about_page.description.para3')}}</p>
+      </div>
+      <div class="text-block">
+        <h3>{{$t('about_page.description.heading4')}}</h3>
+        <p>{{$t('about_page.description.para4')}}<a href="mailto:systemvetardagen@disk.su.se">systemvetardagen@disk.su.se</a>.</p>
+      </div>
+
+    </div>
+    
+       <section v-if="posts">
       <h2>{{$t('about_page.project_group.heading')}}</h2>
       <!-- Pass all team members to team as props.  -->
       <!-- <AboutTeam :posts="posts.filter((i) => i.team === 'wdd')" teamName="Web Development & Design"/>  -->
@@ -10,6 +33,7 @@
       </div>
 
     </section>
+
   </div>
 </template>
 
@@ -80,9 +104,43 @@ export default {
     // },
   },
 };
-</script> 
+</script>
 
 <style scoped>
+
+p {
+  line-height: 1.5;
+}
+
+.wrapper {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+.banner {
+  width: 100%;
+  max-width: 1200px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  aspect-ratio: 4 / 1;
+  object-fit: cover;
+  object-position: 0 34%;
+}
+/* Text */
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  max-width: 35rem;
+  justify-items: flex-start;
+  align-items: flex-start;
+  margin: 2rem;
+}
+
+
 /* TEMPORARY*/
 section {
   /* margin-top: 3rem; */
@@ -133,4 +191,13 @@ section {
 .title {
   align-self: center;
 }
+
+@media only screen and (max-width: 500px) {
+  .banner {
+    aspect-ratio: 5 / 2;
+    object-position: 0 34%;
+  }
+}
+
+
 </style>

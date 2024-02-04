@@ -1,12 +1,12 @@
 <template>
   <div class="wrapper">
     <section class="content">
-      <h1>{{ $t("catalog") }} 2023</h1>
+      <h1>{{ $t("catalog_page.catalog") }} 2023</h1>
       <Button :link="localePath('/companies/old') + '/'" bColor="gradient">{{
-        $t("all-companies-btn")
+        $t("catalog_page.all-companies-btn")
       }}</Button>
       <div class="sponsors">
-        <h2>{{ $t("sponsors") }}</h2>
+        <h2>{{ $t("catalog_page.sponsors") }}</h2>
         <div class="company-grid">
           <NuxtLink
             :to="localePath('/companies/old/accenture')"
@@ -68,11 +68,11 @@
         </div>
       </div>
       <div class="map">
-        <h2>{{ $t('map-heading') }}</h2>
+        <h2>{{ $t('catalog_page.map-heading') }}</h2>
         <img src="@/assets/img/map_companies.svg" alt="Map of company placement" class="map-img">
       </div>
       <div class="schedule">
-        <h2>{{ $t("aulanod-program") }}</h2>
+        <h2>{{ $t("catalog_page.aulanod-program") }}</h2>
         <div class="schedule-grid">
           <div v-for="event in schedule" :key="event.id" class="schedule-row">
             <p class="event-time">{{ event.time }}</p>
@@ -82,7 +82,7 @@
         </div>
       </div>
       <div class="blog-section">
-        <h2>{{ $t("posts-heading") }}</h2>
+        <h2>{{ $t("catalog_page.posts-heading") }}</h2>
         <BlogCard
           v-for="post of filteredPosts"
           :post="post"

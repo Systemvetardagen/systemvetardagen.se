@@ -1,4 +1,5 @@
 {
+
   "about_page": {
     "description": {
       "heading1": "What is Systemvetardagen?",
@@ -112,14 +113,17 @@
       "before_the_fair_description2": "Look through the catalog and make note of which companies you are interested in talking to.",
       "before_the_fair_description3": "Look into which company events you are interested in.",
       "before_the_fair_description4": "Now you’re well prepared for the fair!",
+
       "coming_soon": "Coming soon...",
       "disk": "student union DISKs",
       "disk_introduction1": "For the 27th year in a row, Systemvetardagen is arranged at Stockholm University. It is the ",
       "disk_introduction2": ", from the Department of Data and Systems Science DSV, own job fair day. During the day, valuable contacts are made between students and the business community. Systemvetardagen is a unique meeting place for students & organizations in the IT industry.",
+
       "during_the_fair": "During the fair",
       "during_the_fair_description1": "Use the fair map to find the companies that you are interested in.",
       "during_the_fair_description2": "Walk around on the fair floor and talk to the companies. They are there to come into contact with students, so take the opportunity!",
       "during_the_fair_description3": "Learn something new – During the day there will be company events in Aula NOD. Check out the schedule to see which events sound interesting to you!",
+
       "event_description2": "This year's edition of Systemvetardagen will take place in hybrid form. The fair will be digital, in combination with physical events and presentations. On the day of the fair, you will see virtual booths on the fair website where you can interact with the companies and take part of information about the companies and job advertisements that they have uploaded. During the day, live lectures will be held by our sponsors.",
       "frequently_asked_questions": "Frequently asked questions",
       "info_heading": "Tips for those who participate",
@@ -159,6 +163,7 @@
     "catalog": "Catalog",
     "home": "Home"
   },
+
   "temporaryLandingPage": {
     "aboveButton": "Want to take a look at last year's event?",
     "buttonLong": "Go to Systemvetardagen 2023",
@@ -167,9 +172,11 @@
     "heading": "Systemvetardagen 2024",
     "organizedBy": "Systemvetardagen is organized by the student union DISK at the Department of Computer and Systems Sciences at Stockholm University",
     "pdfHeader": "For companies:",
+
     "pdfLinkPrompt": "Get the 2024 info sheet",
     "shortDateInfo": "February 21, 2024 in Kista, Stockholm.",
     "subheading": "🚧 Under construction 🚧",
     "tagline": "One of the biggest job fairs in Sweden for students and employers in the IT‑business."
   }
 }
+

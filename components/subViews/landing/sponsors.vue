@@ -2,64 +2,13 @@
 <template>
   <div class="companies">
     <div class="company-content">
-      <h2 style="color: var(--clr-blue-700)">{{ $t("sponsors") }}</h2>
+      <p class="partner-heading">{{ $t("landing_page.sponsors") }}</p>
       <!-- Since we hadn't figured out nuxt-image yet, we hard-coded this grid. -->
       <div class="company-grid">
-        <NuxtLink :to="localePath('/companies/old/accenture')" class="company-logo">
-          <img
-            src="@/assets/img/company-logos/logo_accenture.png"
-            alt="Accenture"
-          />
-        </NuxtLink>
-        <NuxtLink :to="localePath('/companies/old/capgemini')" class="company-logo">
-          <img
-            src="@/assets/img/company-logos/logo_capgemini.png"
-            alt="Capgemini"
-          />
-        </NuxtLink>
-        <NuxtLink :to="localePath('/companies/old/capgemini')" class="company-logo">
-          <img src="@/assets/img/company-logos/logo_cygni.png" alt="Cygni" />
-        </NuxtLink>
-        <NuxtLink :to="localePath('/companies/old/fra')" class="company-logo">
-          <img src="@/assets/img/company-logos/logo_fra.jpg" alt="FRA" />
-        </NuxtLink>
-        <NuxtLink
-          :to="localePath('/companies/old/handelsbanken')"
-          class="company-logo"
-        >
-          <img
-            src="@/assets/img/company-logos/logo_handelsbanken.png"
-            alt="Handelsbanken"
-          />
-        </NuxtLink>
-        <NuxtLink
-          :to="localePath('/companies/old/innofactor')"
-          class="company-logo"
-        >
-          <img
-            src="@/assets/img/company-logos/logo_innofactor.png"
-            alt="Innofactor"
-          />
-        </NuxtLink>
-        <NuxtLink
-          :to="localePath('/companies/old/sweco')"
-          class="company-logo sweco"
-        >
-          <img
-            src="@/assets/img/company-logos/logo_sweco_black.png"
-            alt="Sweco"
-          />
-        </NuxtLink>
-        <NuxtLink :to="localePath('/companies/old/zimply')" class="company-logo">
-          <img src="@/assets/img/company-logos/logo_zimply.png" alt="Zimply" />
+        <NuxtLink v-for="partner in this.partners" :to="localePath(partner.path)" >
+          <p class="company-name">{{ partner.name }}</p>
         </NuxtLink>
       </div>
-      <Button
-        class="companies-btn"
-        :link="localePath('/companies/old') + '/'"
-        bColor="gradient"
-        >{{ $t("all-companies-btn") }}</Button
-      >
     </div>
   </div>
 </template>
@@ -81,6 +30,12 @@ export default {
         { name: "Cygni", img: "cygni.png" },
         { name: "Zimply Innovation", img: "zimply.png" },
       ],
+      partners: [
+        {name: "Akavia", path: "/companies"},
+        {name: "Accenture", path: "/companies"},
+        {name: "Handelsbanken", path: "/companies"},
+        {name: "Swedbank", path: "/companies"},
+      ]
     };
   },
 };
@@ -94,7 +49,7 @@ export default {
   height: auto;
   display: flex;
   justify-content: center;
-  padding: 5%;
+  padding: 0 2rem;
 }
 
 .company-content {
@@ -105,38 +60,34 @@ export default {
   align-content: center;
 }
 
-/* TTITLE */
-.company-conent > h2 {
-  align-self: center;
+.partner-heading {
+  color: var(--clr-grey-500);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
 }
+
 
 /* GRID */
 .company-grid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 1rem;
-  align-items: center;
-  align-content: center;
-}
-
-.company-logo {
-  border: none;
-  height: 7rem;
-  width: 10rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 4rem;
   align-items: center;
-  border-radius: 1rem;
+  justify-items: center;
   justify-content: center;
+  margin-top: 1rem;
 }
 
-.company-logo > img {
-  width: 90%;
+.company-name {
+  color: #6956CC;
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.02rem;
 }
-
-.sweco {
-  padding-bottom: 1.5rem;
-}
-
 
 /* BUTTON */
 
@@ -146,9 +97,6 @@ export default {
 
 /* MEDIA QUERRY */
 @media (min-width: 1024px) {
-  .company-grid {
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 2rem;
-  }
+
 }
 </style>
