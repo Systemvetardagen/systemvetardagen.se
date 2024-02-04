@@ -38,10 +38,6 @@ h3 {
 
 }
 
-.logo-wrapper:hover{
-  width: 17rem;
-  height: 9rem;
-}
 
 
 @media (min-width: 768px) {
@@ -51,19 +47,16 @@ h3 {
     padding: 1.5rem;
   }
 
-  .logo-wrapper:hover{
-  width: 15.5rem;
-  height: 9.5rem;
-}
+  .logo-wrapper:hover {
+    padding: 1rem;
+  }
+
   .sponsor {
     width: 20rem;
     height: 12rem;
     
   }
-  .sponsor:hover {
-    width: 21rem;
-    height: 13rem;
-  }
+
 }
 
 
