@@ -5,7 +5,9 @@
       <h1 class="title">{{ $t("catalog_page.companies") }}</h1>
 
       <div class="filter-paragraph">
+
         {{ $t("catalog_page.showing_companies_for") }}
+
         <span class="dropdown-toggle programs-toggle" @click="programsVisible = !programsVisible">
           {{ filterText(selectedPrograms, $t("catalog_page.programs").toLowerCase()) }}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
@@ -21,6 +23,7 @@
             <!-- <span class="tag master" v-if="program.master">Master</span>
             <span class="tag bachelor" v-else>Bachelor</span> -->
           </div>
+
           <div class="dropdown-spacer"></div>
           <p class="dropdown-heading">Master</p>
           <div class="dropdown-program dropdown-filter-item" v-for="program in allPrograms[locale]" v-if="program.master" :key="program.id">
@@ -31,6 +34,7 @@
           </div>
           <button @click.prevent="selectedPrograms = []" class="clear-filter-btn">
             {{ $t("catalog_page.clear_selection") }}
+
           </button>
         </div>
         {{ $t("catalog_page.and") }}
@@ -47,8 +51,10 @@
             <input type="checkbox" :name="position" :id="position.id" :value="position" v-model="selectedPositions" />
             <label :for="position">{{ position.name }}</label>
           </div>
+
           <button class="clear-filter-btn" @click.prevent="selectedPositions = []">
             {{ $t("catalog_page.clear_selection") }}
+
           </button>
         </div>
       </div>
@@ -56,7 +62,9 @@
         selectedPrograms = [];
       selectedPositions = [];
       " class="clear-filter-btn">
+
         {{ $t("catalog_page.clear_filters") }}
+
       </button>
 
       <div class="search-field">
@@ -66,7 +74,8 @@
             clip-rule="evenodd" />
         </svg>
 
-        <input class="search-input" type="text" ref="inputRef" v-model.trim="searchText" placeholder="Search companies" />
+        <input class="search-input" type="text" ref="inputRef" v-model.trim="searchText" :placeholder="$t('catalog_page.search_input.placeholder')"
+       />
         <svg v-if="searchText" @click="clearInputAndFocus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
           fill="currentColor" class="clear-search-button">
           <path
@@ -76,8 +85,8 @@
 
       <div class="company-card-container">
         <div v-if="!showCompanies && !isPreview">
-          <h2>Companies coming soon</h2>
-          <h2>Check out the <NuxtLink :to="localePath('/companies/old')">old</NuxtLink> catalog</h2>
+          <h2>{{$t('catalog_page.coming_soon')}}</h2>
+          <!-- <h2>Check out the <NuxtLink :to="localePath('/companies/old')">old</NuxtLink> catalog</h2> -->
         </div>
 
         <!-- Partners -->
@@ -372,6 +381,7 @@ label {
   width: 100%;
   outline: none;
   border: none;
+  background:transparent;
 }
 
 .search-field:focus-within {

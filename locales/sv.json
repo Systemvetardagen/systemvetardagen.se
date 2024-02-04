@@ -5,10 +5,12 @@
       "heading2": "Var och när äger det rum?",
       "heading3": "Vilka företag deltar i år?",
       "heading4": "Hur kan mitt företag delta?",
+
       "para1": "Systemvetardagen är en årlig karriärmässa för studenter och nyutexaminerade med fokus på IT-sektorn. Mässan arrangeras av studentföreningen DISK, en studentförening vid Institutionen för data- och systemvetenskap i Kista vid Stockholms universitet. Detta evenemang är helt gratis att delta i för alla studenter!",
       "para2": "År 2024 hålls mässan den 21 februari mellan kl. 10-16 på Kista Nod, beläget på Borgarfjordsgatan 12 i Stockholm. Ingen anmälan behövs, kom bara som du är!",
       "para3": "Du hittar alla deltagande företag i vår företagskatalog (kommer snart).",
       "para4": "Skicka ett e-postmeddelande till oss på "
+
     },
     "heading": "Om oss",
     "project_group_heading": "Projektgrupp"
@@ -18,6 +20,7 @@
   },
   "catalog_page": {
     "all": "alla",
+
     "all_companies": "Alla Företag",
     "all_companies_btn": "Se alla företag",
     "and": " och ",
@@ -29,6 +32,7 @@
     "companies": "Företag",
     "company_learn_more": "Läs mer om att jobba hos",
     "filter_positions": {
+
       "0": "Praktikplatser",
       "1": "Utlandstjänster",
       "2": "Traineeprogram",
@@ -36,7 +40,9 @@
       "4": "Examensarbete",
       "5": "Deltidstjänster"
     },
+
     "filter_programs": {
+
       "0": "Affärssystem & tjänstedesign",
       "1": "Data- & systemvetenskap",
       "2": "Datorspelsutveckling",
@@ -47,6 +53,7 @@
       "7": "Interaktionsdesign",
       "8": "Magister/Master"
     },
+
     "map_heading": "Företagsplacering",
     "partners": "Våra Partners",
     "positions": "Positioner",
@@ -55,6 +62,7 @@
     "qualifications": "Meriterande kunskaper",
     "read_more": "Läs mer",
     "showing_companies_for": "Visar företag för ",
+
     "sponsors": "Sponsorer"
   },
   "company_page": {
@@ -69,9 +77,11 @@
     "learn-more": "Läs mer om att jobba hos",
     "location": "Placering",
     "looking-for": "letar efter",
+
     "positions": "Positioner",
     "programs": "Program",
     "qualifications": "Meriterande kunskaper",
+
     "slogan": "Slogan"
   },
   "landing_page": {
@@ -87,6 +97,7 @@
       "name": "Namn",
       "title": "Kontakta oss"
     },
+
     "description": {
       "para1": "För 28:e året i rad arrangeras Systemvetardagen på Stockholms universitet Campus Kista.",
       "para2": "Det är en arbetsmarknadsdag organiserad av DISK, studentkåren på Institutionen för data- och systemvetenskap (DSV).",
@@ -131,7 +142,9 @@
       "the_fair_2022": "The fair 2022"
     },
     "links": {
+
       "about": "Läs mer om Systemvetardagen",
+
       "plan_visit": "Planera ditt besök"
     },
     "old_cat_btn": "Katalog 2023",
@@ -158,6 +171,7 @@
     "about": "Om oss",
     "catalog": "Katalog",
     "home": "Hem"
+
   },
   "temporaryLandingPage": {
     "aboveButton": "Vill du kika på förra årets event?",
@@ -171,5 +185,6 @@
     "shortDateInfo": "21 februari 2024 i Kista Stockholm.",
     "subheading": "🚧 Under konstruktion 🚧",
     "tagline": "En av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT‑branchen."
+
   }
 }

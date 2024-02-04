@@ -3,26 +3,29 @@
     <section v-if="post">
       <article class="post" id="post">
         <h1 v-if="isPreview" class="preview-title">This is a preview of the page</h1>
-        
+
         <!-- BANNER -->
         <Banner :post="this.post"/>
 
+        <!-- PLACEMENT -->
+        <Placement :post="this.post"></Placement>
 
-        <!-- COMPANY INFO -->
-        <CompanyInfo :post="this.post"/>
-
+        <!-- LOGO AREA -->
+        <LogoArea :post="this.post" :locale="this.locale"/>
 
         <!-- ARTICLE MAIN CONTENT -->
         <div class="post-content">
           <h3>{{ post.slogan }}</h3>
           <p>{{ post.about_us[locale] }}</p>
 
+          <!-- COMPANY INFO -->
+          <CompanyInfo :post="this.post" :locale="this.locale"/>
+
           <!-- PARTNER CONTENT -->
           <PartnerContent :post="this.post"/>
 
-
           <!-- MATCH LIST -->
-          <MatchList :post="this.post"/>
+          <MatchList :post="this.post" :locale="this.locale"/>
 
         </div>
         <!-- END MAIN CONTENT -->
@@ -48,7 +51,7 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >{{ $t("go-back") }}</Button
+            >{{ $t("company_page.go-back") }}</Button
           >
 
           <Button
@@ -57,7 +60,7 @@
             bColor="transparent"
             tColor="--crl-black"
             class="bb"
-            >{{ $t("go-top") }}
+            >{{ $t("company_page.go-top") }}
           </Button>
         </div>
         <!-- END BOTTOM BUTTONS -->
@@ -70,6 +73,8 @@
 import Button from "@/components/Button.vue";
 import marked from "marked";
 import Banner from "@/components/subViews/company/banner.vue"
+import LogoArea from "../../components/subViews/company/logoArea.vue";
+import Placement from "../../components/subViews/company/placement.vue";
 import CompanyInfo from "@/components/subViews/company/companyInfo.vue"
 import PartnerContent from "@/components/subViews/company/partnerContent.vue"
 import MatchList from "@/components/subViews/company/matchList.vue"
@@ -131,17 +136,23 @@ export default {
         translations: post.translations || [],
       };
       const data_detail = await API_Call_Company_Details(ids);
-      post.programs_data = {
+      post.programs_data_master = {
+        sv: [],
+        en: []
+      }
+      post.programs_data_bachelor = {
         sv: [],
         en: []
       }
 
       data_detail.programs.forEach(item => {
-        const { languages_code, program } = item;
+        const { languages_code, program, is_master } = item;
         if (languages_code === 'en') {
-          post.programs_data.en.push(program);
+          if(is_master) post.programs_data_master.en.push(program);
+          else post.programs_data_bachelor.en.push(program);
         } else if (languages_code === 'sv') {
-          post.programs_data.sv.push(program);
+          if(is_master) post.programs_data_master.sv.push(program);
+          else post.programs_data_bachelor.sv.push(program);
         }
       });
 
@@ -209,10 +220,12 @@ export default {
   components: {
     Button,
     CompanyInfo,
-    Banner, 
+    Banner,
     PartnerContent,
     MatchList,
-    CompanyContact
+    CompanyContact,
+    LogoArea,
+    Placement
 },
   computed: {
     showEnglishMessage() {
@@ -236,31 +249,14 @@ export default {
 
 /* MAIN COMPANY CONTENT */
 .post-content {
-  margin-top: 5rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   max-width: 60ch;
+  padding: 0 1.5rem;
 }
 .post-content > p {
   padding-bottom: 2rem;
-}
-
-
-
-/* COMPANY CONTACT */
-.post-contact {
-  width: clamp(30ch, 80vw, 60ch);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.company-contact {
-  padding-bottom: 1rem;
-}
-
-.link {
-  margin-top: 2rem;
-  color: var(--clr-blue-600);
 }
 
 /* MAP */
@@ -295,10 +291,6 @@ export default {
     flex-direction: row;
   }
 
-  .post-info {
-    padding: 3rem 5rem;
-    border-radius: 1rem;
-  }
   .table {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -317,7 +309,7 @@ export default {
   .bb {
     margin-right: 3rem;
   }
-  .preview-title {  
+  .preview-title {
   text-decoration: underline;
   margin-bottom: 1rem;
 }

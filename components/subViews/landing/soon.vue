@@ -1,10 +1,10 @@
 <template>
     <section class="soon">
         <div class="soon-text">
-            <h2 style="color:var(--clr-pink-600); text-align: center; ">{{ $t('it_is_almost_time!') }}</h2>
-            <p class="p" style="color: black;">{{ $t('disk_introduction1') }}<a
-            class="inline-link" style="color: black; text-align: left;" href=https://disk.su.se>{{ $t('disk') }}</a>
-            {{ $t('disk_introduction2') }}
+            <h2 style="color:var(--clr-pink-600); text-align: center; ">{{ $t('landing_page.info.it_is_almost_time!') }}</h2>
+            <p class="p" style="color: black;">{{ $t('landing_page.info.disk_introduction1') }}<a
+            class="inline-link" style="color: black; text-align: left;" href=https://disk.su.se>{{ $t('landing_page.info.disk') }}</a>
+            {{ $t('landing_page.info.disk_introduction2') }}
             </p>
         </div>
                 

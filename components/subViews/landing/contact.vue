@@ -5,7 +5,7 @@
 
       <!-- TITLE -->
       <h2 style="color: var(--clr-grey-900)">
-        {{ $t("contact-form-title") }}
+        {{ $t("landing_page.contact_form.title") }}
       </h2>
 
       <!-- INPUTS -->
@@ -13,7 +13,7 @@
         <!-- Name -->
         <input
           type="text"
-          :placeholder="this.$t('contact-form-name')"
+          :placeholder="this.$t('landing_page.contact_form.name')"
           name="name"
           v-model="name"
           required
@@ -22,7 +22,7 @@
         <!-- E-Mail -->
         <input
           type="email"
-          :placeholder="this.$t('contact-form-email')"
+          :placeholder="this.$t('landing_page.contact_form.email')"
           name="email"
           v-model="email"
           required
@@ -31,7 +31,7 @@
         <!-- Company -->
         <input
           type="text"
-          :placeholder="this.$t('contact-form-company')"
+          :placeholder="this.$t('landing_page.contact_form.company')"
           name="company"
           v-model="company"
           required
@@ -52,7 +52,7 @@
         <textarea
           class="form-message"
           name="message"
-          :placeholder="this.$t('contact-form-message')"
+          :placeholder="this.$t('landing_page.contact_form.message')"
           v-model="message"
           rows="3"
           style="resize: none"
@@ -62,7 +62,7 @@
       <!-- BUTTON -->
       <!-- the custom button didn't work for the form; therefore, we used the standard button and styled it accrdingly. -->
       <button type="submit" class="btn-form">
-        {{ $t("contact-form-button") }}
+        {{ $t("landing_page.contact_form.button") }}
       </button>
     </form>
 
@@ -255,6 +255,7 @@ textarea::placeholder {
 @media (max-width: 1024px) {
   .contact-blob-nod {
     visibility: hidden;
+    display: none;
   }
 }
 </style>
