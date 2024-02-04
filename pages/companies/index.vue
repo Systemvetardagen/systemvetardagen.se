@@ -30,7 +30,7 @@
             <span class="tag bachelor" v-else>Bachelor</span> -->
           </div>
           <button @click.prevent="selectedPrograms = []" class="clear-filter-btn">
-            {{ $t("catalog_page.clear_selections") }}
+            {{ $t("catalog_page.clear_selection") }}
           </button>
         </div>
         {{ $t("catalog_page.and") }}
