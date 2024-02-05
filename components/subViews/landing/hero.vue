@@ -1,6 +1,4 @@
 <template>
-  <div id="home" class="hero">
-
     <!-- FOREGROUND CONTENT -->
     <div class="hero-content">
       <!-- HERO Logo -->
@@ -34,7 +32,6 @@
           </Button>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -52,15 +49,11 @@ export default {
 
 <style>
 
-/* CONTAINER */
-.hero {
-  /*position: relative;*/
-  /*height: 100vh*/
-}
 
 /* FOREGROUND */
 .hero-content {
-  min-height: calc(100vh - 3rem); /*3rem for navbar*/
+  height: 660px;
+  /*height: 100%;*/
   padding: 4rem 1.5rem;
   display: flex;
   z-index: 1;
@@ -72,6 +65,7 @@ export default {
   background: linear-gradient(-100deg, #4158D0, #C850C0, #FFCC70);
   background-size: 300% 300%;
   animation: Background 45s ease infinite;
+  background-color: red;
 }
 
 @keyframes Background {
@@ -137,4 +131,19 @@ export default {
   text-align: center;
   font-size: 1rem;
 }
+
+/* Media query for screens larger than 1400px*/
+@media screen and (min-height: 700px) {
+  .hero-content {
+    height: calc(100vh - 3rem);
+  }
+}
+
+@media screen and (min-height: 1400px) {
+  .hero-content {
+    height: 1400px;
+  }
+}
+
+
 </style>
