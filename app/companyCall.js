@@ -10,7 +10,6 @@ const headers = {
 };
 
 export const API_Call_Company = async (name) => {
-    console.log(name)
     const response = await fetch(`${Base_URL}items/companies?filter[company_name][_in]=${name}`, {headers});
     const json = await response.json();
     const data = json.data[0];
@@ -63,8 +62,6 @@ export const API_Call_Programs = async () => {
         };
     });
 
-    console.log(data);
-    console.log(programsWithMaster);
 
     return programsWithMaster;
 }
@@ -105,7 +102,7 @@ export const API_Call_Company_Details = async(ids) => {
             }
         })
         data_detail.programs = programs3;
-        console.log(programs3)
+       
     }
 
     if (ids.positions){
