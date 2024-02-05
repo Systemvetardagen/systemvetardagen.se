@@ -340,6 +340,7 @@ export default {
   flex-direction: column;
   line-height: 1.5;
   margin-top: 1rem;
+  z-index: 1;
 }
 
 .dropdown-filter-item {
