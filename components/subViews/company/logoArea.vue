@@ -49,7 +49,8 @@ export default {
 <style scoped>
 .logo-area {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1rem;
   align-items: center;
   flex-direction: row;
   width: 100%;
