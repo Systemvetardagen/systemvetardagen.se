@@ -1,5 +1,5 @@
 <template>
-  <div v-if="post.contact_persons" class="post-contact">
+  <div v-if="post.contact_persons != []" class="post-contact">
 
     <!-- Heading -->
     <h2>{{ $t("company_page.contact") }}</h2>
@@ -58,6 +58,9 @@
     },
     components: {
       ExternalLink
+    },
+    mounted() {
+       console.log(this.post.contact_persons) 
     }
   }
 </script>
