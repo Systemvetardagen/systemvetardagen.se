@@ -25,7 +25,7 @@
         <img
             :src="this.post.sponsor_images[0]"
             alt="gallery image 1"
-            class="gallery-img"
+            class="gallery-img portrait"
         />
         </div>
     </div>
@@ -34,14 +34,14 @@
         <img
             :src="this.post.sponsor_images[1]"
             alt="gallery image 2"
-            class="gallery-img"
+            class="gallery-img landscape"
         />
         </div>
         <div v-if="post.sponsor_images[2]" class="gallery-item">
         <img
             :src="this.post.sponsor_images[2]"
             alt="gallery image 3"
-            class="gallery-img"
+            class="gallery-img landscape"
         />
         </div>
     </div>
@@ -102,29 +102,31 @@
 /* SPONSOR IMAGES // GALLERY */
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio while covering dimensions */
 }
+
 .gallery {
-  /* Mobile first */
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 0.5rem;
   margin-top: 2rem;
-
 }
+
 .gallery .column {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
 }
+
 .gallery-img {
   border-radius: 10px;
 }
-.image-item img {
-  width: 100%;
-  border-radius: 5px;
-  height: 100%;
-  object-fit: cover;
+
+
+.landscape {
+  aspect-ratio: 16/9;
 }
 
 /* DESKTOP MODIFICATIONS */
@@ -132,9 +134,15 @@ img {
   .gallery {
     flex-direction: row;
     gap: 1rem;
-
   }
 
-}
+  .gallery .column {
+    gap: 1rem;
+    width: 50%;
+  }
 
+  .gallery-img {
+    height: 100%; /* Adjust height as needed for desktop layout */
+  }
+}
 </style>
