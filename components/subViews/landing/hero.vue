@@ -65,7 +65,6 @@ export default {
   background: linear-gradient(-100deg, #4158D0, #C850C0, #FFCC70);
   background-size: 300% 300%;
   animation: Background 45s ease infinite;
-  background-color: red;
 }
 
 @keyframes Background {
@@ -132,7 +131,6 @@ export default {
   font-size: 1rem;
 }
 
-/* Media query for screens larger than 1400px*/
 @media screen and (min-height: 700px) {
   .hero-content {
     height: calc(100vh - 3rem);
