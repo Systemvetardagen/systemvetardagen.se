@@ -480,7 +480,7 @@ section {
   color: #6B6B6B;
   text-align: center;
   font-style: normal;
-  font-weight: 300;
+  font-weight: light;
   line-height: normal;
 }
 

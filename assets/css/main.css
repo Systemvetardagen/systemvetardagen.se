@@ -94,7 +94,14 @@ footer {
 @font-face {
   font-family: "Overpass";
   src: url(assets\fonts\Overpass-Black.ttf);
-  font-display: block;
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url(assets\fonts\Overpass-ExtraLight.ttf);
+  font-weight: light;
+  font-style: normal;
 }
 @font-face {
   font-family: "OverpassMedium";
@@ -186,6 +193,7 @@ h1 {
   font-size: 3rem;
   line-height: 100%;
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 @media (min-width: 640px) {
