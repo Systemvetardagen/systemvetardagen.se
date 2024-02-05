@@ -109,6 +109,7 @@
           </div>
           <div class="underline"></div>
         </div>
+
         <!-- Non-Partners -->
         <h3 class="cat-heading">{{$t('catalog_page.all_companies')}}</h3>
         <div class="company-cards">
@@ -301,6 +302,33 @@ export default {
 };
 </script>
 <style scoped>
+
+.scale-up-center:hover {
+  -webkit-animation: scale-up-center 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+          animation: scale-up-center 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 
 .dropdown-container {
   position: absolute;
