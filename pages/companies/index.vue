@@ -1,6 +1,6 @@
 <template>
   <main class="wrapper">
-    <WarningBanner>More companies coming soon!</WarningBanner>
+    <WarningBanner>{{ $t("catalog_page.warning_banner_message") }}</WarningBanner>
     <section v-if="posts">
       <h1 v-if="isPreview" class="preview-title">This is a preview of the page</h1>
       <h1 class="title">{{ $t("catalog_page.companies") }}</h1>
