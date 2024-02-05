@@ -23,7 +23,7 @@
 
     </div>
     
-       <section v-if="posts">
+    <section v-if="posts">
       <h2>{{$t('about_page.project_group.heading')}}</h2>
       <!-- Pass all team members to team as props.  -->
       <!-- <AboutTeam :posts="posts.filter((i) => i.team === 'wdd')" teamName="Web Development & Design"/>  -->
@@ -116,9 +116,9 @@ p {
   margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
   justify-items: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .banner {
   width: 100%;
@@ -148,6 +148,8 @@ section {
   flex-direction: column;
   align-items: flex-start;
   gap: 3rem;
+  align-self: flex-start;
+  padding: 2rem;
 }
 
 .leader-cards {
