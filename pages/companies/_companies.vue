@@ -3,21 +3,15 @@
     <section v-if="post">
       <article class="post" id="post">
         <h1 v-if="isPreview" class="preview-title">This is a preview of the page</h1>
-        
+
         <!-- BANNER -->
         <Banner :post="this.post"/>
-
-
 
         <!-- PLACEMENT -->
         <Placement :post="this.post"></Placement>
 
-
-
         <!-- LOGO AREA -->
         <LogoArea :post="this.post" :locale="this.locale"/>
-
-
 
         <!-- ARTICLE MAIN CONTENT -->
         <div class="post-content">
@@ -29,7 +23,6 @@
 
           <!-- PARTNER CONTENT -->
           <PartnerContent :post="this.post"/>
-
 
           <!-- MATCH LIST -->
           <MatchList :post="this.post" :locale="this.locale"/>
@@ -251,7 +244,7 @@ export default {
 
 /* MAIN COMPANY CONTENT */
 .post-content {
-  margin-top: 5rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   max-width: 60ch;
@@ -260,10 +253,6 @@ export default {
 .post-content > p {
   padding-bottom: 2rem;
 }
-
-
-
-
 
 /* MAP */
 .map-section {
@@ -320,10 +309,6 @@ export default {
     flex-direction: row;
   }
 
-  .post-info {
-    padding: 3rem 5rem;
-    border-radius: 1rem;
-  }
   .table {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -342,7 +327,7 @@ export default {
   .bb {
     margin-right: 3rem;
   }
-  .preview-title {  
+  .preview-title {
   text-decoration: underline;
   margin-bottom: 1rem;
 }

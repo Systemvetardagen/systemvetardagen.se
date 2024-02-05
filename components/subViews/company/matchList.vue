@@ -1,15 +1,14 @@
 <template>
     <div class="match-list">
-
       <h3>
         {{ post.title }}
-        {{ $t("looking-for") }}
+        {{ $t("company_page.looking-for") }}
       </h3>
       <div class="items">
 
         <!-- Section: Bachelors -->
         <div class="section">
-          <p class="section-heading">{{ $t("programs") }}</p>
+          <p class="section-heading">{{ $t("company_page.bachelors-programs-heading") }}</p>
           <ul class="tag-list">
             <li
               class="tag"
@@ -23,7 +22,7 @@
 
          <!-- Section: Masters -->
         <div class="section">
-          <p class="section-heading">{{ $t("master_programs") }}</p>
+          <p class="section-heading">{{ $t("company_page.masters-programs-heading") }}</p>
           <ul class="tag-list">
             <li
               class="tag"
@@ -36,13 +35,13 @@
 
         <!-- Section: Qualifications -->
         <div v-if="post.qualifications" class="section">
-          <p class="section-heading">{{ $t("qualifications") }}</p>
+          <p class="section-heading">{{ $t("company_page.qualifications-heading") }}</p>
           <p class="border-box">{{ post.qualifications[locale] }}</p>
         </div>
 
         <!-- Section: Positions -->
         <div class="section">
-          <p class="section-heading">{{ $t("positions") }}</p>
+          <p class="section-heading">{{ $t("company_page.positions-heading") }}</p>
           <ul class="tag-list">
             <li
               class="tag"
@@ -52,10 +51,7 @@
               {{ position }}
             </li>
           </ul>
-
         </div>
-
-
       </div>
     </div>
 </template>
@@ -74,6 +70,7 @@
 /* MATCH LIST */
 li {
   margin: 0;
+  font-family: "IBMPlexMono", monospace;
 }
 .match-list {
   display: flex;
@@ -86,7 +83,6 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   padding: 0rem 0;
 }
 
@@ -97,6 +93,8 @@ li {
   padding: 1rem 0;
   line-height: 1.5;
   text-align: center;
+  /* background-color: red; */
+  justify-content: center;
 }
 
 .tag-list {
@@ -106,6 +104,7 @@ li {
   flex-wrap: wrap;
   /*padding-top: 0rem;*/
   align-items: flex-start;
+  padding: 0;
 }
 
 .tag {
@@ -119,7 +118,7 @@ li {
   border-radius: 1.875rem;
   background: #6CAF61;
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   /* align-self: center; */
 }
 

@@ -1,4 +1,5 @@
 {
+
   "about_page": {
     "description": {
       "heading1": "What is Systemvetardagen?",
@@ -18,16 +19,16 @@
   },
   "catalog_page": {
     "all": "all",
-    "all-companies": "All Companies",
-    "all-companies-btn": "View all companies",
+    "all_companies": "All companies",
+    "all_companies_btn": "View all companies",
     "and": "and",
-    "aulanod-program": "Aula NOD Program",
+    "aulanod_program": "Aula NOD Program",
     "catalog": "Catalog",
-    "clear-filters": "Clear filters",
-    "clear-selection": "Clear",
+    "clear_filters": "Clear filters",
+    "clear_selection": "Clear",
     "coming_soon": "Catalog coming soon!",
     "companies": "Companies",
-    "filter-positions": {
+    "filter_positions": {
       "0": "Internships",
       "1": "Foreign Services",
       "2": "Traineeprogram",
@@ -35,7 +36,7 @@
       "4": "Thesis project",
       "5": "Part-time positions"
     },
-    "filter-programs": {
+    "filter_programs": {
       "0": "Enterprise Systems and Service Design",
       "1": "Computer and System Sciences",
       "2": "Computer Game Development",
@@ -46,14 +47,13 @@
       "7": "Interaction Design",
       "8": "Master"
     },
-    "map-heading": "Company placement",
-    "partners": "Our Partners",
-    "posts-heading": "The Project Leaders have the floor!",
-    "read-more": "Read more",
-    "search_input": {
-      "placeholder": "Search companies"
-    },
-    "showing-companies-for": "Showing companies for ",
+    "map_heading": "Company placement",
+    "partners": "Our partners",
+    "positions": "Positions",
+    "posts_heading": "The Project Leaders have the floor!",
+    "programs": "Programs",
+    "read_more": "Read more",
+    "showing_companies_for": "Showing companies for ",
     "sponsors": "Sponsors"
   },
   "company_page": {
@@ -86,15 +86,8 @@
       "name": "Name",
       "title": "Contact us"
     },
-    "countdown": {
-      "countdown_text": "It's almost time!",
-      "day": "days",
-      "hour": "hours",
-      "min": "minutes",
-      "sec": "seconds"
-    },
     "description": {
-      "para1": "For the 28th year in a row, Systemvetardagen is arranged at Stockholm University Campus Kista.",
+      "para1": "For the 27th year in a row, Systemvetardagen is arranged at Stockholm University Campus Kista.",
       "para2": "It is the job fair day organized by DISK, the student union of the Department of Computer and Systems Sciences (DSV).",
       "para3": "All students are welcome (even if you are not a student at Stockholm University) and the entire event is free - just show up! "
     },
@@ -113,19 +106,23 @@
       "answer2": "No, it’s completely free for all students to attend the fair and its events.",
       "answer3": "Absolutely! The website is offered in both Swedish and English, and the participating companies are happy to speak English.",
       "answer4": "No, you don't need to sign up to attend the fair or to go to the events in Aula NOD!",
+
       "before_the_fair": "Before the fair",
       "before_the_fair_description1": "Update you CV and have it easily available so that you can give or send it to a company if you get asked for it.",
       "before_the_fair_description2": "Look through the catalog and make note of which companies you are interested in talking to.",
       "before_the_fair_description3": "Look into which company events you are interested in.",
       "before_the_fair_description4": "Now you’re well prepared for the fair!",
+
       "coming_soon": "Coming soon...",
       "disk": "student union DISKs",
       "disk_introduction1": "For the 27th year in a row, Systemvetardagen is arranged at Stockholm University. It is the ",
       "disk_introduction2": ", from the Department of Data and Systems Science DSV, own job fair day. During the day, valuable contacts are made between students and the business community. Systemvetardagen is a unique meeting place for students & organizations in the IT industry.",
+
       "during_the_fair": "During the fair",
       "during_the_fair_description1": "Use the fair map to find the companies that you are interested in.",
       "during_the_fair_description2": "Walk around on the fair floor and talk to the companies. They are there to come into contact with students, so take the opportunity!",
       "during_the_fair_description3": "Learn something new – During the day there will be company events in Aula NOD. Check out the schedule to see which events sound interesting to you!",
+
       "event_description2": "This year's edition of Systemvetardagen will take place in hybrid form. The fair will be digital, in combination with physical events and presentations. On the day of the fair, you will see virtual booths on the fair website where you can interact with the companies and take part of information about the companies and job advertisements that they have uploaded. During the day, live lectures will be held by our sponsors.",
       "frequently_asked_questions": "Frequently asked questions",
       "info_heading": "Tips for those who participate",
@@ -174,10 +171,11 @@
     "heading": "Systemvetardagen 2024",
     "organizedBy": "Systemvetardagen is organized by the student union DISK at the Department of Computer and Systems Sciences at Stockholm University",
     "pdfHeader": "For companies:",
+
     "pdfLinkPrompt": "Get the 2024 info sheet",
     "shortDateInfo": "February 21, 2024 in Kista, Stockholm.",
     "subheading": "🚧 Under construction 🚧",
     "tagline": "One of the biggest job fairs in Sweden for students and employers in the IT‑business."
-
   }
 }
+

@@ -17,7 +17,7 @@
     }
     #htmlContainer > h1 {
         font-size: 2rem;
-        margin: 1.5rem 0;
+        margin: 1.5rem 0 0.7rem 0;
     }
     #htmlContainer > h2 {
         font-size: 1.5rem;
