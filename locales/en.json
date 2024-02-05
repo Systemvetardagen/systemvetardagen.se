@@ -12,14 +12,20 @@
       "para4": "Email us at "
     },
     "heading": "About",
-    "project_group_heading": "Project Group"
+    "project_group": {
+      "collapse": "Hide team",
+      "expand": "View team",
+      "heading": "Project Group 2024"
+    }
+
   },
   "blog": {
     "read-more": "Read more"
   },
   "catalog_page": {
     "all": "all",
-    "all_companies": "All companies",
+    "all_companies": "All Companies",
+
     "all_companies_btn": "View all companies",
     "and": "and",
     "aulanod_program": "Aula NOD Program",
@@ -48,6 +54,7 @@
       "8": "Master"
     },
     "map_heading": "Company placement",
+
     "partners": "Our partners",
     "positions": "Positions",
     "posts_heading": "The Project Leaders have the floor!",
