@@ -17,6 +17,7 @@
       "expand": "View team",
       "heading": "Project Group 2024"
     }
+
   },
   "blog": {
     "read-more": "Read more"
@@ -24,6 +25,7 @@
   "catalog_page": {
     "all": "all",
     "all_companies": "All Companies",
+
     "all_companies_btn": "View all companies",
     "and": "and",
     "aulanod_program": "Aula NOD Program",
@@ -52,8 +54,11 @@
       "8": "Master"
     },
     "map_heading": "Company placement",
-    "partners": "Our Partners",
+
+    "partners": "Our partners",
+    "positions": "Positions",
     "posts_heading": "The Project Leaders have the floor!",
+    "programs": "Programs",
     "read_more": "Read more",
     "showing_companies_for": "Showing companies for ",
     "sponsors": "Sponsors"
@@ -108,6 +113,7 @@
       "answer2": "No, it’s completely free for all students to attend the fair and its events.",
       "answer3": "Absolutely! The website is offered in both Swedish and English, and the participating companies are happy to speak English.",
       "answer4": "No, you don't need to sign up to attend the fair or to go to the events in Aula NOD!",
+
       "before_the_fair": "Before the fair",
       "before_the_fair_description1": "Update you CV and have it easily available so that you can give or send it to a company if you get asked for it.",
       "before_the_fair_description2": "Look through the catalog and make note of which companies you are interested in talking to.",

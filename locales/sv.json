@@ -6,10 +6,12 @@
       "heading3": "Vilka företag deltar i år?",
       "heading4": "Hur kan mitt företag delta?",
 
-      "para1": "Systemvetardagen är en årlig karriärmässa för studenter och nyutexaminerade med fokus på IT-branchen. Mässan arrangeras av studentkåren DISK på Institutionen för data- och systemvetenskap i Kista vid Stockholms universitet. Detta evenemang är helt gratis att delta i för alla studenter!",
-      "para2": "2024 hålls mässan den 21 februari mellan kl. 10-16 i Kista Nod på Borgarfjordsgatan 12 i Stockholm. Ingen föranmälan behövs, kom bara som du är!",
+
+      "para1": "Systemvetardagen är en årlig karriärmässa för studenter och nyutexaminerade med fokus på IT-sektorn. Mässan arrangeras av studentföreningen DISK, en studentförening vid Institutionen för data- och systemvetenskap i Kista vid Stockholms universitet. Detta evenemang är helt gratis att delta i för alla studenter!",
+      "para2": "År 2024 hålls mässan den 21 februari mellan kl. 10-16 på Kista Nod, beläget på Borgarfjordsgatan 12 i Stockholm. Ingen anmälan behövs, kom bara som du är!",
       "para3": "Du hittar alla deltagande företag i vår företagskatalog (kommer snart).",
-      "para4": "Skicka ett email till oss på "
+      "para4": "Skicka ett e-postmeddelande till oss på "
+
     },
     "heading": "Om oss",
     "project_group": {
@@ -25,7 +27,9 @@
   "catalog_page": {
     "all": "alla",
 
+
     "all_companies": "Alla Företag",
+
     "all_companies_btn": "Se alla företag",
     "and": " och ",
     "aulanod_program": "Aula NOD Program",
@@ -60,6 +64,7 @@
 
     "map_heading": "Företagsplacering",
     "partners": "Våra Partners",
+
     "positions": "Positioner",
     "posts_heading": "Projektledarna har ordet!",
     "programs": "Program",
@@ -102,6 +107,7 @@
       "title": "Kontakta oss"
     },
 
+
     "countdown": {
       "countdown_text": "Snart är det dags!",
       "day": "dagar",
@@ -109,6 +115,7 @@
       "min": "minuter",
       "sec": "sekunder"
     },
+
 
     "description": {
       "para1": "För 28:e året i rad arrangeras Systemvetardagen på Stockholms universitet Campus Kista.",
@@ -155,7 +162,9 @@
     },
     "links": {
 
+
       "about": "Läs mer om Systemvetardagen",
+
       "plan_visit": "Planera ditt besök"
     },
     "old_cat_btn": "Katalog 2023",
