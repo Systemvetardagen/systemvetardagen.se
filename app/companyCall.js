@@ -9,6 +9,18 @@ const headers = {
     'Authorization': `Bearer ${API_Token}`
 };
 
+export const API_Call_Team_Members = async () => {
+    //console.log(name)
+    const response = await fetch(`${Base_URL}items/team_members`, {headers});
+    const json = await response.json();
+    const data = json.data;
+    data.forEach(p => {if(p.portrait) 
+    { p.portrait = image_url(p.portrait)}}
+    )
+    console.log(data)
+    return data;
+}
+
 export const API_Call_Company = async (name) => {
     console.log(name)
     const response = await fetch(`${Base_URL}items/companies?filter[company_name][_in]=${name}`, {headers});
@@ -41,6 +53,7 @@ export const API_Call_Companies = async () => {
         company.positionsIds = related_positions.flatMap(item => item.positions_id);
         company.programsIds = related_programs.flatMap(item => item.programs_id);
         company.logo = company.logo ? image_url(company.logo) : null;
+        company.sponsor = company. sponsor
     });
 
     return data;
@@ -53,8 +66,19 @@ export const API_Call_Programs = async () => {
     const response2 = await fetch(`${Base_URL}items/programs_translations/?filter[id][_in]=${translationsIds.join(',')}`, {headers});
     const programs = (await response2.json()).data;
 
+    // Add the "master" property from data to programs
+    const programsWithMaster = programs.map(program => {
+        const correspondingDataItem = data.find(item => item.translations.includes(program.id));
+        return {
+            ...program,
+            master: correspondingDataItem ? correspondingDataItem.master : null
+        };
+    });
 
-    return programs;
+    console.log(data);
+    console.log(programsWithMaster);
+
+    return programsWithMaster;
 }
 
 export const API_Call_Positions = async () => {
