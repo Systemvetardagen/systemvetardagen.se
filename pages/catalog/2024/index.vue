@@ -100,7 +100,7 @@
               :key="post.company_name"
               v-if="post.sponsor"
               :to="localePath({
-                name: 'companies-companies',
+                name: 'catalog-2024-companies',
                 params: { companies: post.company_name },
               })
               ">
@@ -120,7 +120,7 @@
             :key="post.company_name"
             v-if="!post.sponsor"
             :to="localePath({
-              name: 'companies-companies',
+              name: 'catalog-2024-companies',
               params: { companies: post.company_name },
             })
             ">
