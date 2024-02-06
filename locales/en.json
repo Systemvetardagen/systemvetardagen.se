@@ -30,7 +30,6 @@
     "clear_filters": "Clear filters",
     "clear_selection": "Clear",
     "coming_soon": "Catalog coming soon!",
-    "warning_banner_message": "More companies coming soon!",
     "companies": "Companies",
     "filter_positions": {
       "0": "Internships",
@@ -75,6 +74,12 @@
     "learn-more": "Learn more about working at",
     "location": "Location",
     "looking-for": "is looking for",
+    "match_list": {
+      "bachelor": "Bachelor Programmes",
+      "master": "Master Programmes",
+      "positions": "Positions",
+      "qualifications": "Qualifications"
+    },
     "positions": "Positions",
     "programs": "Programs",
     "qualifications": "Qualifications",

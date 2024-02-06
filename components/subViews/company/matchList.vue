@@ -8,7 +8,7 @@
 
         <!-- Section: Bachelors -->
         <div class="section">
-          <p class="section-heading">{{ $t("company_page.bachelors-programs-heading") }}</p>
+          <p class="section-heading">{{ $t("company_page.match_list.bachelor") }}</p>
           <ul class="tag-list">
             <li
               class="tag"
@@ -22,7 +22,7 @@
 
          <!-- Section: Masters -->
         <div class="section">
-          <p class="section-heading">{{ $t("company_page.masters-programs-heading") }}</p>
+          <p class="section-heading">{{ $t("company_page.match_list.master") }}</p>
           <ul class="tag-list">
             <li
               class="tag"
@@ -35,13 +35,13 @@
 
         <!-- Section: Qualifications -->
         <div v-if="post.qualifications" class="section">
-          <p class="section-heading">{{ $t("company_page.qualifications-heading") }}</p>
+          <p class="section-heading">{{ $t("company_page.match_list.qualifications") }}</p>
           <p class="border-box">{{ post.qualifications[locale] }}</p>
         </div>
 
         <!-- Section: Positions -->
         <div class="section">
-          <p class="section-heading">{{ $t("company_page.positions-heading") }}</p>
+          <p class="section-heading">{{ $t("company_page.match_list.positions") }}</p>
           <ul class="tag-list">
             <li
               class="tag"

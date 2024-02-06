@@ -30,7 +30,6 @@
     "clear_filters": "Rensa filter",
     "clear_selection": "Rensa",
     "coming_soon": "Årets företag presenteras inom kort!",
-    "warning_banner_message": "Fler företag kommer snart!",
     "companies": "Företag",
     "company_learn_more": "Läs mer om att jobba hos",
     "filter_positions": {
@@ -77,6 +76,12 @@
     "learn-more": "Läs mer om att jobba hos",
     "location": "Placering",
     "looking-for": "letar efter",
+    "match_list": {
+      "bachelor": "Bachelor Program",
+      "master": "Master Program",
+      "positions": "Positioner",
+      "qualifications": "Meriterande kunskaper"
+    },
     "positions": "Positioner",
     "programs": "Program",
     "qualifications": "Meriterande kunskaper",
