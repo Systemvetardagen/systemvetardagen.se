@@ -89,6 +89,7 @@
   padding-bottom: 56.25%;
   height: 0;
   align-self: center;
+  margin-top:2rem;
 }
 .yt-video {
   position: absolute;
