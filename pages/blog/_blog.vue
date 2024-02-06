@@ -79,6 +79,13 @@ export default {
 </script>
 
 <style scoped>
+
+section {
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .content {
   max-width: 65ch;
 }
