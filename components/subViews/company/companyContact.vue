@@ -70,6 +70,12 @@
 
 <style scoped>
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* COMPANY CONTACT */
 .post-contact {
   display: flex;
@@ -131,6 +137,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: center;
+ 
 }
 
 .icon {
