@@ -10,14 +10,13 @@ const headers = {
 };
 
 export const API_Call_Team_Members = async () => {
-    //console.log(name)
+
     const response = await fetch(`${Base_URL}items/team_members`, {headers});
     const json = await response.json();
     const data = json.data;
     data.forEach(p => {if(p.portrait) 
     { p.portrait = image_url(p.portrait)}}
     )
-    console.log(data)
     return data;
 }
 
