@@ -62,7 +62,8 @@
       "placeholder": "Söka företag"
     },
     "showing_companies_for": "Visar företag för ",
-    "sponsors": "Sponsorer"
+    "sponsors": "Sponsorer",
+    "warning_banner_message": "Fler företag kommer snabt!"
   },
   "company_page": {
     "bis-area": "Verksamhetsområde",

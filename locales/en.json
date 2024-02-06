@@ -60,7 +60,8 @@
       "placeholder": "Search company"
     },
     "showing_companies_for": "Showing companies for ",
-    "sponsors": "Sponsors"
+    "sponsors": "Sponsors",
+    "warning_banner_message": "More companies coming soon!"
   },
   "company_page": {
     "bis-area": "Area of Business",
