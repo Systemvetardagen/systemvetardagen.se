@@ -5,30 +5,34 @@
       "heading2": "Var och när äger det rum?",
       "heading3": "Vilka företag deltar i år?",
       "heading4": "Hur kan mitt företag delta?",
-      "para1": "Systemvetardagen är en årlig karriärmässa för studenter och nyutexaminerade med fokus på IT-branchen. Mässan arrangeras av studentkåren DISK på Institutionen för data- och systemvetenskap i Kista vid Stockholms universitet. Detta evenemang är helt gratis att delta i för alla studenter!",
-      "para2": "2024 hålls mässan den 21 februari mellan kl. 10-16 i Kista Nod på Borgarfjordsgatan 12 i Stockholm. Ingen föranmälan behövs, kom bara som du är!",
+      "para1": "Systemvetardagen är en årlig karriärmässa för studenter och nyutexaminerade med fokus på IT-sektorn. Mässan arrangeras av studentföreningen DISK, en studentförening vid Institutionen för data- och systemvetenskap i Kista vid Stockholms universitet. Detta evenemang är helt gratis att delta i för alla studenter!",
+      "para2": "År 2024 hålls mässan den 21 februari mellan kl. 10-16 på Kista Nod, beläget på Borgarfjordsgatan 12 i Stockholm. Ingen anmälan behövs, kom bara som du är!",
       "para3": "Du hittar alla deltagande företag i vår företagskatalog (kommer snart).",
-      "para4": "Skicka ett email till oss på "
+      "para4": "Skicka ett e-postmeddelande till oss på "
     },
     "heading": "Om oss",
-    "project_group_heading": "Projektgrupp"
+    "project_group": {
+      "collapse": "Dölj team",
+      "expand": "Visa team",
+      "heading": "Projektgrupp 2024"
+    }
   },
   "blog": {
     "read-more": "Läs mer"
   },
   "catalog_page": {
     "all": "alla",
-    "all-companies": "Alla Företag",
-    "all-companies-btn": "Se alla företag",
+    "all_companies": "Alla Företag",
+    "all_companies_btn": "Se alla företag",
     "and": " och ",
-    "aulanod-program": "Aula NOD Program",
+    "aulanod_program": "Aula NOD Program",
     "catalog": "Katalog",
-    "clear-filters": "Rensa filter",
-    "clear-selection": "Rensa",
+    "clear_filters": "Rensa filter",
+    "clear_selection": "Rensa",
     "coming_soon": "Årets företag presenteras inom kort!",
     "companies": "Företag",
-    "company-learn-more": "Läs mer om att jobba hos",
-    "filter-positions": {
+    "company_learn_more": "Läs mer om att jobba hos",
+    "filter_positions": {
       "0": "Praktikplatser",
       "1": "Utlandstjänster",
       "2": "Traineeprogram",
@@ -36,7 +40,7 @@
       "4": "Examensarbete",
       "5": "Deltidstjänster"
     },
-    "filter-programs": {
+    "filter_programs": {
       "0": "Affärssystem & tjänstedesign",
       "1": "Data- & systemvetenskap",
       "2": "Datorspelsutveckling",
@@ -47,18 +51,19 @@
       "7": "Interaktionsdesign",
       "8": "Magister/Master"
     },
-    "map-heading": "Företagsplacering",
+    "map_heading": "Företagsplacering",
     "partners": "Våra Partners",
     "positions": "Positioner",
-    "posts-heading": "Projektledarna har ordet!",
+    "posts_heading": "Projektledarna har ordet!",
     "programs": "Program",
     "qualifications": "Meriterande kunskaper",
-    "read-more": "Läs mer",
+    "read_more": "Läs mer",
     "search_input": {
-      "placeholder": "Sök företag"
+      "placeholder": "Söka företag"
     },
-    "showing-companies-for": "Visar företag för ",
-    "sponsors": "Sponsorer"
+    "showing_companies_for": "Visar företag för ",
+    "sponsors": "Sponsorer",
+    "warning_banner_message": "Fler företag kommer snart!"
   },
   "company_page": {
     "bis-area": "Verksamhetsområde",
@@ -72,6 +77,12 @@
     "learn-more": "Läs mer om att jobba hos",
     "location": "Placering",
     "looking-for": "letar efter",
+    "match_list": {
+      "bachelor": "Bachelor Program",
+      "master": "Master Program",
+      "positions": "Positioner",
+      "qualifications": "Meriterande kunskaper"
+    },
     "positions": "Positioner",
     "programs": "Program",
     "qualifications": "Meriterande kunskaper",
@@ -181,6 +192,5 @@
     "shortDateInfo": "21 februari 2024 i Kista Stockholm.",
     "subheading": "🚧 Under konstruktion 🚧",
     "tagline": "En av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT‑branchen."
-
   }
 }

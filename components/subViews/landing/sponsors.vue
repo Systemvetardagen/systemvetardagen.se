@@ -5,7 +5,7 @@
       <p class="partner-heading">{{ $t("landing_page.sponsors") }}</p>
       <!-- Since we hadn't figured out nuxt-image yet, we hard-coded this grid. -->
       <div class="company-grid">
-        <NuxtLink v-for="partner in this.partners" :to="localePath(partner.path)" >
+        <NuxtLink v-for="partner in this.partners" :to="localePath(partner.path)" :key="partner.name">
           <p class="company-name">{{ partner.name }}</p>
         </NuxtLink>
       </div>
@@ -21,20 +21,13 @@ export default {
     return {
       logoPath: "@/assets/img/company-logos/logo_",
 
-      // This dictionary is from an attempt to create the grid dynamically.
-      logos: [
-        { name: "Capgemini", img: "capgemini.png" },
-        { name: "Sweco", img: "sweco_black.png" },
-        { name: "Innofactor", img: "innofactor.png" },
-        { name: "Handelsbanken", img: "" },
-        { name: "Cygni", img: "cygni.png" },
-        { name: "Zimply Innovation", img: "zimply.png" },
-      ],
       partners: [
         {name: "Akavia", path: "/companies"},
         {name: "Accenture", path: "/companies"},
         {name: "Handelsbanken", path: "/companies"},
         {name: "Swedbank", path: "/companies"},
+        {name: "Zimply", path: "/companies"},
+        {name: "Cygni", path: "/companies"}
       ]
     };
   },

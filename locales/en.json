@@ -11,23 +11,27 @@
       "para4": "Email us at "
     },
     "heading": "About",
-    "project_group_heading": "Project Group"
+    "project_group": {
+      "collapse": "Hide team",
+      "expand": "View team",
+      "heading": "Project Group 2024"
+    }
   },
   "blog": {
     "read-more": "Read more"
   },
   "catalog_page": {
     "all": "all",
-    "all-companies": "All Companies",
-    "all-companies-btn": "View all companies",
+    "all_companies": "All Companies",
+    "all_companies_btn": "View all companies",
     "and": "and",
-    "aulanod-program": "Aula NOD Program",
+    "aulanod_program": "Aula NOD Program",
     "catalog": "Catalog",
-    "clear-filters": "Clear filters",
-    "clear-selection": "Clear",
+    "clear_filters": "Clear filters",
+    "clear_selection": "Clear",
     "coming_soon": "Catalog coming soon!",
     "companies": "Companies",
-    "filter-positions": {
+    "filter_positions": {
       "0": "Internships",
       "1": "Foreign Services",
       "2": "Traineeprogram",
@@ -35,7 +39,7 @@
       "4": "Thesis project",
       "5": "Part-time positions"
     },
-    "filter-programs": {
+    "filter_programs": {
       "0": "Enterprise Systems and Service Design",
       "1": "Computer and System Sciences",
       "2": "Computer Game Development",
@@ -46,15 +50,18 @@
       "7": "Interaction Design",
       "8": "Master"
     },
-    "map-heading": "Company placement",
-    "partners": "Our Partners",
-    "posts-heading": "The Project Leaders have the floor!",
-    "read-more": "Read more",
+    "map_heading": "Company placement",
+    "partners": "Our partners",
+    "positions": "Positions",
+    "posts_heading": "The Project Leaders have the floor!",
+    "programs": "Programs",
+    "read_more": "Read more",
     "search_input": {
-      "placeholder": "Search companies"
+      "placeholder": "Search company"
     },
-    "showing-companies-for": "Showing companies for ",
-    "sponsors": "Sponsors"
+    "showing_companies_for": "Showing companies for ",
+    "sponsors": "Sponsors",
+    "warning_banner_message": "More companies coming soon!"
   },
   "company_page": {
     "bis-area": "Area of Business",
@@ -68,6 +75,12 @@
     "learn-more": "Learn more about working at",
     "location": "Location",
     "looking-for": "is looking for",
+    "match_list": {
+      "bachelor": "Bachelor Programmes",
+      "master": "Master Programmes",
+      "positions": "Positions",
+      "qualifications": "Qualifications"
+    },
     "positions": "Positions",
     "programs": "Programs",
     "qualifications": "Qualifications",
@@ -86,15 +99,8 @@
       "name": "Name",
       "title": "Contact us"
     },
-    "countdown": {
-      "countdown_text": "It's almost time!",
-      "day": "days",
-      "hour": "hours",
-      "min": "minutes",
-      "sec": "seconds"
-    },
     "description": {
-      "para1": "For the 28th year in a row, Systemvetardagen is arranged at Stockholm University Campus Kista.",
+      "para1": "For the 27th year in a row, Systemvetardagen is arranged at Stockholm University Campus Kista.",
       "para2": "It is the job fair day organized by DISK, the student union of the Department of Computer and Systems Sciences (DSV).",
       "para3": "All students are welcome (even if you are not a student at Stockholm University) and the entire event is free - just show up! "
     },
@@ -177,6 +183,5 @@
     "shortDateInfo": "February 21, 2024 in Kista, Stockholm.",
     "subheading": "🚧 Under construction 🚧",
     "tagline": "One of the biggest job fairs in Sweden for students and employers in the IT‑business."
-
   }
 }

@@ -1,117 +1,143 @@
 <template>
   <div class="leader-card">
-    <div class="leader-card-header">
-      <img
-        :src="require('@/assets' + post.picture)"
-        alt="portrait"
-        class="portrait-img"
-      />
+    
+    <img
+      v-if="post.portrait"
+      :src="post.portrait"
+      alt="portrait"
+      class="portrait-img"
+    />
+    <div class="leader-card-header">  
       <div>
-        <h3 class="name">{{ post.name }}</h3>
-        <p>{{ post.role }}</p>
+        <p class="name">{{ post.name }}</p>
+        <p class="wrap-text"> {{ post.role }}</p>
       </div>
       <div class="links">
         <a v-if="post.linkedin_link" :href="post.linkedin_link">
-          <svg
-            class="link-icon"
-            role="img"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-          >
-            <title>LinkedIn</title>
-            <path
-              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-            />
-          </svg>
+          <LinkedInLogo class="link-icon"/>
         </a>
-        <a v-if="post.portfolio_link" :href="post.portfolio_link">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="link-icon"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
-            />
-          </svg>
+        <!-- <a v-if="post.portfolio_link" :href="post.portfolio_link">
+          <WWWIcon class="link-icon"/>
+        </a> -->
+        <a v-if="post.email" :href="'mailto:' + post.email">
+          <MailIcon class="link-icon"/>
+        </a>
+        <a v-if="post.github" :href="'mailto:' + post.github">
+          <GitHubLogo class="link-icon"/>
         </a>
       </div>
     </div>
     <!-- <p class="bio-text" v-if="post.about_you">{{ post.about_you }}</p> -->
-    <div class="email-links">
+    <!-- <div class="email-links">
       <a class="email-link" :href="'mailto:' + post.disk_mail">{{
         post.disk_mail
       }}</a>
       <a class="email-link" :href="'mailto:' + post.disk_mail">{{
         post.personal_mail
       }}</a>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
+import LinkedInLogo from '@/components/icons/LinkedInLogo.vue'
+import MailIcon from '@/components/icons/MailIcon.vue'
+import WWWIcon from '@/components/icons/WWWIcon.vue'
+import GitHubLogo from '@/components/icons/GitHubLogo.vue'
 export default {
   props: {
     post: Object,
   },
+  components: {
+    LinkedInLogo,
+    MailIcon,
+    WWWIcon,
+    GitHubLogo
+  }
 };
 </script>
 
 <style scoped>
 .name {
-  color: var(--clr-blue-900);
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
+.wrap-text {
+  overflow-wrap: break-word;
+}
+
 .leader-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
-  padding: 2rem;
-  background-color: var(--clr-blue-100);
-  border-radius: 1rem;
-  width: 20rem;
+  
+  
 }
 
 .leader-card-header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
+  max-width: 15rem;
+  justify-content: space-between;
+  
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 0.3rem;
 }
 
 .portrait-img {
-  width: 65%;
-  margin-inline: auto;
+  width: 5rem;
+  height: 5rem;  
+  border-radius: 0.7rem 0rem 0rem 0.7rem;
+  border: 3.418px solid #000; 
 }
 
 .link-icon {
-  width: 1.5rem;
-  color: var(--clr-blue-900);
+  width: 1.3rem;
+  color: black;
+  margin: 0
 }
 
-.email-links {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+img {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  object-position: center 30%;
 }
 
-.email-link {
-  font-family: work-sans;
-  color: var(--clr-blue-900);
-}
 
-.bio-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 8;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
+@media only screen and (min-width: 768px) {
+  .portrait-img {
+    width: 15rem;
+    height: 15rem;  
+    border-radius: 0.7rem 0.7rem 0rem 0rem;
+    border: 3.418px solid #000; 
+  }
+  .leader-card-header {
+    display: flex;
+    flex-direction: row;
+    max-width: 15rem;
+    justify-content: space-between;
+  }
+  .leader-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    
+  }
+
+.leader-card-header {
+    display: flex;
+    flex-direction: row;
+    max-width: 15rem;
+    justify-content: space-between;
+    
+  }
 }
 </style>

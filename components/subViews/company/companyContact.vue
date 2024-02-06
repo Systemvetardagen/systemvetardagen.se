@@ -1,41 +1,44 @@
 <template>
-  <div v-if="post.contact_persons" class="post-contact">
+  <div class="wrapper">
+    <div v-if="this.post.contact_persons.length > 0" class="post-contact">
 
-    <!-- Heading -->
-    <h2>{{ $t("company_page.contact") }}</h2>
+      <!-- Heading -->
+      <h2>{{ $t("company_page.contact") }}</h2>
 
-    <!-- Contact Cards -->
-    <div class="cards-container">
+      <!-- Contact Cards -->
+      <div class="cards-container">
 
-      <!-- Contact Card Loop -->
-      <div
-        v-for="contact in this.post.contact_persons"
-        class="card"
-        :key="contact.id"
-      >
-        <!-- Outer Box -->
-        <ShadowBox class="box">
+        <!-- Contact Card Loop -->
+        <div
+          v-for="contact in this.post.contact_persons"
+          class="card"
+          :key="contact.id"
+        >
+          <!-- Outer Box -->
+          <ShadowBox class="box">
 
-          <!-- Inner Box -->
-          <div class="inner-box-layout">
-            <!-- Name -->
-            <p v-if="contact.name" class="name">
-              {{ contact.name }}
-            </p>
-            <!-- Email -->
-            <a
-              v-if="contact.email"
-              class="email"
-              :href="'mailto:' + contact.email"
-              >  {{ contact.email }}
-            </a>
-            <!-- Phone Number -->
-            <p v-if="contact.phone_number" class="phone">{{ contact.phone_number }} </p>
-          </div>
-        </ShadowBox>
+            <!-- Inner Box -->
+            <div class="inner-box-layout">
+              <!-- Name -->
+              <p v-if="contact.name" class="name">
+                {{ contact.name }}
+              </p>
+              <!-- Email -->
+              <a
+                v-if="contact.email"
+                class="email"
+                :href="'mailto:' + contact.email"
+                >  {{ contact.email }}
+              </a>
+              <!-- Phone Number -->
+              <p v-if="contact.phone_number" class="phone">{{ contact.phone_number }} </p>
+            </div>
+          </ShadowBox>
 
+        </div>
       </div>
     </div>
+  
 
     <!-- Link to Positions -->
     <div v-if="post.link_to_positions" class="external-link">
@@ -58,11 +61,20 @@
     },
     components: {
       ExternalLink
+    },
+    mounted() {
+       console.log(this.post.contact_persons) 
     }
   }
 </script>
 
 <style scoped>
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* COMPANY CONTACT */
 .post-contact {
@@ -125,6 +137,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: center;
+ 
 }
 
 .icon {

@@ -16,8 +16,6 @@
               <p v-if="post.number_of_employees_internationally" class="table-left">{{ $t("company_page.employees-int") }}</p>
               <p v-if="post.number_of_employees_internationally" class="table-right">{{ separateDecimals(post.number_of_employees_internationally) }}</p>
             </div>
-
-            
           </div>
         </div>
     </ShadowBox>
@@ -31,7 +29,7 @@
   export default {
       props: {
           post: Object,
-          locale: Object
+          locale: String
       },
       methods: {
         separateDecimals(number) {
@@ -47,10 +45,16 @@
 /* COMPANY INFO */
 
 .post-info {
-  margin-top: 2rem;
+  margin-top: 0;
   display: flex;
   justify-content: center;
+  padding: 0;
 }
+
+.post-info p {
+  font-family: "IBMPlexMono", monospace;
+}
+
 .inner-box {
   display: flex;
   flex-direction: column;
@@ -63,10 +67,9 @@
 
 .heading {
   color: #000;
-  font-size: 1.4375rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 300;
-  line-height: 2.0625rem; /* 143.478% */
   letter-spacing: 0.1725rem;
   text-transform: uppercase;
 }
@@ -85,7 +88,7 @@
 }
 .table-left, .table-right {
   color: #000;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 400;
 
@@ -103,12 +106,12 @@
 
   .inner-box {
     width: 25rem;
-    
+
   }
   .table {
     display: flex;
     justify-content: space-between;
-    
+
   }
   .table-row {
     display: flex;
@@ -122,7 +125,7 @@
 
   }
   .table-right {
-    
+
     padding-bottom: 0;
 
   }

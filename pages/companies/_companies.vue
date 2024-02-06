@@ -3,13 +3,15 @@
     <section v-if="post">
       <article class="post" id="post">
         <h1 v-if="isPreview" class="preview-title">This is a preview of the page</h1>
-        
+
         <!-- BANNER -->
         <Banner :post="this.post"/>
 
+        <!-- PLACEMENT -->
+        <Placement :post="this.post"></Placement>
 
-
-
+        <!-- LOGO AREA -->
+        <LogoArea :post="this.post" :locale="this.locale"/>
 
         <!-- ARTICLE MAIN CONTENT -->
         <div class="post-content">
@@ -21,7 +23,6 @@
 
           <!-- PARTNER CONTENT -->
           <PartnerContent :post="this.post"/>
-
 
           <!-- MATCH LIST -->
           <MatchList :post="this.post" :locale="this.locale"/>
@@ -44,23 +45,18 @@
 
         <!-- BOTTOM BUTTONS -->
         <div class="bottom-buttons">
-          <Button
-            :link="localePath('/companies/')"
-            borderCol="--crl-black"
-            bColor="transparent"
-            tColor="--crl-black"
-            class="bb"
-            >{{ $t("company_page.go-back") }}</Button
+          <a
+            :href="localePath('/companies/')"
+
+            class="btn"
+            >{{ $t("company_page.go-back") }}</a
           >
 
-          <Button
-            link="#top"
-            borderCol="--crl-black"
-            bColor="transparent"
-            tColor="--crl-black"
-            class="bb"
+          <a
+            href="#top"
+            class="btn"
             >{{ $t("company_page.go-top") }}
-          </Button>
+        </a>
         </div>
         <!-- END BOTTOM BUTTONS -->
       </article>
@@ -72,6 +68,8 @@
 import Button from "@/components/Button.vue";
 import marked from "marked";
 import Banner from "@/components/subViews/company/banner.vue"
+import LogoArea from "../../components/subViews/company/logoArea.vue";
+import Placement from "../../components/subViews/company/placement.vue";
 import CompanyInfo from "@/components/subViews/company/companyInfo.vue"
 import PartnerContent from "@/components/subViews/company/partnerContent.vue"
 import MatchList from "@/components/subViews/company/matchList.vue"
@@ -133,17 +131,23 @@ export default {
         translations: post.translations || [],
       };
       const data_detail = await API_Call_Company_Details(ids);
-      post.programs_data = {
+      post.programs_data_master = {
+        sv: [],
+        en: []
+      }
+      post.programs_data_bachelor = {
         sv: [],
         en: []
       }
 
       data_detail.programs.forEach(item => {
-        const { languages_code, program } = item;
+        const { languages_code, program, is_master } = item;
         if (languages_code === 'en') {
-          post.programs_data.en.push(program);
+          if(is_master) post.programs_data_master.en.push(program);
+          else post.programs_data_bachelor.en.push(program);
         } else if (languages_code === 'sv') {
-          post.programs_data.sv.push(program);
+          if(is_master) post.programs_data_master.sv.push(program);
+          else post.programs_data_bachelor.sv.push(program);
         }
       });
 
@@ -211,10 +215,12 @@ export default {
   components: {
     Button,
     CompanyInfo,
-    Banner, 
+    Banner,
     PartnerContent,
     MatchList,
-    CompanyContact
+    CompanyContact,
+    LogoArea,
+    Placement
 },
   computed: {
     showEnglishMessage() {
@@ -233,23 +239,21 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 3rem;
 }
 
 
 /* MAIN COMPANY CONTENT */
 .post-content {
-  margin-top: 5rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   max-width: 60ch;
+  padding: 0 1.5rem;
 }
 .post-content > p {
   padding-bottom: 2rem;
 }
-
-
-
-
 
 /* MAP */
 .map-section {
@@ -269,10 +273,33 @@ export default {
   display: flex;
   flex-direction: column;
   padding-top: 3rem;
+  gap: 2rem;
 }
-.bb {
-  margin-bottom: 2rem;
-}
+
+.btn {
+    /* Alignment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Shape and Background */
+    padding: 0.6em 1.5em;
+    border: none;
+    border-radius: 3rem;
+
+    /* Text */
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.22rem;
+    color: var(--clr-grey-900);
+    border: solid 0.15rem var(--clr-grey-900);
+  }
+
+  .btn.hovered {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgb(245, 245, 245);
+  }
 
 /* DESKTOP MODIFICATIONS */
 @media only screen and (min-width: 768px) {
@@ -283,10 +310,6 @@ export default {
     flex-direction: row;
   }
 
-  .post-info {
-    padding: 3rem 5rem;
-    border-radius: 1rem;
-  }
   .table {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -305,7 +328,7 @@ export default {
   .bb {
     margin-right: 3rem;
   }
-  .preview-title {  
+  .preview-title {
   text-decoration: underline;
   margin-bottom: 1rem;
 }
