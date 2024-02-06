@@ -1,5 +1,6 @@
 <template>
   <main class="wrapper">
+    <WarningBanner>{{ $t("catalog_page.warning_banner_message") }}</WarningBanner>
     <section v-if="posts">
       <h1 v-if="isPreview" class="preview-title">This is a preview of the page</h1>
       <h1 class="title">{{ $t("catalog_page.companies") }}</h1>
@@ -136,6 +137,7 @@
 
 <script>
 import CompanyCard from "@/components/CompanyCard.vue";
+import WarningBanner from "@/components/WarningBanner.vue"
 
 import {
   API_Call_Companies,
@@ -160,6 +162,7 @@ export default {
 
   components: {
     CompanyCard,
+    WarningBanner
   },
   // This method vill fetch a list of all the cms entries in a specified folder
   async asyncData({ $content, error, i18n }) {
