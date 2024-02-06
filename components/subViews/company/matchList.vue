@@ -60,7 +60,7 @@
     export default {
         props: {
             post: Object,
-            locale: Object
+            locale: String
         }
     }
 

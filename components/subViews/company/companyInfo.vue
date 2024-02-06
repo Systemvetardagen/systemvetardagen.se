@@ -29,7 +29,7 @@
   export default {
       props: {
           post: Object,
-          locale: Object
+          locale: String
       },
       methods: {
         separateDecimals(number) {

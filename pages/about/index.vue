@@ -77,7 +77,7 @@ export default {
       return accumulator;
     }, { "Project Management": [], "Web Development & Design": []})); // Initial value is an empty object
 
-    console.log(posts)
+    
     return { posts }
   },
   methods: {
