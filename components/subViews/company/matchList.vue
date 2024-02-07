@@ -1,5 +1,5 @@
 <template>
-    <div class="match-list">
+    <div class="match-list" v-if="(post.programs_data_bachelor && post.programs_data_bachelor[locale].length) || (post.programs_data_master && post.programs_data_master[locale].length) || (post.qualifications && post.qualifications[locale].length || (post.positions_data && post.positions_data[locale].length))">
       <h3>
         {{ post.title }}
         {{ $t("company_page.looking-for") }}
@@ -7,7 +7,7 @@
       <div class="items">
 
         <!-- Section: Bachelors -->
-        <div class="section">
+        <div class="section" v-if="post.programs_data_bachelor && post.programs_data_bachelor[locale].length">
           <p class="section-heading">{{ $t("company_page.match_list.bachelor") }}</p>
           <ul class="tag-list">
             <li
@@ -21,7 +21,7 @@
         </div>
 
          <!-- Section: Masters -->
-        <div class="section">
+        <div class="section" v-if="post.programs_data_master && post.programs_data_master[locale].length">
           <p class="section-heading">{{ $t("company_page.match_list.master") }}</p>
           <ul class="tag-list">
             <li
@@ -34,13 +34,13 @@
         </div>
 
         <!-- Section: Qualifications -->
-        <div v-if="post.qualifications" class="section">
+        <div v-if="post.qualifications && post.qualifications[locale].length" class="section">
           <p class="section-heading">{{ $t("company_page.match_list.qualifications") }}</p>
           <p class="border-box">{{ post.qualifications[locale] }}</p>
         </div>
 
         <!-- Section: Positions -->
-        <div class="section">
+        <div class="section" v-if="post.positions_data && post.positions_data[locale].length">
           <p class="section-heading">{{ $t("company_page.match_list.positions") }}</p>
           <ul class="tag-list">
             <li
