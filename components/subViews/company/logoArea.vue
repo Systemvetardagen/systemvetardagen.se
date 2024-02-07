@@ -55,6 +55,7 @@ export default {
   flex-direction: row;
   width: 100%;
   max-width: 1000px;
+  padding: 1rem;
 }
 
 .area-of-business p {
@@ -75,7 +76,7 @@ export default {
   max-width: 300px;
   height: 80%;
   padding: 2rem;
-  margin: 1rem;
+  /*margin: 1rem;*/
   background-color: var(--clr-white);
   border-radius: 1rem;
   border: 2px solid #989898;
@@ -105,6 +106,7 @@ export default {
   display: flex;
   gap: 1.6rem;
   height: 100%;
+  background-color: red;
 }
 
 .socials-container a {
@@ -112,7 +114,7 @@ export default {
 }
 
 .socials-container svg {
-  height: fit-content;
+  /*height: fit-content;*/
   width: 1.4rem;
   fill: #666666;
 }
