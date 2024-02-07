@@ -3,7 +3,7 @@
 
 
     <!-- YOUTUBE VIDEO -->
-    <div v-if="post.sponsor_youtube_video" class="video">
+    <div v-if="post.sponsor && post.sponsor_youtube_video" class="video">
         <iframe
             class="yt-video"
             :src="this.post.sponsor_youtube_video"
@@ -14,7 +14,7 @@
     </div>
     <!-- END YOUTUBE VIDEO -->
     <markdownArea
-      v-if="post.sponsor_extra_text"
+      v-if="post.sponsor && post.sponsor_extra_text"
       :htmlContent="markdownToHtml"
       class="extra-text"
     ></markdownArea>
