@@ -106,7 +106,6 @@ export default {
   display: flex;
   gap: 1.6rem;
   height: 100%;
-  background-color: red;
 }
 
 .socials-container a {
