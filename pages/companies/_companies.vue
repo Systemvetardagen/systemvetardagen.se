@@ -125,7 +125,8 @@ export default {
       }
       const ids = {
         //regular programs and master programs now get combined, we can change this later
-        programs: post.programs.concat(post.master_programs) || [],
+        programs: post.programs || [],
+        programsMaster: post.master_programs || [],
         positions: post.positions || [],
         contacts: post.contacts || [],
         translations: post.translations || [],

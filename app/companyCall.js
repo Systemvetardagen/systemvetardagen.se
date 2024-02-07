@@ -102,12 +102,13 @@ export const API_Call_Company_Details = async(ids) => {
     if (ids.programs){
         const response1 = await fetch(`${Base_URL}items/companies_programs/?filter[id][_in]=${ids.programs.join(',')}`, {headers});
         const programs1 = (await response1.json()).data;
-        const response1p1 = await fetch(`${Base_URL}items/companies_programs_1/?filter[id][_in]=${ids.programs.join(',')}`, {headers});
+        const programs1Ids = programs1.map(item => item.programs_id)
+        const response1p1 = await fetch(`${Base_URL}items/companies_programs_1/?filter[id][_in]=${ids.programsMaster.join(',')}`, {headers});
         const programs1p1 = (await response1p1.json()).data;
         const programs1p1Ids = programs1p1.map(item => item.programs_id)
 
         //thiss combines bachelor and master programs for now
-        const programIds = programs1.concat(programs1p1).map(item => item.programs_id);
+        const programIds = programs1Ids.concat(programs1p1Ids)
 
 
         const response2 = await fetch(`${Base_URL}items/programs/?filter[id][_in]=${programIds.join(',')}`, {headers});
