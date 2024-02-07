@@ -22,7 +22,7 @@
           <CompanyInfo :post="this.post" :locale="this.locale"/>
 
           <!-- PARTNER CONTENT -->
-          <PartnerContent :post="this.post"/>
+          <PartnerContent v-if="post.sponsor" :post="this.post"/>
 
           <!-- MATCH LIST -->
           <MatchList :post="this.post" :locale="this.locale"/>
