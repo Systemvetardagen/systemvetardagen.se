@@ -1,7 +1,7 @@
 <template>
   <main class="wrapper">
     <WarningBanner>{{ $t("catalog_page.warning_banner_message") }}</WarningBanner>
-    <section v-if="posts">
+    <section v-if="posts" class="catalog-section">
       <h1 v-if="isPreview" class="preview-title">This is a preview of the page</h1>
       <h1 class="title">{{ $t("catalog_page.companies") }}</h1>
 
@@ -306,6 +306,10 @@ export default {
 </script>
 <style scoped>
 
+.catalog-section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .scale-up-center:hover {
   -webkit-animation: scale-up-center 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
           animation: scale-up-center 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
