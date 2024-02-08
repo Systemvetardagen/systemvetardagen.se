@@ -20,7 +20,7 @@
     ></markdownArea>
     <!-- SPONSOR IMAGES // GALLERY -->
     <div v-if="post.sponsor_images" class="gallery">
-    <div class="column">
+    <div class="column single-row">
         <div v-if="post.sponsor_images[0]" class="gallery-item">
         <img
             :src="this.post.sponsor_images[0]"
@@ -109,6 +109,7 @@ img {
 
 .gallery {
   display: flex;
+  align-items: stretch;
   flex-direction: column-reverse;
   gap: 0.5rem;
   margin-top: 2rem;
@@ -119,6 +120,16 @@ img {
   flex-direction: column;
   gap: 0.5rem;
 
+}
+
+.gallery .single-row {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.gallery-item{
+  flex-grow: 1;
 }
 
 .gallery-img {
