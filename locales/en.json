@@ -99,6 +99,13 @@
       "name": "Name",
       "title": "Contact us"
     },
+    "countdown": {
+      "countdown_text": "It's almost time!",
+      "day": "days",
+      "hour": "hours",
+      "min": "minutes",
+      "sec": "seconds"
+    },
     "description": {
       "para1": "For the 28th year in a row, Systemvetardagen is arranged at Stockholm University Campus Kista.",
       "para2": "It is the job fair day organized by DISK, the student union of the Department of Computer and Systems Sciences (DSV).",
