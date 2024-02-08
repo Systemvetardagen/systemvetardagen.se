@@ -447,7 +447,7 @@ label {
   justify-content: center;
   max-width: 64rem;
   gap: 1rem;
-  margin: 2rem 0rem;
+  margin: 2rem auto;
 }
 
 @media (min-width: 768px) {
