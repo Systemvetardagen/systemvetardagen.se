@@ -14,7 +14,7 @@
       </div>
       <div class="text-block">
         <h3>{{$t('about_page.description.heading3')}}</h3>
-        <p>{{$t('about_page.description.para3')}}</p>
+        <p><NuxtLink to="/companies">{{ $t('about_page.description.para3') }}</NuxtLink></p>
       </div>
       <div class="text-block">
         <h3>{{$t('about_page.description.heading4')}}</h3>
@@ -22,7 +22,7 @@
       </div>
 
     </div>
-    
+
     <section v-if="posts">
       <h2>{{$t('about_page.project_group.heading')}}</h2>
       <!-- Pass all team members to team as props.  -->
@@ -77,7 +77,7 @@ export default {
       return accumulator;
     }, { "Project Management": [], "Web Development & Design": []})); // Initial value is an empty object
 
-    
+
     return { posts }
   },
   methods: {
