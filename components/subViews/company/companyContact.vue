@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-  
+
 
     <!-- Link to Positions -->
     <div v-if="post.link_to_positions" class="external-link">
@@ -63,7 +63,7 @@
       ExternalLink
     },
     mounted() {
-       console.log(this.post.contact_persons) 
+       console.log(this.post.contact_persons)
     }
   }
 </script>
@@ -74,6 +74,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 /* COMPANY CONTACT */
@@ -81,6 +82,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding: 0.5rem;
 }
 
 .cards-container{
@@ -88,6 +91,13 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  width: 100%;
+}
+
+.card {
+  background-color: red;
+  height: 100px;
+  max-width: 100%;
 }
 
 .inner-box-layout {
@@ -96,8 +106,10 @@
   justify-content: center;
   align-items: center;
   gap: 0.4rem;
-  min-width: 20rem;
   padding: 1rem;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
 }
 
 .name {
@@ -109,13 +121,14 @@
 }
 
 .email {
-  /*margin-top: 0.5rem;*/
   color: #3F21F8;
-  font-size: 0.9rem;
+  font-size: 1em;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  word-break: break-all;
 }
+
 
 .phone {
   color: #000;
@@ -138,7 +151,6 @@
   flex-direction: row;
   align-items: center;
   text-align: center;
- 
 }
 
 .icon {
