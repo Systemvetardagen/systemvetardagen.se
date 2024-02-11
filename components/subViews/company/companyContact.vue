@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="contact-container">
     <div v-if="this.post.contact_persons.length > 0" class="post-contact">
 
       <!-- Heading -->
@@ -70,7 +70,7 @@
 
 <style scoped>
 
-.wrapper {
+.contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
