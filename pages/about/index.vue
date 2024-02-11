@@ -187,8 +187,21 @@ section {
 
 .post-name {
   font-weight: bold;
-
 }
+
+a {
+  color: var(--clr-blue-600);
+}
+
+a:visited {
+  color: var(--clr-blue-600);
+}
+
+a:hover {
+  color: var(--clr-blue-700);
+  text-decoration: underline;
+}
+
 
 .title {
   align-self: center;
