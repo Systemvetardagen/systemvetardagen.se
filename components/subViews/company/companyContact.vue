@@ -95,8 +95,6 @@
 }
 
 .card {
-  background-color: red;
-  height: 100px;
   max-width: 100%;
 }
 
