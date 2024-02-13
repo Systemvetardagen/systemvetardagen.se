@@ -108,26 +108,30 @@
               <company-card class="company-card" :company="post" />
             </NuxtLink>
           </div>
-          <div class="underline"></div>
         </div>
 
+        <div v-if="filteredPosts.some(post => post.sponsor) && filteredPosts.some(post => post.sponsor == false)" class="underline"></div>
+
         <!-- Non-Partners -->
-        <h3 class="cat-heading">{{$t('catalog_page.all_companies')}}</h3>
-        <div class="company-cards">
-          <!---<div v-if="showEnglishMessage">
-            <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
-          <NuxtLink
-            v-for="post of filteredPosts"
-            :key="post.company_name"
-            v-if="!post.sponsor"
-            :to="localePath({
-              name: 'companies-companies',
-              params: { companies: post.company_name },
-            })
-            ">
-            <company-card class="company-card" :company="post" />
-          </NuxtLink>
+        <div v-if="filteredPosts.some(post => post.sponsor == false)">
+          <h3 class="cat-heading">{{$t('catalog_page.all_companies')}}</h3>
+          <div class="company-cards">
+            <!---<div v-if="showEnglishMessage">
+              <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
+            <NuxtLink
+              v-for="post of filteredPosts"
+              :key="post.company_name"
+              v-if="!post.sponsor"
+              :to="localePath({
+                name: 'companies-companies',
+                params: { companies: post.company_name },
+              })
+              ">
+              <company-card class="company-card" :company="post" />
+            </NuxtLink>
+          </div>
         </div>
+        
       </div>
 
 
