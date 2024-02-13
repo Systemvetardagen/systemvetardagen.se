@@ -251,6 +251,7 @@ export default {
   flex-direction: column;
   max-width: 60ch;
   padding: 0 1.5rem;
+  width: 100%;
 }
 .post-content > p {
   padding-bottom: 2rem;

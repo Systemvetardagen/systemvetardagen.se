@@ -125,7 +125,7 @@ export default {
 @media only screen and (max-width: 850px) {
 
   .area-of-business {
-    min-width: 400px;
+    /*min-width: 400px;*/
   }
   .logo-area {
     flex-wrap: wrap;
