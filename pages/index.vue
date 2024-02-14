@@ -79,8 +79,8 @@ export default {
 <style scoped>
   html {
     scroll-behavior: smooth;
-
   }
+
   .blog-section {
     max-width: 100%;
     display: flex;
@@ -93,5 +93,6 @@ export default {
     flex-direction: column;
     gap: 2rem;
     background-color: #f8f8f8;
+    padding-top: 3rem; /* For the navbar */
   }
 </style>

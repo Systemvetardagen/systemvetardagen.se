@@ -53,6 +53,7 @@
 
 .post-info p {
   font-family: "IBMPlexMono", monospace;
+  text-align: center;
 }
 
 .inner-box {
@@ -60,8 +61,8 @@
   flex-direction: column;
   align-items: center;
   gap: 0.625rem;
-  width: 20rem;
-  padding: 1.5rem 0;
+  /*max-width: fit-content;*/
+  padding: 1.5rem 1rem;
   align-self: center;
 }
 
