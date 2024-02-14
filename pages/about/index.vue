@@ -14,7 +14,7 @@
       </div>
       <div class="text-block">
         <h3>{{$t('about_page.description.heading3')}}</h3>
-        <p><NuxtLink to="/companies">{{ $t('about_page.description.para3') }}</NuxtLink></p>
+        <p>{{ $t('about_page.description.para3') }}<NuxtLink to="/companies">{{ $t('about_page.description.para3_link_text') }}</NuxtLink></p>
       </div>
       <div class="text-block">
         <h3>{{$t('about_page.description.heading4')}}</h3>
