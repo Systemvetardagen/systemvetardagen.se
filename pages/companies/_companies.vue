@@ -68,8 +68,8 @@
 import Button from "@/components/Button.vue";
 import marked from "marked";
 import Banner from "@/components/subViews/company/banner.vue"
-import LogoArea from "../../components/subViews/company/logoArea.vue";
-import Placement from "../../components/subViews/company/placement.vue";
+import LogoArea from "@/components/subViews/company/logoArea.vue";
+import Placement from "@/components/subViews/company/placement.vue";
 import CompanyInfo from "@/components/subViews/company/companyInfo.vue"
 import PartnerContent from "@/components/subViews/company/partnerContent.vue"
 import MatchList from "@/components/subViews/company/matchList.vue"
@@ -251,6 +251,7 @@ export default {
   flex-direction: column;
   max-width: 60ch;
   padding: 0 1.5rem;
+  width: 100%;
 }
 .post-content > p {
   padding-bottom: 2rem;

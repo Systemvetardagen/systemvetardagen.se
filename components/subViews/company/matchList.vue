@@ -77,6 +77,8 @@ li {
   flex-direction: column;
   align-items: center;
   padding: 2rem 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .items {
@@ -84,6 +86,7 @@ li {
   flex-direction: column;
   align-items: center;
   padding: 0rem 0;
+  width: 100%;
 }
 
 .section {
@@ -93,8 +96,9 @@ li {
   padding: 1rem 0;
   line-height: 1.5;
   text-align: center;
-  /* background-color: red; */
   justify-content: center;
+  width: 100%;
+
 }
 
 .tag-list {
@@ -125,6 +129,7 @@ li {
 .section-heading {
   font-size: 1.2rem;
   font-weight: 700;
+  word-break: break-all;
 }
 
 .border-box {
@@ -145,7 +150,12 @@ li {
     flex-direction: row;
   }
 
+}
 
+@media only screen and (max-width: 400px) {
+  .border-box {
+    padding: 1rem;
+  }
 }
 
 </style>

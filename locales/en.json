@@ -7,7 +7,8 @@
       "heading4": "How can I as a company display?",
       "para1": "Systemvetardagen is an annual career fair for students and recent graduates focusing on the IT sector. The fair is hosted by the Student Union DISK, a student union at the Department of Computer and Systems Sciences in Kista at Stockholm University. This event is completely free to attend for all students!",
       "para2": "In 2024 the fair is held on the 21st of February between 10-16 in Kista Nod, located at Borgarfjordsgatan 12 in Stockholm. No sign-up is needed, just come as you are!",
-      "para3": "You can find all the displaying companies in our company catalogue (coming soon).",
+      "para3": "You can find all the displaying companies in our ",
+      "para3_link_text": "company catalog.",
       "para4": "Email us at "
     },
     "heading": "About",
@@ -31,6 +32,10 @@
     "clear_selection": "Clear",
     "coming_soon": "Catalog coming soon!",
     "companies": "Companies",
+    "filter_categories": {
+      "bachelors": "Bachelor's programmes",
+      "masters": "Master's programmes"
+    },
     "filter_positions": {
       "0": "Internships",
       "1": "Foreign Services",
@@ -161,21 +166,22 @@
     },
     "sponsors": "Our partners",
     "student_node": {
-      "book_session": "Book Interview Sessions",
+      "book_session": "Book interview sessions",
+      "button": "Register now",
       "howtoapply": "Follow the steps to apply:",
-      "intro": "This year we have once again partnered up with StudentNode to offer students the opportunity of applying for interview sessions with the companies!",
+      "intro": "In collaboration with StudentNode, we provide students with the opportunity to meet companies via interviews. Together, we create a platform where students and companies can easily meet. Create amazing opportunities for your career and future!",
       "link": "mitt.systemvetardagen.se",
       "step1": "Go to ",
-      "step2": "Register an account",
+      "step2": "Register an account.",
       "step3": "Fill in all your info for the account and upload your CV. This way you increase your chances of getting your desired job!",
       "step4": "Write and upload personlized cover letters for the companies that you apply for! This will make you stand out and in turn increase your chances!",
       "step5": "Find the companies you are most interested in and select a time of your choosing to apply for an interview session.",
-      "step6": "Press “Ansök” to apply for the interview(s) and then press “Send times to my email” to send the selected times to your email inbox. Don’t forget to save the times to your calendar!"
+      "step6": "Press “Ansök” to apply for the interview(s) and then press “Klar” to send the selected times to your email inbox. Don’t forget to save the times to your calendar!"
     }
   },
   "navbar": {
     "about": "About",
-    "catalog": "Catalog",
+    "catalog": "Companies",
     "home": "Home"
   },
   "temporaryLandingPage": {
