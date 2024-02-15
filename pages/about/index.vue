@@ -14,7 +14,7 @@
       </div>
       <div class="text-block">
         <h3>{{$t('about_page.description.heading3')}}</h3>
-        <p>{{$t('about_page.description.para3')}}</p>
+        <p>{{ $t('about_page.description.para3') }}<NuxtLink to="/companies">{{ $t('about_page.description.para3_link_text') }}</NuxtLink></p>
       </div>
       <div class="text-block">
         <h3>{{$t('about_page.description.heading4')}}</h3>
@@ -22,7 +22,7 @@
       </div>
 
     </div>
-    
+
     <section v-if="posts">
       <h2>{{$t('about_page.project_group.heading')}}</h2>
       <!-- Pass all team members to team as props.  -->
@@ -77,7 +77,7 @@ export default {
       return accumulator;
     }, { "Project Management": [], "Web Development & Design": []})); // Initial value is an empty object
 
-    
+
     return { posts }
   },
   methods: {
@@ -186,8 +186,21 @@ section {
 
 .post-name {
   font-weight: bold;
-
 }
+
+a {
+  color: var(--clr-blue-600);
+}
+
+a:visited {
+  color: var(--clr-blue-600);
+}
+
+a:hover {
+  color: var(--clr-blue-700);
+  text-decoration: underline;
+}
+
 
 .title {
   align-self: center;
