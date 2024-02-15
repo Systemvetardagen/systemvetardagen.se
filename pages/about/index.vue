@@ -118,7 +118,7 @@ p {
   flex-direction: column;
   gap: 3rem;
   justify-items: center;
-  align-items: flex-start;
+  align-items: center;
 }
 .banner {
   width: 100%;
@@ -148,7 +148,6 @@ section {
   flex-direction: column;
   align-items: flex-start;
   gap: 3rem;
-  align-self: flex-start;
   padding: 2rem;
 }
 
