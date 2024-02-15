@@ -1,27 +1,17 @@
 <template>
-    <section>
-        <div class="studentnode_main">
-            <img class="SNimage" src="@/assets/img/StudentNodeimage.jpg">
-            <div class="studentnode">
-                    <h2 class="heading">{{ $t('landing_page.student_node.book_session') }}</h2>
-                    <p>{{$t('landing_page.student_node.intro')}}</p>
-                    <p style="padding-top:1rem">{{$t("landing_page.student_node.howtoapply")}}</p>
-                    <p style="padding-bottom:5%; padding-top:0rem"><ol>
-                        <li>{{ $t('landing_page.student_node.step1') }}<a style="color: var(--clr-blue-600);" href=https://mitt.systemvetardagen.se> {{ $t('landing_page.student_node.link') }}</a>.</li>
-                        <li>{{ $t('landing_page.student_node.step2') }}</li>
-                        <li>{{ $t('landing_page.student_node.step3') }}</li>
-                        <!-- <li>{{ $t('landing_page.student_node.step4') }}</li> -->
-                        <li>{{ $t('landing_page.student_node.step5') }}</li>
-                        <li>{{ $t('landing_page.student_node.step6') }}</li>
-                    </ol></p>     
-                    <a
-                        href="https://mitt.systemvetardagen.se/"
-                        class="btn"
-                        >{{$t('landing_page.student_node.button')}}
-                    </a>
-            </div>
-        </div>
-	</section>
+  
+  
+    <div class="studentnode">
+        <h2 class="heading">{{ $t('landing_page.student_node.book_session') }}</h2>
+        <p>{{$t('landing_page.student_node.intro')}}</p>   
+        <a
+            href="https://mitt.systemvetardagen.se/"
+            class="btn"
+            >{{$t('landing_page.student_node.button')}}
+        </a>
+    </div>
+
+	
 </template>
 
 
@@ -31,31 +21,18 @@ export default {
 };
 </script>
 
-<style>
-section {
-    align-self: center;
-}
-li {
-    margin: 0.5rem;
-}
-.studentnode_main {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 1rem 2rem;
-    align-items: flex-start;
-    gap: 2rem;
-    max-width: 70rem;
-}
+<style scoped>
+
 .studentnode{
     max-width: 45ch;
-}
-.SNimage{
-    width:90%; 
-    height: auto;
-    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
     align-self: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 0 2rem;
+
 }
 .heading {
  font-family: OverpassMedium;
@@ -85,13 +62,5 @@ li {
     background-color: rgba(0, 0, 0, 0.1);
     color: rgb(245, 245, 245);
   }
-@media (min-width: 1024px) {
-		 .studentnode_main {
-            flex-direction: row;
-            
-         }
-         .studentnode {
-           
-        }
-	  }
+
 </style>
