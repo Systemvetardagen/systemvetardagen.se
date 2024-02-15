@@ -7,6 +7,7 @@
     <banner img="crowded-from-above" path="/companies">{{$t('landing_page.banner.meet')}}</banner>
     <countdown />
     <description/>
+    <studentnode/>
     <div class="blog-section">
         <BlogCard
           v-for="post of filteredPosts"
@@ -40,6 +41,7 @@ import description from "@/components/subViews/landing/description.vue"
 import blog from "@/components/subViews/landing/blog.vue"
 import BlogCard from "@/components/BlogCard.vue"
 import links from "@/components/subViews/landing/links.vue"
+import studentnode from "@/components/subViews/landing/studentnode.vue"
 
 export default {
   // This method vill fetch a list of all the cms entries in a specified folder
@@ -66,7 +68,8 @@ export default {
     description,
     blog,
     BlogCard,
-    links
+    links,
+    studentnode
   },
   computed: {
     filteredPosts() {
