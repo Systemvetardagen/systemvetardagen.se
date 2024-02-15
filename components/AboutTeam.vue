@@ -161,6 +161,7 @@ section {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 1rem;
+  max-width: 34rem;
 }
 
 .post-wdd {
@@ -168,6 +169,7 @@ section {
   flex-direction: column;
   gap: 0.2rem;
   width: 16rem;
+  
 }
 
 .link-icon {
