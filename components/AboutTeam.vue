@@ -161,14 +161,14 @@ section {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 1rem;
-  max-width: 34rem;
+  max-width: 32rem;
 }
 
 .post-wdd {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  width: 16rem;
+  width: 15rem;
   
 }
 
