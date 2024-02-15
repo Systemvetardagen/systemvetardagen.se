@@ -5,10 +5,11 @@
       "heading2": "Var och när äger det rum?",
       "heading3": "Vilka företag deltar i år?",
       "heading4": "Hur kan mitt företag delta?",
-      "para1": "Systemvetardagen är en årlig karriärmässa för studenter och nyutexaminerade med fokus på IT-sektorn. Mässan arrangeras av studentföreningen DISK, en studentförening vid Institutionen för data- och systemvetenskap i Kista vid Stockholms universitet. Detta evenemang är helt gratis att delta i för alla studenter!",
-      "para2": "År 2024 hålls mässan den 21 februari mellan kl. 10-16 på Kista Nod, beläget på Borgarfjordsgatan 12 i Stockholm. Ingen anmälan behövs, kom bara som du är!",
-      "para3": "Du hittar alla deltagande företag i vår företagskatalog (kommer snart).",
-      "para4": "Skicka ett e-postmeddelande till oss på "
+      "para1": "Systemvetardagen är en årlig karriärmässa för studenter och nyutexaminerade med fokus på IT-branchen. Mässan arrangeras av studentkåren DISK på Institutionen för data- och systemvetenskap i Kista vid Stockholms universitet. Detta evenemang är helt gratis!",
+      "para2": "År 2024 hålls mässan den 21 februari mellan kl. 10-16 i Kista Nod på Borgarfjordsgatan 12 i Stockholm. Ingen föranmälan behövs, kom bara som du är!",
+      "para3": "Du hittar alla deltagande företag i vår ",
+      "para3_link_text": "företagskatalog.",
+      "para4": "Skicka ett email till oss på "
     },
     "heading": "Om oss",
     "project_group": {
@@ -22,7 +23,7 @@
   },
   "catalog_page": {
     "all": "alla",
-    "all_companies": "Alla Företag",
+    "all_companies": "Alla företag",
     "all_companies_btn": "Se alla företag",
     "and": " och ",
     "aulanod_program": "Aula NOD Program",
@@ -32,6 +33,10 @@
     "coming_soon": "Årets företag presenteras inom kort!",
     "companies": "Företag",
     "company_learn_more": "Läs mer om att jobba hos",
+    "filter_categories": {
+      "bachelors": "Kandidatprogram",
+      "masters": "Masterprogram"
+    },
     "filter_positions": {
       "0": "Praktikplatser",
       "1": "Utlandstjänster",
@@ -52,14 +57,14 @@
       "8": "Magister/Master"
     },
     "map_heading": "Företagsplacering",
-    "partners": "Våra Partners",
+    "partners": "Våra partners",
     "positions": "Positioner",
     "posts_heading": "Projektledarna har ordet!",
     "programs": "Program",
     "qualifications": "Meriterande kunskaper",
     "read_more": "Läs mer",
     "search_input": {
-      "placeholder": "Söka företag"
+      "placeholder": "Sök företag"
     },
     "showing_companies_for": "Visar företag för ",
     "sponsors": "Sponsorer",
@@ -78,8 +83,8 @@
     "location": "Placering",
     "looking-for": "letar efter",
     "match_list": {
-      "bachelor": "Bachelor Program",
-      "master": "Master Program",
+      "bachelor": "Kandidatprogram",
+      "master": "Masterprogram",
       "positions": "Positioner",
       "qualifications": "Meriterande kunskaper"
     },
@@ -177,7 +182,7 @@
   },
   "navbar": {
     "about": "Om oss",
-    "catalog": "Katalog",
+    "catalog": "Företag",
     "home": "Hem"
   },
   "temporaryLandingPage": {

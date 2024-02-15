@@ -17,7 +17,7 @@
           </svg>
         </span>
         <div v-show="programsVisible" class="dropdown-container">
-          <p class="dropdown-heading">Bachelor</p>
+          <p class="dropdown-heading">{{ $t("catalog_page.filter_categories.bachelors") }}</p>
           <div class="dropdown-program dropdown-filter-item" v-for="program in allPrograms[locale]" v-if="!program.master" :key="program.id">
             <input type="checkbox" :name="program" :id="program.id" :value="program" v-model="selectedPrograms" />
             <label :for="program.id">{{ program.name }}</label>
@@ -26,7 +26,7 @@
           </div>
 
           <div class="dropdown-spacer"></div>
-          <p class="dropdown-heading">Master</p>
+          <p class="dropdown-heading">{{ $t("catalog_page.filter_categories.masters") }}</p>
           <div class="dropdown-program dropdown-filter-item" v-for="program in allPrograms[locale]" v-if="program.master" :key="program.id">
             <input type="checkbox" :name="program" :id="program.id" :value="program" v-model="selectedPrograms" />
             <label :for="program.id">{{ program.name }}</label>
