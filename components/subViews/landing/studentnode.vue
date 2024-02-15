@@ -7,17 +7,17 @@
                     <p>{{$t('landing_page.student_node.intro')}}</p>
                     <p style="padding-top:1rem">{{$t("landing_page.student_node.howtoapply")}}</p>
                     <p style="padding-bottom:5%; padding-top:0rem"><ol>
-                        <li>{{ $t('landing_page.student_node.step1') }}<a style="color: var(--clr-blue-600);" href=https://mitt.systemvetardagen.se> {{ $t('landing_page.student_node.link') }}</a></li>
+                        <li>{{ $t('landing_page.student_node.step1') }}<a style="color: var(--clr-blue-600);" href=https://mitt.systemvetardagen.se> {{ $t('landing_page.student_node.link') }}</a>.</li>
                         <li>{{ $t('landing_page.student_node.step2') }}</li>
                         <li>{{ $t('landing_page.student_node.step3') }}</li>
-                        <li>{{ $t('landing_page.student_node.step4') }}</li>
+                        <!-- <li>{{ $t('landing_page.student_node.step4') }}</li> -->
                         <li>{{ $t('landing_page.student_node.step5') }}</li>
                         <li>{{ $t('landing_page.student_node.step6') }}</li>
                     </ol></p>     
                     <a
                         href="https://mitt.systemvetardagen.se/"
                         class="btn"
-                        >Register Now
+                        >{{$t('landing_page.student_node.button')}}
                     </a>
             </div>
         </div>

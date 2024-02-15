@@ -162,15 +162,16 @@
     "sponsors": "Our partners",
     "student_node": {
       "book_session": "Book Interview Sessions",
+      "button": "Register Now",
       "howtoapply": "Follow the steps to apply:",
-      "intro": "This year we have once again partnered up with StudentNode to offer students the opportunity of applying for interview sessions with the companies!",
+      "intro": "In collaboration with StudentNode, we provide students with the opportunity to meet companies via interviews. Together, we create a platform where students and companies can easily meet. Create amazing opportunities for your career and future!",
       "link": "mitt.systemvetardagen.se",
       "step1": "Go to ",
-      "step2": "Register an account",
+      "step2": "Register an account.",
       "step3": "Fill in all your info for the account and upload your CV. This way you increase your chances of getting your desired job!",
       "step4": "Write and upload personlized cover letters for the companies that you apply for! This will make you stand out and in turn increase your chances!",
       "step5": "Find the companies you are most interested in and select a time of your choosing to apply for an interview session.",
-      "step6": "Press “Ansök” to apply for the interview(s) and then press “Send times to my email” to send the selected times to your email inbox. Don’t forget to save the times to your calendar!"
+      "step6": "Press “Ansök” to apply for the interview(s) and then press “Klar” to send the selected times to your email inbox. Don’t forget to save the times to your calendar!"
     }
   },
   "navbar": {
