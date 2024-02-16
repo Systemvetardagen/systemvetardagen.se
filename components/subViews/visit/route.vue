@@ -1,8 +1,8 @@
 <template>
     <div class="route">
-        <div class="gmap">
+        <!-- <div class="gmap">
             <iframe style="border:0" loading="lazy" allowfullscreen :src="gmapUrl()"></iframe>
-        </div>
+        </div> -->
 
         <div class="text">
             <h2>Getting to Systemvetardagen</h2>
