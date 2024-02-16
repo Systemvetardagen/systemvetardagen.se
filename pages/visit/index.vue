@@ -15,10 +15,10 @@
 </script>
 <style scoped>
     .wrapper {
-        padding-top: 3rem;
+        padding: 3rem 0;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 3rem;
         align-items: center;
     }
 </style>
