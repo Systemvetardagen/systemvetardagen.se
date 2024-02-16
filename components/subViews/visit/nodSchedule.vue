@@ -52,10 +52,12 @@
         flex-direction: column;
         align-items: center;
 
+
     }
     
     .time {
         text-decoration: underline;
+        text-wrap: nowrap;
     }
     .company {
        margin: 0;
@@ -63,6 +65,7 @@
     }
     .title {
         text-align: center;
+ 
     }
 
     @media screen and (min-width: 1024px) {
@@ -72,11 +75,15 @@
         .item {
             flex-direction: row;
             gap: 1rem;
-            justify-content: baseline;
+            align-items: baseline;
             
         }
         .company {
             font-size: 1.5rem;
+        }
+        .title {
+            text-align: left;
+            text-wrap: wrap;
         }
     }
 </style>
