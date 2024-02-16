@@ -5,7 +5,7 @@
             <div class="item" v-for="lecture in this.lectures" :key="lecture.time">
                 <div class="time">{{ lecture.time }}</div>
                 <h3 class="company">{{ lecture.company }}</h3>
-                <div class="title">{{ lecture.title }}</div>
+                <div v-if="lecture.title" class="title">{{ lecture.title }}</div>
             </div>
         </div>
     </div>
@@ -15,8 +15,10 @@
         data() {
             return {
                 lectures: [
-                    {time: "11:00—11:45", company: "Truesec", title: "The Russian Use of Malware in the Cyberwar Against Ukraine"},
-                    {time: "12:00—12:45", company: "Arbetsförmedlingen", title: "IT på Arbetsförmedlingen - inte vad du tror"}
+                    {time: "10:00—10:30", company: "Zimply"},
+                    {time: "11:00—11:40", company: "Truesec", title: "From Infection to Encryption: A Deep Dive into Threat Actors Malicious Code"},
+                    {time: "12:00—12:30", company: "Accenture"},
+                    {time: "14:00—15:00", company: "Google", title: "Generative AI - LLMs and all that jazz"}
                 ]
             }
         }
