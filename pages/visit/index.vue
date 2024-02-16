@@ -1,16 +1,19 @@
 <template>
     <div class="wrapper">
         <NodSchedule/>
+        <Map/>
         <Route/>
     </div>
 </template>
 <script>
     import Route from '@/components/subViews/visit/route.vue'
     import NodSchedule from '@/components/subViews/visit/nodSchedule.vue'
+    import Map from '@/components/subViews/visit/map.vue'
     export default {
         components: {
             Route,
-            NodSchedule        }
+            NodSchedule,
+            Map       }
     }
 </script>
 <style scoped>
