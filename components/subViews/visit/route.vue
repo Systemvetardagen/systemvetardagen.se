@@ -7,22 +7,16 @@
         <div class="text">
             <h2>Getting to Systemvetardagen</h2>
             <div class="mode">
-                <p class="mode-head">
-                    Metro
-                </p>
-                <p>
-                    You can travel with the blue metro line (number 11) from Kungsträdgården or T-Centralen (direction Akalla) to Kista (estimated travel time from T-Centralen is 20 minutes). 
-                </p>
+                <p class="mode-head">{{ $t('visit_page.route.metro_heading') }}</p>
+                <p>{{ $t('visit_page.route.metro_text') }}</p>
             </div>
             <div class="mode">
-                <p class="mode-head">
-                    Parking
-                </p>
-                <p>
-                    You can park on Isafjordsgatan or in the Garage Parking in Kista Galleria. Parking is allowed for on Isafjordsgatan Monday to Friday 8:00-18:00, for two hours at a time. In Kista Galleria you can park for a half hour fee.
-                </p>
+                <p class="mode-head">{{ $t('visit_page.route.parking_heading') }}</p>
+                <p>{{ $t('visit_page.route.parking_text') }}</p>
             </div>
-            <p>More detailed directions can be found at DSV’s website.</p>
+            <p>{{ $t('visit_page.route.more_info') }} 
+                <a href="https://dsv.su.se/en/about/find">{{ $t('visit_page.route.more_info_link') }}</a>.
+            </p>
         </div>
     </div>
 </template>
