@@ -5,7 +5,7 @@
         </div> -->
 
         <div class="text">
-            <h2>Getting to Systemvetardagen</h2>
+            <h2>{{$t('visit_page.route.heading')}}</h2>
             <div class="mode">
                 <p class="mode-head">{{ $t('visit_page.route.metro_heading') }}</p>
                 <p>{{ $t('visit_page.route.metro_text') }}</p>
