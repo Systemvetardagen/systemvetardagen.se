@@ -30,9 +30,9 @@
 
         <!-- Visit -->
         <div class="normal">
-          <NuxtLink :to="localePath('/visit/') " activeClass="active" class="header-link">
-            Visit
-          </NuxtLink>
+          <NuxtLink :to="localePath('/visit/') " activeClass="active" class="header-link">{{
+            $t("navbar.visit")
+          }}</NuxtLink>
         </div>
 
         <!-- About -->
@@ -114,9 +114,9 @@
         class="mobile-header-container"
         @click="mobileNavOpen = !mobileNavOpen"
       >
-        <NuxtLink :to="localePath('/visit/')" activeClass="active" class="header-link">
-          Visit
-        </NuxtLink>
+        <NuxtLink :to="localePath('/visit/')" activeClass="active" class="header-link">{{
+          $t("navbar.visit")
+        }}</NuxtLink>
       </div>
 
       <!-- About -->

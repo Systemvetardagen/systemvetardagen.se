@@ -183,7 +183,8 @@
   "navbar": {
     "about": "Om oss",
     "catalog": "Företag",
-    "home": "Hem"
+    "home": "Hem",
+    "visit": "Besöksinfo"
   },
   "temporaryLandingPage": {
     "aboveButton": "Vill du kika på förra årets event?",

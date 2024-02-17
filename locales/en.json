@@ -182,7 +182,8 @@
   "navbar": {
     "about": "About",
     "catalog": "Companies",
-    "home": "Home"
+    "home": "Home",
+    "visit": "Visit info"
   },
   "temporaryLandingPage": {
     "aboveButton": "Want to take a look at last year's event?",
