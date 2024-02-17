@@ -2,6 +2,7 @@
     <div class="wrapper">
         <NodSchedule/>
         <Map/>
+        <studentnode/>
         <Route/>
     </div>
 </template>
@@ -9,10 +10,12 @@
     import Route from '@/components/subViews/visit/route.vue'
     import NodSchedule from '@/components/subViews/visit/nodSchedule.vue'
     import Map from '@/components/subViews/visit/map.vue'
+    import studentnode from "@/components/subViews/landing/studentnode.vue"
     export default {
         components: {
             Route,
             NodSchedule,
+            studentnode,
             Map       }
     }
 </script>
