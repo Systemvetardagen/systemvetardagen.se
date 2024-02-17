@@ -8,7 +8,7 @@
           </div>
         </div>
     </NuxtLink>
-    <NuxtLink v-if="false" :to="localePath('/')" class="link" hidden>
+    <NuxtLink :to="localePath('/visit')" class="link" >
         <div class="link-container">
             <img src="@/assets/img/nod_11.jpg" alt="Nod Building" class="bg-img">
             <div class="foreground">

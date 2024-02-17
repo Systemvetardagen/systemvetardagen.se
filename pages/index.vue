@@ -17,7 +17,7 @@
           class="post-card"
         />
       </div>
-    <banner img="auditorium-seats">{{ $t('landing_page.banner.nod') }}</banner>
+    <banner img="auditorium-seats" path="/visit">{{ $t('landing_page.banner.nod') }}</banner>
     <links/>
 
   </div>

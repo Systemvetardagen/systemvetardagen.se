@@ -119,6 +119,7 @@ p {
   gap: 3rem;
   justify-items: center;
   align-items: center;
+  margin-top: 3rem;
 }
 .banner {
   width: 100%;
