@@ -183,7 +183,8 @@
   "navbar": {
     "about": "Om oss",
     "catalog": "Företag",
-    "home": "Hem"
+    "home": "Hem",
+    "visit": "Besöksinfo"
   },
   "temporaryLandingPage": {
     "aboveButton": "Vill du kika på förra årets event?",
@@ -197,5 +198,16 @@
     "shortDateInfo": "21 februari 2024 i Kista Stockholm.",
     "subheading": "🚧 Under konstruktion 🚧",
     "tagline": "En av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT‑branchen."
+  },
+  "visit_page": {
+    "route": {
+      "heading": "Ta sig till Systemvetardagen",
+      "metro_heading": "Tunnelbana",
+      "metro_text": "Du kan resa med blå tunnelbanelinje (nummer 11) från Kungsträdgården eller T-Centralen (mot Akalla) till Kista. Beräknad restid från T-Centralen är 20 minuter.",
+      "more_info": "Mer info om hur du tar dig hit finns på ",
+      "more_info_link": "DSVs hemsida",
+      "parking_heading": "Parkering",
+      "parking_text": "Du kan parkera antingen på Isafjordsgatan eller i parkeringshuset i Kista Galleria. Tillåten parkering på isafjordsgatan är två timmar, måndag till fredag, kl. 08:00-18:00. I Kista Galleria kan du parkera mot avgift."
+    }
   }
 }

@@ -182,7 +182,8 @@
   "navbar": {
     "about": "About",
     "catalog": "Companies",
-    "home": "Home"
+    "home": "Home",
+    "visit": "Visit info"
   },
   "temporaryLandingPage": {
     "aboveButton": "Want to take a look at last year's event?",
@@ -196,5 +197,16 @@
     "shortDateInfo": "February 21, 2024 in Kista, Stockholm.",
     "subheading": "🚧 Under construction 🚧",
     "tagline": "One of the biggest job fairs in Sweden for students and employers in the IT‑business."
+  },
+  "visit_page": {
+    "route": {
+      "heading": "Getting to Systemvetardagen",
+      "metro_heading": "Metro",
+      "metro_text": "You can travel with the blue metro line (number 11) from Kungsträdgården or T-Centralen (direction Akalla) to Kista (estimated travel time from T-Centralen is 20 minutes).",
+      "more_info": "More detailed directions can be found at ",
+      "more_info_link": "DSV’s website",
+      "parking_heading": "Parking",
+      "parking_text": "You can park on Isafjordsgatan or in the Garage Parking in Kista Galleria. Parking is allowed for on Isafjordsgatan Monday to Friday 8:00-18:00, for two hours at a time. In Kista Galleria you can park for a half hour fee."
+    }
   }
 }
