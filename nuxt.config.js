@@ -13,7 +13,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head() {
     return {
-      title: `Systemvetardagen ${new Date().getFullYear()}`,
+      title: "Systemvetardagen 2024",
       htmlAttrs: {
         lang: "sv",
       },
@@ -40,7 +40,7 @@ export default {
         // Open Graph / Facebook
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://www.systemvetardagen.se/" },
-        { property: "og:title", content: `Systemvetardagen ${new Date().getFullYear()}`},
+        { property: "og:title", content: "Systemvetardagen 2024"},
         {
           property: "og:description",
           content:
@@ -54,7 +54,7 @@ export default {
           property: "twitter:url",
           content: "https://www.systemvetardagen.se/",
         },
-        { property: "twitter:title", content: `Systemvetardagen ${new Date().getFullYear()}` },
+        { property: "twitter:title", content: "Systemvetardagen 2024" },
         {
           property: "twitter:description",
           content:
