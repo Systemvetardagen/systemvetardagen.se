@@ -131,7 +131,7 @@
             </NuxtLink>
           </div>
         </div>
-        
+
       </div>
 
 
@@ -437,7 +437,7 @@ label {
 
 .company-card-container {
   margin-top: 2rem;
-  width: 85%;
+  /*width: 85%;*/
 }
 .underline {
   height: 1px;
