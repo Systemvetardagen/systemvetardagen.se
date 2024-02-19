@@ -23,11 +23,6 @@
         <NuxtLink to="/companies/Cygni%20part%20of%20Accenture">
           <img src="@/assets/img/partners/cygni-logo.png" alt="Logo" class="logo">
         </NuxtLink>
-        <!--
-        <NuxtLink v-for="partner in this.partners" :to="localePath(partner.path)" :key="partner.name">
-          <p class="company-name">{{ partner.name }}</p>
-          <img :src="partner.img" alt="Person wearing a systemvetardagen t-shirt" class="banner">
-        </NuxtLink>-->
       </div>
     </div>
   </div>
