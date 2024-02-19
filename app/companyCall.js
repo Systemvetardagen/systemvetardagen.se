@@ -9,8 +9,18 @@ const headers = {
     'Authorization': `Bearer ${API_Token}`
 };
 
+export const API_Call_Team_Members = async () => {
+
+    const response = await fetch(`${Base_URL}items/team_members`, {headers});
+    const json = await response.json();
+    const data = json.data;
+    data.forEach(p => {if(p.portrait) 
+    { p.portrait = image_url(p.portrait)}}
+    )
+    return data;
+}
+
 export const API_Call_Company = async (name) => {
-    console.log(name)
     const response = await fetch(`${Base_URL}items/companies?filter[company_name][_in]=${name}`, {headers});
     const json = await response.json();
     const data = json.data[0];
@@ -25,6 +35,7 @@ export const API_Call_Companies = async () => {
 
     const positionIds = data.flatMap(item => item.positions);
     const programIds = data.flatMap(item => item.programs);
+    const masterProgramIds = data.flatMap(item => item.master_programs);
 
 
     const response2 = await fetch(`${Base_URL}items/companies_positions/?filter[id][_in]=${positionIds.join(',')}`, {headers});
@@ -34,13 +45,21 @@ export const API_Call_Companies = async () => {
     const response3 = await fetch(`${Base_URL}items/companies_programs/?filter[id][_in]=${programIds.join(',')}`, {headers});
     const programs = (await response3.json()).data;
 
+    const response4 = await fetch(`${Base_URL}items/companies_programs_1/?filter[id][_in]=${masterProgramIds.join(',')}`, {headers});
+    const masterPrograms = (await response4.json()).data;
 
     data.forEach(company => {
         const related_positions = positions.filter(position => {return position.companies_id === company.id});
         const related_programs = programs.filter(program => company.id === program.companies_id);
+        const related_masterPrograms = masterPrograms.filter(program => company.id === program.companies_id);
+
+        const tempProgramIds = related_programs.flatMap(item => item.programs_id);
+        const tempMasterProgramIds = related_masterPrograms.flatMap(item => item.programs_id);
+
         company.positionsIds = related_positions.flatMap(item => item.positions_id);
-        company.programsIds = related_programs.flatMap(item => item.programs_id);
+        company.programsIds = tempProgramIds.concat(tempMasterProgramIds)
         company.logo = company.logo ? image_url(company.logo) : null;
+        company.sponsor = company.sponsor
     });
 
     return data;
@@ -53,8 +72,17 @@ export const API_Call_Programs = async () => {
     const response2 = await fetch(`${Base_URL}items/programs_translations/?filter[id][_in]=${translationsIds.join(',')}`, {headers});
     const programs = (await response2.json()).data;
 
+    // Add the "master" property from data to programs
+    const programsWithMaster = programs.map(program => {
+        const correspondingDataItem = data.find(item => item.translations.includes(program.id));
+        return {
+            ...program,
+            master: correspondingDataItem ? correspondingDataItem.master : null
+        };
+    });
 
-    return programs;
+
+    return programsWithMaster;
 }
 
 export const API_Call_Positions = async () => {
@@ -74,11 +102,13 @@ export const API_Call_Company_Details = async(ids) => {
     if (ids.programs){
         const response1 = await fetch(`${Base_URL}items/companies_programs/?filter[id][_in]=${ids.programs.join(',')}`, {headers});
         const programs1 = (await response1.json()).data;
-        const response1p1 = await fetch(`${Base_URL}items/companies_programs_1/?filter[id][_in]=${ids.programs.join(',')}`, {headers});
+        const programs1Ids = programs1.map(item => item.programs_id)
+        const response1p1 = await fetch(`${Base_URL}items/companies_programs_1/?filter[id][_in]=${ids.programsMaster.join(',')}`, {headers});
         const programs1p1 = (await response1p1.json()).data;
+        const programs1p1Ids = programs1p1.map(item => item.programs_id)
 
         //thiss combines bachelor and master programs for now
-        const programIds = programs1.concat(programs1p1).map(item => item.programs_id);
+        const programIds = programs1Ids.concat(programs1p1Ids)
 
 
         const response2 = await fetch(`${Base_URL}items/programs/?filter[id][_in]=${programIds.join(',')}`, {headers});
@@ -86,7 +116,13 @@ export const API_Call_Company_Details = async(ids) => {
         const translationsIds = programs2.flatMap(item => item.translations)
         const response3 = await fetch(`${Base_URL}items/programs_translations/?filter[id][_in]=${translationsIds.join(',')}`, {headers});
         const programs3 = (await response3.json()).data;
+        programs3.forEach(program => {
+            if(programs1p1Ids.includes(program.programs_id)){
+                program.is_master = true;
+            }
+        })
         data_detail.programs = programs3;
+       
     }
 
     if (ids.positions){

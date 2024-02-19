@@ -1,41 +1,44 @@
 <template>
-  <div v-if="post.contact_persons" class="post-contact">
+  <div class="contact-container">
+    <div v-if="this.post.contact_persons.length > 0" class="post-contact">
 
-    <!-- Heading -->
-    <h2>{{ $t("company_page.contact") }}</h2>
+      <!-- Heading -->
+      <h2>{{ $t("company_page.contact") }}</h2>
 
-    <!-- Contact Cards -->
-    <div class="cards-container">
+      <!-- Contact Cards -->
+      <div class="cards-container">
 
-      <!-- Contact Card Loop -->
-      <div
-        v-for="contact in this.post.contact_persons"
-        class="card"
-        :key="contact.id"
-      >
-        <!-- Outer Box -->
-        <ShadowBox class="box">
+        <!-- Contact Card Loop -->
+        <div
+          v-for="contact in this.post.contact_persons"
+          class="card"
+          :key="contact.id"
+        >
+          <!-- Outer Box -->
+          <ShadowBox class="box">
 
-          <!-- Inner Box -->
-          <div class="inner-box-layout">
-            <!-- Name -->
-            <p v-if="contact.name" class="name">
-              {{ contact.name }}
-            </p>
-            <!-- Email -->
-            <a
-              v-if="contact.email"
-              class="email"
-              :href="'mailto:' + contact.email"
-              >  {{ contact.email }}
-            </a>
-            <!-- Phone Number -->
-            <p v-if="contact.phone_number" class="phone">{{ contact.phone_number }} </p>
-          </div>
-        </ShadowBox>
+            <!-- Inner Box -->
+            <div class="inner-box-layout">
+              <!-- Name -->
+              <p v-if="contact.name" class="name">
+                {{ contact.name }}
+              </p>
+              <!-- Email -->
+              <a
+                v-if="contact.email"
+                class="email"
+                :href="'mailto:' + contact.email"
+                >  {{ contact.email }}
+              </a>
+              <!-- Phone Number -->
+              <p v-if="contact.phone_number" class="phone">{{ contact.phone_number }} </p>
+            </div>
+          </ShadowBox>
 
+        </div>
       </div>
     </div>
+
 
     <!-- Link to Positions -->
     <div v-if="post.link_to_positions" class="external-link">
@@ -58,17 +61,29 @@
     },
     components: {
       ExternalLink
+    },
+    mounted() {
+       console.log(this.post.contact_persons)
     }
   }
 </script>
 
 <style scoped>
 
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 /* COMPANY CONTACT */
 .post-contact {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding: 0.5rem;
 }
 
 .cards-container{
@@ -76,6 +91,11 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  width: 100%;
+}
+
+.card {
+  max-width: 100%;
 }
 
 .inner-box-layout {
@@ -84,8 +104,10 @@
   justify-content: center;
   align-items: center;
   gap: 0.4rem;
-  min-width: 20rem;
   padding: 1rem;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
 }
 
 .name {
@@ -97,13 +119,14 @@
 }
 
 .email {
-  /*margin-top: 0.5rem;*/
   color: #3F21F8;
-  font-size: 0.9rem;
+  font-size: 1em;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  word-break: break-all;
 }
+
 
 .phone {
   color: #000;
@@ -125,6 +148,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: center;
 }
 
 .icon {

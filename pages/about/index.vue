@@ -14,7 +14,7 @@
       </div>
       <div class="text-block">
         <h3>{{$t('about_page.description.heading3')}}</h3>
-        <p>{{$t('about_page.description.para3')}}</p>
+        <p>{{ $t('about_page.description.para3') }}<NuxtLink to="/companies">{{ $t('about_page.description.para3_link_text') }}</NuxtLink></p>
       </div>
       <div class="text-block">
         <h3>{{$t('about_page.description.heading4')}}</h3>
@@ -22,25 +22,63 @@
       </div>
 
     </div>
+
+    <section v-if="posts">
+      <h2>{{$t('about_page.project_group.heading')}}</h2>
+      <!-- Pass all team members to team as props.  -->
+      <!-- <AboutTeam :posts="posts.filter((i) => i.team === 'wdd')" teamName="Web Development & Design"/>  -->
+
+      <div v-for="(people, team) in posts" :key="team">
+        <AboutTeam :posts="people" :teamName="team" />
+      </div>
+
+    </section>
+
   </div>
 </template>
 
 <script>
 import AboutCard from "@/components/AboutCard.vue";
+import LinkedInLogo from '@/components/icons/LinkedInLogo.vue'
+import MailIcon from '@/components/icons/MailIcon.vue'
+import WWWIcon from '@/components/icons/WWWIcon.vue'
+import GitHubLogo from '@/components/icons/GitHubLogo.vue'
+import AboutTeam from '@/components/AboutTeam.vue'
+import { API_Call_Team_Members } from "../../app/companyCall";
 
 export default {
   components: {
     AboutCard,
+    LinkedInLogo,
+    MailIcon,
+    WWWIcon,
+    GitHubLogo,
+    AboutTeam
   },
   // This method vill fetch a list of all the cms entries in a specified folder
   async asyncData({ $content, error }) {
-    let posts;
-    try {
-      posts = await $content("about").fetch(); //Gets the data from the content/about path
-    } catch (e) {
-      error({ message: "Posts not found" });
-    }
-    return { posts };
+    // let posts;
+    // try {
+    //   posts = await $content("about").fetch(); //Gets the data from the content/about path
+    // } catch (e) {
+    //   error({ message: "Posts not found" });
+    // }
+    // return { posts };
+    const members = await API_Call_Team_Members();
+    const posts = (members.reduce((accumulator, person) => {
+      // Use the role as the key
+      const key = person.team;
+      // If the key doesn't exist yet, create it
+      if (!accumulator[key]) {
+        accumulator[key] = [];
+      }
+      // Push the current person to the group
+      accumulator[key].push(person);
+      return accumulator;
+    }, { "Project Management": [], "Web Development & Design": []})); // Initial value is an empty object
+
+
+    return { posts }
   },
   methods: {
     lang(postName) { //Checks for current language
@@ -55,15 +93,15 @@ export default {
     showEnglishMessage() {
       return this.$i18n.locale == "sv";
     },
-    postsGeneral: function () {
-      return this.posts.filter((i) => i.group === "General");
-    },
-    postsGroupLeader: function () {
-      return this.posts.filter((i) => i.group === "Group Leader");
-    },
-    postsWDD: function () {
-      return this.posts.filter((i) => i.group === "Web Development and Design");
-    },
+    // postsGeneral: function () {
+    //   return this.posts.filter((i) => i.group === "General");
+    // },
+    // postsGroupLeader: function () {
+    //   return this.posts.filter((i) => i.group === "Group Leader");
+    // },
+    // postsWDD: function () {
+    //   return this.posts.filter((i) => i.team === "wdd");
+    // },
   },
 };
 </script>
@@ -78,9 +116,10 @@ p {
   margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
   justify-items: center;
   align-items: center;
+  margin-top: 3rem;
 }
 .banner {
   width: 100%;
@@ -108,8 +147,9 @@ section {
   /* margin-top: 3rem; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 2rem;
 }
 
 .leader-cards {
@@ -122,26 +162,49 @@ section {
 
 .heading-wdd {
   margin-top: 2rem;
+  align-self: flex-start;
 }
 
 .posts-wdd {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-direction: flex-start;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
 .post-wdd {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.2rem;
+  width: 15rem;
 }
 
 .link-icon {
-  color: var(--clr-blue-600);
+  width: 1.3rem;
+  color: black;
+  margin: 0
 }
 
 .post-name {
   font-weight: bold;
+}
+
+a {
+  color: var(--clr-blue-600);
+}
+
+a:visited {
+  color: var(--clr-blue-600);
+}
+
+a:hover {
+  color: var(--clr-blue-700);
+  text-decoration: underline;
+}
+
+
+.title {
+  align-self: center;
 }
 
 @media only screen and (max-width: 500px) {

@@ -28,6 +28,13 @@
           }}</NuxtLink>
         </div>
 
+        <!-- Visit -->
+        <div class="normal">
+          <NuxtLink :to="localePath('/visit/') " activeClass="active" class="header-link">{{
+            $t("navbar.visit")
+          }}</NuxtLink>
+        </div>
+
         <!-- About -->
         <div class="normal">
           <NuxtLink :to="localePath('/about/')" activeClass="active" class="header-link">{{
@@ -100,6 +107,16 @@
         <NuxtLink :to="localePath('/companies/')" activeClass="active" class="header-link">
           {{ $t("navbar.catalog") }}
         </NuxtLink>
+      </div>
+
+      <!-- Catalog -->
+      <div
+        class="mobile-header-container"
+        @click="mobileNavOpen = !mobileNavOpen"
+      >
+        <NuxtLink :to="localePath('/visit/')" activeClass="active" class="header-link">{{
+          $t("navbar.visit")
+        }}</NuxtLink>
       </div>
 
       <!-- About -->

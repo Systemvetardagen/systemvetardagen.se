@@ -5,30 +5,39 @@
       "heading2": "Var och när äger det rum?",
       "heading3": "Vilka företag deltar i år?",
       "heading4": "Hur kan mitt företag delta?",
-      "para1": "Systemvetardagen är en årlig karriärmässa för studenter och nyutexaminerade med fokus på IT-branchen. Mässan arrangeras av studentkåren DISK på Institutionen för data- och systemvetenskap i Kista vid Stockholms universitet. Detta evenemang är helt gratis att delta i för alla studenter!",
-      "para2": "2024 hålls mässan den 21 februari mellan kl. 10-16 i Kista Nod på Borgarfjordsgatan 12 i Stockholm. Ingen föranmälan behövs, kom bara som du är!",
-      "para3": "Du hittar alla deltagande företag i vår företagskatalog (kommer snart).",
+      "para1": "Systemvetardagen är en årlig karriärmässa för studenter och nyutexaminerade med fokus på IT-branchen. Mässan arrangeras av studentkåren DISK på Institutionen för data- och systemvetenskap i Kista vid Stockholms universitet. Detta evenemang är helt gratis!",
+      "para2": "År 2024 hålls mässan den 21 februari mellan kl. 10-16 i Kista Nod på Borgarfjordsgatan 12 i Stockholm. Ingen föranmälan behövs, kom bara som du är!",
+      "para3": "Du hittar alla deltagande företag i vår ",
+      "para3_link_text": "företagskatalog.",
       "para4": "Skicka ett email till oss på "
     },
     "heading": "Om oss",
-    "project_group_heading": "Projektgrupp"
+    "project_group": {
+      "collapse": "Dölj team",
+      "expand": "Visa team",
+      "heading": "Projektgrupp 2024"
+    }
   },
   "blog": {
     "read-more": "Läs mer"
   },
   "catalog_page": {
     "all": "alla",
-    "all-companies": "Alla Företag",
-    "all-companies-btn": "Se alla företag",
+    "all_companies": "Alla företag",
+    "all_companies_btn": "Se alla företag",
     "and": " och ",
-    "aulanod-program": "Aula NOD Program",
+    "aulanod_program": "Aula NOD Program",
     "catalog": "Katalog",
-    "clear-filters": "Rensa filter",
-    "clear-selection": "Rensa",
+    "clear_filters": "Rensa filter",
+    "clear_selection": "Rensa",
     "coming_soon": "Årets företag presenteras inom kort!",
     "companies": "Företag",
-    "company-learn-more": "Läs mer om att jobba hos",
-    "filter-positions": {
+    "company_learn_more": "Läs mer om att jobba hos",
+    "filter_categories": {
+      "bachelors": "Kandidatprogram",
+      "masters": "Masterprogram"
+    },
+    "filter_positions": {
       "0": "Praktikplatser",
       "1": "Utlandstjänster",
       "2": "Traineeprogram",
@@ -36,7 +45,7 @@
       "4": "Examensarbete",
       "5": "Deltidstjänster"
     },
-    "filter-programs": {
+    "filter_programs": {
       "0": "Affärssystem & tjänstedesign",
       "1": "Data- & systemvetenskap",
       "2": "Datorspelsutveckling",
@@ -47,18 +56,19 @@
       "7": "Interaktionsdesign",
       "8": "Magister/Master"
     },
-    "map-heading": "Företagsplacering",
-    "partners": "Våra Partners",
+    "map_heading": "Företagsplacering",
+    "partners": "Våra partners",
     "positions": "Positioner",
-    "posts-heading": "Projektledarna har ordet!",
+    "posts_heading": "Projektledarna har ordet!",
     "programs": "Program",
     "qualifications": "Meriterande kunskaper",
-    "read-more": "Läs mer",
+    "read_more": "Läs mer",
     "search_input": {
       "placeholder": "Sök företag"
     },
-    "showing-companies-for": "Visar företag för ",
-    "sponsors": "Sponsorer"
+    "showing_companies_for": "Visar företag för ",
+    "sponsors": "Sponsorer",
+    "warning_banner_message": "Fler företag kommer snart!"
   },
   "company_page": {
     "bis-area": "Verksamhetsområde",
@@ -72,6 +82,12 @@
     "learn-more": "Läs mer om att jobba hos",
     "location": "Placering",
     "looking-for": "letar efter",
+    "match_list": {
+      "bachelor": "Kandidatprogram",
+      "master": "Masterprogram",
+      "positions": "Positioner",
+      "qualifications": "Meriterande kunskaper"
+    },
     "positions": "Positioner",
     "programs": "Program",
     "qualifications": "Meriterande kunskaper",
@@ -152,22 +168,23 @@
     },
     "sponsors": "Våra partners",
     "student_node": {
-      "book_session": "Book Interview Sessions",
-      "howtoapply": "Follow the steps to apply:",
-      "intro": "This year we have once again partnered up with StudentNode to offer students the opportunity of applying for interview sessions with the companies!",
+      "book_session": "Boka intervju",
+      "button": "Registrera nu",
+      "howtoapply": "Följ stegen nedan för att gå med:",
+      "intro": "I samarbete med StudentNode ger vi dig som student möjlighet att träffa företag via intervjuer. Tillsammans skapar vi en plattform där studenter och företag enkelt kan mötas. Skapa fantastiska möjligheter för din karriär och framtid!",
       "link": "mitt.systemvetardagen.se",
-      "step1": "Go to ",
-      "step2": "Register an account",
-      "step3": "Fill in all your info for the account and upload your CV. This way you increase your chances of getting your desired job!",
-      "step4": "Write and upload personlized cover letters for the companies that you apply for! This will make you stand out and in turn increase your chances!",
-      "step5": "Find the companies you are most interested in and select a time of your choosing to apply for an interview session.",
-      "tep6": "Press “Ansök” to apply for the interview(s) and then press “Send times to my email” to send the selected times to your email inbox. Don’t forget to save the times to your calendar!"
+      "step1": "Gå till ",
+      "step2": "Skapa ett nytt konto.",
+      "step3": "Fyll i all din information och ladda upp ditt CV. På så sätt ökar du chanserna att få ditt mest eftertraktade jobb.",
+      "step5": "Hitta de företag du är mest intresserad av och välj tid för intervjun.",
+      "step6": "Tryck på “Ansök” för att välja respektive företag. Tryck sedan på “Klar” längst ner på sidan för att skicka in din ansökan. Klar!"
     }
   },
   "navbar": {
     "about": "Om oss",
-    "catalog": "Katalog",
-    "home": "Hem"
+    "catalog": "Företag",
+    "home": "Hem",
+    "visit": "Besöksinfo"
   },
   "temporaryLandingPage": {
     "aboveButton": "Vill du kika på förra årets event?",
@@ -181,6 +198,16 @@
     "shortDateInfo": "21 februari 2024 i Kista Stockholm.",
     "subheading": "🚧 Under konstruktion 🚧",
     "tagline": "En av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT‑branchen."
-
+  },
+  "visit_page": {
+    "route": {
+      "heading": "Ta sig till Systemvetardagen",
+      "metro_heading": "Tunnelbana",
+      "metro_text": "Du kan resa med blå tunnelbanelinje (nummer 11) från Kungsträdgården eller T-Centralen (mot Akalla) till Kista. Beräknad restid från T-Centralen är 20 minuter.",
+      "more_info": "Mer info om hur du tar dig hit finns på ",
+      "more_info_link": "DSVs hemsida",
+      "parking_heading": "Parkering",
+      "parking_text": "Du kan parkera antingen på Isafjordsgatan eller i parkeringshuset i Kista Galleria. Tillåten parkering på isafjordsgatan är två timmar, måndag till fredag, kl. 08:00-18:00. I Kista Galleria kan du parkera mot avgift."
+    }
   }
 }

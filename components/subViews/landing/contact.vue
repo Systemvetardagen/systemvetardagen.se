@@ -255,6 +255,7 @@ textarea::placeholder {
 @media (max-width: 1024px) {
   .contact-blob-nod {
     visibility: hidden;
+    display: none;
   }
 }
 </style>

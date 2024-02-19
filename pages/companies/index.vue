@@ -1,11 +1,14 @@
 <template>
   <main class="wrapper">
-    <section v-if="posts">
+    <WarningBanner>{{ $t("catalog_page.warning_banner_message") }}</WarningBanner>
+    <section v-if="posts" class="catalog-section">
       <h1 v-if="isPreview" class="preview-title">This is a preview of the page</h1>
       <h1 class="title">{{ $t("catalog_page.companies") }}</h1>
 
       <div class="filter-paragraph">
-        {{ $t("catalog_page.showing-companies-for") }}
+
+        {{ $t("catalog_page.showing_companies_for") }}
+
         <span class="dropdown-toggle programs-toggle" @click="programsVisible = !programsVisible">
           {{ filterText(selectedPrograms, $t("catalog_page.programs").toLowerCase()) }}
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor"
@@ -14,12 +17,25 @@
           </svg>
         </span>
         <div v-show="programsVisible" class="dropdown-container">
-          <div class="dropdown-program dropdown-filter-item" v-for="program in allPrograms[locale]" :key="program.id">
+          <p class="dropdown-heading">{{ $t("catalog_page.filter_categories.bachelors") }}</p>
+          <div class="dropdown-program dropdown-filter-item" v-for="program in allPrograms[locale]" v-if="!program.master" :key="program.id">
             <input type="checkbox" :name="program" :id="program.id" :value="program" v-model="selectedPrograms" />
-            <label :for="program">{{ program.name }}</label>
+            <label :for="program.id">{{ program.name }}</label>
+            <!-- <span class="tag master" v-if="program.master">Master</span>
+            <span class="tag bachelor" v-else>Bachelor</span> -->
           </div>
-          <button @click.prevent="selectedPrograms = []">
-            {{ $t("catalog_page.clear-selection") }}
+
+          <div class="dropdown-spacer"></div>
+          <p class="dropdown-heading">{{ $t("catalog_page.filter_categories.masters") }}</p>
+          <div class="dropdown-program dropdown-filter-item" v-for="program in allPrograms[locale]" v-if="program.master" :key="program.id">
+            <input type="checkbox" :name="program" :id="program.id" :value="program" v-model="selectedPrograms" />
+            <label :for="program.id">{{ program.name }}</label>
+            <!-- <span class="tag master" v-if="program.master">Master</span>
+            <span class="tag bachelor" v-else>Bachelor</span> -->
+          </div>
+          <button @click.prevent="selectedPrograms = []" class="clear-filter-btn">
+            {{ $t("catalog_page.clear_selection") }}
+
           </button>
         </div>
         {{ $t("catalog_page.and") }}
@@ -36,8 +52,10 @@
             <input type="checkbox" :name="position" :id="position.id" :value="position" v-model="selectedPositions" />
             <label :for="position">{{ position.name }}</label>
           </div>
-          <button @click.prevent="selectedPositions = []">
-            {{ $t("catalog_page.clear-selection") }}
+
+          <button class="clear-filter-btn" @click.prevent="selectedPositions = []">
+            {{ $t("catalog_page.clear_selection") }}
+
           </button>
         </div>
       </div>
@@ -45,7 +63,9 @@
         selectedPrograms = [];
       selectedPositions = [];
       " class="clear-filter-btn">
-        {{ $t("catalog_page.clear-filters") }}
+
+        {{ $t("catalog_page.clear_filters") }}
+
       </button>
 
       <div class="search-field">
@@ -64,29 +84,64 @@
         </svg>
       </div>
 
-      <div class="company-cards">
+      <div class="company-card-container">
         <div v-if="!showCompanies && !isPreview">
           <h2>{{$t('catalog_page.coming_soon')}}</h2>
           <!-- <h2>Check out the <NuxtLink :to="localePath('/companies/old')">old</NuxtLink> catalog</h2> -->
         </div>
-        <div v-for="post of filteredPosts" :key="post.company_name">
-          <!---<div v-if="showEnglishMessage">
-            <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
-          <NuxtLink :to="localePath({
-            name: 'companies-companies',
-            params: { companies: post.company_name },
-          })
-            ">
-            <company-card class="company-card" :company="post" />
-          </NuxtLink>
+
+        <!-- Partners -->
+        <div v-if="filteredPosts.some(post => post.sponsor)">
+          <h3 class="cat-heading">{{$t('catalog_page.partners')}}</h3>
+          <div class="company-cards">
+            <!---<div v-if="showEnglishMessage">
+              <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
+            <NuxtLink
+              v-for="post of filteredPosts"
+              :key="post.company_name"
+              v-if="post.sponsor"
+              :to="localePath({
+                name: 'companies-companies',
+                params: { companies: post.company_name },
+              })
+              ">
+              <company-card class="company-card" :company="post" />
+            </NuxtLink>
+          </div>
         </div>
+
+        <div v-if="filteredPosts.some(post => post.sponsor) && filteredPosts.some(post => post.sponsor == false)" class="underline"></div>
+
+        <!-- Non-Partners -->
+        <div v-if="filteredPosts.some(post => post.sponsor == false)">
+          <h3 class="cat-heading">{{$t('catalog_page.all_companies')}}</h3>
+          <div class="company-cards">
+            <!---<div v-if="showEnglishMessage">
+              <div v-if="post.slug === post.title.toLowerCase() + '.sv'">-->
+            <NuxtLink
+              v-for="post of filteredPosts"
+              :key="post.company_name"
+              v-if="!post.sponsor"
+              :to="localePath({
+                name: 'companies-companies',
+                params: { companies: post.company_name },
+              })
+              ">
+              <company-card class="company-card" :company="post" />
+            </NuxtLink>
+          </div>
+        </div>
+        
       </div>
+
+
     </section>
   </main>
 </template>
 
 <script>
 import CompanyCard from "@/components/CompanyCard.vue";
+import WarningBanner from "@/components/WarningBanner.vue"
 
 import {
   API_Call_Companies,
@@ -111,6 +166,7 @@ export default {
 
   components: {
     CompanyCard,
+    WarningBanner
   },
   // This method vill fetch a list of all the cms entries in a specified folder
   async asyncData({ $content, error, i18n }) {
@@ -132,6 +188,7 @@ export default {
           allPositions.en.push({
             id: item.positions_id,
             name: item.position,
+
           });
         } else if (item.languages_id === "sv") {
           allPositions.sv.push({
@@ -146,11 +203,13 @@ export default {
           allPrograms.en.push({
             id: item.programs_id,
             name: item.program,
+            master: item.master,
           });
         } else if (item.languages_code === "sv") {
           allPrograms.sv.push({
             id: item.programs_id,
             name: item.program,
+            master: item.master,
           });
         }
       });
@@ -250,16 +309,49 @@ export default {
 };
 </script>
 <style scoped>
+
+.catalog-section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.scale-up-center:hover {
+  -webkit-animation: scale-up-center 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+          animation: scale-up-center 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+
 .dropdown-container {
   position: absolute;
-  padding: 2rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
   background-color: var(--clr-white);
-  margin-top: 1rem;
   box-shadow: 0 0.25rem 0.5rem #0002;
   display: flex;
   flex-direction: column;
-  line-height: 150%;
+  line-height: 1.5;
+  margin-top: 1rem;
+  z-index: 1;
 }
 
 .dropdown-filter-item {
@@ -287,6 +379,8 @@ export default {
   margin-top: 2rem;
   font-family: work-sans;
   position: relative;
+
+
 }
 
 .programs-toggle {
@@ -341,13 +435,23 @@ label {
   cursor: pointer;
 }
 
+.company-card-container {
+  margin-top: 2rem;
+  width: 85%;
+}
+.underline {
+  height: 1px;
+  background-color: var(--clr-grey-500);
+  width: 100%;
+  margin-bottom: 3rem;
+}
 .company-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 64rem;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 2rem auto;
 }
 
 @media (min-width: 768px) {
@@ -368,13 +472,50 @@ button {
 }
 
 .clear-filter-btn {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
-.preview-title {  
+.preview-title {
   text-decoration: underline;
   margin-bottom: 1rem;
 }
+section {
+  background: #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding-top: 5rem;
+}
 
+.cat-heading {
+  color: #6B6B6B;
+  text-align: center;
+  font-style: normal;
+  font-weight: light;
+  line-height: normal;
+}
+
+.tag {
+  color: white;
+  padding: 3px 10px;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+}
+
+.master {
+  background-color: var(--clr-blue-800);
+}
+.bachelor {
+  background-color: var(--clr-pink-800);
+}
+
+.dropdown-spacer {
+  padding: 0.5rem
+}
+
+.dropdown-heading {
+  font-weight: bold;
+}
 
 </style>

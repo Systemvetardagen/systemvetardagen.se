@@ -29,9 +29,7 @@ footer {
   margin-top: auto;
 }
 
-.wrapper {
-  padding-top: 3rem;
-}
+
 
 .button {
   background-color: transparent;
@@ -94,7 +92,14 @@ footer {
 @font-face {
   font-family: "Overpass";
   src: url(assets\fonts\Overpass-Black.ttf);
-  font-display: block;
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url(assets\fonts\Overpass-ExtraLight.ttf);
+  font-weight: light;
+  font-style: normal;
 }
 @font-face {
   font-family: "OverpassMedium";
@@ -113,6 +118,11 @@ footer {
 }
 
 
+
+@font-face {
+  font-family: "IBMPlexMono";
+  src: url(assets\fonts\IBMPlexMono-Regular.ttf);
+}
 
 *,
 ::before,
@@ -163,6 +173,10 @@ strong {
   font-weight: 500;
 }
 
+p {
+  line-height: 1.5;
+}
+
 
 /* Text */
 h1,
@@ -177,6 +191,7 @@ h1 {
   font-size: 3rem;
   line-height: 100%;
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 @media (min-width: 640px) {
@@ -202,8 +217,8 @@ input, textarea, p, li, td {
 
 ul {
   align-items: center;
-  max-width: 50ch;
-  padding-left: 1rem;
+  /*max-width: 50ch;*/
+  /*padding-left: 1rem;*/
 }
 
 li {
@@ -370,29 +385,24 @@ address {
 
 
 /* Hero */
+.hero,
 
-section,
 footer {
-  padding: 1.5rem 1.5rem;
+
   max-width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  align-items: flex-start;
-}
 
 @media (min-width: 640px) {
 
 
-section,
+
 footer {
     padding: 4rem;
   }
-  section,
+
 footer {
     align-items: center;
   }

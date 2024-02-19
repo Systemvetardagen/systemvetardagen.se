@@ -20,4 +20,6 @@ about_you: As Head of Business Relations and Sales, I have had shared
 disk_mail: bjorn.forsberg@disk.su.se
 personal_mail: forsberg.bjorn.a@gmail.com
 linkedin_link: https://www.linkedin.com/in/björnforsberg
+team: wdd
+pos: mngm
 ---
