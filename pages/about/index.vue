@@ -108,6 +108,11 @@ export default {
 
 <style scoped>
 
+h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
 p {
   line-height: 1.5;
 }
