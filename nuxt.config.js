@@ -13,7 +13,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head() {
     return {
-      title: `Systemvetardagen ${new Date().getFullYear()}`,
+      title: "Systemvetardagen 2024",
       htmlAttrs: {
         lang: "sv",
       },
@@ -32,7 +32,7 @@ export default {
         {
           name: "description",
           content:
-            "För 27:e året i rad arrangeras Systemvetardagen på Stockholms universitet, Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!",
+            "För 28:e året i rad arrangeras Systemvetardagen på Stockholms universitet, Sveriges största arbetsmarknadsdag för studenter och arbetsgivare inom IT-branschen!",
         },
 
         // METADATA
@@ -40,11 +40,11 @@ export default {
         // Open Graph / Facebook
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://www.systemvetardagen.se/" },
-        { property: "og:title", content: "Systemvetardagen 2023" },
+        { property: "og:title", content: "Systemvetardagen 2024"},
         {
           property: "og:description",
           content:
-            "För 27:e året i rad arrangeras Systemvetardagen på Stockholms universitet, en av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT-branschen!",
+            "För 28:e året i rad arrangeras Systemvetardagen på Stockholms universitet, en av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT-branschen!",
         },
         { property: "og:image", content: "/meta-image.jpg" },
 
@@ -54,11 +54,11 @@ export default {
           property: "twitter:url",
           content: "https://www.systemvetardagen.se/",
         },
-        { property: "twitter:title", content: "Systemvetardagen 2023" },
+        { property: "twitter:title", content: "Systemvetardagen 2024" },
         {
           property: "twitter:description",
           content:
-            "För 27:e året i rad arrangeras Systemvetardagen på Stockholms universitet, en av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT-branschen!",
+            "För 28:e året i rad arrangeras Systemvetardagen på Stockholms universitet, en av Sveriges största arbetsmarknadsdagar för studenter och arbetsgivare inom IT-branschen!",
         },
         {
           property: "twitter:image",
