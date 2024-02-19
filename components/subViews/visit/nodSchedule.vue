@@ -1,6 +1,9 @@
 <template>
     <div class="schedule">
-        <h2>Aula Nod Program</h2>
+        <div class="about-schedule">
+          <h2>Aula NOD program</h2>
+          <p>{{ $t("visit_page.about-program") }}</p>
+        </div>
         <div class="list">
             <div class="item" v-for="lecture in this.lectures" :key="lecture.time">
                 <div class="time">{{ lecture.time }}</div>
@@ -25,27 +28,47 @@
     }
 </script>
 <style scoped>
+  * {
+    box-sizing: border-box;
+  }
     .schedule {
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        margin: 1rem;
-        margin-top: 2rem;
-        border: solid var(--clr-grey-500);
-        padding: 0.5rem;
+        /*margin: 1rem;*/
+        /*margin-top: 2rem;*/
+        /*border: 1px solid var(--clr-grey-300);*/
+        padding: 2rem 3rem;
         border-radius: 1.875rem;
         max-width: 50rem;
-        
+        background-color: white;
+        background: linear-gradient(45deg, #4158D0, #C850C0, #FFCC70);
+        color: white;
     }
+    .about-schedule {
+      /*background-color: red;*/
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 25rem;
+    }
+
+    .about-schedule p {
+      font-family: IBMPlexMono;
+      font-size: 0.9rem;
+    }
+
     h2 {
-        text-align: center;
+      text-align: center;
+      font-weight: normal;
+      font-size: 2.2rem;
+      margin-bottom: 0;
     }
     .list {
-        
+
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 2rem;
     }
     .item {
         display: flex;
@@ -54,20 +77,22 @@
 
 
     }
-    
+
     .time {
-        text-decoration: underline;
+        /*text-decoration: underline;*/
         text-wrap: nowrap;
     }
     .company {
        margin: 0;
        font-weight: 600;
+       font-size: 1.8rem;
     }
     .title {
         text-align: center;
- 
+        max-width: 28rem;
     }
 
+    /*
     @media screen and (min-width: 1024px) {
         .schedule {
             padding: 1rem;
@@ -76,7 +101,7 @@
             flex-direction: row;
             gap: 1rem;
             align-items: baseline;
-            
+
         }
         .company {
             font-size: 1.5rem;
@@ -85,5 +110,11 @@
             text-align: left;
             text-wrap: wrap;
         }
+    }*/
+
+    @media screen and (max-width: 400px) {
+      .schedule {
+        padding: 2rem 1rem;
+      }
     }
 </style>
