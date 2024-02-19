@@ -34,7 +34,7 @@
       </div>
 
     </section>
-
+    <sponsors/>
   </div>
 </template>
 
@@ -46,6 +46,7 @@ import WWWIcon from '@/components/icons/WWWIcon.vue'
 import GitHubLogo from '@/components/icons/GitHubLogo.vue'
 import AboutTeam from '@/components/AboutTeam.vue'
 import { API_Call_Team_Members } from "../../app/companyCall";
+import sponsors from "@/components/subViews/landing/sponsors.vue"
 
 export default {
   components: {
@@ -54,7 +55,8 @@ export default {
     MailIcon,
     WWWIcon,
     GitHubLogo,
-    AboutTeam
+    AboutTeam,
+    sponsors
   },
   // This method vill fetch a list of all the cms entries in a specified folder
   async asyncData({ $content, error }) {

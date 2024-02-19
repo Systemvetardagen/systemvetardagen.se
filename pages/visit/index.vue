@@ -10,6 +10,9 @@
           <Map/>
           <studentnode/>
           <Route/>
+          <div class="sponsors-container">
+            <sponsors/>
+          </div>
         </section>
     </div>
 </template>
@@ -18,12 +21,15 @@
     import NodSchedule from '@/components/subViews/visit/nodSchedule.vue'
     import Map from '@/components/subViews/visit/map.vue'
     import studentnode from "@/components/subViews/landing/studentnode.vue"
+    import sponsors from "@/components/subViews/landing/sponsors.vue"
     export default {
         components: {
             Route,
             NodSchedule,
             studentnode,
-            Map       }
+            Map,
+            sponsors
+        }
     }
 </script>
 <style scoped>
@@ -35,6 +41,10 @@
     aspect-ratio: 3 / 1;
     object-fit: cover;
     object-position: 100% 80%;
+  }
+
+  .sponsors-container {
+    margin-top: 4rem;
   }
 
   section {
