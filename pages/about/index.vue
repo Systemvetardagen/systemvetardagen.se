@@ -20,8 +20,9 @@
         <h3>{{$t('about_page.description.heading4')}}</h3>
         <p>{{$t('about_page.description.para4')}}<a href="mailto:systemvetardagen@disk.su.se">systemvetardagen@disk.su.se</a>.</p>
       </div>
-
     </div>
+
+    <div class="horizontal-line"></div>
 
     <section v-if="posts">
       <h2>{{$t('about_page.project_group.heading')}}</h2>
@@ -33,7 +34,7 @@
       </div>
 
     </section>
-
+    <sponsors/>
   </div>
 </template>
 
@@ -45,6 +46,7 @@ import WWWIcon from '@/components/icons/WWWIcon.vue'
 import GitHubLogo from '@/components/icons/GitHubLogo.vue'
 import AboutTeam from '@/components/AboutTeam.vue'
 import { API_Call_Team_Members } from "../../app/companyCall";
+import sponsors from "@/components/subViews/landing/sponsors.vue"
 
 export default {
   components: {
@@ -53,7 +55,8 @@ export default {
     MailIcon,
     WWWIcon,
     GitHubLogo,
-    AboutTeam
+    AboutTeam,
+    sponsors
   },
   // This method vill fetch a list of all the cms entries in a specified folder
   async asyncData({ $content, error }) {
@@ -108,6 +111,21 @@ export default {
 
 <style scoped>
 
+.horizontal-line {
+  height: 2px;
+  width: 100%;
+  background-color: var(--clr-grey-400);
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
 p {
   line-height: 1.5;
 }
@@ -116,7 +134,7 @@ p {
   margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 0;
   justify-items: center;
   align-items: center;
   margin-top: 3rem;
@@ -139,6 +157,8 @@ p {
   justify-items: flex-start;
   align-items: flex-start;
   margin: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 

@@ -68,7 +68,8 @@ export default {
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: normal;
 }
 
 p {

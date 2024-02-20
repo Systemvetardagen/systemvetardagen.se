@@ -5,8 +5,23 @@
       <p class="partner-heading">{{ $t("landing_page.sponsors") }}</p>
       <!-- Since we hadn't figured out nuxt-image yet, we hard-coded this grid. -->
       <div class="company-grid">
-        <NuxtLink v-for="partner in this.partners" :to="localePath(partner.path)" :key="partner.name">
-          <p class="company-name">{{ partner.name }}</p>
+        <NuxtLink to="/companies/Akavia">
+          <img src="@/assets/img/partners/akavia-logo.png" alt="Logo" class="logo">
+        </NuxtLink>
+        <NuxtLink to="/companies/Accenture">
+          <img src="@/assets/img/partners/accenture-logo.png" alt="Logo" class="logo">
+        </NuxtLink>
+        <NuxtLink to="/companies/Handelsbanken">
+          <img src="@/assets/img/partners/handelsbanken-logo.png" alt="Logo" class="logo">
+        </NuxtLink>
+        <NuxtLink to="/companies/Swedbank%20AB">
+          <img src="@/assets/img/partners/swedbank-logo.png" alt="Logo" class="logo">
+        </NuxtLink>
+        <NuxtLink to="/companies/Zimply%20Innovation%20Nordic%20AB">
+          <img src="@/assets/img/partners/zimply-logo.png" alt="Logo" class="logo">
+        </NuxtLink>
+        <NuxtLink to="/companies/Cygni%20part%20of%20Accenture">
+          <img src="@/assets/img/partners/cygni-logo.png" alt="Logo" class="logo">
         </NuxtLink>
       </div>
     </div>
@@ -22,12 +37,12 @@ export default {
       logoPath: "@/assets/img/company-logos/logo_",
 
       partners: [
-        {name: "Akavia", path: "/companies"},
-        {name: "Accenture", path: "/companies"},
-        {name: "Handelsbanken", path: "/companies"},
-        {name: "Swedbank", path: "/companies"},
-        {name: "Zimply", path: "/companies"},
-        {name: "Cygni", path: "/companies"}
+        {name: "Akavia", path: "/companies", img: "@/assets/img/partners/akavia-logo.png"},
+        {name: "Accenture", path: "/companies", img: "@/assets/img/partners/accenture-logo.svg"},
+        {name: "Handelsbanken", path: "/companies", img: "@/assets/img/partners/handelsbanken-logo"},
+        {name: "Swedbank", path: "/companies", img: "@/assets/img/partners/swedbank-logo"},
+        {name: "Zimply", path: "/companies", img: "@/assets/img/partners/zimply-logo"},
+        {name: "Cygni", path: "/companies", img: "@/assets/img/partners/cygni-logo"}
       ]
     };
   },
@@ -43,6 +58,11 @@ export default {
   display: flex;
   justify-content: center;
   padding: 0 2rem;
+}
+
+.logo {
+  max-height: 4rem;
+  max-width: 10rem;
 }
 
 .company-content {

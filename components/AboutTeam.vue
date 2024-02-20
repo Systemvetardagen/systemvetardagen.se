@@ -1,38 +1,38 @@
 <template>
     <div>
-    <p class="heading">{{teamName.toUpperCase()}}</p>
+    <p class="heading wrap-text">{{teamName.toUpperCase()}}</p>
     <div class="leader-cards">
       <!-- should be two about-cards with v-if post.position=='head' and 'vice respectively' -->
-        <about-card  
-            :post="head" 
+        <about-card
+            :post="head"
             :key="head.id"
         />
-        <about-card  
-            :post="vice" 
+        <about-card
+            :post="vice"
             :key="vice.id"
         />
-       
-        
+
+
     </div>
     <button v-if="members.length != 0" class="expand-btn" @click="toggleExpansion()">{{isExpanded ? $t('about_page.project_group.collapse') : $t('about_page.project_group.expand')}}</button>
     <div class="posts-wdd" v-if="isExpanded">
       <!-- change to post.position=='member' -->
         <div v-for="post in members"  :key="post.id" class="post-wdd">
             <p class="post-name">{{ post.name }}</p>
-            <p>{{ post.role }}</p>
-            <div>
-            <a v-if="post.email" :href="'mailto:' + post.email">
-                <MailIcon class="link-icon"/>
-            </a>
-            <!-- <a v-if="post.portfolio_link" :href="post.portfolio_link">
-                <WWWIcon class="link-icon"/>
-            </a> -->
-            <a v-if="post.linkedin_link" :href="post.linkedin_link">
-                <LinkedInLogo class="link-icon"/>
-            </a>
-            <a v-if="post.github_link" :href="post.github_link">
-                <GitHubLogo class="link-icon"/>
-            </a>
+            <p class="member-role">{{ post.role }}</p>
+            <div class="member-links">
+              <a v-if="post.email" :href="'mailto:' + post.email">
+                  <MailIcon class="link-icon"/>
+              </a>
+              <!-- <a v-if="post.portfolio_link" :href="post.portfolio_link">
+                  <WWWIcon class="link-icon"/>
+              </a> -->
+              <a v-if="post.linkedin_link" :href="post.linkedin_link">
+                  <LinkedInLogo class="link-icon"/>
+              </a>
+              <a v-if="post.github_link" :href="post.github_link">
+                  <GitHubLogo class="link-icon"/>
+              </a>
             </div>
         </div>
     </div>
@@ -109,10 +109,14 @@ export default {
 
   },
 };
-</script> 
+</script>
 
 <style scoped>
 /* TEMPORARY*/
+
+.wrap-text {
+  overflow-wrap: break-word;
+}
 h3 {
   margin-bottom: 1rem;
 }
@@ -135,12 +139,13 @@ section {
 }
 
 .heading {
+  font-family: Overpass;
   color: #000;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  letter-spacing: 0.3125rem;
+  letter-spacing: 0.3rem;
   padding: 1rem 0;
 }
 
@@ -153,6 +158,11 @@ section {
 
   border-radius: 6.9375rem;
   border: 1px solid #000;
+  background-color: var(--clr-grey-100);
+}
+
+.expand-btn:hover {
+  background-color: var(--clr-grey-200);
 }
 
 .posts-wdd {
@@ -160,35 +170,48 @@ section {
   flex-direction: flex-start;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   max-width: 32rem;
 }
 
 .post-wdd {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  /*gap: 0.2rem;*/
   width: 15rem;
-  
+}
+
+.member-links {
+  margin-top: 0.2rem;
 }
 
 .link-icon {
   width: 1.3rem;
-  color: black;
+  color: var(--clr-grey-700);
   margin: 0
+}
+
+.link-icon:hover {
+  color: black;
 }
 
 .post-name {
   font-weight: bold;
+  line-height: 0.9;
 }
 
-@media only screen and (min-width: 768px) {
+.member-role {
+  color: var(--clr-grey-600);
+  font-size: 0.87rem;
+}
+
+@media only screen and (min-width: 500px) {
   .leader-cards {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 3rem;
+    gap: 1rem;
     margin-bottom: 1rem;
 }
 

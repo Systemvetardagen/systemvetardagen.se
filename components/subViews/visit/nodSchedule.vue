@@ -18,9 +18,9 @@
         data() {
             return {
                 lectures: [
-                    {time: "10:00—10:30", company: "Zimply"},
                     {time: "11:00—11:40", company: "Truesec", title: "From Infection to Encryption: A Deep Dive into Threat Actors Malicious Code"},
                     {time: "12:00—12:30", company: "Accenture"},
+                    {time: "13:00—13:30", company: "Zimply"},
                     {time: "14:00—15:00", company: "Google", title: "Generative AI - LLMs and all that jazz"}
                 ]
             }

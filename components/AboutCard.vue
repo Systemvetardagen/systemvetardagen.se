@@ -1,16 +1,15 @@
 <template>
   <div class="leader-card">
-    
     <img
       v-if="post.portrait"
       :src="post.portrait"
       alt="portrait"
       class="portrait-img"
     />
-    <div class="leader-card-header">  
-      <div>
+    <div class="leader-card-header">
+      <div class="name-role-container">
         <p class="name">{{ post.name }}</p>
-        <p class="wrap-text"> {{ post.role }}</p>
+        <p class="role wrap-text"> {{ post.role }}</p>
       </div>
       <div class="links">
         <a v-if="post.linkedin_link" :href="post.linkedin_link">
@@ -61,7 +60,7 @@ export default {
 .name {
   color: black;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 .wrap-text {
   overflow-wrap: break-word;
@@ -71,16 +70,30 @@ export default {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  
-  
+  /*background-color: red;*/
 }
 
 .leader-card-header {
   display: flex;
   flex-direction: column;
-  max-width: 15rem;
-  justify-content: space-between;
-  
+  /*max-width: 15rem;*/
+  justify-content: flex-end;
+}
+
+.name-role-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.name {
+  line-height: 1;
+}
+
+.role {
+  font-size: 0.9rem;
+  color: var(--clr-grey-600);
+  line-height: 1;
 }
 
 .links {
@@ -88,19 +101,24 @@ export default {
   flex-direction: row;
   align-items: flex-end;
   gap: 0.3rem;
+  margin-top: 0.5rem;
 }
 
 .portrait-img {
-  width: 5rem;
-  height: 5rem;  
-  border-radius: 0.7rem 0rem 0rem 0.7rem;
-  border: 3.418px solid #000; 
+  width: 7rem;
+  height: 7rem;
+  /*border-radius: 0.7rem 0rem 0rem 0.7rem;
+  border: 3.418px solid #000;*/
 }
 
 .link-icon {
   width: 1.3rem;
-  color: black;
+  color: var(--clr-grey-700);
   margin: 0
+}
+
+.link-icon:hover {
+  color: black;
 }
 
 img {
@@ -110,34 +128,36 @@ img {
 }
 
 
-
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 320px) {
   .portrait-img {
-    width: 15rem;
-    height: 15rem;  
-    border-radius: 0.7rem 0.7rem 0rem 0rem;
-    border: 3.418px solid #000; 
+    width: 5rem;
+    height: 5rem;
+    /*border-radius: 0.7rem 0.7rem 0rem 0rem;
+    border: 3.4 18px solid #000;*/
   }
-  .leader-card-header {
-    display: flex;
-    flex-direction: row;
-    max-width: 15rem;
-    justify-content: space-between;
+
+  .leader-card {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .portrait-img {
+    width: 12rem;
+    height: 12rem;
+    /*border-radius: 0.7rem 0.7rem 0rem 0rem;
+    border: 3.418px solid #000;*/
   }
   .leader-card {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    
-    
+    flex-direction: row;
+    width: 27rem;
   }
 
 .leader-card-header {
     display: flex;
-    flex-direction: row;
-    max-width: 15rem;
-    justify-content: space-between;
-    
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 </style>

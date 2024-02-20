@@ -11,7 +11,7 @@
     .gradient-text {
         text-align: center;
         font-style: normal;
-        font-weight: 100;
+        font-weight: 600;
         line-height: normal;
 
         background: var(--gradient-ish, linear-gradient(90deg, #FAC178 3.15%, #C451C1 53.03%, #4259D1 100%));
@@ -20,7 +20,7 @@
         -webkit-text-fill-color: transparent;
     }
     .container {
-        padding: 2rem 1rem; 
+        padding: 2rem 1rem;
     }
 
     @media only screen and (min-width: 768px) {
