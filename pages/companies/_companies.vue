@@ -236,6 +236,11 @@ export default {
 </script>
 
 <style scoped>
+
+.wrapper {
+  padding-top: 3rem;
+}
+
 .post {
   display: flex;
   flex-direction: column;
