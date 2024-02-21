@@ -5,7 +5,7 @@
     <slogan/>
     <sponsors />
     <banner img="crowded-from-above" path="/companies">{{$t('landing_page.banner.meet')}}</banner>
-    <countdown />
+    <!-- <countdown /> -->
     <description/>
     <studentnode/>
     <div class="blog-section">
