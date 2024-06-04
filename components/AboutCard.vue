@@ -21,7 +21,7 @@
         <a v-if="post.email" :href="'mailto:' + post.email">
           <MailIcon class="link-icon"/>
         </a>
-        <a v-if="post.github" :href="'mailto:' + post.github">
+        <a v-if="post.github_link" :href="post.github">
           <GitHubLogo class="link-icon"/>
         </a>
       </div>
