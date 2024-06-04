@@ -309,7 +309,7 @@ nav .active a {
   z-index: 1000;
   /*border-bottom: solid var(--clr-grey-300) 0.13rem;*/
   margin: 0rem 0rem;
-  align-self: center;
+  /*align-self: center;*/
   box-sizing: content-box;
   border-bottom: 1px solid var(--clr-grey-200);
   box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
