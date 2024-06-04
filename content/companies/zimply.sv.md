@@ -18,7 +18,6 @@ qualifications: RPA (Robotic Process Automation), Objektorienterad design och
 contact_persons:
   - email: daniel@zimply.ai
     name: Daniel Baldwin
-    phone_number: "0762006211"
 link_to_positions: https://zimply.ai/om-zimply/
 program:
   - Data- och systemvetenskap
